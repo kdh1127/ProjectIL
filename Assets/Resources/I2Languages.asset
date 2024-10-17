@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: Stage
+      TermType: 0
+      Description: 
+      Languages:
+      - Stage {0}
+      - "{0} \uCE35"
+      - "\u9636\u6BB5 {0}"
+      - "\u9636\u6BB5 {0}"
+      - "B\xFChne {0}"
+      - "Sc\xE8ne {0}"
+      - Palcoscenico {0}
+      - "\u30B9\u30C6\u30FC\u30B8 {0}"
+      - Pentas {0}
+      - Panggung {0}
+      - "Est\xE1gio {0}"
+      - "\u042D\u0442\u0430\u043F {0}"
+      - Escenario {0}
+      - "\u0E40\u0E27\u0E17\u0E35 {0}"
+      - "S\xE2n Kh\u1EA5u {0}"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Korean
+      Code: ko
+      Flags: 0
+    - Name: Chinese
+      Code: zh
+      Flags: 0
+    - Name: Chinese (Simplified)
+      Code: zh-CN
+      Flags: 0
+    - Name: German
+      Code: de
+      Flags: 0
+    - Name: French
+      Code: fr
+      Flags: 0
+    - Name: Italian
+      Code: it
+      Flags: 0
+    - Name: Japanese
+      Code: ja
+      Flags: 0
+    - Name: Malay
+      Code: ms
+      Flags: 0
+    - Name: Indonesian
+      Code: id
+      Flags: 0
+    - Name: Portuguese
+      Code: pt
+      Flags: 0
+    - Name: Russian
+      Code: ru
+      Flags: 0
+    - Name: Spanish
+      Code: es
+      Flags: 0
+    - Name: Thai
+      Code: th
+      Flags: 0
+    - Name: Vietnamese
+      Code: vi
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 1
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwti8St0EVhATB-VpJWR23qwFINXKYxYehNQ1Zl349q0_OePYX2tUGkNTPo_ggd2Nwf/exec
+    Google_SpreadsheetKey: 1PQ0UdVoaxsFOlXSz-F80s2stQRCQHtq_wRUwjxXZb_Y
+    Google_SpreadsheetName: I2Loc ProjectIL Localization
+    Google_LastUpdatedVersion: 
+    Google_Password: threerabbit1!
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 5
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
+    Spreadsheet_SortRows: 1

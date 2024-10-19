@@ -6,9 +6,9 @@ using UniRx;
 
 public class MainButtonModel : MonoBehaviour
 {
-	public Subject<Toggle> toggleSubject = new();
+	public Subject<CommonToggle> toggleSubject = new();
 
-	public void ToggleListSubject(List<Toggle> toggleList)
+	public void RegisterToggleList(List<CommonToggle> toggleList)
 	{
 		foreach (var toggle in toggleList)
 		{
@@ -16,7 +16,6 @@ public class MainButtonModel : MonoBehaviour
 			{
 				if(toggle.isOn)
 				{
-
 					toggleSubject.OnNext(toggle);
 				}
 			});

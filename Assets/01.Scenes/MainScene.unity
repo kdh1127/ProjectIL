@@ -1981,13 +1981,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dee966b86beaf4c907fbd6147cf698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest_tgl: {fileID: 985950933}
-  weapon_tgl: {fileID: 1144469460}
-  shop_tgl: {fileID: 1338814789}
   toggleList:
-  - {fileID: 985950933}
-  - {fileID: 1144469460}
-  - {fileID: 1338814789}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &675193860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2951,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 985950928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: ecb18bfe19765ad42955ca1117147cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2988,7 +2985,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 985950931}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 643611758}
+  m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3644,7 +3641,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144469455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: ecb18bfe19765ad42955ca1117147cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -3678,7 +3675,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1144469458}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 643611758}
+  m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4297,7 +4294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338814784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: ecb18bfe19765ad42955ca1117147cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -4331,7 +4328,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1338814787}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 643611758}
+  m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []

@@ -14,6 +14,8 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	public MainButtonView mainButtonView;
 	private MainButtonModel mainButtonModel = new();
 
+	public BottomPanelView bottomPanelView;
+	
 	private void Awake()
 	{
 		MainButtonSubscribe();
@@ -37,11 +39,11 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	
 	public void MainButtonSubscribe()
 	{
-		mainButtonModel.RegisterToggleList(mainButtonView.toggleList);
+		mainButtonModel.RegisterToggleList(mainButtonView.toggleGroup, mainButtonView.toggleList);
 		mainButtonModel.toggleSubject.Subscribe(tgl =>
 		{
-			mainButtonView.DeactivateAllPanel();
-			mainButtonView.ActivatePanel(tgl.Type);			
+			mainButtonView.DeactivateAllPanel(bottomPanelView.panelList);
+			mainButtonView.ActivatePanel(tgl.type);
 		}).AddTo(this);
 	}
 }

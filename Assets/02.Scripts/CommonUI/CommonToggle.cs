@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class CommonToggle : Toggle
 {
+    [System.Serializable]
     public enum ToggleType
     {
-        Quest,
-        Weapon,
-        Shop
+        Quest=0,
+        Weapon=1,
+        Shop=2        
     }
 
-	private ToggleType type;
-	public ToggleType Type { get => type; set => type = value; }
+	[SerializeField] public ToggleType type;
 }

@@ -19,7 +19,7 @@ public class MainButtonView : MonoBehaviour, IToggleView
 				bottomPanelView.panelList[0].SetActive(true);
 				break;
 			case CommonToggle.ToggleType.Weapon:
-				Debug.Log("웨폰 활성화");
+				bottomPanelView.panelList[1].SetActive(true);
 				break;
 			case CommonToggle.ToggleType.Shop:
 				Debug.Log("Shop 활성화");

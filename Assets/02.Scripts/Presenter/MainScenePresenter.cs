@@ -8,7 +8,7 @@ using I2.Loc;
 
 public class MainScenePresenter : TRSingleton<MainScenePresenter>
 {
-	public StageView stageView;
+	public TopPanelView topPanelView;
 	private StageModel stageModel = new();
 
 	public MainButtonView mainButtonView;
@@ -18,17 +18,17 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	
 	private void Awake()
 	{
+		TopPanelSubscribe();
 		MainButtonSubscribe();
-		StageSubscribe();
 	}
 
-	private void StageSubscribe()
+	private void TopPanelSubscribe()
 	{
 		stageModel.CurStage.Subscribe(curStage =>
 		{
 			var stageFormat = LocalizationManager.GetTranslation("Stage");
 			var stageString = string.Format(stageFormat, curStage);
-			stageView.stage_txt.text = stageString;
+			topPanelView.stage_txt.text = stageString;
 		}).AddTo(this);
 	}
 

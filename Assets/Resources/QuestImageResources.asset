@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666082664, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: QuestImageResources
+  m_EditorClassIdentifier: 
+  spriteDictionary:
+    m_keys:
+    - Quest_Image_0
+    - Quest_Image_1
+    - Quest_Image_2
+    - Quest_Image_3
+    - Quest_Image_4
+    - Quest_Image_5
+    - Quest_Image_6
+    - Quest_Image_7
+    - Quest_Image_8
+    - Quest_Image_9
+    - Quest_Image_10
+    - Quest_Image_11
+    m_values:
+    - {fileID: 21300000, guid: 4af7b2d383b63494aabf4d874ab1f397, type: 3}
+    - {fileID: 21300000, guid: e702bd0a8f63749369ddc70e6ad44faf, type: 3}
+    - {fileID: 21300000, guid: 5c0f356e8fdb749c292f0a699fde4480, type: 3}
+    - {fileID: 21300000, guid: a999130efdf7145338af4cd49770aa9c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}
+    - {fileID: 21300000, guid: cba6fba15682e49cdab63583abb7be7c, type: 3}

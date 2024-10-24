@@ -3,7 +3,7 @@ using System.Numerics;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AlphabetNubmer
+namespace AlphabetNumber
 {
 	internal static class Dictionary
 	{
@@ -76,100 +76,100 @@ namespace AlphabetNubmer
 		}
 	}
 
-	public class AlphabetNumber
+	public class ANumber
 	{
 		public BigInteger bigInteger;
 
 		#region Creator
-		public AlphabetNumber() { }
-		public AlphabetNumber(BigInteger bigInteger) { this.bigInteger = bigInteger; }
-		public AlphabetNumber(string stringNumber) { bigInteger = Conversion.AlphabetNumberToBigInteger(stringNumber); }
+		public ANumber() { }
+		public ANumber(BigInteger bigInteger) { this.bigInteger = bigInteger; }
+		public ANumber(string stringNumber) { bigInteger = Conversion.AlphabetNumberToBigInteger(stringNumber); }
 		#endregion
 
 		#region Add operator
-		public static AlphabetNumber operator +(AlphabetNumber alphabetNumber1, AlphabetNumber alphabetNumber2)
+		public static ANumber operator +(ANumber alphabetNumber1, ANumber alphabetNumber2)
 		{
 			BigInteger returnNumber = BigInteger.Add(alphabetNumber1.bigInteger, alphabetNumber2.bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator +(AlphabetNumber alphabetNumber, BigInteger bigInteger)
+		public static ANumber operator +(ANumber alphabetNumber, BigInteger bigInteger)
 		{
 			BigInteger returnNumber = BigInteger.Add(alphabetNumber.bigInteger, bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator +(AlphabetNumber alphabetNumber, string stringNumber)
+		public static ANumber operator +(ANumber alphabetNumber, string stringNumber)
 		{
 			BigInteger conversion = Conversion.AlphabetNumberToBigInteger(stringNumber);
 			BigInteger returnNumber = BigInteger.Add(alphabetNumber.bigInteger, conversion);
 
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
 		#endregion
 
 		#region Subtrac operator
-		public static AlphabetNumber operator -(AlphabetNumber alphabetNumber1, AlphabetNumber alphabetNumber2)
+		public static ANumber operator -(ANumber alphabetNumber1, ANumber alphabetNumber2)
 		{
 			BigInteger returnNumber = BigInteger.Subtract(alphabetNumber1.bigInteger, alphabetNumber2.bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator -(AlphabetNumber alphabetNumber, BigInteger bigInteger)
+		public static ANumber operator -(ANumber alphabetNumber, BigInteger bigInteger)
 		{
 			BigInteger returnNumber = BigInteger.Subtract(alphabetNumber.bigInteger, bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator -(AlphabetNumber alphabetNumber, string stringNumber)
+		public static ANumber operator -(ANumber alphabetNumber, string stringNumber)
 		{
 			BigInteger conversion = Conversion.AlphabetNumberToBigInteger(stringNumber);
 			BigInteger returnNumber = BigInteger.Subtract(alphabetNumber.bigInteger, conversion);
 
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
 		#endregion
 
 		#region Multiply operator
-		public static AlphabetNumber operator *(AlphabetNumber alphabetNumber1, AlphabetNumber alphabetNumber2)
+		public static ANumber operator *(ANumber alphabetNumber1, ANumber alphabetNumber2)
 		{
 			BigInteger returnNumber = BigInteger.Multiply(alphabetNumber1.bigInteger, alphabetNumber2.bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator *(AlphabetNumber alphabetNumber, BigInteger bigInteger)
+		public static ANumber operator *(ANumber alphabetNumber, BigInteger bigInteger)
 		{
 			BigInteger returnNumber = BigInteger.Multiply(alphabetNumber.bigInteger, bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator *(AlphabetNumber alphabetNumber, string stringNumber)
+		public static ANumber operator *(ANumber alphabetNumber, string stringNumber)
 		{
 			BigInteger conversion = Conversion.AlphabetNumberToBigInteger(stringNumber);
 			BigInteger returnNumber = BigInteger.Multiply(alphabetNumber.bigInteger, conversion);
 
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
 		#endregion
 
 		#region Divide operator
-		public static AlphabetNumber operator /(AlphabetNumber alphabetNumber1, AlphabetNumber alphabetNumber2)
+		public static ANumber operator /(ANumber alphabetNumber1, ANumber alphabetNumber2)
 		{
 			BigInteger returnNumber = BigInteger.Divide(alphabetNumber1.bigInteger, alphabetNumber2.bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator /(AlphabetNumber alphabetNumber, BigInteger bigInteger)
+		public static ANumber operator /(ANumber alphabetNumber, BigInteger bigInteger)
 		{
 			BigInteger returnNumber = BigInteger.Divide(alphabetNumber.bigInteger, bigInteger);
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
-		public static AlphabetNumber operator /(AlphabetNumber alphabetNumber, string stringNumber)
+		public static ANumber operator /(ANumber alphabetNumber, string stringNumber)
 		{
 			BigInteger conversion = Conversion.AlphabetNumberToBigInteger(stringNumber);
 			BigInteger returnNumber = BigInteger.Divide(alphabetNumber.bigInteger, conversion);
 
-			return new AlphabetNumber(returnNumber);
+			return new ANumber(returnNumber);
 		}
 		#endregion
 	}
 
 	public static class AlphabetNumberExtension
     {
-		public static string ToAlphaString(this AlphabetNumber alphabetNubmer, int count = 0)
+		public static string ToAlphaString(this ANumber alphabetNubmer, int count = 0)
 		{
 			var temp = alphabetNubmer.bigInteger;
 			for (count = 0; count < Dictionary.alphabetNumberDictionary.Count; count++)

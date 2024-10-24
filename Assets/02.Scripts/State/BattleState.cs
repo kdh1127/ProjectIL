@@ -32,7 +32,7 @@ public partial class BattlePresenter : MonoBehaviour
     {
         public override TRState<BattlePresenter> InputHandle(BattlePresenter battlePresenter)
         {
-            throw new System.NotImplementedException();
+            return this;
         }
 
         public override void Enter(BattlePresenter battlePresenter)

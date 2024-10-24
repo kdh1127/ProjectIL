@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ThreeRabbitPackage;
 
-public class QuestModel : MonoBehaviour
+public class QuestModel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TRGoogleSheet questTable;
+    public TRSpriteResources questImageResources;
 
-    // Update is called once per frame
-    void Update()
+    public void Init()
     {
-        
+        questTable = Resources.Load<TRGoogleSheet>("Table/QuestTable");
+        questImageResources = Resources.Load<TRSpriteResources>("QuestImageResources");
+        QuestTableList.Init(questTable);
     }
 }

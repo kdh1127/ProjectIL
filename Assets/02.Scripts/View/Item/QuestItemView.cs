@@ -20,4 +20,12 @@ public class QuestItemView : MonoBehaviour
         increse_txt.text = increse;
         cost_txt.text = cost;
     }
+
+    public bool ProgressUpdate(int curSecond, int time)
+    {
+        quest_slider.value = (float)curSecond / (float)time;
+        Debug.Log($"{curSecond} / {time}");
+
+        return quest_slider.value >= 1;
+    }
 }

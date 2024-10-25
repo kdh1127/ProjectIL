@@ -24,6 +24,10 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	private void Awake()
 	{
+		base.Awake();
+
+		questModel.Init();
+
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
@@ -75,29 +79,49 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public void QuestPanelSubscribe()
     {
-		questModel.Init();
+		var questImageResources = TRScriptableManager.Instance.Sprite["QuestImage"].spriteDictionary;
+		var currentGold = CurrencyManager.Instance.gold.Value;
+
 		QuestTableList.Get().ForEach(item =>
 		{
-			var questItem = Instantiate(questPanelView.questItem, questPanelView.content_tr);
+			// Instantiate
+			var itemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
 
-			ANumber increse = new (item.Increase);
-			ANumber cost = new (item.Cost);
+			// Initialize 
+			var sprite = questImageResources[item.Image];
+			var title = item.Name;
+			var increse = new ANumber(item.Increase);
+			var cost = new ANumber(item.Cost);
 
-			var sprite = questModel.questImageResources.spriteDictionary[item.Image];
-			questItem.GetComponent<QuestItemView>().Init(sprite, item.Name, increse.ToAlphaString(), cost.ToAlphaString());
+			itemView.Init(sprite, title, increse.ToAlphaString(), cost.ToAlphaString());
 
-			questItem.GetComponent<QuestItemView>().quest_btn.OnClickAsObservable().Subscribe(_ =>
+			// Subscribe Upgrade_btn
+			itemView.quest_btn.OnClickAsObservable().Subscribe(_ =>
 			{
-				var myGold = CurrencyManager.Instance.gold.Value;
-
-				if (myGold.bigInteger >= cost.bigInteger)
+				if (currentGold.bigInteger >= cost.bigInteger)
                 {
-					CurrencyManager.Instance.gold.Value -= cost;
-					// TODO: 퀘스트 인크리즈값 * 레벨 = 내가 버는 재화를 해당 타이머가 완료되면 벌 수 있도록 해야하고
-					// 타이머의 정보도 저장이 되어야 함
+					currentGold -= cost;
+				}
+			}).AddTo(itemView.gameObject);
+
+			// Update Progress bar in Quest
+			var questItem = questModel.questItemList[item.QuestNo];
+			var curTime = questItem.elpasedTime;
+			var endTime = item.Time;
+			var reward = questItem.level * item.Increase;
+
+			Observable.Interval(System.TimeSpan.FromSeconds(1))
+			.Subscribe(_ =>
+			{
+				bool isComplete = itemView.ProgressUpdate(curTime, (int)endTime);
+				if (isComplete)
+				{
+					curTime = 0;
+					currentGold += reward;
 				}
 
-			}).AddTo(this.gameObject);
+				curTime++;
+			}).AddTo(itemView.gameObject);
 		});
 
 	

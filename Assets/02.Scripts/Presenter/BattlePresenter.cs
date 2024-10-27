@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ThreeRabbitPackage.DesignPattern;
 
-public partial class BattlePresenter : MonoBehaviour
+public partial class BattlePresenter : TRSingleton<BattlePresenter>
 {
     public TRState<BattlePresenter> battleState;
 
@@ -13,6 +13,7 @@ public partial class BattlePresenter : MonoBehaviour
 
     private void Awake()
     {
+        base.Awake();
         battleState = new LullState();
     }
 

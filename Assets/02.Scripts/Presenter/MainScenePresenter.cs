@@ -38,7 +38,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	{
 		stageModel.CurStage.Subscribe(curStage =>
 		{
-			var stageFormat = LocalizationManager.GetTranslation("Stage");
+			var stageFormat = "{0} Stage";//LocalizationManager.GetTermTranslation("Stage");
 			var stageString = string.Format(stageFormat, curStage);
 			topPanelView.stage_txt.text = stageString;
 		}).AddTo(this);

@@ -4,7 +4,7 @@ using UnityEngine;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
 
-public partial class BattlePresenter : MonoBehaviour
+public partial class BattlePresenter : TRSingleton<BattlePresenter>
 {
     public class BattleState : TRState<BattlePresenter>
     {

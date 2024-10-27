@@ -18,7 +18,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         dia.Value = new(0);
         key.Value = new(0);
     }
-    public void Tast()
+    public void Test()
     {
         gold.Value += 100;
         dia.Value += 1000;

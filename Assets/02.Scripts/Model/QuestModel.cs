@@ -4,21 +4,18 @@ using UnityEngine;
 using ThreeRabbitPackage;
 using System.Linq;
 using AlphabetNumber;
+using UniRx;
 
 public class QuestModel
 {
-    public class QuestItem
+    public class QuestItemModel
     {
-        public int elpasedTime;
-        public int level;
-
-        public QuestItem()
-        {
-            elpasedTime = 0;
-            level = 0;
-        }
+        public ReactiveProperty<int> elpasedTime = new(0);
+        public ReactiveProperty<int> level = new(0);
     }
-    public List<QuestItem> questItemList = new();
+
+    public List<QuestItemModel> questItemList = new();
+
 
     public void Init()
     {
@@ -26,7 +23,7 @@ public class QuestModel
 
         for (int i = 0; i < QuestTableList.Get().Count; i++)
         {
-            questItemList.Add(new QuestItem());
+            questItemList.Add(new QuestItemModel());
         }
     }
 
@@ -36,8 +33,8 @@ public class QuestModel
 
         for(int i = 0; i < questTableList.Count; i++)
         {
-            PlayerPrefs.SetInt(questTableList[i].Name, questItemList[i].elpasedTime);
-            PlayerPrefs.SetInt(questTableList[i].Name, questItemList[i].level);
+            PlayerPrefs.SetInt(questTableList[i].Name, questItemList[i].elpasedTime.Value);
+            PlayerPrefs.SetInt(questTableList[i].Name, questItemList[i].level.Value);
         }
     }
 

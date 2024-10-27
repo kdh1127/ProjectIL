@@ -77,53 +77,81 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		}).AddTo(this);
 	}
 
+	public void QuestItemSubscribe(QuestTable item, QuestItemView questItemView)
+    {
+        var questItem = questModel.questItemList[item.QuestNo];
+
+		questItem.elpasedTime.Subscribe(time =>
+		{
+			var currentGold = CurrencyManager.Instance.gold;
+			bool isComplete = questItemView.ProgressUpdate(time, (int)item.Time);
+			if (isComplete)
+			{
+				questItem.elpasedTime.Value = 0;
+				currentGold.Value += questItem.level.Value * item.Increase;
+			}
+
+
+		}).AddTo(questItemView.gameObject);
+
+		questItem.level.Subscribe(level =>
+		{
+			var reward = questItem.level.Value > 0 ? questItem.level.Value * item.Increase : item.Increase;
+
+			questItemView.level_txt.text = $"Lv.{level}";
+			questItemView.reward_txt.text = reward.ToString();
+		}).AddTo(questItemView.gameObject);
+    }
+
 	public void QuestPanelSubscribe()
     {
 		var questImageResources = TRScriptableManager.Instance.Sprite["QuestImage"].spriteDictionary;
-		var currentGold = CurrencyManager.Instance.gold.Value;
+		var costImageResources = TRScriptableManager.Instance.Sprite["CostImage"].spriteDictionary;
+		var currentGold = CurrencyManager.Instance.gold;
 
 		QuestTableList.Get().ForEach(item =>
 		{
 			// Instantiate
 			var itemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
-
+			var questItem = questModel.questItemList[item.QuestNo];
+			
 			// Initialize 
-			var sprite = questImageResources[item.Image];
-			var title = item.Name;
-			var increse = new ANumber(item.Increase);
-			var cost = new ANumber(item.Cost);
+			itemView.Init(
+				sprite: questImageResources[item.Image],
+				title: item.Name,
+				endTime: item.Time,
+				level: questItem.level.Value,
+				reward: questItem.level.Value > 0 ? questItem.level.Value * item.Increase : item.Increase);
 
-			itemView.Init(sprite, title, increse.ToAlphaString(), cost.ToAlphaString());
+			var cost = new ANumber(item.Cost);
+			itemView.upgradeButtonView.Init(new ANumber(item.Increase).ToAlphaString(), cost.ToAlphaString(), costImageResources["Gold"]);
+
+			// Subscribe QuestItemModel
+			QuestItemSubscribe(item, itemView);
 
 			// Subscribe Upgrade_btn
-			itemView.quest_btn.OnClickAsObservable().Subscribe(_ =>
+			itemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
 			{
-				if (currentGold.bigInteger >= cost.bigInteger)
+				if (currentGold.Value.bigInteger >= cost.bigInteger)
                 {
-					currentGold -= cost;
+					currentGold.Value -= cost;
+					questModel.questItemList[item.QuestNo].level.Value++;
 				}
 			}).AddTo(itemView.gameObject);
+
+			// Subscribe currentGold
+			currentGold.Subscribe(gold =>
+			{
+				itemView.upgradeButtonView.SetInteractable(gold.bigInteger >= cost.bigInteger);
+			}).AddTo(itemView.upgradeButtonView.button);
 
 			// Update Progress bar in Quest
-			var questItem = questModel.questItemList[item.QuestNo];
-			var curTime = questItem.elpasedTime;
-			var endTime = item.Time;
-			var reward = questItem.level * item.Increase;
-
 			Observable.Interval(System.TimeSpan.FromSeconds(1))
+			.Where(_ => questItem.level.Value > 0)
 			.Subscribe(_ =>
 			{
-				bool isComplete = itemView.ProgressUpdate(curTime, (int)endTime);
-				if (isComplete)
-				{
-					curTime = 0;
-					currentGold += reward;
-				}
-
-				curTime++;
+				questItem.elpasedTime.Value++;
 			}).AddTo(itemView.gameObject);
 		});
-
-	
 	}
 }

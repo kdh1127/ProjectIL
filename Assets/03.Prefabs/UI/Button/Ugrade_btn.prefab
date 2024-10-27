@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3500784709213130322}
   - component: {fileID: 3500784709213130333}
   - component: {fileID: 3500784709213130332}
+  - component: {fileID: 3843538683475910810}
   m_Layer: 5
   m_Name: Ugrade_btn
   m_TagString: Untagged
@@ -200,6 +201,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3843538683475910810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500784709213130334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6394323ce138a674c92d48ad73605d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increase_txt: {fileID: 3500784710641840845}
+  cost_txt: {fileID: 3500784710092796396}
+  cost_img: {fileID: 3500784708761415163}
+  button: {fileID: 3500784709213130332}
 --- !u!1 &3500784710092796398
 GameObject:
   m_ObjectHideFlags: 0

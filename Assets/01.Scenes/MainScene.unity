@@ -1524,6 +1524,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &618786360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618786362}
+  - component: {fileID: 618786361}
+  m_Layer: 0
+  m_Name: CurrencyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &618786361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618786360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5f0c6bf256f694ba040ace0cbe5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &618786362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618786360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9253031, y: 2.014748, z: -0.012770659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &643611755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1605,7 @@ RectTransform:
   - {fileID: 74935325}
   - {fileID: 499674411}
   m_Father: {fileID: 1616811676}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1660,6 +1704,21 @@ MonoBehaviour:
         - m_Target: {fileID: 1500994873}
           m_TargetAssemblyTypeName: MainScenePresenter, Assembly-CSharp
           m_MethodName: StageClearTest
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - onTest:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 618786361}
+          m_TargetAssemblyTypeName: CurrencyManager, Assembly-CSharp
+          m_MethodName: Test
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4447,7 +4506,7 @@ RectTransform:
   m_Children:
   - {fileID: 1965243662}
   m_Father: {fileID: 1616811676}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5929,8 +5988,10 @@ MonoBehaviour:
   Sprite:
     m_keys:
     - QuestImage
+    - CostImage
     m_values:
     - {fileID: 11400000, guid: 89c928994388298459608bee2883292d, type: 2}
+    - {fileID: 11400000, guid: 022d58b54a0406a45a01960dfc997d22, type: 2}
 --- !u!4 &1536265162
 Transform:
   m_ObjectHideFlags: 0
@@ -6188,10 +6249,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1869166110}
   - {fileID: 2016945111}
   - {fileID: 1125500033}
   - {fileID: 643611756}
-  - {fileID: 1869166110}
   m_Father: {fileID: 1500994872}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6675,7 +6736,7 @@ GameObject:
   - component: {fileID: 1869166110}
   - component: {fileID: 1869166109}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: CurrencyPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6712,7 +6773,7 @@ RectTransform:
   - {fileID: 1195475893}
   - {fileID: 476161163}
   m_Father: {fileID: 1616811676}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7263,7 +7324,7 @@ RectTransform:
   m_Children:
   - {fileID: 1358150986}
   m_Father: {fileID: 1616811676}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

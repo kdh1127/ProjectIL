@@ -17,7 +17,7 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
-    - Term: Stage
+    - Term: Localization/Stage
       TermType: 0
       Description: 
       Languages:
@@ -36,7 +36,736 @@ MonoBehaviour:
       - Escenario {0}
       - "\u0E40\u0E27\u0E17\u0E35 {0}"
       - "S\xE2n Kh\u1EA5u {0}"
-      Flags: 000000000000000000000000000000
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_0
+      TermType: 0
+      Description: 
+      Languages:
+      - Hunting Lat
+      - "\uBCF5\uC2F1"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uB545\uD30C\uAE30"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uD6C8\uB828"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBD80\uB9AC \uBAA8\uC73C\uAE30"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uD65C\uC3D8\uAE30"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_5
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uD3EC\uC158 \uC81C\uC870"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_6
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uCE94 \uC90D\uAE30"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_7
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uD53C\uC790 \uB9CC\uB4E4\uAE30"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_8
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uC9C0\uB3C4 \uC81C\uC791"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_9
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uD560\uB85C\uC708 \uC54C\uBC14"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_10
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uD3B8\uC758\uC810 \uC54C\uBC14"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Localization/Quest_Name_11
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBCC4 \uB530\uAE30"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/0
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_0
+      - 5
+      - 5
+      - 1
+      - Quest_Image_0
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/1
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_1
+      - 10
+      - 10
+      - 5
+      - Quest_Image_1
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/2
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_2
+      - 20
+      - 20
+      - 10
+      - Quest_Image_2
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/3
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_3
+      - 50
+      - 30
+      - 20
+      - Quest_Image_3
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/4
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_4
+      - 100
+      - 40
+      - 50
+      - Quest_Image_4
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/5
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_5
+      - 200
+      - 50
+      - 100
+      - Quest_Image_5
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/6
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_6
+      - 500
+      - 60
+      - 500
+      - Quest_Image_6
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/7
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_7
+      - 1000
+      - 70
+      - 1000
+      - Quest_Image_7
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/8
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_8
+      - 2000
+      - 80
+      - 5000
+      - Quest_Image_8
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/9
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_9
+      - 3000
+      - 90
+      - 10000
+      - Quest_Image_9
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/10
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/11
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_11
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/12
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/13
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/14
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/15
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
+      Languages_Touch: []
+    - Term: QuestDB/16
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+      Flags: 00000000000000000000000000000000000000
       Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
@@ -87,12 +816,24 @@ MonoBehaviour:
     - Name: Vietnamese
       Code: vi
       Flags: 0
+    - Name: Time
+      Code: 
+      Flags: 0
+    - Name: Increase
+      Code: 
+      Flags: 0
+    - Name: Cost
+      Code: es-CR
+      Flags: 0
+    - Name: Image
+      Code: 
+      Flags: 0
     IgnoreDeviceLanguage: 0
     _AllowUnloadingLanguages: 1
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwti8St0EVhATB-VpJWR23qwFINXKYxYehNQ1Zl349q0_OePYX2tUGkNTPo_ggd2Nwf/exec
     Google_SpreadsheetKey: 1PQ0UdVoaxsFOlXSz-F80s2stQRCQHtq_wRUwjxXZb_Y
     Google_SpreadsheetName: I2Loc ProjectIL Localization
-    Google_LastUpdatedVersion: 
+    Google_LastUpdatedVersion: 1730032865264
     Google_Password: threerabbit1!
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

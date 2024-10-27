@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,10 @@ using ThreeRabbitPackage.DesignPattern;
 
 public partial class BattlePresenter : MonoBehaviour
 {
-    public CharacterView characterView;
-    private CharacterModel characterModel;
     public TRState<BattlePresenter> battleState;
+
+    public CharacterView characterView;
+    private CharacterModel characterModel = new();
 
     private void Awake()
     {
@@ -17,6 +19,7 @@ public partial class BattlePresenter : MonoBehaviour
     private void Update()
     {
         FSM();
+        Debug.Log(characterView.isCollision);
     }
 
     private void FSM()

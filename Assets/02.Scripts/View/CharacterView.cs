@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private SpriteRenderer weapon_l;
 
     public Animator Animator => animator;
+    public bool isCollision = false;
 
     public void SetWeapon(Sprite sprite, HandType handType = HandType.RIGHT)
     {
@@ -26,5 +28,32 @@ public class CharacterView : MonoBehaviour
         }
     }
 
- 
+    public void Move(float moveSpeed)
+    {
+        transform.Translate(moveSpeed * Time.smoothDeltaTime * Vector2.right);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Monster"))
+        {
+            isCollision = true;
+        }
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Monster"))
+        {
+            isCollision = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Monster"))
+        {
+            isCollision = false;
+        }
+    }
 }

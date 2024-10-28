@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 15150780}
   - component: {fileID: 15150779}
   m_Layer: 5
-  m_Name: CurKey_img
+  m_Name: Key_img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a2d182d089d464f20a7d6bcb45c8c60c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4092d10e429014ccfb3c475497e2d6b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 29748175}
   - component: {fileID: 29748174}
   m_Layer: 5
-  m_Name: CurKey_txt
+  m_Name: Key_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 346880738}
   - component: {fileID: 346880739}
   m_Layer: 5
-  m_Name: CurGold_txt
+  m_Name: Gold_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1593,7 +1593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548619678}
   m_Layer: 5
-  m_Name: CurGold
+  m_Name: Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3713,7 +3713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785527598}
   m_Layer: 5
-  m_Name: CurDia
+  m_Name: Dia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4071,7 +4071,7 @@ GameObject:
   - component: {fileID: 869834058}
   - component: {fileID: 869834057}
   m_Layer: 5
-  m_Name: CurGold_img
+  m_Name: Goldimg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6471,7 +6471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772339869}
   m_Layer: 5
-  m_Name: CurKey
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6722,7 +6722,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -6878,7 +6878,7 @@ GameObject:
   - component: {fileID: 1962143866}
   - component: {fileID: 1962143865}
   m_Layer: 5
-  m_Name: CurDia_img
+  m_Name: Dia_img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6924,7 +6924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a2d182d089d464f20a7d6bcb45c8c60c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a726717a1c004fad811f62c6e5503cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7445,7 +7445,7 @@ GameObject:
   - component: {fileID: 2107806186}
   - component: {fileID: 2107806187}
   m_Layer: 5
-  m_Name: CurDia_txt
+  m_Name: Dia_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

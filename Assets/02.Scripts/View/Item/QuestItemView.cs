@@ -25,10 +25,15 @@ public class QuestItemView : MonoBehaviour
         level_txt.text = $"Lv.{level}";
     }
 
-    public bool ProgressUpdate(int curSecond, int endTime)
+    public void ProgressUpdate(int curSecond, int endTime)
     {
         quest_slider.value = (float)curSecond / (float)endTime;
         time_txt.text = $"{TimeSpan.FromSeconds(endTime - curSecond)}";
-        return quest_slider.value >= 1;
+    }
+
+    public void LevelUpdate(string level, string reward)
+    {
+        reward_txt.text = reward;
+        level_txt.text = $"Lv.{level}";
     }
 }

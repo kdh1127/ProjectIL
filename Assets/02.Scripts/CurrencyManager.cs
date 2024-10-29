@@ -1,3 +1,4 @@
+using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,20 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         dia.Value = new(0);
         key.Value = new(0);
     }
+
+    public bool AddGold(BigInteger newGold)
+    {
+        var subValue = gold.Value - newGold;
+
+        if (subValue.bigInteger >= 0)
+        {
+            gold.Value += newGold;
+            return true;
+        }
+
+        else return false;
+    }
+
     public void Test()
     {
         gold.Value += 100;

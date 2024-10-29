@@ -31,7 +31,7 @@ public class QuestItemModel
     {
         var reward = GetReward(table);
 
-        if (table.Time >= elpasedTime.Value)
+        if (elpasedTime.Value >= table.Time)
         {
             CurrencyManager.Instance.AddGold(reward);
             elpasedTime.Value = 0;

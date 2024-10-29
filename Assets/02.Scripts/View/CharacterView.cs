@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 
 public class CharacterView : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class CharacterView : MonoBehaviour
 
     public Animator Animator => animator;
     public bool isCollision = false;
+    public GameObject target;
+    public Subject<GameObject> AttackSubject = new();
 
     public void SetWeapon(Sprite sprite, HandType handType = HandType.RIGHT)
     {
@@ -38,6 +41,7 @@ public class CharacterView : MonoBehaviour
         if(collision.CompareTag("Monster"))
         {
             isCollision = true;
+            target = collision.gameObject;
         }
     }
 
@@ -46,6 +50,7 @@ public class CharacterView : MonoBehaviour
         if(collision.CompareTag("Monster"))
         {
             isCollision = true;
+            target = collision.gameObject;
         }
     }
 
@@ -54,6 +59,12 @@ public class CharacterView : MonoBehaviour
         if(collision.CompareTag("Monster"))
         {
             isCollision = false;
+            target = null;
         }
+    }
+
+    public void OnHitAttackAnimation()
+    {
+        AttackSubject.OnNext(target);
     }
 }

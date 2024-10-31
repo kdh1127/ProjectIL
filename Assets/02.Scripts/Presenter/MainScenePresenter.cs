@@ -70,6 +70,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		}).AddTo(this);
 	}
 
+	#region Quest
 	public void QuestItemSubscribe(QuestTable table, QuestItemView questItemView)
     {
         var questItemModel = questModel.questItemList[table.QuestNo];
@@ -133,4 +134,5 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			}).AddTo(qusetitemView.gameObject);
 		});
 	}
+	#endregion
 }

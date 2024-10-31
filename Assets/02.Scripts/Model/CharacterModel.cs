@@ -8,12 +8,11 @@ public class CharacterModel : MonoBehaviour
 {
     public float moveSpeed = 1f;
     public float attackPerSecond = 1;
-    public BigInteger baseDamage = 1;
     public BigInteger weaponDamage = 0;
     public BigInteger criticalDamage = 2;
     public BigInteger criticalChance = 10;
 
-    public BigInteger baseAttackDamage => baseDamage + weaponDamage;
+    public BigInteger baseAttackDamage => weaponDamage;
     public BigInteger criticalAttackDamage => baseAttackDamage * criticalDamage;
             
     public BigInteger Attack()

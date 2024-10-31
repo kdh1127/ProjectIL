@@ -13,8 +13,10 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
     public ReactiveProperty<ANumber> dia = new();
     public ReactiveProperty<ANumber> key = new();
 
-     void Awake()
+    private void Awake()
     {
+        base.Awake();
+
         gold.Value = new(0);
         dia.Value = new(0);
         key.Value = new(0);
@@ -22,9 +24,9 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
 
     public bool AddGold(BigInteger newGold)
     {
-        var subValue = gold.Value - newGold;
+        var isPositive = (gold.Value.bigInteger += newGold) >= 0;
 
-        if (subValue.bigInteger >= 0)
+        if (isPositive)
         {
             gold.Value += newGold;
             return true;
@@ -36,6 +38,5 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
     public void Test()
     {
         gold.Value += 100;
-        dia.Value += 1000;
     }
 }

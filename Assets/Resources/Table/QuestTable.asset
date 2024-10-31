@@ -15,15 +15,15 @@ MonoBehaviour:
   sheetID: 1UWFMOz9i1Ewz0WdGV1HbTlOCwOvqcHxA-GrEjtnYmN4
   gID: 1008749761
   columnList:
-  - type: 1
+  - type: 0
     columnId: QuestNo
   - type: 1
     columnId: Name
-  - type: 1
+  - type: 0
     columnId: Time
-  - type: 1
+  - type: 0
     columnId: Increase
-  - type: 1
+  - type: 0
     columnId: Cost
   - type: 1
     columnId: Image
@@ -164,6 +164,22 @@ MonoBehaviour:
     - 100
     - 25000
     - Quest_Image_10
+  - key: 17
+    datas:
+    - 17
+    - Quest_Name_10
+    - 3600
+    - 100
+    - 25000
+    - Quest_Image_10
+  - key: 18
+    datas:
+    - 18
+    - Quest_Name_10
+    - 3600
+    - 100
+    - 25000
+    - Quest_Image_10
   dataDictionary:
     m_keys:
     - 0
@@ -183,6 +199,8 @@ MonoBehaviour:
     - 14
     - 15
     - 16
+    - 17
+    - 18
     m_values:
     - m_keys:
       - QuestNo
@@ -417,6 +435,34 @@ MonoBehaviour:
       - Image
       m_values:
       - 16
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 17
+      - Quest_Name_10
+      - 3600
+      - 100
+      - 25000
+      - Quest_Image_10
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 18
       - Quest_Name_10
       - 3600
       - 100

@@ -30,9 +30,9 @@ MonoBehaviour:
   - type: 0
     columnId: Key
   dataList:
-  - key: 1
+  - key: 0
     datas:
-    - 1
+    - 0
     - Skelton_Basic
     - Skelton_Basic
     - 10
@@ -338,7 +338,7 @@ MonoBehaviour:
     - 2000
   dataDictionary:
     m_keys:
-    - 1
+    - 0
     - 10
     - 20
     - 30
@@ -382,7 +382,7 @@ MonoBehaviour:
       - Crystal
       - Key
       m_values:
-      - 1
+      - 0
       - Skelton_Basic
       - Skelton_Basic
       - 10

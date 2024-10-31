@@ -17,8 +17,12 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	private MainButtonModel mainButtonModel = new();
 
 	public BottomPanelView bottomPanelView;
+
 	public QuestPanelView questPanelView;
 	private QuestModel questModel = new();
+
+	public WeaponPanelView weaponPanelView;
+	private WeaponModel weaponModel = new();
 
 	public CurrencyView currencyView;
 
@@ -27,11 +31,13 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		base.Awake();
 
 		questModel.Init();
+		weaponModel.Init();
 
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
 		QuestPanelSubscribe();
+		WeaponPanelSubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -72,8 +78,8 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	#region Quest
 	public void QuestItemSubscribe(QuestTable table, QuestItemView questItemView)
-    {
-        var questItemModel = questModel.questItemList[table.QuestNo];
+	{
+		var questItemModel = questModel.questItemList[table.QuestNo];
 
 		questItemModel.elpasedTime.Subscribe(time =>
 		{
@@ -84,10 +90,10 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		{
 			questItemView.LevelUpdate(level.ToString(), questItemModel.GetReward(table).ToString());
 		}).AddTo(questItemView.gameObject);
-    }
+	}
 
 	public void QuestPanelSubscribe()
-    {
+	{
 		var questImageResources = TRScriptableManager.Instance.Sprite["QuestImage"].spriteDictionary;
 		var costImageResources = TRScriptableManager.Instance.Sprite["CostImage"].spriteDictionary;
 
@@ -132,7 +138,54 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			{
 				questItemModel.Progress(item);
 			}).AddTo(qusetitemView.gameObject);
+
 		});
 	}
 	#endregion
+
+	public void WeaponPanelSubscribe()
+	{
+		var costImageResources = TRScriptableManager.Instance.Sprite["CostImage"].spriteDictionary;
+
+		WeaponTableList.Get().ForEach(item =>
+		{
+			var weaponItemView = Instantiate(weaponPanelView.WeaponItem, weaponPanelView.content_tr).GetComponent<WeaponItemView>();
+			var weaponItemModel = weaponModel.weaponItemList[item.WeaponNo];
+			Debug.Log(item.Cost);
+			weaponItemView.Init(
+				title: item.Name,
+				level: weaponItemModel.level.Value,
+				baseAtk: BigInteger.Parse(item.BaseAtk)
+				);
+
+			weaponItemView.upgradeButtonView.Init(
+				increase: item.Increase,
+				cost: item.Cost,
+				costImage: costImageResources["Gold"]
+				);
+
+			weaponItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+			{
+
+				weaponModel.weaponItemList[item.WeaponNo].Upgrade(item);
+				weaponItemView.LevelUpdate(BigInteger.Parse(item.BaseAtk) + BigInteger.Parse(item.Increase), weaponItemModel.level.Value);
+			}).AddTo(weaponItemView.gameObject);
+
+
+			CurrencyManager.Instance.gold.Subscribe(gold =>
+			{
+				weaponItemView.upgradeButtonView.SetInteractable(gold.bigInteger >= BigInteger.Parse(item.Cost));
+			}).AddTo(weaponItemView.upgradeButtonView.button);
+
+			weaponModel.weaponItemList[item.WeaponNo].level.Subscribe(level =>
+			{
+				if (weaponModel.weaponItemList[item.WeaponNo].level.Value > 4)
+				{
+					weaponItemView.upgradeButtonView.button.interactable = false;
+					return;
+				}
+
+			}).AddTo(weaponItemView.gameObject);
+		});
+	}
 }

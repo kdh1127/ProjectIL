@@ -46,7 +46,7 @@ MonoBehaviour:
     - Weapon_Image_29
     - Weapon_Image_30
     m_values:
-    - {fileID: 0}
+    - {fileID: -9100664811620793741, guid: 3e7f1bcf5e1004551853fead34d7fb5b, type: 3}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}

@@ -8,7 +8,7 @@ public class CharacterModel
             
     public AttackInfo Attack()
     {
-        bool isCritical = Random.Range(0, 101) < UserDataManager.Instance.characterData.CriticalDamage;
+        bool isCritical = Random.Range(0, 101) < UserDataManager.Instance.characterData.CriticalChance;
         var damage = isCritical ? CriticalAttackDamage : BaseAttackDamage;
 
         return new AttackInfo(damage, isCritical);

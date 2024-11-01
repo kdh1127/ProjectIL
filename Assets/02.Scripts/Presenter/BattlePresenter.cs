@@ -14,6 +14,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
     private CharacterModel characterModel = new();
 
     public Camera pixelCamera;
+    public FadeScreenView fadeScreenView;
 
     private new void Awake()
     {

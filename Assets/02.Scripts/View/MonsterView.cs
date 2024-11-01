@@ -51,7 +51,8 @@ public class MonsterView : MonoBehaviour
 
 	public void UpdateHpBar(BigInteger curHp, BigInteger maxHp)
 	{
-		hp_slider.value = (float)(curHp / maxHp);
+		double ratio = (double)curHp / (double)maxHp; ;
+		hp_slider.value = (float)ratio;
 		hp_txt.text = curHp < 0 ? "0" : curHp.ToAlphabetNumber();
 	}
 }

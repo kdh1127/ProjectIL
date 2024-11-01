@@ -44,4 +44,9 @@ public class StageManager : TRSingleton<StageManager>
 	{
 		 return MonsterManager.Instance.monsterIndex + 1;
 	}
+
+	public void IncreaseStage()
+	{
+		CurStage.Value++;
+	}
 }

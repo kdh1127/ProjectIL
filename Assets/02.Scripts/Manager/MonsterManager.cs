@@ -25,6 +25,17 @@ public class MonsterManager : TRSingleton<MonsterManager>
         return monsterModel;
     }
 
+    public void ClearAllMonster()
+    {
+        monsterPositionList_tr.ForEach(tr =>
+        {
+            if(tr.GetChild(0) != null)
+                Destroy(tr.GetChild(0).gameObject);
+        });
+
+        monsterModelList.Clear();
+    }
+
     public Transform GetSpawnPosition(int index)
 	{
         return monsterPositionList_tr[index];

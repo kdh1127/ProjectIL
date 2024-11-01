@@ -65,7 +65,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		{
 			MoveSpeed = 1f;
 			AttackPerSecond = 1f;
-			WeaponDamage = 0;
+			WeaponDamage = 2;
 			CriticalDamage = 2;
 			CriticalChance = 10;
 		}

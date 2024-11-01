@@ -13,6 +13,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
     public CharacterView characterView;
     private CharacterModel characterModel = new();
 
+    public Camera pixelCamera;
 
     private new void Awake()
     {
@@ -54,8 +55,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
         model.DeathSubject.Subscribe(_ =>
         {
             view.Animator.SetTrigger("Death");
-            MonsterManager.Instance.IncreaseIndex();
             view.GetComponent<BoxCollider2D>().enabled = false;
+            MonsterManager.Instance.IncreaseIndex();
         }).AddTo(view.gameObject);
 
         model.hp.Subscribe(hp =>

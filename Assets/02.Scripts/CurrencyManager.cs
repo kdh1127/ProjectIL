@@ -15,7 +15,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
 
     public bool AddCurrency(EnumList.ECurrencyType currencyType, BigInteger amount)
 	{
-        var currency = UserDataManager.Instance.Currency[currencyType];
+        var currency = UserDataManager.Instance.currencyData.Currency[currencyType];
         var isPositive = IsPositiveAmount(currency.Value, amount);
 
         if (!isPositive) return false;

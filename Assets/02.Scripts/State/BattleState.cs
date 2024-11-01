@@ -93,8 +93,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             base.Update(battlePresenter);
 
             battlePresenter.characterView.Animator.SetTrigger("Run");
-            battlePresenter.characterView.Move(battlePresenter.characterModel.moveSpeed);
-            Camera.main.transform.Translate(battlePresenter.characterModel.moveSpeed * Time.smoothDeltaTime * Vector2.right);
+            battlePresenter.characterView.Move(UserDataManager.Instance.characterData.MoveSpeed);
+            battlePresenter.pixelCamera.transform.Translate(UserDataManager.Instance.characterData.MoveSpeed * Time.smoothDeltaTime * Vector2.right);
         }
 
         public override void Exit(BattlePresenter battlePresenter)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class EnumList
 {
-	public enum ERewardType
+	public enum ECurrencyType
 	{
 		GOLD,
 		DIA,

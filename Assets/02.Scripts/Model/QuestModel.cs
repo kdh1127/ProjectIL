@@ -16,13 +16,13 @@ public class QuestItemModel
 
     public void Upgrade(QuestTable table)
     {
-        if (CurrencyManager.Instance.AddGold(-table.Cost))
+        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -table.Cost))
         {
             level.Value++;
         }
     }
 
-    public int GetReward(QuestTable table)
+    public BigInteger GetReward(QuestTable table)
     {
         return level.Value > 0 ? level.Value * table.Increase : table.Increase;
     }
@@ -33,7 +33,7 @@ public class QuestItemModel
 
         if (elpasedTime.Value >= table.Time)
         {
-            CurrencyManager.Instance.AddGold(reward);
+            CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, reward);
             elpasedTime.Value = 0;
         }
         else

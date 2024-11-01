@@ -17,9 +17,4 @@ public class CommonClass
 		}
 	}
 
-	public class Reward
-	{
-		public EnumList.ERewardType type;
-		public BigInteger amount;
-	}
 }

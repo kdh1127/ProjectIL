@@ -21,13 +21,13 @@ MonoBehaviour:
     columnId: MonsterNormalName
   - type: 1
     columnId: MonsterBossName
-  - type: 0
+  - type: 1
     columnId: Hp
-  - type: 0
+  - type: 1
     columnId: Gold
-  - type: 0
+  - type: 1
     columnId: Crystal
-  - type: 0
+  - type: 1
     columnId: Key
   dataList:
   - key: 0

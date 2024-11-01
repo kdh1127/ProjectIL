@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using UniRx;
 public class MonsterModel
 {
     public ReactiveProperty<BigInteger> hp = new();
-	public List<CommonClass.Reward> rewardList = new();
+	private Dictionary<EnumList.ECurrencyType,BigInteger> reward = new();
 	public Subject<CommonClass.AttackInfo> AttackInfoSubject = new();
     public Subject<Unit> DeathSubject = new();
 	public BigInteger maxHp;
@@ -17,16 +18,16 @@ public class MonsterModel
 		switch (monsterType)
 		{
 			case EnumList.EMonsterType.NORMAL:
-				hp.Value = table.StageNo + table.Hp;
+				hp.Value = table.StageNo + BigInteger.Parse(table.Hp);
 				maxHp = hp.Value;
-				rewardList.Add(new CommonClass.Reward { amount = table.Gold, type = EnumList.ERewardType.GOLD });
+				reward.Add(EnumList.ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
 				break;
 			case EnumList.EMonsterType.BOSS:
-				hp.Value = table.StageNo + table.Hp * 2;
+				hp.Value = table.StageNo + BigInteger.Parse(table.Hp) * 2;
 				maxHp = hp.Value;
-				rewardList.Add(new CommonClass.Reward { amount = table.Gold, type = EnumList.ERewardType.GOLD });
-				rewardList.Add(new CommonClass.Reward { amount = table.Crystal, type = EnumList.ERewardType.DIA });
-				rewardList.Add(new CommonClass.Reward { amount = table.Key, type = EnumList.ERewardType.KEY });
+				reward.Add(EnumList.ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(EnumList.ECurrencyType.DIA, BigInteger.Parse(table.Dia));
+				reward.Add(EnumList.ECurrencyType.KEY, BigInteger.Parse(table.Key));
 				break;
 		}
 
@@ -43,21 +44,9 @@ public class MonsterModel
 
 	public void AddReward()
 	{
-		// 나중에 리팩토링 하자
-		rewardList.ForEach(reward =>
+		reward.ToList().ForEach(reward =>
 		{
-			switch (reward.type)
-			{
-				case EnumList.ERewardType.GOLD:
-					CurrencyManager.Instance.AddGold(reward.amount);
-					break;
-				case EnumList.ERewardType.DIA:
-					CurrencyManager.Instance.AddDia(reward.amount);
-					break;
-				case EnumList.ERewardType.KEY:
-					CurrencyManager.Instance.Addkey(reward.amount);
-					break;
-			}
+			CurrencyManager.Instance.AddCurrency(reward.Key, reward.Value);
 		});
 	}
 }

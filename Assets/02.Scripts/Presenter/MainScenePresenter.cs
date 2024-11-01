@@ -53,19 +53,19 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public void CurrencySubscribe()
 	{
-		CurrencyManager.Instance.gold.Subscribe(gold =>
+		UserDataManager.Instance.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
 		{
-			currencyView.gold_txt.text = gold.ToAlphaString();
+			currencyView.gold_txt.text = gold.ToAlphabetNumber();
 		}).AddTo(this);
 
-		CurrencyManager.Instance.dia.Subscribe(dia =>
+		UserDataManager.Instance.Currency[EnumList.ECurrencyType.DIA].Subscribe(dia =>
 		{
-			currencyView.dia_txt.text = dia.ToAlphaString();
+			currencyView.dia_txt.text = dia.ToAlphabetNumber();
 		}).AddTo(this);
 
-		CurrencyManager.Instance.key.Subscribe(key =>
+		UserDataManager.Instance.Currency[EnumList.ECurrencyType.KEY].Subscribe(key =>
 		{
-			currencyView.key_txt.text = key.ToAlphaString();
+			currencyView.key_txt.text = key.ToAlphabetNumber();
 		}).AddTo(this);
 	}
 
@@ -119,7 +119,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			}).AddTo(qusetitemView.gameObject);
 
 			// Subscribe currentGold
-			CurrencyManager.Instance.gold.Subscribe(gold =>
+			UserDataManager.Instance.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
 			{
 				qusetitemView.upgradeButtonView.SetInteractable(gold.bigInteger >= item.Cost);
 			}).AddTo(qusetitemView.upgradeButtonView.button);

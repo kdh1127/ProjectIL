@@ -8,66 +8,24 @@ using UniRx;
 
 public class CurrencyManager : TRSingleton<CurrencyManager>
 {
-
-    public ReactiveProperty<ANumber> gold = new();
-    public ReactiveProperty<ANumber> dia = new();
-    public ReactiveProperty<ANumber> key = new();
-
     private new void Awake()
     {
         base.Awake();
-
-        gold.Value = new(0);
-        dia.Value = new(0);
-        key.Value = new(0);
     }
 
-    public bool AddGold(BigInteger newGold)
-    {
-        var isPositive = IsPostive(gold.Value.bigInteger, newGold);
+    public bool AddCurrency(EnumList.ECurrencyType currencyType, BigInteger amount)
+	{
+        var currency = UserDataManager.Instance.Currency[currencyType];
+        var isPositive = IsPositiveAmount(currency.Value, amount);
 
-        if (isPositive)
-        {
-            gold.Value += newGold;
-            return true;
-        }
+        if (!isPositive) return false;
 
-        else return false;
+        currency.Value += amount;
+        return true;
     }
 
-    public bool AddDia(BigInteger newDia)
-    {
-        var isPositive = IsPostive(dia.Value.bigInteger, newDia);
-
-        if (isPositive)
-        {
-            dia.Value += newDia;
-            return true;
-        }
-
-        else return false;
-    }
-
-    public bool Addkey(BigInteger newKey)
-    {
-        var isPositive = IsPostive(key.Value.bigInteger, newKey);
-
-        if (isPositive)
-        {
-            key.Value += newKey;
-            return true;
-        }
-
-        else return false;
-    }
-
-    private bool IsPostive(BigInteger curCurrency, BigInteger newCurrency)
+    private bool IsPositiveAmount(BigInteger curCurrency, BigInteger newCurrency)
 	{
         return (curCurrency += newCurrency) >= 0;
-    }
-
-    public void Test()
-    {
-        gold.Value += 100;
     }
 }

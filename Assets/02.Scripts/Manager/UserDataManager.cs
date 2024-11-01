@@ -1,18 +1,39 @@
+using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ThreeRabbitPackage.DesignPattern;
+using UniRx;
 
-public class UserDataManager : MonoBehaviour
+public class UserDataManager : TRSingleton<UserDataManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private new void Awake()
+	{
+		base.Awake();
+		Init();
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Init()
+	{
+		InitCurrency();
+	}
+
+	#region Currency
+	private Dictionary<EnumList.ECurrencyType, ReactiveProperty<BigInteger>> currency = new();
+	public Dictionary<EnumList.ECurrencyType, ReactiveProperty<BigInteger>> Currency { get => currency; set => currency = value; }
+	private void InitCurrency()
+	{
+		Currency.Add(EnumList.ECurrencyType.GOLD, new ReactiveProperty<BigInteger>());
+		Currency.Add(EnumList.ECurrencyType.DIA, new ReactiveProperty<BigInteger>());
+		Currency.Add(EnumList.ECurrencyType.KEY, new ReactiveProperty<BigInteger>());
+	}
+	public void SaveCurrency()
+	{
+
+	}
+	public void LoadCurrency()
+	{
+
+	}
+	#endregion
 }

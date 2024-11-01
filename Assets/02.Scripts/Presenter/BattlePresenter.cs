@@ -50,11 +50,12 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 
     private void SubscribeMonster(MonsterModel model, MonsterView view)
 	{
+        // 나중에 오브젝트 풀로 변경하자
         model.DeathSubject.Subscribe(_ =>
         {
             view.Animator.SetTrigger("Death");
             MonsterManager.Instance.IncreaseIndex();
-            Destroy(view.gameObject);
+            view.GetComponent<BoxCollider2D>().enabled = false;
         }).AddTo(view.gameObject);
 
         model.hp.Subscribe(hp =>

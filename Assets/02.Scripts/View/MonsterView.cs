@@ -24,12 +24,15 @@ public class MonsterView : MonoBehaviour
 		hp_slider = canvas_tr.Find("Hp_slider").GetComponent<Slider>();
 		hp_txt = canvas_tr.Find("Hp_slider/Fill Area/Hp_txt").GetComponent<TMP_Text>();
 		damageOriginPos = damage_txt.rectTransform.anchoredPosition;
+
+		damage_txt.gameObject.SetActive(false);
 	}
 
 	public void ShowDamage(CommonClass.AttackInfo attackInfo)
 	{
 		damage_txt.DOKill();
 		damage_txt.rectTransform.DOKill();
+		damage_txt.gameObject.SetActive(true);
 		damage_txt.text = attackInfo.damage.ToAlphabetNumber();
 		damage_txt.rectTransform.anchoredPosition = damageOriginPos;
 		damage_txt.DOFade(0f, 1f).SetEase(Ease.InQuart);
@@ -40,6 +43,6 @@ public class MonsterView : MonoBehaviour
 	public void UpdateHpBar(BigInteger curHp, BigInteger maxHp)
 	{
 		hp_slider.value = (float)(curHp / maxHp);
-		hp_txt.text = curHp.ToAlphabetNumber();
+		hp_txt.text = curHp < 0 ? "0" : curHp.ToAlphabetNumber();
 	}
 }

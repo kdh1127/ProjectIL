@@ -51,14 +51,17 @@ namespace ThreeRabbitPackage
 
 		public event Action OnClick;
 
-		public void Start()
+		public new void Start()
 		{
+			base.Start();
+
 			if(buttonType != EButtonType.None)
 				GetComponent<Button>().onClick.AddListener(ClickEvent);
 		}
 
-		public void OnDestroy()
+		public new void OnDestroy()
 		{
+			base.OnDestroy();
 			ClearClickEvent();
 		}
 

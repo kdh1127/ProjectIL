@@ -10,7 +10,7 @@ public class StageManager : TRSingleton<StageManager>
 {
 	public ReactiveProperty<int> CurStage = new(0);
 
-	private void Awake()
+	private new void Awake()
 	{
 		var table = TRScriptableManager.Instance.GoogleSheet["Stage"];
 		if (TRScriptableManager.Instance != null)

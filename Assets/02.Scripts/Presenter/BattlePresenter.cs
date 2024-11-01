@@ -14,7 +14,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
     private CharacterModel characterModel = new();
 
 
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
         SubscribeCharacter();

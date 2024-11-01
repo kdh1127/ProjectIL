@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class CharacterModel : MonoBehaviour
+public class CharacterModel
 {
     public float moveSpeed = 1f;
     public float attackPerSecond = 1;

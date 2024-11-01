@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonClass : MonoBehaviour
+public class CommonClass
 {
 	public struct AttackInfo
 	{
@@ -15,5 +15,11 @@ public class CommonClass : MonoBehaviour
 			this.damage = damage;
 			this.isCritical = isCritical;
 		}
+	}
+
+	public class Reward
+	{
+		public EnumList.ERewardType type;
+		public BigInteger amount;
 	}
 }

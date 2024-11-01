@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 
-public class MainButtonModel : MonoBehaviour
+public class MainButtonModel
 {
 	public Subject<CommonToggle> toggleSubject = new();
 

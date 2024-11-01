@@ -13,7 +13,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
     public ReactiveProperty<ANumber> dia = new();
     public ReactiveProperty<ANumber> key = new();
 
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
 

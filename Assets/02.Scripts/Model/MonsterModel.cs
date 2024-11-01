@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class MonsterModel : MonoBehaviour
+public class MonsterModel
 {
     public ReactiveProperty<BigInteger> hp = new();
-	public List<Reward> rewardList = new();
+	public List<CommonClass.Reward> rewardList = new();
 	public Subject<CommonClass.AttackInfo> AttackInfoSubject = new();
     public Subject<Unit> DeathSubject = new();
 	public BigInteger maxHp;
@@ -19,14 +19,14 @@ public class MonsterModel : MonoBehaviour
 			case EnumList.EMonsterType.NORMAL:
 				hp.Value = table.StageNo + table.Hp;
 				maxHp = hp.Value;
-				rewardList.Add(new Reward {amount = table.Gold, type = EnumList.ERewardType.GOLD });
+				rewardList.Add(new CommonClass.Reward { amount = table.Gold, type = EnumList.ERewardType.GOLD });
 				break;
 			case EnumList.EMonsterType.BOSS:
 				hp.Value = table.StageNo + table.Hp * 2;
 				maxHp = hp.Value;
-				rewardList.Add(new Reward { amount = table.Gold, type = EnumList.ERewardType.GOLD });
-				rewardList.Add(new Reward { amount = table.Crystal, type = EnumList.ERewardType.DIA });
-				rewardList.Add(new Reward { amount = table.Key, type = EnumList.ERewardType.KEY });
+				rewardList.Add(new CommonClass.Reward { amount = table.Gold, type = EnumList.ERewardType.GOLD });
+				rewardList.Add(new CommonClass.Reward { amount = table.Crystal, type = EnumList.ERewardType.DIA });
+				rewardList.Add(new CommonClass.Reward { amount = table.Key, type = EnumList.ERewardType.KEY });
 				break;
 		}
 

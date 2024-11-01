@@ -7,13 +7,6 @@ public class TRScriptableManager : TRSingleton<TRScriptableManager>
 	[SerializeField] public TRGoogleSheetDictionary GoogleSheet;
 	[SerializeField] public TRGameObjectResourcesDictionary GameObject;
 	[SerializeField] public TRSpriteResourcesDictionary Sprite;
-
-	public void Awake()
-	{
-		base.Awake();
-
-		GoogleSheet = this.GoogleSheet;
-	}
 }
 
 [System.Serializable]

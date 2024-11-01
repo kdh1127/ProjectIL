@@ -21,7 +21,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public CurrencyView currencyView;
 
-	private void Awake()
+	private new void Awake()
 	{
 		base.Awake();
 

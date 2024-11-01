@@ -96,16 +96,11 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             battlePresenter.characterView.Animator.SetTrigger("Run");
             battlePresenter.characterView.Move(UserDataManager.Instance.characterData.MoveSpeed);
             
-            if(CharacterManager.Instance.CharacterPositionX > 3 && CharacterManager.Instance.CharacterPositionX < 26)
+            if(CharacterManager.Instance.CharacterPositionX > 3 && CharacterManager.Instance.CharacterPositionX < 22)
                 battlePresenter.pixelCamera.transform.Translate(UserDataManager.Instance.characterData.MoveSpeed * Time.smoothDeltaTime * Vector2.right);
             if (CharacterManager.Instance.CharacterPositionX >= 26)
                 isClear = true;
 
-        }
-
-        public override void Exit(BattlePresenter battlePresenter)
-        {
-            base.Exit(battlePresenter);
         }
     }
 

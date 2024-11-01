@@ -6,19 +6,13 @@ using UniRx;
 
 public class CharacterModel
 {
-    public float moveSpeed = 1f;
-    public float attackPerSecond = 1;
-    public BigInteger weaponDamage = 5;
-    public BigInteger criticalDamage = 2;
-    public BigInteger criticalChance = 10;
-
-    public BigInteger baseAttackDamage => weaponDamage;
-    public BigInteger criticalAttackDamage => baseAttackDamage * criticalDamage;
+    public BigInteger BaseAttackDamage => UserDataManager.Instance.WeaponDamage;
+    public BigInteger CriticalAttackDamage => BaseAttackDamage * UserDataManager.Instance.CriticalDamage;
             
     public AttackInfo Attack()
     {
-        bool isCritical = Random.Range(0, 101) < criticalChance;
-        var damage = isCritical ? criticalAttackDamage : baseAttackDamage;
+        bool isCritical = Random.Range(0, 101) < UserDataManager.Instance.CriticalDamage;
+        var damage = isCritical ? CriticalAttackDamage : BaseAttackDamage;
 
         return new AttackInfo(damage, isCritical);
     }

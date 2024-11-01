@@ -121,7 +121,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			// Subscribe currentGold
 			UserDataManager.Instance.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
 			{
-				qusetitemView.upgradeButtonView.SetInteractable(gold.bigInteger >= item.Cost);
+				qusetitemView.upgradeButtonView.SetInteractable(gold >= item.Cost);
 			}).AddTo(qusetitemView.upgradeButtonView.button);
 
 			// Update Progress bar in Quest

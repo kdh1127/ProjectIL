@@ -93,36 +93,36 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		QuestTableList.Get().ForEach(item =>
 		{
 			// Instantiate
-			var qusetitemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
+			var questItemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
 			var questItemModel = questModel.questItemList[item.QuestNo];
 
 			// Initialize 
-			qusetitemView.Init(
+			questItemView.Init(
 				sprite: questImageResources[item.Image],
 				title: item.Name,
 				endTime: item.Time,
 				level: questItemModel.level.Value,
 				reward: questItemModel.GetReward(item));
 
-			qusetitemView.upgradeButtonView.Init(
+			questItemView.upgradeButtonView.Init(
 				increase: new ANumber(item.Increase).ToAlphaString(),
 				cost: new ANumber(item.Cost).ToAlphaString(),
 				costImage: costImageResources["Gold"]);
 
 			// Subscribe QuestItemModel
-			QuestItemSubscribe(item, qusetitemView);
+			QuestItemSubscribe(item, questItemView);
 
 			// Subscribe Upgrade_btn
-			qusetitemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+			questItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
 			{
 				questModel.questItemList[item.QuestNo].Upgrade(item);
-			}).AddTo(qusetitemView.gameObject);
+			}).AddTo(questItemView.gameObject);
 
 			// Subscribe currentGold
 			UserDataManager.Instance.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
 			{
-				qusetitemView.upgradeButtonView.SetInteractable(gold >= item.Cost);
-			}).AddTo(qusetitemView.upgradeButtonView.button);
+				questItemView.upgradeButtonView.SetInteractable(gold >= item.Cost);
+			}).AddTo(questItemView.upgradeButtonView.button);
 
 			// Update Progress bar in Quest
 			Observable.Interval(System.TimeSpan.FromSeconds(1))
@@ -130,7 +130,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			.Subscribe(_ =>
 			{
 				questItemModel.Progress(item);
-			}).AddTo(qusetitemView.gameObject);
+			}).AddTo(questItemView.gameObject);
 		});
 	}
 	#endregion

@@ -24,7 +24,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
 
     public bool AddGold(BigInteger newGold)
     {
-        var isPositive = (gold.Value.bigInteger += newGold) >= 0;
+        var isPositive = IsPostive(gold.Value.bigInteger, newGold);
 
         if (isPositive)
         {
@@ -33,6 +33,37 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         }
 
         else return false;
+    }
+
+    public bool AddDia(BigInteger newDia)
+    {
+        var isPositive = IsPostive(dia.Value.bigInteger, newDia);
+
+        if (isPositive)
+        {
+            dia.Value += newDia;
+            return true;
+        }
+
+        else return false;
+    }
+
+    public bool Addkey(BigInteger newKey)
+    {
+        var isPositive = IsPostive(key.Value.bigInteger, newKey);
+
+        if (isPositive)
+        {
+            key.Value += newKey;
+            return true;
+        }
+
+        else return false;
+    }
+
+    private bool IsPostive(BigInteger curCurrency, BigInteger newCurrency)
+	{
+        return (curCurrency += newCurrency) >= 0;
     }
 
     public void Test()

@@ -8,24 +8,18 @@ public class CharacterModel : MonoBehaviour
 {
     public float moveSpeed = 1f;
     public float attackPerSecond = 1;
-    public BigInteger weaponDamage = 0;
+    public BigInteger weaponDamage = 5;
     public BigInteger criticalDamage = 2;
     public BigInteger criticalChance = 10;
 
     public BigInteger baseAttackDamage => weaponDamage;
     public BigInteger criticalAttackDamage => baseAttackDamage * criticalDamage;
             
-    public BigInteger Attack()
+    public CommonClass.AttackInfo Attack()
     {
-        var random = Random.Range(0, 101); // 0 ~ 100
+        bool isCritical = Random.Range(0, 101) < criticalChance;
+        var damage = isCritical ? criticalAttackDamage : baseAttackDamage;
 
-        if (criticalChance >= random)
-        {
-            return criticalAttackDamage;
-        }
-        else
-        {
-            return baseAttackDamage;
-        }
+        return new CommonClass.AttackInfo(damage, isCritical);
     }
 }

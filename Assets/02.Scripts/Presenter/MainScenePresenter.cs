@@ -11,7 +11,6 @@ using System.Numerics;
 public class MainScenePresenter : TRSingleton<MainScenePresenter>
 {
 	public TopPanelView topPanelView;
-	private StageModel stageModel = new();
 
 	public MainButtonView mainButtonView;
 	private MainButtonModel mainButtonModel = new();
@@ -36,7 +35,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	private void TopPanelSubscribe()
 	{
-		stageModel.CurStage.Subscribe(curStage =>
+		StageManager.Instance.CurStage.Subscribe(curStage =>
 		{
 			topPanelView.stage_txt.text = StageManager.Instance.GetLocalizationStage(curStage);
 		}).AddTo(this);

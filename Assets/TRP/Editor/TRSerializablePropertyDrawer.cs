@@ -5,4 +5,5 @@ using UnityEditor;
 
 [CustomPropertyDrawer(typeof(TRGoogleSheetDictionary))]
 [CustomPropertyDrawer(typeof(TRSpriteResourcesDictionary))]
+[CustomPropertyDrawer(typeof(TRGameObjectResourcesDictionary))]
 public class TRSerializablePropertyDrawer : SerializableDictionaryPropertyDrawer { }

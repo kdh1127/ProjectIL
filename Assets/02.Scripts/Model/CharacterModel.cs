@@ -15,11 +15,11 @@ public class CharacterModel
     public BigInteger baseAttackDamage => weaponDamage;
     public BigInteger criticalAttackDamage => baseAttackDamage * criticalDamage;
             
-    public CommonClass.AttackInfo Attack()
+    public AttackInfo Attack()
     {
         bool isCritical = Random.Range(0, 101) < criticalChance;
         var damage = isCritical ? criticalAttackDamage : baseAttackDamage;
 
-        return new CommonClass.AttackInfo(damage, isCritical);
+        return new AttackInfo(damage, isCritical);
     }
 }

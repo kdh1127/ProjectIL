@@ -9,7 +9,7 @@ public class MonsterModel
 {
     public ReactiveProperty<BigInteger> hp = new();
 	private Dictionary<EnumList.ECurrencyType,BigInteger> reward = new();
-	public Subject<CommonClass.AttackInfo> AttackInfoSubject = new();
+	public Subject<AttackInfo> AttackInfoSubject = new();
     public Subject<Unit> DeathSubject = new();
 	public BigInteger maxHp;
 
@@ -32,7 +32,7 @@ public class MonsterModel
 		}
 
 	}
-	public void TakeDamage(CommonClass.AttackInfo attackInfo)
+	public void TakeDamage(AttackInfo attackInfo)
     {
         hp.Value -= attackInfo.damage;
 		AttackInfoSubject.OnNext(attackInfo);

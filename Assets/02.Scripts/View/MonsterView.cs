@@ -28,7 +28,7 @@ public class MonsterView : MonoBehaviour
 		damage_txt.gameObject.SetActive(false);
 	}
 
-	public void ShowDamage(CommonClass.AttackInfo attackInfo)
+	public void ShowDamage(AttackInfo attackInfo)
 	{
 		damage_txt.DOKill();
 		damage_txt.rectTransform.DOKill();

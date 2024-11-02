@@ -1,6 +1,7 @@
+using System;
+using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,12 +17,12 @@ public class QuestItemView : MonoBehaviour
     public TMP_Text reward_txt;
     public TMP_Text level_txt;
 
-    public void Init(Sprite sprite, string title, float endTime, int level, int reward)
+    public void Init(Sprite sprite, string title, float endTime, int level, BigInteger reward)
     {
         quest_img.sprite = sprite;
         title_txt.text = title;
         time_txt.text = $"{TimeSpan.FromSeconds(endTime)}";
-        reward_txt.text = new ANumber(reward).ToAlphaString();
+        reward_txt.text = reward.ToAlphabetNumber();
         level_txt.text = $"Lv.{level}";
     }
 

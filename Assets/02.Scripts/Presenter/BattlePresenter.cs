@@ -13,15 +13,21 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
     public CharacterView characterView;
     private CharacterModel characterModel = new();
 
-    private void Awake()
+    public Camera pixelCamera;
+    public FadeScreenView fadeScreenView;
+
+    private new void Awake()
     {
         base.Awake();
-        battleState = new LullState();
-
-        AttakcSubscribe();
+        SubscribeCharacter();
     }
 
-    private void Update()
+	private void Start()
+	{
+        battleState = new InitState();
+    }
+
+	private void Update()
     {
         FSM();
     }
@@ -35,13 +41,53 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             battleState = currentState;
     }
 
-    private void AttakcSubscribe()
+    private void SubscribeCharacter()
     {
         characterView.AttackSubject.Subscribe(monster =>
         {
-            var damage = characterModel.Attack();
-            Debug.Log($"데미지 {damage}");
-            //monster.GetComponent<MonsterModel>().TakeDamage(damage);
+            var attackInfo = characterModel.Attack();
+            MonsterManager.Instance.GetTargetMonster().TakeDamage(attackInfo);
         }).AddTo(characterView.gameObject);
+    }
+
+    private void SubscribeMonster(MonsterModel model, MonsterView view)
+	{
+        // 나중에 오브젝트 풀로 변경하자
+        model.DeathSubject.Subscribe(_ =>
+        {
+            view.Animator.SetTrigger("Death");
+            view.GetComponent<BoxCollider2D>().enabled = false;
+            MonsterManager.Instance.IncreaseIndex();
+            model.AddReward();
+        }).AddTo(view.gameObject);
+
+        model.hp.Subscribe(hp =>
+        {
+            view.UpdateHpBar(hp, model.maxHp);
+        }).AddTo(view.gameObject);
+
+        model.AttackInfoSubject.Subscribe(attackInfo =>
+        {
+            view.ShowDamage(attackInfo);
+        }).AddTo(view.gameObject);
+    }
+
+    public void Lull()
+	{
+        battleState = new LullState();
+    }
+
+    public void Battle()
+    {
+        battleState = new BattleState();
+    }
+
+    public void Clear()
+    {
+        battleState = new ClearState();
+    }
+    public void Init()
+    {
+        battleState = new InitState();
     }
 }

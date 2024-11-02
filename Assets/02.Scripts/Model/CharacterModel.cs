@@ -1,31 +1,16 @@
 using System.Numerics;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UniRx;
 
-public class CharacterModel : MonoBehaviour
+public class CharacterModel
 {
-    public float moveSpeed = 1f;
-    public float attackPerSecond = 1;
-    public BigInteger weaponDamage = 0;
-    public BigInteger criticalDamage = 2;
-    public BigInteger criticalChance = 10;
-
-    public BigInteger baseAttackDamage => weaponDamage;
-    public BigInteger criticalAttackDamage => baseAttackDamage * criticalDamage;
+    public BigInteger BaseAttackDamage => UserDataManager.Instance.characterData.WeaponDamage;
+    public BigInteger CriticalAttackDamage => BaseAttackDamage * UserDataManager.Instance.characterData.CriticalDamage;
             
-    public BigInteger Attack()
+    public AttackInfo Attack()
     {
-        var random = Random.Range(0, 101); // 0 ~ 100
+        bool isCritical = Random.Range(0, 101) < UserDataManager.Instance.characterData.CriticalChance;
+        var damage = isCritical ? CriticalAttackDamage : BaseAttackDamage;
 
-        if (criticalChance >= random)
-        {
-            return criticalAttackDamage;
-        }
-        else
-        {
-            return baseAttackDamage;
-        }
+        return new AttackInfo(damage, isCritical);
     }
 }

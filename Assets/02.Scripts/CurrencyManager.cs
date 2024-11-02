@@ -8,34 +8,24 @@ using UniRx;
 
 public class CurrencyManager : TRSingleton<CurrencyManager>
 {
-    public ReactiveProperty<ANumber> gold = new();
-    public ReactiveProperty<ANumber> dia = new();
-    public ReactiveProperty<ANumber> key = new();
-
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
-
-        gold.Value = new(0);
-        dia.Value = new(0);
-        key.Value = new(0);
     }
 
-    public bool AddGold(BigInteger newGold)
-    {
-        var isPositive = (gold.Value.bigInteger += newGold) >= 0;
+    public bool AddCurrency(EnumList.ECurrencyType currencyType, BigInteger amount)
+	{
+        var currency = UserDataManager.Instance.currencyData.Currency[currencyType];
+        var isPositive = IsPositiveAmount(currency.Value, amount);
 
-        if (isPositive)
-        {
-            gold.Value += newGold;
-            return true;
-        }
+        if (!isPositive) return false;
 
-        else return false;
+        currency.Value += amount;
+        return true;
     }
 
-    public void Test()
-    {
-        gold.Value += 10000;
+    private bool IsPositiveAmount(BigInteger curCurrency, BigInteger newCurrency)
+	{
+        return (curCurrency += newCurrency) >= 0;
     }
 }

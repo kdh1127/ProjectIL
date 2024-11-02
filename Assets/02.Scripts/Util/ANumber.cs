@@ -33,10 +33,10 @@ namespace AlphabetNumber
 	public static class Conversion
 	{
 		/// <summary>
-		/// ¼ýÀÚ¸¦ ¹®ÀÚ·Î º¯È¯ÇÕ´Ï´Ù. ¿¹) 1000 => 1A·Î º¯È¯
+		/// ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯ï¿½Õ´Ï´ï¿½. ï¿½ï¿½) 1000 => 1Aï¿½ï¿½ ï¿½ï¿½È¯
 		/// </summary>
-		/// <param name="number">º¯È¯ÇÒ ¼ýÀÚ</param>
-		/// <param name="count">Àç±Í¸¦ À§ÇÑ µðÆúÆ® ¸Å°³º¯¼ö</param>
+		/// <param name="number">ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</param>
+		/// <param name="count">ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½</param>
 		/// <returns></returns>
 		public static string BigIntegerToAlphabetNumber(BigInteger number, int count = 0)
 		{
@@ -46,7 +46,7 @@ namespace AlphabetNumber
 				{
 					return (number.ToString() + Dictionary.alphabetNumberDictionary.Keys.ElementAt(count));
 				}
-				//"0"À» ¹Ù²Ü ¶§ ¿¹¿ÜÃ³¸®
+				//"0"ï¿½ï¿½ ï¿½Ù²ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
 				else if (number == 0)
 				{
 					return "0";
@@ -59,13 +59,13 @@ namespace AlphabetNumber
 		}
 
 		/// <summary>
-		/// ¹®ÀÚ¸¦ ¼ýÀÚ·Î º¯È¯ÇÕ´Ï´Ù. ¿¹) 1A => 1000À¸·Î º¯È¯
+		/// ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯ï¿½Õ´Ï´ï¿½. ï¿½ï¿½) 1A => 1000ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 		/// </summary>
-		/// <param name="number">º¯È¯ÇÒ ¹®ÀÚ</param>
+		/// <param name="number">ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</param>
 		/// <returns></returns>
 		public static BigInteger AlphabetNumberToBigInteger(string number)
 		{
-			//ºó¹®ÀÚ¿­ ¿¹¿ÜÃ³¸®
+			//ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
 			if (number == "0") return 0;
 			int value = int.Parse(Regex.Replace(number, @"\\D", ""));
 			string key = Regex.Replace(number, @"\\d", "");
@@ -178,7 +178,7 @@ namespace AlphabetNumber
 				{
 					return (temp.ToString() + Dictionary.alphabetNumberDictionary.Keys.ElementAt(count));
 				}
-				//"0"À» ¹Ù²Ü ¶§ ¿¹¿ÜÃ³¸®
+				//"0"ï¿½ï¿½ ï¿½Ù²ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
 				else if (temp == 0)
 				{
 					return "0";

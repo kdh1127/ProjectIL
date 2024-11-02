@@ -58,6 +58,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             view.Animator.SetTrigger("Death");
             view.GetComponent<BoxCollider2D>().enabled = false;
             MonsterManager.Instance.IncreaseIndex();
+            model.AddReward();
         }).AddTo(view.gameObject);
 
         model.hp.Subscribe(hp =>

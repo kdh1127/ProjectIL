@@ -12,7 +12,7 @@ public class StageManager : TRSingleton<StageManager>
 
 	private new void Awake()
 	{
-		var table = TRScriptableManager.Instance.GoogleSheet["Stage"];
+		var table = TRScriptableManager.Instance.GetGoogleSheet("StageTable");
 		if (TRScriptableManager.Instance != null)
 			StageTableList.Init(table);
 	}

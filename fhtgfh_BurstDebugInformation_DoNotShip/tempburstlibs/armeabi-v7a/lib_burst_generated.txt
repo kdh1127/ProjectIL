@@ -139,9 +139,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\UniRx.dll
+--root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.VisualScripting.State.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Core.dll
---root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll
@@ -161,9 +161,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Services.Core.Networking.dll
+--root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\DOTween.Modules.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
---root-assembly=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\DOTween.Modules.dll
 --assembly-folder=C:\Users\joch0\Documents\GitHub\ProjectIL\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

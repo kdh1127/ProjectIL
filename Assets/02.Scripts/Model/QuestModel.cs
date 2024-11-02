@@ -50,7 +50,7 @@ public class QuestModel
 
     public void Init()
     {
-        var table = TRScriptableManager.Instance.GoogleSheet["Quest"];
+        var table = TRScriptableManager.Instance.GetGoogleSheet("QuestTable");
         QuestTableList.Init(table);
 
         for (int i = 0; i < QuestTableList.Get().Count; i++)

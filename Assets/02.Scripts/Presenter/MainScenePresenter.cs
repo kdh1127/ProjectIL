@@ -87,8 +87,8 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public void QuestPanelSubscribe()
     {
-		var questImageResources = TRScriptableManager.Instance.Sprite["QuestImage"].spriteDictionary;
-		var costImageResources = TRScriptableManager.Instance.Sprite["CostImage"].spriteDictionary;
+		var questImageResources = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
+		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
 
 		QuestTableList.Get().ForEach(item =>
 		{

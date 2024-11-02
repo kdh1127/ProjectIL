@@ -21,7 +21,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             base.Enter(battlePresenter);
 
 			var table = StageManager.Instance.GetCurStageTable();
-			var monsterResource = TRScriptableManager.Instance.GameObject["Monster"].gameObjectDictionary;
+			var monsterResource = TRScriptableManager.Instance.GetGameObject("MonsterResources").gameObjectDictionary;
             var monsterManager = MonsterManager.Instance;
 
             // 캐릭터 위치 초기화

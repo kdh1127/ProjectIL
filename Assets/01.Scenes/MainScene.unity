@@ -1670,6 +1670,58 @@ MonoBehaviour:
   - {fileID: 985950933}
   - {fileID: 1144469460}
   - {fileID: 1338814789}
+--- !u!1 &688288434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688288436}
+  - component: {fileID: 688288435}
+  m_Layer: 0
+  m_Name: TRScriptableManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &688288435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688288434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77da86369638407ebdbf3f51fa49903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  googleSheetList:
+  - {fileID: 11400000, guid: 7666876301a34f54f9cc2f8fc86a882b, type: 2}
+  - {fileID: 11400000, guid: 81ea93f8005400e4ba12947de6c4c5ce, type: 2}
+  gameObectList:
+  - {fileID: 11400000, guid: cd2c9e0d9256df5439a28110ffcbe602, type: 2}
+  spriteList:
+  - {fileID: 11400000, guid: 89c928994388298459608bee2883292d, type: 2}
+  - {fileID: 11400000, guid: 022d58b54a0406a45a01960dfc997d22, type: 2}
+--- !u!4 &688288436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688288434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729201900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6560,69 +6612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483612337}
   m_CullTransparentMesh: 1
---- !u!1 &1493182768
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1493182770}
-  - component: {fileID: 1493182769}
-  m_Layer: 0
-  m_Name: TRScriptableManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1493182769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493182768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77da86369638407ebdbf3f51fa49903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GoogleSheet:
-    m_keys:
-    - Quest
-    - Stage
-    m_values:
-    - {fileID: 11400000, guid: 7666876301a34f54f9cc2f8fc86a882b, type: 2}
-    - {fileID: 11400000, guid: 81ea93f8005400e4ba12947de6c4c5ce, type: 2}
-  GameObject:
-    m_keys:
-    - Monster
-    m_values:
-    - {fileID: 11400000, guid: cd2c9e0d9256df5439a28110ffcbe602, type: 2}
-  Sprite:
-    m_keys:
-    - QuestImage
-    - CostImage
-    m_values:
-    - {fileID: 11400000, guid: 89c928994388298459608bee2883292d, type: 2}
-    - {fileID: 11400000, guid: 022d58b54a0406a45a01960dfc997d22, type: 2}
---- !u!4 &1493182770
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493182768}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495266016
 GameObject:
   m_ObjectHideFlags: 0

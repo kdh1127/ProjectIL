@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1666082664, guid: 549df22451305e5488982e4a540c538a, type: 3}
-  m_Name: TRSpriteResources
+  m_Name: WeaponImageResources
   m_EditorClassIdentifier: 
   spriteDictionary:
     m_keys:

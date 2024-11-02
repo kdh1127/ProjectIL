@@ -11,7 +11,7 @@ public class WeaponItemModel
 
     public void Upgrade(WeaponTable table)
     {
-        if (CurrencyManager.Instance.AddGold(-BigInteger.Parse(table.Cost)))
+        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD,-BigInteger.Parse(table.Cost)))
         {
             level.Value++;
         }
@@ -25,7 +25,7 @@ public class WeaponModel
 
     public void Init()
     {
-        WeaponTableList.Init(TRScriptableManager.Instance.GoogleSheet["Weapon"]);
+        WeaponTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("WeaponTable"));
 
         for (int i = 0; i < WeaponTableList.Get().Count; i++)
         {

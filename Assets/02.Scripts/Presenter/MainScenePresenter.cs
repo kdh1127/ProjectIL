@@ -19,6 +19,9 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	public QuestPanelView questPanelView;
 	private QuestModel questModel = new();
 
+	public WeaponPanelView weaponPanelView;
+	private WeaponModel weaponModel = new();
+
 	public CurrencyView currencyView;
 
 	private new void Awake()
@@ -26,11 +29,13 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		base.Awake();
 
 		questModel.Init();
+		weaponModel.Init();
 
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
 		QuestPanelSubscribe();
+		WeaponPanelSubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -134,4 +139,49 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		});
 	}
 	#endregion
+	public void WeaponPanelSubscribe()
+	{
+		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
+
+		WeaponTableList.Get().ForEach(item =>
+		{
+			var weaponItemView = Instantiate(weaponPanelView.WeaponItem, weaponPanelView.content_tr).GetComponent<WeaponItemView>();
+			var weaponItemModel = weaponModel.weaponItemList[item.WeaponNo];
+			Debug.Log(item.Cost);
+			weaponItemView.Init(
+				title: item.Name,
+				level: weaponItemModel.level.Value,
+				baseAtk: BigInteger.Parse(item.BaseAtk)
+				);
+
+			weaponItemView.upgradeButtonView.Init(
+				increase: item.Increase,
+				cost: item.Cost,
+				costImage: costImageResources["Gold"]
+				);
+
+			weaponItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+			{
+
+				weaponModel.weaponItemList[item.WeaponNo].Upgrade(item);
+				weaponItemView.LevelUpdate(BigInteger.Parse(item.BaseAtk) + BigInteger.Parse(item.Increase), weaponItemModel.level.Value);
+			}).AddTo(weaponItemView.gameObject);
+
+
+			UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
+			{
+				weaponItemView.upgradeButtonView.SetInteractable(gold >= BigInteger.Parse(item.Cost));
+			}).AddTo(weaponItemView.upgradeButtonView.button);
+
+			weaponModel.weaponItemList[item.WeaponNo].level.Subscribe(level =>
+			{
+				if (weaponModel.weaponItemList[item.WeaponNo].level.Value > 4)
+				{
+					weaponItemView.upgradeButtonView.button.interactable = false;
+					return;
+				}
+
+			}).AddTo(weaponItemView.gameObject);
+		});
+	}
 }

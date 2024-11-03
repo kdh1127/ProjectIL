@@ -36,6 +36,10 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		CurrencySubscribe();
 		QuestPanelSubscribe();
 		WeaponPanelSubscribe();
+
+		weaponModel.weaponItemList[0].level.Value = 1;
+		weaponModel.GetCurrentWeapon();
+		weaponModel.UpdateWeaponItemStatus();
 	}
 
 	private void TopPanelSubscribe()
@@ -86,7 +90,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 		questItemModel.level.Subscribe(level =>
 		{
-			questItemView.LevelUpdate(level.ToString(), questItemModel.GetReward(table).ToString());
+			questItemView.LevelUpdate(level.ToString(), questItemModel.GetReward(table).ToAlphabetNumber());
 		}).AddTo(questItemView.gameObject);
     }
 
@@ -139,6 +143,18 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		});
 	}
 	#endregion
+
+	public void WeaponItemSubscribe(WeaponTable table, WeaponItemView weaponItemView)
+	{
+		var weaponItemModel = weaponModel.weaponItemList[table.WeaponNo];
+
+		weaponItemModel.level.Subscribe(level =>
+		{
+			weaponItemView.UpdateLevel(table, level);
+			weaponModel.GetCurrentWeapon();
+			weaponModel.UpdateWeaponItemStatus();
+		}).AddTo(weaponItemView.gameObject);
+	}
 	public void WeaponPanelSubscribe()
 	{
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
@@ -147,11 +163,10 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		{
 			var weaponItemView = Instantiate(weaponPanelView.WeaponItem, weaponPanelView.content_tr).GetComponent<WeaponItemView>();
 			var weaponItemModel = weaponModel.weaponItemList[item.WeaponNo];
-			Debug.Log(item.Cost);
+
 			weaponItemView.Init(
-				title: item.Name,
-				level: weaponItemModel.level.Value,
-				baseAtk: BigInteger.Parse(item.BaseAtk)
+				table: item,
+				curLevel: weaponItemModel.level.Value
 				);
 
 			weaponItemView.upgradeButtonView.Init(
@@ -160,23 +175,26 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				costImage: costImageResources["Gold"]
 				);
 
-            weaponItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+			WeaponItemSubscribe(item, weaponItemView);
+
+			weaponItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
             {
+				var curGold = UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD].Value;
+				var isEnughGold = CurrencyManager.Instance.IsPositiveAmount(curGold, BigInteger.Parse(item.Cost));
                 weaponModel.weaponItemList[item.WeaponNo].Upgrade(item);
-                BigInteger curWeaponDamage = weaponModel.GetWeaponDamage(item, weaponItemModel.level.Value);
-				bool t = weaponModel.weaponItemList[(item.WeaponNo) + 1].interactable = weaponModel.weaponItemList[item.WeaponNo].level.Value != 5;
-				weaponItemView.upgradeButtonView.SetInteractable(t);
-				Debug.Log(curWeaponDamage);
-                weaponItemView.LevelUpdate(BigInteger.Parse(item.BaseAtk), BigInteger.Parse(item.Increase), weaponItemModel.level.Value);
-            }).AddTo(weaponItemView.gameObject);
 
+				weaponItemView.UpdateListView(weaponItemModel.isCurWeapon);
+				weaponItemView.UpdateWeaponViewStatus(weaponItemModel.upgradeState, isEnughGold);
+			}).AddTo(weaponItemView.gameObject);
 
-            UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
+			UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD]
+			.Where(_ => weaponItemModel.isCurWeapon)
+			.Subscribe(gold =>
 			{
-					if(gold >= BigInteger.Parse(item.Cost))
-						weaponItemView.upgradeButtonView.SetInteractable(true);
-
-			}).AddTo(weaponItemView.upgradeButtonView.button);
-		});
+				var curGold = UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD].Value;
+				var isEnughGold = CurrencyManager.Instance.IsPositiveAmount(curGold, BigInteger.Parse(item.Cost));
+				weaponItemView.upgradeButtonView.SetInteractable(isEnughGold);
+			}).AddTo(UserDataManager.Instance.gameObject);
+        });
 	}
 }

@@ -24,7 +24,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         return true;
     }
 
-    private bool IsPositiveAmount(BigInteger curCurrency, BigInteger newCurrency)
+    public bool IsPositiveAmount(BigInteger curCurrency, BigInteger newCurrency)
 	{
         return (curCurrency += newCurrency) >= 0;
     }

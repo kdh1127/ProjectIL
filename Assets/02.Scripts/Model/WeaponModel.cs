@@ -7,8 +7,8 @@ using System.Numerics;
 public class WeaponItemModel
 {
     public ReactiveProperty<int> level = new(0);
-    public ReactiveProperty<BigInteger> totalAtk = new(0);
-    public bool interactable = true;
+    public EnumList.EWeaponItemUpgradeStatus upgradeState;
+    public bool isCurWeapon = false;
 
     public void Upgrade(WeaponTable table)
     {
@@ -40,4 +40,42 @@ public class WeaponModel
         return damage;
     }
 
+    public WeaponItemModel GetCurrentWeapon()
+    {
+        WeaponItemModel curWeapon = weaponItemList[0];
+
+        weaponItemList.ForEach(weaponItem =>
+        {
+            bool isUpgrade = weaponItem.level.Value > 0;
+            if (isUpgrade) curWeapon = weaponItem;
+        });
+
+        curWeapon.isCurWeapon = true;
+        return curWeapon;
+    }
+
+    public void UpdateWeaponItemStatus()
+    {
+        if(weaponItemList[1].level.Value < 1)
+        {
+            weaponItemList[0].isCurWeapon = true;
+            return;
+        }
+
+        for (int i = 0; i < weaponItemList.Count; i++)
+        {
+            if (weaponItemList[i].level.Value == 5)
+            {
+                weaponItemList[i].upgradeState = EnumList.EWeaponItemUpgradeStatus.MaxUpgrade;
+            }
+            else if (i > 1 && weaponItemList[i - 1].level.Value == 5)
+            {
+                weaponItemList[i].upgradeState = EnumList.EWeaponItemUpgradeStatus.Upgradeable;
+            }
+            else
+            {
+                weaponItemList[i].upgradeState = EnumList.EWeaponItemUpgradeStatus.NotUpgradeable;
+            }
+        }
+    }
 }

@@ -21,9 +21,11 @@ public class WeaponItemView : MonoBehaviour
         totalAtk_txt.text = new ANumber(baseAtk).ToAlphaString();
     }
 
-    public void LevelUpdate(BigInteger totalAtk, int level)
+    public void LevelUpdate(BigInteger baseAtk,BigInteger increase, int level)
     {
+        BigInteger totalAtk = baseAtk + (level * increase);
         totalAtk_txt.text = totalAtk.ToString();
         level_txt.text = $"Lv. {level}/5";
     }
+    
 }

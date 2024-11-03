@@ -28,4 +28,10 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
 	{
         return (curCurrency += newCurrency) >= 0;
     }
+
+    public void test()
+    {
+        BigInteger gold = 10000;
+        AddCurrency(EnumList.ECurrencyType.GOLD , gold);
+    }
 }

@@ -8,12 +8,13 @@ public class WeaponItemModel
 {
     public ReactiveProperty<int> level = new(0);
     public ReactiveProperty<BigInteger> totalAtk = new(0);
+    public bool interactable = true;
 
     public void Upgrade(WeaponTable table)
     {
         if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD,-BigInteger.Parse(table.Cost)))
         {
-            level.Value++;
+            level.Value++;      
         }
     }
 }
@@ -33,5 +34,10 @@ public class WeaponModel
         }
     }
 
+    public BigInteger GetWeaponDamage(WeaponTable table, int level)
+    {
+        BigInteger damage = BigInteger.Parse(table.BaseAtk) + (level * BigInteger.Parse(table.Increase));
+        return damage;
+    }
 
 }

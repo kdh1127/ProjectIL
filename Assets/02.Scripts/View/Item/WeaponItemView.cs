@@ -10,7 +10,7 @@ public class WeaponItemView : MonoBehaviour
 { 
     public UpgradeButtonView upgradeButtonView;
     public Image weaponItemBg_img;
-    public Image dim_img;
+    public GameObject dim_img;
     public Image weapon_img;
     public TMP_Text title_txt;
     public TMP_Text level_txt;
@@ -18,48 +18,53 @@ public class WeaponItemView : MonoBehaviour
 
     readonly private int maxLevel = 5;
 
-    public void Init(WeaponTable table, int curLevel)
+    public void Init(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
         var totalAttack = BigInteger.Parse(table.BaseAtk) + (curLevel * BigInteger.Parse(table.Increase));
         title_txt.text = table.Name;
         level_txt.text = $"Lv. {curLevel}/{maxLevel}";
         totalAtack_txt.text = totalAttack.ToAlphabetNumber();
+        dim_img.SetActive(false);
+
+
+        UpdateLevel(table, curLevel, isMaxLevel, isEquiped, isUnLock, isEnughGold);
     }
 
-    public void UpdateLevel(WeaponTable table, int curLevel)
+    public void UpdateLevel(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
         var totalAttack = BigInteger.Parse(table.BaseAtk) + (curLevel * BigInteger.Parse(table.Increase));
         totalAtack_txt.text = totalAttack.ToAlphabetNumber();
-        level_txt.text = curLevel == 5 ?
+        level_txt.text = isMaxLevel ?
                 $"<color=#FF0000>Lv.Max</color>" :
                 $"Lv. {curLevel}/{maxLevel}";
-    }
 
-    public void UpdateWeaponViewStatus(EnumList.EWeaponItemUpgradeStatus weaponItemUpgradeStatus, bool isEnughCurrency)
-    {
-        switch (weaponItemUpgradeStatus)
+        weaponItemBg_img.color = isEquiped ? Color.yellow : Color.white;
+
+        if(!isUnLock && !isMaxLevel && !isEquiped)
         {
-            case EnumList.EWeaponItemUpgradeStatus.MaxUpgrade:
-                dim_img.color = new Color(0, 0, 0, 0);
-                upgradeButtonView.gameObject.SetActive(false);
-
-                break;
-            case EnumList.EWeaponItemUpgradeStatus.Upgradeable:
-                dim_img.color = new Color(0, 0, 0, 0);
-                upgradeButtonView.gameObject.SetActive(true);
-                upgradeButtonView.SetInteractable(isEnughCurrency);
-
-                break;
-            case EnumList.EWeaponItemUpgradeStatus.NotUpgradeable:
-                dim_img.color = new Color(0, 0, 0, 1f);
-                upgradeButtonView.gameObject.SetActive(true);
-                upgradeButtonView.SetInteractable(false);
-                break;
+            dim_img.SetActive(true);
+            upgradeButtonView.SetInteractable(false);
         }
+
+        else if (isMaxLevel)
+        {
+            dim_img.SetActive(false);
+            upgradeButtonView.gameObject.SetActive(false);
+        }
+
+        else if (isUnLock && !isMaxLevel)
+        {
+            dim_img.SetActive(false);
+            upgradeButtonView.gameObject.SetActive(true);
+            var newEnugh = CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(table.Cost));
+            upgradeButtonView.SetInteractable(newEnugh);
+        }
+        else if (isMaxLevel && !isEquiped)
+        {
+            weaponItemBg_img.color = Color.white;
+        }
+
     }
 
-    public void UpdateListView(bool isCurWeapon)
-    {
-        weaponItemBg_img.color = isCurWeapon ? Color.yellow : Color.white;
-    }
+
 }

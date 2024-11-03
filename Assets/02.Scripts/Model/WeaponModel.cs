@@ -7,14 +7,17 @@ using System.Numerics;
 public class WeaponItemModel
 {
     public ReactiveProperty<int> level = new(0);
-    public EnumList.EWeaponItemUpgradeStatus upgradeState;
-    public bool isCurWeapon = false;
+    public bool IsMaxLevel => level.Value == 5;
+    public bool isEquiped = false;
+    public bool isUnLock = false;
+    public Subject<int> UpdateSubject = new();
 
     public void Upgrade(WeaponTable table)
     {
         if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD,-BigInteger.Parse(table.Cost)))
         {
-            level.Value++;      
+            level.Value++;
+            UpdateSubject.OnNext(table.WeaponNo);
         }
     }
 }
@@ -22,7 +25,6 @@ public class WeaponItemModel
 public class WeaponModel
 {
     public List<WeaponItemModel> weaponItemList = new();
-
 
     public void Init()
     {
@@ -40,41 +42,31 @@ public class WeaponModel
         return damage;
     }
 
-    public WeaponItemModel GetCurrentWeapon()
+    public void CheckWeaponState()
     {
-        WeaponItemModel curWeapon = weaponItemList[0];
-
-        weaponItemList.ForEach(weaponItem =>
-        {
-            bool isUpgrade = weaponItem.level.Value > 0;
-            if (isUpgrade) curWeapon = weaponItem;
-        });
-
-        curWeapon.isCurWeapon = true;
-        return curWeapon;
-    }
-
-    public void UpdateWeaponItemStatus()
-    {
-        if(weaponItemList[1].level.Value < 1)
-        {
-            weaponItemList[0].isCurWeapon = true;
-            return;
-        }
-
         for (int i = 0; i < weaponItemList.Count; i++)
         {
-            if (weaponItemList[i].level.Value == 5)
+            if (i < weaponItemList.Count - 1)
             {
-                weaponItemList[i].upgradeState = EnumList.EWeaponItemUpgradeStatus.MaxUpgrade;
-            }
-            else if (i > 1 && weaponItemList[i - 1].level.Value == 5)
-            {
-                weaponItemList[i].upgradeState = EnumList.EWeaponItemUpgradeStatus.Upgradeable;
+                var curWeapon = weaponItemList[i];
+                var nextWeapon = weaponItemList[i + 1];
+
+                curWeapon.isEquiped = false;
+                
+                if (nextWeapon.level.Value < 1)
+                {
+                    curWeapon.isEquiped = true;
+                    curWeapon.isUnLock = true;
+                    nextWeapon.isUnLock = curWeapon.level.Value == 5;
+
+                    return;
+                }
             }
             else
             {
-                weaponItemList[i].upgradeState = EnumList.EWeaponItemUpgradeStatus.NotUpgradeable;
+                var curWeapon = weaponItemList[i];
+                curWeapon.isEquiped = curWeapon.level.Value > 0;
+                curWeapon.isUnLock = true;
             }
         }
     }

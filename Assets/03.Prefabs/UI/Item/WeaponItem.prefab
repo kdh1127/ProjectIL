@@ -444,7 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeButtonView: {fileID: 1729190962906807831}
   weaponItemBg_img: {fileID: 1314177186987834479}
-  dim_img: {fileID: 200063940370450862}
+  dim_img: {fileID: 4144456444464648818}
   weapon_img: {fileID: 1314177185862558309}
   title_txt: {fileID: 2035207874351339405}
   level_txt: {fileID: 7653527124518579451}
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

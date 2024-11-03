@@ -19,8 +19,10 @@ public static class EnumList
 
 	public enum EWeaponItemUpgradeStatus
 	{
-		MaxUpgrade,
+		MaxLevel,
 		Upgradeable,
-		NotUpgradeable
+		NotUpgradeable,
+		CurrentWeapon,
+		MaxLevelCurrentWeapon
 	}
 }

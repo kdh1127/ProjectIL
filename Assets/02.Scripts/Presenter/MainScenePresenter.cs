@@ -162,7 +162,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 					isMaxLevel: weaponModel.weaponItemList[i].IsMaxLevel,
 					isEquiped: weaponModel.weaponItemList[i].isEquiped,
 					isUnLock: weaponModel.weaponItemList[i].isUnLock,
-					isEnughGold: CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(table.Cost))
+					isEnughGold: CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost))
 					);
 				Debug.Log($"no={i}, level = {weaponModel.weaponItemList[i].level.Value}, equip = {weaponModel.weaponItemList[i].isEquiped}, unlock = {weaponModel.weaponItemList[i].isUnLock}, max = {weaponModel.weaponItemList[i].IsMaxLevel}");
 				Debug.Log($"GOLD: {CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost))}");

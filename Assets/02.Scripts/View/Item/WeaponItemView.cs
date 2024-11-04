@@ -39,24 +39,19 @@ public class WeaponItemView : MonoBehaviour
 
         weaponItemBg_img.color = isEquiped ? Color.yellow : Color.white;
 
-
-        // 상태에 따른 UI 업데이트
         if (!isUnLock)
         {
-            // 잠겨 있는 경우: Dim 처리하고 버튼 비활성화
             dim_img.SetActive(true);
             upgradeButtonView.SetInteractable(false);
             upgradeButtonView.gameObject.SetActive(true);
         }
         else if (isMaxLevel)
         {
-            // 최대 레벨인 경우: Dim 제거하고 버튼 숨김
             dim_img.SetActive(false);
             upgradeButtonView.gameObject.SetActive(false);
         }
         else
         {
-            // 잠금 해제된 경우: Dim 제거하고 버튼 활성화 여부 결정
             dim_img.SetActive(false);
             upgradeButtonView.gameObject.SetActive(true);
             upgradeButtonView.SetInteractable(isEnughGold);

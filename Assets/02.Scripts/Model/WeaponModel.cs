@@ -38,8 +38,7 @@ public class WeaponModel
 
     public BigInteger GetWeaponDamage(WeaponTable table, int level)
     {
-        BigInteger damage = BigInteger.Parse(table.BaseAtk) + (level * BigInteger.Parse(table.Increase));
-        return damage;
+        return BigInteger.Parse(table.BaseAtk) + (level * BigInteger.Parse(table.Increase));
     }
 
     public void CheckWeaponState()

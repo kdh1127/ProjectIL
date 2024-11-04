@@ -141,7 +141,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	}
 	#endregion
 
-	public void WeaponItemSubscribe(WeaponTable table, WeaponModel weaponModel, WeaponItemView weaponItemView)
+	public void WeaponItemSubscribe(WeaponTable table, WeaponItemView weaponItemView)
 	{
 		var weaponItemModel = weaponModel.weaponItemList[table.WeaponNo];
 
@@ -150,24 +150,22 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			weaponModel.CheckWeaponState();
 		}).AddTo(weaponItemView.gameObject);
 
-
 		weaponItemModel.UpdateSubject.Subscribe(weaponNo =>
 		{
 			for (int i = 0; i < weaponPanelView.weaponItemViewList.Count; i++)
 			{
-				weaponPanelView.weaponItemViewList[i]
-				.UpdateLevel(
-					table: WeaponTableList.Get()[i],
-					curLevel: weaponModel.weaponItemList[i].level.Value,
-					isMaxLevel: weaponModel.weaponItemList[i].IsMaxLevel,
-					isEquiped: weaponModel.weaponItemList[i].isEquiped,
-					isUnLock: weaponModel.weaponItemList[i].isUnLock,
-					isEnughGold: CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost))
-					);
-				Debug.Log($"no={i}, level = {weaponModel.weaponItemList[i].level.Value}, equip = {weaponModel.weaponItemList[i].isEquiped}, unlock = {weaponModel.weaponItemList[i].isUnLock}, max = {weaponModel.weaponItemList[i].IsMaxLevel}");
-				Debug.Log($"GOLD: {CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost))}");
-			}
+				var isEnughGold = CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost));
+				var weaponItemModel = weaponModel.weaponItemList[i];
 
+				weaponPanelView.weaponItemViewList[i].UpdateLevel(
+					table: WeaponTableList.Get()[i],
+					curLevel: weaponItemModel.level.Value,
+					isMaxLevel: weaponItemModel.IsMaxLevel,
+					isEquiped: weaponItemModel.isEquiped,
+					isUnLock: weaponItemModel.isUnLock,
+					isEnughGold: isEnughGold
+					);
+			}
 		}).AddTo(weaponPanelView.gameObject);
 	}
 
@@ -211,8 +209,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				weaponItemView.upgradeButtonView.SetInteractable(isEnughGold);
 			}).AddTo(UserDataManager.Instance.gameObject);
 
-
-			WeaponItemSubscribe(item, weaponModel, weaponItemView);
+			WeaponItemSubscribe(item, weaponItemView);
 		});
 	}
 }

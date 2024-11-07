@@ -156,15 +156,20 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			{
 				var isEnughGold = CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost));
 				var weaponItemModel = weaponModel.weaponItemList[i];
-
+				var table = WeaponTableList.Get()[i];
 				weaponPanelView.weaponItemViewList[i].UpdateLevel(
-					table: WeaponTableList.Get()[i],
+					table: table,
 					curLevel: weaponItemModel.level.Value,
 					isMaxLevel: weaponItemModel.IsMaxLevel,
 					isEquiped: weaponItemModel.isEquiped,
 					isUnLock: weaponItemModel.isUnLock,
 					isEnughGold: isEnughGold
 					);
+
+				if (weaponItemModel.isEquiped)
+                {
+					UserDataManager.Instance.characterData.WeaponDamage = BigInteger.Parse(table.BaseAtk) + (weaponItemModel.level.Value * BigInteger.Parse(table.Increase));
+                }
 			}
 		}).AddTo(weaponPanelView.gameObject);
 	}

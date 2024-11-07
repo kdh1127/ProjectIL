@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using ThreeRabbitPackage;
 using System.Linq;
-using AlphabetNumber;
 using UniRx;
 
 public class QuestItemModel

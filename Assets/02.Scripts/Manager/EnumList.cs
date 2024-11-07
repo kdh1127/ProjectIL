@@ -16,4 +16,13 @@ public static class EnumList
 		NORMAL,
 		BOSS
 	}
+
+	public enum EWeaponItemUpgradeStatus
+	{
+		MaxLevel,
+		Upgradeable,
+		NotUpgradeable,
+		CurrentWeapon,
+		MaxLevelCurrentWeapon
+	}
 }

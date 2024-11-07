@@ -24,8 +24,22 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         return true;
     }
 
-    private bool IsPositiveAmount(BigInteger curCurrency, BigInteger newCurrency)
+    public bool IsPositiveAmount(BigInteger curCurrency, BigInteger newCurrency)
 	{
         return (curCurrency += newCurrency) >= 0;
+    }
+
+    public bool IsEnughCurrency(EnumList.ECurrencyType currencyType, BigInteger amount)
+    {
+        var currency = UserDataManager.Instance.currencyData.Currency[currencyType];
+        var isEnugh = IsPositiveAmount(currency.Value, amount);
+
+        return isEnugh;
+    }
+
+    public void test()
+    {
+        BigInteger gold = 10000;
+        AddCurrency(EnumList.ECurrencyType.GOLD , gold);
     }
 }

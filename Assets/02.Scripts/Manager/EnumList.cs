@@ -25,4 +25,12 @@ public static class EnumList
 		CurrentWeapon,
 		MaxLevelCurrentWeapon
 	}
+
+	public enum EMissionType
+    {
+		QuestUpgrade,
+		QuestClear,
+		WeaponUpgrade,
+		DungeonClear
+	}
 }

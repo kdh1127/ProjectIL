@@ -10,7 +10,8 @@ public class CommonToggle : Toggle
     {
         Quest=0,
         Weapon=1,
-        Shop=2        
+        Mission=2,
+        Shop=3     
     }
 
 	[SerializeField] public ToggleType type;

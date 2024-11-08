@@ -22,6 +22,9 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	public WeaponPanelView weaponPanelView;
 	private WeaponModel weaponModel = new();
 
+	public MissionPanelView missionPanelView;
+	private MissionModel missionModel = new();
+
 	public CurrencyView currencyView;
 
 	private new void Awake()
@@ -30,13 +33,14 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 		questModel.Init();
 		weaponModel.Init();
+		missionModel.Init();
 
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
 		QuestPanelSubscribe();
 		WeaponPanelSubscribe();
-
+		MissionPanelSubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -217,4 +221,30 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			WeaponItemSubscribe(item, weaponItemView);
 		});
 	}
+	public void MissionPanelSubscribe()
+    {
+		var missionRewardImageResources = TRScriptableManager.Instance.GetSprite("MissionRewardImageResources").spriteDictionary;
+		var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
+		var missionTableList = MissionTableList.Get();
+		var curMissiontable = missionModel.GetCurMissionTable();
+
+        missionPanelView.currentMissionItemView.Init(
+			rewardType: missionRewardImageResources[curMissiontable.MissionType],
+			missionNo: curMissiontable.MissionNo,
+			missionName: curMissiontable.Name,
+			reward: curMissiontable.Amount
+			); // curMissiontable
+
+
+        for (int i = clearMissionNo + 1; i < missionTableList.Count; i++)
+        {
+			var missionItemView = Instantiate(missionPanelView.missionItem , missionPanelView.content_tr).GetComponent<MissionItemView>();
+
+			missionItemView.Init(
+				rewardType: missionRewardImageResources[missionTableList[i].MissionType],
+				missionNo: missionTableList[i].MissionNo,
+				missionName: missionTableList[i].Name,
+				reward: missionTableList[i].Amount);
+		}
+    }
 }

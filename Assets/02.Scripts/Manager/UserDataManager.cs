@@ -7,6 +7,8 @@ public class UserDataManager : TRSingleton<UserDataManager>
 {
 	public CurrencyData currencyData = new();
 	public CharacterData characterData = new();
+	public Missiondata missiondata = new();
+
 	private new void Awake()
 	{
 		base.Awake();
@@ -16,6 +18,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	{
 		currencyData.InitCurrencyData();
 		characterData.InitCharacterData();
+		missiondata.InitMissionData();
 	}
 
 	#region CurrencyData
@@ -81,4 +84,49 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		}
 	}
 	#endregion
+
+	#region MissionData
+	public class Missiondata
+	{
+		private int clearMissionNo;
+        public int ClearMissionNo { get => clearMissionNo; set => clearMissionNo = value; }
+
+        private Dictionary<int, int> questUpgradeData; 
+
+		/// <summary>
+		/// questNo, questLevel
+		/// </summary>
+        public Dictionary<int, int> QuestUpgradeData { get => questUpgradeData; set => questUpgradeData = value; }
+
+        private Dictionary<int, int> questClearData;
+
+		/// <summary>
+		/// questNo, questClearCount
+		/// </summary>
+        public Dictionary<int, int> QuestClearData { get => questClearData; set => questClearData = value; }
+
+        private Dictionary<int, int> weaponUpgradeData;
+		/// <summary>
+		/// weaponNo, weaponLevel
+		/// </summary>
+        public Dictionary<int, int> WeaponUpgradeData { get => weaponUpgradeData; set => weaponUpgradeData = value; }
+
+
+        public void InitMissionData()
+		{
+			ClearMissionNo = 0;
+		}
+
+		public void SaveMissionData()
+		{
+
+		}
+
+		public void LoadMissionData()
+		{
+
+		}
+	}
+	#endregion
+
 }

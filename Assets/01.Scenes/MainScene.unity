@@ -6876,7 +6876,7 @@ MonoBehaviour:
   bottomPanelView: {fileID: 1616811680}
   questPanelView: {fileID: 2016945112}
   weaponPanelView: {fileID: 1125500034}
-  missionPanelView: {fileID: 0}
+  missionPanelView: {fileID: 876916027}
   currencyView: {fileID: 1869166109}
 --- !u!1 &1512286090
 GameObject:

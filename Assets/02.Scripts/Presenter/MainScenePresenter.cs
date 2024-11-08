@@ -228,11 +228,13 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		var missionTableList = MissionTableList.Get();
 		var curMissiontable = missionModel.GetCurMissionTable();
 
-        missionPanelView.currentMissionItemView.Init(
+
+		missionPanelView.currentMissionItemView.Init(
 			rewardType: missionRewardImageResources[curMissiontable.RewardType],
 			missionNo: curMissiontable.MissionNo,
 			missionName: curMissiontable.Name,
-			reward: curMissiontable.Amount
+			reward: curMissiontable.Amount,
+			interactable: true
 			); // curMissiontable
 
 
@@ -244,7 +246,10 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				rewardType: missionRewardImageResources[missionTableList[i].RewardType],
 				missionNo: missionTableList[i].MissionNo,
 				missionName: missionTableList[i].Name,
-				reward: missionTableList[i].Amount);
+				reward: missionTableList[i].Amount,
+				interactable: false
+				);
+				 
 		}
     }
 }

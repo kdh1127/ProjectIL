@@ -12,11 +12,12 @@ public class MissionItemView : MonoBehaviour
     public TMP_Text reward_txt;
     public CompleteButtonView completeButtonView;
 
-    public void Init(Sprite rewardType, int missionNo, string missionName, string reward)
+    public void Init(Sprite rewardType, int missionNo, string missionName, string reward, bool interactable)
     {
         reward_img.sprite = rewardType;
         missionNo_txt.text = $"{missionNo}번째 미션";
         missionName_txt.text = missionName;
         reward_txt.text = reward;
+        completeButtonView.SetInteractable(interactable);
     }
 }

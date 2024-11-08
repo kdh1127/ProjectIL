@@ -18,6 +18,7 @@ public class QuestItemModel
         if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -table.Cost))
         {
             level.Value++;
+            UserDataManager.Instance.missiondata.QuestUpgradeData[table.QuestNo] = level.Value;
         }
     }
 
@@ -33,6 +34,9 @@ public class QuestItemModel
         if (elpasedTime.Value >= table.Time)
         {
             CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, reward);
+            // TODO: Check Condition as Key Not Found
+            UserDataManager.Instance.missiondata.QuestClearData.TryGetValue(table.QuestNo, out int clearCount);
+            clearCount++;
             elpasedTime.Value = 0;
         }
         else

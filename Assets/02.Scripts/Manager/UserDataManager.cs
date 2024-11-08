@@ -91,28 +91,34 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		private int clearMissionNo;
         public int ClearMissionNo { get => clearMissionNo; set => clearMissionNo = value; }
 
-        private Dictionary<int, int> questUpgradeData; 
+		private Dictionary<int, int> questUpgradeData = new();
 
 		/// <summary>
 		/// questNo, questLevel
 		/// </summary>
         public Dictionary<int, int> QuestUpgradeData { get => questUpgradeData; set => questUpgradeData = value; }
 
-        private Dictionary<int, int> questClearData;
+		private Dictionary<int, int> questClearData = new();
 
 		/// <summary>
 		/// questNo, questClearCount
 		/// </summary>
         public Dictionary<int, int> QuestClearData { get => questClearData; set => questClearData = value; }
 
-        private Dictionary<int, int> weaponUpgradeData;
+		private Dictionary<int, int> weaponUpgradeData = new();
 		/// <summary>
 		/// weaponNo, weaponLevel
 		/// </summary>
         public Dictionary<int, int> WeaponUpgradeData { get => weaponUpgradeData; set => weaponUpgradeData = value; }
 
+        private Dictionary<int, int> dungeonClearData = new();
 
-        public void InitMissionData()
+		/// <summary>
+		/// stageNo, stageClearCount
+		/// </summary>
+        public Dictionary<int, int> DungeonClearData { get => dungeonClearData; set => dungeonClearData = value; }
+
+		public void InitMissionData()
 		{
 			ClearMissionNo = 0;
 		}

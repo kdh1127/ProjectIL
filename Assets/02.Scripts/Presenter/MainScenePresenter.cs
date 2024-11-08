@@ -223,33 +223,25 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	}
 	public void MissionPanelSubscribe()
     {
-		var missionRewardImageResources = TRScriptableManager.Instance.GetSprite("MissionRewardImageResources").spriteDictionary;
 		var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
 		var missionTableList = MissionTableList.Get();
-		var curMissiontable = missionModel.GetCurMissionTable();
-
+		var curMissionTable = missionModel.GetCurMissionTable();
 
 		missionPanelView.currentMissionItemView.Init(
-			rewardType: missionRewardImageResources[curMissiontable.RewardType],
-			missionNo: curMissiontable.MissionNo,
-			missionName: curMissiontable.Name,
-			reward: curMissiontable.Amount,
-			interactable: true
-			); // curMissiontable
-
+			table: curMissionTable,
+			interactable: missionModel.IsClear(curMissionTable));
 
         for (int i = clearMissionNo + 1; i < missionTableList.Count; i++)
         {
 			var missionItemView = Instantiate(missionPanelView.missionItem , missionPanelView.content_tr).GetComponent<MissionItemView>();
-
-			missionItemView.Init(
-				rewardType: missionRewardImageResources[missionTableList[i].RewardType],
-				missionNo: missionTableList[i].MissionNo,
-				missionName: missionTableList[i].Name,
-				reward: missionTableList[i].Amount,
-				interactable: false
-				);
-				 
+			missionItemView.Init(curMissionTable);	 
 		}
+
+		Observable.EveryUpdate().Subscribe(_ =>
+		{
+			missionPanelView.currentMissionItemView.Init(
+				table: curMissionTable,
+				interactable: missionModel.IsClear(curMissionTable));
+		}).AddTo(missionPanelView.gameObject);
     }
 }

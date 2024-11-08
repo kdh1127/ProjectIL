@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,17 +13,31 @@ public class MissionItemModel
 
 public class MissionModel
 {
-
-    public List<MissionItemModel> missionItemList = new();
-
     public void Init()
     {
         MissionTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("MissionTable"));
 
-        for(int i=0; i < MissionTableList.Get().Count; i++)
-        {
-            missionItemList.Add(new MissionItemModel());
-        }
+        // TODO: Load MissionData in UserDataManager
+        MissionTableList.Get()
+            .ForEach(table =>
+            {
+                var missionType = EnumList.StringToEnum<EnumList.EMissionType>(table.MissionType);
+                switch (missionType)
+                {
+                    case EnumList.EMissionType.QuestUpgrade:
+                        UserDataManager.Instance.missiondata.QuestUpgradeData.Add(table.TargetNo, 0);
+                        break;
+                    case EnumList.EMissionType.QuestClear:
+                        UserDataManager.Instance.missiondata.QuestClearData.Add(table.TargetNo, 0);
+                        break;
+                    case EnumList.EMissionType.WeaponUpgrade:
+                        UserDataManager.Instance.missiondata.WeaponUpgradeData.Add(table.TargetNo, 0);
+                        break;
+                    case EnumList.EMissionType.DungeonClear:
+                        UserDataManager.Instance.missiondata.DungeonClearData.Add(table.TargetNo, 0);
+                        break;
+                }
+            });
     }
 
     /// <summary>
@@ -50,14 +65,14 @@ public class MissionModel
     public bool IsClear(MissionTable table)
     {
         var missionData = UserDataManager.Instance.missiondata;
-        EnumList.EMissionType missionType = (EnumList.EMissionType)Enum.Parse(typeof(EnumList.EMissionType), table.MissionType);
+        var missionType = EnumList.StringToEnum<EnumList.EMissionType>(table.MissionType);
 
         switch (missionType)
         {
             case EnumList.EMissionType.QuestUpgrade:
                 int userAmount = missionData.QuestUpgradeData[table.TargetNo];
-
-                if(userAmount > table.CompleteCount)
+                
+                if(userAmount >= table.CompleteCount)
                 {
                     return true;
                 }

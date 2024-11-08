@@ -234,7 +234,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
         for (int i = clearMissionNo + 1; i < missionTableList.Count; i++)
         {
 			var missionItemView = Instantiate(missionPanelView.missionItem , missionPanelView.content_tr).GetComponent<MissionItemView>();
-			missionItemView.Init(curMissionTable);	 
+			missionItemView.Init(missionTableList[i]);	 
 		}
 
 		Observable.EveryUpdate().Subscribe(_ =>

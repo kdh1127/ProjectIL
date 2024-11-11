@@ -5,6 +5,7 @@ using UnityEngine;
 using ThreeRabbitPackage;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
+using System.Linq;
 
 public class StageManager : TRSingleton<StageManager>
 {
@@ -48,7 +49,13 @@ public class StageManager : TRSingleton<StageManager>
 
 	public void IncreaseStage()
 	{
+		var userDungeonClearData = UserDataManager.Instance.missiondata.DungeonClearData;
 		CurStage.Value++;
+
+		if (userDungeonClearData.Keys.Contains(0))
+        {
+			userDungeonClearData[0] = CurStage.Value;
+        }
 	}
 
 }

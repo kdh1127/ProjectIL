@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using System.Numerics;
+using System.Linq;
 
 public class WeaponItemModel
 {
@@ -14,10 +15,15 @@ public class WeaponItemModel
 
     public void Upgrade(WeaponTable table)
     {
+        var userWeaponUpgradeData = UserDataManager.Instance.missiondata.WeaponUpgradeData;
         if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD,-BigInteger.Parse(table.Cost)))
         {
             level.Value++;
             UpdateSubject.OnNext(table.WeaponNo);
+            if (userWeaponUpgradeData.Keys.Contains(table.WeaponNo)) 
+            {
+                userWeaponUpgradeData[table.WeaponNo] = level.Value;
+            }
         }
     }
 }

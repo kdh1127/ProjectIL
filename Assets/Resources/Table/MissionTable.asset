@@ -99,7 +99,7 @@ MonoBehaviour:
     - Dungeon_Clear_String_Format
     - DungeonClear
     - 0
-    - 1
+    - 10
     - GOLD
     - 694000
   - key: 8
@@ -468,7 +468,7 @@ MonoBehaviour:
       - Dungeon_Clear_String_Format
       - DungeonClear
       - 0
-      - 1
+      - 10
       - GOLD
       - 694000
     - m_keys:

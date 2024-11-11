@@ -5,12 +5,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-public class MissionItemModel
-{
-
-}
-
 public class MissionModel
 {
     public void Init()
@@ -48,12 +42,6 @@ public class MissionModel
     public MissionTable GetCurMissionTable()
     {
         var clearMission = UserDataManager.Instance.missiondata.ClearMissionNo;
-
-        if (clearMission == 0)
-            return MissionTableList.Get()[clearMission];
-        else if (clearMission < MissionTableList.Get().Count)
-            return MissionTableList.Get()[clearMission + 1];
-        else
             return MissionTableList.Get()[clearMission];
     }
 
@@ -70,20 +58,37 @@ public class MissionModel
         switch (missionType)
         {
             case EnumList.EMissionType.QuestUpgrade:
-                int userAmount = missionData.QuestUpgradeData[table.TargetNo];
+                int userQuestUpgradeAmount = missionData.QuestUpgradeData[table.TargetNo];
                 
-                if(userAmount >= table.CompleteCount)
+                if(userQuestUpgradeAmount >= table.CompleteCount)
                 {
                     return true;
                 }
                 break;
             case EnumList.EMissionType.QuestClear:
+                int userQuestClearAmount = missionData.QuestClearData[table.TargetNo];
+
+                if (userQuestClearAmount >= table.CompleteCount)
+                {
+                    return true;
+                }
                 break;
             case EnumList.EMissionType.WeaponUpgrade:
+                int userWeaponUpgradeAmount = missionData.WeaponUpgradeData[table.TargetNo];
+
+                if (userWeaponUpgradeAmount >= table.CompleteCount)
+                {
+                    return true;
+                }
                 break;
             case EnumList.EMissionType.DungeonClear:
+                int userDungeonClearAmount = missionData.DungeonClearData[table.TargetNo];
+
+                if (userDungeonClearAmount >= table.CompleteCount)
+                {
+                    return true;
+                }
                 break;
-                
         }
 
         return false;

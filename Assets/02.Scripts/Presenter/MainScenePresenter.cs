@@ -226,16 +226,30 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
 		var missionTableList = MissionTableList.Get();
 		var curMissionTable = missionModel.GetCurMissionTable();
+		var curMissionItemView = missionPanelView.currentMissionItemView;
 
-		missionPanelView.currentMissionItemView.Init(
+		curMissionItemView.Init(
 			table: curMissionTable,
 			interactable: missionModel.IsClear(curMissionTable));
 
-        for (int i = clearMissionNo + 1; i < missionTableList.Count; i++)
-        {
-			var missionItemView = Instantiate(missionPanelView.missionItem , missionPanelView.content_tr).GetComponent<MissionItemView>();
-			missionItemView.Init(missionTableList[i]);	 
-		}
+		
+
+		curMissionItemView.completeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+		{
+			var rewardType = EnumList.StringToEnum<EnumList.ECurrencyType>(curMissionTable.RewardType);
+			UserDataManager.Instance.currencyData.Currency[rewardType].Value += BigInteger.Parse(curMissionTable.Amount);
+			UserDataManager.Instance.missiondata.ClearMissionNo++;
+
+            curMissionTable = missionModel.GetCurMissionTable();
+			curMissionItemView.Init(
+			table: curMissionTable,
+			interactable: missionModel.IsClear(curMissionTable));
+
+			RefreshDisableMissionList(missionPanelView);
+
+		}).AddTo(curMissionItemView.gameObject);
+
+		RefreshDisableMissionList(missionPanelView);
 
 		Observable.EveryUpdate().Subscribe(_ =>
 		{
@@ -243,5 +257,63 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				table: curMissionTable,
 				interactable: missionModel.IsClear(curMissionTable));
 		}).AddTo(missionPanelView.gameObject);
+
     }
+
+	// TODO: This function is managed other data structure	
+	private void RefreshDisableMissionList(MissionPanelView view)
+    {
+		var missionTableList = MissionTableList.Get();
+		var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
+
+		// 생성하기 전 삭제 //투두: 컬 미션이 되면 해당 아이템 오브젝트 비활성화
+		for (int i = 0; i < view.content_tr.childCount; i++)
+        {
+			Destroy(view.content_tr.GetChild(i).gameObject);
+        }
+
+		// 생성
+		for (int i = clearMissionNo + 1; i < missionTableList.Count; i++)
+		{
+			var missionItemView = Instantiate(missionPanelView.missionItem, missionPanelView.content_tr).GetComponent<MissionItemView>();
+			missionItemView.Init(missionTableList[i]);
+		}
+	}
+
+    /*
+	public void 모델의환생기능()
+    {
+
+    }
+	public void 환생섭스크라이브()
+    {
+		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
+		BigInteger reward = StageManager.Instance.CurStage.Value * 10;
+	
+		TRCommonPopup.Instantiate(transform)
+			.SetTitle("환생하기")
+			.SetItemImage(costImageResources["Key"])
+			.SetMessage($"환생하시겠습니까?\n" + $"열쇠보상: {reward.ToAlphabetNumber()}")
+			.SetConfirm(obj =>
+			{
+				Destroy(obj);
+				UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.KEY].Value += reward;
+				모델의환생기능();
+			}, "네")
+			.SetCancel(obj => 
+			{
+				Destroy(obj);
+			}, "아니오")
+			.Build();
+    }
+
+    public void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.F1))
+		{
+			환생섭스크라이브();
+		}
+	}
+	*/
 }
+

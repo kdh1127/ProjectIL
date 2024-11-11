@@ -50,4 +50,5 @@ public class StageManager : TRSingleton<StageManager>
 	{
 		CurStage.Value++;
 	}
+
 }

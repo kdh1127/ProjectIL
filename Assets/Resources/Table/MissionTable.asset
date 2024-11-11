@@ -37,7 +37,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 0
     - 5
-    - Gold
+    - GOLD
     - 1000
   - key: 1
     datas:
@@ -46,7 +46,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 1
     - 10
-    - Gold
+    - GOLD
     - 100000
   - key: 2
     datas:
@@ -55,7 +55,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 2
     - 1
-    - Gold
+    - GOLD
     - 199000
   - key: 3
     datas:
@@ -64,52 +64,52 @@ MonoBehaviour:
     - QuestUpgrade
     - 3
     - 5
-    - Gold
+    - GOLD
     - 298000
   - key: 4
     datas:
     - 4
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
-    - 4
+    - Quest_Clear_String_Format
+    - QuestClear
+    - 0
     - 10
-    - Gold
+    - GOLD
     - 397000
   - key: 5
     datas:
     - 5
     - Quest_Upgrade_String_Format
     - QuestUpgrade
-    - 5
+    - 4
     - 1
-    - Gold
+    - GOLD
     - 496000
   - key: 6
     datas:
     - 6
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
-    - 6
+    - Weapon_Upgrade_String_Format
+    - WeaponUpgrade
+    - 0
     - 5
-    - Gold
+    - GOLD
     - 595000
   - key: 7
     datas:
     - 7
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
-    - 7
-    - 10
-    - Gold
+    - Dungeon_Clear_String_Format
+    - DungeonClear
+    - 0
+    - 1
+    - GOLD
     - 694000
   - key: 8
     datas:
     - 8
     - Quest_Upgrade_String_Format
     - QuestUpgrade
-    - 8
+    - 5
     - 1
-    - Gold
+    - GOLD
     - 793000
   - key: 9
     datas:
@@ -118,7 +118,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 9
     - 5
-    - Gold
+    - GOLD
     - 892000
   - key: 10
     datas:
@@ -127,7 +127,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 10
     - 10
-    - Gold
+    - GOLD
     - 991000
   - key: 11
     datas:
@@ -136,7 +136,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 11
     - 1
-    - Gold
+    - GOLD
     - 1090000
   - key: 12
     datas:
@@ -145,7 +145,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 12
     - 5
-    - Gold
+    - GOLD
     - 1189000
   - key: 13
     datas:
@@ -154,7 +154,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 13
     - 10
-    - Gold
+    - GOLD
     - 1288000
   - key: 14
     datas:
@@ -163,7 +163,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 14
     - 1
-    - Gold
+    - GOLD
     - 1387000
   - key: 15
     datas:
@@ -172,7 +172,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 15
     - 5
-    - Gold
+    - GOLD
     - 1486000
   - key: 16
     datas:
@@ -181,7 +181,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 16
     - 10
-    - Gold
+    - GOLD
     - 1585000
   - key: 17
     datas:
@@ -190,7 +190,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 17
     - 1
-    - Gold
+    - GOLD
     - 1684000
   - key: 18
     datas:
@@ -199,7 +199,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 18
     - 5
-    - Gold
+    - GOLD
     - 1783000
   - key: 19
     datas:
@@ -208,7 +208,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 19
     - 10
-    - Gold
+    - GOLD
     - 1882000
   - key: 20
     datas:
@@ -217,7 +217,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 20
     - 1
-    - Gold
+    - GOLD
     - 1981000
   - key: 21
     datas:
@@ -226,7 +226,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 21
     - 5
-    - Gold
+    - GOLD
     - 2080000
   - key: 22
     datas:
@@ -235,7 +235,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 22
     - 10
-    - Gold
+    - GOLD
     - 2179000
   - key: 23
     datas:
@@ -244,7 +244,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 23
     - 1
-    - Gold
+    - GOLD
     - 2278000
   - key: 24
     datas:
@@ -253,7 +253,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 24
     - 5
-    - Gold
+    - GOLD
     - 2377000
   - key: 25
     datas:
@@ -262,7 +262,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 25
     - 10
-    - Gold
+    - GOLD
     - 2476000
   - key: 26
     datas:
@@ -271,7 +271,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 26
     - 1
-    - Gold
+    - GOLD
     - 2575000
   - key: 27
     datas:
@@ -280,7 +280,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 27
     - 5
-    - Gold
+    - GOLD
     - 2674000
   - key: 28
     datas:
@@ -289,7 +289,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 28
     - 10
-    - Gold
+    - GOLD
     - 2773000
   - key: 29
     datas:
@@ -298,7 +298,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 29
     - 1
-    - Gold
+    - GOLD
     - 2872000
   - key: 30
     datas:
@@ -307,7 +307,7 @@ MonoBehaviour:
     - QuestUpgrade
     - 30
     - 5
-    - Gold
+    - GOLD
     - 2971000
   dataDictionary:
     m_keys:
@@ -357,7 +357,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 0
       - 5
-      - Gold
+      - GOLD
       - 1000
     - m_keys:
       - MissionNo
@@ -373,7 +373,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 1
       - 10
-      - Gold
+      - GOLD
       - 100000
     - m_keys:
       - MissionNo
@@ -389,7 +389,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 2
       - 1
-      - Gold
+      - GOLD
       - 199000
     - m_keys:
       - MissionNo
@@ -405,7 +405,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 3
       - 5
-      - Gold
+      - GOLD
       - 298000
     - m_keys:
       - MissionNo
@@ -417,11 +417,11 @@ MonoBehaviour:
       - Amount
       m_values:
       - 4
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 4
+      - Quest_Clear_String_Format
+      - QuestClear
+      - 0
       - 10
-      - Gold
+      - GOLD
       - 397000
     - m_keys:
       - MissionNo
@@ -435,9 +435,9 @@ MonoBehaviour:
       - 5
       - Quest_Upgrade_String_Format
       - QuestUpgrade
-      - 5
+      - 4
       - 1
-      - Gold
+      - GOLD
       - 496000
     - m_keys:
       - MissionNo
@@ -449,11 +449,11 @@ MonoBehaviour:
       - Amount
       m_values:
       - 6
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 6
+      - Weapon_Upgrade_String_Format
+      - WeaponUpgrade
+      - 0
       - 5
-      - Gold
+      - GOLD
       - 595000
     - m_keys:
       - MissionNo
@@ -465,11 +465,11 @@ MonoBehaviour:
       - Amount
       m_values:
       - 7
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 7
-      - 10
-      - Gold
+      - Dungeon_Clear_String_Format
+      - DungeonClear
+      - 0
+      - 1
+      - GOLD
       - 694000
     - m_keys:
       - MissionNo
@@ -483,9 +483,9 @@ MonoBehaviour:
       - 8
       - Quest_Upgrade_String_Format
       - QuestUpgrade
-      - 8
+      - 5
       - 1
-      - Gold
+      - GOLD
       - 793000
     - m_keys:
       - MissionNo
@@ -501,7 +501,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 9
       - 5
-      - Gold
+      - GOLD
       - 892000
     - m_keys:
       - MissionNo
@@ -517,7 +517,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 10
       - 10
-      - Gold
+      - GOLD
       - 991000
     - m_keys:
       - MissionNo
@@ -533,7 +533,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 11
       - 1
-      - Gold
+      - GOLD
       - 1090000
     - m_keys:
       - MissionNo
@@ -549,7 +549,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 12
       - 5
-      - Gold
+      - GOLD
       - 1189000
     - m_keys:
       - MissionNo
@@ -565,7 +565,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 13
       - 10
-      - Gold
+      - GOLD
       - 1288000
     - m_keys:
       - MissionNo
@@ -581,7 +581,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 14
       - 1
-      - Gold
+      - GOLD
       - 1387000
     - m_keys:
       - MissionNo
@@ -597,7 +597,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 15
       - 5
-      - Gold
+      - GOLD
       - 1486000
     - m_keys:
       - MissionNo
@@ -613,7 +613,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 16
       - 10
-      - Gold
+      - GOLD
       - 1585000
     - m_keys:
       - MissionNo
@@ -629,7 +629,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 17
       - 1
-      - Gold
+      - GOLD
       - 1684000
     - m_keys:
       - MissionNo
@@ -645,7 +645,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 18
       - 5
-      - Gold
+      - GOLD
       - 1783000
     - m_keys:
       - MissionNo
@@ -661,7 +661,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 19
       - 10
-      - Gold
+      - GOLD
       - 1882000
     - m_keys:
       - MissionNo
@@ -677,7 +677,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 20
       - 1
-      - Gold
+      - GOLD
       - 1981000
     - m_keys:
       - MissionNo
@@ -693,7 +693,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 21
       - 5
-      - Gold
+      - GOLD
       - 2080000
     - m_keys:
       - MissionNo
@@ -709,7 +709,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 22
       - 10
-      - Gold
+      - GOLD
       - 2179000
     - m_keys:
       - MissionNo
@@ -725,7 +725,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 23
       - 1
-      - Gold
+      - GOLD
       - 2278000
     - m_keys:
       - MissionNo
@@ -741,7 +741,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 24
       - 5
-      - Gold
+      - GOLD
       - 2377000
     - m_keys:
       - MissionNo
@@ -757,7 +757,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 25
       - 10
-      - Gold
+      - GOLD
       - 2476000
     - m_keys:
       - MissionNo
@@ -773,7 +773,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 26
       - 1
-      - Gold
+      - GOLD
       - 2575000
     - m_keys:
       - MissionNo
@@ -789,7 +789,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 27
       - 5
-      - Gold
+      - GOLD
       - 2674000
     - m_keys:
       - MissionNo
@@ -805,7 +805,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 28
       - 10
-      - Gold
+      - GOLD
       - 2773000
     - m_keys:
       - MissionNo
@@ -821,7 +821,7 @@ MonoBehaviour:
       - QuestUpgrade
       - 29
       - 1
-      - Gold
+      - GOLD
       - 2872000
     - m_keys:
       - MissionNo
@@ -837,5 +837,5 @@ MonoBehaviour:
       - QuestUpgrade
       - 30
       - 5
-      - Gold
+      - GOLD
       - 2971000

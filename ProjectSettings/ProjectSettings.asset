@@ -249,8 +249,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/joch0/Documents/Git/DavinchCode/user.keystore
-  AndroidKeyaliasName: davinchcode
+  AndroidKeystoreName: '{inproject}: ProjectIR.keystore'
+  AndroidKeyaliasName: projectir
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

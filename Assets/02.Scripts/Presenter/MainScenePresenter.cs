@@ -223,62 +223,32 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	}
 	public void MissionPanelSubscribe()
     {
-		var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
-		var missionTableList = MissionTableList.Get();
 		var curMissionTable = missionModel.GetCurMissionTable();
 		var curMissionItemView = missionPanelView.currentMissionItemView;
 
-		curMissionItemView.Init(
-			table: curMissionTable,
-			interactable: missionModel.IsClear(curMissionTable));
-
-		
+		curMissionItemView.Init(curMissionTable, missionModel.IsClear(curMissionTable));
 
 		curMissionItemView.completeButtonView.button.OnClickAsObservable().Subscribe(_ =>
 		{
-			var rewardType = EnumList.StringToEnum<EnumList.ECurrencyType>(curMissionTable.RewardType);
-			UserDataManager.Instance.currencyData.Currency[rewardType].Value += BigInteger.Parse(curMissionTable.Amount);
-			UserDataManager.Instance.missiondata.ClearMissionNo++;
-
-            curMissionTable = missionModel.GetCurMissionTable();
-			curMissionItemView.Init(
-			table: curMissionTable,
-			interactable: missionModel.IsClear(curMissionTable));
-
-			RefreshDisableMissionList(missionPanelView);
-
+			missionModel.ClearMission(curMissionTable);
 		}).AddTo(curMissionItemView.gameObject);
 
-		RefreshDisableMissionList(missionPanelView);
+		missionModel.missionClearSubject.Subscribe(_ =>
+		{
+			var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
+
+			curMissionTable = missionModel.GetCurMissionTable();
+			curMissionItemView.UpdateView(curMissionTable, missionModel.IsClear(curMissionTable));
+			missionPanelView.RefreshDisableMissionList(clearMissionNo);
+		}).AddTo(missionPanelView.gameObject);
+
+		missionPanelView.CreateDisableMissionList(UserDataManager.Instance.missiondata.ClearMissionNo);
 
 		Observable.EveryUpdate().Subscribe(_ =>
 		{
-			missionPanelView.currentMissionItemView.Init(
-				table: curMissionTable,
-				interactable: missionModel.IsClear(curMissionTable));
+			missionPanelView.currentMissionItemView.UpdateView(curMissionTable, missionModel.IsClear(curMissionTable));
 		}).AddTo(missionPanelView.gameObject);
-
     }
-
-	// TODO: This function is managed other data structure	
-	private void RefreshDisableMissionList(MissionPanelView view)
-    {
-		var missionTableList = MissionTableList.Get();
-		var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
-
-		// 생성하기 전 삭제 //투두: 컬 미션이 되면 해당 아이템 오브젝트 비활성화
-		for (int i = 0; i < view.content_tr.childCount; i++)
-        {
-			Destroy(view.content_tr.GetChild(i).gameObject);
-        }
-
-		// 생성
-		for (int i = clearMissionNo + 1; i < missionTableList.Count; i++)
-		{
-			var missionItemView = Instantiate(missionPanelView.missionItem, missionPanelView.content_tr).GetComponent<MissionItemView>();
-			missionItemView.Init(missionTableList[i]);
-		}
-	}
 
     /*
 	public void 모델의환생기능()

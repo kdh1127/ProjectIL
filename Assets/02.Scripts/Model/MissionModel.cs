@@ -3,10 +3,12 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Numerics;
+using UniRx;
 
 public class MissionModel
 {
+    public Subject<Unit> missionClearSubject = new();
     public void Init()
     {
         MissionTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("MissionTable"));
@@ -45,9 +47,13 @@ public class MissionModel
             return MissionTableList.Get()[clearMission];
     }
 
-    public void ClearMission(int missionNo)  
+    public void ClearMission(MissionTable table)  
     {
-        UserDataManager.Instance.missiondata.ClearMissionNo = missionNo;
+        var rewardType = EnumList.StringToEnum<EnumList.ECurrencyType>(table.RewardType);
+
+        UserDataManager.Instance.missiondata.ClearMissionNo++;
+        UserDataManager.Instance.currencyData.Currency[rewardType].Value += BigInteger.Parse(table.Amount);
+        missionClearSubject.OnNext(Unit.Default);
     }
 
     public bool IsClear(MissionTable table)

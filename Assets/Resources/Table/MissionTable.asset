@@ -1,0 +1,841 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1620177140, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: MissionTable
+  m_EditorClassIdentifier: 
+  sheetID: 1UWFMOz9i1Ewz0WdGV1HbTlOCwOvqcHxA-GrEjtnYmN4
+  gID: 2061420718
+  columnList:
+  - type: 0
+    columnId: MissionNo
+  - type: 1
+    columnId: Name
+  - type: 1
+    columnId: MissionType
+  - type: 0
+    columnId: TargetNo
+  - type: 0
+    columnId: CompleteCount
+  - type: 1
+    columnId: RewardType
+  - type: 1
+    columnId: Amount
+  dataList:
+  - key: 0
+    datas:
+    - 0
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 0
+    - 5
+    - GOLD
+    - 1000
+  - key: 1
+    datas:
+    - 1
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 1
+    - 10
+    - GOLD
+    - 100000
+  - key: 2
+    datas:
+    - 2
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 2
+    - 1
+    - GOLD
+    - 199000
+  - key: 3
+    datas:
+    - 3
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 3
+    - 5
+    - GOLD
+    - 298000
+  - key: 4
+    datas:
+    - 4
+    - Quest_Clear_String_Format
+    - QuestClear
+    - 0
+    - 10
+    - GOLD
+    - 397000
+  - key: 5
+    datas:
+    - 5
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 4
+    - 1
+    - GOLD
+    - 496000
+  - key: 6
+    datas:
+    - 6
+    - Weapon_Upgrade_String_Format
+    - WeaponUpgrade
+    - 0
+    - 5
+    - GOLD
+    - 595000
+  - key: 7
+    datas:
+    - 7
+    - Dungeon_Clear_String_Format
+    - DungeonClear
+    - 0
+    - 10
+    - GOLD
+    - 694000
+  - key: 8
+    datas:
+    - 8
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 5
+    - 1
+    - GOLD
+    - 793000
+  - key: 9
+    datas:
+    - 9
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 9
+    - 5
+    - GOLD
+    - 892000
+  - key: 10
+    datas:
+    - 10
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 10
+    - 10
+    - GOLD
+    - 991000
+  - key: 11
+    datas:
+    - 11
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 11
+    - 1
+    - GOLD
+    - 1090000
+  - key: 12
+    datas:
+    - 12
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 12
+    - 5
+    - GOLD
+    - 1189000
+  - key: 13
+    datas:
+    - 13
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 13
+    - 10
+    - GOLD
+    - 1288000
+  - key: 14
+    datas:
+    - 14
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 14
+    - 1
+    - GOLD
+    - 1387000
+  - key: 15
+    datas:
+    - 15
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 15
+    - 5
+    - GOLD
+    - 1486000
+  - key: 16
+    datas:
+    - 16
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 16
+    - 10
+    - GOLD
+    - 1585000
+  - key: 17
+    datas:
+    - 17
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 17
+    - 1
+    - GOLD
+    - 1684000
+  - key: 18
+    datas:
+    - 18
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 18
+    - 5
+    - GOLD
+    - 1783000
+  - key: 19
+    datas:
+    - 19
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 19
+    - 10
+    - GOLD
+    - 1882000
+  - key: 20
+    datas:
+    - 20
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 20
+    - 1
+    - GOLD
+    - 1981000
+  - key: 21
+    datas:
+    - 21
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 21
+    - 5
+    - GOLD
+    - 2080000
+  - key: 22
+    datas:
+    - 22
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 22
+    - 10
+    - GOLD
+    - 2179000
+  - key: 23
+    datas:
+    - 23
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 23
+    - 1
+    - GOLD
+    - 2278000
+  - key: 24
+    datas:
+    - 24
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 24
+    - 5
+    - GOLD
+    - 2377000
+  - key: 25
+    datas:
+    - 25
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 25
+    - 10
+    - GOLD
+    - 2476000
+  - key: 26
+    datas:
+    - 26
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 26
+    - 1
+    - GOLD
+    - 2575000
+  - key: 27
+    datas:
+    - 27
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 27
+    - 5
+    - GOLD
+    - 2674000
+  - key: 28
+    datas:
+    - 28
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 28
+    - 10
+    - GOLD
+    - 2773000
+  - key: 29
+    datas:
+    - 29
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 29
+    - 1
+    - GOLD
+    - 2872000
+  - key: 30
+    datas:
+    - 30
+    - Quest_Upgrade_String_Format
+    - QuestUpgrade
+    - 30
+    - 5
+    - GOLD
+    - 2971000
+  dataDictionary:
+    m_keys:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    m_values:
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 0
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 0
+      - 5
+      - GOLD
+      - 1000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 1
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 1
+      - 10
+      - GOLD
+      - 100000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 2
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 2
+      - 1
+      - GOLD
+      - 199000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 3
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 3
+      - 5
+      - GOLD
+      - 298000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 4
+      - Quest_Clear_String_Format
+      - QuestClear
+      - 0
+      - 10
+      - GOLD
+      - 397000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 5
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 4
+      - 1
+      - GOLD
+      - 496000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 6
+      - Weapon_Upgrade_String_Format
+      - WeaponUpgrade
+      - 0
+      - 5
+      - GOLD
+      - 595000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 7
+      - Dungeon_Clear_String_Format
+      - DungeonClear
+      - 0
+      - 10
+      - GOLD
+      - 694000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 8
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 5
+      - 1
+      - GOLD
+      - 793000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 9
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 9
+      - 5
+      - GOLD
+      - 892000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 10
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 10
+      - 10
+      - GOLD
+      - 991000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 11
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 11
+      - 1
+      - GOLD
+      - 1090000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 12
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 12
+      - 5
+      - GOLD
+      - 1189000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 13
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 13
+      - 10
+      - GOLD
+      - 1288000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 14
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 14
+      - 1
+      - GOLD
+      - 1387000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 15
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 15
+      - 5
+      - GOLD
+      - 1486000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 16
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 16
+      - 10
+      - GOLD
+      - 1585000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 17
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 17
+      - 1
+      - GOLD
+      - 1684000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 18
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 18
+      - 5
+      - GOLD
+      - 1783000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 19
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 19
+      - 10
+      - GOLD
+      - 1882000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 20
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 20
+      - 1
+      - GOLD
+      - 1981000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 21
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 21
+      - 5
+      - GOLD
+      - 2080000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 22
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 22
+      - 10
+      - GOLD
+      - 2179000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 23
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 23
+      - 1
+      - GOLD
+      - 2278000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 24
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 24
+      - 5
+      - GOLD
+      - 2377000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 25
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 25
+      - 10
+      - GOLD
+      - 2476000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 26
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 26
+      - 1
+      - GOLD
+      - 2575000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 27
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 27
+      - 5
+      - GOLD
+      - 2674000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 28
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 28
+      - 10
+      - GOLD
+      - 2773000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 29
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 29
+      - 1
+      - GOLD
+      - 2872000
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 30
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 30
+      - 5
+      - GOLD
+      - 2971000

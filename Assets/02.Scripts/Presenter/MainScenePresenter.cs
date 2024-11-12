@@ -22,6 +22,9 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	public WeaponPanelView weaponPanelView;
 	private WeaponModel weaponModel = new();
 
+	public MissionPanelView missionPanelView;
+	private MissionModel missionModel = new();
+
 	public CurrencyView currencyView;
 
 	private new void Awake()
@@ -30,13 +33,14 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 		questModel.Init();
 		weaponModel.Init();
+		missionModel.Init();
 
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
 		QuestPanelSubscribe();
 		WeaponPanelSubscribe();
-
+		MissionPanelSubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -217,4 +221,69 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			WeaponItemSubscribe(item, weaponItemView);
 		});
 	}
+	public void MissionPanelSubscribe()
+    {
+		var curMissionTable = missionModel.GetCurMissionTable();
+		var curMissionItemView = missionPanelView.currentMissionItemView;
+
+		curMissionItemView.Init(curMissionTable, missionModel.IsClear(curMissionTable));
+
+		curMissionItemView.completeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+		{
+			missionModel.ClearMission(curMissionTable);
+		}).AddTo(curMissionItemView.gameObject);
+
+		missionModel.missionClearSubject.Subscribe(_ =>
+		{
+			var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
+
+			curMissionTable = missionModel.GetCurMissionTable();
+			curMissionItemView.UpdateView(curMissionTable, missionModel.IsClear(curMissionTable));
+			missionPanelView.RefreshDisableMissionList(clearMissionNo);
+		}).AddTo(missionPanelView.gameObject);
+
+		missionPanelView.CreateDisableMissionList(UserDataManager.Instance.missiondata.ClearMissionNo);
+
+		Observable.EveryUpdate().Subscribe(_ =>
+		{
+			missionPanelView.currentMissionItemView.UpdateView(curMissionTable, missionModel.IsClear(curMissionTable));
+		}).AddTo(missionPanelView.gameObject);
+    }
+
+    /*
+	public void 모델의환생기능()
+    {
+
+    }
+	public void 환생섭스크라이브()
+    {
+		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
+		BigInteger reward = StageManager.Instance.CurStage.Value * 10;
+	
+		TRCommonPopup.Instantiate(transform)
+			.SetTitle("환생하기")
+			.SetItemImage(costImageResources["Key"])
+			.SetMessage($"환생하시겠습니까?\n" + $"열쇠보상: {reward.ToAlphabetNumber()}")
+			.SetConfirm(obj =>
+			{
+				Destroy(obj);
+				UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.KEY].Value += reward;
+				모델의환생기능();
+			}, "네")
+			.SetCancel(obj => 
+			{
+				Destroy(obj);
+			}, "아니오")
+			.Build();
+    }
+
+    public void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.F1))
+		{
+			환생섭스크라이브();
+		}
+	}
+	*/
 }
+

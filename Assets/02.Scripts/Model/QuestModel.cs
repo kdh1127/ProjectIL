@@ -15,9 +15,14 @@ public class QuestItemModel
 
     public void Upgrade(QuestTable table)
     {
+        var userQuestUpgradeData = UserDataManager.Instance.missiondata.QuestUpgradeData;
         if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -table.Cost))
         {
             level.Value++;
+            if (userQuestUpgradeData.Keys.Contains(table.QuestNo))
+            {
+                userQuestUpgradeData[table.QuestNo] = level.Value;
+            }
         }
     }
 
@@ -28,11 +33,16 @@ public class QuestItemModel
 
     public void Progress(QuestTable table)
     {
+        var userQuestClearData = UserDataManager.Instance.missiondata.QuestClearData;
         var reward = GetReward(table);
 
         if (elpasedTime.Value >= table.Time)
         {
             CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, reward);
+            if(userQuestClearData.Keys.Contains(table.QuestNo))
+            {
+                userQuestClearData[table.QuestNo]++;
+            }
             elpasedTime.Value = 0;
         }
         else

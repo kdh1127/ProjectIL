@@ -16,7 +16,7 @@ public class QuestItemModel
     public void Upgrade(QuestTable table)
     {
         var userQuestUpgradeData = UserDataManager.Instance.missiondata.QuestUpgradeData;
-        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -table.Cost))
+        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(table.Cost)));
         {
             level.Value++;
             if (userQuestUpgradeData.Keys.Contains(table.QuestNo))
@@ -28,7 +28,7 @@ public class QuestItemModel
 
     public BigInteger GetReward(QuestTable table)
     {
-        return level.Value > 0 ? level.Value * table.Increase : table.Increase;
+        return level.Value > 0 ? level.Value * BigInteger.Parse(table.Increase) : BigInteger.Parse(table.Increase);
     }
 
     public void Progress(QuestTable table)

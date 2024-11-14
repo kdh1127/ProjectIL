@@ -25,6 +25,9 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	public MissionPanelView missionPanelView;
 	private MissionModel missionModel = new();
 
+	public TreasurePanelView treasurePanelView;
+	private TreasureModel treasureModel = new();
+
 	public CurrencyView currencyView;
 
 	private new void Awake()
@@ -34,6 +37,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		questModel.Init();
 		weaponModel.Init();
 		missionModel.Init();
+		treasureModel.Init();
 
 		TopPanelSubscribe();
 		MainButtonSubscribe();
@@ -41,6 +45,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		QuestPanelSubscribe();
 		WeaponPanelSubscribe();
 		MissionPanelSubscribe();
+		TreasurePanelSubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -115,8 +120,8 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				reward: questItemModel.GetReward(item));
 
 			questItemView.upgradeButtonView.Init(
-				increase: new ANumber(item.Increase).ToAlphaString(),
-				cost: new ANumber(item.Cost).ToAlphaString(),
+				increase: BigInteger.Parse(item.Increase),
+				cost: BigInteger.Parse(item.Cost),
 				costImage: costImageResources["Gold"]);
 
 			// Subscribe QuestItemModel
@@ -131,7 +136,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			// Subscribe currentGold
 			UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD).Subscribe(gold =>
 			{
-				questItemView.upgradeButtonView.SetInteractable(gold >= item.Cost);
+				questItemView.upgradeButtonView.SetInteractable(gold >= BigInteger.Parse(item.Cost));
 			}).AddTo(questItemView.upgradeButtonView.button);
 
 			// Update Progress bar in Quest
@@ -172,8 +177,9 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 				if (weaponItemModel.isEquiped)
                 {
-					UserDataManager.Instance.characterData.WeaponDamage = BigInteger.Parse(table.BaseAtk) + (weaponItemModel.level.Value * BigInteger.Parse(table.Increase));
-                }
+					weaponItemModel.SetWeaponDamage(table);
+
+				}
 			}
 		}).AddTo(weaponPanelView.gameObject);
 	}
@@ -190,6 +196,14 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			var weaponItemModel = weaponModel.weaponItemList[item.WeaponNo];
 			weaponPanelView.weaponItemViewList.Add(weaponItemView);
 
+			if (item.WeaponNo == 0)
+				if (weaponItemModel.level.Value == 0)
+				{
+					weaponItemModel.level.Value++;
+
+					weaponItemModel.SetWeaponDamage(item);
+				}
+
 			weaponItemView.Init(
 				table: item,
 				curLevel: weaponItemModel.level.Value,
@@ -200,8 +214,8 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				);
 
 			weaponItemView.upgradeButtonView.Init(
-				increase: item.Increase,
-				cost: item.Cost,
+				increase: BigInteger.Parse(item.Increase),
+				cost: BigInteger.Parse(item.Cost),
 				costImage: costImageResources["Gold"]
 				);
 
@@ -250,40 +264,20 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		}).AddTo(missionPanelView.gameObject);
     }
 
-    /*
-	public void ����ȯ�����()
-    {
-
-    }
-	public void ȯ������ũ���̺�()
+    public void TreasurePanelSubscribe()
     {
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-		BigInteger reward = StageManager.Instance.CurStage.Value * 10;
-	
-		TRCommonPopup.Instantiate(transform)
-			.SetTitle("ȯ���ϱ�")
-			.SetItemImage(costImageResources["Key"])
-			.SetMessage($"ȯ���Ͻðڽ��ϱ�?\n" + $"���躸��: {reward.ToAlphabetNumber()}")
-			.SetConfirm(obj =>
-			{
-				Destroy(obj);
-				UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.KEY].Value += reward;
-				����ȯ�����();
-			}, "��")
-			.SetCancel(obj => 
-			{
-				Destroy(obj);
-			}, "�ƴϿ�")
-			.Build();
+
+		TreasureTableList.Get().ForEach(item =>
+		{
+			var treasureItemView = Instantiate(treasurePanelView.treasureItem, treasurePanelView.content_tr).GetComponent<TreasureItemView>();
+			var treasureItemModel = treasureModel.treasureItemList[item.TreasureNo];
+
+			treasureItemView.Init(item.TreasureName, item.IncreaseType, BigInteger.Parse(item.Increase), treasureItemModel.level.Value);
+			treasureItemView.upgradeButtonView.Init(BigInteger.Parse(item.Increase), BigInteger.Parse(item.TreasureCost), costImageResources["Key"]);
+
+		});
     }
 
-    public void Update()
-    {
-		if (Input.GetKeyDown(KeyCode.F1))
-		{
-			ȯ������ũ���̺�();
-		}
-	}
-	*/
 }
 

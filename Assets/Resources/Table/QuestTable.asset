@@ -21,9 +21,9 @@ MonoBehaviour:
     columnId: Name
   - type: 0
     columnId: Time
-  - type: 0
+  - type: 1
     columnId: Increase
-  - type: 0
+  - type: 1
     columnId: Cost
   - type: 1
     columnId: Image

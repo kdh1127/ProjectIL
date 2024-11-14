@@ -13,32 +13,37 @@ public class MissionModel
     {
         MissionTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("MissionTable"));
 
+        var missionData = UserDataManager.Instance.missiondata;
+
         // TODO: Load MissionData in UserDataManager
-        MissionTableList.Get()
-            .ForEach(table =>
+        MissionTableList.Get().ForEach(table =>
             {
                 var missionType = EnumList.StringToEnum<EnumList.EMissionType>(table.MissionType);
                 switch (missionType)
                 {
                     case EnumList.EMissionType.QuestUpgrade:
-                        UserDataManager.Instance.missiondata.QuestUpgradeData.Add(table.TargetNo, 0);
+                        if(!missionData.QuestUpgradeData.ContainsKey(table.TargetNo))
+                            missionData.QuestUpgradeData.Add(table.TargetNo, 0);
                         break;
                     case EnumList.EMissionType.QuestClear:
-                        UserDataManager.Instance.missiondata.QuestClearData.Add(table.TargetNo, 0);
+                        if (!missionData.QuestClearData.ContainsKey(table.TargetNo))
+                            missionData.QuestClearData.Add(table.TargetNo, 0);
                         break;
                     case EnumList.EMissionType.WeaponUpgrade:
-                        UserDataManager.Instance.missiondata.WeaponUpgradeData.Add(table.TargetNo, 0);
+                        if (!missionData.WeaponUpgradeData.ContainsKey(table.TargetNo))
+                            missionData.WeaponUpgradeData.Add(table.TargetNo, 0);
                         break;
                     case EnumList.EMissionType.DungeonClear:
-                        UserDataManager.Instance.missiondata.DungeonClearData.Add(table.TargetNo, 0);
+                        if (!missionData.DungeonClearData.ContainsKey(table.TargetNo))
+                            missionData.DungeonClearData.Add(table.TargetNo, 0);
                         break;
                 }
             });
     }
 
     /// <summary>
-    /// Å¬¸®¾î µÈ ¹Ì¼ÇÀÇ ´ÙÀ½ ¹Ì¼ÇÀÇ Å×ÀÌºí ¹ÝÈ¯ÇÑ´Ù.
-    /// ´ÙÀ½ ¹Ì¼ÇÀÌ ¾øÀ» °æ¿ì ¸¶Áö¸·À¸·Î Å¬¸®¾î ÇÑ ¹Ì¼ÇÀÇ Å×ÀÌºí ¹ÝÈ¯ÇÑ´Ù.
+    /// Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+    /// ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
     /// </summary>
     /// <returns></returns>
     public MissionTable GetCurMissionTable()
@@ -52,7 +57,7 @@ public class MissionModel
         var rewardType = EnumList.StringToEnum<EnumList.ECurrencyType>(table.RewardType);
 
         UserDataManager.Instance.missiondata.ClearMissionNo++;
-        UserDataManager.Instance.currencyData.Currency[rewardType].Value += BigInteger.Parse(table.Amount);
+        UserDataManager.Instance.currencyData.GetCurrency(rewardType).Value += BigInteger.Parse(table.Amount);
         missionClearSubject.OnNext(Unit.Default);
     }
 

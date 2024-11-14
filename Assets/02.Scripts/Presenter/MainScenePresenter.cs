@@ -63,17 +63,17 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public void CurrencySubscribe()
 	{
-		UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
+		UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD).Subscribe(gold =>
 		{
 			currencyView.gold_txt.text = gold.ToAlphabetNumber();
 		}).AddTo(this);
 
-		UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.DIA].Subscribe(dia =>
+		UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.DIA).Subscribe(dia =>
 		{
 			currencyView.dia_txt.text = dia.ToAlphabetNumber();
 		}).AddTo(this);
 
-		UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.KEY].Subscribe(key =>
+		UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.KEY).Subscribe(key =>
 		{
 			currencyView.key_txt.text = key.ToAlphabetNumber();
 		}).AddTo(this);
@@ -129,7 +129,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			}).AddTo(questItemView.gameObject);
 
 			// Subscribe currentGold
-			UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD].Subscribe(gold =>
+			UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD).Subscribe(gold =>
 			{
 				questItemView.upgradeButtonView.SetInteractable(gold >= item.Cost);
 			}).AddTo(questItemView.upgradeButtonView.button);
@@ -211,7 +211,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				weaponItemModel.Upgrade(item);
 			}).AddTo(weaponItemView.gameObject);
 
-			UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.GOLD]
+			UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD)
 			.Subscribe(gold =>
 			{
 				var isEnughGold = CurrencyManager.Instance.IsPositiveAmount(gold, -BigInteger.Parse(item.Cost));
@@ -251,29 +251,29 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
     }
 
     /*
-	public void ¸ðµ¨ÀÇÈ¯»ý±â´É()
+	public void ï¿½ï¿½ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ï¿½()
     {
 
     }
-	public void È¯»ý¼·½ºÅ©¶óÀÌºê()
+	public void È¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½Ìºï¿½()
     {
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
 		BigInteger reward = StageManager.Instance.CurStage.Value * 10;
 	
 		TRCommonPopup.Instantiate(transform)
-			.SetTitle("È¯»ýÇÏ±â")
+			.SetTitle("È¯ï¿½ï¿½ï¿½Ï±ï¿½")
 			.SetItemImage(costImageResources["Key"])
-			.SetMessage($"È¯»ýÇÏ½Ã°Ú½À´Ï±î?\n" + $"¿­¼èº¸»ó: {reward.ToAlphabetNumber()}")
+			.SetMessage($"È¯ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?\n" + $"ï¿½ï¿½ï¿½èº¸ï¿½ï¿½: {reward.ToAlphabetNumber()}")
 			.SetConfirm(obj =>
 			{
 				Destroy(obj);
 				UserDataManager.Instance.currencyData.Currency[EnumList.ECurrencyType.KEY].Value += reward;
-				¸ðµ¨ÀÇÈ¯»ý±â´É();
-			}, "³×")
+				ï¿½ï¿½ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ï¿½();
+			}, "ï¿½ï¿½")
 			.SetCancel(obj => 
 			{
 				Destroy(obj);
-			}, "¾Æ´Ï¿À")
+			}, "ï¿½Æ´Ï¿ï¿½")
 			.Build();
     }
 
@@ -281,7 +281,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
     {
 		if (Input.GetKeyDown(KeyCode.F1))
 		{
-			È¯»ý¼·½ºÅ©¶óÀÌºê();
+			È¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½Ìºï¿½();
 		}
 	}
 	*/

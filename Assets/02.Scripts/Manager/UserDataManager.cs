@@ -2,6 +2,7 @@ using System.Numerics;
 using System.Collections.Generic;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
+using UnityEngine;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
@@ -12,36 +13,94 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	private new void Awake()
 	{
 		base.Awake();
-		Init();
+
+		if (IsInit())
+		{
+			currencyData.LoadCurrencyData();
+			characterData.LoadCharacterData();
+			missiondata.LoadMissionData();
+		}
+		else
+		{
+			Init();
+		}
+	}
+
+	private void OnApplicationQuit()
+	{
+		SaveCurrencyData();
+		SaveCharacterData();
+		SaveMissiondata();
 	}
 	public void Init()
 	{
+		PlayerPrefs.SetString("IsInit", "true");
+
 		currencyData.InitCurrencyData();
 		characterData.InitCharacterData();
 		missiondata.InitMissionData();
+
+		SaveCurrencyData();
+		SaveCharacterData();
+		SaveMissiondata();
+	}
+	public bool IsInit()
+	{
+		return bool.Parse(PlayerPrefs.GetString("IsInit", "false"));
+	}
+
+	public void SaveCurrencyData()
+	{
+		DataUtility.Save("CurrencyData", currencyData);
+	}
+	public void SaveCharacterData()
+	{
+		DataUtility.Save("CharacterData", characterData);
+	}
+	public void SaveMissiondata()
+	{
+		DataUtility.Save("MissionData", missiondata);
 	}
 
 	#region CurrencyData
 	public class CurrencyData
 	{
-		private Dictionary<EnumList.ECurrencyType, ReactiveProperty<BigInteger>> currency = new();
-		public Dictionary<EnumList.ECurrencyType, ReactiveProperty<BigInteger>> Currency { get => currency; set => currency = value; }
+		private ReactiveProperty<BigInteger> gold = new();
+		public ReactiveProperty<BigInteger> Gold { get => gold; set => gold = value; }
 
+		private ReactiveProperty<BigInteger> dia = new();
+		public ReactiveProperty<BigInteger> Dia { get => dia; set => dia = value; }
+
+		private ReactiveProperty<BigInteger> key = new();
+		public ReactiveProperty<BigInteger> Key { get => key; set => key = value; }
+
+		public ReactiveProperty<BigInteger> GetCurrency(EnumList.ECurrencyType currencyType)
+		{
+			switch (currencyType)
+			{
+				case EnumList.ECurrencyType.GOLD:
+					return Gold;
+				case EnumList.ECurrencyType.DIA:
+					return Dia;
+				case EnumList.ECurrencyType.KEY:
+					return Key;
+			}
+
+			return null;
+		}
 		public void InitCurrencyData()
 		{
-			Currency.Add(EnumList.ECurrencyType.GOLD, new ReactiveProperty<BigInteger>());
-			Currency.Add(EnumList.ECurrencyType.DIA, new ReactiveProperty<BigInteger>());
-			Currency.Add(EnumList.ECurrencyType.KEY, new ReactiveProperty<BigInteger>());
-		}
-
-		public void SaveCurrencyData()
-		{
-
+			Gold.Value = 0;
+			Dia.Value = 0;
+			Key.Value = 0;
 		}
 
 		public void LoadCurrencyData()
 		{
-
+			CurrencyData data = DataUtility.Load<CurrencyData>("CurrencyData");
+			Gold.Value = data.Gold.Value;
+			Dia.Value = data.Dia.Value;
+			Key.Value = data.Key.Value;
 		}
 	}
 	#endregion
@@ -73,14 +132,14 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			CriticalChance = 10;
 		}
 
-		public void SaveCharacterData()
-		{
-
-		}
-
 		public void LoadCharacterData()
 		{
-
+			CharacterData data = DataUtility.Load<CharacterData>("CharacterData");
+			MoveSpeed = data.MoveSpeed;
+			AttackPerSecond = data.AttackPerSecond;
+			WeaponDamage = data.WeaponDamage;
+			CriticalDamage = data.CriticalDamage;
+			CriticalChance = data.CriticalChance;
 		}
 	}
 	#endregion
@@ -123,16 +182,15 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			ClearMissionNo = 0;
 		}
 
-		public void SaveMissionData()
-		{
-
-		}
-
 		public void LoadMissionData()
 		{
-
+			Missiondata data = DataUtility.Load<Missiondata>("MissionData");
+			ClearMissionNo = data.ClearMissionNo;
+			QuestUpgradeData = data.QuestUpgradeData;
+			QuestClearData = data.QuestClearData;
+			WeaponUpgradeData = data.WeaponUpgradeData;
+			DungeonClearData = data.DungeonClearData;
 		}
 	}
 	#endregion
-
 }

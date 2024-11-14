@@ -17,7 +17,7 @@ public class MissionItemView : MonoBehaviour
         var missionRewardImageResources = TRScriptableManager.Instance.GetSprite("MissionRewardImageResources").spriteDictionary;
 
         reward_img.sprite = missionRewardImageResources[table.RewardType];
-        missionNo_txt.text = $"{table.MissionNo}번째 미션";
+        missionNo_txt.text = $"{table.MissionNo}";
         missionName_txt.text = table.Name;
         reward_txt.text = $"{table.RewardType}+ {table.Amount}";
         completeButtonView.SetInteractable(interactable);
@@ -28,7 +28,7 @@ public class MissionItemView : MonoBehaviour
         var missionRewardImageResources = TRScriptableManager.Instance.GetSprite("MissionRewardImageResources").spriteDictionary;
 
         reward_img.sprite = missionRewardImageResources[table.RewardType];
-        missionNo_txt.text = $"{table.MissionNo}번째 미션";
+        missionNo_txt.text = $"{table.MissionNo}";
         missionName_txt.text = table.Name;
         reward_txt.text = $"{table.RewardType}+ {table.Amount}";
         completeButtonView.SetInteractable(interactable);

@@ -6,11 +6,11 @@ public class QuestTable
 {
 	[SerializeField] public int QuestNo;
 	[SerializeField] public string Name;
-	[SerializeField] public float Time;
-	[SerializeField] public int Increase;
-	[SerializeField] public int Cost;
+	[SerializeField] public int Time;
+	[SerializeField] public string Increase;
+	[SerializeField] public string Cost;
 	[SerializeField] public string Image;
-public QuestTable(int QuestNo, string Name, float Time, int Increase, int Cost, string Image)
+public QuestTable(int QuestNo, string Name, int Time, string Increase, string Cost, string Image)
 	{
 		this.QuestNo = QuestNo;
 		this.Name = Name;
@@ -33,9 +33,9 @@ public static class QuestTableList
 			(
 				QuestNo: int.Parse(_trGoogleSheet.dataDictionary[data.key]["QuestNo"]),
 				Name: _trGoogleSheet.dataDictionary[data.key]["Name"],
-				Time: float.Parse(_trGoogleSheet.dataDictionary[data.key]["Time"]),
-				Increase: int.Parse(_trGoogleSheet.dataDictionary[data.key]["Increase"]),
-				Cost: int.Parse(_trGoogleSheet.dataDictionary[data.key]["Cost"]),
+				Time: int.Parse(_trGoogleSheet.dataDictionary[data.key]["Time"]),
+				Increase: _trGoogleSheet.dataDictionary[data.key]["Increase"],
+				Cost: _trGoogleSheet.dataDictionary[data.key]["Cost"],
 				Image: _trGoogleSheet.dataDictionary[data.key]["Image"]
 			);
 			_QuestTableList.Add(_QuestTable);

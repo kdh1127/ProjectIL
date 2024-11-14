@@ -24,6 +24,9 @@ public class MainButtonView : MonoBehaviour, IToggleView
 			case CommonToggle.ToggleType.Mission:
 				bottomPanelView.panelList[2].SetActive(true);
 				break;
+			case CommonToggle.ToggleType.Treasure:
+				bottomPanelView.panelList[3].SetActive(true);
+				break;
 		}
 	}
 

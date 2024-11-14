@@ -26,6 +26,12 @@ public class WeaponItemModel
             }
         }
     }
+
+
+    public void SetWeaponDamage(WeaponTable table)
+    {
+        UserDataManager.Instance.characterData.WeaponDamage = BigInteger.Parse(table.BaseAtk) + (level.Value * BigInteger.Parse(table.Increase));
+    }
 }
 
 public class WeaponModel
@@ -42,10 +48,6 @@ public class WeaponModel
         }
     }
 
-    public BigInteger GetWeaponDamage(WeaponTable table, int level)
-    {
-        return BigInteger.Parse(table.BaseAtk) + (level * BigInteger.Parse(table.Increase));
-    }
 
     public void CheckWeaponState()
     {

@@ -16,7 +16,7 @@ public class QuestItemModel
     public void Upgrade(QuestTable table)
     {
         var userQuestUpgradeData = UserDataManager.Instance.missiondata.QuestUpgradeData;
-        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(table.Cost)));
+        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -table.Cost.ToBigInteger()))
         {
             level.Value++;
             if (userQuestUpgradeData.Keys.Contains(table.QuestNo))
@@ -56,13 +56,9 @@ public class QuestModel
 {
     public List<QuestItemModel> questItemList = new();
 
-
-    public void Init()
+    public void Init(List<QuestTable> questTableList)
     {
-        var table = TRScriptableManager.Instance.GetGoogleSheet("QuestTable");
-        QuestTableList.Init(table);
-
-        for (int i = 0; i < QuestTableList.Get().Count; i++)
+        for (int i = 0; i < questTableList.Count; i++)
         {
             questItemList.Add(new QuestItemModel());
         }

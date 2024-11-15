@@ -32,7 +32,7 @@ public class QuestItemView : MonoBehaviour
         time_txt.text = $"{TimeSpan.FromSeconds(endTime - curSecond)}";
     }
 
-    public void LevelUpdate(string level, string reward)
+    public void UpdateLevel(string level, string reward)
     {
         reward_txt.text = reward;
         level_txt.text = $"Lv.{level}";

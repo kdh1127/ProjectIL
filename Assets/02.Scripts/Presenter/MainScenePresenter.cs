@@ -34,11 +34,23 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	{
 		base.Awake();
 
-		questModel.Init();
+		Init();
+		Subscribe();
+	}
+
+	private void Init()
+	{
+		var questTableGoogleSheet = TRScriptableManager.Instance.GetGoogleSheet("QuestTable");
+		QuestTableList.Init(questTableGoogleSheet);
+
+		questModel.Init(QuestTableList.Get());
 		weaponModel.Init();
 		missionModel.Init();
 		treasureModel.Init();
+	}
 
+	private void Subscribe()
+	{
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
@@ -85,19 +97,19 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	}
 
 	#region Quest
-	public void QuestItemSubscribe(QuestTable table, QuestItemView questItemView)
+	public void QuestItemSubscribe(QuestTable table, QuestItemView view)
     {
-        var questItemModel = questModel.questItemList[table.QuestNo];
+        var model = questModel.questItemList[table.QuestNo];
 
-		questItemModel.elpasedTime.Subscribe(time =>
+		model.elpasedTime.Subscribe(time =>
 		{
-			questItemView.ProgressUpdate(time, (int)table.Time);
-		}).AddTo(questItemView.gameObject);
+			view.ProgressUpdate(time, table.Time);
+		}).AddTo(view.gameObject);
 
-		questItemModel.level.Subscribe(level =>
+		model.level.Subscribe(level =>
 		{
-			questItemView.LevelUpdate(level.ToString(), questItemModel.GetReward(table).ToAlphabetNumber());
-		}).AddTo(questItemView.gameObject);
+			view.UpdateLevel(level.ToString(), model.GetReward(table).ToAlphabetNumber());
+		}).AddTo(view.gameObject);
     }
 
 	public void QuestPanelSubscribe()
@@ -105,47 +117,47 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		var questImageResources = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
 
-		QuestTableList.Get().ForEach(item =>
+		QuestTableList.Get().ForEach(table =>
 		{
 			// Instantiate
-			var questItemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
-			var questItemModel = questModel.questItemList[item.QuestNo];
+			var view = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
+			var model = questModel.questItemList[table.QuestNo];
 
 			// Initialize 
-			questItemView.Init(
-				sprite: questImageResources[item.Image],
-				title: item.Name,
-				endTime: item.Time,
-				level: questItemModel.level.Value,
-				reward: questItemModel.GetReward(item));
+			view.Init(
+				sprite: questImageResources[table.Image],
+				title: table.Name,
+				endTime: table.Time,
+				level: model.level.Value,
+				reward: model.GetReward(table));
 
-			questItemView.upgradeButtonView.Init(
-				increase: BigInteger.Parse(item.Increase),
-				cost: BigInteger.Parse(item.Cost),
+			view.upgradeButtonView.Init(
+				increase: table.Increase.ToBigInteger(),
+				cost: table.Cost.ToBigInteger(),
 				costImage: costImageResources["Gold"]);
 
 			// Subscribe QuestItemModel
-			QuestItemSubscribe(item, questItemView);
+			QuestItemSubscribe(table, view);
 
 			// Subscribe Upgrade_btn
-			questItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+			view.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
 			{
-				questModel.questItemList[item.QuestNo].Upgrade(item);
-			}).AddTo(questItemView.gameObject);
+				questModel.questItemList[table.QuestNo].Upgrade(table);
+			}).AddTo(view.upgradeButtonView.button.gameObject);
 
 			// Subscribe currentGold
 			UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD).Subscribe(gold =>
 			{
-				questItemView.upgradeButtonView.SetInteractable(gold >= BigInteger.Parse(item.Cost));
-			}).AddTo(questItemView.upgradeButtonView.button);
+				view.upgradeButtonView.SetInteractable(gold >= table.Cost.ToBigInteger());
+			}).AddTo(view.upgradeButtonView.button.gameObject);
 
 			// Update Progress bar in Quest
 			Observable.Interval(System.TimeSpan.FromSeconds(1))
-			.Where(_ => questItemModel.IsOn)
+			.Where(_ => model.IsOn)
 			.Subscribe(_ =>
 			{
-				questItemModel.Progress(item);
-			}).AddTo(questItemView.gameObject);
+				model.Progress(table);
+			}).AddTo(view.gameObject);
 		});
 	}
 	#endregion

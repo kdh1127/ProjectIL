@@ -11,5 +11,4 @@ public class GameManager : TRSingleton<GameManager>
 		base.Awake();
         DOTween.Init();
 	}
-
 }

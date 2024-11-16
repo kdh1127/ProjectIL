@@ -7001,6 +7001,7 @@ GameObject:
   - component: {fileID: 1500994870}
   - component: {fileID: 1500994869}
   - component: {fileID: 1500994873}
+  - component: {fileID: 1500994874}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -7112,6 +7113,18 @@ MonoBehaviour:
   missionPanelView: {fileID: 876916027}
   treasurePanelView: {fileID: 1887615987}
   currencyView: {fileID: 1869166109}
+--- !u!114 &1500994874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500994868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d488b80e6ee1946aa20a00a45018cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512286090
 GameObject:
   m_ObjectHideFlags: 0
@@ -7716,7 +7729,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1677264230
 MonoBehaviour:
@@ -8318,7 +8331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1887615986
 RectTransform:
   m_ObjectHideFlags: 0

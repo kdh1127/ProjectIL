@@ -59,7 +59,7 @@ public static class DataUtility
             string jsonData = JsonConvert.SerializeObject(data);
             string encryptedData = EncryptData(jsonData);
 
-            File.WriteAllText(path, encryptedData);
+            File.WriteAllText(Application.persistentDataPath + path, encryptedData);
         }
         catch (IOException ex)
         {
@@ -67,13 +67,13 @@ public static class DataUtility
         }
     }
 
-    public static T Load<T>(string path)
+    public static T Load<T>(string path, T defaultValue = default)
     {
         try
         {
             if (File.Exists(path))
             {
-                string encryptedData = File.ReadAllText(path);
+                string encryptedData = File.ReadAllText(Application.persistentDataPath + path);
                 string jsonData = DecryptData(encryptedData);
 
                 return JsonConvert.DeserializeObject<T>(jsonData);
@@ -81,18 +81,18 @@ public static class DataUtility
             else
             {
                 Debug.LogWarning("DataUtility: The file does not exist: " + path);
-                return default;
+                return defaultValue;
             }
         }
         catch (IOException ex)
         {
             Debug.LogError("DataUtility: An error occurred while loading the file: " + ex.Message);
-            return default;
+            return defaultValue;
         }
         catch (Exception ex)
         {
             Debug.LogError("DataUtility: An unknown error occurred: " + ex.Message);
-            return default;
+            return defaultValue;
         }
     }
 }

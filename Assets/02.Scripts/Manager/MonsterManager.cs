@@ -14,7 +14,7 @@ public class MonsterManager : TRSingleton<MonsterManager>
     public MonsterModel CreateMonster(StageTable table, bool isBoss)
     {
         // 타입 지정
-        EnumList.EMonsterType monsterType = isBoss ? EnumList.EMonsterType.BOSS : EnumList.EMonsterType.NORMAL;
+        EMonsterType monsterType = isBoss ? EMonsterType.BOSS : EMonsterType.NORMAL;
         var monsterName = isBoss ? table.MonsterBossName : table.MonsterNormalName;
 
         // 모델 생성

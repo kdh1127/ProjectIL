@@ -13,7 +13,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         base.Awake();
     }
 
-    public bool AddCurrency(EnumList.ECurrencyType currencyType, BigInteger amount)
+    public bool AddCurrency(ECurrencyType currencyType, BigInteger amount)
 	{
         var currency = UserDataManager.Instance.currencyData.GetCurrency(currencyType);
         var isPositive = IsPositiveAmount(currency.Value, amount);
@@ -29,7 +29,7 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
         return (curCurrency += newCurrency) >= 0;
     }
 
-    public bool IsEnughCurrency(EnumList.ECurrencyType currencyType, BigInteger amount)
+    public bool IsEnughCurrency(ECurrencyType currencyType, BigInteger amount)
     {
         var currency = UserDataManager.Instance.currencyData.GetCurrency(currencyType);
         var isEnugh = IsPositiveAmount(currency.Value, amount);
@@ -40,6 +40,6 @@ public class CurrencyManager : TRSingleton<CurrencyManager>
     public void test()
     {
         BigInteger gold = 10000;
-        AddCurrency(EnumList.ECurrencyType.GOLD , gold);
+        AddCurrency(ECurrencyType.GOLD , gold);
     }
 }

@@ -8,26 +8,26 @@ using UniRx;
 public class MonsterModel
 {
     public ReactiveProperty<BigInteger> hp = new();
-	private Dictionary<EnumList.ECurrencyType,BigInteger> reward = new();
+	private Dictionary<ECurrencyType,BigInteger> reward = new();
 	public Subject<AttackInfo> AttackInfoSubject = new();
     public Subject<Unit> DeathSubject = new();
 	public BigInteger maxHp;
 
-    public void Init(StageTable table, EnumList.EMonsterType monsterType)
+    public void Init(StageTable table, EMonsterType monsterType)
 	{
 		switch (monsterType)
 		{
-			case EnumList.EMonsterType.NORMAL:
+			case EMonsterType.NORMAL:
 				hp.Value = table.StageNo + BigInteger.Parse(table.Hp);
 				maxHp = hp.Value;
-				reward.Add(EnumList.ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
 				break;
-			case EnumList.EMonsterType.BOSS:
+			case EMonsterType.BOSS:
 				hp.Value = table.StageNo + BigInteger.Parse(table.Hp) * 2;
 				maxHp = hp.Value;
-				reward.Add(EnumList.ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
-				reward.Add(EnumList.ECurrencyType.DIA, BigInteger.Parse(table.Dia));
-				reward.Add(EnumList.ECurrencyType.KEY, BigInteger.Parse(table.Key));
+				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(ECurrencyType.DIA, BigInteger.Parse(table.Dia));
+				reward.Add(ECurrencyType.KEY, BigInteger.Parse(table.Key));
 				break;
 		}
 

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
 using UnityEngine;
+using System;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
 	public CurrencyData currencyData = new();
 	public CharacterData characterData = new();
 	public Missiondata missiondata = new();
-
+	private bool isInit = false;
 	private new void Awake()
 	{
 		base.Awake();
@@ -31,10 +32,12 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		SaveCurrencyData();
 		SaveCharacterData();
 		SaveMissiondata();
+
+		isInit = true;
+		DataUtility.Save("IsFirst", isInit);
 	}
 	public void Init()
 	{
-		PlayerPrefs.SetString("IsInit", "true");
 
 		currencyData.InitCurrencyData();
 		characterData.InitCharacterData();
@@ -43,10 +46,11 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		SaveCurrencyData();
 		SaveCharacterData();
 		SaveMissiondata();
+
 	}
 	public bool IsInit()
 	{
-		return bool.Parse(PlayerPrefs.GetString("IsInit", "false"));
+		return DataUtility.Load("IsFirst", false);
 	}
 
 	public void SaveCurrencyData()
@@ -74,15 +78,15 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		private ReactiveProperty<BigInteger> key = new();
 		public ReactiveProperty<BigInteger> Key { get => key; set => key = value; }
 
-		public ReactiveProperty<BigInteger> GetCurrency(EnumList.ECurrencyType currencyType)
+		public ReactiveProperty<BigInteger> GetCurrency(ECurrencyType currencyType)
 		{
 			switch (currencyType)
 			{
-				case EnumList.ECurrencyType.GOLD:
+				case ECurrencyType.GOLD:
 					return Gold;
-				case EnumList.ECurrencyType.DIA:
+				case ECurrencyType.DIA:
 					return Dia;
-				case EnumList.ECurrencyType.KEY:
+				case ECurrencyType.KEY:
 					return Key;
 			}
 
@@ -148,34 +152,34 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	public class Missiondata
 	{
 		private int clearMissionNo;
-        public int ClearMissionNo { get => clearMissionNo; set => clearMissionNo = value; }
+		public int ClearMissionNo { get => clearMissionNo; set => clearMissionNo = value; }
 
 		private Dictionary<int, int> questUpgradeData = new();
 
 		/// <summary>
 		/// questNo, questLevel
 		/// </summary>
-        public Dictionary<int, int> QuestUpgradeData { get => questUpgradeData; set => questUpgradeData = value; }
+		public Dictionary<int, int> QuestUpgradeData { get => questUpgradeData; set => questUpgradeData = value; }
 
 		private Dictionary<int, int> questClearData = new();
 
 		/// <summary>
 		/// questNo, questClearCount
 		/// </summary>
-        public Dictionary<int, int> QuestClearData { get => questClearData; set => questClearData = value; }
+		public Dictionary<int, int> QuestClearData { get => questClearData; set => questClearData = value; }
 
 		private Dictionary<int, int> weaponUpgradeData = new();
 		/// <summary>
 		/// weaponNo, weaponLevel
 		/// </summary>
-        public Dictionary<int, int> WeaponUpgradeData { get => weaponUpgradeData; set => weaponUpgradeData = value; }
+		public Dictionary<int, int> WeaponUpgradeData { get => weaponUpgradeData; set => weaponUpgradeData = value; }
 
-        private Dictionary<int, int> dungeonClearData = new();
+		private Dictionary<int, int> dungeonClearData = new();
 
 		/// <summary>
 		/// stageNo, stageClearCount
 		/// </summary>
-        public Dictionary<int, int> DungeonClearData { get => dungeonClearData; set => dungeonClearData = value; }
+		public Dictionary<int, int> DungeonClearData { get => dungeonClearData; set => dungeonClearData = value; }
 
 		public void InitMissionData()
 		{
@@ -190,6 +194,26 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			QuestClearData = data.QuestClearData;
 			WeaponUpgradeData = data.WeaponUpgradeData;
 			DungeonClearData = data.DungeonClearData;
+		}
+
+		public void UpdateQuestUpgradeData(int questNo, Func<int, int> updateFunc)
+		{
+			QuestUpgradeData.AddOrUpdate(questNo, updateFunc, 1);
+		}
+
+		public void UpdateQuestClearData(int questNo, Func<int, int> updateFunc)
+		{
+			QuestClearData.AddOrUpdate(questNo, updateFunc, 1);
+		}
+
+		public void UpdateWeaponUpgradeData(int weaponNo, Func<int, int> updateFunc)
+		{
+			WeaponUpgradeData.AddOrUpdate(weaponNo, updateFunc, 1);
+		}
+
+		public void UpdateDungeonClearData(int dungeonNo, Func<int, int> updateFunc)
+		{
+			DungeonClearData.AddOrUpdate(dungeonNo, updateFunc, 1);
 		}
 	}
 	#endregion

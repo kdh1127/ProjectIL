@@ -18,22 +18,22 @@ public class MissionModel
         // TODO: Load MissionData in UserDataManager
         MissionTableList.Get().ForEach(table =>
             {
-                var missionType = EnumList.StringToEnum<EnumList.EMissionType>(table.MissionType);
+                var missionType = table.MissionType.ToEnum<EMissionType>();
                 switch (missionType)
                 {
-                    case EnumList.EMissionType.QuestUpgrade:
+                    case EMissionType.QuestUpgrade:
                         if(!missionData.QuestUpgradeData.ContainsKey(table.TargetNo))
                             missionData.QuestUpgradeData.Add(table.TargetNo, 0);
                         break;
-                    case EnumList.EMissionType.QuestClear:
+                    case EMissionType.QuestClear:
                         if (!missionData.QuestClearData.ContainsKey(table.TargetNo))
                             missionData.QuestClearData.Add(table.TargetNo, 0);
                         break;
-                    case EnumList.EMissionType.WeaponUpgrade:
+                    case EMissionType.WeaponUpgrade:
                         if (!missionData.WeaponUpgradeData.ContainsKey(table.TargetNo))
                             missionData.WeaponUpgradeData.Add(table.TargetNo, 0);
                         break;
-                    case EnumList.EMissionType.DungeonClear:
+                    case EMissionType.DungeonClear:
                         if (!missionData.DungeonClearData.ContainsKey(table.TargetNo))
                             missionData.DungeonClearData.Add(table.TargetNo, 0);
                         break;
@@ -54,7 +54,7 @@ public class MissionModel
 
     public void ClearMission(MissionTable table)  
     {
-        var rewardType = EnumList.StringToEnum<EnumList.ECurrencyType>(table.RewardType);
+        var rewardType = table.RewardType.ToEnum<ECurrencyType>();
 
         UserDataManager.Instance.missiondata.ClearMissionNo++;
         UserDataManager.Instance.currencyData.GetCurrency(rewardType).Value += BigInteger.Parse(table.Amount);
@@ -64,11 +64,11 @@ public class MissionModel
     public bool IsClear(MissionTable table)
     {
         var missionData = UserDataManager.Instance.missiondata;
-        var missionType = EnumList.StringToEnum<EnumList.EMissionType>(table.MissionType);
+        var missionType = table.MissionType.ToEnum<EMissionType>();
 
         switch (missionType)
         {
-            case EnumList.EMissionType.QuestUpgrade:
+            case EMissionType.QuestUpgrade:
                 int userQuestUpgradeAmount = missionData.QuestUpgradeData[table.TargetNo];
                 
                 if(userQuestUpgradeAmount >= table.CompleteCount)
@@ -76,7 +76,7 @@ public class MissionModel
                     return true;
                 }
                 break;
-            case EnumList.EMissionType.QuestClear:
+            case EMissionType.QuestClear:
                 int userQuestClearAmount = missionData.QuestClearData[table.TargetNo];
 
                 if (userQuestClearAmount >= table.CompleteCount)
@@ -84,7 +84,7 @@ public class MissionModel
                     return true;
                 }
                 break;
-            case EnumList.EMissionType.WeaponUpgrade:
+            case EMissionType.WeaponUpgrade:
                 int userWeaponUpgradeAmount = missionData.WeaponUpgradeData[table.TargetNo];
 
                 if (userWeaponUpgradeAmount >= table.CompleteCount)
@@ -92,7 +92,7 @@ public class MissionModel
                     return true;
                 }
                 break;
-            case EnumList.EMissionType.DungeonClear:
+            case EMissionType.DungeonClear:
                 int userDungeonClearAmount = missionData.DungeonClearData[table.TargetNo];
 
                 if (userDungeonClearAmount >= table.CompleteCount)

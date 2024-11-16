@@ -7,6 +7,7 @@ using ThreeRabbitPackage.DesignPattern;
 using I2.Loc;
 using AlphabetNumber;
 using System.Numerics;
+using System.Linq;
 
 public class MainScenePresenter : TRSingleton<MainScenePresenter>
 {
@@ -30,6 +31,11 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public CurrencyView currencyView;
 
+	private void OnApplicationQuit()
+	{
+		DataUtility.Save("QuestModel", questModel);
+		DataUtility.Save("WeaponModel", weaponModel);
+	}
 	private new void Awake()
 	{
 		base.Awake();
@@ -40,11 +46,19 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	private void Init()
 	{
-		var questTableGoogleSheet = TRScriptableManager.Instance.GetGoogleSheet("QuestTable");
-		QuestTableList.Init(questTableGoogleSheet);
+		QuestTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("QuestTable"));
+		WeaponTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("WeaponTable"));
 
-		questModel.Init(QuestTableList.Get());
-		weaponModel.Init();
+		if (UserDataManager.Instance.IsInit())
+		{
+			questModel.Load();
+			weaponModel.Load();
+		}
+		else
+		{
+			questModel.Init(QuestTableList.Get());
+			weaponModel.Init(WeaponTableList.Get());
+		}
 		missionModel.Init();
 		treasureModel.Init();
 	}
@@ -80,84 +94,92 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public void CurrencySubscribe()
 	{
-		UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD).Subscribe(gold =>
+		UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.GOLD).Subscribe(gold =>
 		{
 			currencyView.gold_txt.text = gold.ToAlphabetNumber();
 		}).AddTo(this);
 
-		UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.DIA).Subscribe(dia =>
+		UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.DIA).Subscribe(dia =>
 		{
 			currencyView.dia_txt.text = dia.ToAlphabetNumber();
 		}).AddTo(this);
 
-		UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.KEY).Subscribe(key =>
+		UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.KEY).Subscribe(key =>
 		{
 			currencyView.key_txt.text = key.ToAlphabetNumber();
 		}).AddTo(this);
 	}
 
 	#region Quest
-	public void QuestItemSubscribe(QuestTable table, QuestItemView view)
-    {
-        var model = questModel.questItemList[table.QuestNo];
-
-		model.elpasedTime.Subscribe(time =>
-		{
-			view.ProgressUpdate(time, table.Time);
-		}).AddTo(view.gameObject);
-
-		model.level.Subscribe(level =>
-		{
-			view.UpdateLevel(level.ToString(), model.GetReward(table).ToAlphabetNumber());
-		}).AddTo(view.gameObject);
-    }
-
 	public void QuestPanelSubscribe()
     {
 		var questImageResources = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
+		var missionData = UserDataManager.Instance.missiondata;
 
 		QuestTableList.Get().ForEach(table =>
 		{
 			// Instantiate
-			var view = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
-			var model = questModel.questItemList[table.QuestNo];
+			var itemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
+			var itemModel = questModel.questItemList[table.QuestNo];
+
+			// Cache
+			var cachedIncrease = table.Increase.ToBigInt();
+			var cachedCost = table.Cost.ToBigInt();
+			var cachedTime = table.Time;
 
 			// Initialize 
-			view.Init(
+			itemView.Init(
 				sprite: questImageResources[table.Image],
 				title: table.Name,
-				endTime: table.Time,
-				level: model.level.Value,
-				reward: model.GetReward(table));
+				endTime: cachedTime,
+				level: itemModel.level.Value,
+				reward: itemModel.GetReward(cachedIncrease));
 
-			view.upgradeButtonView.Init(
-				increase: table.Increase.ToBigInteger(),
-				cost: table.Cost.ToBigInteger(),
+			itemView.upgradeButtonView.Init(
+				increase: cachedIncrease,
+				cost: cachedCost,
 				costImage: costImageResources["Gold"]);
 
-			// Subscribe QuestItemModel
-			QuestItemSubscribe(table, view);
-
 			// Subscribe Upgrade_btn
-			view.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+			itemView.upgradeButtonView.button.OnClickAsObservable()
+			.Where(_ => CurrencyManager.Instance.IsEnughCurrency(ECurrencyType.GOLD, cachedCost))
+			.Subscribe(_ =>
 			{
-				questModel.questItemList[table.QuestNo].Upgrade(table);
-			}).AddTo(view.upgradeButtonView.button.gameObject);
+				itemModel.IncreaseLevel();
+			}).AddTo(itemView.upgradeButtonView.button.gameObject);
+
+			// Subscribe QuestItemModel
+			itemModel.elpasedTime.Subscribe(time =>
+			{
+				itemView.ProgressUpdate(time, cachedTime);
+			}).AddTo(itemView.gameObject);
+
+			itemModel.level.Subscribe(level =>
+			{
+				itemView.UpdateLevel(level.ToString(), itemModel.GetReward(cachedIncrease).ToAlphabetNumber());
+				missionData.UpdateQuestUpgradeData(table.QuestNo, currentValue => currentValue = level);
+			}).AddTo(itemView.gameObject);
+
+			itemModel.questClearSubject.Subscribe(_ =>
+			{
+				CurrencyManager.Instance.AddCurrency(ECurrencyType.GOLD, itemModel.GetReward(cachedIncrease));
+				missionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
+			});
 
 			// Subscribe currentGold
-			UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD).Subscribe(gold =>
+			UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.GOLD).Subscribe(gold =>
 			{
-				view.upgradeButtonView.SetInteractable(gold >= table.Cost.ToBigInteger());
-			}).AddTo(view.upgradeButtonView.button.gameObject);
+				itemView.upgradeButtonView.SetInteractable(gold >= cachedCost);
+			}).AddTo(itemView.upgradeButtonView.button.gameObject);
 
 			// Update Progress bar in Quest
 			Observable.Interval(System.TimeSpan.FromSeconds(1))
-			.Where(_ => model.IsOn)
+			.Where(_ => itemModel.IsOn)
 			.Subscribe(_ =>
 			{
-				model.Progress(table);
-			}).AddTo(view.gameObject);
+				itemModel.Progress(cachedTime);
+			}).AddTo(itemView.gameObject);
 		});
 	}
 	#endregion
@@ -175,7 +197,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		{
 			for (int i = 0; i < weaponPanelView.weaponItemViewList.Count; i++)
 			{
-				var isEnughGold = CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost));
+				var isEnughGold = CurrencyManager.Instance.IsEnughCurrency(ECurrencyType.GOLD, -BigInteger.Parse(WeaponTableList.Get()[i].Cost));
 				var weaponItemModel = weaponModel.weaponItemList[i];
 				var table = WeaponTableList.Get()[i];
 				weaponPanelView.weaponItemViewList[i].UpdateLevel(
@@ -222,7 +244,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				isMaxLevel: weaponItemModel.IsMaxLevel,
 				isEquiped: weaponItemModel.isEquiped,
 				isUnLock: weaponItemModel.isUnLock,
-				isEnughGold: CurrencyManager.Instance.IsEnughCurrency(EnumList.ECurrencyType.GOLD, -BigInteger.Parse(item.Cost))
+				isEnughGold: CurrencyManager.Instance.IsEnughCurrency(ECurrencyType.GOLD, -BigInteger.Parse(item.Cost))
 				);
 
 			weaponItemView.upgradeButtonView.Init(
@@ -237,7 +259,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				weaponItemModel.Upgrade(item);
 			}).AddTo(weaponItemView.gameObject);
 
-			UserDataManager.Instance.currencyData.GetCurrency(EnumList.ECurrencyType.GOLD)
+			UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.GOLD)
 			.Subscribe(gold =>
 			{
 				var isEnughGold = CurrencyManager.Instance.IsPositiveAmount(gold, -BigInteger.Parse(item.Cost));

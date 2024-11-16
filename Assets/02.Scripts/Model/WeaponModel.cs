@@ -16,7 +16,7 @@ public class WeaponItemModel
     public void Upgrade(WeaponTable table)
     {
         var userWeaponUpgradeData = UserDataManager.Instance.missiondata.WeaponUpgradeData;
-        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD,-BigInteger.Parse(table.Cost)))
+        if (CurrencyManager.Instance.AddCurrency(ECurrencyType.GOLD,-BigInteger.Parse(table.Cost)))
         {
             level.Value++;
             UpdateSubject.OnNext(table.WeaponNo);
@@ -38,16 +38,28 @@ public class WeaponModel
 {
     public List<WeaponItemModel> weaponItemList = new();
 
-    public void Init()
+    public void Init(List<WeaponTable> weaponTableList)
     {
-        WeaponTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("WeaponTable"));
-
-        for (int i = 0; i < WeaponTableList.Get().Count; i++)
+        for (int i = 0; i < weaponTableList.Count; i++)
         {
             weaponItemList.Add(new WeaponItemModel());
         }
     }
 
+    public void Save()
+    {
+        DataUtility.Save("WeaponModel", this);
+    }
+
+    public void Load()
+    {
+        var data = DataUtility.Load<WeaponModel>("WeaponModel");
+
+        data.weaponItemList.ForEach(weaponItem =>
+        {
+            weaponItemList.Add(weaponItem);
+        });
+    }
 
     public void CheckWeaponState()
     {

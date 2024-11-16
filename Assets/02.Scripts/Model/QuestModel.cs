@@ -5,45 +5,34 @@ using UnityEngine;
 using ThreeRabbitPackage;
 using System.Linq;
 using UniRx;
+using Zenject;
 
 public class QuestItemModel
 {
     public ReactiveProperty<int> elpasedTime = new(0);
     public ReactiveProperty<int> level = new(0);
+    public Subject<Unit> questClearSubject = new();
 
     public bool IsOn => level.Value > 0;
 
-    public void Upgrade(QuestTable table)
+    public void IncreaseLevel()
     {
-        var userQuestUpgradeData = UserDataManager.Instance.missiondata.QuestUpgradeData;
-        if (CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, -table.Cost.ToBigInteger()))
-        {
-            level.Value++;
-            if (userQuestUpgradeData.Keys.Contains(table.QuestNo))
-            {
-                userQuestUpgradeData[table.QuestNo] = level.Value;
-            }
-        }
+        level.Value++;
     }
 
-    public BigInteger GetReward(QuestTable table)
+    public BigInteger GetReward(BigInteger increaseValue)
     {
-        return level.Value > 0 ? level.Value * BigInteger.Parse(table.Increase) : BigInteger.Parse(table.Increase);
+        return level.Value > 0 ? (level.Value * increaseValue) : increaseValue;
     }
 
-    public void Progress(QuestTable table)
+    public void Progress(int endTime)
     {
-        var userQuestClearData = UserDataManager.Instance.missiondata.QuestClearData;
-        var reward = GetReward(table);
+        var isComplete = elpasedTime.Value >= endTime;
 
-        if (elpasedTime.Value >= table.Time)
+        if (isComplete)
         {
-            CurrencyManager.Instance.AddCurrency(EnumList.ECurrencyType.GOLD, reward);
-            if(userQuestClearData.Keys.Contains(table.QuestNo))
-            {
-                userQuestClearData[table.QuestNo]++;
-            }
             elpasedTime.Value = 0;
+            questClearSubject.OnNext(Unit.Default);
         }
         else
         {
@@ -66,20 +55,16 @@ public class QuestModel
 
     public void Save()
     {
-        var questTableList = QuestTableList.Get();
-
-        for(int i = 0; i < questTableList.Count; i++)
-        {
-            PlayerPrefs.SetInt(questTableList[i].Name, questItemList[i].elpasedTime.Value);
-            PlayerPrefs.SetInt(questTableList[i].Name, questItemList[i].level.Value);
-        }
+        DataUtility.Save("QuestModel", this);
     }
 
     public void Load()
     {
-        QuestTableList.Get().ForEach(quest =>
+        var data = DataUtility.Load<QuestModel>("QuestModel");
+
+        data.questItemList.ForEach(questItem =>
         {
-            PlayerPrefs.GetInt(quest.Name, 0);
+            questItemList.Add(questItem);
         });
     }
 }

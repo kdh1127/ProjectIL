@@ -35,6 +35,11 @@ public static class BigIntegerExtension
         return formattedNumber + alphabetPart;
     }
 
+    public static bool IsPositive(this BigInteger value, BigInteger delta)
+	{
+        return (value += delta) >= 0;
+    }
+
     private static string GetAlphabetSuffix(int exponent)
     {
         string result = string.Empty;

@@ -80,7 +80,7 @@ public static class DataUtility
             }
             else
             {
-                Debug.LogWarning("DataUtility: The file does not exist: " + path);
+                Debug.LogWarning("DataUtility: The file does not exist: "+ Application.persistentDataPath + path);
                 return defaultValue;
             }
         }

@@ -10,5 +10,15 @@ public class GameManager : TRSingleton<GameManager>
 	{
 		base.Awake();
         DOTween.Init();
+		RegisterCurrency();
+
+	}
+
+	public void RegisterCurrency()
+	{
+		CurrencyManager<IRCurrencyBase>.RegisterCurrency(ECurrencyType.GOLD, new Gold());
+		CurrencyManager<IRCurrencyBase>.RegisterCurrency(ECurrencyType.DIA, new Dia());
+		CurrencyManager<IRCurrencyBase>.RegisterCurrency(ECurrencyType.KEY, new Key());
+
 	}
 }

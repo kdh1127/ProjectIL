@@ -46,7 +46,7 @@ public class MonsterModel
 	{
 		reward.ToList().ForEach(reward =>
 		{
-			CurrencyManager.Instance.AddCurrency(reward.Key, reward.Value);
+			CurrencyManager<IRCurrencyBase>.GetCurrency(reward.Key).Add(reward.Value);
 		});
 	}
 }

@@ -1,7 +1,5 @@
-using System.Numerics;
-using UnityEngine;
-using UniRx;
 using System;
+using System.Numerics;
 
 public abstract class IRCurrencyBase : ICurrency<BigInteger>
 {

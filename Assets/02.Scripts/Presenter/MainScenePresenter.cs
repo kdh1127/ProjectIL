@@ -98,17 +98,17 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public void CurrencySubscribe()
 	{
-		CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.GOLD).Subscribe(gold =>
+		CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Subscribe(gold =>
 		{
 			currencyView.gold_txt.text = gold.ToAlphabetNumber();
 		}).AddTo(currencyView.gameObject);
 
-		CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.DIA).Subscribe(dia =>
+		CurrencyManager<Dia>.GetCurrency(ECurrencyType.DIA).Subscribe(dia =>
 		{
 			currencyView.dia_txt.text = dia.ToAlphabetNumber();
 		}).AddTo(currencyView.gameObject);
 
-		CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.KEY).Subscribe(key =>
+		CurrencyManager<Key>.GetCurrency(ECurrencyType.KEY).Subscribe(key =>
 		{
 			currencyView.key_txt.text = key.ToAlphabetNumber();
 		}).AddTo(currencyView.gameObject);
@@ -147,7 +147,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 			// Subscribe Upgrade_btn
 			itemView.upgradeButtonView.button.OnClickAsObservable()
-			.Where(_ => CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.GOLD).IsPositive(cachedCost))
+			.Where(_ => CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(cachedCost))
 			.Subscribe(_ =>
 			{
 				itemModel.IncreaseLevel();
@@ -167,7 +167,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 			itemModel.questClearSubject.Subscribe(_ =>
 			{
-				CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.GOLD).Add(itemModel.GetReward(cachedIncrease));
+				CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Add(itemModel.GetReward(cachedIncrease));
 				missionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
 			});
 
@@ -201,7 +201,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		{
 			for (int i = 0; i < weaponPanelView.weaponItemViewList.Count; i++)
 			{
-				var isEnughGold = CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.GOLD).Sub(BigInteger.Parse(WeaponTableList.Get()[i].Cost));
+				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Sub(BigInteger.Parse(WeaponTableList.Get()[i].Cost));
 				var weaponItemModel = weaponModel.weaponItemList[i];
 				var table = WeaponTableList.Get()[i];
 				weaponPanelView.weaponItemViewList[i].UpdateLevel(
@@ -248,7 +248,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 				isMaxLevel: weaponItemModel.IsMaxLevel,
 				isEquiped: weaponItemModel.isEquiped,
 				isUnLock: weaponItemModel.isUnLock,
-				isEnughGold: CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt())
+				isEnughGold: CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt())
 				);
 
 			weaponItemView.upgradeButtonView.Init(
@@ -266,7 +266,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.GOLD)
 			.Subscribe(gold =>
 			{
-				var isEnughGold = CurrencyManager<IRCurrencyBase>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt());
+				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt());
 				weaponItemView.upgradeButtonView.SetInteractable(isEnughGold);
 			}).AddTo(UserDataManager.Instance.gameObject);
 

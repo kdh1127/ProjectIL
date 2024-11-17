@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ThreeRabbitPackage.DesignPattern;
+using System.Numerics;
 
 public class GameManager : TRSingleton<GameManager>
 {
@@ -16,9 +17,8 @@ public class GameManager : TRSingleton<GameManager>
 
 	public void RegisterCurrency()
 	{
-		CurrencyManager<IRCurrencyBase>.RegisterCurrency(ECurrencyType.GOLD, new Gold());
-		CurrencyManager<IRCurrencyBase>.RegisterCurrency(ECurrencyType.DIA, new Dia());
-		CurrencyManager<IRCurrencyBase>.RegisterCurrency(ECurrencyType.KEY, new Key());
-
+		CurrencyManager<Gold>.RegisterCurrency(ECurrencyType.GOLD, new Gold());
+		CurrencyManager<Dia>.RegisterCurrency(ECurrencyType.DIA, new Dia());
+		CurrencyManager<Key>.RegisterCurrency(ECurrencyType.KEY, new Key());
 	}
 }

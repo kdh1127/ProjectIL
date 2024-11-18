@@ -46,7 +46,20 @@ public class MonsterModel
 	{
 		reward.ToList().ForEach(reward =>
 		{
-			CurrencyManager<Gold>.GetCurrency(reward.Key).Add(reward.Value);
+			switch (reward.Key)
+			{
+				case ECurrencyType.GOLD:
+					CurrencyManager<Gold>.GetCurrency(reward.Key).Add(reward.Value);
+					break;
+				case ECurrencyType.DIA:
+					CurrencyManager<Dia>.GetCurrency(reward.Key).Add(reward.Value);
+					break;
+				case ECurrencyType.KEY:
+					CurrencyManager<Key>.GetCurrency(reward.Key).Add(reward.Value);
+					break;
+				default:
+					break;
+			}
 		});
 	}
 }

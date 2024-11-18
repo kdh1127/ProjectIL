@@ -72,7 +72,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
-		QuestPanelSubscribe();
+		//QuestPanelSubscribe();
 		WeaponPanelSubscribe();
 		MissionPanelSubscribe();
 		TreasurePanelSubscribe();

@@ -1,17 +1,19 @@
 using System;
 using System.Numerics;
+using System.Collections.Generic;
 
 public abstract class IRCurrencyBase : ICurrency<BigInteger>
 {
 	private BigInteger m_amount;
-	private IObserver<BigInteger> m_observer;
+	List<IObserver<BigInteger>> m_observerList = new List<IObserver<BigInteger>>();
 
 	public BigInteger Amount => m_amount;
 
 	public IDisposable Subscribe(IObserver<BigInteger> observer)
 	{
-		m_observer = observer;
-		return new Unsubscriber(() => m_observer = null);
+		m_observerList.Add(observer);
+		m_observerList.ForEach(observer => observer.OnNext(m_amount));
+		return new Unsubscriber(() => m_observerList = null);
 	}
 
 	private class Unsubscriber : IDisposable
@@ -32,7 +34,7 @@ public abstract class IRCurrencyBase : ICurrency<BigInteger>
 	public void Add(BigInteger value)
 	{
 		m_amount += value;
-		m_observer?.OnNext(m_amount);
+		m_observerList.ForEach(observer => observer.OnNext(m_amount));
 	}
 
 	public bool IsPositive(BigInteger delta)
@@ -45,7 +47,7 @@ public abstract class IRCurrencyBase : ICurrency<BigInteger>
 		if (!IsPositive(value)) return false;
 
 		m_amount -= value;
-		m_observer?.OnNext(m_amount);
+		m_observerList.ForEach(observer => observer.OnNext(m_amount));
 		return true;
 	}
 }

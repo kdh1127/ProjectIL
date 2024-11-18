@@ -1,11 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using Zenject;
 
-public class MainSceneInstaller : MonoInstaller
+public class QuestInstaller : MonoInstaller
 {
-	public QuestPanelView questPanelPrefab;
-	public QuestItemView questItemPrefab;
+	[SerializeField] private QuestPanelView questPanelPrefab;
+	[SerializeField] private QuestItemView questItemPrefab;
 
-	public override void InstallBindings()
+    public override void InstallBindings()
+    {
+		QuestBinding();
+    }
+
+    public void QuestBinding()
 	{
 		Container.Bind<QuestModel>().AsSingle();
 

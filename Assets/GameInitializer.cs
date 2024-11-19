@@ -1,13 +1,17 @@
 using System;
 using UnityEngine;
 using Zenject;
+using ThreeRabbitPackage;
 public class GameInitializer : MonoBehaviour
 {
-	[Inject] public QuestPresenter questPresenter;
-	[Inject] public QuestModel questModel;
+	[Inject] private readonly QuestPresenter questPresenter;
+	[Inject] private readonly QuestModel questModel;
 
-	[Inject] public WeaponPresenter weaponPresenter;
-	[Inject] public WeaponModel weaponModel;
+	[Inject] private readonly WeaponPresenter weaponPresenter;
+	[Inject] private readonly WeaponModel weaponModel;
+
+	[Inject] private readonly MissionPresenter missionPresenter;
+	[Inject] private readonly MissionModel missionModel;
 
     private void Awake()
 	{
@@ -24,18 +28,25 @@ public class GameInitializer : MonoBehaviour
     {
 		questModel.Init(QuestTableList.Get());
 		weaponModel.Init(WeaponTableList.Get());
+		missionModel.Init(MissionTableList.Get());
     }
 
 	private void InitTable()
 	{
-		QuestTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("QuestTable"));
-		WeaponTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("WeaponTable"));
-
+		QuestTableList.Init(BindTable("QuestTable"));
+		WeaponTableList.Init(BindTable("WeaponTable"));
+		MissionTableList.Init(BindTable("MissionTable"));
 	}
 
 	private void SubscirbePresnters()
     {
 		questPresenter.Subscribe();
 		weaponPresenter.WeaponPanelSubscribe();
+		missionPresenter.MissionPanelSubscribe();
+	}
+
+	private TRGoogleSheet BindTable(string sheetName)
+	{
+		return TRScriptableManager.Instance.GetGoogleSheet(sheetName);
 	}
 }

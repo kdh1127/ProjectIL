@@ -9,14 +9,12 @@ using UniRx;
 public class MissionModel
 {
     public Subject<Unit> missionClearSubject = new();
-    public void Init()
+    public void Init(List<MissionTable> missionTableList)
     {
-        MissionTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("MissionTable"));
-
         var missionData = UserDataManager.Instance.missiondata;
 
         // TODO: Load MissionData in UserDataManager
-        MissionTableList.Get().ForEach(table =>
+        missionTableList.ForEach(table =>
             {
                 var missionType = table.MissionType.ToEnum<EMissionType>();
                 switch (missionType)

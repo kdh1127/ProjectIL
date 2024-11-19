@@ -18,10 +18,6 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	public BottomPanelView bottomPanelView;
 
-
-	public MissionPanelView missionPanelView;
-	private MissionModel missionModel = new();
-
 	public TreasurePanelView treasurePanelView;
 	private TreasureModel treasureModel = new();
 
@@ -54,7 +50,6 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		{
 			//weaponModel.Init(WeaponTableList.Get());
 		}
-		missionModel.Init();
 		treasureModel.Init();
 	}
 
@@ -63,7 +58,6 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
-		MissionPanelSubscribe();
 		TreasurePanelSubscribe();
 	}
 
@@ -105,34 +99,6 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 
 
-	public void MissionPanelSubscribe()
-    {
-		var curMissionTable = missionModel.GetCurMissionTable();
-		var curMissionItemView = missionPanelView.currentMissionItemView;
-
-		curMissionItemView.Init(curMissionTable, missionModel.IsClear(curMissionTable));
-
-		curMissionItemView.completeButtonView.button.OnClickAsObservable().Subscribe(_ =>
-		{
-			missionModel.ClearMission(curMissionTable);
-		}).AddTo(curMissionItemView.gameObject);
-
-		missionModel.missionClearSubject.Subscribe(_ =>
-		{
-			var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
-
-			curMissionTable = missionModel.GetCurMissionTable();
-			curMissionItemView.UpdateView(curMissionTable, missionModel.IsClear(curMissionTable));
-			missionPanelView.RefreshDisableMissionList(clearMissionNo);
-		}).AddTo(missionPanelView.gameObject);
-
-		missionPanelView.CreateDisableMissionList(UserDataManager.Instance.missiondata.ClearMissionNo);
-
-		Observable.EveryUpdate().Subscribe(_ =>
-		{
-			missionPanelView.currentMissionItemView.UpdateView(curMissionTable, missionModel.IsClear(curMissionTable));
-		}).AddTo(missionPanelView.gameObject);
-    }
 
     public void TreasurePanelSubscribe()
     {

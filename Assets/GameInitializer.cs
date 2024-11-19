@@ -1,7 +1,7 @@
-using System;
 using UnityEngine;
 using Zenject;
 using ThreeRabbitPackage;
+
 public class GameInitializer : MonoBehaviour
 {
 	[Inject] private readonly QuestPresenter questPresenter;
@@ -12,6 +12,9 @@ public class GameInitializer : MonoBehaviour
 
 	[Inject] private readonly MissionPresenter missionPresenter;
 	[Inject] private readonly MissionModel missionModel;
+
+	[Inject] private readonly TreasurePresenter treasurePresenter;
+	[Inject] private readonly TreasureModel treasureModel;
 
     private void Awake()
 	{
@@ -29,6 +32,7 @@ public class GameInitializer : MonoBehaviour
 		questModel.Init(QuestTableList.Get());
 		weaponModel.Init(WeaponTableList.Get());
 		missionModel.Init(MissionTableList.Get());
+		treasureModel.Init(TreasureTableList.Get());
     }
 
 	private void InitTable()
@@ -36,6 +40,7 @@ public class GameInitializer : MonoBehaviour
 		QuestTableList.Init(BindTable("QuestTable"));
 		WeaponTableList.Init(BindTable("WeaponTable"));
 		MissionTableList.Init(BindTable("MissionTable"));
+		TreasureTableList.Init(BindTable("TreasureTable"));
 	}
 
 	private void SubscirbePresnters()
@@ -43,6 +48,7 @@ public class GameInitializer : MonoBehaviour
 		questPresenter.Subscribe();
 		weaponPresenter.WeaponPanelSubscribe();
 		missionPresenter.MissionPanelSubscribe();
+		treasurePresenter.TreasurePanelSubscribe();
 	}
 
 	private TRGoogleSheet BindTable(string sheetName)

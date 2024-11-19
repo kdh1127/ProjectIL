@@ -12,11 +12,11 @@ using System.Linq;
 public class MainScenePresenter : TRSingleton<MainScenePresenter>
 {
 	public TopPanelView topPanelView;
+	public BottomPanelView bottomPanelView;
 
 	public MainButtonView mainButtonView;
 	private MainButtonModel mainButtonModel = new();
 
-	public BottomPanelView bottomPanelView;
 
 	public TreasurePanelView treasurePanelView;
 	private TreasureModel treasureModel = new();
@@ -30,8 +30,6 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	private new void Awake()
 	{
 		base.Awake();
-
-		Init();
 	}
 
 	private void Start()
@@ -39,26 +37,11 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		Subscribe();
 	}
 
-	private void Init()
-	{
-
-		if (UserDataManager.Instance.IsInit())
-		{
-			//weaponModel.Load();
-		}
-		else
-		{
-			//weaponModel.Init(WeaponTableList.Get());
-		}
-		treasureModel.Init();
-	}
-
 	private void Subscribe()
 	{
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
-		TreasurePanelSubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -96,24 +79,5 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 			currencyView.key_txt.text = key.ToAlphabetNumber();
 		}).AddTo(currencyView.gameObject);
 	}
-
-
-
-
-    public void TreasurePanelSubscribe()
-    {
-		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-
-		TreasureTableList.Get().ForEach(item =>
-		{
-			var treasureItemView = Instantiate(treasurePanelView.treasureItem, treasurePanelView.content_tr).GetComponent<TreasureItemView>();
-			var treasureItemModel = treasureModel.treasureItemList[item.TreasureNo];
-
-			treasureItemView.Init(item.TreasureName, item.IncreaseType, BigInteger.Parse(item.Increase), treasureItemModel.level.Value);
-			treasureItemView.upgradeButtonView.Init(BigInteger.Parse(item.Increase), BigInteger.Parse(item.TreasureCost), costImageResources["Key"]);
-
-		});
-    }
-
 }
 

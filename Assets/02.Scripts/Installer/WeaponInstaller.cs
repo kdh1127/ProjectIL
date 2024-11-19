@@ -8,10 +8,10 @@ public class WeaponInstaller : MonoInstaller
 
 	public override void InstallBindings()
 	{
-		QuestBinding();
+		WeaponBinding();
 	}
 
-	public void QuestBinding()
+	public void WeaponBinding()
 	{
 		Container.Bind<WeaponModel>().AsSingle();
 

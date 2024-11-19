@@ -22,12 +22,9 @@ public class TreasureModel
 {
     public List<TreasureItemModel> treasureItemList = new();
 
-    public void Init()
+    public void Init(List<TreasureTable> tableList)
     {
-        var table = TRScriptableManager.Instance.GetGoogleSheet("TreasureTable");
-        TreasureTableList.Init(table);
-
-        for (int i = 0; i < TreasureTableList.Get().Count; i++)
+        for (int i = 0; i < tableList.Count; i++)
         {
             treasureItemList.Add(new TreasureItemModel());
         }

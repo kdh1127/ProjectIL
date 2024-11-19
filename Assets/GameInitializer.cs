@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 using Zenject;
 using ThreeRabbitPackage;
 
@@ -20,8 +21,10 @@ public class GameInitializer : MonoBehaviour
 
     private void Awake()
 	{
+		InitPlugins();
 		InitTable();
 		InitModel();
+		RegisterCurrency();
 	}
 
 	private void Start()
@@ -54,6 +57,17 @@ public class GameInitializer : MonoBehaviour
 		mainScenePresenter.Subscribe();
 	}
 
+	public void RegisterCurrency()
+	{
+		CurrencyManager<Gold>.RegisterCurrency(ECurrencyType.GOLD, new Gold());
+		CurrencyManager<Dia>.RegisterCurrency(ECurrencyType.DIA, new Dia());
+		CurrencyManager<Key>.RegisterCurrency(ECurrencyType.KEY, new Key());
+	}
+
+	public void InitPlugins()
+    {
+		DOTween.Init();
+	}
 	private TRGoogleSheet BindTable(string sheetName)
 	{
 		return TRScriptableManager.Instance.GetGoogleSheet(sheetName);

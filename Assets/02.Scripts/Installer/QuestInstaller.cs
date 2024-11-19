@@ -18,7 +18,7 @@ public class QuestInstaller : MonoInstaller
 		Container.Bind<QuestModel>().AsSingle();
 
 		Container.Bind<QuestPanelView>()
-			.FromComponentInNewPrefab(questPanelPrefab)
+			.FromComponentInHierarchy(questPanelPrefab)
 			.AsSingle();
 
 

@@ -5,19 +5,16 @@ using ThreeRabbitPackage.DesignPattern;
 public class MainScenePresenter
 {
 	private readonly TopPanelView topPanelView;
-	private readonly BottomPanelView bottomPanelView;
 	private readonly CurrencyView currencyView;
 
 
 	[Inject]
 	public MainScenePresenter(
 		TopPanelView topPanelView,
-		BottomPanelView bottomPanelView,
 		CurrencyView currencyView
 		)
 	{
 		this.topPanelView = topPanelView;
-		this.bottomPanelView = bottomPanelView;
 		this.currencyView = currencyView;
 	}
 

@@ -30,7 +30,8 @@ public class WeaponItemModel
 
     public void SetWeaponDamage(WeaponTable table)
     {
-        UserDataManager.Instance.characterData.WeaponDamage = BigInteger.Parse(table.BaseAtk) + (level.Value * BigInteger.Parse(table.Increase));
+        var calcLevel = level.Value == 0 ? 0 : level.Value - 1;
+        UserDataManager.Instance.characterData.WeaponDamage = BigInteger.Parse(table.BaseAtk) + (calcLevel * BigInteger.Parse(table.Increase));
     }
 }
 

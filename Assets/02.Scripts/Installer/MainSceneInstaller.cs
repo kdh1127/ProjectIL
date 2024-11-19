@@ -4,9 +4,7 @@ using Zenject;
 public class MainSceneInstaller : MonoInstaller
 {
 	[SerializeField] private TopPanelView topPanelViewPrefab;
-	[SerializeField] private BottomPanelView bottomPanelViewPrefab;
 	[SerializeField] private CurrencyView currencyViewPrefab;
-	[SerializeField] private MainButtonView mainButtonViewPrefab;
 
 	public override void InstallBindings()
 	{
@@ -21,17 +19,8 @@ public class MainSceneInstaller : MonoInstaller
 			.FromComponentInNewPrefab(topPanelViewPrefab)
 			.AsSingle();
 
-		Container.Bind<BottomPanelView>()
-			.FromComponentInNewPrefab(bottomPanelViewPrefab)
-			.AsSingle();
-
 		Container.Bind<CurrencyView>()
-			.FromComponentInNewPrefab(currencyViewPrefab)
+			.FromComponentInHierarchy(currencyViewPrefab)
 			.AsSingle();
-
-		//Container.Bind<MainButtonModel>().AsSingle();
-		//Container.Bind<MainButtonView>()
-		//	.FromComponentInNewPrefab(mainButtonViewPrefab)
-		//	.AsSingle();
 	}
 }

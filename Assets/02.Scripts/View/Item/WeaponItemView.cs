@@ -20,7 +20,8 @@ public class WeaponItemView : MonoBehaviour
 
     public void Init(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
-        var totalAttack = BigInteger.Parse(table.BaseAtk) + (curLevel * BigInteger.Parse(table.Increase));
+        var calcLevel = curLevel == 0 ? 0 : curLevel - 1;
+        var totalAttack = BigInteger.Parse(table.BaseAtk) + (calcLevel * BigInteger.Parse(table.Increase));
         title_txt.text = table.Name;
         level_txt.text = $"Lv. {curLevel}/{maxLevel}";
         totalAtack_txt.text = totalAttack.ToAlphabetNumber();
@@ -31,7 +32,8 @@ public class WeaponItemView : MonoBehaviour
 
     public void UpdateLevel(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
-        var totalAttack = BigInteger.Parse(table.BaseAtk) + (curLevel * BigInteger.Parse(table.Increase));
+        var calcLevel = curLevel == 0 ? 0 : curLevel - 1;
+        var totalAttack = BigInteger.Parse(table.BaseAtk) + (calcLevel * BigInteger.Parse(table.Increase));
         totalAtack_txt.text = totalAttack.ToAlphabetNumber();
         level_txt.text = isMaxLevel ?
                 $"<color=#FF0000>Lv.Max</color>" :

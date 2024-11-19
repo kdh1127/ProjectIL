@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using System.Numerics;
+using UniRx;
 
 public class TreasurePresenter
 {
@@ -27,9 +28,26 @@ public class TreasurePresenter
 			var treasureItemView = treasureItemViewFactory.Create();
 			var treasureItemModel = model.treasureItemList[table.TreasureNo];
 
-			treasureItemView.Init(table.TreasureName, table.IncreaseType, BigInteger.Parse(table.Increase), treasureItemModel.level.Value);
-			treasureItemView.upgradeButtonView.Init(BigInteger.Parse(table.Increase), BigInteger.Parse(table.TreasureCost), costImageResources["Key"]);
+			treasureItemView.Init(table.TreasureName, table.IncreaseType, table.Increase.ToBigInt(), treasureItemModel.level.Value);
+			treasureItemView.upgradeButtonView.Init(table.Increase.ToBigInt(), table.TreasureCost.ToBigInt(), costImageResources["Key"]);
+
+			//level subscribe
+			treasureItemModel.level.Subscribe(level =>
+			{
+				treasureItemModel.Upgrade();
+
+				treasureItemView.LevelUpdate(level, level * table.Increase.ToBigInt());
+				
+			}).AddTo(treasureItemView.gameObject);
+
+			//upgrade button subscribe
+			treasureItemView.upgradeButtonView.button.OnClickAsObservable()
+			.Subscribe(_ =>
+			{
+				treasureItemModel.level.Value++;
+			}).AddTo(treasureItemView.upgradeButtonView.gameObject);
 
 		});
+
 	}
 }

@@ -75,13 +75,33 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		private BigInteger criticalChance;
 		public BigInteger CriticalChance { get => criticalChance; set => criticalChance = value; }
 
+		private BigInteger treasureDamagePer;
+		public BigInteger TreasureDamagePer { get => treasureDamagePer; set => treasureDamagePer = value; }
+
+		private BigInteger treasurecriticalDamagePer;
+		public BigInteger TreasurecriticalDamagePer { get => treasurecriticalDamagePer; set => treasurecriticalDamagePer = value; }
+
+        private BigInteger treasureEnemyGoldPer;
+        public BigInteger TreasureEnemyGoldPer { get => treasureEnemyGoldPer; set => treasureEnemyGoldPer = value; }
+
+        private BigInteger treasureQuestGoldPer;
+        public BigInteger TreasureQuestGoldPer { get => treasureQuestGoldPer; set => treasureQuestGoldPer = value; }
+
+        private BigInteger treasureExtraDamage;
+        public BigInteger TreasureExtraDamage { get => treasureExtraDamage; set => treasureExtraDamage = value; }
+
 		public void InitCharacterData()
 		{
 			MoveSpeed = 1f;
 			AttackPerSecond = 1f;
 			WeaponDamage = 2;
 			CriticalDamage = 2;
-			CriticalChance = 10;
+			CriticalChance = 60;
+			TreasureDamagePer = 0;
+			TreasurecriticalDamagePer = 0;
+			TreasureEnemyGoldPer = 0;
+			TreasureQuestGoldPer = 0;
+			TreasureExtraDamage = 0;
 		}
 
 		public void LoadCharacterData()

@@ -27,3 +27,12 @@ public enum EMissionType
 	WeaponUpgrade,
 	DungeonClear
 }
+
+public enum EIncreaseType
+{
+	EnemyGold,
+	QuestGold,
+	CriticalDamage,
+	Damage,
+	ExtraDamage
+}

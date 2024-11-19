@@ -23,9 +23,9 @@ public class TreasureItemView : MonoBehaviour
         totalIncreasePer_txt.text = $"{totalIncreasePer}%";
     }
 
-    public void LevelUpdate(string level, string totalIncreasePer)
+    public void LevelUpdate(int level, BigInteger totalIncreasePer)
     {
         level_txt.text = $"Lv.{level}(MAX.99999)";
-        totalIncreasePer_txt.text = $"{totalIncreasePer}%";
+        totalIncreasePer_txt.text = $"{totalIncreasePer.ToAlphabetNumber()}%";
     }
 }

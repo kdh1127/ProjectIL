@@ -1,13 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
 using UniRx;
 using ThreeRabbitPackage.DesignPattern;
-using I2.Loc;
-using AlphabetNumber;
-using System.Numerics;
-using System.Linq;
 
 public class MainScenePresenter : TRSingleton<MainScenePresenter>
 {
@@ -17,20 +9,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	public MainButtonView mainButtonView;
 	private MainButtonModel mainButtonModel = new();
 
-
-	public TreasurePanelView treasurePanelView;
-	private TreasureModel treasureModel = new();
-
 	public CurrencyView currencyView;
-
-	private void OnApplicationQuit()
-	{
-		//DataUtility.Save("WeaponModel", weaponModel);
-	}
-	private new void Awake()
-	{
-		base.Awake();
-	}
 
 	private void Start()
 	{

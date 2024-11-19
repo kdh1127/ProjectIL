@@ -726,7 +726,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3500784709213130334, guid: 5f19f08fa631c084885c349995bf301e, type: 3}
       propertyPath: m_Name
-      value: Ugrade_btn
+      value: Upgrade_btn
       objectReference: {fileID: 0}
     - target: {fileID: 3500784709213130335, guid: 5f19f08fa631c084885c349995bf301e, type: 3}
       propertyPath: m_Pivot.x

@@ -7,7 +7,6 @@ using System;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
-	public CurrencyData currencyData = new();
 	public CharacterData characterData = new();
 	public Missiondata missiondata = new();
 	private bool isInit = false;
@@ -17,7 +16,6 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 		if (IsInit())
 		{
-			currencyData.LoadCurrencyData();
 			characterData.LoadCharacterData();
 			missiondata.LoadMissionData();
 		}
@@ -29,7 +27,6 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 	private void OnApplicationQuit()
 	{
-		SaveCurrencyData();
 		SaveCharacterData();
 		SaveMissiondata();
 
@@ -39,11 +36,9 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	public void Init()
 	{
 
-		currencyData.InitCurrencyData();
 		characterData.InitCharacterData();
 		missiondata.InitMissionData();
 
-		SaveCurrencyData();
 		SaveCharacterData();
 		SaveMissiondata();
 
@@ -53,10 +48,6 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		return DataUtility.Load("IsFirst", false);
 	}
 
-	public void SaveCurrencyData()
-	{
-		DataUtility.Save("CurrencyData", currencyData);
-	}
 	public void SaveCharacterData()
 	{
 		DataUtility.Save("CharacterData", characterData);
@@ -65,49 +56,6 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	{
 		DataUtility.Save("MissionData", missiondata);
 	}
-
-	#region CurrencyData
-	public class CurrencyData
-	{
-		private ReactiveProperty<BigInteger> gold = new();
-		public ReactiveProperty<BigInteger> Gold { get => gold; set => gold = value; }
-
-		private ReactiveProperty<BigInteger> dia = new();
-		public ReactiveProperty<BigInteger> Dia { get => dia; set => dia = value; }
-
-		private ReactiveProperty<BigInteger> key = new();
-		public ReactiveProperty<BigInteger> Key { get => key; set => key = value; }
-
-		public ReactiveProperty<BigInteger> GetCurrency(ECurrencyType currencyType)
-		{
-			switch (currencyType)
-			{
-				case ECurrencyType.GOLD:
-					return Gold;
-				case ECurrencyType.DIA:
-					return Dia;
-				case ECurrencyType.KEY:
-					return Key;
-			}
-
-			return null;
-		}
-		public void InitCurrencyData()
-		{
-			Gold.Value = 0;
-			Dia.Value = 0;
-			Key.Value = 0;
-		}
-
-		public void LoadCurrencyData()
-		{
-			CurrencyData data = DataUtility.Load<CurrencyData>("CurrencyData");
-			Gold.Value = data.Gold.Value;
-			Dia.Value = data.Dia.Value;
-			Key.Value = data.Key.Value;
-		}
-	}
-	#endregion
 
 	#region CharacterData
 	public class CharacterData

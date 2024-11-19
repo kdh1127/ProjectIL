@@ -55,7 +55,18 @@ public class MissionModel
         var rewardType = table.RewardType.ToEnum<ECurrencyType>();
 
         UserDataManager.Instance.missiondata.ClearMissionNo++;
-        UserDataManager.Instance.currencyData.GetCurrency(rewardType).Value += BigInteger.Parse(table.Amount);
+        switch (rewardType)
+        {
+            case ECurrencyType.GOLD:
+                CurrencyManager<Gold>.GetCurrency(rewardType).Add(table.Amount.ToBigInt());
+                break;
+            case ECurrencyType.DIA:
+                CurrencyManager<Dia>.GetCurrency(rewardType).Add(table.Amount.ToBigInt());
+                break;
+            case ECurrencyType.KEY:
+                CurrencyManager<Key>.GetCurrency(rewardType).Add(table.Amount.ToBigInt());
+                break;
+        }
         missionClearSubject.OnNext(Unit.Default);
     }
 

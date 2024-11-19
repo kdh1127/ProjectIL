@@ -23,8 +23,12 @@ MonoBehaviour:
     columnId: TreasureCost
   - type: 1
     columnId: Increase
+  - type: 0
+    columnId: MaxLevel
   - type: 1
     columnId: IncreaseType
+  - type: 1
+    columnId: IncreaseTypeString
   dataList:
   - key: 0
     datas:
@@ -32,35 +36,45 @@ MonoBehaviour:
     - Treasure_Name_0
     - 15
     - 10
-    - IncreaseType_0
+    - 99999
+    - EnemyGold
+    - Enemy_Gold_Increase_String
   - key: 1
     datas:
     - 1
     - Treasure_Name_1
     - 65
     - 10
-    - IncreaseType_1
+    - 99999
+    - QuestGold
+    - Quest_Gold_Increase_String
   - key: 2
     datas:
     - 2
     - Treasure_Name_2
     - 15
     - 25
-    - IncreaseType_2
+    - 99999
+    - CriticalDamage
+    - Critical_Damage_Increase_String
   - key: 3
     datas:
     - 3
     - Treasure_Name_3
     - 8
     - 15
-    - IncreaseType_3
+    - 99999
+    - Damage
+    - Damage_Increase_String
   - key: 4
     datas:
     - 4
     - Treasure_Name_4
     - 5000000
     - 1
-    - IncreaseType_4
+    - 200
+    - ExtraDamage
+    - Extra_Damage_Increase_String
   dataDictionary:
     m_keys:
     - 0
@@ -74,58 +88,78 @@ MonoBehaviour:
       - TreasureName
       - TreasureCost
       - Increase
+      - MaxLevel
       - IncreaseType
+      - IncreaseTypeString
       m_values:
       - 0
       - Treasure_Name_0
       - 15
       - 10
-      - IncreaseType_0
+      - 99999
+      - EnemyGold
+      - Enemy_Gold_Increase_String
     - m_keys:
       - TreasureNo
       - TreasureName
       - TreasureCost
       - Increase
+      - MaxLevel
       - IncreaseType
+      - IncreaseTypeString
       m_values:
       - 1
       - Treasure_Name_1
       - 65
       - 10
-      - IncreaseType_1
+      - 99999
+      - QuestGold
+      - Quest_Gold_Increase_String
     - m_keys:
       - TreasureNo
       - TreasureName
       - TreasureCost
       - Increase
+      - MaxLevel
       - IncreaseType
+      - IncreaseTypeString
       m_values:
       - 2
       - Treasure_Name_2
       - 15
       - 25
-      - IncreaseType_2
+      - 99999
+      - CriticalDamage
+      - Critical_Damage_Increase_String
     - m_keys:
       - TreasureNo
       - TreasureName
       - TreasureCost
       - Increase
+      - MaxLevel
       - IncreaseType
+      - IncreaseTypeString
       m_values:
       - 3
       - Treasure_Name_3
       - 8
       - 15
-      - IncreaseType_3
+      - 99999
+      - Damage
+      - Damage_Increase_String
     - m_keys:
       - TreasureNo
       - TreasureName
       - TreasureCost
       - Increase
+      - MaxLevel
       - IncreaseType
+      - IncreaseTypeString
       m_values:
       - 4
       - Treasure_Name_4
       - 5000000
       - 1
-      - IncreaseType_4
+      - 200
+      - ExtraDamage
+      - Extra_Damage_Increase_String

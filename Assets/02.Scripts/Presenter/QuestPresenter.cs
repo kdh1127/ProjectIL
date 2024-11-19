@@ -8,19 +8,19 @@ public class QuestPresenter
 	private readonly QuestModel model;
 	private readonly QuestPanelView view;
 	private readonly QuestItemViewFactory questItemViewFactory;
+	private readonly QuestResources questResources;
 
 	[Inject]
-	public QuestPresenter(QuestModel model, QuestPanelView view, QuestItemViewFactory questItemViewFactory)
+	public QuestPresenter(QuestModel model, QuestPanelView view, QuestItemViewFactory questItemViewFactory, QuestResources questResources)
 	{
 		this.model = model;
 		this.view = view;
 		this.questItemViewFactory = questItemViewFactory;
+		this.questResources = questResources;
 	}
 
 	public void Subscribe()
 	{
-		model.Init(QuestTableList.Get());
-
 		QuestTableList.Get().ForEach(table =>
 		{
 			var itemView = CreateQuestItemView(table);
@@ -34,9 +34,6 @@ public class QuestPresenter
 
 	public QuestItemView CreateQuestItemView(QuestTable table)
 	{
-		var questImageResources = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
-		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-
 		// Instantiate
 		var itemView = questItemViewFactory.Create();
 		var itemModel = model.questItemList[table.QuestNo];
@@ -44,20 +41,19 @@ public class QuestPresenter
 		// Cache
 		var cachedIncrease = table.Increase.ToBigInt();
 		var cachedCost = table.Cost.ToBigInt();
-		var cachedTime = table.Time;
 
 		// Initialize 
 		itemView.Init(
-			sprite: questImageResources[table.Image],
+			sprite: questResources.questImage[table.Image],
 			title: table.Name,
-			endTime: cachedTime,
+			endTime: table.Time,
 			level: itemModel.level.Value,
-			reward: itemModel.GetReward(cachedIncrease));
+			reward: itemModel.GetReward());
 
 		itemView.upgradeButtonView.Init(
 			increase: cachedIncrease,
 			cost: cachedCost,
-			costImage: costImageResources["Gold"]);
+			costImage: questResources.costImage["Gold"]);
 
 		return itemView;
 	}
@@ -68,48 +64,31 @@ public class QuestPresenter
 
 		itemView.upgradeButtonView.button.OnClickAsObservable()
 		.Where(_ => gold.IsPositive(upgradeCost))
-		.Subscribe(_ =>
-		{
-			gold.Sub(upgradeCost);
-			itemModel.IncreaseLevel();
-		}).AddTo(itemView.upgradeButtonView.gameObject);
+		.Subscribe(_ => itemModel.IncreaseLevel())
+		.AddTo(itemView.upgradeButtonView.gameObject);
 
-		gold.Subscribe(gold =>
-		{
-			itemView.upgradeButtonView.SetInteractable(gold >= upgradeCost);
-		}).AddTo(itemView.upgradeButtonView.gameObject);
+		gold.Subscribe(gold => itemView.upgradeButtonView.SetInteractable(gold >= upgradeCost))
+			.AddTo(itemView.upgradeButtonView.gameObject);
 	}
 
 	private void SubscribeToQuestItemModel(QuestItemModel itemModel, QuestItemView itemView, QuestTable table)
 	{
-		var missionData = UserDataManager.Instance.missiondata;
-		var cachedIncrease = table.Increase.ToBigInt();
-
-		itemModel.elpasedTime.Subscribe(time =>
-		{
-			itemView.ProgressUpdate(time, table.Time);
-		}).AddTo(itemView.gameObject);
+		itemModel.elpasedTime
+			.Subscribe(time =>	itemView.ProgressUpdate(time, table.Time))
+			.AddTo(itemView.gameObject);
 
 		itemModel.level.Subscribe(level =>
 		{
-			itemView.UpdateLevel(level.ToString(), itemModel.GetReward(cachedIncrease).ToAlphabetNumber());
-			missionData.UpdateQuestUpgradeData(table.QuestNo, currentValue => currentValue = level);
+			var reward = itemModel.GetReward().ToAlphabetNumber();
+			itemView.UpdateLevel(level.ToString(), reward);
 		}).AddTo(itemView.gameObject);
-
-		itemModel.questClearSubject.Subscribe(_ =>
-		{
-			CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Add(itemModel.GetReward(cachedIncrease));
-			missionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
-		});
 	}
 
 	private void SubscribeToProgressBar(QuestItemModel itemModel, QuestItemView itemView, int endTime)
 	{
 		Observable.Interval(TimeSpan.FromSeconds(1))
 		.Where(_ => itemModel.IsOn)
-		.Subscribe(_ =>
-		{
-			itemModel.Progress(endTime);
-		}).AddTo(itemView.gameObject);
+		.Subscribe(_ => itemModel.Progress(endTime))
+		.AddTo(itemView.gameObject);
 	}
 }

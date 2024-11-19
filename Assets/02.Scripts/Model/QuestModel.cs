@@ -6,13 +6,24 @@ public class QuestItemModel
 {
     public ReactiveProperty<int> elpasedTime = new(0);
     public ReactiveProperty<int> level = new(0);
-    public Subject<Unit> questClearSubject = new();
+    private readonly QuestTable table;
 
     public bool IsOn => level.Value > 0;
 
+    public QuestItemModel(QuestTable table) 
+    {
+        this.table = table; 
+    }
+
     public void IncreaseLevel()
     {
+        var missionData = UserDataManager.Instance.missiondata;
+        var gold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD);
+        var cost = table.Cost.ToBigInt();
+
         level.Value++;
+        gold.Sub(cost);
+        missionData.UpdateQuestUpgradeData(table.QuestNo, currentValue => currentValue = level.Value);
     }
 
     public BigInteger GetReward(BigInteger increaseValue)
@@ -20,14 +31,24 @@ public class QuestItemModel
         return level.Value > 0 ? (level.Value * increaseValue) : increaseValue;
     }
 
+    public BigInteger GetReward()
+    {
+        var increaseValue = table.Increase.ToBigInt();
+        return level.Value > 0 ? (level.Value * increaseValue) : increaseValue;
+    }
+
     public void Progress(int endTime)
     {
         var isComplete = elpasedTime.Value >= endTime;
+        var gold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD);
+        var missionData = UserDataManager.Instance.missiondata;
+        var reward = GetReward();
 
         if (isComplete)
         {
             elpasedTime.Value = 0;
-            questClearSubject.OnNext(Unit.Default);
+            gold.Add(reward);
+            missionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
         }
         else
         {
@@ -44,7 +65,7 @@ public class QuestModel
     {
         for (int i = 0; i < questTableList.Count; i++)
         {
-            questItemList.Add(new QuestItemModel());
+            questItemList.Add(new QuestItemModel(questTableList[i]));
         }
     }
 

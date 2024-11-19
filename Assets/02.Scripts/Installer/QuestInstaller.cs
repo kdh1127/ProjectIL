@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+using ThreeRabbitPackage;
 
 public class QuestInstaller : MonoInstaller
 {
@@ -28,7 +29,21 @@ public class QuestInstaller : MonoInstaller
 				 .FromComponentInNewPrefab(questItemPrefab)
 				 .UnderTransform(questPanelPrefab.content_tr)
 				 .AsTransient();
+
+		Container.Bind<QuestResources>().AsSingle();
 	}
 }
 
 public class QuestItemViewFactory : PlaceholderFactory<QuestItemView> { }
+public class QuestResources
+{
+	public Dictionary<string, Sprite> questImage;
+	public Dictionary<string, Sprite> costImage;
+
+	public QuestResources()
+	{
+		questImage = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
+		costImage = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary; ;
+	}
+
+}

@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelList:
-  - {fileID: 0}
+  - {fileID: 2757873615668086449}
   - {fileID: 7957084220892659548}
   - {fileID: 7957084220679870181}
   - {fileID: 7957084221690560557}
@@ -523,6 +523,11 @@ PrefabInstance:
 --- !u!224 &2757873615668086448 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1970222503727456095, guid: 766c897fc191da64eac7215985544b39, type: 3}
+  m_PrefabInstance: {fileID: 4400665121030298095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2757873615668086449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1970222503727456094, guid: 766c897fc191da64eac7215985544b39, type: 3}
   m_PrefabInstance: {fileID: 4400665121030298095}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6710041977109893500

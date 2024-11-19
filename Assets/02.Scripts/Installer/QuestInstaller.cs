@@ -8,13 +8,13 @@ public class QuestInstaller : MonoInstaller
 {
 	[SerializeField] private QuestPanelView questPanelPrefab;
 	[SerializeField] private QuestItemView questItemPrefab;
-
-    public override void InstallBindings()
-    {
+	
+	public override void InstallBindings()
+	{
 		QuestBinding();
-    }
+	}
 
-    public void QuestBinding()
+	public void QuestBinding()
 	{
 		Container.Bind<QuestModel>().AsSingle();
 
@@ -37,13 +37,15 @@ public class QuestInstaller : MonoInstaller
 public class QuestItemViewFactory : PlaceholderFactory<QuestItemView> { }
 public class QuestResources
 {
-	public Dictionary<string, Sprite> questImage;
-	public Dictionary<string, Sprite> costImage;
+	public readonly Dictionary<string, Sprite> quest;
+	public readonly Dictionary<string, Sprite> cost;
 
-	public QuestResources()
+	[Inject]
+	public QuestResources(
+		[Inject(Id = "QuestImage")] Dictionary<string, Sprite> questImage,
+		[Inject(Id = "CostImage")] Dictionary<string, Sprite> costImage)
 	{
-		questImage = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
-		costImage = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary; ;
+		this.quest = questImage;
+		this.cost = costImage;
 	}
-
 }

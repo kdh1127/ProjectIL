@@ -1,22 +1,24 @@
 using System;
 using System.Numerics;
 using UniRx;
+using UnityEngine;
 using Zenject;
-
+using System.Collections.Generic;
 public class QuestPresenter
 {
 	private readonly QuestModel model;
 	private readonly QuestPanelView view;
 	private readonly QuestItemViewFactory questItemViewFactory;
-	private readonly QuestResources questResources;
+	private readonly QuestResources resource;
 
 	[Inject]
-	public QuestPresenter(QuestModel model, QuestPanelView view, QuestItemViewFactory questItemViewFactory, QuestResources questResources)
+	public QuestPresenter(QuestModel model, QuestPanelView view, QuestItemViewFactory questItemViewFactory, QuestResources resource)
 	{
 		this.model = model;
 		this.view = view;
 		this.questItemViewFactory = questItemViewFactory;
-		this.questResources = questResources;
+		this.resource = resource;
+
 	}
 
 	public void Subscribe()
@@ -44,7 +46,7 @@ public class QuestPresenter
 
 		// Initialize 
 		itemView.Init(
-			sprite: questResources.questImage[table.Image],
+			sprite: resource.quest[table.Image],
 			title: table.Name,
 			endTime: table.Time,
 			level: itemModel.level.Value,
@@ -53,7 +55,7 @@ public class QuestPresenter
 		itemView.upgradeButtonView.Init(
 			increase: cachedIncrease,
 			cost: cachedCost,
-			costImage: questResources.costImage["Gold"]);
+			costImage: resource.cost["Gold"]);
 
 		return itemView;
 	}

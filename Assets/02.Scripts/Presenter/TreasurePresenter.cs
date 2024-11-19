@@ -18,7 +18,7 @@ public class TreasurePresenter
 		this.treasureItemViewFactory = treasureItemViewFactory;
 	}
 
-	public void TreasurePanelSubscribe()
+	public void Subscribe()
 	{
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
 

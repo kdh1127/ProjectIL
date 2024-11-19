@@ -53,7 +53,7 @@ public class WeaponPresenter
 		}).AddTo(view.gameObject);
 	}
 
-	public void WeaponPanelSubscribe()
+	public void Subscribe()
 	{
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
 

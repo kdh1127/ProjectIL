@@ -18,7 +18,7 @@ public class MissionPresenter
 		this.missionItemViewFactory = missionItemViewFactory;
 	}
 
-	public void MissionPanelSubscribe()
+	public void Subscribe()
 	{
 		var curMissionTable = model.GetCurMissionTable();
 		var curMissionItemView = view.currentMissionItemView;

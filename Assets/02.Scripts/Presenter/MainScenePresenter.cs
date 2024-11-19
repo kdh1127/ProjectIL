@@ -1,25 +1,29 @@
 using UniRx;
+using Zenject;
 using ThreeRabbitPackage.DesignPattern;
 
-public class MainScenePresenter : TRSingleton<MainScenePresenter>
+public class MainScenePresenter
 {
-	public TopPanelView topPanelView;
-	public BottomPanelView bottomPanelView;
+	private readonly TopPanelView topPanelView;
+	private readonly BottomPanelView bottomPanelView;
+	private readonly CurrencyView currencyView;
 
-	public MainButtonView mainButtonView;
-	private MainButtonModel mainButtonModel = new();
 
-	public CurrencyView currencyView;
-
-	private void Start()
+	[Inject]
+	public MainScenePresenter(
+		TopPanelView topPanelView,
+		BottomPanelView bottomPanelView,
+		CurrencyView currencyView
+		)
 	{
-		Subscribe();
+		this.topPanelView = topPanelView;
+		this.bottomPanelView = bottomPanelView;
+		this.currencyView = currencyView;
 	}
 
-	private void Subscribe()
+	public void Subscribe()
 	{
 		TopPanelSubscribe();
-		MainButtonSubscribe();
 		CurrencySubscribe();
 	}
 
@@ -28,17 +32,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		StageManager.Instance.CurStage.Subscribe(curStage =>
 		{
 			topPanelView.stage_txt.text = StageManager.Instance.GetLocalizationStage(curStage);
-		}).AddTo(this);
-	}
-
-	public void MainButtonSubscribe()
-	{
-		mainButtonModel.RegisterToggleList(mainButtonView.toggleGroup, mainButtonView.toggleList);
-		mainButtonModel.toggleSubject.Subscribe(tgl =>
-		{
-			mainButtonView.DeactivateAllPanel(bottomPanelView.panelList);
-			mainButtonView.ActivatePanel(tgl.type);
-		}).AddTo(this);
+		}).AddTo(topPanelView.gameObject);
 	}
 
 	public void CurrencySubscribe()

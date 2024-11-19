@@ -16,6 +16,8 @@ public class GameInitializer : MonoBehaviour
 	[Inject] private readonly TreasurePresenter treasurePresenter;
 	[Inject] private readonly TreasureModel treasureModel;
 
+	[Inject] private readonly MainScenePresenter mainScenePresenter;
+
     private void Awake()
 	{
 		InitTable();
@@ -46,9 +48,10 @@ public class GameInitializer : MonoBehaviour
 	private void SubscirbePresnters()
     {
 		questPresenter.Subscribe();
-		weaponPresenter.WeaponPanelSubscribe();
-		missionPresenter.MissionPanelSubscribe();
-		treasurePresenter.TreasurePanelSubscribe();
+		weaponPresenter.Subscribe();
+		missionPresenter.Subscribe();
+		treasurePresenter.Subscribe();
+		mainScenePresenter.Subscribe();
 	}
 
 	private TRGoogleSheet BindTable(string sheetName)

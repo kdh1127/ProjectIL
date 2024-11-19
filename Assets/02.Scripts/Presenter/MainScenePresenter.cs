@@ -17,11 +17,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 	private MainButtonModel mainButtonModel = new();
 
 	public BottomPanelView bottomPanelView;
-	public QuestPanelView questPanelView;
-	private QuestModel questModel = new();
 
-	public WeaponPanelView weaponPanelView;
-	private WeaponModel weaponModel = new();
 
 	public MissionPanelView missionPanelView;
 	private MissionModel missionModel = new();
@@ -33,8 +29,7 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	private void OnApplicationQuit()
 	{
-		DataUtility.Save("QuestModel", questModel);
-		DataUtility.Save("WeaponModel", weaponModel);
+		//DataUtility.Save("WeaponModel", weaponModel);
 	}
 	private new void Awake()
 	{
@@ -50,18 +45,14 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 
 	private void Init()
 	{
-		QuestTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("QuestTable"));
-		WeaponTableList.Init(TRScriptableManager.Instance.GetGoogleSheet("WeaponTable"));
 
 		if (UserDataManager.Instance.IsInit())
 		{
-			questModel.Load();
-			weaponModel.Load();
+			//weaponModel.Load();
 		}
 		else
 		{
-			questModel.Init(QuestTableList.Get());
-			weaponModel.Init(WeaponTableList.Get());
+			//weaponModel.Init(WeaponTableList.Get());
 		}
 		missionModel.Init();
 		treasureModel.Init();
@@ -72,8 +63,6 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		TopPanelSubscribe();
 		MainButtonSubscribe();
 		CurrencySubscribe();
-		//QuestPanelSubscribe();
-		WeaponPanelSubscribe();
 		MissionPanelSubscribe();
 		TreasurePanelSubscribe();
 	}
@@ -114,165 +103,8 @@ public class MainScenePresenter : TRSingleton<MainScenePresenter>
 		}).AddTo(currencyView.gameObject);
 	}
 
-	#region Quest
-	public void QuestPanelSubscribe()
-    {
-		var questImageResources = TRScriptableManager.Instance.GetSprite("QuestImageResources").spriteDictionary;
-		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-		var missionData = UserDataManager.Instance.missiondata;
-
-		QuestTableList.Get().ForEach(table =>
-		{
-			// Instantiate
-			var itemView = Instantiate(questPanelView.questItem, questPanelView.content_tr).GetComponent<QuestItemView>();
-			var itemModel = questModel.questItemList[table.QuestNo];
-
-			// Cache
-			var cachedIncrease = table.Increase.ToBigInt();
-			var cachedCost = table.Cost.ToBigInt();
-			var cachedTime = table.Time;
-
-			// Initialize 
-			itemView.Init(
-				sprite: questImageResources[table.Image],
-				title: table.Name,
-				endTime: cachedTime,
-				level: itemModel.level.Value,
-				reward: itemModel.GetReward(cachedIncrease));
-
-			itemView.upgradeButtonView.Init(
-				increase: cachedIncrease,
-				cost: cachedCost,
-				costImage: costImageResources["Gold"]);
-
-			// Subscribe Upgrade_btn
-			itemView.upgradeButtonView.button.OnClickAsObservable()
-			.Where(_ => CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(cachedCost))
-			.Subscribe(_ =>
-			{
-				itemModel.IncreaseLevel();
-			}).AddTo(itemView.upgradeButtonView.button.gameObject);
-
-			// Subscribe QuestItemModel
-			itemModel.elpasedTime.Subscribe(time =>
-			{
-				itemView.ProgressUpdate(time, cachedTime);
-			}).AddTo(itemView.gameObject);
-
-			itemModel.level.Subscribe(level =>
-			{
-				itemView.UpdateLevel(level.ToString(), itemModel.GetReward(cachedIncrease).ToAlphabetNumber());
-				missionData.UpdateQuestUpgradeData(table.QuestNo, currentValue => currentValue = level);
-			}).AddTo(itemView.gameObject);
-
-			itemModel.questClearSubject.Subscribe(_ =>
-			{
-				CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Add(itemModel.GetReward(cachedIncrease));
-				missionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
-			});
-
-			// Subscribe currentGold
-			UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.GOLD).Subscribe(gold =>
-			{
-				itemView.upgradeButtonView.SetInteractable(gold >= cachedCost);
-			}).AddTo(itemView.upgradeButtonView.button.gameObject);
-
-			// Update Progress bar in Quest
-			Observable.Interval(System.TimeSpan.FromSeconds(1))
-			.Where(_ => itemModel.IsOn)
-			.Subscribe(_ =>
-			{
-				itemModel.Progress(cachedTime);
-			}).AddTo(itemView.gameObject);
-		});
-	}
-	#endregion
-
-	public void WeaponItemSubscribe(WeaponTable table, WeaponItemView weaponItemView)
-	{
-		var weaponItemModel = weaponModel.weaponItemList[table.WeaponNo];
-
-		weaponItemModel.level.Subscribe(level =>
-		{
-			weaponModel.CheckWeaponState();
-		}).AddTo(weaponItemView.gameObject);
-
-		weaponItemModel.UpdateSubject.Subscribe(weaponNo =>
-		{
-			for (int i = 0; i < weaponPanelView.weaponItemViewList.Count; i++)
-			{
-				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Sub(BigInteger.Parse(WeaponTableList.Get()[i].Cost));
-				var weaponItemModel = weaponModel.weaponItemList[i];
-				var table = WeaponTableList.Get()[i];
-				weaponPanelView.weaponItemViewList[i].UpdateLevel(
-					table: table,
-					curLevel: weaponItemModel.level.Value,
-					isMaxLevel: weaponItemModel.IsMaxLevel,
-					isEquiped: weaponItemModel.isEquiped,
-					isUnLock: weaponItemModel.isUnLock,
-					isEnughGold: isEnughGold
-					);
-
-				if (weaponItemModel.isEquiped)
-                {
-					weaponItemModel.SetWeaponDamage(table);
-
-				}
-			}
-		}).AddTo(weaponPanelView.gameObject);
-	}
-
-	public void WeaponPanelSubscribe()
-	{
-		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-
-		weaponModel.CheckWeaponState();
-
-		WeaponTableList.Get().ForEach(item =>
-		{
-			var weaponItemView = Instantiate(weaponPanelView.WeaponItem, weaponPanelView.content_tr).GetComponent<WeaponItemView>();
-			var weaponItemModel = weaponModel.weaponItemList[item.WeaponNo];
-			weaponPanelView.weaponItemViewList.Add(weaponItemView);
-
-			if (item.WeaponNo == 0)
-				if (weaponItemModel.level.Value == 0)
-				{
-					weaponItemModel.level.Value++;
-
-					weaponItemModel.SetWeaponDamage(item);
-				}
-
-			weaponItemView.Init(
-				table: item,
-				curLevel: weaponItemModel.level.Value,
-				isMaxLevel: weaponItemModel.IsMaxLevel,
-				isEquiped: weaponItemModel.isEquiped,
-				isUnLock: weaponItemModel.isUnLock,
-				isEnughGold: CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt())
-				);
-
-			weaponItemView.upgradeButtonView.Init(
-				increase: BigInteger.Parse(item.Increase),
-				cost: BigInteger.Parse(item.Cost),
-				costImage: costImageResources["Gold"]
-				);
 
 
-			weaponItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
-            {
-				weaponItemModel.Upgrade(item);
-			}).AddTo(weaponItemView.gameObject);
-
-			UserDataManager.Instance.currencyData.GetCurrency(ECurrencyType.GOLD)
-			.Subscribe(gold =>
-			{
-				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt());
-				weaponItemView.upgradeButtonView.SetInteractable(isEnughGold);
-			}).AddTo(UserDataManager.Instance.gameObject);
-
-			WeaponItemSubscribe(item, weaponItemView);
-		});
-	}
 	public void MissionPanelSubscribe()
     {
 		var curMissionTable = missionModel.GetCurMissionTable();

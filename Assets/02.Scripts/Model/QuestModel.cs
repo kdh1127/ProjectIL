@@ -57,6 +57,10 @@ public class QuestModel
     {
         var data = DataUtility.Load<QuestModel>("QuestModel");
 
+        // TODO: Check Data
+        if (data == null) return;
+
+        questItemList.Clear();
         data.questItemList.ForEach(questItem =>
         {
             questItemList.Add(questItem);

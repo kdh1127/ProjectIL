@@ -16,7 +16,7 @@ public class WeaponItemModel
     public void Upgrade(WeaponTable table)
     {
         var userWeaponUpgradeData = UserDataManager.Instance.missiondata.WeaponUpgradeData;
-        if (CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Sub(table.Cost.ToBigInt()))
+        if (CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Subtract(table.Cost.ToBigInt()))
         {
             level.Value++;
             UpdateSubject.OnNext(table.WeaponNo);

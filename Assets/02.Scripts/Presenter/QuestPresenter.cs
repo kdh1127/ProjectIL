@@ -65,7 +65,7 @@ public class QuestPresenter
 		var gold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD);
 
 		itemView.upgradeButtonView.button.OnClickAsObservable()
-		.Where(_ => gold.IsPositive(upgradeCost))
+		.Where(_ => gold.CanSubtract(upgradeCost))
 		.Subscribe(_ => itemModel.IncreaseLevel())
 		.AddTo(itemView.upgradeButtonView.gameObject);
 

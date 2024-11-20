@@ -22,7 +22,7 @@ public class QuestItemModel
         var cost = table.Cost.ToBigInt();
 
         level.Value++;
-        gold.Sub(cost);
+        gold.Subtract(cost);
         missionData.UpdateQuestUpgradeData(table.QuestNo, currentValue => currentValue = level.Value);
     }
 

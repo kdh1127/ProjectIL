@@ -32,7 +32,7 @@ public class WeaponPresenter
 		{
 			for (int i = 0; i < view.weaponItemViewList.Count; i++)
 			{
-				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Sub(BigInteger.Parse(WeaponTableList.Get()[i].Cost));
+				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Subtract(BigInteger.Parse(WeaponTableList.Get()[i].Cost));
 				var weaponItemModel = model.weaponItemList[i];
 				var table = WeaponTableList.Get()[i];
 				view.weaponItemViewList[i].UpdateLevel(
@@ -79,7 +79,7 @@ public class WeaponPresenter
 				isMaxLevel: weaponItemModel.IsMaxLevel,
 				isEquiped: weaponItemModel.isEquiped,
 				isUnLock: weaponItemModel.isUnLock,
-				isEnughGold: CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt())
+				isEnughGold: CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).CanSubtract(item.Cost.ToBigInt())
 				);
 
 			weaponItemView.upgradeButtonView.Init(
@@ -97,7 +97,7 @@ public class WeaponPresenter
 			CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD)
 			.Subscribe(gold =>
 			{
-				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).IsPositive(item.Cost.ToBigInt());
+				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).CanSubtract(item.Cost.ToBigInt());
 				weaponItemView.upgradeButtonView.SetInteractable(isEnughGold);
 			}).AddTo(UserDataManager.Instance.gameObject);
 

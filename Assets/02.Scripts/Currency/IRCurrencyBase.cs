@@ -2,7 +2,7 @@ using System;
 using System.Numerics;
 using System.Collections.Generic;
 
-public abstract class IRCurrencyBase : ICurrency<BigInteger>
+public abstract class IRCurrencyBase : ICurrency<BigInteger>, IObservable<BigInteger>
 {
 	private BigInteger m_amount;
 	List<IObserver<BigInteger>> m_observerList = new List<IObserver<BigInteger>>();

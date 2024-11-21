@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -26,7 +27,27 @@ public class WeaponInstaller : MonoInstaller
 				 .UnderTransform(weaponPanelPrefab.content_tr)
 				 .AsTransient();
 
+		Container
+			.Bind<List<WeaponTable>>()
+			.FromInstance(WeaponTableList.Get())
+			.AsSingle();
+
+		Container.Bind<WeaponResources>().AsSingle();
 	}
 }
 
 public class WeaponItemViewFactory : PlaceholderFactory<WeaponItemView> { }
+public class WeaponResources
+{
+	public readonly Dictionary<string, Sprite> weapon;
+	public readonly Dictionary<string, Sprite> cost;
+
+	[Inject]
+	public WeaponResources(
+		[Inject(Id = "WeaponImage")] Dictionary<string, Sprite> weaponImage,
+		[Inject(Id = "CostImage")] Dictionary<string, Sprite> costImage)
+	{
+		this.weapon = weaponImage;
+		this.cost = costImage;
+	}
+}

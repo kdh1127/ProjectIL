@@ -8,7 +8,7 @@ using System;
 public class UserDataManager : TRSingleton<UserDataManager>
 {
 	public CharacterData characterData = new();
-	public Missiondata missiondata = new();
+	public MissionData missiondata = new();
 	private bool isInit = false;
 	private new void Awake()
 	{
@@ -117,7 +117,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	#endregion
 
 	#region MissionData
-	public class Missiondata
+	public class MissionData
 	{
 		private int clearMissionNo;
 		public int ClearMissionNo { get => clearMissionNo; set => clearMissionNo = value; }
@@ -156,7 +156,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 		public void LoadMissionData()
 		{
-			Missiondata data = DataUtility.Load<Missiondata>("MissionData");
+			MissionData data = DataUtility.Load<MissionData>("MissionData");
 			ClearMissionNo = data.ClearMissionNo;
 			QuestUpgradeData = data.QuestUpgradeData;
 			QuestClearData = data.QuestClearData;

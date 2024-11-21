@@ -20,27 +20,41 @@ public class WeaponItemView : MonoBehaviour
 
     public void Init(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
-        var calcLevel = curLevel == 0 ? 0 : curLevel - 1;
-        var totalAttack = BigInteger.Parse(table.BaseAtk) + (calcLevel * BigInteger.Parse(table.Increase));
         title_txt.text = table.Name;
-        level_txt.text = $"Lv. {curLevel}/{maxLevel}";
-        totalAtack_txt.text = totalAttack.ToAlphabetNumber();
-        dim_img.SetActive(false);
-
         UpdateLevel(table, curLevel, isMaxLevel, isEquiped, isUnLock, isEnughGold);
+
     }
 
     public void UpdateLevel(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
+        UpdateTotalAttackText(table, curLevel);
+        UpdateLevelText(curLevel, isMaxLevel);
+        UpdateWeaponBackground(isEquiped);
+        UpdateState(isUnLock, isMaxLevel, isEnughGold);
+    }
+
+    private void UpdateTotalAttackText(WeaponTable table, int curLevel)
+	{
         var calcLevel = curLevel == 0 ? 0 : curLevel - 1;
-        var totalAttack = BigInteger.Parse(table.BaseAtk) + (calcLevel * BigInteger.Parse(table.Increase));
+        var totalAttack = table.BaseAtk.ToBigInt() + (calcLevel * table.Increase.ToBigInt());
         totalAtack_txt.text = totalAttack.ToAlphabetNumber();
+    }
+
+    private void UpdateLevelText(int curLevel, bool isMaxLevel)
+	{
         level_txt.text = isMaxLevel ?
-                $"<color=#FF0000>Lv.Max</color>" :
-                $"Lv. {curLevel}/{maxLevel}";
+            $"<color=#FF0000>Lv.Max</color>" :
+            $"Lv. {curLevel}/{maxLevel}";
+    }
 
+    private void UpdateWeaponBackground(bool isEquiped)
+	{
         weaponItemBg_img.color = isEquiped ? Color.yellow : Color.white;
+    }
 
+
+    private void UpdateState(bool isUnLock, bool isMaxLevel, bool isEnughGold)
+	{
         if (!isUnLock)
         {
             dim_img.SetActive(true);

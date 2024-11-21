@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using ThreeRabbitPackage;
 
 public class QuestInstaller : MonoInstaller
 {
@@ -17,6 +15,11 @@ public class QuestInstaller : MonoInstaller
 	public void QuestBinding()
 	{
 		Container.Bind<QuestModel>().AsSingle();
+
+		Container
+			.Bind<List<QuestTable>>()
+			.FromInstance(QuestTableList.Get())
+			.AsSingle();
 
 		Container.Bind<QuestPanelView>()
 			.FromComponentInHierarchy(questPanelPrefab)

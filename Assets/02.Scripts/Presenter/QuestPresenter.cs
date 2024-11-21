@@ -1,29 +1,39 @@
 using System;
+using System.Collections.Generic;
 using System.Numerics;
 using UniRx;
-using UnityEngine;
 using Zenject;
-using System.Collections.Generic;
+
 public class QuestPresenter
 {
 	private readonly QuestModel model;
 	private readonly QuestPanelView view;
 	private readonly QuestItemViewFactory questItemViewFactory;
-	private readonly QuestResources resource;
+	private readonly QuestResources resources;
+	private readonly CurrencyModel.Gold gold;
+	private readonly List<QuestTable> questTable;
 
 	[Inject]
-	public QuestPresenter(QuestModel model, QuestPanelView view, QuestItemViewFactory questItemViewFactory, QuestResources resource)
+	public QuestPresenter(
+		QuestModel model,
+		QuestPanelView view,
+		QuestItemViewFactory questItemViewFactory,
+		QuestResources resources,
+		List<QuestTable> questTable,
+		CurrencyModel.Gold gold)
 	{
 		this.model = model;
 		this.view = view;
 		this.questItemViewFactory = questItemViewFactory;
-		this.resource = resource;
+		this.resources = resources;
+		this.questTable = questTable;
+		this.gold = gold;
 
 	}
 
 	public void Subscribe()
 	{
-		QuestTableList.Get().ForEach(table =>
+		questTable.ForEach(table =>
 		{
 			var itemView = CreateQuestItemView(table);
 			var itemModel = model.questItemList[table.QuestNo];
@@ -46,40 +56,40 @@ public class QuestPresenter
 
 		// Initialize 
 		itemView.Init(
-			sprite: resource.quest[table.Image],
+			sprite: resources.quest[table.Image],
 			title: table.Name,
 			endTime: table.Time,
-			level: itemModel.level.Value,
+			level: itemModel.m_level.Value,
 			reward: itemModel.GetReward());
 
 		itemView.upgradeButtonView.Init(
 			increase: cachedIncrease,
 			cost: cachedCost,
-			costImage: resource.cost["Gold"]);
+			costImage: resources.cost["Gold"]);
 
 		return itemView;
 	}
 
 	private void SubscribeToUpgradeButton(QuestItemModel itemModel, QuestItemView itemView, BigInteger upgradeCost)
 	{
-		var gold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD);
+		var upgradeButtonView = itemView.upgradeButtonView;
 
-		itemView.upgradeButtonView.button.OnClickAsObservable()
+		upgradeButtonView.button.OnClickAsObservable()
 		.Where(_ => gold.CanSubtract(upgradeCost))
 		.Subscribe(_ => itemModel.IncreaseLevel())
-		.AddTo(itemView.upgradeButtonView.gameObject);
+		.AddTo(upgradeButtonView.gameObject);
 
-		gold.Subscribe(gold => itemView.upgradeButtonView.SetInteractable(gold >= upgradeCost))
-			.AddTo(itemView.upgradeButtonView.gameObject);
+		gold.Subscribe(gold => upgradeButtonView.SetInteractable(gold >= upgradeCost))
+			.AddTo(upgradeButtonView.gameObject);
 	}
 
 	private void SubscribeToQuestItemModel(QuestItemModel itemModel, QuestItemView itemView, QuestTable table)
 	{
-		itemModel.elpasedTime
+		itemModel.m_elpasedTime
 			.Subscribe(time =>	itemView.ProgressUpdate(time, table.Time))
 			.AddTo(itemView.gameObject);
 
-		itemModel.level.Subscribe(level =>
+		itemModel.m_level.Subscribe(level =>
 		{
 			var reward = itemModel.GetReward().ToAlphabetNumber();
 			itemView.UpdateLevel(level.ToString(), reward);

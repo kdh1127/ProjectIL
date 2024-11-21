@@ -1,27 +1,20 @@
 using UniRx;
 using Zenject;
-using ThreeRabbitPackage.DesignPattern;
 
 public class MainScenePresenter
 {
 	private readonly TopPanelView topPanelView;
-	private readonly CurrencyView currencyView;
 
 
 	[Inject]
-	public MainScenePresenter(
-		TopPanelView topPanelView,
-		CurrencyView currencyView
-		)
+	public MainScenePresenter(TopPanelView topPanelView)
 	{
 		this.topPanelView = topPanelView;
-		this.currencyView = currencyView;
 	}
 
 	public void Subscribe()
 	{
 		TopPanelSubscribe();
-		CurrencySubscribe();
 	}
 
 	private void TopPanelSubscribe()
@@ -32,22 +25,5 @@ public class MainScenePresenter
 		}).AddTo(topPanelView.gameObject);
 	}
 
-	public void CurrencySubscribe()
-	{
-		CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Subscribe(gold =>
-		{
-			currencyView.gold_txt.text = gold.ToAlphabetNumber();
-		}).AddTo(currencyView.gameObject);
-
-		CurrencyManager<Dia>.GetCurrency(ECurrencyType.DIA).Subscribe(dia =>
-		{
-			currencyView.dia_txt.text = dia.ToAlphabetNumber();
-		}).AddTo(currencyView.gameObject);
-
-		CurrencyManager<Key>.GetCurrency(ECurrencyType.KEY).Subscribe(key =>
-		{
-			currencyView.key_txt.text = key.ToAlphabetNumber();
-		}).AddTo(currencyView.gameObject);
-	}
 }
 

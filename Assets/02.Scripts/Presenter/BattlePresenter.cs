@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
+using System.Linq;
+using Zenject;
 
 public partial class BattlePresenter : TRSingleton<BattlePresenter>
 {
@@ -15,6 +17,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 
     public Camera pixelCamera;
     public FadeScreenView fadeScreenView;
+
+    [Inject]private readonly CurrencyModel currencyModel;
 
     private new void Awake()
     {
@@ -58,7 +62,11 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             view.Animator.SetTrigger("Death");
             view.GetComponent<BoxCollider2D>().enabled = false;
             MonsterManager.Instance.IncreaseIndex();
-            model.AddReward();
+
+            model.GetReward().ToList().ForEach(reward =>
+            {
+                currencyModel.AddCurrency(reward.Key, reward.Value);
+            });
         }).AddTo(view.gameObject);
 
         model.hp.Subscribe(hp =>

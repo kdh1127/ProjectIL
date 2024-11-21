@@ -18,13 +18,16 @@ public class GameInitializer : MonoBehaviour
 	[Inject] private readonly TreasureModel treasureModel;
 
 	[Inject] private readonly MainScenePresenter mainScenePresenter;
+	
+	[Inject] private readonly CurrencyPresenter currencyPresenter;
+	[Inject] private readonly CurrencyModel currencyModel;
 
-    private void Awake()
+
+	private void Awake()
 	{
 		InitPlugins();
 		InitTable();
 		InitModel();
-		RegisterCurrency();
 	}
 
 	private void Start()
@@ -34,10 +37,11 @@ public class GameInitializer : MonoBehaviour
 
 	private void InitModel()
     {
-		questModel.Init(QuestTableList.Get());
-		weaponModel.Init(WeaponTableList.Get());
+		questModel.Init();
+		weaponModel.Init();
 		missionModel.Init(MissionTableList.Get());
 		treasureModel.Init(TreasureTableList.Get());
+		currencyModel.Init();
     }
 
 	private void InitTable()
@@ -55,13 +59,7 @@ public class GameInitializer : MonoBehaviour
 		missionPresenter.Subscribe();
 		treasurePresenter.Subscribe();
 		mainScenePresenter.Subscribe();
-	}
-
-	public void RegisterCurrency()
-	{
-		CurrencyManager<Gold>.RegisterCurrency(ECurrencyType.GOLD, new Gold());
-		CurrencyManager<Dia>.RegisterCurrency(ECurrencyType.DIA, new Dia());
-		CurrencyManager<Key>.RegisterCurrency(ECurrencyType.KEY, new Key());
+		currencyPresenter.Subscribe();
 	}
 
 	public void InitPlugins()

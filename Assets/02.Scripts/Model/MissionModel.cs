@@ -8,6 +8,8 @@ using UniRx;
 
 public class MissionModel
 {
+    private readonly CurrencyModel.Gold gold;
+
     public Subject<Unit> missionClearSubject = new();
     public void Init(List<MissionTable> missionTableList)
     {
@@ -58,13 +60,13 @@ public class MissionModel
         switch (rewardType)
         {
             case ECurrencyType.GOLD:
-                CurrencyManager<Gold>.GetCurrency(rewardType).Add(table.Amount.ToBigInt());
+                gold.Add(table.Amount.ToBigInt());
                 break;
             case ECurrencyType.DIA:
-                CurrencyManager<Dia>.GetCurrency(rewardType).Add(table.Amount.ToBigInt());
+                gold.Add(table.Amount.ToBigInt());
                 break;
             case ECurrencyType.KEY:
-                CurrencyManager<Key>.GetCurrency(rewardType).Add(table.Amount.ToBigInt());
+                gold.Add(table.Amount.ToBigInt());
                 break;
         }
         missionClearSubject.OnNext(Unit.Default);

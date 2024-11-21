@@ -10,98 +10,94 @@ public class WeaponPresenter
 	private readonly WeaponModel model;
 	private readonly WeaponPanelView view;
 	private readonly WeaponItemViewFactory weaponItemViewFactory;
+	private readonly CurrencyModel.Gold gold;
 
 	[Inject]
-	public WeaponPresenter(WeaponModel model, WeaponPanelView view, WeaponItemViewFactory weaponItemViewFactory)
+	public WeaponPresenter(
+		WeaponModel model,
+		WeaponPanelView view,
+		WeaponItemViewFactory weaponItemViewFactory,
+		CurrencyModel.Gold gold)
 	{
 		this.model = model;
 		this.view = view;
 		this.weaponItemViewFactory = weaponItemViewFactory;
-	}
-
-	public void WeaponItemSubscribe(WeaponTable table, WeaponItemView weaponItemView)
-	{
-		var weaponItemModel = model.weaponItemList[table.WeaponNo];
-
-		weaponItemModel.level.Subscribe(level =>
-		{
-			model.CheckWeaponState();
-		}).AddTo(weaponItemView.gameObject);
-
-		weaponItemModel.UpdateSubject.Subscribe(weaponNo =>
-		{
-			for (int i = 0; i < view.weaponItemViewList.Count; i++)
-			{
-				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).Subtract(BigInteger.Parse(WeaponTableList.Get()[i].Cost));
-				var weaponItemModel = model.weaponItemList[i];
-				var table = WeaponTableList.Get()[i];
-				view.weaponItemViewList[i].UpdateLevel(
-					table: table,
-					curLevel: weaponItemModel.level.Value,
-					isMaxLevel: weaponItemModel.IsMaxLevel,
-					isEquiped: weaponItemModel.isEquiped,
-					isUnLock: weaponItemModel.isUnLock,
-					isEnughGold: isEnughGold
-					);
-
-				if (weaponItemModel.isEquiped)
-				{
-					weaponItemModel.SetWeaponDamage(table);
-
-				}
-			}
-		}).AddTo(view.gameObject);
+		this.gold = gold;
 	}
 
 	public void Subscribe()
 	{
-		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-
-		model.CheckWeaponState();
-
-		WeaponTableList.Get().ForEach(item =>
+		WeaponTableList.Get().ForEach(table =>
 		{
 			var weaponItemView = weaponItemViewFactory.Create();
-			var weaponItemModel = model.weaponItemList[item.WeaponNo];
-			view.weaponItemViewList.Add(weaponItemView);
+			var weaponItemModel = model.weaponItemList[table.WeaponNo];
 
-			if (item.WeaponNo == 0)
-				if (weaponItemModel.level.Value == 0)
-				{
-					weaponItemModel.level.Value++;
-
-					weaponItemModel.SetWeaponDamage(item);
-				}
-
-			weaponItemView.Init(
-				table: item,
-				curLevel: weaponItemModel.level.Value,
-				isMaxLevel: weaponItemModel.IsMaxLevel,
-				isEquiped: weaponItemModel.isEquiped,
-				isUnLock: weaponItemModel.isUnLock,
-				isEnughGold: CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).CanSubtract(item.Cost.ToBigInt())
-				);
-
-			weaponItemView.upgradeButtonView.Init(
-				increase: BigInteger.Parse(item.Increase),
-				cost: BigInteger.Parse(item.Cost),
-				costImage: costImageResources["Gold"]
-				);
-
-
-			weaponItemView.upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
-			{
-				weaponItemModel.Upgrade(item);
-			}).AddTo(weaponItemView.gameObject);
-
-			CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD)
-			.Subscribe(gold =>
-			{
-				var isEnughGold = CurrencyManager<Gold>.GetCurrency(ECurrencyType.GOLD).CanSubtract(item.Cost.ToBigInt());
-				weaponItemView.upgradeButtonView.SetInteractable(isEnughGold);
-			}).AddTo(UserDataManager.Instance.gameObject);
-
-			WeaponItemSubscribe(item, weaponItemView);
+			weaponItemModel.UpdateState();
+			InitItemView(weaponItemModel, weaponItemView, table);
+			SubscribeToWeaponItemModel(weaponItemModel, weaponItemView, table);
+			SubscribeToUpgradeButton(weaponItemModel, weaponItemView.upgradeButtonView);
+			SubscribeToGold(weaponItemView.upgradeButtonView, table);
+			Debug.Log($"No: {table.WeaponNo}, UnLock: {weaponItemModel.isUnLock.Value}, MaxLevel: {weaponItemModel.isMaxLevel.Value}, Equip: {weaponItemModel.isEquiped.Value}");
 		});
+	}
+
+	public void InitItemView(WeaponItemModel itemModel, WeaponItemView itemView, WeaponTable table)
+	{
+		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
+
+		itemView.Init(
+			table: table,
+			curLevel: itemModel.m_level.Value,
+			isMaxLevel: itemModel.isMaxLevel.Value,
+			isEquiped: itemModel.isEquiped.Value,
+			isUnLock: itemModel.isUnLock.Value,
+			isEnughGold: gold.CanSubtract(table.Cost.ToBigInt()));
+
+		itemView.upgradeButtonView.Init(
+			increase: table.Increase.ToBigInt(),
+			cost: table.Cost.ToBigInt(),
+			costImage: costImageResources["Gold"]);
+
+		UpdateItemView(itemModel, itemView, table);
+	}
+	public void UpdateItemView(WeaponItemModel itemModel, WeaponItemView itemView, WeaponTable table)
+	{
+		var isEnughGold = gold.CanSubtract(table.Cost.ToBigInt());
+
+		itemView.UpdateLevel(
+			table: table,
+			curLevel: itemModel.m_level.Value,
+			isMaxLevel: itemModel.isMaxLevel.Value,
+			isEquiped: itemModel.isEquiped.Value,
+			isUnLock: itemModel.isUnLock.Value,
+			isEnughGold: isEnughGold);
+
+		Debug.Log($"No: {table.WeaponNo}, UnLock: {itemModel.isUnLock.Value}, MaxLevel: {itemModel.isMaxLevel.Value}, Equip: {itemModel.isEquiped.Value}");
+	}
+	public void SubscribeToWeaponItemModel(WeaponItemModel itemModel, WeaponItemView itemView, WeaponTable table)
+	{
+		itemModel.m_level.Subscribe(_ => UpdateItemView(itemModel, itemView, table)).AddTo(itemView.gameObject);
+		itemModel.isUnLock.Subscribe(_ => UpdateItemView(itemModel, itemView, table)).AddTo(itemView.gameObject);
+		itemModel.isMaxLevel.Subscribe(_ => UpdateItemView(itemModel, itemView, table)).AddTo(itemView.gameObject);
+		itemModel.isEquiped.Subscribe(isEquip =>
+		{
+			UpdateItemView(itemModel, itemView, table);
+			if (isEquip) itemModel.SetWeaponDamage();
+		}).AddTo(itemView.gameObject);
+	}
+	public void SubscribeToUpgradeButton(WeaponItemModel itemModel, UpgradeButtonView upgradeButtonView)
+	{
+		upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
+		{
+			itemModel.Upgrade();
+		}).AddTo(upgradeButtonView.gameObject);
+	}
+	public void SubscribeToGold(UpgradeButtonView upgradeButtonView, WeaponTable table)
+	{
+		gold.Subscribe(_ =>
+		{
+			var isEnughGold = gold.CanSubtract(table.Cost.ToBigInt());
+			upgradeButtonView.SetInteractable(isEnughGold);
+		}).AddTo(upgradeButtonView.gameObject);
 	}
 }

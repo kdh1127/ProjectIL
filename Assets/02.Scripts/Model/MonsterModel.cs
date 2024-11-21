@@ -13,6 +13,8 @@ public class MonsterModel
     public Subject<Unit> DeathSubject = new();
 	public BigInteger maxHp;
 
+	private readonly CurrencyModel currency;
+
     public void Init(StageTable table, EMonsterType monsterType)
 	{
 		switch (monsterType)
@@ -42,24 +44,8 @@ public class MonsterModel
 		}
     }
 
-	public void AddReward()
+	public Dictionary<ECurrencyType, BigInteger> GetReward()
 	{
-		reward.ToList().ForEach(reward =>
-		{
-			switch (reward.Key)
-			{
-				case ECurrencyType.GOLD:
-					CurrencyManager<Gold>.GetCurrency(reward.Key).Add(reward.Value);
-					break;
-				case ECurrencyType.DIA:
-					CurrencyManager<Dia>.GetCurrency(reward.Key).Add(reward.Value);
-					break;
-				case ECurrencyType.KEY:
-					CurrencyManager<Key>.GetCurrency(reward.Key).Add(reward.Value);
-					break;
-				default:
-					break;
-			}
-		});
+		return reward;
 	}
 }

@@ -1,22 +1,26 @@
-using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System.Numerics;
+using System.Collections.Generic;
 using UniRx;
+using Zenject;
 
 public class MissionModel
 {
+    private readonly List<MissionTable> tableList;
     private readonly CurrencyModel.Gold gold;
 
-    public Subject<Unit> missionClearSubject = new();
-    public void Init(List<MissionTable> missionTableList)
+    [Inject]
+    public MissionModel(List<MissionTable> tableList, CurrencyModel.Gold gold)
+	{
+        this.tableList = tableList;
+        this.gold = gold;
+	}
+
+    public void Init()
     {
         var missionData = UserDataManager.Instance.missiondata;
 
         // TODO: Load MissionData in UserDataManager
-        missionTableList.ForEach(table =>
+        tableList.ForEach(table =>
             {
                 var missionType = table.MissionType.ToEnum<EMissionType>();
                 switch (missionType)
@@ -41,15 +45,10 @@ public class MissionModel
             });
     }
 
-    /// <summary>
-    /// Ŭ���� �� �̼��� ���� �̼��� ���̺� ��ȯ�Ѵ�.
-    /// ���� �̼��� ���� ��� ���������� Ŭ���� �� �̼��� ���̺� ��ȯ�Ѵ�.
-    /// </summary>
-    /// <returns></returns>
     public MissionTable GetCurMissionTable()
     {
         var clearMission = UserDataManager.Instance.missiondata.ClearMissionNo;
-            return MissionTableList.Get()[clearMission];
+            return tableList[clearMission];
     }
 
     public void ClearMission(MissionTable table)  
@@ -69,10 +68,24 @@ public class MissionModel
                 gold.Add(table.Amount.ToBigInt());
                 break;
         }
-        missionClearSubject.OnNext(Unit.Default);
     }
 
-    public bool IsClear(MissionTable table)
+    public int GetCurMissionProgress(MissionTable table)
+	{
+        var missionData = UserDataManager.Instance.missiondata;
+        var missionType = table.MissionType.ToEnum<EMissionType>();
+
+		return missionType switch
+		{
+			EMissionType.QuestUpgrade => missionData.QuestUpgradeData[table.TargetNo],
+			EMissionType.QuestClear => missionData.QuestClearData[table.TargetNo],
+			EMissionType.WeaponUpgrade => missionData.WeaponUpgradeData[table.TargetNo],
+			EMissionType.DungeonClear => missionData.DungeonClearData[table.TargetNo],
+			_ => 0
+		};
+	}
+
+	public bool IsClear(MissionTable table)
     {
         var missionData = UserDataManager.Instance.missiondata;
         var missionType = table.MissionType.ToEnum<EMissionType>();

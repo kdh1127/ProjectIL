@@ -7,43 +7,49 @@ using UniRx;
 public class MissionPresenter
 {
 	private readonly MissionModel model;
-	private readonly MissionPanelView view;
-	private readonly MissionItemViewFactory missionItemViewFactory;
+	private readonly MissionItemView itemView;
 
 	[Inject]
-	public MissionPresenter(MissionModel model, MissionPanelView view, MissionItemViewFactory missionItemViewFactory)
+	public MissionPresenter(MissionModel model, MissionItemView itemView)
 	{
 		this.model = model;
-		this.view = view;
-		this.missionItemViewFactory = missionItemViewFactory;
+		this.itemView = itemView;
 	}
 
 	public void Subscribe()
 	{
-		var curMissionTable = model.GetCurMissionTable();
-		var curMissionItemView = view.currentMissionItemView;
-
-		curMissionItemView.Init(curMissionTable, model.IsClear(curMissionTable));
-
-		curMissionItemView.completeButtonView.button.OnClickAsObservable().Subscribe(_ =>
-		{
-			model.ClearMission(curMissionTable);
-		}).AddTo(curMissionItemView.gameObject);
-
-		model.missionClearSubject.Subscribe(_ =>
-		{
-			var clearMissionNo = UserDataManager.Instance.missiondata.ClearMissionNo;
-
-			curMissionTable = model.GetCurMissionTable();
-			curMissionItemView.UpdateView(curMissionTable, model.IsClear(curMissionTable));
-			view.RefreshDisableMissionList(clearMissionNo);
-		}).AddTo(view.gameObject);
-
-		view.CreateDisableMissionList(UserDataManager.Instance.missiondata.ClearMissionNo);
-
-		Observable.EveryUpdate().Subscribe(_ =>
-		{
-			view.currentMissionItemView.UpdateView(curMissionTable, model.IsClear(curMissionTable));
-		}).AddTo(view.gameObject);
+		InitItemView(model, itemView);
+		InitCompleteButton(model, itemView.completeButtonView);
+		EveryUpdateItemView(model, itemView);
 	}
+
+	private void InitItemView(MissionModel model, MissionItemView itemView)
+	{
+		var curMissionTable = model.GetCurMissionTable();
+		itemView.Init(curMissionTable, model.IsClear(curMissionTable), model.GetCurMissionProgress(curMissionTable));
+	}
+
+	private void InitCompleteButton(MissionModel model, CompleteButtonView completeButtonView)
+	{
+		var curMissionTable = model.GetCurMissionTable();
+		completeButtonView.button
+			.OnClickAsObservable()
+			.Subscribe(_ => model.ClearMission(curMissionTable))
+			.AddTo(completeButtonView.gameObject);
+	}
+
+	private void EveryUpdateItemView(MissionModel model, MissionItemView itemView)
+	{
+		Observable
+			.EveryUpdate()
+			.Subscribe(_ => UpdateItemView(model, itemView))
+			.AddTo(itemView.gameObject);
+	}
+
+	private void UpdateItemView(MissionModel model, MissionItemView itemView)
+	{
+		var curMissionTable = model.GetCurMissionTable();
+		itemView.UpdateView(curMissionTable, model.IsClear(curMissionTable), model.GetCurMissionProgress(curMissionTable));
+	}
+
 }

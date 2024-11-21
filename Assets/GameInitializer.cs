@@ -39,7 +39,7 @@ public class GameInitializer : MonoBehaviour
     {
 		questModel.Init();
 		weaponModel.Init();
-		missionModel.Init(MissionTableList.Get());
+		missionModel.Init();
 		treasureModel.Init(TreasureTableList.Get());
 		currencyModel.Init();
     }

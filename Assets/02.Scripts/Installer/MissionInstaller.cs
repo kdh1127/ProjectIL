@@ -1,11 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class MissionInstaller : MonoInstaller
 {
-	[SerializeField] private MissionPanelView missionPanelPrefab;
 	[SerializeField] private MissionItemView missionItemPrefab;
 
 	public override void InstallBindings()
@@ -17,17 +15,16 @@ public class MissionInstaller : MonoInstaller
 	{
 		Container.Bind<MissionModel>().AsSingle();
 
-		Container.Bind<MissionPanelView>()
-			.FromComponentInHierarchy(missionPanelPrefab)
-			.AsSingle();
-
 		Container.Bind<MissionPresenter>().AsSingle();
 
-		Container.BindFactory<MissionItemView, MissionItemViewFactory>()
-				 .FromComponentInNewPrefab(missionItemPrefab)
-				 .UnderTransform(missionPanelPrefab.content_tr)
-				 .AsTransient();
+		Container
+			.Bind<MissionItemView>()
+			.FromComponentInHierarchy(missionItemPrefab)
+			.AsSingle();
+
+		Container
+			.Bind<List<MissionTable>>()
+			.FromInstance(MissionTableList.Get())
+			.AsSingle();
 	}
 }
-
-public class MissionItemViewFactory : PlaceholderFactory<MissionItemView> { }

@@ -13,10 +13,10 @@ public class MissionPanelView : MonoBehaviour
 		for (int i = clearMissionNo + 1; i < MissionTableList.Get().Count; i++)
 		{
 			var missionItemView = Instantiate(missionItem, content_tr).GetComponent<MissionItemView>();
-			missionItemView.Init(MissionTableList.Get()[i]);
+			missionItemView.Init(MissionTableList.Get()[i], false , 0);
 		}
 	}
-    //TODO: refactoring List to Queue & Method Extension
+
     public void RefreshDisableMissionList(int clearMissionNo)
 	{
 		for (int i = 0; i < content_tr.childCount; i++)
@@ -27,7 +27,7 @@ public class MissionPanelView : MonoBehaviour
 		for (int i = clearMissionNo + 1; i < MissionTableList.Get().Count; i++)
 		{
 			var missionItemView = Instantiate(missionItem, content_tr).GetComponent<MissionItemView>();
-			missionItemView.Init(MissionTableList.Get()[i]);
+			missionItemView.Init(MissionTableList.Get()[i], false, 0);
 		}
 	}
 }

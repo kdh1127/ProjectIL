@@ -1,8 +1,5 @@
 using I2.Loc;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using ThreeRabbitPackage;
+using System.Numerics;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
 using System.Linq;
@@ -10,7 +7,7 @@ using System.Linq;
 public class StageManager : TRSingleton<StageManager>
 {
 	public ReactiveProperty<int> CurStage = new(0);
-
+	public BigInteger stageBaseHp = 0;
 	private new void Awake()
 	{
 		base.Awake();
@@ -56,6 +53,18 @@ public class StageManager : TRSingleton<StageManager>
         {
 			userDungeonClearData[0] = CurStage.Value;
         }
+	}
+
+	public void SetStageBaseHp(BigInteger prevBaseHp)
+	{
+		if (CurStage.Value == 0)
+		{
+			stageBaseHp = 500;
+			return;
+		}
+
+		var increaseHp = (prevBaseHp * CurStage.Value * GetCurStageTable().HpIncreasePer) / 100;
+		stageBaseHp = prevBaseHp + increaseHp;
 	}
 
 }

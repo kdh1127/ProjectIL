@@ -552,6 +552,657 @@ MonoBehaviour:
       - "\u0110\u01B0\u1EE3c Gia C\u1ED1 {0} {1} L\u1EA7n"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
+    - Term: Weapon_Name_0
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9840"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9841"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9842"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9843"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9844"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_5
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9845"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_6
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9846"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_7
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9847"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_8
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9848"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_9
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB9849"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_10
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98410"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_11
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98411"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_12
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98412"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98413"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_14
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98414"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_15
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98415"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_16
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98416"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_17
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98417"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_18
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98418"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_19
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98419"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_20
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98420"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_21
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98421"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_22
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98422"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_23
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98423"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_24
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98424"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_25
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98425"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_26
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98426"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_27
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98427"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_28
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98428"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_29
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98429"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_30
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\uBB34\uAE30\uC758 \uC774\uB98430"
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
@@ -606,7 +1257,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwti8St0EVhATB-VpJWR23qwFINXKYxYehNQ1Zl349q0_OePYX2tUGkNTPo_ggd2Nwf/exec
     Google_SpreadsheetKey: 1PQ0UdVoaxsFOlXSz-F80s2stQRCQHtq_wRUwjxXZb_Y
     Google_SpreadsheetName: I2Loc ProjectIL Localization
-    Google_LastUpdatedVersion: 1732239600882
+    Google_LastUpdatedVersion: 1732258490525
     Google_Password: threerabbit1!
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

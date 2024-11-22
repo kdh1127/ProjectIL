@@ -1,8 +1,5 @@
-using System.Linq;
 using System.Numerics;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UniRx;
 
 public class MonsterModel
@@ -15,29 +12,30 @@ public class MonsterModel
 
     public void Init(StageTable table, EMonsterType monsterType)
 	{
+		var baseHp = StageManager.Instance.stageBaseHp;
 		switch (monsterType)
 		{
 			case EMonsterType.NORMAL:
-				hp.Value = GetHp(table);
-				maxHp = GetHp(table);
+				hp.Value = baseHp;
+				maxHp = baseHp;
 				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
 				break;
 			case EMonsterType.BOSS:
-				hp.Value = GetHp(table) * 5;
-				maxHp = GetHp(table) * 5;
+				hp.Value = baseHp * 5;
+				maxHp = baseHp * 5;
 				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
 				reward.Add(ECurrencyType.KEY, 2);
 				break;
 			case EMonsterType.TEN_BOSS:
-				hp.Value = GetHp(table) * 10;
-				maxHp = GetHp(table) * 10;
+				hp.Value = baseHp * 10;
+				maxHp = baseHp * 10;
 				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
 				reward.Add(ECurrencyType.KEY, 5);
 				reward.Add(ECurrencyType.DIA, 3);
 				break;
 			case EMonsterType.HUNDRED_BOSS:
-				hp.Value = GetHp(table) * 50;
-				maxHp = GetHp(table) * 50;
+				hp.Value = baseHp * 50;
+				maxHp = baseHp * 50;
 				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
 				reward.Add(ECurrencyType.KEY, 10);
 				reward.Add(ECurrencyType.DIA, 20);
@@ -58,15 +56,5 @@ public class MonsterModel
 	public Dictionary<ECurrencyType, BigInteger> GetReward()
 	{
 		return reward;
-	}
-
-	private BigInteger GetHp(StageTable table)
-	{
-		var rate = table.HpIncreasePer / 100;
-		var baseHp = 500;
-		var stageNo = StageManager.Instance.CurStage.Value;
-		var increseHp = baseHp * rate * stageNo;
-		var hp = baseHp + increseHp;
-		return hp;
 	}
 }

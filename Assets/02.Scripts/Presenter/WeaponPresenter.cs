@@ -11,16 +11,19 @@ public class WeaponPresenter
 	private readonly WeaponPanelView view;
 	private readonly WeaponItemViewFactory weaponItemViewFactory;
 	private readonly CurrencyModel.Gold gold;
+	private readonly CharacterView characterView;
 
 	[Inject]
 	public WeaponPresenter(
 		WeaponModel model,
 		WeaponPanelView view,
+		CharacterView characterView,
 		WeaponItemViewFactory weaponItemViewFactory,
 		CurrencyModel.Gold gold)
 	{
 		this.model = model;
 		this.view = view;
+		this.characterView = characterView;
 		this.weaponItemViewFactory = weaponItemViewFactory;
 		this.gold = gold;
 	}
@@ -82,7 +85,13 @@ public class WeaponPresenter
 		itemModel.isEquiped.Subscribe(isEquip =>
 		{
 			UpdateItemView(itemModel, itemView, table);
-			if (isEquip) itemModel.SetWeaponDamage();
+
+			if (isEquip)
+			{
+				var weaponImageResources = TRScriptableManager.Instance.GetSprite("WeaponImageResources").spriteDictionary[table.Image];
+				itemModel.SetWeaponDamage();
+				characterView.SetWeapon(weaponImageResources);
+			}
 		}).AddTo(itemView.gameObject);
 	}
 	public void SubscribeToUpgradeButton(WeaponItemModel itemModel, UpgradeButtonView upgradeButtonView)

@@ -82,7 +82,6 @@ public class WeaponModel
 	{
         this.weaponTableList = weaponTableList;
         this.gold = gold;
-
     }
     public void Init()
     {

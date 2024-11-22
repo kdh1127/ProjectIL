@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using System.Numerics;
 using ThreeRabbitPackage.DesignPattern;
 
 public class MonsterManager : TRSingleton<MonsterManager>
@@ -10,6 +11,7 @@ public class MonsterManager : TRSingleton<MonsterManager>
     public List<MonsterModel> monsterModelList = new();
 
     public int monsterIndex = 0;
+    public BigInteger curBaseHp;
 
     public MonsterModel CreateMonster(StageTable table, bool isBoss)
     {

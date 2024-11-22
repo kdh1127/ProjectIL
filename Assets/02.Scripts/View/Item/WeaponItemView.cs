@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System.Numerics;
-using AlphabetNumber;
+using I2.Loc;
 
 public class WeaponItemView : MonoBehaviour
 { 
@@ -20,9 +17,9 @@ public class WeaponItemView : MonoBehaviour
 
     public void Init(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
     {
-        title_txt.text = table.Name;
         UpdateLevel(table, curLevel, isMaxLevel, isEquiped, isUnLock, isEnughGold);
-
+        SetWeaponImage(table.Image);
+        SetName(table.Name);
     }
 
     public void UpdateLevel(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)
@@ -72,5 +69,18 @@ public class WeaponItemView : MonoBehaviour
             upgradeButtonView.gameObject.SetActive(true);
             upgradeButtonView.SetInteractable(isEnughGold);
         }
+    }
+
+    private void SetWeaponImage(string imageKey)
+	{
+        var weaponImageResources = TRScriptableManager.Instance.GetSprite("WeaponImageResources").spriteDictionary;
+        var weaponImage = weaponImageResources[imageKey];
+        weapon_img.sprite = weaponImage; 
+	}
+
+    private void SetName(string titleKey)
+	{
+        var titleString = LocalizationManager.GetTranslation(titleKey);
+        title_txt.text = titleString;
     }
 }

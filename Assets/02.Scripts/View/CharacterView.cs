@@ -20,6 +20,8 @@ public class CharacterView : MonoBehaviour
 
     public void SetWeapon(Sprite sprite, HandType handType = HandType.RIGHT)
     {
+        weapon_l.transform.localPosition = new Vector3(0, sprite.rect.size.y / 100, 0);
+        weapon_r.transform.localPosition = new Vector3(0, sprite.rect.size.y / 100, 0);
         switch (handType)
         {
             case HandType.LEFT:

@@ -12,13 +12,13 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 {
     public TRState<BattlePresenter> battleState;
 
-    public CharacterView characterView;
+    [Inject]private readonly CharacterView characterView;
     private CharacterModel characterModel = new();
 
     public Camera pixelCamera;
     public FadeScreenView fadeScreenView;
 
-    [Inject]private readonly CurrencyModel currencyModel;
+    [Inject] private readonly CurrencyModel currencyModel;
 
     private new void Awake()
     {

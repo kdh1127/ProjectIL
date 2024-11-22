@@ -37,7 +37,7 @@ public class StageManager : TRSingleton<StageManager>
 
 	public string GetLocalizationStage(int curStage)
     {
-        var stageFormat = ScriptLocalization.Localization.Stage;
+		var stageFormat = LocalizationManager.GetTranslation("Stage_String_Format");
         var stageString = string.Format(stageFormat, curStage);
         return stageString;
     }

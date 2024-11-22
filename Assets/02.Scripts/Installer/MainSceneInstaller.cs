@@ -15,7 +15,7 @@ public class MainSceneInstaller : MonoInstaller
 		Container.Bind<MainScenePresenter>().AsSingle();
 
 		Container.Bind<TopPanelView>()
-			.FromComponentInNewPrefab(topPanelViewPrefab)
+			.FromComponentInHierarchy(topPanelViewPrefab)
 			.AsSingle();
 	}
 }

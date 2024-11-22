@@ -3,6 +3,7 @@ using System.Numerics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using I2.Loc;
 
 public class QuestItemView : MonoBehaviour
 {
@@ -16,11 +17,16 @@ public class QuestItemView : MonoBehaviour
 
     public void Init(Sprite sprite, string title, float endTime, int level, BigInteger reward)
     {
+        var titleString = LocalizationManager.GetTranslation(title);
+        var timeString = $"{TimeSpan.FromSeconds(endTime)}";
+        var rewardString = reward.ToAlphabetNumber();
+        var levelString = $"Lv.{level}";
+
         quest_img.sprite = sprite;
-        title_txt.text = title;
-        time_txt.text = $"{TimeSpan.FromSeconds(endTime)}";
-        reward_txt.text = reward.ToAlphabetNumber();
-        level_txt.text = $"Lv.{level}";
+        title_txt.text = titleString;
+        time_txt.text = timeString;
+        reward_txt.text = rewardString;
+        level_txt.text = levelString;
     }
 
     public void ProgressUpdate(int curSecond, int endTime)

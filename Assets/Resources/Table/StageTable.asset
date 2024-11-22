@@ -21,8 +21,8 @@ MonoBehaviour:
     columnId: MonsterNormalName
   - type: 1
     columnId: MonsterBossName
-  - type: 1
-    columnId: Hp
+  - type: 0
+    columnId: HpIncreasePer
   - type: 1
     columnId: Gold
   - type: 1
@@ -34,8 +34,8 @@ MonoBehaviour:
     datas:
     - 0
     - Skelton_Shilder
-    - Skelton_Shilder
-    - 10
+    - Skelton_Basic
+    - 15
     - 10
     - 1
     - 1
@@ -43,8 +43,8 @@ MonoBehaviour:
     datas:
     - 10
     - Skelton_Basic
-    - Skelton_Basic
-    - 50
+    - Skelton_Archor
+    - 15
     - 50
     - 5
     - 10
@@ -52,8 +52,8 @@ MonoBehaviour:
     datas:
     - 20
     - Skelton_Archor
-    - Skelton_Archor
-    - 100
+    - Skelton_Magician
+    - 15
     - 100
     - 10
     - 20
@@ -61,8 +61,8 @@ MonoBehaviour:
     datas:
     - 30
     - Skelton_Magician
-    - Skelton_Magician
-    - 143
+    - Skelton_Lich
+    - 15
     - 143
     - 14
     - 30
@@ -70,53 +70,53 @@ MonoBehaviour:
     datas:
     - 40
     - Skelton_Lich
-    - Skelton_Lich
-    - 188
+    - Skelton_Boss
+    - 15
     - 188
     - 18
     - 40
   - key: 50
     datas:
     - 50
-    - Skelton_Basic
-    - Skelton_Basic
-    - 233
+    - Skelton_Boss
+    - Devil_Magician
+    - 15
     - 233
     - 23
     - 50
   - key: 60
     datas:
     - 60
-    - Skelton_Shilder
-    - Skelton_Shilder
-    - 278
+    - Devil_Magician
+    - Devil_Warrior
+    - 15
     - 278
     - 27
     - 60
   - key: 70
     datas:
     - 70
-    - Skelton_Archor
-    - Skelton_Archor
-    - 323
+    - Devil_Warrior
+    - Devil_Vamvyr
+    - 15
     - 323
     - 32
     - 70
   - key: 80
     datas:
     - 80
-    - Skelton_Magician
-    - Skelton_Magician
-    - 368
+    - Devil_Vamvyr
+    - Skelton_Shilder
+    - 15
     - 368
     - 36
     - 80
   - key: 90
     datas:
     - 90
-    - Skelton_Lich
-    - Skelton_Lich
-    - 413
+    - Skelton_Shilder
+    - Skelton_Basic
+    - 15
     - 413
     - 41
     - 90
@@ -124,215 +124,215 @@ MonoBehaviour:
     datas:
     - 100
     - Skelton_Basic
-    - Skelton_Boss
-    - 500
+    - Skelton_Archor
+    - 10
     - 500
     - 50
     - 100
   - key: 150
     datas:
     - 150
-    - Skelton_Basic
-    - Skelton_Basic
-    - 520
+    - Skelton_Archor
+    - Skelton_Magician
+    - 10
     - 520
     - 52
     - 150
   - key: 200
     datas:
     - 200
-    - Skelton_Shilder
-    - Skelton_Shilder
-    - 570
+    - Skelton_Magician
+    - Skelton_Lich
+    - 8
     - 570
     - 57
     - 200
   - key: 250
     datas:
     - 250
-    - Skelton_Archor
-    - Skelton_Archor
-    - 612
+    - Skelton_Lich
+    - Skelton_Boss
+    - 8
     - 612
     - 61
     - 250
   - key: 300
     datas:
     - 300
-    - Skelton_Magician
     - Skelton_Boss
-    - 660
+    - Devil_Magician
+    - 8
     - 660
     - 66
     - 300
   - key: 350
     datas:
     - 350
-    - Skelton_Lich
-    - Skelton_Lich
-    - 705
+    - Devil_Magician
+    - Devil_Warrior
+    - 8
     - 705
     - 70
     - 350
   - key: 400
     datas:
     - 400
-    - Skelton_Basic
-    - Skelton_Boss
-    - 752
+    - Devil_Warrior
+    - Devil_Vamvyr
+    - 7
     - 752
     - 75
     - 400
   - key: 450
     datas:
     - 450
+    - Devil_Vamvyr
     - Skelton_Shilder
-    - Skelton_Shilder
-    - 800
+    - 7
     - 800
     - 80
     - 450
   - key: 500
     datas:
     - 500
-    - Skelton_Archor
-    - Skelton_Boss
-    - 1000
+    - Skelton_Shilder
+    - Skelton_Basic
+    - 5
     - 1000
     - 100
     - 500
   - key: 600
     datas:
     - 600
-    - Devil_Magician
-    - Devil_Vamvyr
-    - 894
+    - Skelton_Basic
+    - Skelton_Archor
+    - 5
     - 894
     - 89
     - 600
   - key: 700
     datas:
     - 700
-    - Devil_Warrior
-    - Devil_Vamvyr
-    - 940
+    - Skelton_Archor
+    - Skelton_Magician
+    - 5
     - 940
     - 94
     - 700
   - key: 800
     datas:
     - 800
-    - Skelton_Basic
-    - Skelton_Boss
-    - 986
+    - Skelton_Magician
+    - Skelton_Lich
+    - 5
     - 986
     - 98
     - 800
   - key: 900
     datas:
     - 900
-    - Skelton_Shilder
+    - Skelton_Lich
     - Skelton_Boss
-    - 1033
+    - 5
     - 1033
     - 103
     - 900
   - key: 1000
     datas:
     - 1000
-    - Skelton_Archor
     - Skelton_Boss
-    - 1300
+    - Skelton_Shilder
+    - 5
     - 1300
     - 130
     - 1000
   - key: 1100
     datas:
     - 1100
-    - Skelton_Magician
-    - Skelton_Boss
-    - 1127
+    - Skelton_Shilder
+    - Skelton_Basic
+    - 5
     - 1127
     - 112
     - 1100
   - key: 1200
     datas:
     - 1200
-    - Skelton_Lich
-    - Skelton_Boss
-    - 1174
+    - Skelton_Basic
+    - Skelton_Archor
+    - 5
     - 1174
     - 117
     - 1200
   - key: 1300
     datas:
     - 1300
-    - Skelton_Basic
-    - Skelton_Boss
-    - 1221
+    - Skelton_Archor
+    - Skelton_Magician
+    - 5
     - 1221
     - 122
     - 1300
   - key: 1400
     datas:
     - 1400
-    - Skelton_Shilder
-    - Skelton_Boss
-    - 1268
+    - Skelton_Magician
+    - Skelton_Lich
+    - 5
     - 1268
     - 126
     - 1400
   - key: 1500
     datas:
     - 1500
-    - Skelton_Archor
+    - Skelton_Lich
     - Skelton_Boss
-    - 1314
+    - 5
     - 1314
     - 131
     - 1500
   - key: 1600
     datas:
     - 1600
-    - Skelton_Magician
     - Skelton_Boss
-    - 1361
+    - Devil_Magician
+    - 5
     - 1361
     - 136
     - 1600
   - key: 1700
     datas:
     - 1700
-    - Skelton_Lich
-    - Skelton_Boss
-    - 1408
+    - Devil_Magician
+    - Devil_Warrior
+    - 5
     - 1408
     - 140
     - 1700
   - key: 1800
     datas:
     - 1800
-    - Skelton_Basic
-    - Skelton_Boss
-    - 1455
+    - Devil_Warrior
+    - Devil_Vamvyr
+    - 5
     - 1455
     - 145
     - 1800
   - key: 1900
     datas:
     - 1900
+    - Devil_Vamvyr
     - Skelton_Shilder
-    - Skelton_Boss
-    - 1502
+    - 5
     - 1502
     - 150
     - 1900
   - key: 2000
     datas:
     - 2000
-    - Skelton_Archor
-    - Skelton_Boss
-    - 2000
+    - Skelton_Shilder
+    - Skelton_Basic
+    - 5
     - 2000
     - 200
     - 2000
@@ -377,15 +377,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 0
       - Skelton_Shilder
-      - Skelton_Shilder
-      - 10
+      - Skelton_Basic
+      - 15
       - 10
       - 1
       - 1
@@ -393,15 +393,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 10
       - Skelton_Basic
-      - Skelton_Basic
-      - 50
+      - Skelton_Archor
+      - 15
       - 50
       - 5
       - 10
@@ -409,15 +409,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 20
       - Skelton_Archor
-      - Skelton_Archor
-      - 100
+      - Skelton_Magician
+      - 15
       - 100
       - 10
       - 20
@@ -425,15 +425,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 30
       - Skelton_Magician
-      - Skelton_Magician
-      - 143
+      - Skelton_Lich
+      - 15
       - 143
       - 14
       - 30
@@ -441,15 +441,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 40
       - Skelton_Lich
-      - Skelton_Lich
-      - 188
+      - Skelton_Boss
+      - 15
       - 188
       - 18
       - 40
@@ -457,15 +457,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 50
-      - Skelton_Basic
-      - Skelton_Basic
-      - 233
+      - Skelton_Boss
+      - Devil_Magician
+      - 15
       - 233
       - 23
       - 50
@@ -473,15 +473,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 60
-      - Skelton_Shilder
-      - Skelton_Shilder
-      - 278
+      - Devil_Magician
+      - Devil_Warrior
+      - 15
       - 278
       - 27
       - 60
@@ -489,15 +489,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 70
-      - Skelton_Archor
-      - Skelton_Archor
-      - 323
+      - Devil_Warrior
+      - Devil_Vamvyr
+      - 15
       - 323
       - 32
       - 70
@@ -505,15 +505,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 80
-      - Skelton_Magician
-      - Skelton_Magician
-      - 368
+      - Devil_Vamvyr
+      - Skelton_Shilder
+      - 15
       - 368
       - 36
       - 80
@@ -521,15 +521,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 90
-      - Skelton_Lich
-      - Skelton_Lich
-      - 413
+      - Skelton_Shilder
+      - Skelton_Basic
+      - 15
       - 413
       - 41
       - 90
@@ -537,15 +537,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 100
       - Skelton_Basic
-      - Skelton_Boss
-      - 500
+      - Skelton_Archor
+      - 10
       - 500
       - 50
       - 100
@@ -553,15 +553,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 150
-      - Skelton_Basic
-      - Skelton_Basic
-      - 520
+      - Skelton_Archor
+      - Skelton_Magician
+      - 10
       - 520
       - 52
       - 150
@@ -569,15 +569,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 200
-      - Skelton_Shilder
-      - Skelton_Shilder
-      - 570
+      - Skelton_Magician
+      - Skelton_Lich
+      - 8
       - 570
       - 57
       - 200
@@ -585,15 +585,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 250
-      - Skelton_Archor
-      - Skelton_Archor
-      - 612
+      - Skelton_Lich
+      - Skelton_Boss
+      - 8
       - 612
       - 61
       - 250
@@ -601,15 +601,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 300
-      - Skelton_Magician
       - Skelton_Boss
-      - 660
+      - Devil_Magician
+      - 8
       - 660
       - 66
       - 300
@@ -617,15 +617,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 350
-      - Skelton_Lich
-      - Skelton_Lich
-      - 705
+      - Devil_Magician
+      - Devil_Warrior
+      - 8
       - 705
       - 70
       - 350
@@ -633,15 +633,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 400
-      - Skelton_Basic
-      - Skelton_Boss
-      - 752
+      - Devil_Warrior
+      - Devil_Vamvyr
+      - 7
       - 752
       - 75
       - 400
@@ -649,15 +649,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 450
+      - Devil_Vamvyr
       - Skelton_Shilder
-      - Skelton_Shilder
-      - 800
+      - 7
       - 800
       - 80
       - 450
@@ -665,15 +665,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 500
-      - Skelton_Archor
-      - Skelton_Boss
-      - 1000
+      - Skelton_Shilder
+      - Skelton_Basic
+      - 5
       - 1000
       - 100
       - 500
@@ -681,15 +681,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 600
-      - Devil_Magician
-      - Devil_Vamvyr
-      - 894
+      - Skelton_Basic
+      - Skelton_Archor
+      - 5
       - 894
       - 89
       - 600
@@ -697,15 +697,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 700
-      - Devil_Warrior
-      - Devil_Vamvyr
-      - 940
+      - Skelton_Archor
+      - Skelton_Magician
+      - 5
       - 940
       - 94
       - 700
@@ -713,15 +713,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 800
-      - Skelton_Basic
-      - Skelton_Boss
-      - 986
+      - Skelton_Magician
+      - Skelton_Lich
+      - 5
       - 986
       - 98
       - 800
@@ -729,15 +729,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 900
-      - Skelton_Shilder
+      - Skelton_Lich
       - Skelton_Boss
-      - 1033
+      - 5
       - 1033
       - 103
       - 900
@@ -745,15 +745,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1000
-      - Skelton_Archor
       - Skelton_Boss
-      - 1300
+      - Skelton_Shilder
+      - 5
       - 1300
       - 130
       - 1000
@@ -761,15 +761,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1100
-      - Skelton_Magician
-      - Skelton_Boss
-      - 1127
+      - Skelton_Shilder
+      - Skelton_Basic
+      - 5
       - 1127
       - 112
       - 1100
@@ -777,15 +777,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1200
-      - Skelton_Lich
-      - Skelton_Boss
-      - 1174
+      - Skelton_Basic
+      - Skelton_Archor
+      - 5
       - 1174
       - 117
       - 1200
@@ -793,15 +793,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1300
-      - Skelton_Basic
-      - Skelton_Boss
-      - 1221
+      - Skelton_Archor
+      - Skelton_Magician
+      - 5
       - 1221
       - 122
       - 1300
@@ -809,15 +809,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1400
-      - Skelton_Shilder
-      - Skelton_Boss
-      - 1268
+      - Skelton_Magician
+      - Skelton_Lich
+      - 5
       - 1268
       - 126
       - 1400
@@ -825,15 +825,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1500
-      - Skelton_Archor
+      - Skelton_Lich
       - Skelton_Boss
-      - 1314
+      - 5
       - 1314
       - 131
       - 1500
@@ -841,15 +841,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1600
-      - Skelton_Magician
       - Skelton_Boss
-      - 1361
+      - Devil_Magician
+      - 5
       - 1361
       - 136
       - 1600
@@ -857,15 +857,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1700
-      - Skelton_Lich
-      - Skelton_Boss
-      - 1408
+      - Devil_Magician
+      - Devil_Warrior
+      - 5
       - 1408
       - 140
       - 1700
@@ -873,15 +873,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1800
-      - Skelton_Basic
-      - Skelton_Boss
-      - 1455
+      - Devil_Warrior
+      - Devil_Vamvyr
+      - 5
       - 1455
       - 145
       - 1800
@@ -889,15 +889,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 1900
+      - Devil_Vamvyr
       - Skelton_Shilder
-      - Skelton_Boss
-      - 1502
+      - 5
       - 1502
       - 150
       - 1900
@@ -905,15 +905,15 @@ MonoBehaviour:
       - StageNo
       - MonsterNormalName
       - MonsterBossName
-      - Hp
+      - HpIncreasePer
       - Gold
       - Dia
       - Key
       m_values:
       - 2000
-      - Skelton_Archor
-      - Skelton_Boss
-      - 2000
+      - Skelton_Shilder
+      - Skelton_Basic
+      - 5
       - 2000
       - 200
       - 2000

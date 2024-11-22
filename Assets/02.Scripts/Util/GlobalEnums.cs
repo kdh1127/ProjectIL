@@ -8,7 +8,9 @@ public enum ECurrencyType
 public enum EMonsterType
 {
 	NORMAL,
-	BOSS
+	BOSS,
+	TEN_BOSS,
+	HUNDRED_BOSS
 }
 
 public enum EWeaponItemUpgradeStatus

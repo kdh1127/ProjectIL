@@ -24,12 +24,12 @@ MonoBehaviour:
     - Skelton_Magician
     - Skelton_Shilder
     m_values:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 3671022009787552655, guid: ad8697c19dd9c3e4691104ac36a05db0, type: 3}
+    - {fileID: 7680944903839310635, guid: 9c33c0513bb6c2742836256d5733e70d, type: 3}
+    - {fileID: 7154700476304014582, guid: a6b62e5153a16634d8fb03ef27a0cc4a, type: 3}
+    - {fileID: 6198282042775486887, guid: 4885d8ccfb0f2834c8e7c93ebdaf4ebc, type: 3}
+    - {fileID: 237567536429048964, guid: 87019eb606d474c48ae3bb1908e1b7b1, type: 3}
+    - {fileID: 6313888290563817257, guid: 4aa4f7e0ca8b6754c9d09e8973563c14, type: 3}
+    - {fileID: 777685619393480124, guid: 992850e740dee6249927a1c67c7a8782, type: 3}
+    - {fileID: 6754446678692195979, guid: 99e4ba5888cf879468854f4b30f258cf, type: 3}
     - {fileID: 3705775901124071285, guid: ca0b292062f406145ba54680994ee3e7, type: 3}

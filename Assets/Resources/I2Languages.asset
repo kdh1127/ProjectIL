@@ -17,7 +17,458 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
-    - Term: Localization/Stage
+    - Term: Complete
+      TermType: 0
+      Description: 
+      Languages:
+      - Complete
+      - "\uC644\uB8CC"
+      - "\u5B8C\u5168\u7684"
+      - "\u5B8C\u5168\u7684"
+      - "Vollst\xE4ndig"
+      - Complet
+      - Completare
+      - "\u5B8C\u4E86"
+      - Lengkap
+      - Menyelesaikan
+      - Completo
+      - "\u041F\u043E\u043B\u043D\u044B\u0439"
+      - Completo
+      - "\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"
+      - "Ho\xE0n Th\xE0nh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Dungeon_Clear_String_Format
+      TermType: 0
+      Description: 
+      Languages:
+      - '{0} {1} Floor Cleared'
+      - "{0} {1}\uCE35 \uD074\uB9AC\uC5B4"
+      - "{0} {1} \u697C\u5C42\u5DF2\u6E05\u7A7A"
+      - "{0} {1} \u697C\u5C42\u5DF2\u6E05\u7A7A"
+      - "{0} {1} Etage Ger\xE4umt"
+      - "{0} {1} \xC9tage Lib\xE9r\xE9"
+      - '{0} {1} Piano Liberato'
+      - "{0} {1}\u968E\u30AF\u30EA\u30A2"
+      - '{0} {1} Lantai Dibersihkan'
+      - '{0} {1} Lantai Dibersihkan'
+      - '{0} {1} Piso Limpo'
+      - "{0} {1} \u042D\u0442\u0430\u0436 \u041E\u0447\u0438\u0449\u0435\u043D"
+      - '{0} {1} Piso Despejado'
+      - "{0} {1} \u0E40\u0E04\u0E25\u0E35\u0E22\u0E23\u0E4C\u0E1E\u0E37\u0E49\u0E19\u0E41\u0E25\u0E49\u0E27"
+      - "\u0110\xE3 D\u1ECDn S\u1EA1ch T\u1EA7ng {0} {1}"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Incomplete
+      TermType: 0
+      Description: 
+      Languages:
+      - Incomplete
+      - "\uBBF8\uC644\uB8CC"
+      - "\u4E0D\u5B8C\u6574\u7684"
+      - "\u4E0D\u5B8C\u6574\u7684"
+      - "Unvollst\xE4ndig"
+      - Incomplet
+      - Incompleto
+      - "\u4E0D\u5B8C\u5168"
+      - Tidak Lengkap
+      - Tidak Lengkap
+      - Incompleto
+      - "\u041D\u0435\u043F\u043E\u043B\u043D\u044B\u0439"
+      - Incompleto
+      - "\u0E44\u0E21\u0E48\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"
+      - "Kh\xF4ng \u0110\u1EA7y \u0110\u1EE7"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Progress_String_Format
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Progress: {0} / {1}'
+      - "\uC9C4\uD589\uB3C4: {0} / {1}"
+      - "\u8FDB\u5EA6\uFF1A{0}/{1}"
+      - "\u8FDB\u5EA6\uFF1A{0}/{1}"
+      - 'Fortschritt: {0} / {1}'
+      - "Progression\_:\_{0}\_/\_{1}"
+      - 'Avanzamento: {0}/{1}'
+      - "\u9032\u884C\u5EA6: {0} / {1}"
+      - 'Kemajuan: {0} / {1}'
+      - 'Kemajuan: {0} / {1}'
+      - 'Progresso: {0} / {1}'
+      - "\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441: {0} / {1}"
+      - 'Progreso: {0} / {1}'
+      - "\u0E04\u0E27\u0E32\u0E21\u0E04\u0E37\u0E1A\u0E2B\u0E19\u0E49\u0E32: {0}
+        / {1}"
+      - "Ti\u1EBFn \u0110\u1ED9: {0} / {1}"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest
+      TermType: 0
+      Description: 
+      Languages:
+      - Quest
+      - "\uD018\uC2A4\uD2B8"
+      - "\u5BFB\u6C42"
+      - "\u5BFB\u6C42"
+      - Suche
+      - "Qu\xEAte"
+      - Ricerca
+      - "\u30AF\u30A8\u30B9\u30C8"
+      - Pencarian
+      - Pencarian
+      - Busca
+      - "\u041A\u0432\u0435\u0441\u0442"
+      - "B\xFAsqueda"
+      - "\u0E01\u0E32\u0E23\u0E41\u0E2A\u0E27\u0E07\u0E2B\u0E32"
+      - "Nhi\u1EC7m V\u1EE5"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Clear_String_Format
+      TermType: 0
+      Description: 
+      Languages:
+      - '{0} Quest {1} Completed'
+      - "{0} \uD018\uC2A4\uD2B8 {1}\uD68C \uC644\uB8CC"
+      - "{0}\u4EFB\u52A1{1}\u5DF2\u5B8C\u6210"
+      - "{0}\u4EFB\u52A1{1}\u5DF2\u5B8C\u6210"
+      - '{0} Quest {1} Abgeschlossen'
+      - "{0} Qu\xEAte {1} Termin\xE9e"
+      - '{0} Missione {1} Completata'
+      - "{0}\u30AF\u30A8\u30B9\u30C8{1}\u56DE\u5B8C\u4E86"
+      - '{0} Pencarian {1} Selesai'
+      - '{0} Misi {1} Selesai'
+      - "{0} Miss\xE3o {1} Conclu\xEDda"
+      - "{0} \u041A\u0432\u0435\u0441\u0442 {1} \u0412\u044B\u043F\u043E\u043B\u043D\u0435\u043D"
+      - "{0} Misi\xF3n {1} Completada"
+      - "{0} \u0E20\u0E32\u0E23\u0E01\u0E34\u0E08 {1} \u0E40\u0E2A\u0E23\u0E47\u0E08\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"
+      - "{0} Nhi\u1EC7m V\u1EE5 {1} \u0110\xE3 Ho\xE0n Th\xE0nh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_0
+      TermType: 0
+      Description: 
+      Languages:
+      - Boxing
+      - "\uAD8C\uD22C"
+      - "\u62F3\u51FB"
+      - "\u62F3\u51FB"
+      - Boxen
+      - Boxe
+      - Boxe
+      - "\u30DC\u30AF\u30B7\u30F3\u30B0"
+      - Bertinju
+      - Tinju
+      - Boxe
+      - "\u0411\u043E\u043A\u0441"
+      - Boxeo
+      - "\u0E21\u0E27\u0E22"
+      - "Quy\u1EC1n Anh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Shovel
+      - "\uC0BD\uC9C8\uD558\uAE30"
+      - "\u94F2"
+      - "\u94F2"
+      - Schaufel
+      - Pelle
+      - Pala
+      - "\u30B7\u30E3\u30D9\u30EB"
+      - Penyodok
+      - Sekop
+      - "P\xE1"
+      - "\u041B\u043E\u043F\u0430\u0442\u0430"
+      - Pala
+      - "\u0E1E\u0E25\u0E31\u0E48\u0E27"
+      - "X\u1EBBng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Convenience Store Part-Time Job
+      - "\uD3B8\uC758\uC810 \uC54C\uBC14"
+      - "\u4FBF\u5229\u5E97\u6253\u5DE5"
+      - "\u4FBF\u5229\u5E97\u6253\u5DE5"
+      - Teilzeitjob Im Supermarkt
+      - "Emploi \xC0 Temps Partiel Dans Un D\xE9panneur"
+      - Lavoro Part-Time In Minimarket
+      - "\u30B3\u30F3\u30D3\u30CB\u30A2\u30EB\u30D0"
+      - Kerja Sambilan Kedai Serbaneka
+      - Pekerjaan Paruh Waktu Di Toko Serba Ada
+      - "Emprego De Meio Per\xEDodo Em Loja De Conveni\xEAncia"
+      - "\u0420\u0430\u0431\u043E\u0442\u0430 \u0412 \u041C\u0430\u0433\u0430\u0437\u0438\u043D\u0435
+        \u041D\u0430 \u041D\u0435\u043F\u043E\u043B\u043D\u044B\u0439 \u0420\u0430\u0431\u043E\u0447\u0438\u0439
+        \u0414\u0435\u043D\u044C"
+      - Trabajo A Tiempo Parcial En Tienda De Conveniencia
+      - "\u0E07\u0E32\u0E19\u0E1E\u0E32\u0E23\u0E4C\u0E17\u0E44\u0E17\u0E21\u0E4C\u0E23\u0E49\u0E32\u0E19\u0E2A\u0E30\u0E14\u0E27\u0E01\u0E0B\u0E37\u0E49\u0E2D"
+      - "Vi\u1EC7c L\xE0m B\xE1n Th\u1EDDi Gian T\u1EA1i C\u1EEDa H\xE0ng Ti\u1EC7n
+        L\u1EE3i"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Picking Stars
+      - "\uBCC4 \uB530\uAE30"
+      - "\u6458\u661F"
+      - "\u6458\u661F"
+      - "Sterne Pfl\xFCcken"
+      - "Choisir Des \xC9toiles"
+      - Raccogliere Le Stelle
+      - "\u30B9\u30BF\u30FC\u30D4\u30C3\u30AD\u30F3\u30B0"
+      - Memetik Bintang
+      - Memilih Bintang
+      - Escolhendo Estrelas
+      - "\u0421\u043E\u0431\u0438\u0440\u0430\u044E \u0417\u0432\u0435\u0437\u0434\u044B"
+      - Recogiendo Estrellas
+      - "\u0E01\u0E33\u0E25\u0E31\u0E07\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E14\u0E32\u0E27"
+      - "H\xE1i Sao"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Training
+      - "\uD6C8\uB828"
+      - "\u8BAD\u7EC3"
+      - "\u8BAD\u7EC3"
+      - Ausbildung
+      - "Entra\xEEnement"
+      - Formazione
+      - "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0"
+      - Latihan
+      - Pelatihan
+      - Treinamento
+      - "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
+      - "Capacitaci\xF3n"
+      - "\u0E01\u0E32\u0E23\u0E1D\u0E36\u0E01\u0E2D\u0E1A\u0E23\u0E21"
+      - "\u0110\xE0o T\u1EA1o"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Collect Beak
+      - "\uBD80\uB9AC \uBAA8\uC73C\uAE30"
+      - "\u6536\u96C6\u5599"
+      - "\u6536\u96C6\u5599"
+      - Schnabel Einsammeln
+      - Ramasser Le Bec
+      - Raccogliere Il Becco
+      - "\u304F\u3061\u3070\u3057\u3092\u96C6\u3081\u308B"
+      - Mengumpul Paruh
+      - Mengumpulkan Paruh
+      - Coletar Bico
+      - "\u0421\u043E\u0431\u0438\u0440\u0430\u0442\u044C \u041A\u043B\u044E\u0432"
+      - Recoger Pico
+      - "\u0E23\u0E27\u0E1A\u0E23\u0E27\u0E21\u0E08\u0E30\u0E07\u0E2D\u0E22\u0E1B\u0E32\u0E01"
+      - "Thu Th\u1EADp M\u1ECF"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Archery
+      - "\uD65C\uC3D8\uAE30"
+      - "\u5C04\u7BAD"
+      - "\u5C04\u7BAD"
+      - "Bogenschie\xDFen"
+      - "Tir \xC0 L'arc"
+      - Tiro Con L'arco
+      - "\u5F13\u3092\u6483\u3064"
+      - Memanah
+      - Panahan
+      - Tiro Com Arco
+      - "\u0421\u0442\u0440\u0435\u043B\u044C\u0431\u0430 \u0418\u0437 \u041B\u0443\u043A\u0430"
+      - Tiro Al Arco
+      - "\u0E22\u0E34\u0E07\u0E18\u0E19\u0E39"
+      - "B\u1EAFn Cung"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Potion Making
+      - "\uD3EC\uC158 \uC81C\uC870"
+      - "\u836F\u6C34\u5236\u4F5C"
+      - "\u836F\u6C34\u5236\u4F5C"
+      - Zaubertrankherstellung
+      - Fabrication De Potions
+      - Preparazione Di Pozioni
+      - "\u30DD\u30FC\u30B7\u30E7\u30F3\u88FD\u9020"
+      - Membuat Ramuan
+      - Pembuatan Ramuan
+      - "Fazer Po\xE7\xF5es"
+      - "\u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u0438\u0435
+        \u0417\u0435\u043B\u0438\u0439"
+      - Hacer Pociones
+      - "\u0E01\u0E32\u0E23\u0E17\u0E33\u0E22\u0E32"
+      - "L\xE0m Thu\u1ED1c"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_6
+      TermType: 0
+      Description: 
+      Languages:
+      - Picking Up Cans
+      - "\uCE94 \uC90D\uAE30"
+      - "\u6361\u8D77\u7F50\u5934"
+      - "\u6361\u8D77\u7F50\u5934"
+      - Dosen Abholen
+      - Ramasser Les Canettes
+      - Raccogliere Lattine
+      - "\u7F36\u3092\u62FE\u3046"
+      - Mengambil Tin
+      - Mengambil Kaleng
+      - Pegando Latas
+      - "\u0421\u043E\u0431\u0438\u0440\u0430\u0435\u043C \u0411\u0430\u043D\u043A\u0438"
+      - Recogiendo Latas
+      - "\u0E01\u0E33\u0E25\u0E31\u0E07\u0E2B\u0E22\u0E34\u0E1A\u0E01\u0E23\u0E30\u0E1B\u0E4B\u0E2D\u0E07"
+      - "Nh\u1EB7t Lon"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_7
+      TermType: 0
+      Description: 
+      Languages:
+      - Making Pizza
+      - "\uD53C\uC790 \uB9CC\uB4E4\uAE30"
+      - "\u505A\u62AB\u8428"
+      - "\u505A\u62AB\u8428"
+      - Pizza Machen
+      - Faire Des Pizzas
+      - Fare La Pizza
+      - "\u30D4\u30B6\u3092\u4F5C\u308B"
+      - Membuat Pizza
+      - Membuat Pizza
+      - Fazendo Pizza
+      - "\u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u0438\u0435
+        \u041F\u0438\u0446\u0446\u044B"
+      - Hacer Pizza
+      - "\u0E17\u0E33\u0E1E\u0E34\u0E0B\u0E0B\u0E48\u0E32"
+      - "L\xE0m B\xE1nh Pizza"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_8
+      TermType: 0
+      Description: 
+      Languages:
+      - Cartography
+      - "\uC9C0\uB3C4 \uC81C\uC791"
+      - "\u5236\u56FE\u5B66"
+      - "\u5236\u56FE\u5B66"
+      - Kartographie
+      - Cartographie
+      - Cartografia
+      - "\u5730\u56F3\u5236\u4F5C"
+      - Kartografi
+      - Pemetaan
+      - Cartografia
+      - "\u041A\u0430\u0440\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u044F"
+      - "Cartograf\xEDa"
+      - "\u0E01\u0E32\u0E23\u0E17\u0E33\u0E41\u0E1C\u0E19\u0E17\u0E35\u0E48"
+      - "B\u1EA3n \u0110\u1ED3 H\u1ECDc"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_9
+      TermType: 0
+      Description: 
+      Languages:
+      - Halloween Part Time Job
+      - "\uD560\uB85C\uC708 \uC54C\uBC14"
+      - "\u4E07\u5723\u8282\u517C\u804C\u5DE5\u4F5C"
+      - "\u4E07\u5723\u8282\u517C\u804C\u5DE5\u4F5C"
+      - Halloween-Teilzeitjob
+      - "Travail \xC0 Temps Partiel Pour Halloween"
+      - Lavoro Part-Time Per Halloween
+      - "\u30CF\u30ED\u30A6\u30A3\u30FC\u30F3\u30A2\u30EB\u30D0"
+      - Kerja Separuh Masa Halloween
+      - Pekerjaan Paruh Waktu Halloween
+      - "Trabalho De Meio Per\xEDodo No Halloween"
+      - "\u0425\u044D\u043B\u043B\u043E\u0443\u0438\u043D, \u041F\u043E\u0434\u0440\u0430\u0431\u043E\u0442\u043A\u0430
+        \u041D\u0430 \u041D\u0435\u043F\u043E\u043B\u043D\u044B\u0439 \u0420\u0430\u0431\u043E\u0447\u0438\u0439
+        \u0414\u0435\u043D\u044C"
+      - Trabajo A Tiempo Parcial En Halloween
+      - "\u0E07\u0E32\u0E19\u0E1E\u0E32\u0E23\u0E4C\u0E17\u0E44\u0E17\u0E21\u0E4C\u0E27\u0E31\u0E19\u0E2E\u0E32\u0E42\u0E25\u0E27\u0E35\u0E19"
+      - "C\xF4ng Vi\u1EC7c B\xE1n Th\u1EDDi Gian Halloween"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Upgrade_String_Format
+      TermType: 0
+      Description: 
+      Languages:
+      - Strengthen {0} Quest {1} Times
+      - "{0} \uD018\uC2A4\uD2B8 {1}\uD68C \uAC15\uD654"
+      - "\u5F3A\u5316{0}\u4EFB\u52A1{1}\u6B21"
+      - "\u5F3A\u5316{0}\u4EFB\u52A1{1}\u6B21"
+      - "St\xE4rke {0} Quest {1} Mal"
+      - "Renforcez {0} Qu\xEAtes {1} Fois"
+      - Rafforza {0} Missione {1} Volte
+      - "{0}\u30AF\u30A8\u30B9\u30C8{1}\u56DE\u5F37\u5316"
+      - Kuatkan {0} Pencarian {1} Kali
+      - Perkuat {0} Quest {1} Kali
+      - "Fortale\xE7a {0} Miss\xE3o {1} Vezes"
+      - "\u0423\u0441\u0438\u043B\u0435\u043D\u0438\u0435 {0} \u041A\u0432\u0435\u0441\u0442\u0430
+        {1}\_\u0420\u0430\u0437."
+      - "Fortalecer {0} Misi\xF3n {1} Veces"
+      - "\u0E40\u0E2A\u0E23\u0E34\u0E21\u0E04\u0E27\u0E32\u0E21\u0E41\u0E02\u0E47\u0E07\u0E41\u0E01\u0E23\u0E48\u0E07
+        {0} \u0E20\u0E32\u0E23\u0E01\u0E34\u0E08 {1} \u0E04\u0E23\u0E31\u0E49\u0E07"
+      - "T\u0103ng C\u01B0\u1EDDng {0} Nhi\u1EC7m V\u1EE5 {1} L\u1EA7n"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Shop
+      TermType: 0
+      Description: 
+      Languages:
+      - Shop
+      - "\uC0C1\uC810"
+      - "\u5E97\u94FA"
+      - "\u5E97\u94FA"
+      - "Gesch\xE4ft"
+      - Boutique
+      - Negozio
+      - "\u5E97"
+      - Kedai
+      - Toko
+      - Comprar
+      - "\u041C\u0430\u0433\u0430\u0437\u0438\u043D"
+      - Comercio
+      - "\u0E23\u0E49\u0E32\u0E19\u0E04\u0E49\u0E32"
+      - "C\u1EEDa H\xE0ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Stage
+      TermType: 0
+      Description: 
+      Languages:
+      - Stage
+      - "\uC2A4\uD14C\uC774\uC9C0"
+      - "\u9636\u6BB5"
+      - "\u9636\u6BB5"
+      - "B\xFChne"
+      - "Sc\xE8ne"
+      - Palcoscenico
+      - "\u30B9\u30C6\u30FC\u30B8"
+      - Pentas
+      - Panggung
+      - "Est\xE1gio"
+      - "\u042D\u0442\u0430\u043F"
+      - Escenario
+      - "\u0E40\u0E27\u0E17\u0E35"
+      - "S\xE2n Kh\u1EA5u"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Stage_String_Format
       TermType: 0
       Description: 
       Languages:
@@ -38,256 +489,67 @@ MonoBehaviour:
       - "S\xE2n Kh\u1EA5u {0}"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Localization/Quest_Name_0
+    - Term: Treasure
       TermType: 0
       Description: 
       Languages:
-      - Hunting Lat
-      - "\uBCF5\uC2F1"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Treasure
+      - "\uBCF4\uBB3C"
+      - "\u5B9D\u85CF"
+      - "\u5B9D\u85CF"
+      - Schatz
+      - "Tr\xE9sor"
+      - Tesoro
+      - "\u5B9D\u7269"
+      - Harta Karun
+      - Harta Karun
+      - Tesouro
+      - "\u0421\u043E\u043A\u0440\u043E\u0432\u0438\u0449\u0435"
+      - Tesoro
+      - "\u0E2A\u0E21\u0E1A\u0E31\u0E15\u0E34"
+      - "Kho B\xE1u"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Localization/Quest_Name_1
+    - Term: Weapon
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\uB545\uD30C\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Weapon
+      - "\uBB34\uAE30"
+      - "\u6B66\u5668"
+      - "\u6B66\u5668"
+      - Waffe
+      - Arme
+      - Arma
+      - "\u6B66\u5668"
+      - Senjata
+      - Senjata
+      - Arma
+      - "\u041E\u0440\u0443\u0436\u0438\u0435"
+      - Arma
+      - "\u0E2D\u0E32\u0E27\u0E38\u0E18"
+      - "V\u0169 Kh\xED"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Localization/Quest_Name_2
+    - Term: Weapon_Upgrade_String_Format
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\uD6C8\uB828"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_3
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uBD80\uB9AC \uBAA8\uC73C\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_4
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uD65C\uC3D8\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_5
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uD3EC\uC158 \uC81C\uC870"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_6
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uCE94 \uC90D\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_7
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uD53C\uC790 \uB9CC\uB4E4\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_8
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uC9C0\uB3C4 \uC81C\uC791"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_9
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uD560\uB85C\uC708 \uC54C\uBC14"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_10
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uD3B8\uC758\uC810 \uC54C\uBC14"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Localization/Quest_Name_11
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uBCC4 \uB530\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Reinforced {0} {1} Times
+      - "{0} {1}\uD68C \uAC15\uD654"
+      - "\u5F3A\u5316{0} {1}\u6B21"
+      - "\u5F3A\u5316{0} {1}\u6B21"
+      - "{0} {1} Mal Verst\xE4rkt"
+      - "Renforc\xE9 {0} {1}\_Fois"
+      - Rinforzato {0} {1} Volte
+      - "{0} {1}\u56DE\u3092\u5F37\u5316"
+      - Diperkukuh {0} {1} Kali
+      - Diperkuat {0} {1} Kali
+      - "Refor\xE7ado {0} {1} Vezes"
+      - "\u0423\u0441\u0438\u043B\u0435\u043D\u043E {0} {1} \u0420\u0430\u0437"
+      - Reforzado {0} {1} Veces
+      - "\u0E40\u0E2A\u0E23\u0E34\u0E21\u0E01\u0E33\u0E25\u0E31\u0E07 {0} {1} \u0E04\u0E23\u0E31\u0E49\u0E07"
+      - "\u0110\u01B0\u1EE3c Gia C\u1ED1 {0} {1} L\u1EA7n"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     CaseInsensitiveTerms: 0
@@ -344,7 +606,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwti8St0EVhATB-VpJWR23qwFINXKYxYehNQ1Zl349q0_OePYX2tUGkNTPo_ggd2Nwf/exec
     Google_SpreadsheetKey: 1PQ0UdVoaxsFOlXSz-F80s2stQRCQHtq_wRUwjxXZb_Y
     Google_SpreadsheetName: I2Loc ProjectIL Localization
-    Google_LastUpdatedVersion: 1730033081184
+    Google_LastUpdatedVersion: 1732239600882
     Google_Password: threerabbit1!
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

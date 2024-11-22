@@ -12,6 +12,7 @@ public class QuestItemModel
 
     public bool IsOn => m_level.Value > 0;
     private UserDataManager.MissionData MissionData => UserDataManager.Instance.missiondata;
+    private UserDataManager.CharacterData CharacterData => UserDataManager.Instance.characterData;
 
     [Inject]
     public QuestItemModel(QuestTable table, CurrencyModel.Gold gold) 
@@ -44,8 +45,9 @@ public class QuestItemModel
 
         if (isComplete)
         {
+           
             m_elpasedTime.Value = 0;
-            gold.Add(reward);
+            gold.Add(reward * (CharacterData.TreasureQuestGoldPer / 100));
             MissionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
         }
         else

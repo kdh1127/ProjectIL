@@ -56,7 +56,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 
     private void SubscribeMonster(MonsterModel model, MonsterView view)
 	{
-        // 나중에 오브젝트 풀로 변경하자
+        // TODO: 나중에 오브젝트 풀로 변경하자
+        // TODO: 리팩토링 필요 유저 스탯 매니저 제작
         model.DeathSubject.Subscribe(_ =>
         {
             view.Animator.SetTrigger("Death");
@@ -65,7 +66,21 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 
             model.GetReward().ToList().ForEach(reward =>
             {
-                currencyModel.AddCurrency(reward.Key, reward.Value);
+                BigInteger totalReward = 0;
+                var enemyGoldIncreasePer = UserDataManager.Instance.characterData.TreasureEnemyGoldPer;
+                switch (reward.Key)
+                {
+                    case ECurrencyType.GOLD:
+                        BigInteger factor = enemyGoldIncreasePer * reward.Value / 100;
+                        BigInteger increaseReward = reward.Value + factor;
+                        totalReward = increaseReward > 0 ? increaseReward : reward.Value;
+                        break;
+                    case ECurrencyType.DIA:
+                        break;
+                    case ECurrencyType.KEY:
+                        break;
+                }
+                currencyModel.AddCurrency(reward.Key, totalReward);
             });
         }).AddTo(view.gameObject);
 

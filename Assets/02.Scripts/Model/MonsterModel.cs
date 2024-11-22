@@ -10,7 +10,8 @@ public class MonsterModel
     public Subject<Unit> DeathSubject = new();
 	public BigInteger maxHp;
 
-    public void Init(StageTable table, EMonsterType monsterType)
+
+	public void Init(StageTable table, EMonsterType monsterType)
 	{
 		var baseHp = StageManager.Instance.stageBaseHp;
 		switch (monsterType)
@@ -18,25 +19,25 @@ public class MonsterModel
 			case EMonsterType.NORMAL:
 				hp.Value = baseHp;
 				maxHp = baseHp;
-				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(ECurrencyType.GOLD, table.Gold.ToBigInt());
 				break;
 			case EMonsterType.BOSS:
 				hp.Value = baseHp * 5;
 				maxHp = baseHp * 5;
-				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(ECurrencyType.GOLD, table.Gold.ToBigInt());
 				reward.Add(ECurrencyType.KEY, 2);
 				break;
 			case EMonsterType.TEN_BOSS:
 				hp.Value = baseHp * 10;
 				maxHp = baseHp * 10;
-				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(ECurrencyType.GOLD, table.Gold.ToBigInt());
 				reward.Add(ECurrencyType.KEY, 5);
 				reward.Add(ECurrencyType.DIA, 3);
 				break;
 			case EMonsterType.HUNDRED_BOSS:
 				hp.Value = baseHp * 50;
 				maxHp = baseHp * 50;
-				reward.Add(ECurrencyType.GOLD, BigInteger.Parse(table.Gold));
+				reward.Add(ECurrencyType.GOLD, table.Gold.ToBigInt());
 				reward.Add(ECurrencyType.KEY, 10);
 				reward.Add(ECurrencyType.DIA, 20);
 				break;

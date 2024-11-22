@@ -107,6 +107,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7957084221416631616}
     m_Modifications:
+    - target: {fileID: 7253578597502750331, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253578597502750331, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7253578598634931344, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -195,7 +203,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreasurePanel
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7253578598634931347, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253578598894369287, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253578599001084059, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -290
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253578599001084059, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7253578599001084057, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
 --- !u!1 &7957084221690560557 stripped
 GameObject:

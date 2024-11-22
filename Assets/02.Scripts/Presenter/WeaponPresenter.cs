@@ -36,7 +36,7 @@ public class WeaponPresenter
 			InitItemView(weaponItemModel, weaponItemView, table);
 			SubscribeToWeaponItemModel(weaponItemModel, weaponItemView, table);
 			SubscribeToUpgradeButton(weaponItemModel, weaponItemView.upgradeButtonView);
-			SubscribeToGold(weaponItemView.upgradeButtonView, table);
+			SubscribeToGold(weaponItemModel, weaponItemView.upgradeButtonView, table);
 			Debug.Log($"No: {table.WeaponNo}, UnLock: {weaponItemModel.isUnLock.Value}, MaxLevel: {weaponItemModel.isMaxLevel.Value}, Equip: {weaponItemModel.isEquiped.Value}");
 		});
 	}
@@ -92,9 +92,11 @@ public class WeaponPresenter
 			itemModel.Upgrade();
 		}).AddTo(upgradeButtonView.gameObject);
 	}
-	public void SubscribeToGold(UpgradeButtonView upgradeButtonView, WeaponTable table)
+	public void SubscribeToGold(WeaponItemModel itemModel, UpgradeButtonView upgradeButtonView, WeaponTable table)
 	{
-		gold.Subscribe(_ =>
+		gold
+		.Where(_ => itemModel.isUnLock.Value)
+		.Subscribe(_ =>
 		{
 			var isEnughGold = gold.CanSubtract(table.Cost.ToBigInt());
 			upgradeButtonView.SetInteractable(isEnughGold);

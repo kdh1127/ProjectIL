@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+  m_Color: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -396,9 +396,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7957084221416631616}
     m_Modifications:
+    - target: {fileID: 8912460042192784222, guid: 2440b69c975d5424990f15889266b64e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8912460042909748472, guid: 2440b69c975d5424990f15889266b64e, type: 3}
       propertyPath: m_Name
       value: WeaponPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912460042909748472, guid: 2440b69c975d5424990f15889266b64e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8912460042909748473, guid: 2440b69c975d5424990f15889266b64e, type: 3}
       propertyPath: m_Pivot.x
@@ -483,6 +491,14 @@ PrefabInstance:
     - target: {fileID: 8912460042909748473, guid: 2440b69c975d5424990f15889266b64e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912460043141084534, guid: 2440b69c975d5424990f15889266b64e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -290
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912460043141084534, guid: 2440b69c975d5424990f15889266b64e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2440b69c975d5424990f15889266b64e, type: 3}
@@ -641,7 +657,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1970222502957976378, guid: 766c897fc191da64eac7215985544b39, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1970222503727456094, guid: 766c897fc191da64eac7215985544b39, type: 3}
       propertyPath: m_Name
@@ -649,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1970222503727456094, guid: 766c897fc191da64eac7215985544b39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1970222503727456095, guid: 766c897fc191da64eac7215985544b39, type: 3}
       propertyPath: m_Pivot.x

@@ -51,8 +51,9 @@ public class MissionModel
             return tableList[clearMission];
     }
 
-    public void ClearMission(MissionTable table)  
+    public void ClearMission()  
     {
+        var table = GetCurMissionTable();
         var rewardType = table.RewardType.ToEnum<ECurrencyType>();
 
         UserDataManager.Instance.missiondata.ClearMissionNo++;

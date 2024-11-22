@@ -9,12 +9,12 @@ using AlphabetNumber;
 public class WeaponItemView : MonoBehaviour
 { 
     public UpgradeButtonView upgradeButtonView;
-    public Image weaponItemBg_img;
     public GameObject dim_img;
     public Image weapon_img;
     public TMP_Text title_txt;
     public TMP_Text level_txt;
     public TMP_Text totalAtack_txt;
+    public GameObject selectFrame;
 
     readonly private int maxLevel = 5;
 
@@ -29,7 +29,7 @@ public class WeaponItemView : MonoBehaviour
     {
         UpdateTotalAttackText(table, curLevel);
         UpdateLevelText(curLevel, isMaxLevel);
-        UpdateWeaponBackground(isEquiped);
+        UpdateEquipedState(isEquiped);
         UpdateState(isUnLock, isMaxLevel, isEnughGold);
     }
 
@@ -47,9 +47,9 @@ public class WeaponItemView : MonoBehaviour
             $"Lv. {curLevel}/{maxLevel}";
     }
 
-    private void UpdateWeaponBackground(bool isEquiped)
+    private void UpdateEquipedState(bool isEquiped)
 	{
-        weaponItemBg_img.color = isEquiped ? Color.yellow : Color.white;
+        selectFrame.SetActive(isEquiped);
     }
 
 

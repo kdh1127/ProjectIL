@@ -7,7 +7,8 @@ public class MainButtonView : MonoBehaviour
 	public ToggleGroup toggleGroup;
 	public List<CommonToggle> toggleList;
 	public List<GameObject> panelList;
-
+	public Color activeToggleColor;
+	public Color deactiveToggleColor;
 	private void Awake()
 	{
 		RegisterToggleList(toggleGroup, toggleList);
@@ -24,6 +25,13 @@ public class MainButtonView : MonoBehaviour
 					toggleGroup.NotifyToggleOn(toggle);
 					DeactivateAllPanel();
 					ActivatePanel(toggle.type);
+					ChangeToggleColor(toggle, activeToggleColor);
+					toggle.interactable = false;
+				}
+				else
+				{
+					ChangeToggleColor(toggle, deactiveToggleColor);
+					toggle.interactable = true;
 				}
 			});
 		}
@@ -54,5 +62,14 @@ public class MainButtonView : MonoBehaviour
 		{
 			panel.SetActive(false);
 		});
+	}
+
+	public void ChangeToggleColor(CommonToggle toggle, Color color)
+	{
+		var toggleImage = toggle.GetComponentInChildren<Image>(); 
+		if (toggleImage != null)
+		{
+			toggleImage.color = color;
+		}
 	}
 }

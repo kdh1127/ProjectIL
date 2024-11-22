@@ -34,7 +34,7 @@ public class MissionPresenter
 		var curMissionTable = model.GetCurMissionTable();
 		completeButtonView.button
 			.OnClickAsObservable()
-			.Subscribe(_ => model.ClearMission(curMissionTable))
+			.Subscribe(_ => model.ClearMission())
 			.AddTo(completeButtonView.gameObject);
 	}
 

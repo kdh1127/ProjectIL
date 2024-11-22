@@ -13,7 +13,6 @@ public class QuestItemView : MonoBehaviour
     public TMP_Text time_txt;
     public TMP_Text reward_txt;
     public TMP_Text level_txt;
-    public Material progressBarMaterial;
 
     public void Init(Sprite sprite, string title, float endTime, int level, BigInteger reward)
     {
@@ -28,7 +27,6 @@ public class QuestItemView : MonoBehaviour
     {
         var progress = (float)curSecond / (float)endTime;
         quest_slider.value = progress;
-        progressBarMaterial.SetFloat("_Progress", Mathf.Clamp01(progress));
         time_txt.text = $"{TimeSpan.FromSeconds(endTime - curSecond)}";
     }
 

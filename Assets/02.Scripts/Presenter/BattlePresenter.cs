@@ -14,10 +14,10 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 
     [Inject]private readonly CharacterView characterView;
     private CharacterModel characterModel = new();
-
+    private BattleState isBattleState = new();
     public Camera pixelCamera;
     public FadeScreenView fadeScreenView;
-
+    private EBattleState state = EBattleState.Init;
     [Inject] private readonly CurrencyModel currencyModel;
 
     private new void Awake()
@@ -49,6 +49,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
     {
         characterView.AttackSubject.Subscribe(monster =>
         {
+            if (state != EBattleState.Battle) return;
+
             var attackInfo = characterModel.Attack();
             MonsterManager.Instance.GetTargetMonster().TakeDamage(attackInfo);
         }).AddTo(characterView.gameObject);

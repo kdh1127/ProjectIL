@@ -18,4 +18,9 @@ public class CharacterManager : TRSingleton<CharacterManager>
 	{
 		characterPosition_tr.localPosition = Vector3.zero;
 	}
+
+    public void ResetCharacter()
+    {
+		characterPosition_tr.localPosition = Vector3.zero;
+	}
 }

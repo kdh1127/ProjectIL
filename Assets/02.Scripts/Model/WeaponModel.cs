@@ -59,7 +59,6 @@ public class WeaponItemModel
             if (isEquiped.Value)
 			{
                 prevItemModel.isEquiped.Value = false;
-                Debug.Log($"No: {table.WeaponNo}, prevEquip: {prevItemModel.isEquiped.Value}");
 			}
 		}
     }
@@ -68,6 +67,14 @@ public class WeaponItemModel
     {
         var calcLevel = m_level.Value == 0 ? 0 : m_level.Value - 1;
         CharacterData.WeaponDamage = BigInteger.Parse(table.BaseAtk) + (calcLevel * BigInteger.Parse(table.Increase));
+    }
+
+    public void Reset()
+    {
+        m_level.Value = 0;
+        isMaxLevel.Value = false;
+        isUnLock.Value = false;
+        isEquiped.Value = false;
     }
 }
 
@@ -116,5 +123,17 @@ public class WeaponModel
         {
             weaponItemList.Add(weaponItem);
         });
+    }
+
+    public void Reset()
+    {
+        weaponItemList.ForEach(weaponItem =>
+        {
+            weaponItem.Reset();
+        });
+
+        weaponItemList[0].m_level.Value = 1;
+        weaponItemList[0].isEquiped.Value = true;
+        weaponItemList[0].UpdateState();
     }
 }

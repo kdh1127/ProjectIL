@@ -38,3 +38,12 @@ public enum EIncreaseType
 	Damage,
 	ExtraDamage
 }
+
+public enum EBattleState
+{
+	Init,
+	Lull,
+	Clear,
+	Battle,
+	Reset
+}

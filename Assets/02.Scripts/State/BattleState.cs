@@ -19,8 +19,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
         public override void Enter(BattlePresenter battlePresenter)
         {
             base.Enter(battlePresenter);
-
-			var table = StageManager.Instance.GetCurStageTable();
+            
+            var table = StageManager.Instance.GetCurStageTable();
 			var monsterResource = TRScriptableManager.Instance.GetGameObject("MonsterResources").gameObjectDictionary;
             var monsterManager = MonsterManager.Instance;
 
@@ -44,6 +44,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 			}
 
             battlePresenter.fadeScreenView.FadeIn(0.5f, () => isComplete = true);
+            battlePresenter.state = EBattleState.Init;
         }
     }
 
@@ -60,6 +61,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
         {
             base.Enter(battlePresenter);
             battlePresenter.characterView.Animator.SetTrigger("Attack");
+            battlePresenter.state = EBattleState.Battle;
         }
 
         public override void Update(BattlePresenter battlePresenter)
@@ -88,6 +90,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
         {
             base.Enter(battlePresenter);
             battlePresenter.characterView.Animator.SetTrigger("Run");
+            battlePresenter.state = EBattleState.Lull;
         }
 
         public override void Update(BattlePresenter battlePresenter)
@@ -123,6 +126,30 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
                 MonsterManager.Instance.ClearAllMonster(); ;
                 isComplete = true;
             });
+            battlePresenter.state = EBattleState.Clear;
         }
 	}
+
+    public class ResetState : TRState<BattlePresenter>
+    {
+        bool isComplete = false;
+        public override TRState<BattlePresenter> InputHandle(BattlePresenter battlePresenter)
+        {
+            if (isComplete) return new InitState();
+            return this;
+        }
+
+        public override void Enter(BattlePresenter battlePresenter)
+        {
+            base.Enter(battlePresenter);
+            battlePresenter.state = EBattleState.Reset;
+            battlePresenter.characterView.Animator.SetTrigger("Run");
+            StageManager.Instance.ResetStage();
+            MonsterManager.Instance.ClearAllMonster();
+            battlePresenter.fadeScreenView.FadeOut(0.5f, () =>
+            {
+                isComplete = true;
+            });
+        }
+    }
 }

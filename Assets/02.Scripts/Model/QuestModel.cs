@@ -55,11 +55,18 @@ public class QuestItemModel
             m_elpasedTime.Value++;
         }
     }
+
+    public void Reset()
+    {
+        m_elpasedTime.Value = 0;
+        m_level.Value = 0;
+    }
 }
 
 public class QuestModel
 {
     public List<QuestItemModel> questItemList = new();
+    public Subject<Unit> InitSubject = new();
 
     private readonly List<QuestTable> questTableList;
     private readonly CurrencyModel.Gold gold;
@@ -73,6 +80,7 @@ public class QuestModel
 
     public void Init()
     {
+        questItemList.Clear();
         questTableList.ForEach(table => questItemList.Add(new QuestItemModel(table, gold)));
     }
 
@@ -90,5 +98,10 @@ public class QuestModel
 
         questItemList.Clear();
         data.questItemList.ForEach(questItem => questItemList.Add(questItem));
+    }
+
+    public void Reset()
+    {
+        questItemList.ForEach(questItem => questItem.Reset());
     }
 }

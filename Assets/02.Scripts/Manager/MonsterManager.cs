@@ -36,6 +36,7 @@ public class MonsterManager : TRSingleton<MonsterManager>
         });
 
         monsterModelList.Clear();
+        monsterIndex = 0;
     }
 
     public Transform GetSpawnPosition(int index)

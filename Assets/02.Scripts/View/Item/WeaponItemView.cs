@@ -34,7 +34,9 @@ public class WeaponItemView : MonoBehaviour
 	{
         var calcLevel = curLevel == 0 ? 0 : curLevel - 1;
         var totalAttack = table.BaseAtk.ToBigInt() + (calcLevel * table.Increase.ToBigInt());
-        totalAtack_txt.text = totalAttack.ToAlphabetNumber();
+        var weaponAttackStringFormat = LocalizationManager.GetTranslation("Weapon_Attack_String_Format");
+        var weaponAttackString = string.Format(weaponAttackStringFormat, totalAttack.ToAlphabetNumber());
+        totalAtack_txt.text = weaponAttackString;
     }
 
     private void UpdateLevelText(int curLevel, bool isMaxLevel)

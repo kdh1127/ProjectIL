@@ -31,7 +31,7 @@ public class TreasurePresenter
 			var treasureItemView = treasureItemViewFactory.Create();
 			var treasureItemModel = model.treasureItemList[table.TreasureNo];
 
-			treasureItemView.Init(table.TreasureName, table.IncreaseType, table.Increase.ToBigInt(), treasureItemModel.level.Value, table.Increase.ToBigInt());
+			treasureItemView.Init(table.TreasureName, table.IncreaseTypeString, treasureItemModel.level.Value, table.Increase.ToBigInt());
 			treasureItemView.upgradeButtonView.Init(table.Increase.ToBigInt(), table.TreasureCost.ToBigInt(), costImageResources["Key"]);
 
 			//upgradeButtonView.button.OnClickAsObservable()

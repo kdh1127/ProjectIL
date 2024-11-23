@@ -22,6 +22,8 @@ public class GameInitializer : MonoBehaviour
 	[Inject] private readonly CurrencyPresenter currencyPresenter;
 	[Inject] private readonly CurrencyModel currencyModel;
 
+	[Inject] private readonly ReincarnationPresenter reincarnationPresenter;
+	[Inject] private readonly ReincarnationModel reincarnationModel;
 
 	private void Awake()
 	{
@@ -42,6 +44,7 @@ public class GameInitializer : MonoBehaviour
 		missionModel.Init();
 		treasureModel.Init(TreasureTableList.Get());
 		currencyModel.Init();
+		reincarnationModel.Init();
     }
 
 	private void InitTable()
@@ -60,6 +63,7 @@ public class GameInitializer : MonoBehaviour
 		treasurePresenter.Subscribe();
 		mainScenePresenter.Subscribe();
 		currencyPresenter.Subscribe();
+		reincarnationPresenter.Subscribe();
 	}
 
 	public void InitPlugins()

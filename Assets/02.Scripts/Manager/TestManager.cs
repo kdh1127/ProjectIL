@@ -6,9 +6,13 @@ public class TestManager : MonoBehaviour
 	[Inject] private readonly CurrencyModel.Key key;
 
 
-	public void ShowMeTheMoney()
+	public void ShowMeTheGold()
 	{
-		//gold.Add(100000);
+		gold.Add(1000000000);
+	}
+
+	public void ShowMeTheKey()
+	{
 		key.Add(100000000000);
 	}
 }

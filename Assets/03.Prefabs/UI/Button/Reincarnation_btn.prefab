@@ -510,8 +510,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8290406473207468089}
   - component: {fileID: 8290406473207468088}
+  - component: {fileID: 8015410215716687938}
   m_Layer: 5
-  m_Name: ReincarnationItem
+  m_Name: Reincarnation_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,6 +561,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8015410215716687938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290406473207468090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef1e9f81e11f4845abfb4e2e925614c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 8290406472055923307}
+  popupPrefab: {fileID: 1954008156613980416, guid: eb03e1bc6b243464486567a3202a4c87, type: 3}
+  parent_tr: {fileID: 0}
 --- !u!1 &8290406473637720948
 GameObject:
   m_ObjectHideFlags: 0

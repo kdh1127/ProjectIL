@@ -67,4 +67,10 @@ public class StageManager : TRSingleton<StageManager>
 		stageBaseHp = prevBaseHp + increaseHp;
 	}
 
+    public void ResetStage()
+    {
+		CurStage.Value = 0;
+		stageBaseHp = 0;
+	}
+
 }

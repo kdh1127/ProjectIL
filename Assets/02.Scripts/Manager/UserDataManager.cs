@@ -92,8 +92,6 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 		public Dictionary<ESkinIncreaseType, BigInteger> SkinStatDictionary = new();
 
-		public void InitCharacterData()
-
 		public void Init()
 		{
 			MoveSpeed = 1f;
@@ -121,6 +119,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			WeaponDamage = data.WeaponDamage;
 			CriticalDamage = data.CriticalDamage;
 			CriticalChance = data.CriticalChance;
+			SkinStatDictionary = data.SkinStatDictionary;
 		}
 
 		public void Save()

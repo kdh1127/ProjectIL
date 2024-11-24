@@ -12,7 +12,8 @@ public class CommonToggle : Toggle
         Weapon=1,
         Mission=2,
         Treasure=3,
-        Shop=4
+        Skin=4,
+        Shop=5
     }
 
 	[SerializeField] public ToggleType type;

@@ -4,6 +4,7 @@ using ThreeRabbitPackage.DesignPattern;
 using UniRx;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
@@ -90,6 +91,23 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		private BigInteger treasureExtraDamage;
 		public BigInteger TreasureExtraDamage { get => treasureExtraDamage; set => treasureExtraDamage = value; }
 
+        private BigInteger skinDamage;
+        public BigInteger SkinDamage { get => skinDamage; set => skinDamage = value; }
+
+        private BigInteger skinCritChance;
+        public BigInteger SkinCritChance { get => skinCritChance; set => skinCritChance = value; }
+
+        private BigInteger skinCriticalDamage;
+        public BigInteger SkinCriticalDamage { get => skinCriticalDamage; set => skinCriticalDamage = value; }
+
+        private BigInteger skinAttackSpeed;
+        public BigInteger SkinAttackSpeed { get => skinAttackSpeed; set => skinAttackSpeed = value; }
+
+        private BigInteger skinRunSpeed;
+        public BigInteger SkinRunSpeed { get => skinRunSpeed; set => skinRunSpeed = value; }
+
+		public Dictionary<ESkinIncreaseType, BigInteger> SkinStatDictionary = new();
+
 		public void InitCharacterData()
 		{
 			MoveSpeed = 1f;
@@ -102,6 +120,11 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			TreasureEnemyGoldPer = 0;
 			TreasureQuestGoldPer = 0;
 			TreasureExtraDamage = 0;
+
+			Enum.GetValues(typeof(ESkinIncreaseType))
+				.Cast<int>()
+				.ToList()
+				.ForEach(increaseType => SkinStatDictionary.Add((ESkinIncreaseType)increaseType, 0));
 		}
 
 		public void LoadCharacterData()

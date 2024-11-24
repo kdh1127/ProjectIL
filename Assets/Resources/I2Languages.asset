@@ -17,6 +17,27 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
+    - Term: Buy
+      TermType: 0
+      Description: 
+      Languages:
+      - Purchase
+      - "\uAD6C\uB9E4"
+      - "\u8D2D\u4E70"
+      - "\u8D2D\u4E70"
+      - Kaufen
+      - Achat
+      - Acquistare
+      - "\u8CFC\u5165"
+      - Pembelian
+      - Pembelian
+      - Comprar
+      - "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
+      - Compra
+      - "\u0E0B\u0E37\u0E49\u0E2D"
+      - Mua
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
     - Term: Complete
       TermType: 0
       Description: 
@@ -122,6 +143,27 @@ MonoBehaviour:
       - Enemigo Matar Oro
       - "\u0E28\u0E31\u0E15\u0E23\u0E39\u0E2A\u0E31\u0E07\u0E2B\u0E32\u0E23\u0E17\u0E2D\u0E07"
       - "K\u1EBB Th\xF9 Ti\xEAu Di\u1EC7t V\xE0ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Equip
+      TermType: 0
+      Description: 
+      Languages:
+      - Equip
+      - "\uC7A5\uCC29"
+      - "\u88C5\u5907"
+      - "\u88C5\u5907"
+      - "Ausr\xFCsten"
+      - "\xC9quiper"
+      - Equipaggiare
+      - "\u88C5\u5099\u3059\u308B"
+      - Melengkapkan
+      - Melengkapi
+      - Equipar
+      - "\u041E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u0442\u044C"
+      - Equipar
+      - "\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C"
+      - "Trang B\u1ECB"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: Extra_Damage_Increase_String
@@ -555,6 +597,239 @@ MonoBehaviour:
       - "C\u1EEDa H\xE0ng"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
+    - Term: Skin
+      TermType: 0
+      Description: 
+      Languages:
+      - Skin
+      - "\uC2A4\uD0A8"
+      - "\u76AE\u80A4"
+      - "\u76AE\u80A4"
+      - Haut
+      - Peau
+      - Pelle
+      - "\u808C"
+      - Kulit
+      - Kulit
+      - Pele
+      - "\u041A\u043E\u0436\u0430"
+      - Piel
+      - "\u0E1C\u0E34\u0E27"
+      - Da
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_0
+      TermType: 0
+      Description: 
+      Languages:
+      - Golden King's Greatsword
+      - "\uD669\uAE08\uC655\uC758 \uB300\uAC80"
+      - "\u9EC4\u91D1\u738B\u7684\u5927\u5251"
+      - "\u9EC4\u91D1\u738B\u7684\u5927\u5251"
+      - "Gro\xDFschwert Des Goldenen K\xF6nigs"
+      - Espadon Du Roi D'or
+      - Spadone Del Re D'oro
+      - "\u9EC4\u91D1\u738B\u306E\u5927\u5263"
+      - Pedang Besar Raja Emas
+      - Pedang Besar Raja Emas
+      - Espada Grande Do Rei Dourado
+      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447 \u0417\u043E\u043B\u043E\u0442\u043E\u0433\u043E
+        \u041A\u043E\u0440\u043E\u043B\u044F"
+      - Gran Espada Del Rey Dorado
+      - "\u0E14\u0E32\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E02\u0E2D\u0E07\u0E23\u0E32\u0E0A\u0E32\u0E17\u0E2D\u0E07\u0E04\u0E33"
+      - "\u0110\u1EA1i Ki\u1EBFm C\u1EE7a Vua V\xE0ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Sea God King's Greatsword
+      - "\uD574\uC2E0\uC655\uC758 \uB300\uAC80"
+      - "\u6D77\u795E\u738B\u7684\u5927\u5251"
+      - "\u6D77\u795E\u738B\u7684\u5927\u5251"
+      - "Gro\xDFschwert Des Meeresgottk\xF6nigs"
+      - Espadon Du Roi Dieu Des Mers
+      - Spadone Del Re Del Dio Del Mare
+      - "\u6D77\u795E\u738B\u306E\u5927\u5263"
+      - Pedang Besar Raja Dewa Laut
+      - Pedang Besar Raja Dewa Laut
+      - Espada Grande Do Rei Do Deus Do Mar
+      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447 \u041A\u043E\u0440\u043E\u043B\u044F
+        \u041C\u043E\u0440\u0441\u043A\u0438\u0445 \u0411\u043E\u0433\u043E\u0432"
+      - Gran Espada Del Rey Dios Del Mar
+      - "\u0E14\u0E32\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E02\u0E2D\u0E07\u0E23\u0E32\u0E0A\u0E32\u0E40\u0E17\u0E1E\u0E17\u0E49\u0E2D\u0E07\u0E17\u0E30\u0E40\u0E25"
+      - "\u0110\u1EA1i Ki\u1EBFm C\u1EE7a Vua H\u1EA3i Th\u1EA7n"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Gram
+      - "\uADF8\uB78C"
+      - "\u514B"
+      - "\u514B"
+      - Gramm
+      - Gramme
+      - Grammo
+      - "\u30B0\u30E9\u30E0"
+      - Gram
+      - Gram
+      - Grama
+      - "\u0413\u0440\u0430\u043C\u043C"
+      - Gramo
+      - "\u0E01\u0E23\u0E31\u0E21"
+      - Gram
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Durango
+      - "\uB4C0\uB791\uACE0"
+      - "\u675C\u5170\u6208"
+      - "\u675C\u5170\u6208"
+      - Durango
+      - Durango
+      - Durango
+      - "\u30C7\u30E5\u30E9\u30F3\u30B4"
+      - Durango
+      - Durango
+      - Durango
+      - "\u0414\u0443\u0440\u0430\u043D\u0433\u043E"
+      - Durango
+      - "\u0E14\u0E39\u0E23\u0E31\u0E07\u0E42\u0E01"
+      - Durango
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Hirukashi
+      - "\uD788\uB8E8\uCE74\uC2DC"
+      - "\u663C\u9E7F"
+      - "\u663C\u9E7F"
+      - Hirukashi
+      - Hirukashi
+      - Hirukashi
+      - "\u3072\u308B\u304B\u3057"
+      - Hirukashi
+      - Hirukashi
+      - Hirukashi
+      - "\u0425\u0438\u0440\u0443\u043A\u0430\u0448\u0438"
+      - Hirukashi
+      - "\u0E2E\u0E34\u0E23\u0E38\u0E04\u0E32\u0E0A\u0E34"
+      - Hirukashi
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Sword Of Jotunheim
+      - "\uC694\uD230\uD558\uC784\uC758 \uAC80"
+      - "\u5C24\u987F\u6D77\u59C6\u4E4B\u5251"
+      - "\u5C24\u987F\u6D77\u59C6\u4E4B\u5251"
+      - Schwert Von Jotunheim
+      - "\xC9p\xE9e De Jotunheim"
+      - Spada Di Jotunheim
+      - "\u30E8\u30C8\u30A5\u30F3\u30CF\u30A4\u30E0\u306E\u5263"
+      - Pedang Jotunheim
+      - Pedang Jotunheim
+      - Espada De Jotunheim
+      - "\u041C\u0435\u0447 \u0419\u043E\u0442\u0443\u043D\u0445\u0435\u0439\u043C\u0430"
+      - Espada De Jotunheim
+      - "\u0E14\u0E32\u0E1A\u0E41\u0E2B\u0E48\u0E07\u0E42\u0E22\u0E17\u0E31\u0E19\u0E44\u0E2E\u0E21\u0E4C"
+      - "Thanh Ki\u1EBFm C\u1EE7a Jotunheim"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_6
+      TermType: 0
+      Description: 
+      Languages:
+      - Red Roof
+      - "\uB808\uB4DC\uB8E8\uD504"
+      - "\u7EA2\u5C4B\u9876"
+      - "\u7EA2\u5C4B\u9876"
+      - Rotes Dach
+      - Toit Rouge
+      - Tetto Rosso
+      - "\u30EC\u30C3\u30C9\u30EB\u30FC\u30D7"
+      - Bumbung Merah
+      - Atap Merah
+      - Telhado Vermelho
+      - "\u041A\u0440\u0430\u0441\u043D\u0430\u044F \u041A\u0440\u044B\u0448\u0430"
+      - Techo Rojo
+      - "\u0E2B\u0E25\u0E31\u0E07\u0E04\u0E32\u0E41\u0E14\u0E07"
+      - "M\xE1i Nh\xE0 \u0110\u1ECF"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_7
+      TermType: 0
+      Description: 
+      Languages:
+      - Excalibur
+      - "\uC5D1\uC2A4\uCE7C\uB9AC\uBC84"
+      - "\u795E\u5251"
+      - "\u795E\u5251"
+      - Excalibur
+      - Excalibur
+      - Excalibur
+      - "\u30A8\u30AF\u30B9\u30AB\u30EA\u30D0\u30FC"
+      - Excalibur
+      - Excalibur
+      - Excalibur
+      - "\u042D\u043A\u0441\u043A\u0430\u043B\u0438\u0431\u0443\u0440"
+      - Excalibur
+      - "\u0E40\u0E2D\u0E47\u0E01\u0E0B\u0E4C\u0E04\u0E32\u0E25\u0E34\u0E40\u0E1A\u0E2D\u0E23\u0E4C"
+      - Excalibur
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_8
+      TermType: 0
+      Description: 
+      Languages:
+      - Odin's Sword
+      - "\uC624\uB518\uC758 \uAC80"
+      - "\u5965\u4E01\u4E4B\u5251"
+      - "\u5965\u4E01\u4E4B\u5251"
+      - Odins Schwert
+      - "L'\xE9p\xE9e D'odin"
+      - La Spada Di Odino
+      - "\u30AA\u30FC\u30C7\u30A3\u30F3\u306E\u5263"
+      - Pedang Odin
+      - Pedang Odin
+      - Espada De Odin
+      - "\u041C\u0435\u0447 \u041E\u0434\u0438\u043D\u0430"
+      - "La Espada De Od\xEDn"
+      - "\u0E14\u0E32\u0E1A\u0E02\u0E2D\u0E07\u0E42\u0E2D\u0E14\u0E34\u0E19"
+      - "Thanh Ki\u1EBFm C\u1EE7a Odin"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Skin_Name_9
+      TermType: 0
+      Description: 
+      Languages:
+      - Cyclops Sword
+      - "\uC0AC\uC774\uD074\uB85C\uD504\uC758 \uAC80"
+      - "\u72EC\u773C\u5DE8\u4EBA\u5251"
+      - "\u72EC\u773C\u5DE8\u4EBA\u5251"
+      - Zyklopenschwert
+      - "\xC9p\xE9e De Cyclope"
+      - Spada Del Ciclope
+      - "\u30B5\u30A4\u30AF\u30ED\u30D5\u306E\u5263"
+      - Pedang Cyclops
+      - Pedang Cyclops
+      - Espada Ciclope
+      - "\u041C\u0435\u0447 \u0426\u0438\u043A\u043B\u043E\u043F\u0430"
+      - "Espada C\xEDclope"
+      - "\u0E14\u0E32\u0E1A\u0E44\u0E0B\u0E04\u0E25\u0E2D\u0E1B\u0E2A\u0E4C"
+      - "Ki\u1EBFm Cyclops"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
     - Term: Stage
       TermType: 0
       Description: 
@@ -723,6 +998,27 @@ MonoBehaviour:
       - Runa De Poder De Ataque Adicional
       - "\u0E23\u0E39\u0E19\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E15\u0E34\u0E21"
       - "Rune T\u0103ng S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: UnEquip
+      TermType: 0
+      Description: 
+      Languages:
+      - Unequip
+      - "\uD574\uC81C"
+      - "\u53D6\u6D88\u88C5\u5907"
+      - "\u53D6\u6D88\u88C5\u5907"
+      - "Ausr\xFCsten"
+      - "D\xE9s\xE9quiper"
+      - Disequipaggiato
+      - "\u88C5\u5099\u3092\u5916\u3059"
+      - Unequip
+      - Tidak Melengkapi
+      - Desequipar
+      - "\u0421\u043D\u044F\u0442\u044C \u0421\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435"
+      - Desequipar
+      - "\u0E16\u0E2D\u0E14\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C"
+      - "C\u1EDFi B\u1ECF Trang B\u1ECB"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: Weapon
@@ -1496,7 +1792,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwti8St0EVhATB-VpJWR23qwFINXKYxYehNQ1Zl349q0_OePYX2tUGkNTPo_ggd2Nwf/exec
     Google_SpreadsheetKey: 1PQ0UdVoaxsFOlXSz-F80s2stQRCQHtq_wRUwjxXZb_Y
     Google_SpreadsheetName: I2Loc ProjectIL Localization
-    Google_LastUpdatedVersion: 1732332421307
+    Google_LastUpdatedVersion: 1732428302197
     Google_Password: threerabbit1!
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

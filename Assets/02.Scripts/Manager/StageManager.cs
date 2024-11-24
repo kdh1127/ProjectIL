@@ -8,12 +8,19 @@ public class StageManager : TRSingleton<StageManager>
 {
 	public ReactiveProperty<int> CurStage = new(0);
 	public BigInteger stageBaseHp = 0;
+
 	private new void Awake()
 	{
 		base.Awake();
 		var table = TRScriptableManager.Instance.GetGoogleSheet("StageTable");
 		if (TRScriptableManager.Instance != null)
 			StageTableList.Init(table);
+	}
+	private void Start()
+	{
+		var stage = UserDataManager.Instance.stageData.stage;
+		CurStage.Value = stage.curStage;
+		stageBaseHp = stage.stageBaseHp;
 	}
 
 	public StageTable GetCurStageTable()
@@ -41,7 +48,9 @@ public class StageManager : TRSingleton<StageManager>
 
 	public int GetCurStep()
 	{
-		 return MonsterManager.Instance.monsterIndex + 1;
+		var curStep = MonsterManager.Instance.monsterIndex + 1;
+
+		return curStep;
 	}
 
 	public void IncreaseStage()
@@ -53,10 +62,14 @@ public class StageManager : TRSingleton<StageManager>
         {
 			userDungeonClearData[0] = CurStage.Value;
         }
+		var stage = UserDataManager.Instance.stageData.stage;
+		stage.curStage = CurStage.Value;
 	}
 
 	public void SetStageBaseHp(BigInteger prevBaseHp)
 	{
+		var stage = UserDataManager.Instance.stageData.stage;
+		stage.stageBaseHp = prevBaseHp;
 		if (CurStage.Value == 0)
 		{
 			stageBaseHp = 500;
@@ -71,6 +84,11 @@ public class StageManager : TRSingleton<StageManager>
     {
 		CurStage.Value = 0;
 		stageBaseHp = 0;
+
+		var stage = UserDataManager.Instance.stageData.stage;
+
+		stage.stageBaseHp = stageBaseHp;
+		stage.curStage = CurStage.Value;
 	}
 
 }

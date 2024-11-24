@@ -21,6 +21,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			weaponData.Load();
 			treasureData.Load();
 			skinData.Load();
+			stageData.Load();
 		}
 		else
 		{
@@ -44,6 +45,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		weaponData.Init();
 		treasureData.Init();
 		skinData.Init();
+		stageData.Init();
 
 		SaveAll();
 	}
@@ -61,6 +63,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		weaponData.Save();
 		treasureData.Save();
 		skinData.Save();
+		stageData.Save();
 	}
 
 	#region CharacterData
@@ -390,4 +393,35 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	}
 	#endregion
 
+	#region StageData
+	public StageData stageData = new();
+
+	public class StageData
+	{
+		public class Stage
+		{
+			public int curStage = 0;
+			public BigInteger stageBaseHp = 500;
+		}
+
+		public Stage stage = new();
+
+		public void Init()
+		{
+			stage.curStage = 0;
+			stage.stageBaseHp = 500;
+		}
+
+		public void Load()
+		{
+			StageData data = DataUtility.Load<StageData>("StageData");
+			stage = data.stage;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("StageData", Instance.stageData);
+		}
+	}
+	#endregion
 }

@@ -1,3 +1,4 @@
+using I2.Loc;
 using System.Collections;
 using System.Collections.Generic;
 using UniRx;
@@ -14,7 +15,7 @@ public class SkinPresenter
     private readonly CharacterView characterView;
 
     [Inject]
-    public SkinPresenter (SkinModel model, SkinPanelView view, SkinItemViewFactory factory, CurrencyModel.Dia dia, CharacterView characterView)
+    public SkinPresenter(SkinModel model, SkinPanelView view, SkinItemViewFactory factory, CurrencyModel.Dia dia, CharacterView characterView)
     {
         this.model = model;
         this.view = view;
@@ -26,14 +27,14 @@ public class SkinPresenter
     public void Subscribe()
     {
         var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-
+        var skinImageResources = TRScriptableManager.Instance.GetSprite("SkinImageResources").spriteDictionary;
+        var weaponImageResources = TRScriptableManager.Instance.GetSprite("WeaponImageResources").spriteDictionary;
 
         SkinTableList.Get().ForEach(table =>
         {
             var itemView = factory.Create();
             var itemModel = model.skinItemList[table.SkinNo];
 
-            var skinImageResources = TRScriptableManager.Instance.GetSprite("SkinImageResources").spriteDictionary;
             var skinImage = skinImageResources[table.SkinImageNo];
 
             view.RegisterToggle(itemView.equipStatus_tgl);
@@ -55,22 +56,34 @@ public class SkinPresenter
                 itemView.upgradeButtonView.UpdateView(itemModel.IsBought, table.UpgradeValue, table.buyCost, table.UpgradeCost);
             }).AddTo(itemView.gameObject);
 
-
             dia.Subscribe(dia =>
             {
                 var cost = itemModel.IsBought ? table.UpgradeCost : table.buyCost;
                 itemView.upgradeButtonView.SetInteractable(dia >= cost);
             }).AddTo(itemView.upgradeButtonView.gameObject);
 
-            itemView.equipSkinSubject.Subscribe(isOn =>
+            itemView.equipSkinSubject.Subscribe(isOn => itemModel.UpdateEquipSkin(isOn));
+
+            itemModel.isEquip.Subscribe(isOn =>
             {
                 if (isOn)
                 {
                     characterView.SetWeapon(skinImage);
+                    itemView.equipStatus_tgl.isOn = isOn;
+                    itemView.equipStatus_txt.text = isOn ? LocalizationManager.GetTranslation("UnEquip") : LocalizationManager.GetTranslation("Equip");
+                }
+                else
+                {
+                    if (model.IsUnEquipAllSkin() == false)
+                    {
+                        var imageName = WeaponTableList.Get()[model.OriginWeaponNo].Image;
+                        var weaponImage = weaponImageResources[imageName];
+                        characterView.SetWeapon(weaponImage);
+                    }
                 }
             }).AddTo(itemView.gameObject);
         });
-
-
     }
 }
+
+

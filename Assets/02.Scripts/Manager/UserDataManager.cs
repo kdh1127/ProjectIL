@@ -2,11 +2,8 @@ using System.Numerics;
 using System.Collections.Generic;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
-using UnityEngine;
 using System;
 using System.Linq;
-using Zenject;
-using Newtonsoft.Json;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
@@ -23,6 +20,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			currencyData.Load();
 			weaponData.Load();
 			treasureData.Load();
+			skinData.Load();
 		}
 		else
 		{
@@ -45,6 +43,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		currencyData.Init();
 		weaponData.Init();
 		treasureData.Init();
+		skinData.Init();
 
 		SaveAll();
 	}
@@ -61,6 +60,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		currencyData.Save();
 		weaponData.Save();
 		treasureData.Save();
+		skinData.Save();
 	}
 
 	#region CharacterData
@@ -349,5 +349,45 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			DataUtility.Save("TreasureData", Instance.treasureData);
 		}
 	}
-		#endregion
+	#endregion
+
+	#region SkinData
+	public SkinData skinData = new();
+
+	public class SkinData
+	{
+		public class Skin
+		{
+			public int level = 0;
+			public bool isEquip = false;
+		}
+		public List<Skin> skinList = new();
+		public int originWeaponNo;
+		public int equipSkinNo;
+
+		public void Init()
+		{
+			SkinTableList.Get().ForEach(table =>
+			{
+				skinList.Add(new Skin());
+			});
+			originWeaponNo = 0;
+			equipSkinNo = 0;
+		}
+
+		public void Load()
+		{
+			SkinData data = DataUtility.Load<SkinData>("SkinData");
+			skinList = data.skinList;
+			originWeaponNo = data.originWeaponNo;
+			equipSkinNo = data.equipSkinNo;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("SkinData", Instance.skinData);
+		}
+	}
+	#endregion
+
 }

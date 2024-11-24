@@ -49,7 +49,7 @@ public class GameInitializer : MonoBehaviour
 		treasureModel.Init();
 		currencyModel.Init();
 		reincarnationModel.Init();
-		skinModel.Init(SkinTableList.Get());
+		skinModel.Init();
 	}
 
 	private void InitTable()

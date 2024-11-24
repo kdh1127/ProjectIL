@@ -7,6 +7,7 @@ using Zenject;
 public class SkinItemModel
 {
 	public ReactiveProperty<int> m_level = new(0);
+	public ReactiveProperty<bool> isEquip = new();
 	public Subject<Unit> updateSubject = new();
 	public bool IsBought => m_level.Value > 0;
 
@@ -33,8 +34,15 @@ public class SkinItemModel
 		// subscribe의 이벤트 흐름 제어 관련하여 찾아봐야한다.
 		UpdateSkinStatus();
 		m_level.Value++;
+
+		UserDataManager.Instance.skinData.skinList[table.SkinNo].level = m_level.Value;
 	}
 
+	public void UpdateEquipSkin(bool isEquip)
+	{
+		this.isEquip.Value = isEquip;
+		UserDataManager.Instance.skinData.skinList[table.SkinNo].isEquip = this.isEquip.Value;
+	}
 	public void UpdateSkinStatus()
 	{
 		var characterData = UserDataManager.Instance.characterData;
@@ -54,22 +62,39 @@ public class SkinItemModel
 }
 public class SkinModel
 {
-	public readonly List<SkinItemModel> skinItemList = new();
+	public readonly List<SkinTable> tableList;
 	private readonly CurrencyModel.Dia dia;
-
+	public List<SkinItemModel> skinItemList = new();
+	public int OriginWeaponNo => UserDataManager.Instance.skinData.originWeaponNo;
+	public int EquipSkinNo => UserDataManager.Instance.skinData.equipSkinNo;
 
 	[Inject]
-	public SkinModel(List<SkinItemModel> skinItemList, CurrencyModel.Dia dia)
+	public SkinModel(List<SkinTable> tableList, CurrencyModel.Dia dia)
 	{
-		this.skinItemList = skinItemList;
+		this.tableList = tableList;
 		this.dia = dia;
 	}
 
-	public void Init(List<SkinTable> tableList)
+	public void Init()
 	{
+		var data = UserDataManager.Instance.skinData;
+
 		for (int i = 0; i < tableList.Count; i++)
 		{
-			skinItemList.Add(new SkinItemModel(tableList[i], dia));
+			var skinData = new SkinItemModel(tableList[i], dia);
+			skinData.m_level.Value = data.skinList[i].level;
+			skinData.isEquip.Value = data.skinList[i].isEquip;
+			skinItemList.Add(skinData);
 		}
+	}
+
+	public bool IsUnEquipAllSkin()
+	{
+		var isEquipSkin = false;
+		skinItemList.ForEach(skinItem =>
+		{
+			if (skinItem.isEquip.Value) isEquipSkin = true;
+		});
+		return isEquipSkin;
 	}
 }

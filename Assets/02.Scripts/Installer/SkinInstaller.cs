@@ -28,6 +28,10 @@ public class SkinInstaller : MonoInstaller
             .FromComponentInNewPrefab(skinItemPrefab)
             .UnderTransform(skinPanelPrefab.content_tr)
             .AsTransient();
+
+        Container.Bind<List<SkinTable>>()
+            .FromInstance(SkinTableList.Get())
+            .AsSingle();
     }
 }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using System.Numerics;
 using System.Linq;
+using Newtonsoft.Json;
 
 public class WeaponItemModel
 {
@@ -11,8 +12,8 @@ public class WeaponItemModel
     public ReactiveProperty<bool> isMaxLevel = new();
     public ReactiveProperty<bool> isEquiped = new();
     public ReactiveProperty<bool> isUnLock = new();
-    public WeaponItemModel prevItemModel;
-    public WeaponItemModel nextItemModel;
+    [JsonIgnore] public WeaponItemModel prevItemModel { get; set; }
+    [JsonIgnore] public WeaponItemModel nextItemModel { get; set; }
 
     private readonly WeaponTable table;
     private readonly CurrencyModel.Gold gold;
@@ -60,7 +61,13 @@ public class WeaponItemModel
 			{
                 prevItemModel.isEquiped.Value = false;
 			}
-		}
+            isUnLock.Value = prevItemModel.isMaxLevel.Value;
+        }
+
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].level = m_level.Value;
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].isEquip = isEquiped.Value;
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].isMaxLevel = isMaxLevel.Value;
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].isUnlock = isUnLock.Value;
     }
 
     public void SetWeaponDamage()
@@ -75,32 +82,40 @@ public class WeaponItemModel
         isMaxLevel.Value = false;
         isUnLock.Value = false;
         isEquiped.Value = false;
+
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].level = m_level.Value;
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].isEquip = isEquiped.Value;
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].isMaxLevel = isMaxLevel.Value;
+        UserDataManager.Instance.weaponData.weaponItemList[table.WeaponNo].isUnlock = isUnLock.Value;
     }
 }
 
 public class WeaponModel
 {
+    public List<WeaponTable> weaponTableList = new();
     public List<WeaponItemModel> weaponItemList = new();
-
-    private readonly List<WeaponTable> weaponTableList;
     private readonly CurrencyModel.Gold gold;
 
     public WeaponModel(List<WeaponTable> weaponTableList, CurrencyModel.Gold gold)
-	{
+    {
         this.weaponTableList = weaponTableList;
         this.gold = gold;
     }
     public void Init()
     {
-        // 다음 웨폰 아이템 모델과 이전 웨폰 아이템 모델의 값을 변경시키기 위하여 더블 링크드 리스트로 초기화
-        for(int i = 0; i < weaponTableList.Count; i++)
-		{
-            var weaponItemModel = new WeaponItemModel(weaponTableList[i], gold);
-            weaponItemList.Add(weaponItemModel);
+        var data = UserDataManager.Instance.weaponData.weaponItemList;
+
+        for (int i = 0; i < WeaponTableList.Get().Count; i++)
+        {
+            weaponItemList.Add(new WeaponItemModel(weaponTableList[i], gold));
+            weaponItemList[i].m_level.Value = data[i].level;
+            weaponItemList[i].isUnLock.Value = data[i].isUnlock;
+            weaponItemList[i].isMaxLevel.Value = data[i].isMaxLevel;
+            weaponItemList[i].isEquiped.Value = data[i].isEquip;
 
             if (i > 0)
             {
-                weaponItemList[i - 1].nextItemModel = weaponItemModel; // 마지막 인덱스는 null
+                weaponItemList[i - 1].nextItemModel = weaponItemList[i]; // 마지막 인덱스는 null
                 weaponItemList[i].prevItemModel = weaponItemList[i - 1]; // 첫번째 인덱스는 null
             }
         }
@@ -108,25 +123,14 @@ public class WeaponModel
         // 첫 번째 무기 초기화
         var firstWeaponLevel = weaponItemList[0].m_level;
         if (firstWeaponLevel.Value == 0) firstWeaponLevel.Value = 1;
-    }
+   
 
-    public void Save()
-    {
-        DataUtility.Save("WeaponModel", this);
-    }
-
-    public void Load()
-    {
-        var data = DataUtility.Load<WeaponModel>("WeaponModel");
-
-        data.weaponItemList.ForEach(weaponItem =>
-        {
-            weaponItemList.Add(weaponItem);
-        });
     }
 
     public void Reset()
     {
+        var data = UserDataManager.Instance.weaponData.weaponItemList;
+
         weaponItemList.ForEach(weaponItem =>
         {
             weaponItem.Reset();
@@ -135,5 +139,13 @@ public class WeaponModel
         weaponItemList[0].m_level.Value = 1;
         weaponItemList[0].isEquiped.Value = true;
         weaponItemList[0].UpdateState();
+
+        for (int i = 0; i < WeaponTableList.Get().Count; i++)
+        {
+            data[i].level = weaponItemList[i].m_level.Value;
+            data[i].isUnlock = weaponItemList[i].isUnLock.Value;
+            data[i].isMaxLevel = weaponItemList[i].isMaxLevel.Value;
+            data[i].isEquip = weaponItemList[i].isEquiped.Value;
+        }
     }
 }

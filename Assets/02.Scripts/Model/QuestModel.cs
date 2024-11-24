@@ -49,7 +49,10 @@ public class QuestItemModel
         {
            
             m_elpasedTime.Value = 0;
-            gold.Add(reward * (CharacterData.TreasureQuestGoldPer / 100));
+            var factor = reward * CharacterData.TreasureQuestGoldPer;
+            var totalReward = reward + (factor / 100);
+            var result = totalReward == 0 ? reward : totalReward;
+            gold.Add(result);
             MissionData.UpdateQuestClearData(table.QuestNo, currentValue => currentValue + 1);
         }
         else

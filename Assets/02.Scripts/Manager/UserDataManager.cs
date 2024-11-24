@@ -5,6 +5,8 @@ using UniRx;
 using UnityEngine;
 using System;
 using System.Linq;
+using Zenject;
+using Newtonsoft.Json;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
@@ -19,6 +21,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			missionData.Load();
 			questData.Load();
 			currencyData.Load();
+			weaponData.Load();
 		}
 		else
 		{
@@ -39,6 +42,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		characterData.Init();
 		missionData.Init();
 		currencyData.Init();
+		weaponData.Init();
 
 		SaveAll();
 	}
@@ -53,6 +57,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		missionData.Save();
 		questData.Save();
 		currencyData.Save();
+		weaponData.Save();
 	}
 
 	#region CharacterData
@@ -266,6 +271,43 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		public void Save()
 		{
 			DataUtility.Save("CurrencyData", Instance.currencyData);
+		}
+	}
+	#endregion
+
+
+	#region WeaponData
+	public WeaponData weaponData = new();
+
+	public class WeaponData
+	{
+		public class WeaponItemData
+		{
+			public int level;
+			public bool isEquip;
+			public bool isMaxLevel;
+			public bool isUnlock;
+		}
+
+		public List<WeaponItemData> weaponItemList = new();
+
+		public void Init()
+		{
+			WeaponTableList.Get().ForEach(weaponTable =>
+			{
+				weaponItemList.Add(new WeaponItemData());
+			});
+		}
+
+		public void Load()
+		{
+			WeaponData data = DataUtility.Load<WeaponData>("WeaponData");
+			weaponItemList = data.weaponItemList;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("WeaponData", Instance.weaponData);
 		}
 	}
 	#endregion

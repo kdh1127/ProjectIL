@@ -47,3 +47,12 @@ public enum EBattleState
 	Battle,
 	Reset
 }
+
+public enum ESkinIncreaseType
+{
+    Damage,
+    CritChance,
+    CriticalDamage,
+    AttackSpeed,
+    RunSpeed,
+}

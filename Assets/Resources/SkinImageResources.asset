@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666082664, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: SkinImageResources
+  m_EditorClassIdentifier: 
+  spriteDictionary:
+    m_keys:
+    - Image_0
+    - Image_1
+    - Image_2
+    - Image_3
+    - Image_4
+    - Image_5
+    - Image_6
+    - Image_7
+    - Image_8
+    - Image_9
+    m_values:
+    - {fileID: 21300000, guid: 1a51af4800eb9064ea2cd2f71ca97d81, type: 3}
+    - {fileID: 21300000, guid: 9f6ae868f446b534a84cbbad14f8312c, type: 3}
+    - {fileID: 21300000, guid: 5f554a213e0c6e444b53b4eac35d297c, type: 3}
+    - {fileID: 21300000, guid: f50433ef6c2eb56498d398e41db4cd68, type: 3}
+    - {fileID: 21300000, guid: 3f563a58b1504a44eade25eb4b52fc93, type: 3}
+    - {fileID: 21300000, guid: 4b5e06f2b5d174947be640c07a1caf47, type: 3}
+    - {fileID: 21300000, guid: ca4acab8c12f27944bf206abfa69d434, type: 3}
+    - {fileID: 21300000, guid: 9f14f54d7e9c30b41aac33dcf6ff2ace, type: 3}
+    - {fileID: 21300000, guid: ac8ac72f5e686f340a401f32f73785fc, type: 3}
+    - {fileID: 21300000, guid: bfd57a8dba4d66c4cada18ff677cb3ef, type: 3}

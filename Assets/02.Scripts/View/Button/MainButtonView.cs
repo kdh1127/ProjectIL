@@ -47,10 +47,10 @@ public class MainButtonView : MonoBehaviour
 			case CommonToggle.ToggleType.Weapon:
 				panelList[1].SetActive(true);
 				break;
-			case CommonToggle.ToggleType.Mission:
+			case CommonToggle.ToggleType.Treasure:
 				panelList[2].SetActive(true);
 				break;
-			case CommonToggle.ToggleType.Treasure:
+			case CommonToggle.ToggleType.Skin:
 				panelList[3].SetActive(true);
 				break;
 		}

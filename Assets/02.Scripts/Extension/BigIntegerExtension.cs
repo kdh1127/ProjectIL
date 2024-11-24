@@ -1,8 +1,21 @@
 using System;
 using System.Numerics;
+using UnityEngine;
 
 public static class BigIntegerExtension
 {
+    public static int ToInt(this BigInteger value)
+    {
+        if (value <= int.MaxValue && value >= int.MinValue)
+        {
+            return (int)value;
+        }
+        else
+        {
+            Debug.LogError("Not Convert BigInteger to int value");
+            return -1;
+        }
+    }
     public static string ToAlphabetNumber(this BigInteger value)
     {
         BigInteger baseValue = 1000;

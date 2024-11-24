@@ -25,6 +25,10 @@ public class GameInitializer : MonoBehaviour
 	[Inject] private readonly ReincarnationPresenter reincarnationPresenter;
 	[Inject] private readonly ReincarnationModel reincarnationModel;
 
+
+	[Inject] private readonly SkinModel skinModel;
+	[Inject] private readonly SkinPresenter skinPresenter;
+
 	private void Awake()
 	{
 		InitPlugins();
@@ -45,7 +49,8 @@ public class GameInitializer : MonoBehaviour
 		treasureModel.Init(TreasureTableList.Get());
 		currencyModel.Init();
 		reincarnationModel.Init();
-    }
+		skinModel.Init(SkinTableList.Get());
+	}
 
 	private void InitTable()
 	{
@@ -53,6 +58,7 @@ public class GameInitializer : MonoBehaviour
 		WeaponTableList.Init(BindTable("WeaponTable"));
 		MissionTableList.Init(BindTable("MissionTable"));
 		TreasureTableList.Init(BindTable("TreasureTable"));
+		SkinTableList.Init(BindTable("SkinTable"));
 	}
 
 	private void SubscirbePresnters()
@@ -64,6 +70,7 @@ public class GameInitializer : MonoBehaviour
 		mainScenePresenter.Subscribe();
 		currencyPresenter.Subscribe();
 		reincarnationPresenter.Subscribe();
+		skinPresenter.Subscribe();
 	}
 
 	public void InitPlugins()

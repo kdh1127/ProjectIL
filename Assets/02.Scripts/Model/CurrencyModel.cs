@@ -12,7 +12,7 @@ public class CurrencyModel
     public Key key;
 
     private Dictionary<ECurrencyType, CurrencyBase> currencies = new();
-
+    private UserDataManager.CurrencyData CurrencyData => UserDataManager.Instance.currencyData;
     [Inject]
     public CurrencyModel(
         Gold gold, 
@@ -26,24 +26,48 @@ public class CurrencyModel
 
     public void Init()
 	{
+        CurrencyData.Load();
+
         currencies.Add(ECurrencyType.GOLD, gold);
         currencies.Add(ECurrencyType.DIA, dia);
         currencies.Add(ECurrencyType.KEY, key);
+
+        AddCurrency(ECurrencyType.GOLD, CurrencyData.gold);
+        AddCurrency(ECurrencyType.DIA, CurrencyData.dia);
+        AddCurrency(ECurrencyType.KEY, CurrencyData.key);
 	}
 
     public void AddCurrency(ECurrencyType type, BigInteger amount)
 	{
         currencies[type].Add(amount);
+        Save(type);
     }
 
-    public bool SubCurrency(ECurrencyType type, BigInteger amount)
+	public bool SubCurrency(ECurrencyType type, BigInteger amount)
 	{
         if(currencies[type].CanSubtract(amount))
 		{
             currencies[type].Subtract(amount);
+            Save(type);
             return true;
 		}
 
         return false;
 	}
+
+    private void Save(ECurrencyType type)
+	{
+        switch (type)
+        {
+            case ECurrencyType.GOLD:
+                CurrencyData.gold = currencies[type].Amount;
+                break;
+            case ECurrencyType.DIA:
+                CurrencyData.dia = currencies[type].Amount;
+                break;
+            case ECurrencyType.KEY:
+                CurrencyData.key = currencies[type].Amount;
+                break;
+        }
+    }
 }

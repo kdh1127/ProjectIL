@@ -8,8 +8,6 @@ public class CharacterModel
                                           + TreasureDamage
                                           + TreasureExtraDamage;
 
-
-
     /// <summary>
     /// 기본 공격력 * (기본 크리티컬 데미지 + (보물 크리티컬 증가 퍼센트값 / 100))
     /// </summary>
@@ -23,12 +21,6 @@ public class CharacterModel
     public BigInteger TreasureExtraDamage => (character.WeaponDamage + TreasureDamage) * character.TreasureExtraDamage / 100;
 
     public BigInteger TreasureCriticalDamage => BaseAttackDamage * character.CriticalDamage * character.TreasureCriticalDamagePer / 100;
-
-
-
-
-
-
 
     public AttackInfo Attack()
     {

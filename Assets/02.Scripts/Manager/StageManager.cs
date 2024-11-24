@@ -46,7 +46,7 @@ public class StageManager : TRSingleton<StageManager>
 
 	public void IncreaseStage()
 	{
-		var userDungeonClearData = UserDataManager.Instance.missiondata.DungeonClearData;
+		var userDungeonClearData = UserDataManager.Instance.missionData.DungeonClearData;
 		CurStage.Value++;
 
 		if (userDungeonClearData.Keys.Contains(0))

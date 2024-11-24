@@ -17,7 +17,7 @@ public class WeaponItemModel
     private readonly WeaponTable table;
     private readonly CurrencyModel.Gold gold;
 
-    private UserDataManager.MissionData MissionData => UserDataManager.Instance.missiondata;
+    private UserDataManager.MissionData MissionData => UserDataManager.Instance.missionData;
     private UserDataManager.CharacterData CharacterData => UserDataManager.Instance.characterData;
 
     public WeaponItemModel(WeaponTable table, CurrencyModel.Gold gold)

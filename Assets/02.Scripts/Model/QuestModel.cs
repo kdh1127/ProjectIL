@@ -11,8 +11,9 @@ public class QuestItemModel
     private readonly CurrencyModel.Gold gold;
 
     public bool IsOn => m_level.Value > 0;
-    private UserDataManager.MissionData MissionData => UserDataManager.Instance.missiondata;
+    private UserDataManager.MissionData MissionData => UserDataManager.Instance.missionData;
     private UserDataManager.CharacterData CharacterData => UserDataManager.Instance.characterData;
+    private UserDataManager.QuestData QuestData => UserDataManager.Instance.questData;
 
     [Inject]
     public QuestItemModel(QuestTable table, CurrencyModel.Gold gold) 
@@ -28,6 +29,7 @@ public class QuestItemModel
         if(gold.Subtract(cost))
 		{
             m_level.Value++;
+            QuestData.questDict[table.QuestNo].level = m_level.Value;
             MissionData.UpdateQuestUpgradeData(table.QuestNo, currentValue => currentValue = m_level.Value);
         }
     }
@@ -54,6 +56,8 @@ public class QuestItemModel
         {
             m_elpasedTime.Value++;
         }
+
+        QuestData.questDict[table.QuestNo].elpasedTime = m_elpasedTime.Value;
     }
 
     public void Reset()
@@ -80,24 +84,15 @@ public class QuestModel
 
     public void Init()
     {
+        var questData = UserDataManager.Instance.questData.questDict;
         questItemList.Clear();
-        questTableList.ForEach(table => questItemList.Add(new QuestItemModel(table, gold)));
-    }
-
-    public void Save()
-    {
-        DataUtility.Save("QuestModel", this);
-    }
-
-    public void Load()
-    {
-        var data = DataUtility.Load<QuestModel>("QuestModel");
-
-        // TODO: Check Data
-        if (data == null) return;
-
-        questItemList.Clear();
-        data.questItemList.ForEach(questItem => questItemList.Add(questItem));
+        questTableList.ForEach(table =>
+        {
+            var questItem = new QuestItemModel(table, gold);
+            questItem.m_level.Value = questData[table.QuestNo].level;
+            questItem.m_elpasedTime.Value = questData[table.QuestNo].elpasedTime;
+            questItemList.Add(questItem);
+        });
     }
 
     public void Reset()

@@ -17,7 +17,7 @@ public class MissionModel
 
     public void Init()
     {
-        var missionData = UserDataManager.Instance.missiondata;
+        var missionData = UserDataManager.Instance.missionData;
 
         // TODO: Load MissionData in UserDataManager
         tableList.ForEach(table =>
@@ -47,7 +47,7 @@ public class MissionModel
 
     public MissionTable GetCurMissionTable()
     {
-        var clearMission = UserDataManager.Instance.missiondata.ClearMissionNo;
+        var clearMission = UserDataManager.Instance.missionData.ClearMissionNo;
             return tableList[clearMission];
     }
 
@@ -56,7 +56,7 @@ public class MissionModel
         var table = GetCurMissionTable();
         var rewardType = table.RewardType.ToEnum<ECurrencyType>();
 
-        UserDataManager.Instance.missiondata.ClearMissionNo++;
+        UserDataManager.Instance.missionData.ClearMissionNo++;
         switch (rewardType)
         {
             case ECurrencyType.GOLD:
@@ -73,7 +73,7 @@ public class MissionModel
 
     public int GetCurMissionProgress(MissionTable table)
 	{
-        var missionData = UserDataManager.Instance.missiondata;
+        var missionData = UserDataManager.Instance.missionData;
         var missionType = table.MissionType.ToEnum<EMissionType>();
 
 		return missionType switch
@@ -88,7 +88,7 @@ public class MissionModel
 
 	public bool IsClear(MissionTable table)
     {
-        var missionData = UserDataManager.Instance.missiondata;
+        var missionData = UserDataManager.Instance.missionData;
         var missionType = table.MissionType.ToEnum<EMissionType>();
 
         switch (missionType)

@@ -9,7 +9,7 @@ using UnityEngine;
 
 public static class DataUtility
 {
-	private static readonly string filePath = Application.persistentDataPath + "/data.json";
+	private static readonly string filePathFormat = "{0}/{1}";
     private static readonly string encryptionKey =  "1234567890abcdef";
     private static readonly string encryptionIV =   "1234567890abcdef";
 
@@ -58,8 +58,8 @@ public static class DataUtility
         {
             string jsonData = JsonConvert.SerializeObject(data);
             string encryptedData = EncryptData(jsonData);
-
-            File.WriteAllText(Application.persistentDataPath + path, encryptedData);
+            string filePath = string.Format(filePathFormat, Application.persistentDataPath, path);
+            File.WriteAllText(filePath, encryptedData);
         }
         catch (IOException ex)
         {
@@ -69,18 +69,19 @@ public static class DataUtility
 
     public static T Load<T>(string path, T defaultValue = default)
     {
+        string filePath = string.Format(filePathFormat, Application.persistentDataPath, path);
         try
         {
-            if (File.Exists(path))
+            if (File.Exists(filePath))
             {
-                string encryptedData = File.ReadAllText(Application.persistentDataPath + path);
+                string encryptedData = File.ReadAllText(filePath);
                 string jsonData = DecryptData(encryptedData);
 
                 return JsonConvert.DeserializeObject<T>(jsonData);
             }
             else
             {
-                Debug.LogWarning("DataUtility: The file does not exist: "+ Application.persistentDataPath + path);
+                Debug.LogWarning("DataUtility: The file does not exist: "+ filePath);
                 return defaultValue;
             }
         }

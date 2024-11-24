@@ -8,8 +8,6 @@ using System.Linq;
 
 public class UserDataManager : TRSingleton<UserDataManager>
 {
-	public CharacterData characterData = new();
-	public MissionData missiondata = new();
 	private bool isInit = false;
 	private new void Awake()
 	{
@@ -17,8 +15,10 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 		if (IsInit())
 		{
-			characterData.LoadCharacterData();
-			missiondata.LoadMissionData();
+			characterData.Load();
+			missionData.Load();
+			questData.Load();
+			currencyData.Load();
 		}
 		else
 		{
@@ -28,37 +28,36 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 	private void OnApplicationQuit()
 	{
-		SaveCharacterData();
-		SaveMissiondata();
+		SaveAll();
 
 		isInit = true;
 		DataUtility.Save("IsFirst", isInit);
 	}
 	public void Init()
 	{
+		questData.Init();
+		characterData.Init();
+		missionData.Init();
+		currencyData.Init();
 
-		characterData.InitCharacterData();
-		missiondata.InitMissionData();
-
-		SaveCharacterData();
-		SaveMissiondata();
-
+		SaveAll();
 	}
 	public bool IsInit()
 	{
 		return DataUtility.Load("IsFirst", false);
 	}
 
-	public void SaveCharacterData()
+	public void SaveAll()
 	{
-		DataUtility.Save("CharacterData", characterData);
-	}
-	public void SaveMissiondata()
-	{
-		DataUtility.Save("MissionData", missiondata);
+		characterData.Save();
+		missionData.Save();
+		questData.Save();
+		currencyData.Save();
 	}
 
 	#region CharacterData
+	public CharacterData characterData = new();
+
 	public class CharacterData
 	{
 		private float moveSpeed;
@@ -91,24 +90,11 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		private BigInteger treasureExtraDamage;
 		public BigInteger TreasureExtraDamage { get => treasureExtraDamage; set => treasureExtraDamage = value; }
 
-        private BigInteger skinDamage;
-        public BigInteger SkinDamage { get => skinDamage; set => skinDamage = value; }
-
-        private BigInteger skinCritChance;
-        public BigInteger SkinCritChance { get => skinCritChance; set => skinCritChance = value; }
-
-        private BigInteger skinCriticalDamage;
-        public BigInteger SkinCriticalDamage { get => skinCriticalDamage; set => skinCriticalDamage = value; }
-
-        private BigInteger skinAttackSpeed;
-        public BigInteger SkinAttackSpeed { get => skinAttackSpeed; set => skinAttackSpeed = value; }
-
-        private BigInteger skinRunSpeed;
-        public BigInteger SkinRunSpeed { get => skinRunSpeed; set => skinRunSpeed = value; }
-
 		public Dictionary<ESkinIncreaseType, BigInteger> SkinStatDictionary = new();
 
 		public void InitCharacterData()
+
+		public void Init()
 		{
 			MoveSpeed = 1f;
 			AttackPerSecond = 1f;
@@ -127,7 +113,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 				.ForEach(increaseType => SkinStatDictionary.Add((ESkinIncreaseType)increaseType, 0));
 		}
 
-		public void LoadCharacterData()
+		public void Load()
 		{
 			CharacterData data = DataUtility.Load<CharacterData>("CharacterData");
 			MoveSpeed = data.MoveSpeed;
@@ -136,10 +122,17 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			CriticalDamage = data.CriticalDamage;
 			CriticalChance = data.CriticalChance;
 		}
+
+		public void Save()
+		{
+			DataUtility.Save("CharacterData", UserDataManager.Instance.characterData);
+		}
 	}
 	#endregion
 
 	#region MissionData
+	public MissionData missionData = new();
+
 	public class MissionData
 	{
 		private int clearMissionNo;
@@ -172,12 +165,12 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		/// </summary>
 		public Dictionary<int, int> DungeonClearData { get => dungeonClearData; set => dungeonClearData = value; }
 
-		public void InitMissionData()
+		public void Init()
 		{
 			ClearMissionNo = 0;
 		}
 
-		public void LoadMissionData()
+		public void Load()
 		{
 			MissionData data = DataUtility.Load<MissionData>("MissionData");
 			ClearMissionNo = data.ClearMissionNo;
@@ -185,6 +178,11 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			QuestClearData = data.QuestClearData;
 			WeaponUpgradeData = data.WeaponUpgradeData;
 			DungeonClearData = data.DungeonClearData;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("MissionData", UserDataManager.Instance.missionData);
 		}
 
 		public void UpdateQuestUpgradeData(int questNo, Func<int, int> updateFunc)
@@ -208,4 +206,69 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		}
 	}
 	#endregion
+
+	#region QuestData
+	public QuestData questData = new();
+
+	public class QuestData
+	{
+		public class Quest
+		{
+			public int level;
+			public int elpasedTime;
+		}
+		public Dictionary<int, Quest> questDict = new();
+
+		public void Init()
+		{
+			QuestTableList.Get().ForEach(questTable =>
+			{
+				questDict[questTable.QuestNo] = new Quest();
+			});
+		}
+
+		public void Load()
+		{
+			QuestData data = DataUtility.Load<QuestData>("QuestData");
+			questDict = data.questDict;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("QuestData", UserDataManager.Instance.questData);
+		}
+	}
+	#endregion
+
+	#region CurrencyData
+	public CurrencyData currencyData = new();
+
+	public class CurrencyData
+	{
+		public BigInteger gold;
+		public BigInteger dia;
+		public BigInteger key;
+
+		public void Init()
+		{
+			gold = 0;
+			dia = 0;
+			key = 0;
+		}
+
+		public void Load()
+		{
+			CurrencyData data = DataUtility.Load<CurrencyData>("CurrencyData");
+			gold = data.gold;
+			dia = data.dia;
+			key = data.key;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("CurrencyData", Instance.currencyData);
+		}
+	}
+	#endregion
+
 }

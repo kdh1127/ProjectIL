@@ -884,6 +884,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkinPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6264144193717406445, guid: 9725dcbf3f4afa048a20b4c810e3f444, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264144195286863179, guid: 9725dcbf3f4afa048a20b4c810e3f444, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760386529398461362, guid: 9725dcbf3f4afa048a20b4c810e3f444, type: 3}
+      propertyPath: m_AllowSwitchOff
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9725dcbf3f4afa048a20b4c810e3f444, type: 3}
 --- !u!224 &1505814246814924396 stripped

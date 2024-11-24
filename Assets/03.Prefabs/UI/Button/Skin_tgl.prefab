@@ -102,7 +102,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2824417441783032944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skin
+  m_text: "\uC2A4\uD0A8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5ffc63ae6fed484c886997c42dc4c97, type: 2}
   m_sharedMaterial: {fileID: 5657846495496922870, guid: a5ffc63ae6fed484c886997c42dc4c97, type: 2}

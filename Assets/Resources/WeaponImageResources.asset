@@ -47,8 +47,6 @@ MonoBehaviour:
     - Weapon_Image_30
     m_values:
     - {fileID: 21300000, guid: bde3d7a02b793254ca29696fd5010cfd, type: 3}
-    - {fileID: 21300000, guid: 3bb1c545067e47247acca303f3cbb928, type: 3}
-    - {fileID: 21300000, guid: cfe005f01a1f1d344bc6926d8900aa99, type: 3}
     - {fileID: 21300000, guid: c720f7dc56e85924b87c37e64c4369a6, type: 3}
     - {fileID: 21300000, guid: 75490ab755a2c1b45845e6e3aa2347b6, type: 3}
     - {fileID: 21300000, guid: f91d7ade639137349b697a704c068c79, type: 3}
@@ -77,3 +75,5 @@ MonoBehaviour:
     - {fileID: 21300000, guid: b30bbbb2dc3db2d4393b3c9bfc134da4, type: 3}
     - {fileID: 21300000, guid: f388c2394382958498e27382af0cb7b3, type: 3}
     - {fileID: 21300000, guid: bf73fb1550f5c7a49bc79816512fe396, type: 3}
+    - {fileID: 21300000, guid: e08c03c8b9ffc7c4f842881f5af4a06c, type: 3}
+    - {fileID: 21300000, guid: ddf2f0e9738b19946b101665b1b96da1, type: 3}

@@ -103,7 +103,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			AttackPerSecond = 1f;
 			WeaponDamage = 2;
 			CriticalDamage = 2;
-			CriticalChance = 100;
+			CriticalChance = 10;
 			TreasureDamagePer = 0;
 			TreasureCriticalDamagePer = 0;
 			TreasureEnemyGoldPer = 0;

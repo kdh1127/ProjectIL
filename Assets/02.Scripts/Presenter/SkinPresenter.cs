@@ -11,14 +11,16 @@ public class SkinPresenter
     private readonly SkinPanelView view;
     private readonly SkinItemViewFactory factory;
     private readonly CurrencyModel.Dia dia;
+    private readonly CharacterView characterView;
 
     [Inject]
-    public SkinPresenter (SkinModel model, SkinPanelView view, SkinItemViewFactory factory, CurrencyModel.Dia dia)
+    public SkinPresenter (SkinModel model, SkinPanelView view, SkinItemViewFactory factory, CurrencyModel.Dia dia, CharacterView characterView)
     {
         this.model = model;
         this.view = view;
         this.factory = factory;
         this.dia = dia;
+        this.characterView = characterView;
     }
 
     public void Subscribe()
@@ -59,6 +61,14 @@ public class SkinPresenter
                 var cost = itemModel.IsBought ? table.UpgradeCost : table.buyCost;
                 itemView.upgradeButtonView.SetInteractable(dia >= cost);
             }).AddTo(itemView.upgradeButtonView.gameObject);
+
+            itemView.equipSkinSubject.Subscribe(isOn =>
+            {
+                if (isOn)
+                {
+                    characterView.SetWeapon(skinImage);
+                }
+            }).AddTo(itemView.gameObject);
         });
 
 

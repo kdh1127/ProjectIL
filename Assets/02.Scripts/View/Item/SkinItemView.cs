@@ -2,6 +2,7 @@ using I2.Loc;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class SkinItemView : MonoBehaviour
     public Sprite equipSprite;
     public Sprite unEquipSprite;
     public TMP_Text equipStatus_txt;
+    public Subject<bool> equipSkinSubject = new();
 
     public void Init(int level, int totalIncrease, string name = null, Sprite image = null)
     {
@@ -33,6 +35,7 @@ public class SkinItemView : MonoBehaviour
             if (isOn) toggleGroup.NotifyToggleOn(equipStatus_tgl);
             equipStatus_tgl.image.sprite = isOn ? equipSprite : unEquipSprite;
             equipStatus_txt.text = isOn ? LocalizationManager.GetTranslation("UnEquip") : LocalizationManager.GetTranslation("Equip");
+            equipSkinSubject.OnNext(isOn);
         });
     }
 }

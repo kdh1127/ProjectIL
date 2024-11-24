@@ -63,6 +63,9 @@ public class TreasureItemModel
                 }
                 break;
         }
+
+        var data = UserDataManager.Instance.treasureData.treasureList;
+        data[table.TreasureNo].level = level.Value;
     }
 
     public BigInteger GetIncreaseValue()
@@ -73,22 +76,28 @@ public class TreasureItemModel
 
 public class TreasureModel
 {
-    public readonly List<TreasureItemModel> treasureItemList = new();
+    public readonly List<TreasureTable> treasureTableList = new();
     private readonly CurrencyModel.Key key;
+
+    public List<TreasureItemModel> treasureItemList = new();
 
 
     [Inject]
-    public TreasureModel(List<TreasureItemModel> treasureItemList, CurrencyModel.Key key)
+    public TreasureModel(List<TreasureTable> treasureTableList, CurrencyModel.Key key)
     {
-        this.treasureItemList = treasureItemList;
+        this.treasureTableList = treasureTableList;
         this.key = key;
     }
     
-    public void Init(List<TreasureTable> tableList)
+    public void Init()
     {
-        for (int i = 0; i < tableList.Count; i++)
+        var data = UserDataManager.Instance.treasureData.treasureList;
+        treasureItemList.Clear();
+        treasureTableList.ForEach(table =>
         {
-            treasureItemList.Add(new TreasureItemModel(tableList[i], key));
-        }
+            var treasureItem = new TreasureItemModel(table, key);
+            treasureItem.level.Value = data[table.TreasureNo].level;
+            treasureItemList.Add(treasureItem);
+        });
     }
 }

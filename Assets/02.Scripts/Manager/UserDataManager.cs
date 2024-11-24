@@ -22,6 +22,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			questData.Load();
 			currencyData.Load();
 			weaponData.Load();
+			treasureData.Load();
 		}
 		else
 		{
@@ -43,6 +44,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		missionData.Init();
 		currencyData.Init();
 		weaponData.Init();
+		treasureData.Init();
 
 		SaveAll();
 	}
@@ -58,6 +60,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		questData.Save();
 		currencyData.Save();
 		weaponData.Save();
+		treasureData.Save();
 	}
 
 	#region CharacterData
@@ -124,6 +127,11 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			WeaponDamage = data.WeaponDamage;
 			CriticalDamage = data.CriticalDamage;
 			CriticalChance = data.CriticalChance;
+			TreasureDamagePer = data.TreasureDamagePer;
+			TreasureCriticalDamagePer = data.TreasureCriticalDamagePer;
+			TreasureEnemyGoldPer = data.TreasureEnemyGoldPer;
+			TreasureQuestGoldPer = data.treasureQuestGoldPer;
+			TreasureExtraDamage = data.TreasureExtraDamage;
 			SkinStatDictionary = data.SkinStatDictionary;
 		}
 
@@ -275,7 +283,6 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	}
 	#endregion
 
-
 	#region WeaponData
 	public WeaponData weaponData = new();
 
@@ -312,4 +319,35 @@ public class UserDataManager : TRSingleton<UserDataManager>
 	}
 	#endregion
 
+	#region TreasureData
+	public TreasureData treasureData = new();
+
+	public class TreasureData
+	{
+		public class Treasure
+		{
+			public int level = 0;
+		}
+		public List<Treasure> treasureList = new();
+
+		public void Init()
+		{
+			TreasureTableList.Get().ForEach(table =>
+			{
+				treasureList.Add(new Treasure());
+			});
+		}
+
+		public void Load()
+		{
+			TreasureData data = DataUtility.Load<TreasureData>("TreasureData");
+			treasureList = data.treasureList;
+		}
+
+		public void Save()
+		{
+			DataUtility.Save("TreasureData", Instance.treasureData);
+		}
+	}
+		#endregion
 }

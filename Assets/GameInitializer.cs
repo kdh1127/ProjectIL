@@ -46,7 +46,7 @@ public class GameInitializer : MonoBehaviour
 		questModel.Init();
 		weaponModel.Init();
 		missionModel.Init();
-		treasureModel.Init(TreasureTableList.Get());
+		treasureModel.Init();
 		currencyModel.Init();
 		reincarnationModel.Init();
 		skinModel.Init(SkinTableList.Get());

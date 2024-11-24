@@ -28,6 +28,11 @@ public class TreasureInstaller : MonoInstaller
 				 .FromComponentInNewPrefab(treasureItemPrefab)
 				 .UnderTransform(treasurePanelPrefab.content_tr)
 				 .AsTransient();
+
+		Container
+			.Bind<List<TreasureTable>>()
+			.FromInstance(TreasureTableList.Get())
+			.AsSingle();
 	}
 }
 

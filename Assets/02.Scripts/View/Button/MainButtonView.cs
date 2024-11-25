@@ -53,6 +53,9 @@ public class MainButtonView : MonoBehaviour
 			case CommonToggle.ToggleType.Skin:
 				panelList[3].SetActive(true);
 				break;
+			case CommonToggle.ToggleType.Shop:
+				panelList[4].SetActive(true);
+				break;
 		}
 	}
 

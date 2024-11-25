@@ -25,24 +25,19 @@ public class TreasurePresenter
 	public void Subscribe()
 	{
 		var costImageResources = TRScriptableManager.Instance.GetSprite("CostImageResources").spriteDictionary;
-
+		var treasureImageResources = TRScriptableManager.Instance.GetSprite("TreasureImageResources").spriteDictionary;
 		TreasureTableList.Get().ForEach(table =>
 		{
 			var treasureItemView = treasureItemViewFactory.Create();
 			var treasureItemModel = model.treasureItemList[table.TreasureNo];
 
-			treasureItemView.Init(table.TreasureName, table.IncreaseTypeString, treasureItemModel.level.Value, table.Increase.ToBigInt());
+			treasureItemView.Init(treasureImageResources[table.IncreaseType], table.TreasureName, table.IncreaseTypeString, treasureItemModel.level.Value, table.Increase.ToBigInt());
 			treasureItemView.upgradeButtonView.Init(table.Increase.ToBigInt(), table.TreasureCost.ToBigInt(), costImageResources["Key"]);
-
-			//upgradeButtonView.button.OnClickAsObservable()
-			//.Where(_ => gold.CanSubtract(upgradeCost))
-			//.Subscribe(_ => itemModel.IncreaseLevel())
-			//.AddTo(upgradeButtonView.gameObject);
 
 			//level subscribe
 			treasureItemModel.level.Subscribe(level =>
 			{
-				treasureItemView.LevelUpdate(level, level * table.Increase.ToBigInt());
+				treasureItemView.LevelUpdate(level, table.TreasureName, level * table.Increase.ToBigInt());
 			}).AddTo(treasureItemView.gameObject);
 
 			//upgrade button subscribe

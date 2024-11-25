@@ -94,6 +94,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   activeToggleColor: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
   deactiveToggleColor: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 1}
 --- !u!114 &7897502398120072413
@@ -207,6 +208,10 @@ PrefabInstance:
     - target: {fileID: 9061564797814669187, guid: 60a287bfb0f29c64c8b906ca4c958fe6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061564798173934773, guid: 60a287bfb0f29c64c8b906ca4c958fe6, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a287bfb0f29c64c8b906ca4c958fe6, type: 3}
@@ -328,11 +333,15 @@ PrefabInstance:
     - target: {fileID: 9218836765505747335, guid: 9737204972c47b64e9f2ae09c930fd87, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: a5ffc63ae6fed484c886997c42dc4c97, type: 2}
+    - target: {fileID: 9218836765505747335, guid: 9737204972c47b64e9f2ae09c930fd87, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9218836765505747335, guid: 9737204972c47b64e9f2ae09c930fd87, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 5657846495496922870, guid: a5ffc63ae6fed484c886997c42dc4c97, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9737204972c47b64e9f2ae09c930fd87, type: 3}
 --- !u!224 &7897502397640393314 stripped
@@ -450,6 +459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop_tgl
       objectReference: {fileID: 0}
+    - target: {fileID: 2450864426695012300, guid: 40a0e6b6257eecb4ca7729df1455a33a, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a0e6b6257eecb4ca7729df1455a33a, type: 3}
 --- !u!224 &7897502399603808754 stripped
@@ -562,6 +575,10 @@ PrefabInstance:
     - target: {fileID: 2824417441783032947, guid: 50242d918bf31c9469bee70fbe600e59, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824417441874913093, guid: 50242d918bf31c9469bee70fbe600e59, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5585331046447646269, guid: 50242d918bf31c9469bee70fbe600e59, type: 3}
       propertyPath: mLocalizeTarget
@@ -683,6 +700,10 @@ PrefabInstance:
     - target: {fileID: 1173365207911198493, guid: 88c145e538f5d454397f4542174b1c5a, type: 3}
       propertyPath: m_Name
       value: Weapon_tgl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1173365208241568761, guid: 88c145e538f5d454397f4542174b1c5a, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88c145e538f5d454397f4542174b1c5a, type: 3}

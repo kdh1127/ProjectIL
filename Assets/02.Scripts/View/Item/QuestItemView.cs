@@ -15,18 +15,18 @@ public class QuestItemView : MonoBehaviour
     public TMP_Text reward_txt;
     public TMP_Text level_txt;
 
+    string title;
     public void Init(Sprite sprite, string title, float endTime, int level, BigInteger reward)
     {
-        var titleString = LocalizationManager.GetTranslation(title);
+        this.title = title;
+        var titleString = $"Lv.{level} {LocalizationManager.GetTranslation(title)}";
         var timeString = $"{TimeSpan.FromSeconds(endTime)}";
-        var rewardString = reward.ToAlphabetNumber();
-        var levelString = $"Lv.{level}";
+        var rewardString = $"+{reward.ToAlphabetNumber()}";
 
         quest_img.sprite = sprite;
         title_txt.text = titleString;
         time_txt.text = timeString;
         reward_txt.text = rewardString;
-        level_txt.text = levelString;
     }
 
     public void ProgressUpdate(int curSecond, int endTime)
@@ -38,7 +38,9 @@ public class QuestItemView : MonoBehaviour
 
     public void UpdateLevel(string level, string reward)
     {
-        reward_txt.text = reward;
-        level_txt.text = $"Lv.{level}";
+        var titleString = $"Lv.{level} {LocalizationManager.GetTranslation(title)}";
+        var rewardString = $"+{reward}";
+        title_txt.text = titleString;
+        reward_txt.text = rewardString;
     }
 }

@@ -48,11 +48,11 @@ public class SkinPresenter
             {
                 itemModel.IncreaseLevel();
             }).AddTo(itemView.upgradeButtonView.gameObject);
-
+            
             itemModel.m_level.Subscribe(_ =>
             {
                 itemView.equipStatus_tgl.gameObject.SetActive(itemModel.IsBought);
-                itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease());
+                itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease(), table.SkinName);
                 itemView.upgradeButtonView.UpdateView(itemModel.IsBought, table.UpgradeValue, table.buyCost, table.UpgradeCost);
             }).AddTo(itemView.gameObject);
 

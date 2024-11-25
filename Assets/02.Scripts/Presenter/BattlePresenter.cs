@@ -12,9 +12,9 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 {
     public TRState<BattlePresenter> battleState;
 
-    [Inject]private readonly CharacterView characterView;
+    [Inject] private readonly CharacterView characterView;
+    [Inject] private readonly CurrencyModel.Gold gold;
     private CharacterModel characterModel = new();
-    private BattleState isBattleState = new();
     public Camera pixelCamera;
     public FadeScreenView fadeScreenView;
     private EBattleState state = EBattleState.Init;
@@ -78,8 +78,10 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
                         totalReward = increaseReward > 0 ? increaseReward : reward.Value;
                         break;
                     case ECurrencyType.DIA:
+                        totalReward = reward.Value;
                         break;
                     case ECurrencyType.KEY:
+                        totalReward = reward.Value;
                         break;
                 }
                 currencyModel.AddCurrency(reward.Key, totalReward);

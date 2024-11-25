@@ -19,11 +19,12 @@ public class SkinItemView : MonoBehaviour
     public Image line_img;
     public Subject<bool> equipSkinSubject = new();
 
-    public void Init(int level, int totalIncrease, string name, Sprite image = null)
+    public void Init(int level, int totalIncrease, string name, string increaseTypeString, bool isEquip, Sprite image = null)
     {
         var titleString = $"Lv. {level} {LocalizationManager.GetTranslation(name)}";
-        totalIncrease_txt.text = totalIncrease.ToString();
-        equipStatus_txt.text = LocalizationManager.GetTranslation("Equip");
+        var increseStringFormat = I2.Loc.LocalizationManager.GetTranslation(increaseTypeString);
+        totalIncrease_txt.text = string.Format(increseStringFormat, totalIncrease);
+        equipStatus_txt.text = isEquip ? LocalizationManager.GetTranslation("UnEquip") : LocalizationManager.GetTranslation("Equip");
         title_txt.text = titleString;
         if (image != null) skinImage.sprite = image;
         line_img.rectTransform.sizeDelta = level > 0 ? new Vector2(290f, 25f) : new Vector2(430f, 25f);

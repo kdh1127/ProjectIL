@@ -27,7 +27,8 @@ public enum EMissionType
 	QuestUpgrade,
 	QuestClear,
 	WeaponUpgrade,
-	DungeonClear
+	DungeonClear,
+	BuySkin
 }
 
 public enum EIncreaseType

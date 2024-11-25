@@ -12,6 +12,7 @@ public class WeaponPresenter
 	private readonly WeaponItemViewFactory weaponItemViewFactory;
 	private readonly CurrencyModel.Gold gold;
 	private readonly CharacterView characterView;
+	private readonly SkinModel skinModel;
 
 	[Inject]
 	public WeaponPresenter(
@@ -19,13 +20,15 @@ public class WeaponPresenter
 		WeaponPanelView view,
 		CharacterView characterView,
 		WeaponItemViewFactory weaponItemViewFactory,
-		CurrencyModel.Gold gold)
+		CurrencyModel.Gold gold,
+		SkinModel skinModel)
 	{
 		this.model = model;
 		this.view = view;
 		this.characterView = characterView;
 		this.weaponItemViewFactory = weaponItemViewFactory;
 		this.gold = gold;
+		this.skinModel = skinModel;
 	}
 
 	public void Subscribe()
@@ -74,8 +77,6 @@ public class WeaponPresenter
 			isEquiped: itemModel.isEquiped.Value,
 			isUnLock: itemModel.isUnLock.Value,
 			isEnughGold: isEnughGold);
-
-		Debug.Log($"No: {table.WeaponNo}, UnLock: {itemModel.isUnLock.Value}, MaxLevel: {itemModel.isMaxLevel.Value}, Equip: {itemModel.isEquiped.Value}");
 	}
 	public void SubscribeToWeaponItemModel(WeaponItemModel itemModel, WeaponItemView itemView, WeaponTable table)
 	{
@@ -88,9 +89,14 @@ public class WeaponPresenter
 
 			if (isEquip)
 			{
-				var weaponImageResources = TRScriptableManager.Instance.GetSprite("WeaponImageResources").spriteDictionary[table.Image];
+				var weaponImageResources = TRScriptableManager.Instance.GetSprite("WeaponImageResources").spriteDictionary;
 				itemModel.SetWeaponDamage();
-				characterView.SetWeapon(weaponImageResources);
+				if (skinModel.IsUnEquipAllSkin() == false)
+				{
+					var originWeaponNo = UserDataManager.Instance.skinData.originWeaponNo;
+					var weaponImage = weaponImageResources[WeaponTableList.Get()[originWeaponNo].Image];
+					characterView.SetWeapon(weaponImage);
+				}
 			}
 		}).AddTo(itemView.gameObject);
 	}
@@ -99,6 +105,13 @@ public class WeaponPresenter
 		upgradeButtonView.button.OnClickAsObservable().Subscribe(_ =>
 		{
 			itemModel.Upgrade();
+			if (skinModel.IsUnEquipAllSkin() == false)
+			{
+				var weaponImageResources = TRScriptableManager.Instance.GetSprite("WeaponImageResources").spriteDictionary;
+				var originWeaponNo = UserDataManager.Instance.skinData.originWeaponNo;
+				var weaponImage = weaponImageResources[WeaponTableList.Get()[originWeaponNo].Image];
+				characterView.SetWeapon(weaponImage);
+			}
 		}).AddTo(upgradeButtonView.gameObject);
 	}
 	public void SubscribeToGold(WeaponItemModel itemModel, UpgradeButtonView upgradeButtonView, WeaponTable table)

@@ -18,6 +18,16 @@ public class CharacterView : MonoBehaviour
     public GameObject target;
     public Subject<GameObject> AttackSubject = new();
 
+    public void SetAttackSpeed(float speed)
+	{
+        Animator.SetFloat("AttackSpeed", speed);
+	}
+
+    public void SetRunSpeed(float speed)
+	{
+        Animator.SetFloat("RunSpeed", speed);
+	}
+
     public void SetWeapon(Sprite sprite, HandType handType = HandType.RIGHT)
     {
         weapon_l.transform.localPosition = new Vector3(0, sprite.rect.size.y / 100, 0);

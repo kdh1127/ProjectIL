@@ -55,4 +55,9 @@ public class MonsterManager : TRSingleton<MonsterManager>
 	{
         return monsterModelList[monsterIndex];
 	}
+
+    public BigInteger CalcReward(BigInteger baseGold)
+	{
+        return baseGold + (StageManager.Instance.stageBaseHp / 100);
+	}
 }

@@ -24,4 +24,10 @@ public class UpgradeButtonView : MonoBehaviour
         button.interactable = isInteractable;
     }
 
+    public void UpdateView(string increase, string cost)
+    {
+        increase_txt.text = increase;
+        cost_txt.text = cost;
+    }
+
 }

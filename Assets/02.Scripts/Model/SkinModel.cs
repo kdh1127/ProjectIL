@@ -36,6 +36,7 @@ public class SkinItemModel
 		m_level.Value++;
 
 		UserDataManager.Instance.skinData.skinList[table.SkinNo].level = m_level.Value;
+		UserDataManager.Instance.missionData.UpdateBuySkinData(0, currentValue => currentValue + 1);
 	}
 
 	public void UpdateEquipSkin(bool isEquip)
@@ -54,10 +55,8 @@ public class SkinItemModel
 
 	public int GetTotalIncrease()
     {
-		var characterData = UserDataManager.Instance.characterData;
-		var increaseType = table.IncreaseType.ToEnum<ESkinIncreaseType>();
-		int totalIncrease = characterData.SkinStatDictionary[increaseType].ToInt();
-		return m_level.Value <= 0 ? table.BaseValue : totalIncrease;
+		int totalIncrease = table.BaseValue + ((m_level.Value -1) * table.UpgradeValue);
+		return m_level.Value > 1 ? totalIncrease : table.BaseValue;
 	}
 }
 public class SkinModel

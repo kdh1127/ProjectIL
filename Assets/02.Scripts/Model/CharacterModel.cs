@@ -31,6 +31,19 @@ public class CharacterModel
 
     public BigInteger QuestGoldIncrease => (1 * character.TreasureQuestGoldPer) / 100 == 0? 1 : (1 * character.TreasureQuestGoldPer);
 
+
+    /// <summary>
+    /// 이동속도 계산
+    /// </summary>
+    private float runSpeedFactor => character.MoveSpeed * (float)character.SkinStatDictionary[ESkinIncreaseType.RunSpeed] / 100f;
+    public float RunSpeed => character.MoveSpeed + runSpeedFactor;
+
+    /// <summary>
+    /// 공격속도 계산
+    /// </summary>
+    private float attackSpeedFactor => character.MoveSpeed * (float)character.SkinStatDictionary[ESkinIncreaseType.AttackSpeed] / 100f;
+    public float AttackSpeed => character.AttackPerSecond + attackSpeedFactor;
+
     public AttackInfo Attack()
     {
         bool isCritical = Random.Range(0, 101) < UserDataManager.Instance.characterData.CriticalChance;

@@ -60,6 +60,7 @@ public class WeaponItemModel
             if (isEquiped.Value)
 			{
                 prevItemModel.isEquiped.Value = false;
+                UserDataManager.Instance.skinData.originWeaponNo = table.WeaponNo;
 			}
             isUnLock.Value = prevItemModel.isMaxLevel.Value;
         }

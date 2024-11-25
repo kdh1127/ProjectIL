@@ -17,6 +17,27 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
+    - Term: Buy
+      TermType: 0
+      Description: 
+      Languages:
+      - Purchase
+      - "\uAD6C\uB9E4"
+      - "\u8D2D\u4E70"
+      - "\u8D2D\u4E70"
+      - Kaufen
+      - Achat
+      - Acquistare
+      - "\u8CFC\u5165"
+      - Pembelian
+      - Pembelian
+      - Comprar
+      - "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
+      - Compra
+      - "\u0E0B\u0E37\u0E49\u0E2D"
+      - Mua
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
     - Term: Complete
       TermType: 0
       Description: 
@@ -38,6 +59,49 @@ MonoBehaviour:
       - "Ho\xE0n Th\xE0nh"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
+    - Term: Critical_Damage_Increase_String
+      TermType: 0
+      Description: 
+      Languages:
+      - Critical Attack Power
+      - "\uCE58\uBA85\uD0C0 \uACF5\uACA9\uB825"
+      - "\u66B4\u51FB\u653B\u51FB\u529B"
+      - "\u66B4\u51FB\u653B\u51FB\u529B"
+      - Kritische Angriffskraft
+      - Puissance D'attaque Critique
+      - Potenza Di Attacco Critico
+      - "\u30AF\u30EA\u30C6\u30A3\u30AB\u30EB\u653B\u6483\u529B"
+      - Kuasa Serangan Kritikal
+      - Kekuatan Serangan Kritis
+      - "Poder De Ataque Cr\xEDtico"
+      - "\u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0421\u0438\u043B\u0430
+        \u0410\u0442\u0430\u043A\u0438"
+      - "Poder De Ataque Cr\xEDtico"
+      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E04\u0E23\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E25"
+      - "S\u1EE9c T\u1EA5n C\xF4ng Ch\xED M\u1EA1ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Damage_Increase_String
+      TermType: 0
+      Description: 
+      Languages:
+      - Attack Power
+      - "\uACF5\uACA9\uB825"
+      - "\u653B\u51FB\u529B"
+      - "\u653B\u51FB\u529B"
+      - Angriffskraft
+      - Puissance D'attaque
+      - Potere D'attacco
+      - "\u653B\u6483\u529B"
+      - Kuasa Serangan
+      - Kekuatan Serangan
+      - Poder De Ataque
+      - "\u0421\u0438\u043B\u0430 \u0410\u0442\u0430\u043A\u0438"
+      - Poder De Ataque
+      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35"
+      - "S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
     - Term: Dungeon_Clear_String_Format
       TermType: 0
       Description: 
@@ -57,6 +121,71 @@ MonoBehaviour:
       - '{0} {1} Piso Despejado'
       - "{0} {1} \u0E40\u0E04\u0E25\u0E35\u0E22\u0E23\u0E4C\u0E1E\u0E37\u0E49\u0E19\u0E41\u0E25\u0E49\u0E27"
       - "\u0110\xE3 D\u1ECDn S\u1EA1ch T\u1EA7ng {0} {1}"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Enemy_Gold_Increase_String
+      TermType: 0
+      Description: 
+      Languages:
+      - Enemy Kill Gold
+      - "\uC801 \uCC98\uCE58 \uACE8\uB4DC"
+      - "\u654C\u4EBA\u6740\u91D1"
+      - "\u654C\u4EBA\u6740\u91D1"
+      - "Gegner T\xF6ten Gold"
+      - L'ennemi Tue L'or
+      - Il Nemico Uccide L'oro
+      - "\u6575\u51E6\u7F6E\u30B4\u30FC\u30EB\u30C9"
+      - Musuh Membunuh Emas
+      - Musuh Bunuh Emas
+      - Inimigo Mata Ouro
+      - "\u0417\u043E\u043B\u043E\u0442\u043E \u0417\u0430 \u0423\u0431\u0438\u0439\u0441\u0442\u0432\u043E
+        \u0412\u0440\u0430\u0433\u0430"
+      - Enemigo Matar Oro
+      - "\u0E28\u0E31\u0E15\u0E23\u0E39\u0E2A\u0E31\u0E07\u0E2B\u0E32\u0E23\u0E17\u0E2D\u0E07"
+      - "K\u1EBB Th\xF9 Ti\xEAu Di\u1EC7t V\xE0ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Equip
+      TermType: 0
+      Description: 
+      Languages:
+      - Equip
+      - "\uC7A5\uCC29"
+      - "\u88C5\u5907"
+      - "\u88C5\u5907"
+      - "Ausr\xFCsten"
+      - "\xC9quiper"
+      - Equipaggiare
+      - "\u88C5\u5099\u3059\u308B"
+      - Melengkapkan
+      - Melengkapi
+      - Equipar
+      - "\u041E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u0442\u044C"
+      - Equipar
+      - "\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C"
+      - "Trang B\u1ECB"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Extra_Damage_Increase_String
+      TermType: 0
+      Description: 
+      Languages:
+      - Extra Attack Power
+      - "\uCD94\uAC00 \uACF5\uACA9\uB825"
+      - "\u989D\u5916\u653B\u51FB\u529B"
+      - "\u989D\u5916\u653B\u51FB\u529B"
+      - "Zus\xE4tzliche Angriffskraft"
+      - "Puissance D'attaque Suppl\xE9mentaire"
+      - Potenza D'attacco Extra
+      - "\u8FFD\u52A0\u653B\u6483\u529B"
+      - Kuasa Serangan Tambahan
+      - Kekuatan Serangan Ekstra
+      - Poder De Ataque Extra
+      - "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F
+        \u0421\u0438\u043B\u0430 \u0410\u0442\u0430\u043A\u0438"
+      - Poder De Ataque Adicional
+      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E1E\u0E34\u0E40\u0E28\u0E29"
+      - "S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng B\u1ED5 Sung"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: Incomplete
@@ -142,6 +271,27 @@ MonoBehaviour:
       - "{0} Misi\xF3n {1} Completada"
       - "{0} \u0E20\u0E32\u0E23\u0E01\u0E34\u0E08 {1} \u0E40\u0E2A\u0E23\u0E47\u0E08\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"
       - "{0} Nhi\u1EC7m V\u1EE5 {1} \u0110\xE3 Ho\xE0n Th\xE0nh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Gold_Increase_String
+      TermType: 0
+      Description: 
+      Languages:
+      - Quest Gold
+      - "\uD018\uC2A4\uD2B8 \uACE8\uB4DC"
+      - "\u5BFB\u6C42\u9EC4\u91D1"
+      - "\u5BFB\u6C42\u9EC4\u91D1"
+      - Quest-Gold
+      - "Qu\xEAte D'or"
+      - Ricerca Dell'oro
+      - "\u30AF\u30A8\u30B9\u30C8\u30B4\u30FC\u30EB\u30C9"
+      - Pencarian Emas
+      - Pencarian Emas
+      - Busca Ouro
+      - "\u0417\u043E\u043B\u043E\u0442\u043E \u041A\u0432\u0435\u0441\u0442\u0430"
+      - "B\xFAsqueda De Oro"
+      - "\u0E41\u0E2A\u0E27\u0E07\u0E2B\u0E32\u0E17\u0E2D\u0E07\u0E04\u0E33"
+      - "Nhi\u1EC7m V\u1EE5 V\xE0ng"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: Quest_Name_0
@@ -231,6 +381,182 @@ MonoBehaviour:
       - "H\xE1i Sao"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
+    - Term: Quest_Name_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Intermediate Potion Making
+      - "\uC911\uAE09 \uD3EC\uC158 \uC81C\uC791"
+      - "\u4E2D\u7EA7\u836F\u5242\u5236\u4F5C"
+      - "\u4E2D\u7EA7\u836F\u5242\u5236\u4F5C"
+      - "Zaubertrankherstellung F\xFCr Fortgeschrittene"
+      - "Fabrication De Potions Interm\xE9diaires"
+      - Preparazione Di Pozioni Intermedie
+      - "\u4E2D\u7D1A\u30DD\u30FC\u30B7\u30E7\u30F3\u5236\u4F5C"
+      - Pembuatan Ramuan Perantaraan
+      - Pembuatan Ramuan Tingkat Menengah
+      - "Prepara\xE7\xE3o De Po\xE7\xF5es Intermedi\xE1rias"
+      - "\u041F\u0440\u043E\u043C\u0435\u0436\u0443\u0442\u043E\u0447\u043D\u043E\u0435
+        \u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u0438\u0435
+        \u0417\u0435\u043B\u0438\u0439"
+      - "Elaboraci\xF3n De Pociones Intermedias."
+      - "\u0E01\u0E32\u0E23\u0E17\u0E33\u0E22\u0E32\u0E02\u0E31\u0E49\u0E19\u0E01\u0E25\u0E32\u0E07"
+      - "Ch\u1EBF T\u1EA1o Thu\u1ED1c Trung C\u1EA5p"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Advanced Potion Crafting
+      - "\uC0C1\uAE09 \uD3EC\uC158 \uC81C\uC791"
+      - "\u9AD8\u7EA7\u836F\u6C34\u5236\u4F5C"
+      - "\u9AD8\u7EA7\u836F\u6C34\u5236\u4F5C"
+      - Fortgeschrittene Zaubertrankherstellung
+      - "Fabrication De Potions Avanc\xE9es"
+      - Creazione Avanzata Di Pozioni
+      - "\u4E0A\u7D1A\u30DD\u30FC\u30B7\u30E7\u30F3\u5236\u4F5C"
+      - Kerajinan Ramuan Lanjutan
+      - Pembuatan Ramuan Tingkat Lanjut
+      - "Elabora\xE7\xE3o Avan\xE7ada De Po\xE7\xF5es"
+      - "\u041F\u0440\u043E\u0434\u0432\u0438\u043D\u0443\u0442\u043E\u0435 \u0421\u043E\u0437\u0434\u0430\u043D\u0438\u0435
+        \u0417\u0435\u043B\u0438\u0439"
+      - "Elaboraci\xF3n Avanzada De Pociones"
+      - "\u0E01\u0E32\u0E23\u0E1B\u0E23\u0E30\u0E14\u0E34\u0E29\u0E10\u0E4C\u0E22\u0E32\u0E02\u0E31\u0E49\u0E19\u0E2A\u0E39\u0E07"
+      - "Ch\u1EBF T\u1EA1o Thu\u1ED1c Ti\xEAn Ti\u1EBFn"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Making A Detox Potion
+      - "\uD574\uB3C5\uC6A9 \uD3EC\uC158 \uC81C\uC791"
+      - "\u5236\u4F5C\u6392\u6BD2\u836F\u6C34"
+      - "\u5236\u4F5C\u6392\u6BD2\u836F\u6C34"
+      - Einen Entgiftungstrank Herstellen
+      - "Faire Une Potion D\xE9tox"
+      - Preparare Una Pozione Disintossicante
+      - "\u89E3\u6BD2\u7528\u30DD\u30FC\u30B7\u30E7\u30F3\u5236\u4F5C"
+      - Membuat Ramuan Detoks
+      - Membuat Ramuan Detoks
+      - "Fazendo Uma Po\xE7\xE3o De Desintoxica\xE7\xE3o"
+      - "\u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u0438\u0435
+        \u0414\u0435\u0442\u043E\u043A\u0441-\u0417\u0435\u043B\u044C\u044F"
+      - "Hacer Una Poci\xF3n Desintoxicante"
+      - "\u0E01\u0E32\u0E23\u0E17\u0E33\u0E22\u0E32\u0E14\u0E35\u0E17\u0E47\u0E2D\u0E01\u0E0B\u0E4C"
+      - "L\xE0m Thu\u1ED1c Gi\u1EA3i \u0110\u1ED9c"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Poison Potion Crafting
+      - "\uB3C5 \uD3EC\uC158 \uC81C\uC791"
+      - "\u6BD2\u836F\u5236\u4F5C"
+      - "\u6BD2\u836F\u5236\u4F5C"
+      - "Herstellung Von Gifttr\xE4nken"
+      - "Fabrication De Potions Empoisonn\xE9es"
+      - Creazione Di Pozioni Velenose
+      - "\u6BD2\u30DD\u30FC\u30B7\u30E7\u30F3\u5236\u4F5C"
+      - Kerajinan Ramuan Beracun
+      - Pembuatan Ramuan Racun
+      - "Elabora\xE7\xE3o De Po\xE7\xF5es Venenosas"
+      - "\u0421\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u042F\u0434\u043E\u0432\u0438\u0442\u043E\u0433\u043E
+        \u0417\u0435\u043B\u044C\u044F"
+      - "Elaboraci\xF3n De Pociones Venenosas"
+      - "\u0E01\u0E32\u0E23\u0E1B\u0E23\u0E30\u0E14\u0E34\u0E29\u0E10\u0E4C\u0E22\u0E32\u0E1E\u0E34\u0E29"
+      - "Ch\u1EBF T\u1EA1o Thu\u1ED1c \u0110\u1ED9c"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Crafting Top-Quality Potions
+      - "\uCD5C\uC0C1\uAE09 \uD3EC\uC158 \uC81C\uC791"
+      - "\u5236\u4F5C\u9876\u7EA7\u836F\u5242"
+      - "\u5236\u4F5C\u9876\u7EA7\u836F\u5242"
+      - "Herstellung Hochwertiger Tr\xE4nke"
+      - "Fabriquer Des Potions De Qualit\xE9 Sup\xE9rieure"
+      - "Realizzare Pozioni Di Alta Qualit\xE0"
+      - "\u6700\u4E0A\u7D1A\u30DD\u30FC\u30B7\u30E7\u30F3\u5236\u4F5C"
+      - Membuat Ramuan Berkualiti Tinggi
+      - Membuat Ramuan Berkualitas Tinggi
+      - "Elabora\xE7\xE3o De Po\xE7\xF5es De Alta Qualidade"
+      - "\u0421\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u0417\u0435\u043B\u0438\u0439
+        \u0412\u044B\u0441\u0448\u0435\u0433\u043E \u041A\u0430\u0447\u0435\u0441\u0442\u0432\u0430"
+      - Elaborar Pociones De Alta Calidad.
+      - "\u0E1B\u0E23\u0E30\u0E14\u0E34\u0E29\u0E10\u0E4C\u0E22\u0E32\u0E04\u0E38\u0E13\u0E20\u0E32\u0E1E\u0E2A\u0E39\u0E07"
+      - "Ch\u1EBF T\u1EA1o Thu\u1ED1c Ch\u1EA5t L\u01B0\u1EE3ng H\xE0ng \u0110\u1EA7u"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_17
+      TermType: 0
+      Description: 
+      Languages:
+      - Learn Legendary Magic
+      - "\uC804\uC124\uC758 \uB9C8\uBC95 \uBC30\uC6B0\uAE30"
+      - "\u5B66\u4E60\u4F20\u5947\u9B54\u6CD5"
+      - "\u5B66\u4E60\u4F20\u5947\u9B54\u6CD5"
+      - "Lerne Legend\xE4re Magie"
+      - "Apprenez La Magie L\xE9gendaire"
+      - Impara La Magia Leggendaria
+      - "\u4F1D\u8AAC\u306E\u9B54\u6CD5\u3092\u5B66\u3076"
+      - Belajar Sihir Legenda
+      - Pelajari Sihir Legendaris
+      - "Aprenda Magia Lend\xE1ria"
+      - "\u0418\u0437\u0443\u0447\u0438\u0442\u0435 \u041B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u0443\u044E
+        \u041C\u0430\u0433\u0438\u044E"
+      - Aprende Magia Legendaria
+      - "\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49\u0E40\u0E27\u0E17\u0E21\u0E19\u0E15\u0E23\u0E4C\u0E43\u0E19\u0E15\u0E33\u0E19\u0E32\u0E19"
+      - "T\xECm Hi\u1EC3u Ph\xE9p Thu\u1EADt Huy\u1EC1n Tho\u1EA1i"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_18
+      TermType: 0
+      Description: 
+      Languages:
+      - Find A Safe
+      - "\uAE08\uACE0 \uCC3E\uAE30"
+      - "\u627E\u4E00\u4E2A\u4FDD\u9669\u7BB1"
+      - "\u627E\u4E00\u4E2A\u4FDD\u9669\u7BB1"
+      - Finden Sie Einen Safe
+      - Trouver Un Coffre-Fort
+      - Trova Una Cassaforte
+      - "\u91D1\u5EAB\u3092\u63A2\u3059"
+      - Cari Peti Besi
+      - Temukan Brankas
+      - Encontre Um Cofre
+      - "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u0421\u0435\u0439\u0444"
+      - Encontrar Una Caja Fuerte
+      - "\u0E2B\u0E32\u0E15\u0E39\u0E49\u0E40\u0E0B\u0E1F"
+      - "T\xECm M\u1ED9t N\u01A1i An To\xE0n"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_19
+      TermType: 0
+      Description: 
+      Languages:
+      - Guild Leader Inauguration
+      - "\uAE38\uB4DC\uC7A5 \uCDE8\uC784"
+      - "\u884C\u4F1A\u4F1A\u957F\u5C31\u804C\u5178\u793C"
+      - "\u884C\u4F1A\u4F1A\u957F\u5C31\u804C\u5178\u793C"
+      - Einweihung Des Gildenleiters
+      - Intronisation Du Chef De Guilde
+      - Inaugurazione Del Leader Della Gilda
+      - "\u30AE\u30EB\u30C9\u9577\u5C31\u4EFB"
+      - Perasmian Ketua Persatuan
+      - Pelantikan Ketua Serikat
+      - "Inaugura\xE7\xE3o Do L\xEDder Da Guilda"
+      - "\u0418\u043D\u0430\u0443\u0433\u0443\u0440\u0430\u0446\u0438\u044F \u041B\u0438\u0434\u0435\u0440\u0430
+        \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
+      - "Inauguraci\xF3n Del L\xEDder Del Gremio"
+      - "\u0E1E\u0E34\u0E18\u0E35\u0E40\u0E1B\u0E34\u0E14\u0E2B\u0E31\u0E27\u0E2B\u0E19\u0E49\u0E32\u0E01\u0E34\u0E25\u0E14\u0E4C"
+      - "L\u1EC5 Nh\u1EADm Ch\u1EE9c C\u1EE7a Th\u1EE7 L\u0129nh Bang H\u1ED9i"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
     - Term: Quest_Name_2
       TermType: 0
       Description: 
@@ -250,6 +576,28 @@ MonoBehaviour:
       - "Capacitaci\xF3n"
       - "\u0E01\u0E32\u0E23\u0E1D\u0E36\u0E01\u0E2D\u0E1A\u0E23\u0E21"
       - "\u0110\xE0o T\u1EA1o"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Quest_Name_20
+      TermType: 0
+      Description: 
+      Languages:
+      - Go To Mars
+      - "\uD654\uC131 \uAC00\uAE30"
+      - "\u53BB\u706B\u661F"
+      - "\u53BB\u706B\u661F"
+      - Gehe Zum Mars
+      - Aller Sur Mars
+      - Vai Su Marte
+      - "\u706B\u661F\u306B\u884C\u304F"
+      - Pergi Ke Marikh
+      - Pergi Ke Mars
+      - "V\xE1 Para Marte"
+      - "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C\u0441\u044F \u041D\u0430
+        \u041C\u0430\u0440\u0441"
+      - Ir A Marte
+      - "\u0E44\u0E1B\u0E14\u0E32\u0E27\u0E2D\u0E31\u0E07\u0E04\u0E32\u0E23"
+      - "\u0110i T\u1EDBi Sao H\u1ECFa"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: Quest_Name_3
@@ -447,999 +795,25 @@ MonoBehaviour:
       - "C\u1EEDa H\xE0ng"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Stage
+    - Term: Skin
       TermType: 0
       Description: 
       Languages:
-      - Stage
-      - "\uC2A4\uD14C\uC774\uC9C0"
-      - "\u9636\u6BB5"
-      - "\u9636\u6BB5"
-      - "B\xFChne"
-      - "Sc\xE8ne"
-      - Palcoscenico
-      - "\u30B9\u30C6\u30FC\u30B8"
-      - Pentas
-      - Panggung
-      - "Est\xE1gio"
-      - "\u042D\u0442\u0430\u043F"
-      - Escenario
-      - "\u0E40\u0E27\u0E17\u0E35"
-      - "S\xE2n Kh\u1EA5u"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Stage_String_Format
-      TermType: 0
-      Description: 
-      Languages:
-      - Stage {0}
-      - "{0} \uCE35"
-      - "\u9636\u6BB5 {0}"
-      - "\u9636\u6BB5 {0}"
-      - "B\xFChne {0}"
-      - "Sc\xE8ne {0}"
-      - Palcoscenico {0}
-      - "\u30B9\u30C6\u30FC\u30B8 {0}"
-      - Pentas {0}
-      - Panggung {0}
-      - "Est\xE1gio {0}"
-      - "\u042D\u0442\u0430\u043F {0}"
-      - Escenario {0}
-      - "\u0E40\u0E27\u0E17\u0E35 {0}"
-      - "S\xE2n Kh\u1EA5u {0}"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Treasure
-      TermType: 0
-      Description: 
-      Languages:
-      - Treasure
-      - "\uBCF4\uBB3C"
-      - "\u5B9D\u85CF"
-      - "\u5B9D\u85CF"
-      - Schatz
-      - "Tr\xE9sor"
-      - Tesoro
-      - "\u5B9D\u7269"
-      - Harta Karun
-      - Harta Karun
-      - Tesouro
-      - "\u0421\u043E\u043A\u0440\u043E\u0432\u0438\u0449\u0435"
-      - Tesoro
-      - "\u0E2A\u0E21\u0E1A\u0E31\u0E15\u0E34"
-      - "Kho B\xE1u"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon
-      TermType: 0
-      Description: 
-      Languages:
-      - Weapon
-      - "\uBB34\uAE30"
-      - "\u6B66\u5668"
-      - "\u6B66\u5668"
-      - Waffe
-      - Arme
-      - Arma
-      - "\u6B66\u5668"
-      - Senjata
-      - Senjata
-      - Arma
-      - "\u041E\u0440\u0443\u0436\u0438\u0435"
-      - Arma
-      - "\u0E2D\u0E32\u0E27\u0E38\u0E18"
-      - "V\u0169 Kh\xED"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Upgrade_String_Format
-      TermType: 0
-      Description: 
-      Languages:
-      - Reinforced {0} {1} Times
-      - "{0} {1}\uD68C \uAC15\uD654"
-      - "\u5F3A\u5316{0} {1}\u6B21"
-      - "\u5F3A\u5316{0} {1}\u6B21"
-      - "{0} {1} Mal Verst\xE4rkt"
-      - "Renforc\xE9 {0} {1}\_Fois"
-      - Rinforzato {0} {1} Volte
-      - "{0} {1}\u56DE\u3092\u5F37\u5316"
-      - Diperkukuh {0} {1} Kali
-      - Diperkuat {0} {1} Kali
-      - "Refor\xE7ado {0} {1} Vezes"
-      - "\u0423\u0441\u0438\u043B\u0435\u043D\u043E {0} {1} \u0420\u0430\u0437"
-      - Reforzado {0} {1} Veces
-      - "\u0E40\u0E2A\u0E23\u0E34\u0E21\u0E01\u0E33\u0E25\u0E31\u0E07 {0} {1} \u0E04\u0E23\u0E31\u0E49\u0E07"
-      - "\u0110\u01B0\u1EE3c Gia C\u1ED1 {0} {1} L\u1EA7n"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_0
-      TermType: 0
-      Description: 
-      Languages:
-      - Beginner Sword
-      - "\uCD08\uBCF4\uC790\uC758 \uB2E8\uAC80"
-      - "\u521D\u5B66\u8005\u5251"
-      - "\u521D\u5B66\u8005\u5251"
-      - Einsteigerschwert
-      - "\xC9p\xE9e De D\xE9butant"
-      - Spada Per Principianti
-      - "\u521D\u5FC3\u306E\u5263"
-      - Pedang Pemula
-      - Pedang Pemula
-      - Espada Iniciante
-      - "\u041C\u0435\u0447 \u0414\u043B\u044F \u041D\u0430\u0447\u0438\u043D\u0430\u044E\u0449\u0438\u0445"
-      - Espada Principiante
-      - "\u0E14\u0E32\u0E1A\u0E40\u0E23\u0E34\u0E48\u0E21\u0E15\u0E49\u0E19"
-      - "Thanh Ki\u1EBFm M\u1EDBi B\u1EAFt \u0110\u1EA7u"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_1
-      TermType: 0
-      Description: 
-      Languages:
-      - Intermediate Sword
-      - "\uC911\uAE09\uC790\uC758 \uC740\uAC80"
-      - "\u4E2D\u7EA7\u5251"
-      - "\u4E2D\u7EA7\u5251"
-      - Zwischenschwert
-      - "\xC9p\xE9e Interm\xE9diaire"
-      - Spada Intermedia
-      - "\u4E2D\u7D1A\u5263"
-      - Pedang Perantaraan
-      - Pedang Perantara
-      - "Espada Intermedi\xE1ria"
-      - "\u041F\u0440\u043E\u043C\u0435\u0436\u0443\u0442\u043E\u0447\u043D\u044B\u0439
-        \u041C\u0435\u0447"
-      - Espada Intermedia
-      - "\u0E14\u0E32\u0E1A\u0E01\u0E25\u0E32\u0E07"
-      - "Thanh Ki\u1EBFm Trung Gian"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_2
-      TermType: 0
-      Description: 
-      Languages:
-      - Advanced Sword
-      - "\uC0C1\uAE09\uC790\uC758 \uCCA0\uAC80"
-      - "\u9AD8\u7EA7\u5251"
-      - "\u9AD8\u7EA7\u5251"
-      - Fortgeschrittenes Schwert
-      - "\xC9p\xE9e Avanc\xE9e"
-      - Spada Avanzata
-      - "\u9AD8\u5EA6\u306A\u5263"
-      - Pedang Canggih
-      - Pedang Tingkat Lanjut
-      - "Espada Avan\xE7ada"
-      - "\u0423\u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u0441\u0442\u0432\u043E\u0432\u0430\u043D\u043D\u044B\u0439
-        \u041C\u0435\u0447"
-      - Espada Avanzada
-      - "\u0E14\u0E32\u0E1A\u0E02\u0E31\u0E49\u0E19\u0E2A\u0E39\u0E07"
-      - "Thanh Ki\u1EBFm Cao C\u1EA5p"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_3
-      TermType: 0
-      Description: 
-      Languages:
-      - Wooden Sword
-      - "\uD398\uB9AC\uB3C4\uD2B8 \uB2E8\uAC80"
-      - "\u6728\u5251"
-      - "\u6728\u5251"
-      - Holzschwert
-      - "\xC9p\xE9e En Bois"
-      - Spada Di Legno
-      - "\u6728\u5263"
-      - Pedang Kayu
-      - Pedang Kayu
-      - Espada De Madeira
-      - "\u0414\u0435\u0440\u0435\u0432\u044F\u043D\u043D\u044B\u0439 \u041C\u0435\u0447"
-      - Espada De Madera
-      - "\u0E14\u0E32\u0E1A\u0E44\u0E21\u0E49"
-      - "Thanh Ki\u1EBFm G\u1ED7"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_4
-      TermType: 0
-      Description: 
-      Languages:
-      - Toy Sword
-      - "\uB2E8\uB2E8\uD55C \uCCA0\uAC80"
-      - "\u73A9\u5177\u5251"
-      - "\u73A9\u5177\u5251"
-      - Spielzeugschwert
-      - "\xC9p\xE9e Jouet"
-      - Spada Giocattolo
-      - "\u304A\u3082\u3061\u3083\u306E\u5263"
-      - Pedang Mainan
-      - Pedang Mainan
-      - Espada De Brinquedo
-      - "\u0418\u0433\u0440\u0443\u0448\u0435\u0447\u043D\u044B\u0439 \u041C\u0435\u0447"
-      - Espada De Juguete
-      - "\u0E14\u0E32\u0E1A\u0E02\u0E2D\u0E07\u0E40\u0E25\u0E48\u0E19"
-      - "Thanh Ki\u1EBFm \u0110\u1ED3 Ch\u01A1i"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_5
-      TermType: 0
-      Description: 
-      Languages:
-      - Bee Sword
-      - "\uD06C\uB9AC\uC2A4\uD0C8 \uB9C9\uB300\uAE30"
-      - "\u8702\u5251"
-      - "\u8702\u5251"
-      - Bienenschwert
-      - "\xC9p\xE9e D'abeille"
-      - Spada D'api
-      - "\u30DF\u30C4\u30D0\u30C1\u306E\u5200"
-      - Pedang Lebah
-      - Pedang Lebah
-      - Espada De Abelha
-      - "\u041F\u0447\u0435\u043B\u0438\u043D\u044B\u0439 \u041C\u0435\u0447"
-      - Espada De Abeja
-      - "\u0E14\u0E32\u0E1A\u0E1C\u0E36\u0E49\u0E07"
-      - "Thanh Ki\u1EBFm Ong"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_6
-      TermType: 0
-      Description: 
-      Languages:
-      - Squid's Sword
-      - "\uC624\uC9D5\uC5B4\uC758 \uAC80"
-      - "\u4E4C\u8D3C\u4E4B\u5251"
-      - "\u4E4C\u8D3C\u4E4B\u5251"
-      - Tintenfischschwert
-      - "\xC9p\xE9e De Calmar"
-      - La Spada Di Calamaro
-      - "\u30A4\u30AB\u306E\u5263"
-      - Pedang Sotong
-      - Pedang Cumi
-      - Espada De Lula
-      - "\u041C\u0435\u0447 \u041A\u0430\u043B\u044C\u043C\u0430\u0440\u0430"
-      - Espada De Calamar
-      - "\u0E14\u0E32\u0E1A\u0E1B\u0E25\u0E32\u0E2B\u0E21\u0E36\u0E01"
-      - "Thanh Ki\u1EBFm C\u1EE7a M\u1EF1c"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_7
-      TermType: 0
-      Description: 
-      Languages:
-      - Slayer's Greatsword
-      - "\uC800\uC8FC\uBC1B\uC740 \uCCA0\uAC80"
-      - "\u6740\u622E\u8005\u5927\u5251"
-      - "\u6740\u622E\u8005\u5927\u5251"
-      - "Gro\xDFschwert Des J\xE4gers"
-      - Espadon De Tueur
-      - Granspada Dell'assassino
-      - "\u8650\u6BBA\u8005\u306E\u5927\u5263"
-      - Pedang Besar Pembunuh
-      - Pedang Besar Pembunuh
-      - Espada Grande Do Assassino
-      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447 \u0423\u0431\u0438\u0439\u0446\u044B"
-      - Gran Espada Del Asesino
-      - "\u0E14\u0E32\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E02\u0E2D\u0E07\u0E1C\u0E39\u0E49\u0E2A\u0E31\u0E07\u0E2B\u0E32\u0E23"
-      - "\u0110\u1EA1i Ki\u1EBFm C\u1EE7a Slayer"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_8
-      TermType: 0
-      Description: 
-      Languages:
-      - Whirlwind Sword
-      - "\uD1A0\uD30C\uC988 \uB9C9\uB300\uAE30"
-      - "\u65CB\u98CE\u5251"
-      - "\u65CB\u98CE\u5251"
-      - Wirbelwindschwert
-      - "\xC9p\xE9e Tourbillon"
-      - Spada Vorticosa
-      - "\u65CB\u56DE\u5200"
-      - Pedang Angin Puyuh
-      - Pedang Angin Puyuh
-      - Espada Redemoinho
-      - "\u0412\u0438\u0445\u0440\u0435\u0432\u043E\u0439 \u041C\u0435\u0447"
-      - Espada Torbellino
-      - "\u0E14\u0E32\u0E1A\u0E25\u0E21\u0E01\u0E23\u0E14"
-      - "Thanh Ki\u1EBFm Gi\xF3 L\u1ED1c"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_9
-      TermType: 0
-      Description: 
-      Languages:
-      - Devil's Eyes
-      - "\uC545\uB9C8\uC758 \uB208\uB3D9\uC790"
-      - "\u6076\u9B54\u4E4B\u773C"
-      - "\u6076\u9B54\u4E4B\u773C"
-      - Teufelsaugen
-      - Les Yeux Du Diable
-      - Occhi Del Diavolo
-      - "\u60AA\u9B54\u306E\u77B3"
-      - Mata Syaitan
-      - Mata Iblis
-      - Olhos Do Diabo
-      - "\u0413\u043B\u0430\u0437\u0430 \u0414\u044C\u044F\u0432\u043E\u043B\u0430"
-      - Ojos Del Diablo
-      - "\u0E14\u0E27\u0E07\u0E15\u0E32\u0E02\u0E2D\u0E07\u0E1B\u0E35\u0E28\u0E32\u0E08"
-      - "\u0110\xF4i M\u1EAFt C\u1EE7a Qu\u1EF7"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_10
-      TermType: 0
-      Description: 
-      Languages:
-      - Sister's Greatsword
-      - "\uB204\uB098\uC758 \uB9C8\uBC95\uAC80"
-      - "\u59D0\u59D0\u7684\u5927\u5251"
-      - "\u59D0\u59D0\u7684\u5927\u5251"
-      - "Gro\xDFschwert Der Schwester"
-      - "Espadon De S\u0153ur"
-      - Lo Spadone Della Sorella
-      - "\u59C9\u306E\u5927\u5263"
-      - Pedang Besar Kakak
-      - Pedang Besar Kakak
-      - "Espada Grande Da Irm\xE3"
-      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447 \u0421\u0435\u0441\u0442\u0440\u044B"
-      - Gran Espada De La Hermana
-      - "\u0E14\u0E32\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E02\u0E2D\u0E07\u0E19\u0E49\u0E2D\u0E07\u0E2A\u0E32\u0E27"
-      - "\u0110\u1EA1i Ki\u1EBFm C\u1EE7a Ch\u1ECB G\xE1i"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_11
-      TermType: 0
-      Description: 
-      Languages:
-      - So Shameless
-      - "\uB77C\uBCA4\uB518"
-      - "\u592A\u65E0\u803B\u4E86"
-      - "\u592A\u65E0\u803B\u4E86"
-      - So Schamlos
-      - Tellement Sans Vergogne
-      - "Cos\xEC Spudorato"
-      - "\u5929\u65B9\u652F\u8EF8"
-      - Jadi Tak Tahu Malu
-      - Sangat Tidak Tahu Malu
-      - "T\xE3o Sem Vergonha"
-      - "\u0422\u0430\u043A \u0411\u0435\u0441\u0441\u0442\u044B\u0434\u043D\u043E"
-      - Tan Descarado
-      - "\u0E44\u0E23\u0E49\u0E22\u0E32\u0E07\u0E2D\u0E32\u0E22\u0E21\u0E32\u0E01"
-      - "Th\u1EADt Kh\xF4ng Bi\u1EBFt X\u1EA5u H\u1ED5"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_12
-      TermType: 0
-      Description: 
-      Languages:
-      - Dragon King's Sword
-      - "\uC6A9\uC655\uC758 \uAC80"
-      - "\u9F99\u738B\u4E4B\u5251"
-      - "\u9F99\u738B\u4E4B\u5251"
-      - "Schwert Des Drachenk\xF6nigs"
-      - "\xC9p\xE9e Du Roi Dragon"
-      - La Spada Del Re Drago
-      - "\u9F8D\u738B\u306E\u5263"
-      - Pedang Raja Naga
-      - Pedang Raja Naga
-      - "Espada Do Rei Drag\xE3o"
-      - "\u041C\u0435\u0447 \u041A\u043E\u0440\u043E\u043B\u044F \u0414\u0440\u0430\u043A\u043E\u043D\u043E\u0432"
-      - "Espada Del Rey Drag\xF3n"
-      - "\u0E14\u0E32\u0E1A\u0E23\u0E32\u0E0A\u0E32\u0E21\u0E31\u0E07\u0E01\u0E23"
-      - "Thanh Ki\u1EBFm C\u1EE7a Vua R\u1ED3ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_13
-      TermType: 0
-      Description: 
-      Languages:
-      - King's Sword
-      - "\uC2E0\uC131\uB825\uC5D0 \uBB3C\uB4E0 \uAC80"
-      - "\u56FD\u738B\u4E4B\u5251"
-      - "\u56FD\u738B\u4E4B\u5251"
-      - "K\xF6nigsschwert"
-      - "L'\xE9p\xE9e Du Roi"
-      - La Spada Del Re
-      - "\u8987\u738B\u306E\u5263"
-      - Pedang Raja
-      - Pedang Raja
-      - Espada Do Rei
-      - "\u041A\u043E\u0440\u043E\u043B\u0435\u0432\u0441\u043A\u0438\u0439 \u041C\u0435\u0447"
-      - Espada Del Rey
-      - "\u0E14\u0E32\u0E1A\u0E02\u0E2D\u0E07\u0E01\u0E29\u0E31\u0E15\u0E23\u0E34\u0E22\u0E4C"
-      - "Thanh Ki\u1EBFm C\u1EE7a Vua"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_14
-      TermType: 0
-      Description: 
-      Languages:
-      - Sword Of Execution
-      - "\uB208\uB3D9\uC790 \uC694\uC220\uAC80"
-      - "\u6267\u884C\u4E4B\u5251"
-      - "\u6267\u884C\u4E4B\u5251"
-      - Schwert Der Hinrichtung
-      - "\xC9p\xE9e D'ex\xE9cution"
-      - Spada Dell'esecuzione
-      - "\u51E6\u5211\u306E\u5263"
-      - Pedang Hukuman Mati
-      - Pedang Eksekusi
-      - "Espada De Execu\xE7\xE3o"
-      - "\u041C\u0435\u0447 \u041A\u0430\u0437\u043D\u0438"
-      - "Espada De Ejecuci\xF3n"
-      - "\u0E14\u0E32\u0E1A\u0E41\u0E2B\u0E48\u0E07\u0E01\u0E32\u0E23\u0E1B\u0E23\u0E30\u0E2B\u0E32\u0E23\u0E0A\u0E35\u0E27\u0E34\u0E15"
-      - "Thanh Ki\u1EBFm H\xE0nh Quy\u1EBFt"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_15
-      TermType: 0
-      Description: 
-      Languages:
-      - Excalibur
-      - "\uC5D1\uC2A4\uCE7C\uB9AC\uBC84"
-      - "\u795E\u5251"
-      - "\u795E\u5251"
-      - Excalibur
-      - Excalibur
-      - Excalibur
-      - "\u30A8\u30AF\u30B9\u30AB\u30EA\u30D0\u30FC"
-      - Excalibur
-      - Excalibur
-      - Excalibur
-      - "\u042D\u043A\u0441\u043A\u0430\u043B\u0438\u0431\u0443\u0440"
-      - Excalibur
-      - "\u0E40\u0E2D\u0E47\u0E01\u0E0B\u0E4C\u0E04\u0E32\u0E25\u0E34\u0E40\u0E1A\u0E2D\u0E23\u0E4C"
-      - Excalibur
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_16
-      TermType: 0
-      Description: 
-      Languages:
-      - Gram
-      - "\uBC84\uD504\uBC1B\uC740 \uB208\uB3D9\uC790 \uC694\uC220\uAC80"
-      - "\u514B"
-      - "\u514B"
-      - Gramm
-      - Gramme
-      - Grammo
-      - "\u30B0\u30E9\u30E0"
-      - Gram
-      - Gram
-      - Grama
-      - "\u0413\u0440\u0430\u043C\u043C"
-      - Gramo
-      - "\u0E01\u0E23\u0E31\u0E21"
-      - Gram
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_17
-      TermType: 0
-      Description: 
-      Languages:
-      - Stars In The Night Sky
-      - "\uB3C4\uAE68\uBE44\uC758 \uB9C8\uAC80"
-      - "\u591C\u7A7A\u4E2D\u7684\u661F\u661F"
-      - "\u591C\u7A7A\u4E2D\u7684\u661F\u661F"
-      - Sterne Am Nachthimmel
-      - "\xC9toiles Dans Le Ciel Nocturne"
-      - Stelle Nel Cielo Notturno
-      - "\u591C\u7A7A\u306E\u661F"
-      - Bintang Di Langit Malam
-      - Bintang Di Langit Malam
-      - "Estrelas No C\xE9u Noturno"
-      - "\u0417\u0432\u0435\u0437\u0434\u044B \u0412 \u041D\u043E\u0447\u043D\u043E\u043C
-        \u041D\u0435\u0431\u0435"
-      - Estrellas En El Cielo Nocturno
-      - "\u0E14\u0E27\u0E07\u0E14\u0E32\u0E27\u0E43\u0E19\u0E17\u0E49\u0E2D\u0E07\u0E1F\u0E49\u0E32\u0E22\u0E32\u0E21\u0E04\u0E48\u0E33\u0E04\u0E37\u0E19"
-      - "Nh\u1EEFng Ng\xF4i Sao Tr\xEAn B\u1EA7u Tr\u1EDDi \u0110\xEAm"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_18
-      TermType: 0
-      Description: 
-      Languages:
-      - Naughty Sword
-      - "\uB3C4\uC0B4\uC790\uC758 \uB300\uAC80"
-      - "\u987D\u76AE\u5251"
-      - "\u987D\u76AE\u5251"
-      - Freches Schwert
-      - "\xC9p\xE9e Coquine"
-      - Spada Cattiva
-      - "\u3044\u305F\u305A\u3089\u5263"
-      - Pedang Nakal
-      - Pedang Nakal
-      - Espada Safada
-      - "\u041D\u0435\u043F\u043E\u0441\u043B\u0443\u0448\u043D\u044B\u0439 \u041C\u0435\u0447"
-      - Espada Traviesa
-      - "\u0E14\u0E32\u0E1A\u0E0B\u0E38\u0E01\u0E0B\u0E19"
-      - "Thanh Ki\u1EBFm Ngh\u1ECBch Ng\u1EE3m"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_19
-      TermType: 0
-      Description: 
-      Languages:
-      - Kraken's Bridge
-      - "\uBE14\uB8E8\uB4DC\uB798\uACE4\uC758 \uBE44\uB298"
-      - "\u6D77\u602A\u4E4B\u6865"
-      - "\u6D77\u602A\u4E4B\u6865"
-      - "Krakens Br\xFCcke"
-      - Le Pont Du Kraken
-      - Il Ponte Di Kraken
-      - "\u30AF\u30E9\u30FC\u30B1\u30F3\u306E\u6A4B"
-      - Jambatan Kraken
-      - Jembatan Kraken
-      - Ponte De Kraken
-      - "\u041C\u043E\u0441\u0442 \u041A\u0440\u0430\u043A\u0435\u043D\u0430"
-      - Puente Del Kraken
-      - "\u0E2A\u0E30\u0E1E\u0E32\u0E19\u0E04\u0E23\u0E32\u0E40\u0E04\u0E19"
-      - "C\u1EA7u Kraken"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_20
-      TermType: 0
-      Description: 
-      Languages:
-      - Mermaid Decoration
-      - "\uC624\uC6B0\uAC70\uC758 \uBABD\uB465\uC774"
-      - "\u7F8E\u4EBA\u9C7C\u88C5\u9970"
-      - "\u7F8E\u4EBA\u9C7C\u88C5\u9970"
-      - Meerjungfrau-Dekoration
-      - "D\xE9coration De Sir\xE8ne"
-      - Decorazione Sirena
-      - "\u4EBA\u9B5A\u306E\u88C5\u98FE"
-      - Hiasan Duyung
-      - Dekorasi Putri Duyung
-      - "Decora\xE7\xE3o De Sereia"
-      - "\u0420\u0443\u0441\u0430\u043B\u043A\u0430 \u0423\u043A\u0440\u0430\u0448\u0435\u043D\u0438\u0435"
-      - "Decoraci\xF3n De Sirena"
-      - "\u0E15\u0E01\u0E41\u0E15\u0E48\u0E07\u0E19\u0E32\u0E07\u0E40\u0E07\u0E37\u0E2D\u0E01"
-      - "Trang Tr\xED N\xE0ng Ti\xEAn C\xE1"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_21
-      TermType: 0
-      Description: 
-      Languages:
-      - Shark Fin
-      - "\uACE0\uB300\uC758 \uCCA0\uAC80"
-      - "\u9C7C\u7FC5"
-      - "\u9C7C\u7FC5"
-      - Haifischflosse
-      - Aileron De Requin
-      - Pinna Di Squalo
-      - "\u30B7\u30E3\u30F3\u30B9\u30D4\u30F3"
-      - Sirip Jerung
-      - Sirip Hiu
-      - "Barbatana De Tubar\xE3o"
-      - "\u0410\u043A\u0443\u043B\u0438\u0439 \u041F\u043B\u0430\u0432\u043D\u0438\u043A"
-      - "Aleta De Tibur\xF3n"
-      - "\u0E2B\u0E39\u0E09\u0E25\u0E32\u0E21"
-      - "V\xE2y C\xE1 M\u1EADp"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_22
-      TermType: 0
-      Description: 
-      Languages:
-      - Aigis
-      - "\uC544\uC774\uAE30\uC2A4"
-      - "\u827E\u5409\u65AF"
-      - "\u827E\u5409\u65AF"
-      - Aigis
-      - Aigis
-      - Aigis
-      - "\u30A2\u30A4\u30AE\u30B9"
-      - Aigis
-      - Aigis
-      - Aigis
-      - "\u042D\u0433\u0438\u0434\u0430"
-      - Aigis
-      - "\u0E40\u0E2D\u0E08\u0E34\u0E2A"
-      - Aigis
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_23
-      TermType: 0
-      Description: 
-      Languages:
-      - Devil's Staff
-      - "\uAE08\uC0C9 \uBC18\uC9DD\uC784\uC758 \uB208\uC18D\uC784"
-      - "\u6076\u9B54\u4E4B\u6756"
-      - "\u6076\u9B54\u4E4B\u6756"
-      - Teufelsstab
-      - "B\xE2ton Du Diable"
-      - Bastone Del Diavolo
-      - "\u60AA\u9B54\u306E\u6756"
-      - Kakitangan Syaitan
-      - Tongkat Iblis
-      - Cajado Do Diabo
-      - "\u041F\u043E\u0441\u043E\u0445 \u0414\u044C\u044F\u0432\u043E\u043B\u0430"
-      - "Bast\xF3n Del Diablo"
-      - "\u0E44\u0E21\u0E49\u0E40\u0E17\u0E49\u0E32\u0E02\u0E2D\u0E07\u0E1B\u0E35\u0E28\u0E32\u0E08"
-      - "Quy\u1EC1n Tr\u01B0\u1EE3ng C\u1EE7a Qu\u1EF7"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_24
-      TermType: 0
-      Description: 
-      Languages:
-      - Superconductor
-      - "\uB8E8\uBE44\uB204\uC2A4"
-      - "\u8D85\u5BFC\u4F53"
-      - "\u8D85\u5BFC\u4F53"
-      - Supraleiter
-      - Supraconducteur
-      - Superconduttore
-      - "\u8D85\u4F1D\u5C0E\u4F53"
-      - Superkonduktor
-      - Superkonduktor
-      - Supercondutor
-      - "\u0421\u0432\u0435\u0440\u0445\u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A"
-      - Superconductor
-      - "\u0E15\u0E31\u0E27\u0E19\u0E33\u0E22\u0E34\u0E48\u0E07\u0E22\u0E27\u0E14"
-      - "Ch\u1EA5t Si\xEAu D\u1EABn"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_25
-      TermType: 0
-      Description: 
-      Languages:
-      - Durandal
-      - "\uB4C0\uB780\uB2EC"
-      - "\u675C\u5170\u8FBE\u5C14"
-      - "\u675C\u5170\u8FBE\u5C14"
-      - Durandal
-      - Durandal
-      - Durandal
-      - "\u30C7\u30E5\u30E9\u30F3\u30C0\u30EB"
-      - Durandal
-      - Durandal
-      - Durandal
-      - "\u0414\u044E\u0440\u0430\u043D\u0434\u0430\u043B\u044C"
-      - Durandal
-      - "\u0E14\u0E39\u0E23\u0E31\u0E19\u0E14\u0E31\u0E25"
-      - Durandal
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_26
-      TermType: 0
-      Description: 
-      Languages:
-      - Gray's Sword
-      - "\uD53C\uC26C\uBE14\uB808\uC774\uB4DC"
-      - "\u683C\u96F7\u7684\u5251"
-      - "\u683C\u96F7\u7684\u5251"
-      - Grays Schwert
-      - "L'\xE9p\xE9e De Gray"
-      - La Spada Di Gray
-      - "\u30B0\u30EC\u30FC\u306E\u5263"
-      - Pedang Kelabu
-      - Pedang Gray
-      - Espada De Gray
-      - "\u041C\u0435\u0447 \u0413\u0440\u0435\u044F"
-      - La Espada De Gray
-      - "\u0E14\u0E32\u0E1A\u0E02\u0E2D\u0E07\u0E40\u0E01\u0E23\u0E22\u0E4C"
-      - "Thanh Ki\u1EBFm C\u1EE7a Gray"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_27
-      TermType: 0
-      Description: 
-      Languages:
-      - Longinus
-      - "\uB808\uBE44\uC544\uD0C4\uC758 \uC1A1\uACF3\uB2C8"
-      - "\u957F\u57FA\u52AA\u65AF"
-      - "\u957F\u57FA\u52AA\u65AF"
-      - Longinus
-      - Longin
-      - Longino
-      - "\u30ED\u30F3\u30B0\u30AE\u30CC\u30B9"
-      - Longinus
-      - Longinus
-      - Longinus
-      - "\u0414\u043B\u0438\u043D\u043D\u0430\u044F \u041C\u044B\u0448\u0446\u0430"
-      - Longino
-      - "\u0E25\u0E2D\u0E07\u0E08\u0E34\u0E19\u0E31\u0E2A"
-      - "C\xE2y D\xE0i"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_28
-      TermType: 0
-      Description: 
-      Languages:
-      - Rhongomyniad
-      - "\uB871\uACE0\uBBF8\uB2C8\uC544\uB4DC"
-      - "\u7EA2\u6208\u7C73\u5C3C\u4E9A\u5FB7"
-      - "\u7EA2\u6208\u7C73\u5C3C\u4E9A\u5FB7"
-      - Rhongomyniade
-      - Rhongomyniade
-      - Rongominiade
-      - "\u30ED\u30F3\u30B0\u30B4\u30DF\u30CB\u30A2\u30C9"
-      - Rhongomyniad
-      - Rhongominiad
-      - "Rongom\xEDnia"
-      - "\u0420\u043E\u043D\u0433\u043E\u043C\u0438\u043D\u0438\u0430\u0434\u0430"
-      - Rhongominia
-      - "\u0E23\u0E2D\u0E19\u0E42\u0E01\u0E21\u0E35\u0E40\u0E19\u0E35\u0E22\u0E14"
-      - Rhongomyniad
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_29
-      TermType: 0
-      Description: 
-      Languages:
-      - Asgard
-      - "\uCD08\uC804\uB3C4\uCCB4\uC758 \uAC80"
-      - "\u963F\u65AF\u52A0\u5FB7"
-      - "\u963F\u65AF\u52A0\u5FB7"
-      - Asgard
-      - Asgard
-      - Asgard
-      - "\u30A2\u30B9\u30AC\u30EB\u30C9"
-      - Asgard
-      - Asgard
-      - Asgard
-      - "\u0410\u0441\u0433\u0430\u0440\u0434"
-      - Asgard
-      - "\u0E41\u0E2D\u0E2A\u0E01\u0E32\u0E23\u0E4C\u0E14"
-      - "Ng\u01B0\u1EDDi Asgard"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Name_30
-      TermType: 0
-      Description: 
-      Languages:
-      - Sun God
-      - "\uD06C\uB77C\uCF04\uC758 \uB2E4\uB9AC"
-      - "\u592A\u9633\u795E"
-      - "\u592A\u9633\u795E"
-      - Sonnengott
-      - Dieu Soleil
-      - Dio Del Sole
-      - "\u592A\u967D\u306E\u795E"
-      - Tuhan Matahari
-      - Dewa Matahari
-      - Deus Do Sol
-      - "\u0411\u043E\u0433 \u0421\u043E\u043B\u043D\u0446\u0430"
-      - Dios Sol
-      - "\u0E1E\u0E23\u0E30\u0E40\u0E08\u0E49\u0E32\u0E41\u0E2B\u0E48\u0E07\u0E14\u0E27\u0E07\u0E2D\u0E32\u0E17\u0E34\u0E15\u0E22\u0E4C"
-      - "Th\u1EA7n M\u1EB7t Tr\u1EDDi"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Enemy_Gold_Increase_String
-      TermType: 0
-      Description: 
-      Languages:
-      - Enemy Kill Gold
-      - "\uC801 \uCC98\uCE58 \uACE8\uB4DC"
-      - "\u654C\u4EBA\u6740\u91D1"
-      - "\u654C\u4EBA\u6740\u91D1"
-      - "Gegner T\xF6ten Gold"
-      - L'ennemi Tue L'or
-      - Il Nemico Uccide L'oro
-      - "\u6575\u51E6\u7F6E\u30B4\u30FC\u30EB\u30C9"
-      - Musuh Membunuh Emas
-      - Musuh Bunuh Emas
-      - Inimigo Mata Ouro
-      - "\u0417\u043E\u043B\u043E\u0442\u043E \u0417\u0430 \u0423\u0431\u0438\u0439\u0441\u0442\u0432\u043E
-        \u0412\u0440\u0430\u0433\u0430"
-      - Enemigo Matar Oro
-      - "\u0E28\u0E31\u0E15\u0E23\u0E39\u0E2A\u0E31\u0E07\u0E2B\u0E32\u0E23\u0E17\u0E2D\u0E07"
-      - "K\u1EBB Th\xF9 Ti\xEAu Di\u1EC7t V\xE0ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Quest_Gold_Increase_String
-      TermType: 0
-      Description: 
-      Languages:
-      - Quest Gold
-      - "\uD018\uC2A4\uD2B8 \uACE8\uB4DC"
-      - "\u5BFB\u6C42\u9EC4\u91D1"
-      - "\u5BFB\u6C42\u9EC4\u91D1"
-      - Quest-Gold
-      - "Qu\xEAte D'or"
-      - Ricerca Dell'oro
-      - "\u30AF\u30A8\u30B9\u30C8\u30B4\u30FC\u30EB\u30C9"
-      - Pencarian Emas
-      - Pencarian Emas
-      - Busca Ouro
-      - "\u0417\u043E\u043B\u043E\u0442\u043E \u041A\u0432\u0435\u0441\u0442\u0430"
-      - "B\xFAsqueda De Oro"
-      - "\u0E41\u0E2A\u0E27\u0E07\u0E2B\u0E32\u0E17\u0E2D\u0E07\u0E04\u0E33"
-      - "Nhi\u1EC7m V\u1EE5 V\xE0ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Critical_Damage_Increase_String
-      TermType: 0
-      Description: 
-      Languages:
-      - Critical Attack Power
-      - "\uCE58\uBA85\uD0C0 \uACF5\uACA9\uB825"
-      - "\u66B4\u51FB\u653B\u51FB\u529B"
-      - "\u66B4\u51FB\u653B\u51FB\u529B"
-      - Kritische Angriffskraft
-      - Puissance D'attaque Critique
-      - Potenza Di Attacco Critico
-      - "\u30AF\u30EA\u30C6\u30A3\u30AB\u30EB\u653B\u6483\u529B"
-      - Kuasa Serangan Kritikal
-      - Kekuatan Serangan Kritis
-      - "Poder De Ataque Cr\xEDtico"
-      - "\u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0421\u0438\u043B\u0430
-        \u0410\u0442\u0430\u043A\u0438"
-      - "Poder De Ataque Cr\xEDtico"
-      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E04\u0E23\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E25"
-      - "S\u1EE9c T\u1EA5n C\xF4ng Ch\xED M\u1EA1ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Damage_Increase_String
-      TermType: 0
-      Description: 
-      Languages:
-      - Attack Power
-      - "\uACF5\uACA9\uB825"
-      - "\u653B\u51FB\u529B"
-      - "\u653B\u51FB\u529B"
-      - Angriffskraft
-      - Puissance D'attaque
-      - Potere D'attacco
-      - "\u653B\u6483\u529B"
-      - Kuasa Serangan
-      - Kekuatan Serangan
-      - Poder De Ataque
-      - "\u0421\u0438\u043B\u0430 \u0410\u0442\u0430\u043A\u0438"
-      - Poder De Ataque
-      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35"
-      - "S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Extra_Damage_Increase_String
-      TermType: 0
-      Description: 
-      Languages:
-      - Extra Attack Power
-      - "\uCD94\uAC00 \uACF5\uACA9\uB825"
-      - "\u989D\u5916\u653B\u51FB\u529B"
-      - "\u989D\u5916\u653B\u51FB\u529B"
-      - "Zus\xE4tzliche Angriffskraft"
-      - "Puissance D'attaque Suppl\xE9mentaire"
-      - Potenza D'attacco Extra
-      - "\u8FFD\u52A0\u653B\u6483\u529B"
-      - Kuasa Serangan Tambahan
-      - Kekuatan Serangan Ekstra
-      - Poder De Ataque Extra
-      - "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F
-        \u0421\u0438\u043B\u0430 \u0410\u0442\u0430\u043A\u0438"
-      - Poder De Ataque Adicional
-      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E1E\u0E34\u0E40\u0E28\u0E29"
-      - "S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng B\u1ED5 Sung"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Treasure_Name_0
-      TermType: 0
-      Description: 
-      Languages:
-      - Rune Of Hunting
-      - "\uC0AC\uB0E5\uC758 \uB8EC"
-      - "\u72E9\u730E\u7B26\u6587"
-      - "\u72E9\u730E\u7B26\u6587"
-      - Rune Der Jagd
-      - Rune De Chasse
-      - Runa Della Caccia
-      - "\u72E9\u731F\u306E\u30EB\u30FC\u30F3"
-      - Rune Of Hunting
-      - Syair Berburu
-      - "Runa De Ca\xE7a"
-      - "\u0420\u0443\u043D\u0430 \u041E\u0445\u043E\u0442\u044B"
-      - Runa De Caza
-      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E01\u0E32\u0E23\u0E25\u0E48\u0E32\u0E2A\u0E31\u0E15\u0E27\u0E4C"
-      - "Rune S\u0103n B\u1EAFn"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Treasure_Name_1
-      TermType: 0
-      Description: 
-      Languages:
-      - Rune Of Reward
-      - "\uBCF4\uC0C1\uC758 \uB8EC"
-      - "\u5956\u52B1\u7B26\u6587"
-      - "\u5956\u52B1\u7B26\u6587"
-      - Rune Der Belohnung
-      - "Rune De R\xE9compense"
-      - Runa Della Ricompensa
-      - "\u5831\u916C\u306E\u30EB\u30FC\u30F3"
-      - Rune Of Reward
-      - Syair Hadiah
-      - Runa Da Recompensa
-      - "\u0420\u0443\u043D\u0430 \u041D\u0430\u0433\u0440\u0430\u0434\u044B"
-      - Runa De Recompensa
-      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E23\u0E32\u0E07\u0E27\u0E31\u0E25"
-      - "Rune Ph\u1EA7n Th\u01B0\u1EDFng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Treasure_Name_2
-      TermType: 0
-      Description: 
-      Languages:
-      - Rune Of Critical Strike
-      - "\uCE58\uBA85\uD0C0\uC758 \uB8EC"
-      - "\u66B4\u51FB\u7B26\u6587"
-      - "\u66B4\u51FB\u7B26\u6587"
-      - Rune Des Kritischen Treffers
-      - Rune De Coup Critique
-      - Runa Del Colpo Critico
-      - "\u30AF\u30EA\u30C6\u30A3\u30AB\u30EB\u306E\u30EB\u30FC\u30F3"
-      - Rune Of Critical Strike
-      - Syair Serangan Kritis
-      - "Runa De Golpe Cr\xEDtico"
-      - "\u0420\u0443\u043D\u0430 \u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E
-        \u0423\u0434\u0430\u0440\u0430"
-      - "Runa De Golpe Cr\xEDtico"
-      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E01\u0E32\u0E23\u0E42\u0E08\u0E21\u0E15\u0E35\u0E04\u0E23\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E25"
-      - "Rune C\u1EE7a \u0110\xF2n T\u1EA5n C\xF4ng Ch\xED M\u1EA1ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Treasure_Name_3
-      TermType: 0
-      Description: 
-      Languages:
-      - Rune Of Attack Power
-      - "\uACF5\uACA9\uB825\uC758 \uB8EC"
-      - "\u653B\u51FB\u529B\u7B26\u6587"
-      - "\u653B\u51FB\u529B\u7B26\u6587"
-      - Rune Der Angriffskraft
-      - Rune De Puissance D'attaque
-      - Runa Del Potere D'attacco
-      - "\u653B\u6483\u529B\u306E\u30EB\u30FC\u30F3"
-      - Rune Kuasa Serangan
-      - Syair Kekuatan Serangan
-      - Runa De Poder De Ataque
-      - "\u0420\u0443\u043D\u0430 \u0421\u0438\u043B\u044B \u0410\u0442\u0430\u043A\u0438"
-      - Runa De Poder De Ataque
-      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35"
-      - "Rune S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Treasure_Name_4
-      TermType: 0
-      Description: 
-      Languages:
-      - Rune Of Additional Attack Power
-      - "\uCD94\uAC00 \uACF5\uACA9\uB825\uC758 \uB8EC"
-      - "\u989D\u5916\u653B\u51FB\u529B\u7B26\u6587"
-      - "\u989D\u5916\u653B\u51FB\u529B\u7B26\u6587"
-      - "Rune Mit Zus\xE4tzlicher Angriffskraft"
-      - "Rune De Puissance D'attaque Suppl\xE9mentaire"
-      - Runa Dal Potere D'attacco Aggiuntivo
-      - "\u8FFD\u52A0\u653B\u6483\u529B\u306E\u30EB\u30FC\u30F3"
-      - Rune Kuasa Serangan Tambahan
-      - Syair Kekuatan Serangan Tambahan
-      - Runa De Poder De Ataque Adicional
-      - "\u0420\u0443\u043D\u0430 \u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439
-        \u0421\u0438\u043B\u044B \u0410\u0442\u0430\u043A\u0438"
-      - Runa De Poder De Ataque Adicional
-      - "\u0E23\u0E39\u0E19\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E15\u0E34\u0E21"
-      - "Rune T\u0103ng S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Weapon_Attack_String_Format
-      TermType: 0
-      Description: 
-      Languages:
-      - 'Attack Power: {0}'
-      - "\uACF5\uACA9\uB825: {0}"
-      - "\u653B\u51FB\u529B\uFF1A{0}"
-      - "\u653B\u51FB\u529B\uFF1A{0}"
-      - 'Angriffskraft: {0}'
-      - "Puissance D'attaque\_:\_{0}"
-      - 'Potenza D''attacco: {0}'
-      - "\u653B\u6483\u529B: {0}"
-      - 'Kuasa Serangan: {0}'
-      - 'Kekuatan Serangan: {0}'
-      - 'Poder De Ataque: {0}'
-      - "\u0421\u0438\u043B\u0430 \u0410\u0442\u0430\u043A\u0438: {0}"
-      - 'Poder De Ataque: {0}'
-      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35: {0}"
-      - "S\u1EE9c T\u1EA5n C\xF4ng: {0}"
+      - Skin
+      - "\uC2A4\uD0A8"
+      - "\u76AE\u80A4"
+      - "\u76AE\u80A4"
+      - Haut
+      - Peau
+      - Pelle
+      - "\u808C"
+      - Kulit
+      - Kulit
+      - Pele
+      - "\u041A\u043E\u0436\u0430"
+      - Piel
+      - "\u0E1C\u0E34\u0E27"
+      - Da
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: Skin_Name_0
@@ -1654,46 +1028,174 @@ MonoBehaviour:
       - "Ki\u1EBFm Cyclops"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Buy
+    - Term: Stage
       TermType: 0
       Description: 
       Languages:
-      - Purchase
-      - "\uAD6C\uB9E4"
-      - "\u8D2D\u4E70"
-      - "\u8D2D\u4E70"
-      - Kaufen
-      - Achat
-      - Acquistare
-      - "\u8CFC\u5165"
-      - Pembelian
-      - Pembelian
-      - Comprar
-      - "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
-      - Compra
-      - "\u0E0B\u0E37\u0E49\u0E2D"
-      - Mua
+      - Stage
+      - "\uC2A4\uD14C\uC774\uC9C0"
+      - "\u9636\u6BB5"
+      - "\u9636\u6BB5"
+      - "B\xFChne"
+      - "Sc\xE8ne"
+      - Palcoscenico
+      - "\u30B9\u30C6\u30FC\u30B8"
+      - Pentas
+      - Panggung
+      - "Est\xE1gio"
+      - "\u042D\u0442\u0430\u043F"
+      - Escenario
+      - "\u0E40\u0E27\u0E17\u0E35"
+      - "S\xE2n Kh\u1EA5u"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Equip
+    - Term: Stage_String_Format
       TermType: 0
       Description: 
       Languages:
-      - Equip
-      - "\uC7A5\uCC29"
-      - "\u88C5\u5907"
-      - "\u88C5\u5907"
-      - "Ausr\xFCsten"
-      - "\xC9quiper"
-      - Equipaggiare
-      - "\u88C5\u5099\u3059\u308B"
-      - Melengkapkan
-      - Melengkapi
-      - Equipar
-      - "\u041E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u0442\u044C"
-      - Equipar
-      - "\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C"
-      - "Trang B\u1ECB"
+      - Stage {0}
+      - "{0} \uCE35"
+      - "\u9636\u6BB5 {0}"
+      - "\u9636\u6BB5 {0}"
+      - "B\xFChne {0}"
+      - "Sc\xE8ne {0}"
+      - Palcoscenico {0}
+      - "\u30B9\u30C6\u30FC\u30B8 {0}"
+      - Pentas {0}
+      - Panggung {0}
+      - "Est\xE1gio {0}"
+      - "\u042D\u0442\u0430\u043F {0}"
+      - Escenario {0}
+      - "\u0E40\u0E27\u0E17\u0E35 {0}"
+      - "S\xE2n Kh\u1EA5u {0}"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Treasure
+      TermType: 0
+      Description: 
+      Languages:
+      - Treasure
+      - "\uBCF4\uBB3C"
+      - "\u5B9D\u85CF"
+      - "\u5B9D\u85CF"
+      - Schatz
+      - "Tr\xE9sor"
+      - Tesoro
+      - "\u5B9D\u7269"
+      - Harta Karun
+      - Harta Karun
+      - Tesouro
+      - "\u0421\u043E\u043A\u0440\u043E\u0432\u0438\u0449\u0435"
+      - Tesoro
+      - "\u0E2A\u0E21\u0E1A\u0E31\u0E15\u0E34"
+      - "Kho B\xE1u"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Treasure_Name_0
+      TermType: 0
+      Description: 
+      Languages:
+      - Rune Of Hunting
+      - "\uC0AC\uB0E5\uC758 \uB8EC"
+      - "\u72E9\u730E\u7B26\u6587"
+      - "\u72E9\u730E\u7B26\u6587"
+      - Rune Der Jagd
+      - Rune De Chasse
+      - Runa Della Caccia
+      - "\u72E9\u731F\u306E\u30EB\u30FC\u30F3"
+      - Rune Of Hunting
+      - Syair Berburu
+      - "Runa De Ca\xE7a"
+      - "\u0420\u0443\u043D\u0430 \u041E\u0445\u043E\u0442\u044B"
+      - Runa De Caza
+      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E01\u0E32\u0E23\u0E25\u0E48\u0E32\u0E2A\u0E31\u0E15\u0E27\u0E4C"
+      - "Rune S\u0103n B\u1EAFn"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Treasure_Name_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Rune Of Reward
+      - "\uBCF4\uC0C1\uC758 \uB8EC"
+      - "\u5956\u52B1\u7B26\u6587"
+      - "\u5956\u52B1\u7B26\u6587"
+      - Rune Der Belohnung
+      - "Rune De R\xE9compense"
+      - Runa Della Ricompensa
+      - "\u5831\u916C\u306E\u30EB\u30FC\u30F3"
+      - Rune Of Reward
+      - Syair Hadiah
+      - Runa Da Recompensa
+      - "\u0420\u0443\u043D\u0430 \u041D\u0430\u0433\u0440\u0430\u0434\u044B"
+      - Runa De Recompensa
+      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E23\u0E32\u0E07\u0E27\u0E31\u0E25"
+      - "Rune Ph\u1EA7n Th\u01B0\u1EDFng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Treasure_Name_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Rune Of Critical Strike
+      - "\uCE58\uBA85\uD0C0\uC758 \uB8EC"
+      - "\u66B4\u51FB\u7B26\u6587"
+      - "\u66B4\u51FB\u7B26\u6587"
+      - Rune Des Kritischen Treffers
+      - Rune De Coup Critique
+      - Runa Del Colpo Critico
+      - "\u30AF\u30EA\u30C6\u30A3\u30AB\u30EB\u306E\u30EB\u30FC\u30F3"
+      - Rune Of Critical Strike
+      - Syair Serangan Kritis
+      - "Runa De Golpe Cr\xEDtico"
+      - "\u0420\u0443\u043D\u0430 \u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E
+        \u0423\u0434\u0430\u0440\u0430"
+      - "Runa De Golpe Cr\xEDtico"
+      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E01\u0E32\u0E23\u0E42\u0E08\u0E21\u0E15\u0E35\u0E04\u0E23\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E25"
+      - "Rune C\u1EE7a \u0110\xF2n T\u1EA5n C\xF4ng Ch\xED M\u1EA1ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Treasure_Name_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Rune Of Attack Power
+      - "\uACF5\uACA9\uB825\uC758 \uB8EC"
+      - "\u653B\u51FB\u529B\u7B26\u6587"
+      - "\u653B\u51FB\u529B\u7B26\u6587"
+      - Rune Der Angriffskraft
+      - Rune De Puissance D'attaque
+      - Runa Del Potere D'attacco
+      - "\u653B\u6483\u529B\u306E\u30EB\u30FC\u30F3"
+      - Rune Kuasa Serangan
+      - Syair Kekuatan Serangan
+      - Runa De Poder De Ataque
+      - "\u0420\u0443\u043D\u0430 \u0421\u0438\u043B\u044B \u0410\u0442\u0430\u043A\u0438"
+      - Runa De Poder De Ataque
+      - "\u0E23\u0E39\u0E19\u0E41\u0E2B\u0E48\u0E07\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35"
+      - "Rune S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Treasure_Name_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Rune Of Additional Attack Power
+      - "\uCD94\uAC00 \uACF5\uACA9\uB825\uC758 \uB8EC"
+      - "\u989D\u5916\u653B\u51FB\u529B\u7B26\u6587"
+      - "\u989D\u5916\u653B\u51FB\u529B\u7B26\u6587"
+      - "Rune Mit Zus\xE4tzlicher Angriffskraft"
+      - "Rune De Puissance D'attaque Suppl\xE9mentaire"
+      - Runa Dal Potere D'attacco Aggiuntivo
+      - "\u8FFD\u52A0\u653B\u6483\u529B\u306E\u30EB\u30FC\u30F3"
+      - Rune Kuasa Serangan Tambahan
+      - Syair Kekuatan Serangan Tambahan
+      - Runa De Poder De Ataque Adicional
+      - "\u0420\u0443\u043D\u0430 \u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439
+        \u0421\u0438\u043B\u044B \u0410\u0442\u0430\u043A\u0438"
+      - Runa De Poder De Ataque Adicional
+      - "\u0E23\u0E39\u0E19\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E15\u0E34\u0E21"
+      - "Rune T\u0103ng S\u1EE9c M\u1EA1nh T\u1EA5n C\xF4ng"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
     - Term: UnEquip
@@ -1717,33 +1219,735 @@ MonoBehaviour:
       - "C\u1EDFi B\u1ECF Trang B\u1ECB"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Skin
+    - Term: Weapon
       TermType: 0
       Description: 
       Languages:
-      - Skin
-      - "\uC2A4\uD0A8"
-      - "\u76AE\u80A4"
-      - "\u76AE\u80A4"
-      - Haut
-      - Peau
-      - Pelle
-      - "\u808C"
-      - Kulit
-      - Kulit
-      - Pele
-      - "\u041A\u043E\u0436\u0430"
-      - Piel
-      - "\u0E1C\u0E34\u0E27"
-      - Da
+      - Weapon
+      - "\uBB34\uAE30"
+      - "\u6B66\u5668"
+      - "\u6B66\u5668"
+      - Waffe
+      - Arme
+      - Arma
+      - "\u6B66\u5668"
+      - Senjata
+      - Senjata
+      - Arma
+      - "\u041E\u0440\u0443\u0436\u0438\u0435"
+      - Arma
+      - "\u0E2D\u0E32\u0E27\u0E38\u0E18"
+      - "V\u0169 Kh\xED"
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Quest_Name_12
+    - Term: Weapon_Attack_String_Format
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Attack Power: {0}'
+      - "\uACF5\uACA9\uB825: {0}"
+      - "\u653B\u51FB\u529B\uFF1A{0}"
+      - "\u653B\u51FB\u529B\uFF1A{0}"
+      - 'Angriffskraft: {0}'
+      - "Puissance D'attaque\_:\_{0}"
+      - 'Potenza D''attacco: {0}'
+      - "\u653B\u6483\u529B: {0}"
+      - 'Kuasa Serangan: {0}'
+      - 'Kekuatan Serangan: {0}'
+      - 'Poder De Ataque: {0}'
+      - "\u0421\u0438\u043B\u0430 \u0410\u0442\u0430\u043A\u0438: {0}"
+      - 'Poder De Ataque: {0}'
+      - "\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35: {0}"
+      - "S\u1EE9c T\u1EA5n C\xF4ng: {0}"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_0
+      TermType: 0
+      Description: 
+      Languages:
+      - Beginner's Dagger
+      - "\uCD08\uBCF4\uC790\uC758 \uB2E8\uAC80"
+      - "\u521D\u5B66\u8005\u5315\u9996"
+      - "\u521D\u5B66\u8005\u5315\u9996"
+      - "Anf\xE4ngerdolch"
+      - "Dague Du D\xE9butant"
+      - Pugnale Del Principiante
+      - "\u521D\u5FC3\u8005\u306E\u77ED\u5263"
+      - Belati Pemula
+      - Belati Pemula
+      - Adaga De Iniciante
+      - "\u041A\u0438\u043D\u0436\u0430\u043B \u041D\u043E\u0432\u0438\u0447\u043A\u0430"
+      - Daga De Principiante
+      - "\u0E01\u0E23\u0E34\u0E0A\u0E02\u0E2D\u0E07\u0E1C\u0E39\u0E49\u0E40\u0E23\u0E34\u0E48\u0E21\u0E15\u0E49\u0E19"
+      - "Dao G\u0103m C\u1EE7a Ng\u01B0\u1EDDi M\u1EDBi B\u1EAFt \u0110\u1EA7u"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Intermediate Silver Sword
+      - "\uC911\uAE09\uC790\uC758 \uC740\uAC80"
+      - "\u4E2D\u7EA7\u94F6\u5251"
+      - "\u4E2D\u7EA7\u94F6\u5251"
+      - Mittleres Silberschwert
+      - "\xC9p\xE9e D'argent Interm\xE9diaire"
+      - Spada D'argento Intermedia
+      - "\u4E2D\u7D1A\u8005\u306E\u9280\u5263"
+      - Pedang Perak Pertengahan
+      - Pedang Perak Tingkat Menengah
+      - "Espada De Prata Intermedi\xE1ria"
+      - "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u0421\u0435\u0440\u0435\u0431\u0440\u044F\u043D\u044B\u0439
+        \u041C\u0435\u0447"
+      - Espada De Plata Intermedia
+      - "\u0E14\u0E32\u0E1A\u0E40\u0E07\u0E34\u0E19\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E01\u0E25\u0E32\u0E07"
+      - "Ki\u1EBFm B\u1EA1c Trung C\u1EA5p"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Sister's Magic Wand
+      - "\uB204\uB098\uC758 \uB9C8\uBC95\uBD09"
+      - "\u59D0\u59D0\u7684\u9B54\u6CD5\u68D2"
+      - "\u59D0\u59D0\u7684\u9B54\u6CD5\u68D2"
+      - Zauberstab Der Schwester
+      - "Baguette Magique De S\u0153ur"
+      - La Bacchetta Magica Della Sorella
+      - "\u59C9\u306E\u9B54\u6CD5\u68D2"
+      - Tongkat Ajaib Kakak
+      - Tongkat Ajaib Kakak
+      - "Varinha M\xE1gica Da Irm\xE3"
+      - "\u0412\u043E\u043B\u0448\u0435\u0431\u043D\u0430\u044F \u041F\u0430\u043B\u043E\u0447\u043A\u0430
+        \u0421\u0435\u0441\u0442\u0440\u044B"
+      - "Varita M\xE1gica De La Hermana"
+      - "\u0E44\u0E21\u0E49\u0E01\u0E32\u0E22\u0E2A\u0E34\u0E17\u0E18\u0E34\u0E4C\u0E02\u0E2D\u0E07\u0E19\u0E49\u0E2D\u0E07\u0E2A\u0E32\u0E27"
+      - "C\xE2y \u0110\u0169a Th\u1EA7n C\u1EE7a Ch\u1ECB G\xE1i"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Lavendin
+      - "\uB77C\uBCA4\uB518"
+      - "\u85B0\u8863\u8349"
+      - "\u85B0\u8863\u8349"
+      - Lavendel
+      - Lavandin
+      - Lavanda
+      - "\u30E9\u30D9\u30F3\u30C7\u30A3\u30F3"
+      - Lavendin
+      - Lavender
+      - Lavanda
+      - "\u041B\u0430\u0432\u0435\u043D\u0434\u0438\u043D"
+      - Lavanda
+      - "\u0E25\u0E32\u0E40\u0E27\u0E19\u0E14\u0E34\u0E19"
+      - "Hoa O\u1EA3i H\u01B0\u01A1ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Demon's Sword
+      - "\uB9C8\uC871\uC758 \uAC80"
+      - "\u6076\u9B54\u4E4B\u5251"
+      - "\u6076\u9B54\u4E4B\u5251"
+      - "D\xE4monenschwert"
+      - "\xC9p\xE9e Du D\xE9mon"
+      - La Spada Del Demone
+      - "\u9B54\u65CF\u306E\u5263"
+      - Pedang Iblis
+      - Pedang Setan
+      - "Espada Do Dem\xF4nio"
+      - "\u041C\u0435\u0447 \u0414\u0435\u043C\u043E\u043D\u0430"
+      - Espada Del Demonio
+      - "\u0E14\u0E32\u0E1A\u0E1B\u0E35\u0E28\u0E32\u0E08"
+      - "Thanh Ki\u1EBFm C\u1EE7a Qu\u1EF7"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Spirit Sword
+      - "\uC815\uB839\uC758 \uAC80"
+      - "\u7075\u5251"
+      - "\u7075\u5251"
+      - Geisterschwert
+      - "\xC9p\xE9e Spirituelle"
+      - Spada Spirituale
+      - "\u7CBE\u970A\u306E\u5263"
+      - Pedang Semangat
+      - Pedang Roh
+      - Espada Espiritual
+      - "\u0414\u0443\u0445\u043E\u0432\u043D\u044B\u0439 \u041C\u0435\u0447"
+      - Espada Espiritual
+      - "\u0E14\u0E32\u0E1A\u0E27\u0E34\u0E0D\u0E0D\u0E32\u0E13"
+      - "Thanh Ki\u1EBFm Tinh Th\u1EA7n"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Devil's Eyes
+      - "\uC545\uB9C8\uC758 \uB208\uB3D9\uC790"
+      - "\u6076\u9B54\u4E4B\u773C"
+      - "\u6076\u9B54\u4E4B\u773C"
+      - Teufelsaugen
+      - Les Yeux Du Diable
+      - Occhi Del Diavolo
+      - "\u60AA\u9B54\u306E\u77B3"
+      - Mata Syaitan
+      - Mata Iblis
+      - Olhos Do Diabo
+      - "\u0413\u043B\u0430\u0437\u0430 \u0414\u044C\u044F\u0432\u043E\u043B\u0430"
+      - Ojos Del Diablo
+      - "\u0E14\u0E27\u0E07\u0E15\u0E32\u0E02\u0E2D\u0E07\u0E1B\u0E35\u0E28\u0E32\u0E08"
+      - "\u0110\xF4i M\u1EAFt C\u1EE7a Qu\u1EF7"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Caliburn
+      - "\uCE7C\uB9AC\uBC88"
+      - "\u5361\u5229\u672C"
+      - "\u5361\u5229\u672C"
+      - Caliburn
+      - Caliburn
+      - Caliburn
+      - "\u30AB\u30EA\u30D0\u30FC\u30F3"
+      - Caliburn
+      - Kaliburn
+      - Caliburn
+      - "\u041A\u0430\u043B\u0438\u0431\u0435\u0440\u043D"
+      - Caliburn
+      - "\u0E04\u0E32\u0E25\u0E34\u0E40\u0E1A\u0E34\u0E23\u0E4C\u0E19"
+      - Caliburn
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Buffed Devil's Eyes
+      - "\uBC84\uD504\uBC1B\uC740 \uC545\uB9C8\uC758 \uB208\uB3D9\uC790"
+      - "\u6076\u9B54\u4E4B\u773C"
+      - "\u6076\u9B54\u4E4B\u773C"
+      - Polierte Teufelsaugen
+      - Yeux Du Diable Polis
+      - Occhi Del Diavolo Lucidati
+      - "\u30D0\u30D5\u3092\u53D7\u3051\u305F\u60AA\u9B54\u306E\u77B3"
+      - Mata Syaitan Yang Dibelasah
+      - Mata Iblis Digosok
+      - Olhos Do Diabo Polidos
+      - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u044B\u0435 \u0413\u043B\u0430\u0437\u0430
+        \u0414\u044C\u044F\u0432\u043E\u043B\u0430"
+      - Ojos De Diablo Pulidos
+      - "\u0E1A\u0E31\u0E1F\u0E14\u0E27\u0E07\u0E15\u0E32\u0E1B\u0E35\u0E28\u0E32\u0E08"
+      - "M\u1EAFt Qu\u1EF7 \u0110\u01B0\u1EE3c T\u0103ng S\u1EE9c M\u1EA1nh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_17
+      TermType: 0
+      Description: 
+      Languages:
+      - Goblin's Demon Sword
+      - "\uB3C4\uAE68\uBE44\uC758 \uB9C8\uAC80"
+      - "\u54E5\u5E03\u6797\u7684\u9B54\u5251"
+      - "\u54E5\u5E03\u6797\u7684\u9B54\u5251"
+      - "Goblins D\xE4monenschwert"
+      - "\xC9p\xE9e D\xE9moniaque Du Gobelin"
+      - La Spada Demoniaca Di Goblin
+      - "\u9B3C\u306E\u9B54\u5263"
+      - Pedang Syaitan Goblin
+      - Pedang Iblis Goblin
+      - "Espada Demon\xEDaca Do Goblin"
+      - "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+        \u041C\u0435\u0447 \u0413\u043E\u0431\u043B\u0438\u043D\u0430"
+      - "Espada Demon\xEDaca Del Duende"
+      - "\u0E14\u0E32\u0E1A\u0E1B\u0E35\u0E28\u0E32\u0E08\u0E02\u0E2D\u0E07\u0E01\u0E47\u0E2D\u0E1A\u0E25\u0E34\u0E19"
+      - "Thanh Ki\u1EBFm Qu\u1EF7 C\u1EE7a Goblin"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_18
+      TermType: 0
+      Description: 
+      Languages:
+      - Butcher's Greatsword
+      - "\uB3C4\uC0B4\uC790\uC758 \uB300\uAC80"
+      - "\u5C60\u592B\u7684\u5927\u5251"
+      - "\u5C60\u592B\u7684\u5927\u5251"
+      - "Gro\xDFschwert Des Schl\xE4chters"
+      - Espadon De Boucher
+      - Spadone Del Macellaio
+      - "\u5C60\u6BBA\u8005\u306E\u5927\u5263"
+      - Pedang Besar Butcher
+      - Pedang Besar Jagal
+      - "Espada Grande Do A\xE7ougueiro"
+      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447 \u041C\u044F\u0441\u043D\u0438\u043A\u0430"
+      - Espada Magna Del Carnicero
+      - "\u0E14\u0E32\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E02\u0E2D\u0E07\u0E04\u0E19\u0E02\u0E32\u0E22\u0E40\u0E19\u0E37\u0E49\u0E2D"
+      - "\u0110\u1EA1i Ki\u1EBFm \u0110\u1ED3 T\u1EC3"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_19
+      TermType: 0
+      Description: 
+      Languages:
+      - Blue Dragon's Scale
+      - "\uBE14\uB8E8\uB4DC\uB798\uACE4\uC758 \uBE44\uB298"
+      - "\u84DD\u9F99\u9CDE\u7247"
+      - "\u84DD\u9F99\u9CDE\u7247"
+      - Blaue Drachenschuppe
+      - "\xC9caille Du Dragon Bleu"
+      - Scaglia Del Drago Blu
+      - "\u30D6\u30EB\u30FC\u30C9\u30E9\u30B4\u30F3\u306E\u30B9\u30B1\u30FC\u30EB"
+      - Sisik Naga Biru
+      - Skala Naga Biru
+      - "Escama Do Drag\xE3o Azul"
+      - "\u0427\u0435\u0448\u0443\u044F \u0421\u0438\u043D\u0435\u0433\u043E \u0414\u0440\u0430\u043A\u043E\u043D\u0430"
+      - "Escama Del Drag\xF3n Azul"
+      - "\u0E40\u0E01\u0E25\u0E47\u0E14\u0E21\u0E31\u0E07\u0E01\u0E23\u0E1F\u0E49\u0E32"
+      - "V\u1EA3y R\u1ED3ng Xanh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Senior's Iron Sword
+      - "\uC0C1\uAE09\uC790\uC758 \uCCA0\uAC80"
+      - "\u9AD8\u7EA7\u94C1\u5251"
+      - "\u9AD8\u7EA7\u94C1\u5251"
+      - Eisenschwert Des Seniors
+      - "\xC9p\xE9e De Fer Du Senior"
+      - Spada Di Ferro Dell'anziano
+      - "\u4E0A\u7D1A\u8005\u306E\u9244\u5263"
+      - Pedang Besi Senior
+      - Pedang Besi Senior
+      - "Espada De Ferro Do S\xEAnior"
+      - "\u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439 \u041C\u0435\u0447 \u0421\u0442\u0430\u0440\u0448\u0435\u0433\u043E"
+      - Espada De Hierro Del Mayor
+      - "\u0E14\u0E32\u0E1A\u0E40\u0E2B\u0E25\u0E47\u0E01\u0E02\u0E2D\u0E07\u0E1C\u0E39\u0E49\u0E2D\u0E32\u0E27\u0E38\u0E42\u0E2A"
+      - "Thanh Ki\u1EBFm S\u1EAFt C\u1EE7a Ti\u1EC1n B\u1ED1i"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_20
+      TermType: 0
+      Description: 
+      Languages:
+      - Ogre's Club
+      - "\uC624\uC6B0\uAC70\uC758 \uBABD\uB465\uC774"
+      - "\u98DF\u4EBA\u9B54\u4FF1\u4E50\u90E8"
+      - "\u98DF\u4EBA\u9B54\u4FF1\u4E50\u90E8"
+      - Oger-Club
+      - Club Des Ogres
+      - Il Club Dell'orco
+      - "\u30AA\u30FC\u30AC\u30FC\u306E\u716E\u8FBC\u307F"
+      - Kelab Ogre
+      - Klub Ogre
+      - Clube Do Ogro
+      - "\u041A\u043B\u0443\u0431 \u041E\u0433\u0440\u0430"
+      - Club De Ogros
+      - "\u0E04\u0E25\u0E31\u0E1A\u0E02\u0E2D\u0E07\u0E22\u0E31\u0E01\u0E29\u0E4C"
+      - "C\xE2u L\u1EA1c B\u1ED9 Y\xEAu Tinh"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_21
+      TermType: 0
+      Description: 
+      Languages:
+      - Ancient Iron Sword
+      - "\uACE0\uB300\uC758 \uCCA0\uAC80"
+      - "\u53E4\u4EE3\u94C1\u5251"
+      - "\u53E4\u4EE3\u94C1\u5251"
+      - Altes Eisenschwert
+      - "Ancienne \xC9p\xE9e De Fer"
+      - Antica Spada Di Ferro
+      - "\u53E4\u4EE3\u306E\u9244\u5263"
+      - Pedang Besi Kuno
+      - Pedang Besi Kuno
+      - Antiga Espada De Ferro
+      - "\u0414\u0440\u0435\u0432\u043D\u0438\u0439 \u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439
+        \u041C\u0435\u0447"
+      - Espada De Hierro Antigua
+      - "\u0E14\u0E32\u0E1A\u0E40\u0E2B\u0E25\u0E47\u0E01\u0E42\u0E1A\u0E23\u0E32\u0E13"
+      - "Thanh Ki\u1EBFm S\u1EAFt C\u1ED5"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_22
+      TermType: 0
+      Description: 
+      Languages:
+      - Aegis
+      - "\uC544\uC774\uAE30\uC2A4"
+      - "\u5B99\u65AF\u76FE"
+      - "\u5B99\u65AF\u76FE"
+      - "\xC4gide"
+      - "\xC9gide"
+      - Egida
+      - "\u30A2\u30A4\u30AE\u30B9"
+      - Aegis
+      - Perlindungan
+      - "\xC9gide"
+      - "\u042D\u0433\u0438\u0434\u0430"
+      - "\xC9gida"
+      - "\u0E2D\u0E38\u0E1B\u0E16\u0E31\u0E21\u0E20\u0E4C"
+      - "B\u1EA3o H\u1ED9"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_23
+      TermType: 0
+      Description: 
+      Languages:
+      - Archangel's Sword
+      - "\uB300\uCC9C\uC0AC\uC758 \uAC80"
+      - "\u5927\u5929\u4F7F\u4E4B\u5251"
+      - "\u5927\u5929\u4F7F\u4E4B\u5251"
+      - Schwert Des Erzengels
+      - "\xC9p\xE9e De L'archange"
+      - La Spada Dell'arcangelo
+      - "\u5927\u5929\u4F7F\u306E\u5263"
+      - Pedang Malaikat
+      - Pedang Malaikat Agung
+      - Espada Do Arcanjo
+      - "\u041C\u0435\u0447 \u0410\u0440\u0445\u0430\u043D\u0433\u0435\u043B\u0430"
+      - "Espada Del Arc\xE1ngel"
+      - "\u0E14\u0E32\u0E1A\u0E02\u0E2D\u0E07\u0E40\u0E17\u0E27\u0E17\u0E39\u0E15"
+      - "Thanh Ki\u1EBFm C\u1EE7a T\u1ED5ng L\xE3nh Thi\xEAn Th\u1EA7n"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_24
+      TermType: 0
+      Description: 
+      Languages:
+      - Rubinus
+      - "\uB8E8\uBE44\uB204\uC2A4"
+      - "\u7EA2\u5B9D\u77F3\u5C5E"
+      - "\u7EA2\u5B9D\u77F3\u5C5E"
+      - Rubinus
+      - Rubin
+      - Rubino
+      - "\u30EB\u30D3\u30CC\u30B9"
+      - Rubinus
+      - Rubinus
+      - Rubino
+      - "\u0420\u0443\u0431\u0438\u043D\u0443\u0441"
+      - Rubino
+      - "\u0E23\u0E39\u0E1A\u0E34\u0E19\u0E31\u0E2A"
+      - Rubinus
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_25
+      TermType: 0
+      Description: 
+      Languages:
+      - Durandal
+      - "\uB4C0\uB780\uB2EC"
+      - "\u675C\u5170\u8FBE\u5C14"
+      - "\u675C\u5170\u8FBE\u5C14"
+      - Durandal
+      - Durandal
+      - Durandal
+      - "\u30C7\u30E5\u30E9\u30F3\u30C0\u30EB"
+      - Durandal
+      - Durandal
+      - Durandal
+      - "\u0414\u044E\u0440\u0430\u043D\u0434\u0430\u043B\u044C"
+      - Durandal
+      - "\u0E14\u0E39\u0E23\u0E31\u0E19\u0E14\u0E31\u0E25"
+      - Durandal
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_26
+      TermType: 0
+      Description: 
+      Languages:
+      - Shark Fin
+      - "\uC0E5\uC2A4\uD540"
+      - "\u9C7C\u7FC5"
+      - "\u9C7C\u7FC5"
+      - Haiflosse
+      - Aileron De Requin
+      - Pinna Di Squalo
+      - "\u30B7\u30E3\u30F3\u30B9\u30D4\u30F3"
+      - Sirip Jerung
+      - Sirip Hiu
+      - "Barbatana De Tubar\xE3o"
+      - "\u0410\u043A\u0443\u043B\u0438\u0439 \u041F\u043B\u0430\u0432\u043D\u0438\u043A"
+      - "Aleta De Tibur\xF3n"
+      - "\u0E2B\u0E39\u0E09\u0E25\u0E32\u0E21"
+      - "V\xE2y C\xE1 M\u1EADp"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_27
+      TermType: 0
+      Description: 
+      Languages:
+      - Leviathan's Fang
+      - "\uB808\uBE44\uC544\uD0C4\uC758 \uC1A1\uACF3\uB2C8"
+      - "\u5229\u7EF4\u5766\u4E4B\u7259"
+      - "\u5229\u7EF4\u5766\u4E4B\u7259"
+      - Leviathans Fangzahn
+      - "Croc De L\xE9viathan"
+      - La Zanna Del Leviatano
+      - "\u30EC\u30D3\u30A2\u30BF\u30F3\u306E\u7259"
+      - Taring Leviathan
+      - Taring Leviathan
+      - "Presa Do Leviat\xE3"
+      - "\u041A\u043B\u044B\u043A \u041B\u0435\u0432\u0438\u0430\u0444\u0430\u043D\u0430"
+      - "Colmillo De Leviat\xE1n"
+      - "\u0E40\u0E02\u0E35\u0E49\u0E22\u0E27\u0E02\u0E2D\u0E07\u0E40\u0E25\u0E27\u0E35\u0E2D\u0E32\u0E18\u0E32\u0E19"
+      - Nanh Leviathan
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_28
+      TermType: 0
+      Description: 
+      Languages:
+      - Rhongomyniad
+      - "\uB871\uACE0\uBBF8\uB2C8\uC544\uB4DC"
+      - "\u7EA2\u6208\u7C73\u5C3C\u4E9A\u5FB7"
+      - "\u7EA2\u6208\u7C73\u5C3C\u4E9A\u5FB7"
+      - Rhongomyniade
+      - Rhongomyniade
+      - Rongominiade
+      - "\u30ED\u30F3\u30B0\u30B4\u30DF\u30CB\u30A2\u30C9"
+      - Rhongomyniad
+      - Rhongominiad
+      - "Rongom\xEDnia"
+      - "\u0420\u043E\u043D\u0433\u043E\u043C\u0438\u043D\u0438\u0430\u0434\u0430"
+      - Rhongominia
+      - "\u0E23\u0E2D\u0E19\u0E42\u0E01\u0E21\u0E35\u0E40\u0E19\u0E35\u0E22\u0E14"
+      - Rhongomyniad
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_29
+      TermType: 0
+      Description: 
+      Languages:
+      - Superconductor Sword
+      - "\uCD08\uC804\uB3C4\uCCB4\uC758 \uAC80"
+      - "\u8D85\u5BFC\u5251"
+      - "\u8D85\u5BFC\u5251"
+      - Supraleiterschwert
+      - "\xC9p\xE9e Supraconductrice"
+      - Spada Superconduttrice
+      - "\u8D85\u4F1D\u5C0E\u4F53\u306E\u5263"
+      - Pedang Superkonduktor
+      - Pedang Superkonduktor
+      - Espada Supercondutora
+      - "\u0421\u0432\u0435\u0440\u0445\u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u043E\u0432\u044B\u0439
+        \u041C\u0435\u0447"
+      - Espada Superconductora
+      - "\u0E14\u0E32\u0E1A\u0E0B\u0E38\u0E1B\u0E40\u0E1B\u0E2D\u0E23\u0E4C\u0E04\u0E2D\u0E19\u0E14\u0E31\u0E01\u0E40\u0E15\u0E2D\u0E23\u0E4C"
+      - "Thanh Ki\u1EBFm Si\xEAu D\u1EABn"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Peridot Dagger
+      - "\uD398\uB9AC\uB3C4\uD2B8 \uB2E8\uAC80"
+      - "\u6A44\u6984\u77F3\u5315\u9996"
+      - "\u6A44\u6984\u77F3\u5315\u9996"
+      - Peridot-Dolch
+      - "Poignard P\xE9ridot"
+      - Pugnale Di Peridoto
+      - "\u30DA\u30EA\u30C9\u30C3\u30C8\u77ED\u5263"
+      - Keris Peridot
+      - Belati Peridot
+      - Adaga Peridoto
+      - "\u041F\u0435\u0440\u0438\u0434\u043E\u0442 \u041A\u0438\u043D\u0436\u0430\u043B"
+      - Daga De Peridoto
+      - "\u0E01\u0E23\u0E34\u0E0A\u0E40\u0E1E\u0E2D\u0E23\u0E34\u0E14\u0E2D\u0E17"
+      - "Dao G\u0103m Peridot"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_30
+      TermType: 0
+      Description: 
+      Languages:
+      - Kraken's Bridge
+      - "\uD06C\uB77C\uCF04\uC758 \uB2E4\uB9AC"
+      - "\u6D77\u602A\u4E4B\u6865"
+      - "\u6D77\u602A\u4E4B\u6865"
+      - "Krakens Br\xFCcke"
+      - Le Pont Du Kraken
+      - Il Ponte Di Kraken
+      - "\u30AF\u30E9\u30FC\u30B1\u30F3\u306E\u6A4B"
+      - Jambatan Kraken
+      - Jembatan Kraken
+      - Ponte De Kraken
+      - "\u041C\u043E\u0441\u0442 \u041A\u0440\u0430\u043A\u0435\u043D\u0430"
+      - Puente Del Kraken
+      - "\u0E2A\u0E30\u0E1E\u0E32\u0E19\u0E04\u0E23\u0E32\u0E40\u0E04\u0E19"
+      - "C\u1EA7u Kraken"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Solid Iron Sword
+      - "\uB2E8\uB2E8\uD55C \uCCA0\uAC80"
+      - "\u5B9E\u5FC3\u94C1\u5251"
+      - "\u5B9E\u5FC3\u94C1\u5251"
+      - Schwert Aus Massivem Eisen
+      - "\xC9p\xE9e En Fer Solide"
+      - Spada Di Ferro Massiccio
+      - "\u786C\u3044\u9244\u5263"
+      - Pedang Besi Padu
+      - Pedang Besi Padat
+      - "Espada De Ferro S\xF3lido"
+      - "\u0422\u0432\u0435\u0440\u0434\u044B\u0439 \u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439
+        \u041C\u0435\u0447"
+      - Espada De Hierro Macizo
+      - "\u0E14\u0E32\u0E1A\u0E40\u0E2B\u0E25\u0E47\u0E01\u0E41\u0E02\u0E47\u0E07"
+      - "Thanh Ki\u1EBFm S\u1EAFt R\u1EAFn"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Crystal Stick
+      - "\uD06C\uB9AC\uC2A4\uD0C8 \uB9C9\uB300\uAE30"
+      - "\u6C34\u6676\u68D2"
+      - "\u6C34\u6676\u68D2"
+      - Kristallstab
+      - "B\xE2ton De Cristal"
+      - Bastone Di Cristallo
+      - "\u30AF\u30EA\u30B9\u30BF\u30EB\u30B9\u30C6\u30A3\u30C3\u30AF"
+      - Tongkat Kristal
+      - Tongkat Kristal
+      - "Bast\xE3o De Cristal"
+      - "\u0425\u0440\u0443\u0441\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u041F\u0430\u043B\u043E\u0447\u043A\u0430"
+      - Palo De Cristal
+      - "\u0E41\u0E17\u0E48\u0E07\u0E04\u0E23\u0E34\u0E2A\u0E15\u0E31\u0E25"
+      - "Thanh Pha L\xEA"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_6
+      TermType: 0
+      Description: 
+      Languages:
+      - Gold Bar
+      - "\uACE8\uB4DC\uBC14"
+      - "\u91D1\u6761"
+      - "\u91D1\u6761"
+      - Goldbarren
+      - Lingot D'or
+      - Lingotto D'oro
+      - "\u30B4\u30FC\u30EB\u30C9\u30D0\u30FC"
+      - Jongkong Emas
+      - Emas Batangan
+      - Barra De Ouro
+      - "\u0417\u043E\u043B\u043E\u0442\u043E\u0439 \u0421\u043B\u0438\u0442\u043E\u043A"
+      - Barra De Oro
+      - "\u0E17\u0E2D\u0E07\u0E04\u0E33\u0E41\u0E17\u0E48\u0E07"
+      - "Th\u1ECFi V\xE0ng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_7
+      TermType: 0
+      Description: 
+      Languages:
+      - Cursed Iron Sword
+      - "\uC800\uC8FC\uBC1B\uC740 \uCCA0\uAC80"
+      - "\u88AB\u8BC5\u5492\u7684\u94C1\u5251"
+      - "\u88AB\u8BC5\u5492\u7684\u94C1\u5251"
+      - Verfluchtes Eisenschwert
+      - "\xC9p\xE9e De Fer Maudite"
+      - Spada Di Ferro Maledetta
+      - "\u546A\u308F\u308C\u305F\u9244\u5263"
+      - Pedang Besi Terkutuklah
+      - Pedang Besi Terkutuk
+      - "Espada De Ferro Amaldi\xE7oada"
+      - "\u041F\u0440\u043E\u043A\u043B\u044F\u0442\u044B\u0439 \u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439
+        \u041C\u0435\u0447"
+      - Espada De Hierro Maldita
+      - "\u0E14\u0E32\u0E1A\u0E40\u0E2B\u0E25\u0E47\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E2A\u0E32\u0E1B"
+      - "Thanh Ki\u1EBFm S\u1EAFt B\u1ECB Nguy\u1EC1n R\u1EE7a"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_8
+      TermType: 0
+      Description: 
+      Languages:
+      - Topaz Stick
+      - "\uD1A0\uD30C\uC988 \uB9C9\uB300\uAE30"
+      - "\u9EC4\u7389\u68D2"
+      - "\u9EC4\u7389\u68D2"
+      - Topasstab
+      - "B\xE2ton De Topaze"
+      - Bastone Di Topazio
+      - "\u30C8\u30D1\u30FC\u30BA\u30B9\u30C6\u30A3\u30C3\u30AF"
+      - Batang Gasing
+      - Tongkat Topas
+      - "Bast\xE3o De Top\xE1zio"
+      - "\u0422\u043E\u043F\u0430\u0437\u043E\u0432\u0430\u044F \u041F\u0430\u043B\u043E\u0447\u043A\u0430"
+      - Palo De Topacio
+      - "\u0E1A\u0E38\u0E29\u0E23\u0E32\u0E04\u0E31\u0E21\u0E15\u0E34\u0E14"
+      - Thanh Topaz
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Name_9
+      TermType: 0
+      Description: 
+      Languages:
+      - Broken Greatsword
+      - "\uBD80\uB7EC\uC9C4 \uB300\uAC80"
+      - "\u7834\u635F\u7684\u5927\u5251"
+      - "\u7834\u635F\u7684\u5927\u5251"
+      - "Zerbrochenes Gro\xDFschwert"
+      - "\xC9p\xE9e Bris\xE9e"
+      - Spadone Rotto
+      - "\u58CA\u308C\u305F\u5927\u5263"
+      - Pedang Besar Patah
+      - Pedang Besar Yang Patah
+      - Espada Larga Quebrada
+      - "\u0421\u043B\u043E\u043C\u0430\u043D\u043D\u044B\u0439 \u0411\u043E\u043B\u044C\u0448\u043E\u0439
+        \u041C\u0435\u0447"
+      - Gran Espada Rota
+      - "\u0E14\u0E32\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E2B\u0E31\u0E01"
+      - "Thanh \u0110\u1EA1i Ki\u1EBFm B\u1ECB H\u1ECFng"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Weapon_Upgrade_String_Format
+      TermType: 0
+      Description: 
+      Languages:
+      - Reinforced {0} {1} Times
+      - "{0} {1}\uD68C \uAC15\uD654"
+      - "\u5F3A\u5316{0} {1}\u6B21"
+      - "\u5F3A\u5316{0} {1}\u6B21"
+      - "{0} {1} Mal Verst\xE4rkt"
+      - "Renforc\xE9 {0} {1}\_Fois"
+      - Rinforzato {0} {1} Volte
+      - "{0} {1}\u56DE\u3092\u5F37\u5316"
+      - Diperkukuh {0} {1} Kali
+      - Diperkuat {0} {1} Kali
+      - "Refor\xE7ado {0} {1} Vezes"
+      - "\u0423\u0441\u0438\u043B\u0435\u043D\u043E {0} {1} \u0420\u0430\u0437"
+      - Reforzado {0} {1} Veces
+      - "\u0E40\u0E2A\u0E23\u0E34\u0E21\u0E01\u0E33\u0E25\u0E31\u0E07 {0} {1} \u0E04\u0E23\u0E31\u0E49\u0E07"
+      - "\u0110\u01B0\u1EE3c Gia C\u1ED1 {0} {1} L\u1EA7n"
+      Flags: 000000000000000000000000000000
+      Languages_Touch: []
+    - Term: Damage_Increase_String_Format
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\uC911\uAE09 \uD3EC\uC158 \uC81C\uC791"
+      - "\uACF5\uACA9\uB825 {0}% \uC99D\uAC00"
       - 
       - 
       - 
@@ -1759,12 +1963,12 @@ MonoBehaviour:
       - 
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Quest_Name_13
+    - Term: CritChance_Increase_String_Format
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\uC0C1\uAE09 \uD3EC\uC158 \uC81C\uC791"
+      - "\uCE58\uBA85\uD0C0 \uD655\uB960 {0}% \uC99D\uAC00"
       - 
       - 
       - 
@@ -1780,12 +1984,12 @@ MonoBehaviour:
       - 
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Quest_Name_14
+    - Term: CriticalDamage_Increase_String_Format
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\uD574\uB3C5\uC6A9 \uD3EC\uC158 \uC81C\uC791"
+      - "\uCE58\uBA85\uD0C0 \uACF5\uACA9\uB825 {0}% \uC99D\uAC00"
       - 
       - 
       - 
@@ -1801,12 +2005,12 @@ MonoBehaviour:
       - 
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Quest_Name_15
+    - Term: AttackSpeed_Increase_String_Format
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\uB3C5 \uD3EC\uC158 \uC81C\uC791"
+      - "\uACF5\uACA9 \uC18D\uB3C4 {0}% \uC99D\uAC00"
       - 
       - 
       - 
@@ -1822,12 +2026,12 @@ MonoBehaviour:
       - 
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Quest_Name_16
+    - Term: RunSpeed_Increase_String_Format
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\uCD5C\uC0C1\uAE09 \uD3EC\uC158 \uC81C\uC791"
+      - "\uC774\uB3D9 \uC18D\uB3C4 {0}% \uC99D\uAC00"
       - 
       - 
       - 
@@ -1843,75 +2047,12 @@ MonoBehaviour:
       - 
       Flags: 000000000000000000000000000000
       Languages_Touch: []
-    - Term: Quest_Name_17
+    - Term: Buy_Skin_String_Format
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\uC804\uC124\uC758 \uB9C8\uBC95 \uBC30\uC6B0\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Quest_Name_18
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uAE08\uACE0 \uCC3E\uAE30"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Quest_Name_19
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uAE38\uB4DC\uC7A5 \uCDE8\uC784"
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      Flags: 000000000000000000000000000000
-      Languages_Touch: []
-    - Term: Quest_Name_20
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\uD654\uC131 \uAC00\uAE30"
+      - "\uC2A4\uD0A8 {0}\uD68C \uAD6C\uB9E4\uD558\uAE30"
       - 
       - 
       - 
@@ -1981,7 +2122,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwti8St0EVhATB-VpJWR23qwFINXKYxYehNQ1Zl349q0_OePYX2tUGkNTPo_ggd2Nwf/exec
     Google_SpreadsheetKey: 1PQ0UdVoaxsFOlXSz-F80s2stQRCQHtq_wRUwjxXZb_Y
     Google_SpreadsheetName: I2Loc ProjectIL Localization
-    Google_LastUpdatedVersion: 1732513095557
+    Google_LastUpdatedVersion: 1732565790303
     Google_Password: threerabbit1!
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

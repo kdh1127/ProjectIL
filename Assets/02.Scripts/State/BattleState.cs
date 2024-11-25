@@ -69,6 +69,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             base.Update(battlePresenter);
 
             battlePresenter.characterView.Animator.SetTrigger("Attack");
+            battlePresenter.characterView.SetAttackSpeed(battlePresenter.characterModel.AttackSpeed);
         }
 
         public override void Exit(BattlePresenter battlePresenter)
@@ -89,6 +90,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
         public override void Enter(BattlePresenter battlePresenter)
         {
             base.Enter(battlePresenter);
+            battlePresenter.characterView.SetRunSpeed(battlePresenter.characterModel.RunSpeed);
             battlePresenter.characterView.Animator.SetTrigger("Run");
             battlePresenter.state = EBattleState.Lull;
         }
@@ -97,11 +99,13 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
         {
             base.Update(battlePresenter);
 
+            battlePresenter.characterView.SetRunSpeed(battlePresenter.characterModel.RunSpeed);
             battlePresenter.characterView.Animator.SetTrigger("Run");
-            battlePresenter.characterView.Move(UserDataManager.Instance.characterData.MoveSpeed);
-            
-            if(CharacterManager.Instance.CharacterPositionX > 3 && CharacterManager.Instance.CharacterPositionX < 22)
-                battlePresenter.pixelCamera.transform.Translate(UserDataManager.Instance.characterData.MoveSpeed * Time.smoothDeltaTime * Vector2.right);
+            battlePresenter.characterView.Move(battlePresenter.characterModel.RunSpeed);
+
+
+            if (CharacterManager.Instance.CharacterPositionX > 3 && CharacterManager.Instance.CharacterPositionX < 22)
+                battlePresenter.pixelCamera.transform.Translate(battlePresenter.characterModel.RunSpeed * Time.smoothDeltaTime * Vector2.right);
             if (CharacterManager.Instance.CharacterPositionX >= 26)
                 isClear = true;
 
@@ -144,6 +148,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             base.Enter(battlePresenter);
             battlePresenter.state = EBattleState.Reset;
             battlePresenter.characterView.Animator.SetTrigger("Run");
+            battlePresenter.gold.Subtract(battlePresenter.gold.Amount);
             StageManager.Instance.ResetStage();
             MonsterManager.Instance.ClearAllMonster();
             battlePresenter.fadeScreenView.FadeOut(0.5f, () =>

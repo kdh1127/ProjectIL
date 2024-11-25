@@ -12,7 +12,8 @@ public class SkinTable
 	[SerializeField] public int UpgradeCost;
 	[SerializeField] public int BaseValue;
 	[SerializeField] public int UpgradeValue;
-public SkinTable(int SkinNo, string SkinImageNo, string SkinName, string IncreaseType, int buyCost, int UpgradeCost, int BaseValue, int UpgradeValue)
+	[SerializeField] public string IncreaseTypeString;
+public SkinTable(int SkinNo, string SkinImageNo, string SkinName, string IncreaseType, int buyCost, int UpgradeCost, int BaseValue, int UpgradeValue, string IncreaseTypeString)
 	{
 		this.SkinNo = SkinNo;
 		this.SkinImageNo = SkinImageNo;
@@ -22,6 +23,7 @@ public SkinTable(int SkinNo, string SkinImageNo, string SkinName, string Increas
 		this.UpgradeCost = UpgradeCost;
 		this.BaseValue = BaseValue;
 		this.UpgradeValue = UpgradeValue;
+		this.IncreaseTypeString = IncreaseTypeString;
 	}
 }
 
@@ -42,7 +44,8 @@ public static class SkinTableList
 				buyCost: int.Parse(_trGoogleSheet.dataDictionary[data.key]["buyCost"]),
 				UpgradeCost: int.Parse(_trGoogleSheet.dataDictionary[data.key]["UpgradeCost"]),
 				BaseValue: int.Parse(_trGoogleSheet.dataDictionary[data.key]["BaseValue"]),
-				UpgradeValue: int.Parse(_trGoogleSheet.dataDictionary[data.key]["UpgradeValue"])
+				UpgradeValue: int.Parse(_trGoogleSheet.dataDictionary[data.key]["UpgradeValue"]),
+				IncreaseTypeString: _trGoogleSheet.dataDictionary[data.key]["IncreaseTypeString"]
 			);
 			_SkinTableList.Add(_SkinTable);
 		});

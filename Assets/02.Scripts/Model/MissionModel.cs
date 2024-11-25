@@ -6,13 +6,13 @@ using Zenject;
 public class MissionModel
 {
     private readonly List<MissionTable> tableList;
-    private readonly CurrencyModel.Gold gold;
+    private readonly CurrencyModel.Dia dia;
 
     [Inject]
-    public MissionModel(List<MissionTable> tableList, CurrencyModel.Gold gold)
+    public MissionModel(List<MissionTable> tableList, CurrencyModel.Dia dia)
 	{
         this.tableList = tableList;
-        this.gold = gold;
+        this.dia = dia;
 	}
 
     public void Init()
@@ -41,6 +41,10 @@ public class MissionModel
                         if (!missionData.DungeonClearData.ContainsKey(table.TargetNo))
                             missionData.DungeonClearData.Add(table.TargetNo, 0);
                         break;
+                    case EMissionType.BuySkin:
+                        if (!missionData.BuySkinData.ContainsKey(0))
+                            missionData.BuySkinData.Add(0, 0);
+                        break;
                 }
             });
     }
@@ -60,13 +64,13 @@ public class MissionModel
         switch (rewardType)
         {
             case ECurrencyType.GOLD:
-                gold.Add(table.Amount.ToBigInt());
+                //gold.Add(table.Amount.ToBigInt());
                 break;
             case ECurrencyType.DIA:
-                gold.Add(table.Amount.ToBigInt());
+                dia.Add(table.Amount.ToBigInt());
                 break;
             case ECurrencyType.KEY:
-                gold.Add(table.Amount.ToBigInt());
+                //dia.Add(table.Amount.ToBigInt());
                 break;
         }
     }
@@ -82,6 +86,7 @@ public class MissionModel
 			EMissionType.QuestClear => missionData.QuestClearData[table.TargetNo],
 			EMissionType.WeaponUpgrade => missionData.WeaponUpgradeData[table.TargetNo],
 			EMissionType.DungeonClear => missionData.DungeonClearData[table.TargetNo],
+            EMissionType.BuySkin => missionData.BuySkinData[0],
 			_ => 0
 		};
 	}
@@ -120,10 +125,18 @@ public class MissionModel
             case EMissionType.DungeonClear:
                 int userDungeonClearAmount = missionData.DungeonClearData[table.TargetNo];
 
-                if (userDungeonClearAmount >= table.CompleteCount)
+                if (userDungeonClearAmount > table.CompleteCount)
                 {
                     return true;
                 }
+                break;
+            case EMissionType.BuySkin:
+                int userBuySkinAmount = missionData.BuySkinData[0];
+
+                if (userBuySkinAmount >= table.CompleteCount)
+				{
+                    return true;
+				}
                 break;
         }
 

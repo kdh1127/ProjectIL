@@ -56,12 +56,24 @@ public class MissionItemView : MonoBehaviour
 	{
         var nameStringFormat = LocalizationManager.GetTranslation(table.Name);
         var missionTargetString = GetMissionTargetString(table);
-        var titleString = string.Format(nameStringFormat, missionTargetString, table.CompleteCount);
+        string titleString = "";
+		switch (table.MissionType.ToEnum<EMissionType>())
+		{
+			case EMissionType.QuestUpgrade:
+			case EMissionType.QuestClear:
+			case EMissionType.WeaponUpgrade:
+			case EMissionType.DungeonClear:
+                titleString = string.Format(nameStringFormat, missionTargetString, table.CompleteCount);
+                break;
+            case EMissionType.BuySkin:
+                titleString = string.Format(nameStringFormat, table.CompleteCount);
+                break;
+		}
         title_txt.text = titleString;
 
-    }
+	}
 
-    public string GetMissionTargetString(MissionTable table)
+	public string GetMissionTargetString(MissionTable table)
 	{
         var missionType = table.MissionType.ToEnum<EMissionType>();
 		switch (missionType)

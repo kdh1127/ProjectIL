@@ -36,7 +36,7 @@ public class QuestItemView : MonoBehaviour
         time_txt.text = $"{TimeSpan.FromSeconds(endTime - curSecond)}";
     }
 
-    public void UpdateLevel(string level, string reward)
+    public void UpdateLevel(int level, string reward)
     {
         var titleString = $"Lv.{level} {LocalizationManager.GetTranslation(title)}";
         var rewardString = $"+{reward}";

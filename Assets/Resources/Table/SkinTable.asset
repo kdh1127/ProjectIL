@@ -31,7 +31,7 @@ MonoBehaviour:
     columnId: BaseValue
   - type: 0
     columnId: UpgradeValue
-  - type: 4
+  - type: 1
     columnId: IncreaseTypeString
   dataList:
   - key: 0

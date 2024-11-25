@@ -180,6 +180,13 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		/// </summary>
 		public Dictionary<int, int> DungeonClearData { get => dungeonClearData; set => dungeonClearData = value; }
 
+		private Dictionary<int, int> buySkinData = new();
+
+		/// <summary>
+		/// stageNo, stageClearCount
+		/// </summary>
+		public Dictionary<int, int> BuySkinData { get => buySkinData; set => buySkinData = value; }
+
 		public void Init()
 		{
 			ClearMissionNo = 0;
@@ -193,6 +200,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			QuestClearData = data.QuestClearData;
 			WeaponUpgradeData = data.WeaponUpgradeData;
 			DungeonClearData = data.DungeonClearData;
+			BuySkinData = data.BuySkinData;
 		}
 
 		public void Save()
@@ -218,6 +226,11 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		public void UpdateDungeonClearData(int dungeonNo, Func<int, int> updateFunc)
 		{
 			DungeonClearData.AddOrUpdate(dungeonNo, updateFunc, 1);
+		}
+
+		public void UpdateBuySkinData(int skinNo, Func<int, int> updateFunc)
+		{
+			BuySkinData.AddOrUpdate(skinNo, updateFunc, 1);
 		}
 	}
 	#endregion

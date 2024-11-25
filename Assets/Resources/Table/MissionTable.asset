@@ -36,90 +36,90 @@ MonoBehaviour:
     - Quest_Upgrade_String_Format
     - QuestUpgrade
     - 0
-    - 5
-    - GOLD
-    - 1000
+    - 1
+    - DIA
+    - 50
   - key: 1
     datas:
     - 1
     - Quest_Upgrade_String_Format
     - QuestUpgrade
-    - 1
-    - 10
-    - GOLD
-    - 100000
+    - 0
+    - 5
+    - DIA
+    - 50
   - key: 2
     datas:
     - 2
     - Quest_Upgrade_String_Format
     - QuestUpgrade
-    - 2
     - 1
-    - GOLD
-    - 199000
+    - 1
+    - DIA
+    - 100
   - key: 3
     datas:
     - 3
     - Quest_Upgrade_String_Format
     - QuestUpgrade
+    - 1
     - 3
-    - 5
-    - GOLD
-    - 298000
+    - DIA
+    - 50
   - key: 4
     datas:
     - 4
-    - Quest_Clear_String_Format
-    - QuestClear
+    - Dungeon_Clear_String_Format
+    - DungeonClear
     - 0
-    - 10
-    - GOLD
-    - 397000
+    - 0
+    - DIA
+    - 100
   - key: 5
     datas:
     - 5
     - Quest_Upgrade_String_Format
     - QuestUpgrade
-    - 4
-    - 1
-    - GOLD
-    - 496000
+    - 2
+    - 5
+    - DIA
+    - 50
   - key: 6
     datas:
     - 6
     - Weapon_Upgrade_String_Format
     - WeaponUpgrade
-    - 0
+    - 1
     - 5
-    - GOLD
-    - 595000
+    - DIA
+    - 50
   - key: 7
     datas:
     - 7
     - Dungeon_Clear_String_Format
     - DungeonClear
     - 0
-    - 10
-    - GOLD
-    - 694000
+    - 3
+    - DIA
+    - 550
   - key: 8
     datas:
     - 8
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
-    - 5
+    - Buy_Skin_String_Format
+    - BuySkin
+    - 0
     - 1
-    - GOLD
-    - 793000
+    - DIA
+    - 5000
   - key: 9
     datas:
     - 9
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
-    - 9
-    - 5
-    - GOLD
-    - 892000
+    - Quest_Clear_String_Format
+    - QuestClear
+    - 3
+    - 10
+    - DIA
+    - 100
   - key: 10
     datas:
     - 10
@@ -127,26 +127,26 @@ MonoBehaviour:
     - QuestUpgrade
     - 10
     - 10
-    - GOLD
-    - 991000
+    - DIA
+    - 100
   - key: 11
     datas:
     - 11
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Weapon_Upgrade_String_Format
+    - WeaponUpgrade
     - 11
     - 1
-    - GOLD
-    - 1090000
+    - DIA
+    - 100
   - key: 12
     datas:
     - 12
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Dungeon_Clear_String_Format
+    - DungeonClear
     - 12
     - 5
-    - GOLD
-    - 1189000
+    - DIA
+    - 100
   - key: 13
     datas:
     - 13
@@ -154,17 +154,17 @@ MonoBehaviour:
     - QuestUpgrade
     - 13
     - 10
-    - GOLD
-    - 1288000
+    - DIA
+    - 100
   - key: 14
     datas:
     - 14
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Quest_Clear_String_Format
+    - QuestClear
     - 14
     - 1
-    - GOLD
-    - 1387000
+    - DIA
+    - 100
   - key: 15
     datas:
     - 15
@@ -172,26 +172,26 @@ MonoBehaviour:
     - QuestUpgrade
     - 15
     - 5
-    - GOLD
-    - 1486000
+    - DIA
+    - 100
   - key: 16
     datas:
     - 16
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Weapon_Upgrade_String_Format
+    - WeaponUpgrade
     - 16
     - 10
-    - GOLD
-    - 1585000
+    - DIA
+    - 100
   - key: 17
     datas:
     - 17
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Dungeon_Clear_String_Format
+    - DungeonClear
     - 17
     - 1
-    - GOLD
-    - 1684000
+    - DIA
+    - 100
   - key: 18
     datas:
     - 18
@@ -199,17 +199,17 @@ MonoBehaviour:
     - QuestUpgrade
     - 18
     - 5
-    - GOLD
-    - 1783000
+    - DIA
+    - 100
   - key: 19
     datas:
     - 19
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Quest_Clear_String_Format
+    - QuestClear
     - 19
     - 10
-    - GOLD
-    - 1882000
+    - DIA
+    - 100
   - key: 20
     datas:
     - 20
@@ -217,26 +217,26 @@ MonoBehaviour:
     - QuestUpgrade
     - 20
     - 1
-    - GOLD
-    - 1981000
+    - DIA
+    - 100
   - key: 21
     datas:
     - 21
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Weapon_Upgrade_String_Format
+    - WeaponUpgrade
     - 21
     - 5
-    - GOLD
-    - 2080000
+    - DIA
+    - 100
   - key: 22
     datas:
     - 22
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Dungeon_Clear_String_Format
+    - DungeonClear
     - 22
     - 10
-    - GOLD
-    - 2179000
+    - DIA
+    - 100
   - key: 23
     datas:
     - 23
@@ -244,17 +244,17 @@ MonoBehaviour:
     - QuestUpgrade
     - 23
     - 1
-    - GOLD
-    - 2278000
+    - DIA
+    - 100
   - key: 24
     datas:
     - 24
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Quest_Clear_String_Format
+    - QuestClear
     - 24
     - 5
-    - GOLD
-    - 2377000
+    - DIA
+    - 100
   - key: 25
     datas:
     - 25
@@ -262,26 +262,26 @@ MonoBehaviour:
     - QuestUpgrade
     - 25
     - 10
-    - GOLD
-    - 2476000
+    - DIA
+    - 100
   - key: 26
     datas:
     - 26
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Weapon_Upgrade_String_Format
+    - WeaponUpgrade
     - 26
     - 1
-    - GOLD
-    - 2575000
+    - DIA
+    - 100
   - key: 27
     datas:
     - 27
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Dungeon_Clear_String_Format
+    - DungeonClear
     - 27
     - 5
-    - GOLD
-    - 2674000
+    - DIA
+    - 100
   - key: 28
     datas:
     - 28
@@ -289,17 +289,17 @@ MonoBehaviour:
     - QuestUpgrade
     - 28
     - 10
-    - GOLD
-    - 2773000
+    - DIA
+    - 100
   - key: 29
     datas:
     - 29
-    - Quest_Upgrade_String_Format
-    - QuestUpgrade
+    - Quest_Clear_String_Format
+    - QuestClear
     - 29
     - 1
-    - GOLD
-    - 2872000
+    - DIA
+    - 100
   - key: 30
     datas:
     - 30
@@ -307,8 +307,8 @@ MonoBehaviour:
     - QuestUpgrade
     - 30
     - 5
-    - GOLD
-    - 2971000
+    - DIA
+    - 100
   dataDictionary:
     m_keys:
     - 0
@@ -356,9 +356,9 @@ MonoBehaviour:
       - Quest_Upgrade_String_Format
       - QuestUpgrade
       - 0
-      - 5
-      - GOLD
-      - 1000
+      - 1
+      - DIA
+      - 50
     - m_keys:
       - MissionNo
       - Name
@@ -371,58 +371,58 @@ MonoBehaviour:
       - 1
       - Quest_Upgrade_String_Format
       - QuestUpgrade
-      - 1
-      - 10
-      - GOLD
-      - 100000
-    - m_keys:
-      - MissionNo
-      - Name
-      - MissionType
-      - TargetNo
-      - CompleteCount
-      - RewardType
-      - Amount
-      m_values:
-      - 2
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 2
-      - 1
-      - GOLD
-      - 199000
-    - m_keys:
-      - MissionNo
-      - Name
-      - MissionType
-      - TargetNo
-      - CompleteCount
-      - RewardType
-      - Amount
-      m_values:
-      - 3
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 3
-      - 5
-      - GOLD
-      - 298000
-    - m_keys:
-      - MissionNo
-      - Name
-      - MissionType
-      - TargetNo
-      - CompleteCount
-      - RewardType
-      - Amount
-      m_values:
-      - 4
-      - Quest_Clear_String_Format
-      - QuestClear
       - 0
-      - 10
-      - GOLD
-      - 397000
+      - 5
+      - DIA
+      - 50
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 2
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 1
+      - 1
+      - DIA
+      - 100
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 3
+      - Quest_Upgrade_String_Format
+      - QuestUpgrade
+      - 1
+      - 3
+      - DIA
+      - 50
+    - m_keys:
+      - MissionNo
+      - Name
+      - MissionType
+      - TargetNo
+      - CompleteCount
+      - RewardType
+      - Amount
+      m_values:
+      - 4
+      - Dungeon_Clear_String_Format
+      - DungeonClear
+      - 0
+      - 0
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -435,10 +435,10 @@ MonoBehaviour:
       - 5
       - Quest_Upgrade_String_Format
       - QuestUpgrade
-      - 4
-      - 1
-      - GOLD
-      - 496000
+      - 2
+      - 5
+      - DIA
+      - 50
     - m_keys:
       - MissionNo
       - Name
@@ -451,10 +451,10 @@ MonoBehaviour:
       - 6
       - Weapon_Upgrade_String_Format
       - WeaponUpgrade
-      - 0
+      - 1
       - 5
-      - GOLD
-      - 595000
+      - DIA
+      - 50
     - m_keys:
       - MissionNo
       - Name
@@ -468,9 +468,9 @@ MonoBehaviour:
       - Dungeon_Clear_String_Format
       - DungeonClear
       - 0
-      - 10
-      - GOLD
-      - 694000
+      - 3
+      - DIA
+      - 550
     - m_keys:
       - MissionNo
       - Name
@@ -481,12 +481,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 8
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 5
+      - Buy_Skin_String_Format
+      - BuySkin
+      - 0
       - 1
-      - GOLD
-      - 793000
+      - DIA
+      - 5000
     - m_keys:
       - MissionNo
       - Name
@@ -497,12 +497,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 9
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
-      - 9
-      - 5
-      - GOLD
-      - 892000
+      - Quest_Clear_String_Format
+      - QuestClear
+      - 3
+      - 10
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -517,8 +517,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 10
       - 10
-      - GOLD
-      - 991000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -529,12 +529,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 11
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Weapon_Upgrade_String_Format
+      - WeaponUpgrade
       - 11
       - 1
-      - GOLD
-      - 1090000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -545,12 +545,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 12
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Dungeon_Clear_String_Format
+      - DungeonClear
       - 12
       - 5
-      - GOLD
-      - 1189000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -565,8 +565,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 13
       - 10
-      - GOLD
-      - 1288000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -577,12 +577,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 14
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Quest_Clear_String_Format
+      - QuestClear
       - 14
       - 1
-      - GOLD
-      - 1387000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -597,8 +597,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 15
       - 5
-      - GOLD
-      - 1486000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -609,12 +609,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 16
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Weapon_Upgrade_String_Format
+      - WeaponUpgrade
       - 16
       - 10
-      - GOLD
-      - 1585000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -625,12 +625,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 17
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Dungeon_Clear_String_Format
+      - DungeonClear
       - 17
       - 1
-      - GOLD
-      - 1684000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -645,8 +645,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 18
       - 5
-      - GOLD
-      - 1783000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -657,12 +657,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 19
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Quest_Clear_String_Format
+      - QuestClear
       - 19
       - 10
-      - GOLD
-      - 1882000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -677,8 +677,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 20
       - 1
-      - GOLD
-      - 1981000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -689,12 +689,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 21
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Weapon_Upgrade_String_Format
+      - WeaponUpgrade
       - 21
       - 5
-      - GOLD
-      - 2080000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -705,12 +705,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 22
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Dungeon_Clear_String_Format
+      - DungeonClear
       - 22
       - 10
-      - GOLD
-      - 2179000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -725,8 +725,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 23
       - 1
-      - GOLD
-      - 2278000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -737,12 +737,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 24
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Quest_Clear_String_Format
+      - QuestClear
       - 24
       - 5
-      - GOLD
-      - 2377000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -757,8 +757,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 25
       - 10
-      - GOLD
-      - 2476000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -769,12 +769,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 26
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Weapon_Upgrade_String_Format
+      - WeaponUpgrade
       - 26
       - 1
-      - GOLD
-      - 2575000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -785,12 +785,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 27
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Dungeon_Clear_String_Format
+      - DungeonClear
       - 27
       - 5
-      - GOLD
-      - 2674000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -805,8 +805,8 @@ MonoBehaviour:
       - QuestUpgrade
       - 28
       - 10
-      - GOLD
-      - 2773000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -817,12 +817,12 @@ MonoBehaviour:
       - Amount
       m_values:
       - 29
-      - Quest_Upgrade_String_Format
-      - QuestUpgrade
+      - Quest_Clear_String_Format
+      - QuestClear
       - 29
       - 1
-      - GOLD
-      - 2872000
+      - DIA
+      - 100
     - m_keys:
       - MissionNo
       - Name
@@ -837,5 +837,5 @@ MonoBehaviour:
       - QuestUpgrade
       - 30
       - 5
-      - GOLD
-      - 2971000
+      - DIA
+      - 100

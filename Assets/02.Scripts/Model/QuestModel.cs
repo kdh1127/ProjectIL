@@ -24,7 +24,7 @@ public class QuestItemModel
 
     public void IncreaseLevel()
     {
-        var cost = table.Cost.ToBigInt();
+        var cost = GetCost();
         
         if(gold.Subtract(cost))
 		{
@@ -36,8 +36,18 @@ public class QuestItemModel
 
     public BigInteger GetReward()
     {
-        var increaseValue = table.Increase.ToBigInt();
-        return m_level.Value > 0 ? (m_level.Value * increaseValue) : increaseValue;
+        var baseValue = table.Increase.ToBigInt();
+        var increaseValue = (m_level.Value - 1) * table.LvIncreaseValue.ToBigInt();
+        var reward = increaseValue > 0 ? baseValue + increaseValue : baseValue;
+        return reward;
+    }
+
+    public BigInteger GetCost()
+	{
+        var baseCost = table.Cost.ToBigInt();
+        var increase = baseCost * m_level.Value * (20 * m_level.Value)/ 100; // 20ÆÛ
+        var cost = baseCost + increase;
+        return cost;
     }
 
     public void Progress(int endTime)
@@ -46,8 +56,7 @@ public class QuestItemModel
         var reward = GetReward();
 
         if (isComplete)
-        {
-           
+        {           
             m_elpasedTime.Value = 0;
             var increase = reward * CharacterData.TreasureQuestGoldPer / 100;
             var totalReward = reward + increase;

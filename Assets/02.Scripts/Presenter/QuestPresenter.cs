@@ -1,3 +1,4 @@
+using I2.Loc;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
@@ -38,7 +39,7 @@ public class QuestPresenter
 			var itemView = CreateQuestItemView(table);
 			var itemModel = model.questItemList[table.QuestNo];
 
-			SubscribeToUpgradeButton(itemModel, itemView, table.Cost.ToBigInt());
+			SubscribeToUpgradeButton(itemModel, itemView);
 			SubscribeToQuestItemModel(itemModel, itemView, table);
 			SubscribeToProgressBar(itemModel, itemView, table.Time);
 		});
@@ -67,20 +68,27 @@ public class QuestPresenter
 			cost: cachedCost,
 			costImage: resources.cost["Gold"]);
 
+		var cost = itemModel.GetCost().ToAlphabetNumber();
+		var increase = table.LvIncreaseValue.ToBigInt();
+		itemView.upgradeButtonView.UpdateView(
+			increase: itemModel.m_level.Value > 0 ? $"+{increase.ToAlphabetNumber()}" : LocalizationManager.GetTranslation("Buy"),
+			cost: cost);
 		return itemView;
 	}
 
-	private void SubscribeToUpgradeButton(QuestItemModel itemModel, QuestItemView itemView, BigInteger upgradeCost)
+	private void SubscribeToUpgradeButton(QuestItemModel itemModel, QuestItemView itemView)
 	{
 		var upgradeButtonView = itemView.upgradeButtonView;
 
 		upgradeButtonView.button.OnClickAsObservable()
-		.Where(_ => gold.CanSubtract(upgradeCost))
+		.Where(_ => gold.CanSubtract(itemModel.GetCost()))
 		.Subscribe(_ => itemModel.IncreaseLevel())
 		.AddTo(upgradeButtonView.gameObject);
 
-		gold.Subscribe(gold => upgradeButtonView.SetInteractable(gold >= upgradeCost))
-			.AddTo(upgradeButtonView.gameObject);
+		gold.Subscribe(gold =>
+		{
+			upgradeButtonView.SetInteractable(gold >= itemModel.GetCost());
+		}).AddTo(upgradeButtonView.gameObject);
 	}
 
 	private void SubscribeToQuestItemModel(QuestItemModel itemModel, QuestItemView itemView, QuestTable table)
@@ -92,7 +100,13 @@ public class QuestPresenter
 		itemModel.m_level.Subscribe(level =>
 		{
 			var reward = itemModel.GetReward().ToAlphabetNumber();
-			itemView.UpdateLevel(level.ToString(), reward);
+			var increase = table.LvIncreaseValue.ToBigInt();
+			var cost = itemModel.GetCost().ToAlphabetNumber();
+			itemView.UpdateLevel(level, reward);
+			itemView.upgradeButtonView.UpdateView(
+				increase: itemModel.m_level.Value > 0 ? $"+{increase.ToAlphabetNumber()}" : LocalizationManager.GetTranslation("Buy"),
+				cost: cost);
+			itemView.upgradeButtonView.SetInteractable(gold.CanSubtract(itemModel.GetCost()));
 		}).AddTo(itemView.gameObject);
 	}
 

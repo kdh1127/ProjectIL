@@ -47,7 +47,7 @@ public class TreasurePresenter
 				treasureItemModel.Upgrade();
 			}).AddTo(treasureItemView.upgradeButtonView.gameObject);
 
-			key.Subscribe(key => treasureItemView.upgradeButtonView.SetInteractable(key >= table.TreasureCost.ToBigInt()))
+			key.Subscribe(key => treasureItemView.upgradeButtonView.SetInteractable(key >= treasureItemModel.GetCost()))
 				.AddTo(treasureItemView.upgradeButtonView.gameObject);
 		});
 

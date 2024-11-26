@@ -28,35 +28,35 @@ public class TreasureItemModel
         switch(type)
         {
             case EIncreaseType.EnemyGold:
-                if (key.Subtract(cost))
+                if (key.Subtract(GetCost()))
                 {
                     level.Value++;
                     characterData.TreasureEnemyGoldPer = GetIncreaseValue();
                 }
                 break;
             case EIncreaseType.QuestGold:
-                if (key.Subtract(cost))
+                if (key.Subtract(GetCost()))
                 {
                     level.Value++;
                     characterData.TreasureQuestGoldPer = GetIncreaseValue();
                 }
                 break;
             case EIncreaseType.CriticalDamage:
-                if (key.Subtract(cost))
+                if (key.Subtract(GetCost()))
                 {
                     level.Value++;
                     characterData.TreasureCriticalDamagePer = GetIncreaseValue();
                 }
                 break;
             case EIncreaseType.Damage:
-                if (key.Subtract(cost))
+                if (key.Subtract(GetCost()))
                 {
                     level.Value++;
                     characterData.TreasureDamagePer = GetIncreaseValue();
                 }
                 break;
             case EIncreaseType.ExtraDamage:
-                if (key.Subtract(cost))
+                if (key.Subtract(GetCost()))
                 {
                     level.Value++;
                     characterData.TreasureExtraDamage = GetIncreaseValue();
@@ -72,6 +72,12 @@ public class TreasureItemModel
     {
         return level.Value * table.Increase.ToBigInt();
     }
+
+    public BigInteger GetCost()
+	{
+        var baseCost = table.TreasureCost.ToBigInt();
+        return baseCost + (baseCost * level.Value * 12 / 100);
+	}
 }
 
 public class TreasureModel

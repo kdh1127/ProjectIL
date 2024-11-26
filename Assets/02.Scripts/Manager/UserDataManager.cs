@@ -29,6 +29,20 @@ public class UserDataManager : TRSingleton<UserDataManager>
 		}
 	}
 
+	private void OnApplicationFocus(bool focus)
+	{
+		if(focus)
+		{
+			SaveAll();
+
+			isInit = true;
+			DataUtility.Save("IsFirst", isInit);
+		}
+		else
+		{
+			SaveAll();
+		}
+	}
 	private void OnApplicationQuit()
 	{
 		SaveAll();

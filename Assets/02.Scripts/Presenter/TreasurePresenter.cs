@@ -38,6 +38,7 @@ public class TreasurePresenter
 			treasureItemModel.level.Subscribe(level =>
 			{
 				treasureItemView.LevelUpdate(level, table.TreasureName, level * table.Increase.ToBigInt());
+				treasureItemView.upgradeButtonView.UpdateView(table.Increase.ToBigInt().ToAlphabetNumber(), treasureItemModel.GetCost().ToAlphabetNumber());
 			}).AddTo(treasureItemView.gameObject);
 
 			//upgrade button subscribe

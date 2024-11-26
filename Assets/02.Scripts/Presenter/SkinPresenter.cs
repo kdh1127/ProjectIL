@@ -54,6 +54,8 @@ public class SkinPresenter
                 itemView.equipStatus_tgl.gameObject.SetActive(itemModel.IsBought);
                 itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease(), table.SkinName, table.IncreaseTypeString, itemModel.isEquip.Value);
                 itemView.upgradeButtonView.UpdateView(itemModel.IsBought, table.UpgradeValue, table.buyCost, table.UpgradeCost);
+                itemView.upgradeButtonView.gameObject.SetActive(!itemModel.IsMaxLevel());
+
             }).AddTo(itemView.gameObject);
 
             dia.Subscribe(dia =>

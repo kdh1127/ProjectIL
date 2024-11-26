@@ -9,15 +9,15 @@ public class TestManager : MonoBehaviour
 
 	public void ShowMeTheGold()
 	{
-		gold.Add(1000000000);
+		gold.Add(1000);
 	}
 
 	public void ShowMeTheKey()
 	{
-		key.Add(100000000000);
+		key.Add(1000);
 	}
 	public void ShowMeTheDia()
 	{
-		dia.Add(100);
+		dia.Add(1000);
 	}
 }

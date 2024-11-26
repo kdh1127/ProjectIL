@@ -55,7 +55,7 @@ public class CurrencyModel
         return false;
 	}
 
-    private void Save(ECurrencyType type)
+    public void Save(ECurrencyType type)
 	{
         switch (type)
         {

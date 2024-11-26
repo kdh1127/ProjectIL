@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1364735527, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: UIPanelPrefabs
+  m_EditorClassIdentifier: 
+  gameObjectDictionary:
+    m_keys:
+    - BottomPanel
+    - CurrencyPanel
+    - MissionPanel
+    - QuestPanel
+    - RightPanel
+    - TopPanel
+    - TreasurePanel
+    - WeaponPanel
+    m_values:
+    - {fileID: 7957084221416631623, guid: a03e23321684a32459e19a13d1983f01, type: 3}
+    - {fileID: 9045095879459511665, guid: d48a1d4b6827baf4198270a28a3db696, type: 3}
+    - {fileID: 3707560152965384089, guid: 8a46119793de8f647973eae9f5127fdb, type: 3}
+    - {fileID: 1970222503727456094, guid: 766c897fc191da64eac7215985544b39, type: 3}
+    - {fileID: 2816024524724958906, guid: 42c74bf30519e374991c38eda71c22d4, type: 3}
+    - {fileID: 2493395911301526474, guid: 8a65b5d9045dc3b4e85a2c0ef307c229, type: 3}
+    - {fileID: 7253578598634931347, guid: 231de457417ad214fb408b5aa06f85d8, type: 3}
+    - {fileID: 8912460042909748472, guid: 2440b69c975d5424990f15889266b64e, type: 3}

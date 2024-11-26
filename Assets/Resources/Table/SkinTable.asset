@@ -1,0 +1,359 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1620177140, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: SkinTable
+  m_EditorClassIdentifier: 
+  sheetID: 1UWFMOz9i1Ewz0WdGV1HbTlOCwOvqcHxA-GrEjtnYmN4
+  gID: 396346810
+  columnList:
+  - type: 0
+    columnId: SkinNo
+  - type: 1
+    columnId: SkinImageNo
+  - type: 1
+    columnId: SkinName
+  - type: 1
+    columnId: IncreaseType
+  - type: 0
+    columnId: buyCost
+  - type: 0
+    columnId: UpgradeCost
+  - type: 0
+    columnId: BaseValue
+  - type: 0
+    columnId: UpgradeValue
+  - type: 1
+    columnId: IncreaseTypeString
+  dataList:
+  - key: 0
+    datas:
+    - 0
+    - Image_0
+    - Skin_Name_0
+    - Damage
+    - 500
+    - 150
+    - 50
+    - 5
+    - Damage_Increase_String_Format
+  - key: 1
+    datas:
+    - 1
+    - Image_1
+    - Skin_Name_1
+    - CritChance
+    - 500
+    - 150
+    - 5
+    - 1
+    - CritChance_Increase_String_Format
+  - key: 2
+    datas:
+    - 2
+    - Image_2
+    - Skin_Name_2
+    - CriticalDamage
+    - 500
+    - 150
+    - 40
+    - 4
+    - CriticalDamage_Increase_String_Format
+  - key: 3
+    datas:
+    - 3
+    - Image_3
+    - Skin_Name_3
+    - AttackSpeed
+    - 500
+    - 150
+    - 5
+    - 1
+    - AttackSpeed_Increase_String_Format
+  - key: 4
+    datas:
+    - 4
+    - Image_4
+    - Skin_Name_4
+    - RunSpeed
+    - 500
+    - 150
+    - 5
+    - 1
+    - RunSpeed_Increase_String_Format
+  - key: 5
+    datas:
+    - 5
+    - Image_5
+    - Skin_Name_5
+    - Damage
+    - 1000
+    - 300
+    - 100
+    - 10
+    - Damage_Increase_String_Format
+  - key: 6
+    datas:
+    - 6
+    - Image_6
+    - Skin_Name_6
+    - CritChance
+    - 1000
+    - 300
+    - 10
+    - 2
+    - CritChance_Increase_String_Format
+  - key: 7
+    datas:
+    - 7
+    - Image_7
+    - Skin_Name_7
+    - CriticalDamage
+    - 1000
+    - 300
+    - 80
+    - 8
+    - CriticalDamage_Increase_String_Format
+  - key: 8
+    datas:
+    - 8
+    - Image_8
+    - Skin_Name_8
+    - AttackSpeed
+    - 1000
+    - 300
+    - 10
+    - 2
+    - AttackSpeed_Increase_String_Format
+  - key: 9
+    datas:
+    - 9
+    - Image_9
+    - Skin_Name_9
+    - RunSpeed
+    - 1000
+    - 300
+    - 10
+    - 2
+    - RunSpeed_Increase_String_Format
+  dataDictionary:
+    m_keys:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    m_values:
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 0
+      - Image_0
+      - Skin_Name_0
+      - Damage
+      - 500
+      - 150
+      - 50
+      - 5
+      - Damage_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 1
+      - Image_1
+      - Skin_Name_1
+      - CritChance
+      - 500
+      - 150
+      - 5
+      - 1
+      - CritChance_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 2
+      - Image_2
+      - Skin_Name_2
+      - CriticalDamage
+      - 500
+      - 150
+      - 40
+      - 4
+      - CriticalDamage_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 3
+      - Image_3
+      - Skin_Name_3
+      - AttackSpeed
+      - 500
+      - 150
+      - 5
+      - 1
+      - AttackSpeed_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 4
+      - Image_4
+      - Skin_Name_4
+      - RunSpeed
+      - 500
+      - 150
+      - 5
+      - 1
+      - RunSpeed_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 5
+      - Image_5
+      - Skin_Name_5
+      - Damage
+      - 1000
+      - 300
+      - 100
+      - 10
+      - Damage_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 6
+      - Image_6
+      - Skin_Name_6
+      - CritChance
+      - 1000
+      - 300
+      - 10
+      - 2
+      - CritChance_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 7
+      - Image_7
+      - Skin_Name_7
+      - CriticalDamage
+      - 1000
+      - 300
+      - 80
+      - 8
+      - CriticalDamage_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 8
+      - Image_8
+      - Skin_Name_8
+      - AttackSpeed
+      - 1000
+      - 300
+      - 10
+      - 2
+      - AttackSpeed_Increase_String_Format
+    - m_keys:
+      - SkinNo
+      - SkinImageNo
+      - SkinName
+      - IncreaseType
+      - buyCost
+      - UpgradeCost
+      - BaseValue
+      - UpgradeValue
+      - IncreaseTypeString
+      m_values:
+      - 9
+      - Image_9
+      - Skin_Name_9
+      - RunSpeed
+      - 1000
+      - 300
+      - 10
+      - 2
+      - RunSpeed_Increase_String_Format

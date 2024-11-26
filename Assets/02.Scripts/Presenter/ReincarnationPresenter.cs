@@ -33,6 +33,7 @@ public class ReincarnationPresenter
             var isOpen = stageNo >= 10;
             reincarnationButton.gameObject.SetActive(isOpen);
         }).AddTo(reincarnationButton.gameObject);
+
         reincarnationButton.button.OnClickAsObservable()
             .Subscribe(_ =>
             {

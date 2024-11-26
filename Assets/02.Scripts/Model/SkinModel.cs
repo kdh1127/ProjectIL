@@ -16,7 +16,7 @@ public class SkinItemModel
 
 
 	[Inject]
-	public SkinItemModel (SkinTable table, CurrencyModel.Dia dia)
+	public SkinItemModel(SkinTable table, CurrencyModel.Dia dia)
 	{
 		this.table = table;
 		this.dia = dia;
@@ -54,9 +54,36 @@ public class SkinItemModel
 	}
 
 	public int GetTotalIncrease()
-    {
-		int totalIncrease = table.BaseValue + ((m_level.Value -1) * table.UpgradeValue);
+	{
+		int totalIncrease = table.BaseValue + ((m_level.Value - 1) * table.UpgradeValue);
 		return m_level.Value > 1 ? totalIncrease : table.BaseValue;
+	}
+
+
+	public bool IsMaxLevel()
+	{
+		var type = table.IncreaseType.ToEnum<ESkinIncreaseType>();
+		var isMaxLevel = false;
+		switch (type)
+		{
+			case ESkinIncreaseType.Damage:
+				isMaxLevel = false;
+				break;
+			case ESkinIncreaseType.CritChance:
+				isMaxLevel = GetTotalIncrease() >= 450 ? true : false;
+				break;
+			case ESkinIncreaseType.CriticalDamage:
+				isMaxLevel = false;
+				break;
+			case ESkinIncreaseType.AttackSpeed:
+				isMaxLevel = GetTotalIncrease() >= 100 ? true : false;
+				break;
+			case ESkinIncreaseType.RunSpeed:
+				isMaxLevel = GetTotalIncrease() >= 100 ? true : false;
+				break;
+		}
+
+		return isMaxLevel;
 	}
 }
 public class SkinModel
@@ -96,4 +123,5 @@ public class SkinModel
 		});
 		return isEquipSkin;
 	}
+	
 }

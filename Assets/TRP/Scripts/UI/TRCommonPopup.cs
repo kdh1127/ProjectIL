@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 using ThreeRabbitPackage.DesignPattern;
+using TMPro;
 
 public class TRCommonPopup : TRPopup
 {
@@ -10,10 +11,10 @@ public class TRCommonPopup : TRPopup
 	public Image item_img;
 
 	[Header("Text")]
-	public Text title_txt;
-	public Text message_txt;
-	public Text confirm_txt;
-	public Text cancel_txt;
+	public TMP_Text title_txt;
+	public TMP_Text message_txt;
+	public TMP_Text confirm_txt;
+	public TMP_Text cancel_txt;
 
 	[Header("Button")]
 	public Button confirm_btn;
@@ -45,7 +46,7 @@ public class TRCommonPopup : TRPopup
 
 	public static CommonPopupBuilder Instantiate(Transform parent)
 	{
-		return new CommonPopupBuilder(Instantiate(Resources.Load<GameObject>("Prefabs/TRCommonPopup"), parent));
+		return new CommonPopupBuilder(Instantiate(Resources.Load<GameObject>("Prefabs/ReincarnationPopupUI"), parent));
 	}
 
 	public class CommonPopupBuilder : TRBuilder<TRCommonPopup>

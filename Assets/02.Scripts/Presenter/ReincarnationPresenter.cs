@@ -21,31 +21,24 @@ public class ReincarnationPresenter
 
     public void Subscribe()
     {
-        //SubscribeToReincarnationButton();
-        SubscribeToReincarnationButton2();
+        SubscribeToReincarnationButton();
         SubscribeToReincarnationPopupView();
         SubscribeToModel();
     }
 
     private void SubscribeToReincarnationButton()
     {
-        reincarnationButton.button.OnClickAsObservable()
-            .Subscribe(_ =>
-            {
-                reincarnationPopupView = reincarnationButton.OnPopup().GetComponent<ReincarnationPopupView>();
-            }).AddTo(reincarnationButton.gameObject);
-    }
-
-    private void SubscribeToReincarnationButton2()
-    {
-
+        StageManager.Instance.CurStage.Subscribe(stageNo =>
+        {
+            var isOpen = stageNo >= 10;
+            reincarnationButton.gameObject.SetActive(isOpen);
+        }).AddTo(reincarnationButton.gameObject);
         reincarnationButton.button.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 TRCommonPopup.Instantiate(PopupManager.Instance.transform)
                 .SetTitle("È¯»ýÇÏ±â")
-                //.SetItemImage("¿­¼èÀÌ¹ÌÁö ³Ö°í")
-                .SetMessage($"È¯»ýÇÏ½Ã°Ù½À´Ï°¡?\n ¿­¼è Å‰µæ·®: {model.GetReward()}")
+                .SetMessage($"ÇöÀçÃþ: {StageManager.Instance.CurStage.Value}\n¿­¼è Å‰µæ·®: {model.GetReward()}")
                 .SetConfirm(confirmAction: obj =>
                 {
                     model.Reincarnation(1);

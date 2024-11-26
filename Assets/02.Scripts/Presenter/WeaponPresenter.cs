@@ -43,7 +43,6 @@ public class WeaponPresenter
 			SubscribeToWeaponItemModel(weaponItemModel, weaponItemView, table);
 			SubscribeToUpgradeButton(weaponItemModel, weaponItemView.upgradeButtonView);
 			SubscribeToGold(weaponItemModel, weaponItemView.upgradeButtonView, table);
-			Debug.Log($"No: {table.WeaponNo}, UnLock: {weaponItemModel.isUnLock.Value}, MaxLevel: {weaponItemModel.isMaxLevel.Value}, Equip: {weaponItemModel.isEquiped.Value}");
 		});
 	}
 

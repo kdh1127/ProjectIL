@@ -3040,9 +3040,9 @@ MonoBehaviour:
   - onTest:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: MainScenePresenter, Assembly-CSharp
-          m_MethodName: StageClearTest
+        - m_Target: {fileID: 729201903}
+          m_TargetAssemblyTypeName: TestManager, Assembly-CSharp
+          m_MethodName: ShowMeTheDia
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3057,7 +3057,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 729201903}
           m_TargetAssemblyTypeName: TestManager, Assembly-CSharp
-          m_MethodName: ShowMeTheMoney
+          m_MethodName: ShowMeTheGold
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3070,10 +3070,10 @@ MonoBehaviour:
   - onTest:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: MonsterView, Assembly-CSharp
-          m_MethodName: ShowDamage
-          m_Mode: 6
+        - m_Target: {fileID: 729201903}
+          m_TargetAssemblyTypeName: TestManager, Assembly-CSharp
+          m_MethodName: ShowMeTheKey
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -13,7 +13,6 @@ public class ReincarnationModel
 
     public void Init()
     {
-        TRLog.Green($"¿­¼è: {key.Amount}");
     }
 
     public BigInteger GetReward()

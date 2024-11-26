@@ -31,6 +31,7 @@ public class CharacterModel
 
     public BigInteger QuestGoldIncrease => (1 * character.TreasureQuestGoldPer) / 100 == 0? 1 : (1 * character.TreasureQuestGoldPer);
 
+    public BigInteger CriticalChance => character.CriticalChance + (character.CriticalChance * character.SkinStatDictionary[ESkinIncreaseType.CritChance] / 100);
 
     /// <summary>
     /// 이동속도 계산
@@ -46,7 +47,7 @@ public class CharacterModel
 
     public AttackInfo Attack()
     {
-        bool isCritical = Random.Range(0, 101) < UserDataManager.Instance.characterData.CriticalChance;
+        bool isCritical = Random.Range(0, 101) < CriticalChance;
         var damage = isCritical ? CriticalAttackDamage : BaseAttackDamage;
 
         return new AttackInfo(damage, isCritical);

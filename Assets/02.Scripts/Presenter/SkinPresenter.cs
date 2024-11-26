@@ -38,7 +38,7 @@ public class SkinPresenter
             var skinImage = skinImageResources[table.SkinImageNo];
 
             view.RegisterToggle(itemView.equipStatus_tgl);
-            itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease(), table.SkinName, table.IncreaseTypeString, itemModel.isEquip.Value, skinImage);
+            itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease(), table.SkinName, table.IncreaseTypeString, itemModel.isEquip.Value, itemModel.IsMaxLevel(), skinImage);
             itemView.OnChangedToggle(view.toggleGroup);
             itemView.upgradeButtonView.Init(itemModel.IsBought, table.UpgradeValue, table.buyCost, table.UpgradeCost, costImageResources["Dia"]);
             itemView.equipStatus_tgl.gameObject.SetActive(itemModel.IsBought);
@@ -52,7 +52,7 @@ public class SkinPresenter
             itemModel.m_level.Subscribe(_ =>
             {
                 itemView.equipStatus_tgl.gameObject.SetActive(itemModel.IsBought);
-                itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease(), table.SkinName, table.IncreaseTypeString, itemModel.isEquip.Value);
+                itemView.Init(itemModel.m_level.Value, itemModel.GetTotalIncrease(), table.SkinName, table.IncreaseTypeString, itemModel.isEquip.Value, itemModel.IsMaxLevel());
                 itemView.upgradeButtonView.UpdateView(itemModel.IsBought, table.UpgradeValue, table.buyCost, table.UpgradeCost);
                 itemView.upgradeButtonView.gameObject.SetActive(!itemModel.IsMaxLevel());
 

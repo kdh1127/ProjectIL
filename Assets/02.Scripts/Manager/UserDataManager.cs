@@ -31,7 +31,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 
 	private void OnApplicationFocus(bool focus)
 	{
-		if(focus)
+		if (focus)
 		{
 			SaveAll();
 
@@ -43,6 +43,7 @@ public class UserDataManager : TRSingleton<UserDataManager>
 			SaveAll();
 		}
 	}
+
 	private void OnApplicationQuit()
 	{
 		SaveAll();

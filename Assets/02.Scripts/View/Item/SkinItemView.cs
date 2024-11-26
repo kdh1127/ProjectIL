@@ -19,7 +19,7 @@ public class SkinItemView : MonoBehaviour
     public Image line_img;
     public Subject<bool> equipSkinSubject = new();
 
-    public void Init(int level, int totalIncrease, string name, string increaseTypeString, bool isEquip, Sprite image = null)
+    public void Init(int level, int totalIncrease, string name, string increaseTypeString, bool isEquip, bool isMaxLevel, Sprite image = null)
     {
         var titleString = $"Lv. {level} {LocalizationManager.GetTranslation(name)}";
         var increseStringFormat = I2.Loc.LocalizationManager.GetTranslation(increaseTypeString);
@@ -27,7 +27,7 @@ public class SkinItemView : MonoBehaviour
         equipStatus_txt.text = isEquip ? LocalizationManager.GetTranslation("UnEquip") : LocalizationManager.GetTranslation("Equip");
         title_txt.text = titleString;
         if (image != null) skinImage.sprite = image;
-        line_img.rectTransform.sizeDelta = level > 0 ? new Vector2(290f, 25f) : new Vector2(430f, 25f);
+        line_img.rectTransform.sizeDelta = level > 0 && !isMaxLevel ? new Vector2(290f, 25f) : new Vector2(430f, 25f);
     }
 
     public void OnChangedToggle(ToggleGroup toggleGroup)

@@ -20,16 +20,19 @@ public class CurrencyPresenter
 	{
 		model.gold.Subscribe(gold =>
 		{
+			model.Save(ECurrencyType.GOLD);
 			view.gold_txt.text = gold.ToAlphabetNumber();
 		}).AddTo(view.gameObject);
 
 		model.dia.Subscribe(dia =>
 		{
+			model.Save(ECurrencyType.DIA);
 			view.dia_txt.text = dia.ToAlphabetNumber();
 		}).AddTo(view.gameObject);
 
 		model.key.Subscribe(key =>
 		{
+			model.Save(ECurrencyType.KEY);
 			view.key_txt.text = key.ToAlphabetNumber();
 		}).AddTo(view.gameObject);
 	}

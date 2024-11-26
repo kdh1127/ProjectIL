@@ -135,7 +135,7 @@ MonoBehaviour:
     - Weapon_Upgrade_String_Format
     - WeaponUpgrade
     - 4
-    - 5
+    - 1
     - DIA
     - 10000
   - key: 12
@@ -180,7 +180,7 @@ MonoBehaviour:
     - Weapon_Upgrade_String_Format
     - WeaponUpgrade
     - 5
-    - 5
+    - 1
     - DIA
     - 100000
   - key: 17
@@ -191,16 +191,16 @@ MonoBehaviour:
     - 0
     - 30
     - DIA
-    - 100000
+    - 10000
   - key: 18
     datas:
     - 18
     - Dungeon_Clear_String_Format
     - DungeonClear
     - 0
-    - 10
+    - 30
     - DIA
-    - 100000
+    - 30000
   - key: 19
     datas:
     - 19
@@ -209,7 +209,7 @@ MonoBehaviour:
     - 0
     - 50
     - DIA
-    - 500000
+    - 50000
   - key: 20
     datas:
     - 20
@@ -218,7 +218,7 @@ MonoBehaviour:
     - 0
     - 100
     - DIA
-    - 1000000
+    - 100000
   - key: 21
     datas:
     - 21
@@ -227,7 +227,7 @@ MonoBehaviour:
     - 0
     - 200
     - DIA
-    - 2000000
+    - 200000
   - key: 22
     datas:
     - 22
@@ -236,7 +236,7 @@ MonoBehaviour:
     - 0
     - 300
     - DIA
-    - 3000000
+    - 300000
   - key: 23
     datas:
     - 23
@@ -245,7 +245,7 @@ MonoBehaviour:
     - 0
     - 400
     - DIA
-    - 4000000
+    - 400000
   - key: 24
     datas:
     - 24
@@ -254,7 +254,7 @@ MonoBehaviour:
     - 0
     - 500
     - DIA
-    - 5000000
+    - 500000
   - key: 25
     datas:
     - 25
@@ -263,7 +263,7 @@ MonoBehaviour:
     - 0
     - 600
     - DIA
-    - 6000000
+    - 600000
   - key: 26
     datas:
     - 26
@@ -272,7 +272,7 @@ MonoBehaviour:
     - 0
     - 700
     - DIA
-    - 7000000
+    - 700000
   - key: 27
     datas:
     - 27
@@ -281,7 +281,7 @@ MonoBehaviour:
     - 0
     - 800
     - DIA
-    - 8000000
+    - 800000
   - key: 28
     datas:
     - 28
@@ -290,7 +290,7 @@ MonoBehaviour:
     - 0
     - 900
     - DIA
-    - 9000000
+    - 900000
   - key: 29
     datas:
     - 29
@@ -299,7 +299,7 @@ MonoBehaviour:
     - 0
     - 1000
     - DIA
-    - 10000000
+    - 1000000
   - key: 30
     datas:
     - 30
@@ -532,7 +532,7 @@ MonoBehaviour:
       - Weapon_Upgrade_String_Format
       - WeaponUpgrade
       - 4
-      - 5
+      - 1
       - DIA
       - 10000
     - m_keys:
@@ -612,7 +612,7 @@ MonoBehaviour:
       - Weapon_Upgrade_String_Format
       - WeaponUpgrade
       - 5
-      - 5
+      - 1
       - DIA
       - 100000
     - m_keys:
@@ -630,7 +630,7 @@ MonoBehaviour:
       - 0
       - 30
       - DIA
-      - 100000
+      - 10000
     - m_keys:
       - MissionNo
       - Name
@@ -644,9 +644,9 @@ MonoBehaviour:
       - Dungeon_Clear_String_Format
       - DungeonClear
       - 0
-      - 10
+      - 30
       - DIA
-      - 100000
+      - 30000
     - m_keys:
       - MissionNo
       - Name
@@ -662,7 +662,7 @@ MonoBehaviour:
       - 0
       - 50
       - DIA
-      - 500000
+      - 50000
     - m_keys:
       - MissionNo
       - Name
@@ -678,7 +678,7 @@ MonoBehaviour:
       - 0
       - 100
       - DIA
-      - 1000000
+      - 100000
     - m_keys:
       - MissionNo
       - Name
@@ -694,7 +694,7 @@ MonoBehaviour:
       - 0
       - 200
       - DIA
-      - 2000000
+      - 200000
     - m_keys:
       - MissionNo
       - Name
@@ -710,7 +710,7 @@ MonoBehaviour:
       - 0
       - 300
       - DIA
-      - 3000000
+      - 300000
     - m_keys:
       - MissionNo
       - Name
@@ -726,7 +726,7 @@ MonoBehaviour:
       - 0
       - 400
       - DIA
-      - 4000000
+      - 400000
     - m_keys:
       - MissionNo
       - Name
@@ -742,7 +742,7 @@ MonoBehaviour:
       - 0
       - 500
       - DIA
-      - 5000000
+      - 500000
     - m_keys:
       - MissionNo
       - Name
@@ -758,7 +758,7 @@ MonoBehaviour:
       - 0
       - 600
       - DIA
-      - 6000000
+      - 600000
     - m_keys:
       - MissionNo
       - Name
@@ -774,7 +774,7 @@ MonoBehaviour:
       - 0
       - 700
       - DIA
-      - 7000000
+      - 700000
     - m_keys:
       - MissionNo
       - Name
@@ -790,7 +790,7 @@ MonoBehaviour:
       - 0
       - 800
       - DIA
-      - 8000000
+      - 800000
     - m_keys:
       - MissionNo
       - Name
@@ -806,7 +806,7 @@ MonoBehaviour:
       - 0
       - 900
       - DIA
-      - 9000000
+      - 900000
     - m_keys:
       - MissionNo
       - Name
@@ -822,7 +822,7 @@ MonoBehaviour:
       - 0
       - 1000
       - DIA
-      - 10000000
+      - 1000000
     - m_keys:
       - MissionNo
       - Name

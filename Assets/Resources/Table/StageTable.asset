@@ -125,7 +125,7 @@ MonoBehaviour:
     - 100
     - Skelton_Basic
     - Skelton_Archor
-    - 10
+    - 15
     - 500
     - 50
     - 100
@@ -134,7 +134,7 @@ MonoBehaviour:
     - 150
     - Skelton_Archor
     - Skelton_Magician
-    - 10
+    - 15
     - 520
     - 52
     - 150
@@ -143,7 +143,7 @@ MonoBehaviour:
     - 200
     - Skelton_Magician
     - Skelton_Lich
-    - 8
+    - 15
     - 570
     - 57
     - 200
@@ -152,7 +152,7 @@ MonoBehaviour:
     - 250
     - Skelton_Lich
     - Skelton_Boss
-    - 8
+    - 15
     - 612
     - 61
     - 250
@@ -161,7 +161,7 @@ MonoBehaviour:
     - 300
     - Skelton_Boss
     - Devil_Magician
-    - 8
+    - 15
     - 660
     - 66
     - 300
@@ -170,7 +170,7 @@ MonoBehaviour:
     - 350
     - Devil_Magician
     - Devil_Warrior
-    - 8
+    - 15
     - 705
     - 70
     - 350
@@ -179,7 +179,7 @@ MonoBehaviour:
     - 400
     - Devil_Warrior
     - Devil_Vamvyr
-    - 7
+    - 15
     - 752
     - 75
     - 400
@@ -188,7 +188,7 @@ MonoBehaviour:
     - 450
     - Devil_Vamvyr
     - Skelton_Shilder
-    - 7
+    - 15
     - 800
     - 80
     - 450
@@ -197,7 +197,7 @@ MonoBehaviour:
     - 500
     - Skelton_Shilder
     - Skelton_Basic
-    - 5
+    - 15
     - 1000
     - 100
     - 500
@@ -206,7 +206,7 @@ MonoBehaviour:
     - 600
     - Skelton_Basic
     - Skelton_Archor
-    - 5
+    - 15
     - 894
     - 89
     - 600
@@ -215,7 +215,7 @@ MonoBehaviour:
     - 700
     - Skelton_Archor
     - Skelton_Magician
-    - 5
+    - 15
     - 940
     - 94
     - 700
@@ -224,7 +224,7 @@ MonoBehaviour:
     - 800
     - Skelton_Magician
     - Skelton_Lich
-    - 5
+    - 15
     - 986
     - 98
     - 800
@@ -233,7 +233,7 @@ MonoBehaviour:
     - 900
     - Skelton_Lich
     - Skelton_Boss
-    - 5
+    - 15
     - 1033
     - 103
     - 900
@@ -242,7 +242,7 @@ MonoBehaviour:
     - 1000
     - Skelton_Boss
     - Skelton_Shilder
-    - 5
+    - 15
     - 1300
     - 130
     - 1000
@@ -251,7 +251,7 @@ MonoBehaviour:
     - 1100
     - Skelton_Shilder
     - Skelton_Basic
-    - 5
+    - 15
     - 1127
     - 112
     - 1100
@@ -260,7 +260,7 @@ MonoBehaviour:
     - 1200
     - Skelton_Basic
     - Skelton_Archor
-    - 5
+    - 15
     - 1174
     - 117
     - 1200
@@ -269,7 +269,7 @@ MonoBehaviour:
     - 1300
     - Skelton_Archor
     - Skelton_Magician
-    - 5
+    - 15
     - 1221
     - 122
     - 1300
@@ -278,7 +278,7 @@ MonoBehaviour:
     - 1400
     - Skelton_Magician
     - Skelton_Lich
-    - 5
+    - 15
     - 1268
     - 126
     - 1400
@@ -287,7 +287,7 @@ MonoBehaviour:
     - 1500
     - Skelton_Lich
     - Skelton_Boss
-    - 5
+    - 15
     - 1314
     - 131
     - 1500
@@ -296,7 +296,7 @@ MonoBehaviour:
     - 1600
     - Skelton_Boss
     - Devil_Magician
-    - 5
+    - 15
     - 1361
     - 136
     - 1600
@@ -305,7 +305,7 @@ MonoBehaviour:
     - 1700
     - Devil_Magician
     - Devil_Warrior
-    - 5
+    - 15
     - 1408
     - 140
     - 1700
@@ -314,7 +314,7 @@ MonoBehaviour:
     - 1800
     - Devil_Warrior
     - Devil_Vamvyr
-    - 5
+    - 15
     - 1455
     - 145
     - 1800
@@ -323,7 +323,7 @@ MonoBehaviour:
     - 1900
     - Devil_Vamvyr
     - Skelton_Shilder
-    - 5
+    - 15
     - 1502
     - 150
     - 1900
@@ -332,7 +332,7 @@ MonoBehaviour:
     - 2000
     - Skelton_Shilder
     - Skelton_Basic
-    - 5
+    - 15
     - 2000
     - 200
     - 2000
@@ -545,7 +545,7 @@ MonoBehaviour:
       - 100
       - Skelton_Basic
       - Skelton_Archor
-      - 10
+      - 15
       - 500
       - 50
       - 100
@@ -561,7 +561,7 @@ MonoBehaviour:
       - 150
       - Skelton_Archor
       - Skelton_Magician
-      - 10
+      - 15
       - 520
       - 52
       - 150
@@ -577,7 +577,7 @@ MonoBehaviour:
       - 200
       - Skelton_Magician
       - Skelton_Lich
-      - 8
+      - 15
       - 570
       - 57
       - 200
@@ -593,7 +593,7 @@ MonoBehaviour:
       - 250
       - Skelton_Lich
       - Skelton_Boss
-      - 8
+      - 15
       - 612
       - 61
       - 250
@@ -609,7 +609,7 @@ MonoBehaviour:
       - 300
       - Skelton_Boss
       - Devil_Magician
-      - 8
+      - 15
       - 660
       - 66
       - 300
@@ -625,7 +625,7 @@ MonoBehaviour:
       - 350
       - Devil_Magician
       - Devil_Warrior
-      - 8
+      - 15
       - 705
       - 70
       - 350
@@ -641,7 +641,7 @@ MonoBehaviour:
       - 400
       - Devil_Warrior
       - Devil_Vamvyr
-      - 7
+      - 15
       - 752
       - 75
       - 400
@@ -657,7 +657,7 @@ MonoBehaviour:
       - 450
       - Devil_Vamvyr
       - Skelton_Shilder
-      - 7
+      - 15
       - 800
       - 80
       - 450
@@ -673,7 +673,7 @@ MonoBehaviour:
       - 500
       - Skelton_Shilder
       - Skelton_Basic
-      - 5
+      - 15
       - 1000
       - 100
       - 500
@@ -689,7 +689,7 @@ MonoBehaviour:
       - 600
       - Skelton_Basic
       - Skelton_Archor
-      - 5
+      - 15
       - 894
       - 89
       - 600
@@ -705,7 +705,7 @@ MonoBehaviour:
       - 700
       - Skelton_Archor
       - Skelton_Magician
-      - 5
+      - 15
       - 940
       - 94
       - 700
@@ -721,7 +721,7 @@ MonoBehaviour:
       - 800
       - Skelton_Magician
       - Skelton_Lich
-      - 5
+      - 15
       - 986
       - 98
       - 800
@@ -737,7 +737,7 @@ MonoBehaviour:
       - 900
       - Skelton_Lich
       - Skelton_Boss
-      - 5
+      - 15
       - 1033
       - 103
       - 900
@@ -753,7 +753,7 @@ MonoBehaviour:
       - 1000
       - Skelton_Boss
       - Skelton_Shilder
-      - 5
+      - 15
       - 1300
       - 130
       - 1000
@@ -769,7 +769,7 @@ MonoBehaviour:
       - 1100
       - Skelton_Shilder
       - Skelton_Basic
-      - 5
+      - 15
       - 1127
       - 112
       - 1100
@@ -785,7 +785,7 @@ MonoBehaviour:
       - 1200
       - Skelton_Basic
       - Skelton_Archor
-      - 5
+      - 15
       - 1174
       - 117
       - 1200
@@ -801,7 +801,7 @@ MonoBehaviour:
       - 1300
       - Skelton_Archor
       - Skelton_Magician
-      - 5
+      - 15
       - 1221
       - 122
       - 1300
@@ -817,7 +817,7 @@ MonoBehaviour:
       - 1400
       - Skelton_Magician
       - Skelton_Lich
-      - 5
+      - 15
       - 1268
       - 126
       - 1400
@@ -833,7 +833,7 @@ MonoBehaviour:
       - 1500
       - Skelton_Lich
       - Skelton_Boss
-      - 5
+      - 15
       - 1314
       - 131
       - 1500
@@ -849,7 +849,7 @@ MonoBehaviour:
       - 1600
       - Skelton_Boss
       - Devil_Magician
-      - 5
+      - 15
       - 1361
       - 136
       - 1600
@@ -865,7 +865,7 @@ MonoBehaviour:
       - 1700
       - Devil_Magician
       - Devil_Warrior
-      - 5
+      - 15
       - 1408
       - 140
       - 1700
@@ -881,7 +881,7 @@ MonoBehaviour:
       - 1800
       - Devil_Warrior
       - Devil_Vamvyr
-      - 5
+      - 15
       - 1455
       - 145
       - 1800
@@ -897,7 +897,7 @@ MonoBehaviour:
       - 1900
       - Devil_Vamvyr
       - Skelton_Shilder
-      - 5
+      - 15
       - 1502
       - 150
       - 1900
@@ -913,7 +913,7 @@ MonoBehaviour:
       - 2000
       - Skelton_Shilder
       - Skelton_Basic
-      - 5
+      - 15
       - 2000
       - 200
       - 2000

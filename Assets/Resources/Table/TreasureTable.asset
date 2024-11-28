@@ -43,7 +43,7 @@ MonoBehaviour:
     datas:
     - 1
     - Treasure_Name_1
-    - 65
+    - 15
     - 10
     - 99999
     - QuestGold
@@ -70,7 +70,7 @@ MonoBehaviour:
     datas:
     - 4
     - Treasure_Name_4
-    - 5000000
+    - 5000
     - 1
     - 200
     - ExtraDamage
@@ -110,7 +110,7 @@ MonoBehaviour:
       m_values:
       - 1
       - Treasure_Name_1
-      - 65
+      - 15
       - 10
       - 99999
       - QuestGold
@@ -158,7 +158,7 @@ MonoBehaviour:
       m_values:
       - 4
       - Treasure_Name_4
-      - 5000000
+      - 5000
       - 1
       - 200
       - ExtraDamage

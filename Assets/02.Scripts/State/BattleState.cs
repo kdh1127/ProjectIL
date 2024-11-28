@@ -127,7 +127,8 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             battlePresenter.fadeScreenView.FadeOut(0.5f, () =>
             {
                 StageManager.Instance.IncreaseStage();
-                MonsterManager.Instance.ClearAllMonster(); ;
+                MonsterManager.Instance.ClearAllMonster();
+                UserDataManager.Instance.SaveAll();
                 isComplete = true;
             });
             battlePresenter.state = EBattleState.Clear;
@@ -153,6 +154,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
             MonsterManager.Instance.ClearAllMonster();
             battlePresenter.fadeScreenView.FadeOut(0.5f, () =>
             {
+                UserDataManager.Instance.SaveAll();
                 isComplete = true;
             });
         }

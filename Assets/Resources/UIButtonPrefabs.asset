@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1364735527, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: UIButtonPrefabs
+  m_EditorClassIdentifier: 
+  gameObjectDictionary:
+    m_keys:
+    - Complete_btn
+    - MainButtonGroup
+    - Mission_tgl
+    - Quest_tgl
+    - Shop_tgl
+    - Treasure_tgl
+    - Upgrade_btn
+    - Weapon_tgl
+    m_values:
+    - {fileID: 3500784709213130334, guid: 69d3306c4b7394d468599e28acc889d7, type: 3}
+    - {fileID: 7897502398120072408, guid: 30e99d8e37305cd43be9e435c12f1961, type: 3}
+    - {fileID: 4327307099532277272, guid: 2c89cb707395f644797b5845da9f6a52, type: 3}
+    - {fileID: 9218836765362635495, guid: 9737204972c47b64e9f2ae09c930fd87, type: 3}
+    - {fileID: 2450864426472467979, guid: 40a0e6b6257eecb4ca7729df1455a33a, type: 3}
+    - {fileID: 9061564797814669184, guid: 60a287bfb0f29c64c8b906ca4c958fe6, type: 3}
+    - {fileID: 3500784709213130334, guid: 5f19f08fa631c084885c349995bf301e, type: 3}
+    - {fileID: 1173365207911198493, guid: 88c145e538f5d454397f4542174b1c5a, type: 3}

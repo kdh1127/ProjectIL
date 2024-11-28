@@ -1,0 +1,746 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1620177140, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: WeaponTable
+  m_EditorClassIdentifier: 
+  sheetID: 1UWFMOz9i1Ewz0WdGV1HbTlOCwOvqcHxA-GrEjtnYmN4
+  gID: 125527383
+  columnList:
+  - type: 1
+    columnId: WeaponNo
+  - type: 1
+    columnId: Name
+  - type: 1
+    columnId: BaseAtk
+  - type: 1
+    columnId: Increase
+  - type: 1
+    columnId: Cost
+  - type: 1
+    columnId: Image
+  dataList:
+  - key: 0
+    datas:
+    - 0
+    - Weapon_Name_0
+    - 50
+    - 10
+    - 150
+    - Weapon_Image_0
+  - key: 1
+    datas:
+    - 1
+    - Weapon_Name_1
+    - 150
+    - 30
+    - 600
+    - Weapon_Image_1
+  - key: 2
+    datas:
+    - 2
+    - Weapon_Name_2
+    - 450
+    - 90
+    - 3600
+    - Weapon_Image_2
+  - key: 3
+    datas:
+    - 3
+    - Weapon_Name_3
+    - 1350
+    - 270
+    - 21600
+    - Weapon_Image_3
+  - key: 4
+    datas:
+    - 4
+    - Weapon_Name_4
+    - 4050
+    - 810
+    - 129600
+    - Weapon_Image_4
+  - key: 5
+    datas:
+    - 5
+    - Weapon_Name_5
+    - 12150
+    - 2430
+    - 777600
+    - Weapon_Image_5
+  - key: 6
+    datas:
+    - 6
+    - Weapon_Name_6
+    - 36450
+    - 7290
+    - 4665600
+    - Weapon_Image_6
+  - key: 7
+    datas:
+    - 7
+    - Weapon_Name_7
+    - 109350
+    - 21870
+    - 27993600
+    - Weapon_Image_7
+  - key: 8
+    datas:
+    - 8
+    - Weapon_Name_8
+    - 328050
+    - 65610
+    - 167961600
+    - Weapon_Image_8
+  - key: 9
+    datas:
+    - 9
+    - Weapon_Name_9
+    - 984150
+    - 196830
+    - 1007769600
+    - Weapon_Image_9
+  - key: 10
+    datas:
+    - 10
+    - Weapon_Name_10
+    - 2952450
+    - 590490
+    - 6046617600
+    - Weapon_Image_10
+  - key: 11
+    datas:
+    - 11
+    - Weapon_Name_11
+    - 8857350
+    - 1771470
+    - 36279705600
+    - Weapon_Image_11
+  - key: 12
+    datas:
+    - 12
+    - Weapon_Name_12
+    - 26572050
+    - 5314410
+    - 217678233600
+    - Weapon_Image_12
+  - key: 13
+    datas:
+    - 13
+    - Weapon_Name_13
+    - 79716150
+    - 15943230
+    - 1306069401600
+    - Weapon_Image_13
+  - key: 14
+    datas:
+    - 14
+    - Weapon_Name_14
+    - 239148450
+    - 47829690
+    - 7836416409600
+    - Weapon_Image_14
+  - key: 15
+    datas:
+    - 15
+    - Weapon_Name_15
+    - 717445350
+    - 143489070
+    - 47018498457600
+    - Weapon_Image_15
+  - key: 16
+    datas:
+    - 16
+    - Weapon_Name_16
+    - 2152336050
+    - 430467210
+    - 282110990745600
+    - Weapon_Image_16
+  - key: 17
+    datas:
+    - 17
+    - Weapon_Name_17
+    - 6457008150
+    - 1291401630
+    - 1692665944473600
+    - Weapon_Image_17
+  - key: 18
+    datas:
+    - 18
+    - Weapon_Name_18
+    - 19371024450
+    - 3874204890
+    - 10155995666841600
+    - Weapon_Image_18
+  - key: 19
+    datas:
+    - 19
+    - Weapon_Name_19
+    - 58113073350
+    - 11622614670
+    - 60935974001049600
+    - Weapon_Image_19
+  - key: 20
+    datas:
+    - 20
+    - Weapon_Name_20
+    - 174339220050
+    - 34867844010
+    - 365615844006298000
+    - Weapon_Image_20
+  - key: 21
+    datas:
+    - 21
+    - Weapon_Name_21
+    - 523017660150
+    - 104603532030
+    - 2193695064037790000
+    - Weapon_Image_21
+  - key: 22
+    datas:
+    - 22
+    - Weapon_Name_22
+    - 1569052980450
+    - 313810596090
+    - 13162170384226700000
+    - Weapon_Image_22
+  - key: 23
+    datas:
+    - 23
+    - Weapon_Name_23
+    - 4707158941350
+    - 941431788270
+    - 78973022305360300000
+    - Weapon_Image_23
+  - key: 24
+    datas:
+    - 24
+    - Weapon_Name_24
+    - 14121476824050
+    - 2824295364810
+    - 473838133832162000000
+    - Weapon_Image_24
+  - key: 25
+    datas:
+    - 25
+    - Weapon_Name_25
+    - 42364430472150
+    - 8472886094430
+    - 2843028802992970000000
+    - Weapon_Image_25
+  - key: 26
+    datas:
+    - 26
+    - Weapon_Name_26
+    - 127093291416450
+    - 25418658283290
+    - 17058172817957800000000
+    - Weapon_Image_26
+  - key: 27
+    datas:
+    - 27
+    - Weapon_Name_27
+    - 381279874249350
+    - 76255974849870
+    - 102349036907747000000000
+    - Weapon_Image_27
+  - key: 28
+    datas:
+    - 28
+    - Weapon_Name_28
+    - 1143839622748050
+    - 228767924549610
+    - 614094221446482000000000
+    - Weapon_Image_28
+  - key: 29
+    datas:
+    - 29
+    - Weapon_Name_29
+    - 3431518868244150
+    - 686303773648830
+    - 3684565328678890000000000
+    - Weapon_Image_29
+  - key: 30
+    datas:
+    - 30
+    - Weapon_Name_30
+    - 10294556604732500
+    - 2058911320946490
+    - 22107391972073300000000000
+    - Weapon_Image_30
+  dataDictionary:
+    m_keys:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    m_values:
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 0
+      - Weapon_Name_0
+      - 50
+      - 10
+      - 150
+      - Weapon_Image_0
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 1
+      - Weapon_Name_1
+      - 150
+      - 30
+      - 600
+      - Weapon_Image_1
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 2
+      - Weapon_Name_2
+      - 450
+      - 90
+      - 3600
+      - Weapon_Image_2
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 3
+      - Weapon_Name_3
+      - 1350
+      - 270
+      - 21600
+      - Weapon_Image_3
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 4
+      - Weapon_Name_4
+      - 4050
+      - 810
+      - 129600
+      - Weapon_Image_4
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 5
+      - Weapon_Name_5
+      - 12150
+      - 2430
+      - 777600
+      - Weapon_Image_5
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 6
+      - Weapon_Name_6
+      - 36450
+      - 7290
+      - 4665600
+      - Weapon_Image_6
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 7
+      - Weapon_Name_7
+      - 109350
+      - 21870
+      - 27993600
+      - Weapon_Image_7
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 8
+      - Weapon_Name_8
+      - 328050
+      - 65610
+      - 167961600
+      - Weapon_Image_8
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 9
+      - Weapon_Name_9
+      - 984150
+      - 196830
+      - 1007769600
+      - Weapon_Image_9
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 10
+      - Weapon_Name_10
+      - 2952450
+      - 590490
+      - 6046617600
+      - Weapon_Image_10
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 11
+      - Weapon_Name_11
+      - 8857350
+      - 1771470
+      - 36279705600
+      - Weapon_Image_11
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 12
+      - Weapon_Name_12
+      - 26572050
+      - 5314410
+      - 217678233600
+      - Weapon_Image_12
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 13
+      - Weapon_Name_13
+      - 79716150
+      - 15943230
+      - 1306069401600
+      - Weapon_Image_13
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 14
+      - Weapon_Name_14
+      - 239148450
+      - 47829690
+      - 7836416409600
+      - Weapon_Image_14
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 15
+      - Weapon_Name_15
+      - 717445350
+      - 143489070
+      - 47018498457600
+      - Weapon_Image_15
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 16
+      - Weapon_Name_16
+      - 2152336050
+      - 430467210
+      - 282110990745600
+      - Weapon_Image_16
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 17
+      - Weapon_Name_17
+      - 6457008150
+      - 1291401630
+      - 1692665944473600
+      - Weapon_Image_17
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 18
+      - Weapon_Name_18
+      - 19371024450
+      - 3874204890
+      - 10155995666841600
+      - Weapon_Image_18
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 19
+      - Weapon_Name_19
+      - 58113073350
+      - 11622614670
+      - 60935974001049600
+      - Weapon_Image_19
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 20
+      - Weapon_Name_20
+      - 174339220050
+      - 34867844010
+      - 365615844006298000
+      - Weapon_Image_20
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 21
+      - Weapon_Name_21
+      - 523017660150
+      - 104603532030
+      - 2193695064037790000
+      - Weapon_Image_21
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 22
+      - Weapon_Name_22
+      - 1569052980450
+      - 313810596090
+      - 13162170384226700000
+      - Weapon_Image_22
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 23
+      - Weapon_Name_23
+      - 4707158941350
+      - 941431788270
+      - 78973022305360300000
+      - Weapon_Image_23
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 24
+      - Weapon_Name_24
+      - 14121476824050
+      - 2824295364810
+      - 473838133832162000000
+      - Weapon_Image_24
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 25
+      - Weapon_Name_25
+      - 42364430472150
+      - 8472886094430
+      - 2843028802992970000000
+      - Weapon_Image_25
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 26
+      - Weapon_Name_26
+      - 127093291416450
+      - 25418658283290
+      - 17058172817957800000000
+      - Weapon_Image_26
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 27
+      - Weapon_Name_27
+      - 381279874249350
+      - 76255974849870
+      - 102349036907747000000000
+      - Weapon_Image_27
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 28
+      - Weapon_Name_28
+      - 1143839622748050
+      - 228767924549610
+      - 614094221446482000000000
+      - Weapon_Image_28
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 29
+      - Weapon_Name_29
+      - 3431518868244150
+      - 686303773648830
+      - 3684565328678890000000000
+      - Weapon_Image_29
+    - m_keys:
+      - WeaponNo
+      - Name
+      - BaseAtk
+      - Increase
+      - Cost
+      - Image
+      m_values:
+      - 30
+      - Weapon_Name_30
+      - 10294556604732500
+      - 2058911320946490
+      - 22107391972073300000000000
+      - Weapon_Image_30

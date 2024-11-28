@@ -1,0 +1,581 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1620177140, guid: 549df22451305e5488982e4a540c538a, type: 3}
+  m_Name: QuestTable
+  m_EditorClassIdentifier: 
+  sheetID: 1UWFMOz9i1Ewz0WdGV1HbTlOCwOvqcHxA-GrEjtnYmN4
+  gID: 1008749761
+  columnList:
+  - type: 0
+    columnId: QuestNo
+  - type: 1
+    columnId: Name
+  - type: 0
+    columnId: Time
+  - type: 1
+    columnId: Increase
+  - type: 1
+    columnId: LvIncreaseValue
+  - type: 1
+    columnId: Cost
+  - type: 1
+    columnId: Image
+  dataList:
+  - key: 0
+    datas:
+    - 0
+    - Quest_Name_0
+    - 5
+    - 12
+    - 6
+    - 4
+    - Quest_Image_0
+  - key: 1
+    datas:
+    - 1
+    - Quest_Name_1
+    - 10
+    - 144
+    - 72
+    - 43
+    - Quest_Image_1
+  - key: 2
+    datas:
+    - 2
+    - Quest_Name_2
+    - 15
+    - 1000
+    - 500
+    - 300
+    - Quest_Image_2
+  - key: 3
+    datas:
+    - 3
+    - Quest_Name_3
+    - 30
+    - 8100
+    - 4050
+    - 2430
+    - Quest_Image_3
+  - key: 4
+    datas:
+    - 4
+    - Quest_Name_4
+    - 60
+    - 79200
+    - 39600
+    - 23760
+    - Quest_Image_4
+  - key: 5
+    datas:
+    - 5
+    - Quest_Name_5
+    - 90
+    - 816000
+    - 408000
+    - 244800
+    - Quest_Image_5
+  - key: 6
+    datas:
+    - 6
+    - Quest_Name_6
+    - 120
+    - 7900000
+    - 3950000
+    - 2370000
+    - Quest_Image_6
+  - key: 7
+    datas:
+    - 7
+    - Quest_Name_7
+    - 180
+    - 95000000
+    - 47500000
+    - 28500000
+    - Quest_Image_7
+  - key: 8
+    datas:
+    - 8
+    - Quest_Name_8
+    - 300
+    - 1200000000
+    - 600000000
+    - 360000000
+    - Quest_Image_8
+  - key: 9
+    datas:
+    - 9
+    - Quest_Name_9
+    - 30
+    - 17400000000
+    - 8700000000
+    - 5220000000
+    - Quest_Image_9
+  - key: 10
+    datas:
+    - 10
+    - Quest_Name_10
+    - 5
+    - 268800000000
+    - 134400000000
+    - 403200000000
+    - Quest_Image_10
+  - key: 11
+    datas:
+    - 11
+    - Quest_Name_11
+    - 60
+    - 24800000000000
+    - 12400000000000
+    - 7440000000000
+    - Quest_Image_11
+  - key: 12
+    datas:
+    - 12
+    - Quest_Name_12
+    - 90
+    - 73900000000000
+    - 36950000000000
+    - 24800000000000
+    - Quest_Image_12
+  - key: 13
+    datas:
+    - 13
+    - Quest_Name_13
+    - 120
+    - 1200000000000000
+    - 600000000000000
+    - 360000000000000
+    - Quest_Image_13
+  - key: 14
+    datas:
+    - 14
+    - Quest_Name_14
+    - 180
+    - 44800000000000000
+    - 22400000000000000
+    - 13440000000000000
+    - Quest_Image_14
+  - key: 15
+    datas:
+    - 15
+    - Quest_Name_15
+    - 300
+    - 60084066666666700
+    - 30042033333333400
+    - 18025220000000000
+    - Quest_Image_15
+  - key: 16
+    datas:
+    - 16
+    - Quest_Name_16
+    - 600
+    - 82447116666666700
+    - 41223558333333400
+    - 24734135000000000
+    - Quest_Image_16
+  - key: 17
+    datas:
+    - 17
+    - Quest_Name_17
+    - 900
+    - 104810166666667000
+    - 52405083333333500
+    - 31443050000000100
+    - Quest_Image_17
+  - key: 18
+    datas:
+    - 18
+    - Quest_Name_18
+    - 5
+    - 127173216666667000
+    - 63586608333333500
+    - 38151965000000100
+    - Quest_Image_18
+  - key: 19
+    datas:
+    - 19
+    - Quest_Name_19
+    - 30
+    - 149536266666667000
+    - 74768133333333500
+    - 89721760000000200
+    - Quest_Image_19
+  - key: 20
+    datas:
+    - 20
+    - Quest_Name_20
+    - 60
+    - 171899316666667000
+    - 85949658333333500
+    - 299072533333334000
+    - Quest_Image_20
+  dataDictionary:
+    m_keys:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    m_values:
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 0
+      - Quest_Name_0
+      - 5
+      - 12
+      - 6
+      - 4
+      - Quest_Image_0
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 1
+      - Quest_Name_1
+      - 10
+      - 144
+      - 72
+      - 43
+      - Quest_Image_1
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 2
+      - Quest_Name_2
+      - 15
+      - 1000
+      - 500
+      - 300
+      - Quest_Image_2
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 3
+      - Quest_Name_3
+      - 30
+      - 8100
+      - 4050
+      - 2430
+      - Quest_Image_3
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 4
+      - Quest_Name_4
+      - 60
+      - 79200
+      - 39600
+      - 23760
+      - Quest_Image_4
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 5
+      - Quest_Name_5
+      - 90
+      - 816000
+      - 408000
+      - 244800
+      - Quest_Image_5
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 6
+      - Quest_Name_6
+      - 120
+      - 7900000
+      - 3950000
+      - 2370000
+      - Quest_Image_6
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 7
+      - Quest_Name_7
+      - 180
+      - 95000000
+      - 47500000
+      - 28500000
+      - Quest_Image_7
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 8
+      - Quest_Name_8
+      - 300
+      - 1200000000
+      - 600000000
+      - 360000000
+      - Quest_Image_8
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 9
+      - Quest_Name_9
+      - 30
+      - 17400000000
+      - 8700000000
+      - 5220000000
+      - Quest_Image_9
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 10
+      - Quest_Name_10
+      - 5
+      - 268800000000
+      - 134400000000
+      - 403200000000
+      - Quest_Image_10
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 11
+      - Quest_Name_11
+      - 60
+      - 24800000000000
+      - 12400000000000
+      - 7440000000000
+      - Quest_Image_11
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 12
+      - Quest_Name_12
+      - 90
+      - 73900000000000
+      - 36950000000000
+      - 24800000000000
+      - Quest_Image_12
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 13
+      - Quest_Name_13
+      - 120
+      - 1200000000000000
+      - 600000000000000
+      - 360000000000000
+      - Quest_Image_13
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 14
+      - Quest_Name_14
+      - 180
+      - 44800000000000000
+      - 22400000000000000
+      - 13440000000000000
+      - Quest_Image_14
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 15
+      - Quest_Name_15
+      - 300
+      - 60084066666666700
+      - 30042033333333400
+      - 18025220000000000
+      - Quest_Image_15
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 16
+      - Quest_Name_16
+      - 600
+      - 82447116666666700
+      - 41223558333333400
+      - 24734135000000000
+      - Quest_Image_16
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 17
+      - Quest_Name_17
+      - 900
+      - 104810166666667000
+      - 52405083333333500
+      - 31443050000000100
+      - Quest_Image_17
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 18
+      - Quest_Name_18
+      - 5
+      - 127173216666667000
+      - 63586608333333500
+      - 38151965000000100
+      - Quest_Image_18
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 19
+      - Quest_Name_19
+      - 30
+      - 149536266666667000
+      - 74768133333333500
+      - 89721760000000200
+      - Quest_Image_19
+    - m_keys:
+      - QuestNo
+      - Name
+      - Time
+      - Increase
+      - LvIncreaseValue
+      - Cost
+      - Image
+      m_values:
+      - 20
+      - Quest_Name_20
+      - 60
+      - 171899316666667000
+      - 85949658333333500
+      - 299072533333334000
+      - Quest_Image_20

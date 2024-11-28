@@ -37,7 +37,7 @@ MonoBehaviour:
     - 5
     - 12
     - 6
-    - 5
+    - 4
     - Quest_Image_0
   - key: 1
     datas:
@@ -46,7 +46,7 @@ MonoBehaviour:
     - 10
     - 144
     - 72
-    - 58
+    - 43
     - Quest_Image_1
   - key: 2
     datas:
@@ -55,7 +55,7 @@ MonoBehaviour:
     - 15
     - 1000
     - 500
-    - 400
+    - 300
     - Quest_Image_2
   - key: 3
     datas:
@@ -64,7 +64,7 @@ MonoBehaviour:
     - 30
     - 8100
     - 4050
-    - 3240
+    - 2430
     - Quest_Image_3
   - key: 4
     datas:
@@ -73,133 +73,133 @@ MonoBehaviour:
     - 60
     - 79200
     - 39600
-    - 31680
+    - 23760
     - Quest_Image_4
   - key: 5
     datas:
     - 5
     - Quest_Name_5
-    - 300
+    - 90
     - 816000
     - 408000
-    - 326400
+    - 244800
     - Quest_Image_5
   - key: 6
     datas:
     - 6
     - Quest_Name_6
-    - 600
+    - 120
     - 7900000
     - 3950000
-    - 3160000
+    - 2370000
     - Quest_Image_6
   - key: 7
     datas:
     - 7
     - Quest_Name_7
-    - 1800
+    - 180
     - 95000000
     - 47500000
-    - 38000000
+    - 28500000
     - Quest_Image_7
   - key: 8
     datas:
     - 8
     - Quest_Name_8
-    - 3600
+    - 300
     - 1200000000
     - 600000000
-    - 480000000
+    - 360000000
     - Quest_Image_8
   - key: 9
     datas:
     - 9
     - Quest_Name_9
-    - 4200
+    - 30
     - 17400000000
     - 8700000000
-    - 6960000000
+    - 5220000000
     - Quest_Image_9
   - key: 10
     datas:
     - 10
     - Quest_Name_10
-    - 10800
+    - 5
     - 268800000000
     - 134400000000
-    - 107520000000
+    - 403200000000
     - Quest_Image_10
   - key: 11
     datas:
     - 11
     - Quest_Name_11
-    - 21600
+    - 60
     - 24800000000000
     - 12400000000000
-    - 9920000000000
+    - 7440000000000
     - Quest_Image_11
   - key: 12
     datas:
     - 12
     - Quest_Name_12
-    - 30
+    - 90
     - 73900000000000
     - 36950000000000
-    - 49600000000000
+    - 24800000000000
     - Quest_Image_12
   - key: 13
     datas:
     - 13
     - Quest_Name_13
-    - 1800
+    - 120
     - 1200000000000000
     - 600000000000000
-    - 480000000000000
+    - 360000000000000
     - Quest_Image_13
   - key: 14
     datas:
     - 14
     - Quest_Name_14
-    - 3600
+    - 180
     - 44800000000000000
     - 22400000000000000
-    - 17920000000000000
+    - 13440000000000000
     - Quest_Image_14
   - key: 15
     datas:
     - 15
     - Quest_Name_15
-    - 3600
+    - 300
     - 60084066666666700
     - 30042033333333400
-    - 24033626666666700
+    - 18025220000000000
     - Quest_Image_15
   - key: 16
     datas:
     - 16
     - Quest_Name_16
-    - 4200
+    - 600
     - 82447116666666700
     - 41223558333333400
-    - 32978846666666700
+    - 24734135000000000
     - Quest_Image_16
   - key: 17
     datas:
     - 17
     - Quest_Name_17
-    - 10800
+    - 900
     - 104810166666667000
     - 52405083333333500
-    - 41924066666666800
+    - 31443050000000100
     - Quest_Image_17
   - key: 18
     datas:
     - 18
     - Quest_Name_18
-    - 21600
+    - 5
     - 127173216666667000
     - 63586608333333500
-    - 50869286666666800
+    - 38151965000000100
     - Quest_Image_18
   - key: 19
     datas:
@@ -208,7 +208,7 @@ MonoBehaviour:
     - 30
     - 149536266666667000
     - 74768133333333500
-    - 254346433333334000
+    - 89721760000000200
     - Quest_Image_19
   - key: 20
     datas:
@@ -217,7 +217,7 @@ MonoBehaviour:
     - 60
     - 171899316666667000
     - 85949658333333500
-    - 107666112000000000000
+    - 299072533333334000
     - Quest_Image_20
   dataDictionary:
     m_keys:
@@ -257,7 +257,7 @@ MonoBehaviour:
       - 5
       - 12
       - 6
-      - 5
+      - 4
       - Quest_Image_0
     - m_keys:
       - QuestNo
@@ -273,7 +273,7 @@ MonoBehaviour:
       - 10
       - 144
       - 72
-      - 58
+      - 43
       - Quest_Image_1
     - m_keys:
       - QuestNo
@@ -289,7 +289,7 @@ MonoBehaviour:
       - 15
       - 1000
       - 500
-      - 400
+      - 300
       - Quest_Image_2
     - m_keys:
       - QuestNo
@@ -305,7 +305,7 @@ MonoBehaviour:
       - 30
       - 8100
       - 4050
-      - 3240
+      - 2430
       - Quest_Image_3
     - m_keys:
       - QuestNo
@@ -321,7 +321,7 @@ MonoBehaviour:
       - 60
       - 79200
       - 39600
-      - 31680
+      - 23760
       - Quest_Image_4
     - m_keys:
       - QuestNo
@@ -334,10 +334,10 @@ MonoBehaviour:
       m_values:
       - 5
       - Quest_Name_5
-      - 300
+      - 90
       - 816000
       - 408000
-      - 326400
+      - 244800
       - Quest_Image_5
     - m_keys:
       - QuestNo
@@ -350,10 +350,10 @@ MonoBehaviour:
       m_values:
       - 6
       - Quest_Name_6
-      - 600
+      - 120
       - 7900000
       - 3950000
-      - 3160000
+      - 2370000
       - Quest_Image_6
     - m_keys:
       - QuestNo
@@ -366,10 +366,10 @@ MonoBehaviour:
       m_values:
       - 7
       - Quest_Name_7
-      - 1800
+      - 180
       - 95000000
       - 47500000
-      - 38000000
+      - 28500000
       - Quest_Image_7
     - m_keys:
       - QuestNo
@@ -382,10 +382,10 @@ MonoBehaviour:
       m_values:
       - 8
       - Quest_Name_8
-      - 3600
+      - 300
       - 1200000000
       - 600000000
-      - 480000000
+      - 360000000
       - Quest_Image_8
     - m_keys:
       - QuestNo
@@ -398,10 +398,10 @@ MonoBehaviour:
       m_values:
       - 9
       - Quest_Name_9
-      - 4200
+      - 30
       - 17400000000
       - 8700000000
-      - 6960000000
+      - 5220000000
       - Quest_Image_9
     - m_keys:
       - QuestNo
@@ -414,10 +414,10 @@ MonoBehaviour:
       m_values:
       - 10
       - Quest_Name_10
-      - 10800
+      - 5
       - 268800000000
       - 134400000000
-      - 107520000000
+      - 403200000000
       - Quest_Image_10
     - m_keys:
       - QuestNo
@@ -430,10 +430,10 @@ MonoBehaviour:
       m_values:
       - 11
       - Quest_Name_11
-      - 21600
+      - 60
       - 24800000000000
       - 12400000000000
-      - 9920000000000
+      - 7440000000000
       - Quest_Image_11
     - m_keys:
       - QuestNo
@@ -446,10 +446,10 @@ MonoBehaviour:
       m_values:
       - 12
       - Quest_Name_12
-      - 30
+      - 90
       - 73900000000000
       - 36950000000000
-      - 49600000000000
+      - 24800000000000
       - Quest_Image_12
     - m_keys:
       - QuestNo
@@ -462,10 +462,10 @@ MonoBehaviour:
       m_values:
       - 13
       - Quest_Name_13
-      - 1800
+      - 120
       - 1200000000000000
       - 600000000000000
-      - 480000000000000
+      - 360000000000000
       - Quest_Image_13
     - m_keys:
       - QuestNo
@@ -478,10 +478,10 @@ MonoBehaviour:
       m_values:
       - 14
       - Quest_Name_14
-      - 3600
+      - 180
       - 44800000000000000
       - 22400000000000000
-      - 17920000000000000
+      - 13440000000000000
       - Quest_Image_14
     - m_keys:
       - QuestNo
@@ -494,10 +494,10 @@ MonoBehaviour:
       m_values:
       - 15
       - Quest_Name_15
-      - 3600
+      - 300
       - 60084066666666700
       - 30042033333333400
-      - 24033626666666700
+      - 18025220000000000
       - Quest_Image_15
     - m_keys:
       - QuestNo
@@ -510,10 +510,10 @@ MonoBehaviour:
       m_values:
       - 16
       - Quest_Name_16
-      - 4200
+      - 600
       - 82447116666666700
       - 41223558333333400
-      - 32978846666666700
+      - 24734135000000000
       - Quest_Image_16
     - m_keys:
       - QuestNo
@@ -526,10 +526,10 @@ MonoBehaviour:
       m_values:
       - 17
       - Quest_Name_17
-      - 10800
+      - 900
       - 104810166666667000
       - 52405083333333500
-      - 41924066666666800
+      - 31443050000000100
       - Quest_Image_17
     - m_keys:
       - QuestNo
@@ -542,10 +542,10 @@ MonoBehaviour:
       m_values:
       - 18
       - Quest_Name_18
-      - 21600
+      - 5
       - 127173216666667000
       - 63586608333333500
-      - 50869286666666800
+      - 38151965000000100
       - Quest_Image_18
     - m_keys:
       - QuestNo
@@ -561,7 +561,7 @@ MonoBehaviour:
       - 30
       - 149536266666667000
       - 74768133333333500
-      - 254346433333334000
+      - 89721760000000200
       - Quest_Image_19
     - m_keys:
       - QuestNo
@@ -577,5 +577,5 @@ MonoBehaviour:
       - 60
       - 171899316666667000
       - 85949658333333500
-      - 107666112000000000000
+      - 299072533333334000
       - Quest_Image_20

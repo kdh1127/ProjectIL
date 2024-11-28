@@ -76,7 +76,7 @@ public class StageManager : TRSingleton<StageManager>
 			return;
 		}
 
-		var increaseHp = (500 * CurStage.Value * GetCurStageTable().HpIncreasePer) / 100;
+		var increaseHp = (prevBaseHp * CurStage.Value * GetCurStageTable().HpIncreasePer) / 100;
 		stageBaseHp = prevBaseHp + increaseHp;
 	}
 

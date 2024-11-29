@@ -17,7 +17,8 @@ public class ReincarnationModel
 
     public BigInteger GetReward()
     {
-        return (StageManager.Instance.stageBaseHp / 100);
+        var curStage = StageManager.Instance.CurStage.Value;
+        return curStage + (curStage * curStage / 100);
     }
 
     public void Reincarnation(int rate)

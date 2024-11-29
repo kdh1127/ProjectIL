@@ -29,7 +29,7 @@ public partial class BattlePresenter : TRSingleton<BattlePresenter>
 
             battlePresenter.pixelCamera.transform.position = new Vector3(0, 0, -10);
 
-            StageManager.Instance.SetStageBaseHp(StageManager.Instance.stageBaseHp);
+            StageManager.Instance.SetStageBaseHp();
             // 몬스터 생성
             for (int i = 0; i < 5; i++)
 			{

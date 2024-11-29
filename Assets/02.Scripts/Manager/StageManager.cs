@@ -3,6 +3,7 @@ using System.Numerics;
 using ThreeRabbitPackage.DesignPattern;
 using UniRx;
 using System.Linq;
+using UnityEngine;
 
 public class StageManager : TRSingleton<StageManager>
 {
@@ -66,18 +67,19 @@ public class StageManager : TRSingleton<StageManager>
 		stage.curStage = CurStage.Value;
 	}
 
-	public void SetStageBaseHp(BigInteger prevBaseHp)
+	public void SetStageBaseHp()
 	{
-		var stage = UserDataManager.Instance.stageData.stage;
-		stage.stageBaseHp = prevBaseHp;
 		if (CurStage.Value == 0)
 		{
-			stageBaseHp = 500;
+			stageBaseHp = 570;
 			return;
 		}
-
-		var increaseHp = (prevBaseHp * CurStage.Value * GetCurStageTable().HpIncreasePer) / 100;
-		stageBaseHp = prevBaseHp + increaseHp;
+		var curStage = StageManager.Instance.CurStage.Value;
+		var stageIncreasePer = StageManager.Instance.GetCurStageTable().HpIncreasePer / 100f + 1;
+		var curPer = Mathf.Pow(stageIncreasePer, curStage);
+		var factor = curPer * 100;
+		var increaseHp = (570 * (int)factor) / 100;
+		stageBaseHp = increaseHp;
 	}
 
     public void ResetStage()

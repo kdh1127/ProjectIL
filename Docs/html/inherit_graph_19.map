@@ -1,0 +1,27 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,284,105,311"/>
+<area shape="rect" id="Node000001" href="$class_character_installer.html" title=" " alt="" coords="164,5,288,32"/>
+<area shape="poly" id="edge31_Node000000_Node000001" title=" " alt="" coords="57,268,65,220,82,159,110,97,128,68,151,42,167,30,170,35,154,46,133,71,114,100,87,161,70,221,62,269"/>
+<area shape="rect" id="Node000002" href="$class_currency_installer.html" title=" " alt="" coords="166,56,286,83"/>
+<area shape="poly" id="edge32_Node000000_Node000002" title=" " alt="" coords="60,269,71,230,89,183,115,135,151,93,168,81,171,86,154,97,120,138,94,185,76,231,65,270"/>
+<area shape="rect" id="Node000003" href="$class_main_installer.html" title=" " alt="" coords="179,107,274,133"/>
+<area shape="poly" id="edge33_Node000000_Node000003" title=" " alt="" coords="65,268,97,206,122,172,151,143,177,129,180,134,154,147,126,176,102,209,69,271"/>
+<area shape="rect" id="Node000004" href="$class_main_scene_installer.html" title=" " alt="" coords="160,157,292,184"/>
+<area shape="poly" id="edge34_Node000000_Node000004" title=" " alt="" coords="73,270,107,231,151,194,174,182,176,187,154,198,111,235,77,273"/>
+<area shape="rect" id="Node000005" href="$class_mission_installer.html" title=" " alt="" coords="170,208,282,235"/>
+<area shape="poly" id="edge35_Node000000_Node000005" title=" " alt="" coords="92,274,152,244,181,233,183,238,154,249,95,278"/>
+<area shape="rect" id="Node000006" href="$class_quest_installer.html" title=" " alt="" coords="175,259,278,285"/>
+<area shape="poly" id="edge36_Node000000_Node000006" title=" " alt="" coords="120,285,174,277,175,282,120,290"/>
+<area shape="rect" id="Node000007" href="$class_reincarnation_installer.html" title=" " alt="" coords="153,309,300,336"/>
+<area shape="poly" id="edge37_Node000000_Node000007" title=" " alt="" coords="121,304,153,309,152,314,120,310"/>
+<area shape="rect" id="Node000008" href="$class_resources_installer.html" title=" " alt="" coords="161,360,292,387"/>
+<area shape="poly" id="edge38_Node000000_Node000008" title=" " alt="" coords="95,316,154,346,183,357,181,362,152,350,92,321"/>
+<area shape="rect" id="Node000009" href="$class_skin_installer.html" title=" " alt="" coords="180,411,273,437"/>
+<area shape="poly" id="edge39_Node000000_Node000009" title=" " alt="" coords="77,321,111,360,154,396,180,409,178,414,151,401,107,364,73,325"/>
+<area shape="rect" id="Node000010" href="$class_test_installer.html" title=" " alt="" coords="180,461,272,488"/>
+<area shape="poly" id="edge40_Node000000_Node000010" title=" " alt="" coords="69,324,102,386,126,419,154,447,181,462,178,466,151,451,122,422,97,389,65,326"/>
+<area shape="rect" id="Node000011" href="$class_treasure_installer.html" title=" " alt="" coords="167,512,286,539"/>
+<area shape="poly" id="edge41_Node000000_Node000011" title=" " alt="" coords="65,325,76,363,94,410,120,457,154,498,171,509,168,514,151,502,115,460,89,412,71,365,60,326"/>
+<area shape="rect" id="Node000012" href="$class_weapon_installer.html" title=" " alt="" coords="169,563,284,589"/>
+<area shape="poly" id="edge42_Node000000_Node000012" title=" " alt="" coords="62,326,70,374,87,433,114,495,133,524,154,549,170,560,167,564,151,553,128,527,110,498,82,435,65,375,57,326"/>
+</map>

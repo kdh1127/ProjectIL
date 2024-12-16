@@ -1,0 +1,119 @@
+\doxysection{Quest\+Model.\+cs}
+\hypertarget{_quest_model_8cs_source}{}\label{_quest_model_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/QuestModel.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/QuestModel.cs}}
+\mbox{\hyperlink{_quest_model_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00005}\mbox{\hyperlink{class_quest_item_model}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quest_item_model}{QuestItemModel}}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00007}\mbox{\hyperlink{class_quest_item_model_a7329a8930cbcf3564aa85ec226e515d1}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ ReactiveProperty<int>\ \mbox{\hyperlink{class_quest_item_model_a7329a8930cbcf3564aa85ec226e515d1}{m\_elpasedTime}}\ =\ \textcolor{keyword}{new}(0);}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00008}\mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ ReactiveProperty<int>\ \mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}\ =\ \textcolor{keyword}{new}(0);}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00010}\mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{00010}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ QuestTable\ \mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00011}\mbox{\hyperlink{class_quest_item_model_a62bf59bb3d492f8b0121935df4541551}{00011}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_gold}{CurrencyModel.Gold}}\ \mbox{\hyperlink{class_quest_item_model_a62bf59bb3d492f8b0121935df4541551}{gold}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00013}\mbox{\hyperlink{class_quest_item_model_a4e0667995f889635b2e210867e855bed}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_quest_item_model_a4e0667995f889635b2e210867e855bed}{IsOn}}\ =>\ m\_level.Value\ >\ 0;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00014}\mbox{\hyperlink{class_quest_item_model_a76d388ee9b6abf1a7480d2b73c2b6ab0}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data}{UserDataManager.MissionData}}\ \mbox{\hyperlink{class_quest_item_model_a76d388ee9b6abf1a7480d2b73c2b6ab0}{MissionData}}\ =>\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00015}\mbox{\hyperlink{class_quest_item_model_adc1a3dcf32749c7da541362ac01674ab}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_user_data_manager_1_1_character_data}{UserDataManager.CharacterData}}\ \mbox{\hyperlink{class_quest_item_model_adc1a3dcf32749c7da541362ac01674ab}{CharacterData}}\ =>\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aa5e6bcdaedef8c14c6b3b0781d3fb962}{characterData}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00016}\mbox{\hyperlink{class_quest_item_model_aceba89688cfadb0622aa17ad50cc015a}{00016}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_user_data_manager_1_1_quest_data}{UserDataManager.QuestData}}\ \mbox{\hyperlink{class_quest_item_model_aceba89688cfadb0622aa17ad50cc015a}{QuestData}}\ =>\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a06970da4c85563d9d35078c8d90ef3c0}{questData}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00018}00018\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00019}\mbox{\hyperlink{class_quest_item_model_a3d5cd52188d4aa6c5c37787ca1015fa8}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_quest_item_model_a3d5cd52188d4aa6c5c37787ca1015fa8}{QuestItemModel}}(QuestTable\ \mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}},\ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_gold}{Gold}}\ \mbox{\hyperlink{class_quest_item_model_a62bf59bb3d492f8b0121935df4541551}{gold}})\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ this.table\ =\ \mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_quest_item_model_a62bf59bb3d492f8b0121935df4541551}{gold}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00025}\mbox{\hyperlink{class_quest_item_model_a988094870f2ed436a302434a4e3ff635}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_item_model_a988094870f2ed436a302434a4e3ff635}{IncreaseLevel}}()}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ var\ cost\ =\ \mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{GetCost}}();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_quest_item_model_a62bf59bb3d492f8b0121935df4541551}{gold}}.Subtract(cost))}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_aceba89688cfadb0622aa17ad50cc015a}{QuestData}}.questDict[\mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.QuestNo].level\ =\ \mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}.Value;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_a76d388ee9b6abf1a7480d2b73c2b6ab0}{MissionData}}.UpdateQuestUpgradeData(\mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.QuestNo,\ currentValue\ =>\ currentValue\ =\ \mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}.Value);}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00037}\mbox{\hyperlink{class_quest_item_model_aa38d5fafda6ffc839a5a2a19afab7d5f}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ BigInteger\ \mbox{\hyperlink{class_quest_item_model_aa38d5fafda6ffc839a5a2a19afab7d5f}{GetReward}}()}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ var\ baseValue\ =\ \mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.Increase.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ var\ increaseValue\ =\ (m\_level.Value\ -\/\ 1)\ *\ \mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.LvIncreaseValue.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ var\ reward\ =\ increaseValue\ >\ 0\ ?\ baseValue\ +\ increaseValue\ :\ baseValue;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ reward;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00045}\mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ BigInteger\ \mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{GetCost}}()}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ var\ baseCost\ =\ \mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.Cost.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ var\ increase\ =\ baseCost\ *\ m\_level.Value\ *\ (20\ *\ \mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}.Value)/\ 100;\ \textcolor{comment}{//\ 20��}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ var\ cost\ =\ baseCost\ +\ increase;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cost;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00053}\mbox{\hyperlink{class_quest_item_model_a785f8c53cb2d1ebb5b3a4b7f946e9367}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_item_model_a785f8c53cb2d1ebb5b3a4b7f946e9367}{Progress}}(\textcolor{keywordtype}{int}\ endTime)}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ var\ isComplete\ =\ m\_elpasedTime.Value\ >=\ endTime;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ var\ reward\ =\ \mbox{\hyperlink{class_quest_item_model_aa38d5fafda6ffc839a5a2a19afab7d5f}{GetReward}}();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isComplete)}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ m\_elpasedTime.Value\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ var\ increase\ =\ reward\ *\ CharacterData.TreasureQuestGoldPer\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ var\ totalReward\ =\ reward\ +\ increase;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_a62bf59bb3d492f8b0121935df4541551}{gold}}.Add(totalReward);}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_a76d388ee9b6abf1a7480d2b73c2b6ab0}{MissionData}}.UpdateQuestClearData(\mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.QuestNo,\ currentValue\ =>\ currentValue\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_a7329a8930cbcf3564aa85ec226e515d1}{m\_elpasedTime}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_model_aceba89688cfadb0622aa17ad50cc015a}{QuestData}}.questDict[\mbox{\hyperlink{class_quest_item_model_a15c3498fbac45458c93d014f27f80c48}{table}}.QuestNo].elpasedTime\ =\ \mbox{\hyperlink{class_quest_item_model_a7329a8930cbcf3564aa85ec226e515d1}{m\_elpasedTime}}.Value;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00074}\mbox{\hyperlink{class_quest_item_model_ac0d8c87b51f34b9dde5348036686dec1}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_item_model_ac0d8c87b51f34b9dde5348036686dec1}{Reset}}()}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ m\_elpasedTime.Value\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ m\_level.Value\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00081}\mbox{\hyperlink{class_quest_model}{00081}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quest_model}{QuestModel}}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00082}00082\ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00083}\mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ List<QuestItemModel>\ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00084}\mbox{\hyperlink{class_quest_model_a75e015a66345120d3561bec8dd66d640}{00084}}\ \ \ \ \ \textcolor{keyword}{public}\ Subject<Unit>\ \mbox{\hyperlink{class_quest_model_a75e015a66345120d3561bec8dd66d640}{InitSubject}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00086}\mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{00086}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<QuestTable>\ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{questTableList}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00087}\mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{00087}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_gold}{CurrencyModel.Gold}}\ \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00089}00089\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00090}\mbox{\hyperlink{class_quest_model_aa6fd255257f7a90e32989ca9bd5ee8f4}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_quest_model_aa6fd255257f7a90e32989ca9bd5ee8f4}{QuestModel}}(List<QuestTable>\ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{questTableList}},\ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_gold}{Gold}}\ \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}})}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ this.questTableList\ =\ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{questTableList}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00096}\mbox{\hyperlink{class_quest_model_aac8dce1d57cf952177695469c0273aef}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_model_aac8dce1d57cf952177695469c0273aef}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ var\ questData\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a06970da4c85563d9d35078c8d90ef3c0}{questData}}.\mbox{\hyperlink{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846}{questDict}};}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}.Clear();}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{questTableList}}.ForEach(table\ =>}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ var\ questItem\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_quest_item_model}{QuestItemModel}}(table,\ \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}});}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ questItem.m\_level.Value\ =\ questData[table.QuestNo].level;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ questItem.m\_elpasedTime.Value\ =\ questData[table.QuestNo].elpasedTime;}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}.Add(questItem);}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00109}\mbox{\hyperlink{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1}{00109}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1}{Reset}}()}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00110}00110\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}.ForEach(questItem\ =>\ questItem.Reset());}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_model_8cs_source_l00113}00113\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,12 @@
+<map id="MissionInstaller" name="MissionInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="38,625,158,716"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,385,94,455"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,469,92,625,87,626,56,470"/>
+<area shape="rect" id="Node000003" href="$class_mission_item_view.html" title=" " alt="" coords="118,279,286,561"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,562,125,611,120,609,141,560"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="115,5,216,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,89,178,214,185,279,179,279,172,215,165,90"/>
+<area shape="rect" id="Node000005" href="$class_complete_button_view.html" title=" " alt="" coords="187,124,320,215"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="200,85,226,123,221,126,195,88"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="247,215,237,263,232,262,242,214"/>
+</map>

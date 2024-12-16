@@ -1,0 +1,12 @@
+<map id="ReincarnationInstaller" name="ReincarnationInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="123,321,259,391"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,156,94,225"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,235,108,256,164,320,160,323,104,259,86,238"/>
+<area shape="rect" id="Node000003" href="$class_open_popup_button_view.html" title=" " alt="" coords="118,124,264,257"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,257,194,304,188,304,188,257"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="227,5,328,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="253,89,232,125,227,123,248,86"/>
+<area shape="rect" id="Node000005" href="$class_reincarnation_popup_view.html" title=" " alt="" coords="287,145,444,236"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="307,86,342,144,337,147,303,89"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="351,237,333,269,309,299,276,323,273,319,305,295,329,267,346,235"/>
+</map>

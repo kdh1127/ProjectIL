@@ -1,0 +1,76 @@
+\doxysection{Reincarnation\+Presenter.\+cs}
+\hypertarget{_reincarnation_presenter_8cs_source}{}\label{_reincarnation_presenter_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/ReincarnationPresenter.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/ReincarnationPresenter.cs}}
+\mbox{\hyperlink{_reincarnation_presenter_8cs}{Ïù¥ ÌååÏùºÏùò Î¨∏ÏÑúÌôî ÌéòÏù¥ÏßÄÎ°ú Í∞ÄÍ∏∞}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00005}\mbox{\hyperlink{class_reincarnation_presenter}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reincarnation_presenter}{ReincarnationPresenter}}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00007}\mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{00007}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_reincarnation_model}{ReincarnationModel}}\ \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00008}\mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{00008}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_open_popup_button_view}{OpenPopupButtonView}}\ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00009}\mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{00009}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_quest_model}{QuestModel}}\ \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{questModel}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00010}\mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{00010}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_weapon_model}{WeaponModel}}\ \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weaponModel}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00011}\mbox{\hyperlink{class_reincarnation_presenter_ae6b406c05dbe71514a2e333ccca00e23}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_reincarnation_popup_view}{ReincarnationPopupView}}\ \mbox{\hyperlink{class_reincarnation_presenter_ae6b406c05dbe71514a2e333ccca00e23}{reincarnationPopupView}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00013}00013\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00014}\mbox{\hyperlink{class_reincarnation_presenter_adad73950b5ff773743db109c6194c808}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_reincarnation_presenter_adad73950b5ff773743db109c6194c808}{ReincarnationPresenter}}(\mbox{\hyperlink{class_reincarnation_model}{ReincarnationModel}}\ \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}},\ \mbox{\hyperlink{class_open_popup_button_view}{OpenPopupButtonView}}\ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}},\ \mbox{\hyperlink{class_quest_model}{QuestModel}}\ \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{questModel}},\ \mbox{\hyperlink{class_weapon_model}{WeaponModel}}\ \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weaponModel}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ this.reincarnationButton\ =\ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ this.questModel\ =\ \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{questModel}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ this.weaponModel\ =\ \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weaponModel}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00022}\mbox{\hyperlink{class_reincarnation_presenter_a82241f6922cafa3b8b26cb84f99faaca}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_presenter_a82241f6922cafa3b8b26cb84f99faaca}{Subscribe}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72}{SubscribeToReincarnationButton}}();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6}{SubscribeToReincarnationPopupView}}();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775}{SubscribeToModel}}();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00029}\mbox{\hyperlink{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72}{00029}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72}{SubscribeToReincarnationButton}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Subscribe(stageNo\ =>}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ isOpen\ =\ stageNo\ >=\ 10;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.gameObject.SetActive(isOpen);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}).AddTo(\mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.\mbox{\hyperlink{class_open_popup_button_view_a9be37d9d9c8fac47a74db1b4639a77cc}{button}}.OnClickAsObservable()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TRCommonPopup.Instantiate(\mbox{\hyperlink{class_popup_manager}{PopupManager}}.Instance.transform)}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetTitle(\textcolor{stringliteral}{"{}»Øª˝«œ±‚"{}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetMessage(\$\textcolor{stringliteral}{"{}«ˆ¿Á√˛:\ \{StageManager.Instance.CurStage.Value\}\(\backslash\)nø≠ºË ≈âµÊ∑Æ:\ \{model.GetReward()\}"{}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetConfirm(confirmAction:\ obj\ =>}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}}.\mbox{\hyperlink{class_reincarnation_model_a906928a2c5592fff4ce89180c4ac4214}{Reincarnation}}(1);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{questModel}}.\mbox{\hyperlink{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1}{Reset}}();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weaponModel}}.\mbox{\hyperlink{class_weapon_model_acdbbcae67c7e270d624fa772011f19eb}{Reset}}();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BattlePresenter.Instance.battleState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}.\mbox{\hyperlink{class_battle_presenter_1_1_reset_state}{ResetState}}();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject.Destroy(obj);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},\ confirmText:\ \textcolor{stringliteral}{"{}»Øª˝«œ±‚"{}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetCancel(cancelAction:\ obj\ =>}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject.Destroy(obj);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},\ cancelText:\ \textcolor{stringliteral}{"{}√Îº“«œ±‚"{}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Build();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}).AddTo(\mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00061}\mbox{\hyperlink{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6}{00061}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6}{SubscribeToReincarnationPopupView}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00066}\mbox{\hyperlink{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775}{00066}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775}{SubscribeToModel}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_presenter_8cs_source_l00070}00070\ \}}
+
+\end{DoxyCode}

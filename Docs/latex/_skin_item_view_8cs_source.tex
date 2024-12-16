@@ -1,0 +1,49 @@
+\doxysection{Skin\+Item\+View.\+cs}
+\hypertarget{_skin_item_view_8cs_source}{}\label{_skin_item_view_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/Item/SkinItemView.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/Item/SkinItemView.cs}}
+\mbox{\hyperlink{_skin_item_view_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }I2.Loc;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00009}\mbox{\hyperlink{class_skin_item_view}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_skin_item_view}{SkinItemView}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00011}\mbox{\hyperlink{class_skin_item_view_a65b6b19a157d149554c651e2e0e56bb8}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ Image\ \mbox{\hyperlink{class_skin_item_view_a65b6b19a157d149554c651e2e0e56bb8}{skinImage}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00012}\mbox{\hyperlink{class_skin_item_view_ac3f8bab4584f6c3526acedd29ea927d9}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ \mbox{\hyperlink{class_skin_item_view_ac3f8bab4584f6c3526acedd29ea927d9}{title\_txt}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00013}\mbox{\hyperlink{class_skin_item_view_a578af680869d710f13581d1fe5c14f0e}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ \mbox{\hyperlink{class_skin_item_view_a578af680869d710f13581d1fe5c14f0e}{totalIncrease\_txt}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00014}\mbox{\hyperlink{class_skin_item_view_a7b4d6e923f29154ff5a58d20b9241841}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ Toggle\ \mbox{\hyperlink{class_skin_item_view_a7b4d6e923f29154ff5a58d20b9241841}{equipStatus\_tgl}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00015}\mbox{\hyperlink{class_skin_item_view_a786b1b33e28b69cdf3d293299efd7a99}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_skin_upgrade_button_view}{SkinUpgradeButtonView}}\ \mbox{\hyperlink{class_skin_item_view_a786b1b33e28b69cdf3d293299efd7a99}{upgradeButtonView}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00016}\mbox{\hyperlink{class_skin_item_view_a380c28e23fe641da95cfba5dd67588a6}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ \mbox{\hyperlink{class_skin_item_view_a380c28e23fe641da95cfba5dd67588a6}{equipSprite}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00017}\mbox{\hyperlink{class_skin_item_view_acce6c4cfe7038c441973101386c2e92f}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ \mbox{\hyperlink{class_skin_item_view_acce6c4cfe7038c441973101386c2e92f}{unEquipSprite}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00018}\mbox{\hyperlink{class_skin_item_view_a8b5065cd19c8ce9981a1d851ce983e59}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ \mbox{\hyperlink{class_skin_item_view_a8b5065cd19c8ce9981a1d851ce983e59}{equipStatus\_txt}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00019}\mbox{\hyperlink{class_skin_item_view_aacda791e23a25ef40a16e45c90292806}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ Image\ \mbox{\hyperlink{class_skin_item_view_aacda791e23a25ef40a16e45c90292806}{line\_img}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00020}\mbox{\hyperlink{class_skin_item_view_a559c696f0e79b7326acf444094c8cc0b}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ Subject<bool>\ \mbox{\hyperlink{class_skin_item_view_a559c696f0e79b7326acf444094c8cc0b}{equipSkinSubject}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00022}\mbox{\hyperlink{class_skin_item_view_a90c0ea4dc7f931b5336a0bf826df7a29}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skin_item_view_a90c0ea4dc7f931b5336a0bf826df7a29}{Init}}(\textcolor{keywordtype}{int}\ level,\ \textcolor{keywordtype}{int}\ totalIncrease,\ \textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{string}\ increaseTypeString,\ \textcolor{keywordtype}{bool}\ isEquip,\ \textcolor{keywordtype}{bool}\ isMaxLevel,\ Sprite\ image\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ var\ titleString\ =\ \$\textcolor{stringliteral}{"{}Lv.\ \{level\}\ \{LocalizationManager.GetTranslation(name)\}"{}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ var\ increseStringFormat\ =\ I2.Loc.LocalizationManager.GetTranslation(increaseTypeString);}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ totalIncrease\_txt.text\ =\ \textcolor{keywordtype}{string}.Format(increseStringFormat,\ totalIncrease);}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ equipStatus\_txt.text\ =\ isEquip\ ?\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}UnEquip"{}})\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Equip"{}});}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ title\_txt.text\ =\ titleString;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (image\ !=\ \textcolor{keyword}{null})\ skinImage.sprite\ =\ image;}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ line\_img.rectTransform.sizeDelta\ =\ level\ >\ 0\ \&\&\ !isMaxLevel\ ?\ \textcolor{keyword}{new}\ Vector2(290f,\ 25f)\ :\ \textcolor{keyword}{new}\ Vector2(430f,\ 25f);}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00033}\mbox{\hyperlink{class_skin_item_view_a5ac287d213af603e4de653d3e4bb1854}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skin_item_view_a5ac287d213af603e4de653d3e4bb1854}{OnChangedToggle}}(ToggleGroup\ toggleGroup)}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00034}00034\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_item_view_a7b4d6e923f29154ff5a58d20b9241841}{equipStatus\_tgl}}.onValueChanged.AddListener(isOn\ =>}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isOn)\ toggleGroup.NotifyToggleOn(\mbox{\hyperlink{class_skin_item_view_a7b4d6e923f29154ff5a58d20b9241841}{equipStatus\_tgl}});}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ equipStatus\_tgl.image.sprite\ =\ isOn\ ?\ \mbox{\hyperlink{class_skin_item_view_a380c28e23fe641da95cfba5dd67588a6}{equipSprite}}\ :\ \mbox{\hyperlink{class_skin_item_view_acce6c4cfe7038c441973101386c2e92f}{unEquipSprite}};}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ equipStatus\_txt.text\ =\ isOn\ ?\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}UnEquip"{}})\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Equip"{}});}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_item_view_a559c696f0e79b7326acf444094c8cc0b}{equipSkinSubject}}.OnNext(isOn);}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_item_view_8cs_source_l00043}00043\ \}}
+
+\end{DoxyCode}

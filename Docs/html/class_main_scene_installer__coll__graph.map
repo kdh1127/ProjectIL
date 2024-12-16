@@ -1,0 +1,9 @@
+<map id="MainSceneInstaller" name="MainSceneInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,257,158,348"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,124,94,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,207,79,257,74,258,60,209"/>
+<area shape="rect" id="Node000003" href="$class_top_panel_view.html" title=" " alt="" coords="118,124,211,193"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,194,122,244,118,241,144,192"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="114,5,215,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="167,89,167,124,162,124,162,89"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="UserDataManager.SaveAll" name="UserDataManager.SaveAll">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,215,182,241"/>
+<area shape="rect" id="Node000002" href="$class_user_data_manager_1_1_character_data.html#a72e52158fd30b030e2a8f0c46067fdb8" title=" " alt="" coords="256,5,444,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,213,118,181,146,139,184,95,228,58,240,51,243,55,231,62,187,99,151,142,123,184,104,216"/>
+<area shape="rect" id="Node000003" href="$class_user_data_manager_1_1_currency_data.html#a4e9ed1a18bf61b95570d55bef20275e9" title=" " alt="" coords="258,72,442,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,212,159,169,192,145,228,124,242,118,244,123,231,129,195,150,162,173,111,216"/>
+<area shape="rect" id="Node000004" href="$class_user_data_manager_1_1_mission_data.html#a9ab582c478c9c4c9fbd61eb38c98ec74" title=" " alt="" coords="231,139,469,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,212,229,175,259,167,260,172,230,180,129,217"/>
+<area shape="rect" id="Node000005" href="$class_user_data_manager_1_1_quest_data.html#a73c90c19957ebf2b30af9b203d3f9693" title=" " alt="" coords="236,189,464,216"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="182,217,220,213,220,218,182,222"/>
+<area shape="rect" id="Node000006" href="$class_user_data_manager_1_1_skin_data.html#a6ba4fe0ee1cb13ccc32cd34182840e96" title=" " alt="" coords="240,240,460,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="182,234,225,238,224,244,182,239"/>
+<area shape="rect" id="Node000007" href="$class_user_data_manager_1_1_stage_data.html#a666d6d61682977ba9c02ee564b95a3b5" title=" " alt="" coords="236,291,464,317"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="129,239,230,276,260,284,259,289,229,281,127,244"/>
+<area shape="rect" id="Node000008" href="$class_user_data_manager_1_1_treasure_data.html#ab6d63243181b51f7148b9c10a247ac71" title=" " alt="" coords="259,341,441,384"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="111,240,162,283,195,306,231,327,245,333,243,338,228,332,192,311,159,287,108,244"/>
+<area shape="rect" id="Node000009" href="$class_user_data_manager_1_1_weapon_data.html#a7636161608dea1175e7f69bf2ca75d65" title=" " alt="" coords="230,408,470,435"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="104,241,122,273,150,315,187,358,231,394,241,399,238,404,228,398,183,362,146,318,118,276,99,243"/>
+</map>

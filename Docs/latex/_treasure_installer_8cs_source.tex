@@ -1,0 +1,45 @@
+\doxysection{Treasure\+Installer.\+cs}
+\hypertarget{_treasure_installer_8cs_source}{}\label{_treasure_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/TreasureInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/TreasureInstaller.cs}}
+\mbox{\hyperlink{_treasure_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00007}\mbox{\hyperlink{class_treasure_installer}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_treasure_installer}{TreasureInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00009}\mbox{\hyperlink{class_treasure_installer_a3c3f61dc7ab67f399ebb11562219050a}{00009}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_treasure_panel_view}{TreasurePanelView}}\ \mbox{\hyperlink{class_treasure_installer_a3c3f61dc7ab67f399ebb11562219050a}{treasurePanelPrefab}};}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00010}\mbox{\hyperlink{class_treasure_installer_aaa9d34edc2946083fd91df8470eca459}{00010}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_treasure_item_view}{TreasureItemView}}\ \mbox{\hyperlink{class_treasure_installer_aaa9d34edc2946083fd91df8470eca459}{treasureItemPrefab}};}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00012}\mbox{\hyperlink{class_treasure_installer_a7b0a2905e884f7412b2c3a1681179bec}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_treasure_installer_a7b0a2905e884f7412b2c3a1681179bec}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_installer_a7031c2aaccef247d7b4082a0fe6ff7b9}{TreasureBinding}}();}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00017}\mbox{\hyperlink{class_treasure_installer_a7031c2aaccef247d7b4082a0fe6ff7b9}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_treasure_installer_a7031c2aaccef247d7b4082a0fe6ff7b9}{TreasureBinding}}()}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_treasure_model}{TreasureModel}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_treasure_panel_view}{TreasurePanelView}}>()}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_treasure_installer_a3c3f61dc7ab67f399ebb11562219050a}{treasurePanelPrefab}})}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_treasure_presenter}{TreasurePresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ Container.BindFactory<\mbox{\hyperlink{class_treasure_item_view}{TreasureItemView}},\ \mbox{\hyperlink{class_treasure_item_view_factory}{TreasureItemViewFactory}}>()}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInNewPrefab(\mbox{\hyperlink{class_treasure_installer_aaa9d34edc2946083fd91df8470eca459}{treasureItemPrefab}})}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .UnderTransform(\mbox{\hyperlink{class_treasure_installer_a3c3f61dc7ab67f399ebb11562219050a}{treasurePanelPrefab}}.\mbox{\hyperlink{class_treasure_panel_view_a4bcc78b81843f60020cfc45b0147e9ac}{content\_tr}})}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AsTransient();}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<List<TreasureTable>>()}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(TreasureTableList.Get())}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_treasure_installer_8cs_source_l00039}\mbox{\hyperlink{class_treasure_item_view_factory}{00039}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_treasure_item_view_factory}{TreasureItemViewFactory}}\ :\ PlaceholderFactory<TreasureItemView>\ \{\ \}}
+
+\end{DoxyCode}

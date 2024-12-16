@@ -1,0 +1,15 @@
+<map id="BattlePresenter.SubscribeMonster" name="BattlePresenter.SubscribeMonster">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,99,179,141"/>
+<area shape="rect" id="Node000002" href="$class_currency_model.html#ace4d4eb1605b11443743d8bb54b4e1dd" title=" " alt="" coords="234,5,424,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,96,171,68,226,42,246,34,248,39,228,46,174,73,127,101"/>
+<area shape="rect" id="Node000004" href="$class_monster_model.html#a1a59340db3aece4014e3a0291ec6d02f" title=" " alt="" coords="242,56,416,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,99,247,84,249,89,180,104"/>
+<area shape="rect" id="Node000005" href="$class_monster_manager.html#a3ad74f98a665a750c59ddeb054bec08a" title=" " alt="" coords="227,107,431,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="179,117,211,117,211,123,179,123"/>
+<area shape="rect" id="Node000006" href="$class_monster_view.html#a5cb69cfde5af433ec23d8a0cfdffe185" title=" " alt="" coords="238,157,420,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="180,136,249,151,247,156,179,141"/>
+<area shape="rect" id="Node000007" href="$class_monster_view.html#ad4abe425bec570cca93d87ac10f4b3db" title=" " alt="" coords="239,208,418,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="127,139,174,167,228,194,248,201,246,206,226,198,171,172,124,144"/>
+<area shape="rect" id="Node000003" href="$class_currency_model.html#a09a3d72744f84469507666a0305dfc3c" title=" " alt="" coords="479,5,622,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,16,464,16,464,21,424,21"/>
+</map>

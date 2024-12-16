@@ -1,0 +1,27 @@
+\doxysection{Main\+Scene\+Installer.\+cs}
+\hypertarget{_main_scene_installer_8cs_source}{}\label{_main_scene_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/MainSceneInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/MainSceneInstaller.cs}}
+\mbox{\hyperlink{_main_scene_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00004}\mbox{\hyperlink{class_main_scene_installer}{00004}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_scene_installer}{MainSceneInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00006}\mbox{\hyperlink{class_main_scene_installer_a5719cd57cd2673480aafaa459e2581fa}{00006}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_top_panel_view}{TopPanelView}}\ \mbox{\hyperlink{class_main_scene_installer_a5719cd57cd2673480aafaa459e2581fa}{topPanelViewPrefab}};}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00008}\mbox{\hyperlink{class_main_scene_installer_a6fb268346e5fc6a2ae98b2d56bc87a80}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_scene_installer_a6fb268346e5fc6a2ae98b2d56bc87a80}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_scene_installer_a5e80199a3c0b8541584c704cb5d97362}{MainSceneBinding}}();}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00013}\mbox{\hyperlink{class_main_scene_installer_a5e80199a3c0b8541584c704cb5d97362}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_scene_installer_a5e80199a3c0b8541584c704cb5d97362}{MainSceneBinding}}()}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_main_scene_presenter}{MainScenePresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_top_panel_view}{TopPanelView}}>()}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_main_scene_installer_a5719cd57cd2673480aafaa459e2581fa}{topPanelViewPrefab}})}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_scene_installer_8cs_source_l00021}00021\ \}}
+
+\end{DoxyCode}

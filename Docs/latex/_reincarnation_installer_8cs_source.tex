@@ -1,0 +1,29 @@
+\doxysection{Reincarnation\+Installer.\+cs}
+\hypertarget{_reincarnation_installer_8cs_source}{}\label{_reincarnation_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/ReincarnationInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/ReincarnationInstaller.cs}}
+\mbox{\hyperlink{_reincarnation_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00006}\mbox{\hyperlink{class_reincarnation_installer}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reincarnation_installer}{ReincarnationInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00008}\mbox{\hyperlink{class_reincarnation_installer_acf9579a2ed0af6eea8755812b3e85d87}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_open_popup_button_view}{OpenPopupButtonView}}\ \mbox{\hyperlink{class_reincarnation_installer_acf9579a2ed0af6eea8755812b3e85d87}{reincarnation\_btn}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00009}\mbox{\hyperlink{class_reincarnation_installer_a64f3a36dfd101ce95b5a3c8a31a5fe2a}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_reincarnation_popup_view}{ReincarnationPopupView}}\ \mbox{\hyperlink{class_reincarnation_installer_a64f3a36dfd101ce95b5a3c8a31a5fe2a}{reincarnationPrefab}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00010}\mbox{\hyperlink{class_reincarnation_installer_a67d907695fbb5c13cac2acda24488c10}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_installer_a67d907695fbb5c13cac2acda24488c10}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_reincarnation_presenter}{ReincarnationPresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_reincarnation_model}{ReincarnationModel}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<\mbox{\hyperlink{class_open_popup_button_view}{OpenPopupButtonView}}>()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_reincarnation_installer_acf9579a2ed0af6eea8755812b3e85d87}{reincarnation\_btn}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<\mbox{\hyperlink{class_reincarnation_popup_view}{ReincarnationPopupView}}>()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInNewPrefab(\mbox{\hyperlink{class_reincarnation_installer_a64f3a36dfd101ce95b5a3c8a31a5fe2a}{reincarnationPrefab}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ .AsTransient();}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_installer_8cs_source_l00023}00023\ \}}
+
+\end{DoxyCode}

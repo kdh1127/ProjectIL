@@ -1,0 +1,11 @@
+<map id="MissionPanelView" name="MissionPanelView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,625,193,737"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="78,5,179,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,90,115,178,106,279,100,470,101,625,96,625,95,469,101,279,109,177,119,89"/>
+<area shape="rect" id="Node000003" href="$class_mission_item_view.html" title=" " alt="" coords="115,279,283,561"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="137,89,157,214,169,279,164,280,151,215,132,89"/>
+<area shape="rect" id="Node000004" href="$class_complete_button_view.html" title=" " alt="" coords="166,124,300,215"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="168,84,199,123,195,126,163,88"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,562,129,611,124,609,143,560"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="229,215,223,263,218,262,224,214"/>
+</map>

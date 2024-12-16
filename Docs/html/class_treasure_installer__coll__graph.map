@@ -1,0 +1,15 @@
+<map id="TreasureInstaller" name="TreasureInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="79,657,205,748"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,481,94,551"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,563,122,656,117,659,71,565"/>
+<area shape="rect" id="Node000003" href="$class_treasure_panel_view.html" title=" " alt="" coords="94,324,218,415"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,415,147,641,142,641,152,414"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="202,5,303,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="239,90,236,99,171,325,166,323,231,98,234,88"/>
+<area shape="rect" id="Node000005" href="$class_treasure_item_view.html" title=" " alt="" coords="292,439,415,593"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="257,89,264,187,282,299,301,371,325,438,320,440,296,373,276,301,259,188,251,90"/>
+<area shape="rect" id="Node000006" href="$class_upgrade_button_view.html" title=" " alt="" coords="290,124,417,300"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="282,86,304,123,300,126,278,89"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="294,578,275,595,212,649,209,645,272,591,291,574"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="356,300,356,422,351,422,351,300"/>
+</map>

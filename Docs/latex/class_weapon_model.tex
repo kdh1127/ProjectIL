@@ -1,0 +1,180 @@
+\doxysection{Weapon\+Model 클래스 참조}
+\hypertarget{class_weapon_model}{}\label{class_weapon_model}\index{WeaponModel@{WeaponModel}}
+
+
+Weapon\+Model에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_weapon_model__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_model_a3df80f545bdb04adae7569e015ad3961}{Weapon\+Model}} (List$<$ Weapon\+Table $>$ \mbox{\hyperlink{class_weapon_model_a47a1f7e1605692e8336782a899a736cc}{weapon\+Table\+List}}, \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} \mbox{\hyperlink{class_weapon_model_a62c70bd079668999446dfe631fbf548b}{gold}})
+\item 
+void \mbox{\hyperlink{class_weapon_model_a2c6f65fd8e6c5b80f306a5e0f043a4fb}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_weapon_model_acdbbcae67c7e270d624fa772011f19eb}{Reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Weapon\+Table $>$ \mbox{\hyperlink{class_weapon_model_a47a1f7e1605692e8336782a899a736cc}{weapon\+Table\+List}} = new()
+\item 
+List$<$ \mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}} $>$ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weapon\+Item\+List}} = new()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} \mbox{\hyperlink{class_weapon_model_a62c70bd079668999446dfe631fbf548b}{gold}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00094}{94}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{class_weapon_model_a3df80f545bdb04adae7569e015ad3961}\index{WeaponModel@{WeaponModel}!WeaponModel@{WeaponModel}}
+\index{WeaponModel@{WeaponModel}!WeaponModel@{WeaponModel}}
+\doxysubsubsection{\texorpdfstring{WeaponModel()}{WeaponModel()}}
+{\footnotesize\ttfamily \label{class_weapon_model_a3df80f545bdb04adae7569e015ad3961} 
+Weapon\+Model.\+Weapon\+Model (\begin{DoxyParamCaption}\item[{List$<$ Weapon\+Table $>$}]{weapon\+Table\+List}{, }\item[{\mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}}}]{gold}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00100}{100}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ this.weaponTableList\ =\ \mbox{\hyperlink{class_weapon_model_a47a1f7e1605692e8336782a899a736cc}{weaponTableList}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_weapon_model_a62c70bd079668999446dfe631fbf548b}{gold}};}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_weapon_model_a2c6f65fd8e6c5b80f306a5e0f043a4fb}\index{WeaponModel@{WeaponModel}!Init@{Init}}
+\index{Init@{Init}!WeaponModel@{WeaponModel}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_weapon_model_a2c6f65fd8e6c5b80f306a5e0f043a4fb} 
+void Weapon\+Model.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00105}{105}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_acda14ede8878a30de0912522ccedf65a}{weaponData}}.\mbox{\hyperlink{class_user_data_manager_1_1_weapon_data_ab18812ddf857e4cfb97ff1ecedba4fe0}{weaponItemList}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ WeaponTableList.Get().Count;\ i++)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}.Add(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_weapon_item_model}{WeaponItemModel}}(\mbox{\hyperlink{class_weapon_model_a47a1f7e1605692e8336782a899a736cc}{weaponTableList}}[i],\ \mbox{\hyperlink{class_weapon_model_a62c70bd079668999446dfe631fbf548b}{gold}}));}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].m\_level.Value\ =\ data[i].level;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].isUnLock.Value\ =\ data[i].isUnlock;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].isMaxLevel.Value\ =\ data[i].isMaxLevel;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].isEquiped.Value\ =\ data[i].isEquip;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >\ 0)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i\ -\/\ 1].nextItemModel\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i];\ \textcolor{comment}{//\ ������\ �ε����� null}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].prevItemModel\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i\ -\/\ 1];\ \textcolor{comment}{//\ ù��° �ε����� null}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ù\ ��° ���� �ʱ�ȭ}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ var\ firstWeaponLevel\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[0].m\_level;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (firstWeaponLevel.Value\ ==\ 0)\ firstWeaponLevel.Value\ =\ 1;}
+\DoxyCodeLine{00127\ \ \ \ }
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_weapon_model_acdbbcae67c7e270d624fa772011f19eb}\index{WeaponModel@{WeaponModel}!Reset@{Reset}}
+\index{Reset@{Reset}!WeaponModel@{WeaponModel}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_weapon_model_acdbbcae67c7e270d624fa772011f19eb} 
+void Weapon\+Model.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00131}{131}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_acda14ede8878a30de0912522ccedf65a}{weaponData}}.\mbox{\hyperlink{class_user_data_manager_1_1_weapon_data_ab18812ddf857e4cfb97ff1ecedba4fe0}{weaponItemList}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}.ForEach(weaponItem\ =>}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ weaponItem.Reset();}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[0].m\_level.Value\ =\ 1;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[0].isEquiped.Value\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[0].UpdateState();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ WeaponTableList.Get().Count;\ i++)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ data[i].level\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].m\_level.Value;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ data[i].isUnlock\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].isUnLock.Value;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ data[i].isMaxLevel\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].isMaxLevel.Value;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ data[i].isEquip\ =\ \mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[i].isEquiped.Value;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_model_acdbbcae67c7e270d624fa772011f19eb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_weapon_model_a62c70bd079668999446dfe631fbf548b}\index{WeaponModel@{WeaponModel}!gold@{gold}}
+\index{gold@{gold}!WeaponModel@{WeaponModel}}
+\doxysubsubsection{\texorpdfstring{gold}{gold}}
+{\footnotesize\ttfamily \label{class_weapon_model_a62c70bd079668999446dfe631fbf548b} 
+readonly \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} Weapon\+Model.\+gold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00098}{98}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}\index{WeaponModel@{WeaponModel}!weaponItemList@{weaponItemList}}
+\index{weaponItemList@{weaponItemList}!WeaponModel@{WeaponModel}}
+\doxysubsubsection{\texorpdfstring{weaponItemList}{weaponItemList}}
+{\footnotesize\ttfamily \label{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3} 
+List$<$\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}}$>$ Weapon\+Model.\+weapon\+Item\+List = new()}
+
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00097}{97}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_model_a47a1f7e1605692e8336782a899a736cc}\index{WeaponModel@{WeaponModel}!weaponTableList@{weaponTableList}}
+\index{weaponTableList@{weaponTableList}!WeaponModel@{WeaponModel}}
+\doxysubsubsection{\texorpdfstring{weaponTableList}{weaponTableList}}
+{\footnotesize\ttfamily \label{class_weapon_model_a47a1f7e1605692e8336782a899a736cc} 
+List$<$Weapon\+Table$>$ Weapon\+Model.\+weapon\+Table\+List = new()}
+
+
+
+\mbox{\hyperlink{_weapon_model_8cs_source}{Weapon\+Model.\+cs}} 파일의 \mbox{\hyperlink{_weapon_model_8cs_source_l00096}{96}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Model/\mbox{\hyperlink{_weapon_model_8cs}{Weapon\+Model.\+cs}}\end{DoxyCompactItemize}

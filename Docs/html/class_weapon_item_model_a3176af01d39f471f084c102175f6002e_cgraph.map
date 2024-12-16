@@ -1,0 +1,7 @@
+<map id="WeaponItemModel.Upgrade" name="WeaponItemModel.Upgrade">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,188,69"/>
+<area shape="rect" id="Node000002" href="$class_weapon_item_model.html#a09687c7d6294f13a0ec1ce08afd6dd32" title=" " alt="" coords="239,5,439,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,42,223,38,224,43,188,48"/>
+<area shape="rect" id="Node000003" href="$class_weapon_item_model.html#a16dfba2bce915894a87dc93ab2535c21" title=" " alt="" coords="236,72,442,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,64,220,68,220,74,188,70"/>
+</map>

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/QuestInstaller.cs 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_quest_installer_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">QuestInstaller.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_quest_installer_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Zenject;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_quest_installer.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_quest_installer.html">QuestInstaller</a> : MonoInstaller</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_quest_installer.html#ae14a78b204cc822187f1486669d7609b">    7</a></span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_quest_panel_view.html">QuestPanelView</a> <a class="code hl_variable" href="class_quest_installer.html#ae14a78b204cc822187f1486669d7609b">questPanelPrefab</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_quest_installer.html#a410f331fd38dbb6d64cdb026dacdbf65">    8</a></span>    [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="class_quest_item_view.html">QuestItemView</a> <a class="code hl_variable" href="class_quest_installer.html#a410f331fd38dbb6d64cdb026dacdbf65">questItemPrefab</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_quest_installer.html#a98f7d89c96b5a17c1886574eb7a198a1">   10</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_quest_installer.html#a98f7d89c96b5a17c1886574eb7a198a1">InstallBindings</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_function" href="class_quest_installer.html#aea7918ff5e0419cee2d3744ace573add">QuestBinding</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_quest_installer.html#aea7918ff5e0419cee2d3744ace573add">   15</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_quest_installer.html#aea7918ff5e0419cee2d3744ace573add">QuestBinding</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        Container.Bind&lt;<a class="code hl_class" href="class_quest_model.html">QuestModel</a>&gt;().AsSingle();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Container</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            .Bind&lt;List&lt;QuestTable&gt;&gt;()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            .FromInstance(QuestTableList.Get())</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            .AsSingle();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        Container.Bind&lt;<a class="code hl_class" href="class_quest_panel_view.html">QuestPanelView</a>&gt;()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            .FromComponentInHierarchy(<a class="code hl_variable" href="class_quest_installer.html#ae14a78b204cc822187f1486669d7609b">questPanelPrefab</a>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            .AsSingle();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        Container.Bind&lt;<a class="code hl_class" href="class_quest_presenter.html">QuestPresenter</a>&gt;().AsSingle();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        Container.BindFactory&lt;<a class="code hl_class" href="class_quest_item_view.html">QuestItemView</a>, <a class="code hl_class" href="class_quest_item_view_factory.html">QuestItemViewFactory</a>&gt;()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                 .FromComponentInNewPrefab(<a class="code hl_variable" href="class_quest_installer.html#a410f331fd38dbb6d64cdb026dacdbf65">questItemPrefab</a>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                 .UnderTransform(<a class="code hl_variable" href="class_quest_installer.html#ae14a78b204cc822187f1486669d7609b">questPanelPrefab</a>.<a class="code hl_variable" href="class_quest_panel_view.html#a2882c79d310312f7e8b12fd3b5068557">content_tr</a>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                 .AsTransient();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        Container.Bind&lt;<a class="code hl_class" href="class_quest_resources.html">QuestResources</a>&gt;().AsSingle();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_quest_item_view_factory.html">   40</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_quest_item_view_factory.html">QuestItemViewFactory</a> : PlaceholderFactory&lt;QuestItemView&gt; { }</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_quest_resources.html">   41</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_quest_resources.html">QuestResources</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_quest_resources.html#ab63ca6a012fe41ae3f09210d631d6f4b">   43</a></span>    <span class="keyword">public</span> readonly Dictionary&lt;string, Sprite&gt; <a class="code hl_variable" href="class_quest_resources.html#ab63ca6a012fe41ae3f09210d631d6f4b">quest</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_quest_resources.html#a2b7cedaeef92f500f9254ee3ce058c26">   44</a></span>    <span class="keyword">public</span> readonly Dictionary&lt;string, Sprite&gt; <a class="code hl_variable" href="class_quest_resources.html#a2b7cedaeef92f500f9254ee3ce058c26">cost</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    [Inject]</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_quest_resources.html#a9ce5906563c026efb93c996ff40adb7e">   47</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="class_quest_resources.html#a9ce5906563c026efb93c996ff40adb7e">QuestResources</a>(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        [Inject(Id = <span class="stringliteral">&quot;QuestImage&quot;</span>)] Dictionary&lt;string, Sprite&gt; questImage,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        [Inject(Id = <span class="stringliteral">&quot;CostImage&quot;</span>)] Dictionary&lt;string, Sprite&gt; costImage)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        this.quest = questImage;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        this.cost = costImage;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="ttc" id="aclass_quest_installer_html"><div class="ttname"><a href="class_quest_installer.html">QuestInstaller</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">QuestInstaller.cs:6</a></div></div>
+<div class="ttc" id="aclass_quest_installer_html_a410f331fd38dbb6d64cdb026dacdbf65"><div class="ttname"><a href="class_quest_installer.html#a410f331fd38dbb6d64cdb026dacdbf65">QuestInstaller.questItemPrefab</a></div><div class="ttdeci">QuestItemView questItemPrefab</div><div class="ttdef"><b>Definition</b> <a href="#l00008">QuestInstaller.cs:8</a></div></div>
+<div class="ttc" id="aclass_quest_installer_html_a98f7d89c96b5a17c1886574eb7a198a1"><div class="ttname"><a href="class_quest_installer.html#a98f7d89c96b5a17c1886574eb7a198a1">QuestInstaller.InstallBindings</a></div><div class="ttdeci">override void InstallBindings()</div><div class="ttdef"><b>Definition</b> <a href="#l00010">QuestInstaller.cs:10</a></div></div>
+<div class="ttc" id="aclass_quest_installer_html_ae14a78b204cc822187f1486669d7609b"><div class="ttname"><a href="class_quest_installer.html#ae14a78b204cc822187f1486669d7609b">QuestInstaller.questPanelPrefab</a></div><div class="ttdeci">QuestPanelView questPanelPrefab</div><div class="ttdef"><b>Definition</b> <a href="#l00007">QuestInstaller.cs:7</a></div></div>
+<div class="ttc" id="aclass_quest_installer_html_aea7918ff5e0419cee2d3744ace573add"><div class="ttname"><a href="class_quest_installer.html#aea7918ff5e0419cee2d3744ace573add">QuestInstaller.QuestBinding</a></div><div class="ttdeci">void QuestBinding()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">QuestInstaller.cs:15</a></div></div>
+<div class="ttc" id="aclass_quest_item_view_factory_html"><div class="ttname"><a href="class_quest_item_view_factory.html">QuestItemViewFactory</a></div><div class="ttdef"><b>Definition</b> <a href="#l00040">QuestInstaller.cs:40</a></div></div>
+<div class="ttc" id="aclass_quest_item_view_html"><div class="ttname"><a href="class_quest_item_view.html">QuestItemView</a></div><div class="ttdef"><b>Definition</b> <a href="_quest_item_view_8cs_source.html#l00008">QuestItemView.cs:9</a></div></div>
+<div class="ttc" id="aclass_quest_model_html"><div class="ttname"><a href="class_quest_model.html">QuestModel</a></div><div class="ttdef"><b>Definition</b> <a href="_quest_model_8cs_source.html#l00081">QuestModel.cs:82</a></div></div>
+<div class="ttc" id="aclass_quest_panel_view_html"><div class="ttname"><a href="class_quest_panel_view.html">QuestPanelView</a></div><div class="ttdef"><b>Definition</b> <a href="_quest_panel_view_8cs_source.html#l00003">QuestPanelView.cs:4</a></div></div>
+<div class="ttc" id="aclass_quest_panel_view_html_a2882c79d310312f7e8b12fd3b5068557"><div class="ttname"><a href="class_quest_panel_view.html#a2882c79d310312f7e8b12fd3b5068557">QuestPanelView.content_tr</a></div><div class="ttdeci">Transform content_tr</div><div class="ttdef"><b>Definition</b> <a href="_quest_panel_view_8cs_source.html#l00005">QuestPanelView.cs:5</a></div></div>
+<div class="ttc" id="aclass_quest_presenter_html"><div class="ttname"><a href="class_quest_presenter.html">QuestPresenter</a></div><div class="ttdef"><b>Definition</b> <a href="_quest_presenter_8cs_source.html#l00008">QuestPresenter.cs:9</a></div></div>
+<div class="ttc" id="aclass_quest_resources_html"><div class="ttname"><a href="class_quest_resources.html">QuestResources</a></div><div class="ttdef"><b>Definition</b> <a href="#l00041">QuestInstaller.cs:42</a></div></div>
+<div class="ttc" id="aclass_quest_resources_html_a2b7cedaeef92f500f9254ee3ce058c26"><div class="ttname"><a href="class_quest_resources.html#a2b7cedaeef92f500f9254ee3ce058c26">QuestResources.cost</a></div><div class="ttdeci">readonly Dictionary&lt; string, Sprite &gt; cost</div><div class="ttdef"><b>Definition</b> <a href="#l00044">QuestInstaller.cs:44</a></div></div>
+<div class="ttc" id="aclass_quest_resources_html_a9ce5906563c026efb93c996ff40adb7e"><div class="ttname"><a href="class_quest_resources.html#a9ce5906563c026efb93c996ff40adb7e">QuestResources.QuestResources</a></div><div class="ttdeci">QuestResources([Inject(Id=&quot;QuestImage&quot;)] Dictionary&lt; string, Sprite &gt; questImage, [Inject(Id=&quot;CostImage&quot;)] Dictionary&lt; string, Sprite &gt; costImage)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">QuestInstaller.cs:47</a></div></div>
+<div class="ttc" id="aclass_quest_resources_html_ab63ca6a012fe41ae3f09210d631d6f4b"><div class="ttname"><a href="class_quest_resources.html#ab63ca6a012fe41ae3f09210d631d6f4b">QuestResources.quest</a></div><div class="ttdeci">readonly Dictionary&lt; string, Sprite &gt; quest</div><div class="ttdef"><b>Definition</b> <a href="#l00043">QuestInstaller.cs:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_e6eba136486108d313cec426fd3614b3.html">02.Scripts</a></li><li class="navelem"><a class="el" href="dir_68e3638e2fc0be96b183efd55cfc2732.html">Installer</a></li><li class="navelem"><a class="el" href="_quest_installer_8cs.html">QuestInstaller.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

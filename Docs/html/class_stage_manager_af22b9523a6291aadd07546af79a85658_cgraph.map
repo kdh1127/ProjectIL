@@ -1,0 +1,5 @@
+<map id="StageManager.SetStageBaseHp" name="StageManager.SetStageBaseHp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,216,40"/>
+<area shape="rect" id="Node000002" href="$class_stage_manager.html#a0b281958be2c12e212b418d695a06b0b" title=" " alt="" coords="264,5,449,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,24,248,24,248,29,216,29"/>
+</map>

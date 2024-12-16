@@ -1,0 +1,10 @@
+<map id="SkinItemView" name="SkinItemView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,504,144,765"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="19,5,120,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,89,76,504,71,504,67,89"/>
+<area shape="rect" id="Node000004" href="$class_upgrade_button_view.html" title=" " alt="" coords="97,124,224,300"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="97,86,116,123,112,126,92,89"/>
+<area shape="rect" id="Node000003" href="$class_skin_upgrade_button_view.html" title=" " alt="" coords="90,349,243,440"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,440,133,489,128,488,147,439"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="167,315,168,349,163,350,161,315"/>
+</map>

@@ -1,0 +1,132 @@
+\doxysection{Weapon\+Presenter.\+cs}
+\hypertarget{_weapon_presenter_8cs_source}{}\label{_weapon_presenter_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/WeaponPresenter.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/WeaponPresenter.cs}}
+\mbox{\hyperlink{_weapon_presenter_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00008}\mbox{\hyperlink{class_weapon_presenter}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon_presenter}{WeaponPresenter}}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00010}\mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{00010}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_weapon_model}{WeaponModel}}\ \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00011}\mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{00011}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_weapon_panel_view}{WeaponPanelView}}\ \mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{view}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00012}\mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_weapon_item_view_factory}{WeaponItemViewFactory}}\ \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weaponItemViewFactory}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00013}\mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{00013}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_gold}{CurrencyModel.Gold}}\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00014}\mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_character_view}{CharacterView}}\ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00015}\mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_skin_model}{SkinModel}}\ \mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00017}00017\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00018}\mbox{\hyperlink{class_weapon_presenter_abc99d3d5094036b52e5a3db2c2e87e36}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_weapon_presenter_abc99d3d5094036b52e5a3db2c2e87e36}{WeaponPresenter}}(}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_model}{WeaponModel}}\ \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}},}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_panel_view}{WeaponPanelView}}\ \mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{view}},}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view}{CharacterView}}\ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}},}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_item_view_factory}{WeaponItemViewFactory}}\ \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weaponItemViewFactory}},}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_gold}{Gold}}\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}},}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_model}{SkinModel}}\ \mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}})}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ this.view\ =\ \mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{view}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ this.characterView\ =\ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ this.weaponItemViewFactory\ =\ \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weaponItemViewFactory}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ this.skinModel\ =\ \mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00034}\mbox{\hyperlink{class_weapon_presenter_aae5587cca9c682879f261f0f56d2079c}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_presenter_aae5587cca9c682879f261f0f56d2079c}{Subscribe}}()}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ WeaponTableList.Get().ForEach(table\ =>}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponItemView\ =\ \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weaponItemViewFactory}}.Create();}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponItemModel\ =\ \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}}.\mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[table.WeaponNo];}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ weaponItemModel.UpdateState();}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445}{InitItemView}}(weaponItemModel,\ weaponItemView,\ table);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a}{SubscribeToWeaponItemModel}}(weaponItemModel,\ weaponItemView,\ table);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269}{SubscribeToUpgradeButton}}(weaponItemModel,\ weaponItemView.upgradeButtonView);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500}{SubscribeToGold}}(weaponItemModel,\ weaponItemView.upgradeButtonView,\ table);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00049}\mbox{\hyperlink{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445}{InitItemView}}(\mbox{\hyperlink{class_weapon_item_model}{WeaponItemModel}}\ itemModel,\ \mbox{\hyperlink{class_weapon_item_view}{WeaponItemView}}\ itemView,\ WeaponTable\ table)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ var\ costImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}CostImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_weapon_item_view_a48365bf72548915453be4d4082b350bc}{Init}}(}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ table:\ table,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ curLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a90091ca9fd4f2252861e5800b062afdc}{m\_level}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ isMaxLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a7fa54ff745c012f6a4d68b2dea9a56d8}{isMaxLevel}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ isEquiped:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adede9ebf58a7731fdbc2581002b058ab}{isEquiped}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ isUnLock:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ isEnughGold:\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}.CanSubtract(table.Cost.ToBigInt()));}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_weapon_item_view_ab56c88d5aa6d79ec2c049105fe98b736}{upgradeButtonView}}.\mbox{\hyperlink{class_upgrade_button_view_a606b9f3e3ed1f6e2e17f5a2247bbfcaa}{Init}}(}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ increase:\ table.Increase.ToBigInt(),}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ cost:\ table.Cost.ToBigInt(),}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ costImage:\ costImageResources[\textcolor{stringliteral}{"{}Gold"{}}]);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00068}\mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(\mbox{\hyperlink{class_weapon_item_model}{WeaponItemModel}}\ itemModel,\ \mbox{\hyperlink{class_weapon_item_view}{WeaponItemView}}\ itemView,\ WeaponTable\ table)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00069}00069\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ var\ isEnughGold\ =\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}.CanSubtract(table.Cost.ToBigInt());}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_weapon_item_view_aef9f276c2063d8761324c9ba56336d8f}{UpdateLevel}}(}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ table:\ table,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ curLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a90091ca9fd4f2252861e5800b062afdc}{m\_level}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ isMaxLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a7fa54ff745c012f6a4d68b2dea9a56d8}{isMaxLevel}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ isEquiped:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adede9ebf58a7731fdbc2581002b058ab}{isEquiped}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ isUnLock:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Value,}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ isEnughGold:\ isEnughGold);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00080}\mbox{\hyperlink{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a}{SubscribeToWeaponItemModel}}(\mbox{\hyperlink{class_weapon_item_model}{WeaponItemModel}}\ itemModel,\ \mbox{\hyperlink{class_weapon_item_view}{WeaponItemView}}\ itemView,\ WeaponTable\ table)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00081}00081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a90091ca9fd4f2252861e5800b062afdc}{m\_level}}.Subscribe(\_\ =>\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table)).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Subscribe(\_\ =>\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table)).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a7fa54ff745c012f6a4d68b2dea9a56d8}{isMaxLevel}}.Subscribe(\_\ =>\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table)).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_adede9ebf58a7731fdbc2581002b058ab}{isEquiped}}.Subscribe(isEquip\ =>}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isEquip)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}WeaponImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a09687c7d6294f13a0ec1ce08afd6dd32}{SetWeaponDamage}}();}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}}.\mbox{\hyperlink{class_skin_model_af7e45ecf6f70eb9e9d64363536ce064d}{IsUnEquipAllSkin}}()\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ originWeaponNo\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a6f1e0ab73a6def09bd14c05101829cd6}{skinData}}.\mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{originWeaponNo}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImage\ =\ weaponImageResources[WeaponTableList.Get()[originWeaponNo].Image];}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}}.\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(weaponImage);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \}).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00102}\mbox{\hyperlink{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269}{00102}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269}{SubscribeToUpgradeButton}}(\mbox{\hyperlink{class_weapon_item_model}{WeaponItemModel}}\ itemModel,\ \mbox{\hyperlink{class_upgrade_button_view}{UpgradeButtonView}}\ upgradeButtonView)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00103}00103\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ upgradeButtonView.\mbox{\hyperlink{class_upgrade_button_view_aa39e9434c430ab5271681d2d0040cef6}{button}}.OnClickAsObservable().Subscribe(\_\ =>}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a3176af01d39f471f084c102175f6002e}{Upgrade}}();}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}}.\mbox{\hyperlink{class_skin_model_af7e45ecf6f70eb9e9d64363536ce064d}{IsUnEquipAllSkin}}()\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}WeaponImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ originWeaponNo\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a6f1e0ab73a6def09bd14c05101829cd6}{skinData}}.\mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{originWeaponNo}};}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImage\ =\ weaponImageResources[WeaponTableList.Get()[originWeaponNo].Image];}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}}.\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(weaponImage);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \}).AddTo(upgradeButtonView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00116}\mbox{\hyperlink{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500}{00116}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500}{SubscribeToGold}}(\mbox{\hyperlink{class_weapon_item_model}{WeaponItemModel}}\ itemModel,\ \mbox{\hyperlink{class_upgrade_button_view}{UpgradeButtonView}}\ upgradeButtonView,\ WeaponTable\ table)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00117}00117\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ .Where(\_\ =>\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Value)}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ var\ isEnughGold\ =\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}.CanSubtract(table.Cost.ToBigInt());}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeButtonView.\mbox{\hyperlink{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8}{SetInteractable}}(isEnughGold);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \}).AddTo(upgradeButtonView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_presenter_8cs_source_l00126}00126\ \}}
+
+\end{DoxyCode}

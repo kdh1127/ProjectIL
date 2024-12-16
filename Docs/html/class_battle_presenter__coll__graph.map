@@ -1,0 +1,31 @@
+<map id="BattlePresenter" name="BattlePresenter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="316,931,462,1235"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,643,202,712"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,723,205,849,318,1000,314,1003,200,852,120,726"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="143,722,229,849,318,971,313,974,224,852,139,725"/>
+<area shape="rect" id="Node000003" href="$class_character_view.html" title=" " alt="" coords="227,504,389,851"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="323,850,333,906,334,914,329,915,327,907,318,851"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="271,371,371,440"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="321,455,319,505,313,504,316,455"/>
+<area shape="rect" id="Node000013" href="$class_fade_screen_view.html" title=" " alt="" coords="413,632,531,723"/>
+<area shape="poly" id="edge16_Node000013_Node000004" title=" " alt="" coords="365,450,403,503,436,569,460,631,455,633,432,571,399,505,360,453"/>
+<area shape="rect" id="Node000005" href="$class_currency_model.html" title=" " alt="" coords="554,589,674,765"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="599,766,577,837,545,908,513,956,476,1000,472,997,508,953,540,905,572,835,594,764"/>
+<area shape="rect" id="Node000006" href="$class_currency_model_1_1_gold.html" title=" " alt="" coords="399,371,528,440"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="496,438,521,468,545,503,580,573,575,575,540,505,517,472,492,441"/>
+<area shape="rect" id="Node000007" href="$class_currency_base.html" title=" " alt="" coords="558,145,671,321"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="550,311,495,373,491,369,546,307"/>
+<area shape="rect" id="Node000010" href="$class_currency_model_1_1_dia.html" title=" " alt="" coords="553,371,676,440"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="617,336,617,371,612,371,612,336"/>
+<area shape="rect" id="Node000011" href="$class_currency_model_1_1_key.html" title=" " alt="" coords="700,371,825,440"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="682,308,735,369,731,373,678,312"/>
+<area shape="rect" id="Node000008" href="$interface_i_currency.html" title=" " alt="" coords="448,5,599,96"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="555,108,573,144,568,147,550,110"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="623,16,787,85"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="684,100,660,147,655,144,679,97"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="617,440,617,572,612,572,612,440"/>
+<area shape="poly" id="edge12_Node000005_Node000011" title=" " alt="" coords="735,441,689,505,654,575,650,572,684,503,731,438"/>
+<area shape="rect" id="Node000012" href="$class_character_model.html" title=" " alt="" coords="698,504,864,851"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="701,852,658,908,616,948,570,984,479,1040,476,1036,567,979,613,944,654,905,697,849"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="465,723,426,915,421,914,460,722"/>
+</map>

@@ -1,0 +1,60 @@
+\doxysection{Quest\+Installer.\+cs}
+\hypertarget{_quest_installer_8cs_source}{}\label{_quest_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/QuestInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/QuestInstaller.cs}}
+\mbox{\hyperlink{_quest_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00005}\mbox{\hyperlink{class_quest_installer}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quest_installer}{QuestInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00007}\mbox{\hyperlink{class_quest_installer_ae14a78b204cc822187f1486669d7609b}{00007}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_quest_panel_view}{QuestPanelView}}\ \mbox{\hyperlink{class_quest_installer_ae14a78b204cc822187f1486669d7609b}{questPanelPrefab}};}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00008}\mbox{\hyperlink{class_quest_installer_a410f331fd38dbb6d64cdb026dacdbf65}{00008}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_quest_item_view}{QuestItemView}}\ \mbox{\hyperlink{class_quest_installer_a410f331fd38dbb6d64cdb026dacdbf65}{questItemPrefab}};}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00009}00009\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00010}\mbox{\hyperlink{class_quest_installer_a98f7d89c96b5a17c1886574eb7a198a1}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_installer_a98f7d89c96b5a17c1886574eb7a198a1}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_installer_aea7918ff5e0419cee2d3744ace573add}{QuestBinding}}();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00015}\mbox{\hyperlink{class_quest_installer_aea7918ff5e0419cee2d3744ace573add}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_installer_aea7918ff5e0419cee2d3744ace573add}{QuestBinding}}()}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_quest_model}{QuestModel}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<List<QuestTable>>()}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(QuestTableList.Get())}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_quest_panel_view}{QuestPanelView}}>()}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_quest_installer_ae14a78b204cc822187f1486669d7609b}{questPanelPrefab}})}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_quest_presenter}{QuestPresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ Container.BindFactory<\mbox{\hyperlink{class_quest_item_view}{QuestItemView}},\ \mbox{\hyperlink{class_quest_item_view_factory}{QuestItemViewFactory}}>()}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInNewPrefab(\mbox{\hyperlink{class_quest_installer_a410f331fd38dbb6d64cdb026dacdbf65}{questItemPrefab}})}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .UnderTransform(\mbox{\hyperlink{class_quest_installer_ae14a78b204cc822187f1486669d7609b}{questPanelPrefab}}.\mbox{\hyperlink{class_quest_panel_view_a2882c79d310312f7e8b12fd3b5068557}{content\_tr}})}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AsTransient();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_quest_resources}{QuestResources}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00040}\mbox{\hyperlink{class_quest_item_view_factory}{00040}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quest_item_view_factory}{QuestItemViewFactory}}\ :\ PlaceholderFactory<QuestItemView>\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00041}\mbox{\hyperlink{class_quest_resources}{00041}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quest_resources}{QuestResources}}}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00043}\mbox{\hyperlink{class_quest_resources_ab63ca6a012fe41ae3f09210d631d6f4b}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Dictionary<string,\ Sprite>\ \mbox{\hyperlink{class_quest_resources_ab63ca6a012fe41ae3f09210d631d6f4b}{quest}};}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00044}\mbox{\hyperlink{class_quest_resources_a2b7cedaeef92f500f9254ee3ce058c26}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Dictionary<string,\ Sprite>\ \mbox{\hyperlink{class_quest_resources_a2b7cedaeef92f500f9254ee3ce058c26}{cost}};}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00046}00046\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00047}\mbox{\hyperlink{class_quest_resources_a9ce5906563c026efb93c996ff40adb7e}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_quest_resources_a9ce5906563c026efb93c996ff40adb7e}{QuestResources}}(}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ [Inject(Id\ =\ \textcolor{stringliteral}{"{}QuestImage"{}})]\ Dictionary<string,\ Sprite>\ questImage,}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ [Inject(Id\ =\ \textcolor{stringliteral}{"{}CostImage"{}})]\ Dictionary<string,\ Sprite>\ costImage)}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ this.quest\ =\ questImage;}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ this.cost\ =\ costImage;}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_installer_8cs_source_l00054}00054\ \}}
+
+\end{DoxyCode}

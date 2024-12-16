@@ -1,0 +1,75 @@
+\doxysection{Currency\+Installer 클래스 참조}
+\hypertarget{class_currency_installer}{}\label{class_currency_installer}\index{CurrencyInstaller@{CurrencyInstaller}}
+
+
+Currency\+Installer에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_currency_installer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_currency_installer_a9f5e562b459de112e8ab548c4c60e677}{Install\+Bindings}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_currency_view}{Currency\+View}} \mbox{\hyperlink{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b}{currency\+View\+Prefab}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_currency_installer_8cs_source}{Currency\+Installer.\+cs}} 파일의 \mbox{\hyperlink{_currency_installer_8cs_source_l00003}{3}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_currency_installer_a9f5e562b459de112e8ab548c4c60e677}\index{CurrencyInstaller@{CurrencyInstaller}!InstallBindings@{InstallBindings}}
+\index{InstallBindings@{InstallBindings}!CurrencyInstaller@{CurrencyInstaller}}
+\doxysubsubsection{\texorpdfstring{InstallBindings()}{InstallBindings()}}
+{\footnotesize\ttfamily \label{class_currency_installer_a9f5e562b459de112e8ab548c4c60e677} 
+override void Currency\+Installer.\+Install\+Bindings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_currency_installer_8cs_source}{Currency\+Installer.\+cs}} 파일의 \mbox{\hyperlink{_currency_installer_8cs_source_l00007}{7}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_gold}{Gold}}>().AsSingle();}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_dia}{Dia}}>().AsSingle();}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_key}{Key}}>().AsSingle();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_presenter}{CurrencyPresenter}}>().AsSingle();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}>().AsSingle();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<\mbox{\hyperlink{class_currency_view}{CurrencyView}}>()}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b}{currencyViewPrefab}})}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ .AsCached();}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b}\index{CurrencyInstaller@{CurrencyInstaller}!currencyViewPrefab@{currencyViewPrefab}}
+\index{currencyViewPrefab@{currencyViewPrefab}!CurrencyInstaller@{CurrencyInstaller}}
+\doxysubsubsection{\texorpdfstring{currencyViewPrefab}{currencyViewPrefab}}
+{\footnotesize\ttfamily \label{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b} 
+\mbox{\hyperlink{class_currency_view}{Currency\+View}} Currency\+Installer.\+currency\+View\+Prefab}
+
+
+
+\mbox{\hyperlink{_currency_installer_8cs_source}{Currency\+Installer.\+cs}} 파일의 \mbox{\hyperlink{_currency_installer_8cs_source_l00005}{5}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Installer/\mbox{\hyperlink{_currency_installer_8cs}{Currency\+Installer.\+cs}}\end{DoxyCompactItemize}

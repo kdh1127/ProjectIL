@@ -1,0 +1,12 @@
+<map id="WeaponItemModel.SetWeaponDamage" name="WeaponItemModel.SetWeaponDamage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="704,39,905,81"/>
+<area shape="rect" id="Node000002" href="$class_weapon_presenter.html#aa410701f4e9675d5dde5ca9232a5b57a" title=" " alt="" coords="240,5,426,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="688,55,426,36,427,31,689,49"/>
+<area shape="rect" id="Node000004" href="$class_weapon_item_model.html#a3176af01d39f471f084c102175f6002e" title=" " alt="" coords="474,72,656,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="689,75,657,78,657,73,688,70"/>
+<area shape="rect" id="Node000003" href="$class_weapon_presenter.html#aae5587cca9c682879f261f0f56d2079c" title=" " alt="" coords="5,47,192,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,45,193,49,192,44,224,39"/>
+<area shape="rect" id="Node000005" href="$class_weapon_presenter.html#a7310eb27235cc0ec8821307b18c82269" title=" " alt="" coords="240,72,426,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="459,92,427,93,427,87,459,86"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="224,81,192,76,193,71,225,75"/>
+</map>

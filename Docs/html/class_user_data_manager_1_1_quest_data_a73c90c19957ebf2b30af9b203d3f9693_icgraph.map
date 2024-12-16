@@ -1,0 +1,17 @@
+<map id="UserDataManager.QuestData.Save" name="UserDataManager.QuestData.Save">
+<area shape="rect" id="Node000001" title=" " alt="" coords="733,139,962,165"/>
+<area shape="rect" id="Node000002" href="$class_user_data_manager.html#a3f6d285949025fbb8b0f78081758f4f4" title=" " alt="" coords="509,139,685,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="718,155,686,155,686,149,718,149"/>
+<area shape="rect" id="Node000003" href="$class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9" title=" " alt="" coords="252,5,434,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="566,131,518,96,460,62,432,51,434,46,462,58,521,91,569,126"/>
+<area shape="rect" id="Node000004" href="$class_battle_presenter_1_1_reset_state.html#a1c1b14fbfa41c361236156a20b828905" title=" " alt="" coords="250,72,436,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="521,137,435,117,436,112,522,132"/>
+<area shape="rect" id="Node000005" href="$class_user_data_manager.html#adea5c813fa31d3cd6f0f490006e9b648" title=" " alt="" coords="268,139,418,165"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="493,155,418,155,418,149,493,149"/>
+<area shape="rect" id="Node000007" href="$class_user_data_manager.html#aac63c8547a34c5ec696a7ff9574b2110" title=" " alt="" coords="237,189,449,232"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="522,172,439,191,438,186,521,167"/>
+<area shape="rect" id="Node000008" href="$class_user_data_manager.html#ac2abb73f8c60a5cc3b8ac70bdd45cd2f" title=" " alt="" coords="225,256,461,283"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="570,177,522,213,462,246,429,258,427,253,460,242,519,209,567,173"/>
+<area shape="rect" id="Node000006" href="$class_user_data_manager.html#aa5b5572ef790c3a9b117356bed316475" title=" " alt="" coords="5,139,177,165"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="252,155,177,155,177,149,252,149"/>
+</map>

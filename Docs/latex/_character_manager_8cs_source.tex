@@ -1,0 +1,32 @@
+\doxysection{Character\+Manager.\+cs}
+\hypertarget{_character_manager_8cs_source}{}\label{_character_manager_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Manager/CharacterManager.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Manager/CharacterManager.cs}}
+\mbox{\hyperlink{_character_manager_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }ThreeRabbitPackage.DesignPattern;}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00006}\mbox{\hyperlink{class_character_manager}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_character_manager}{CharacterManager}}\ :\ TRSingleton<CharacterManager>}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00008}\mbox{\hyperlink{class_character_manager_a94c6a62e0a89ec89904831e3f2300ef9}{00008}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Transform\ \mbox{\hyperlink{class_character_manager_a94c6a62e0a89ec89904831e3f2300ef9}{characterPosition\_tr}};}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00010}\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_character_manager_a94c6a62e0a89ec89904831e3f2300ef9}{characterPosition\_tr}}.localPosition.x;\ \}}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00012}\mbox{\hyperlink{class_character_manager_afa9f9817ccb3e69eb950b98dd11786d3}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_manager_afa9f9817ccb3e69eb950b98dd11786d3}{Awake}}()}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ base.Awake();}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00017}\mbox{\hyperlink{class_character_manager_a2072f60727e1333c50791c86d1f2a2c7}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_manager_a2072f60727e1333c50791c86d1f2a2c7}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ characterPosition\_tr.localPosition\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00022}\mbox{\hyperlink{class_character_manager_a6a2ad5d152e95e68561b5ce3ffcfb2dc}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_manager_a6a2ad5d152e95e68561b5ce3ffcfb2dc}{ResetCharacter}}()}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ characterPosition\_tr.localPosition\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_manager_8cs_source_l00026}00026\ \}}
+
+\end{DoxyCode}

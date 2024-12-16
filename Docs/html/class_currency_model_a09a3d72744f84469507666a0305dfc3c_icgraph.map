@@ -1,0 +1,15 @@
+<map id="CurrencyModel.Save" name="CurrencyModel.Save">
+<area shape="rect" id="Node000001" title=" " alt="" coords="683,85,827,112"/>
+<area shape="rect" id="Node000002" href="$class_currency_model.html#ace4d4eb1605b11443743d8bb54b4e1dd" title=" " alt="" coords="444,35,634,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="679,84,599,65,600,59,681,79"/>
+<area shape="rect" id="Node000006" href="$class_currency_model.html#a88bc8281fc922e97f42cc4313826be61" title=" " alt="" coords="444,85,634,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="667,101,634,101,634,96,667,96"/>
+<area shape="rect" id="Node000007" href="$class_currency_presenter.html#aa54866631f3b85f2bec7e71b9b0e1a32" title=" " alt="" coords="443,136,635,163"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="681,119,600,138,599,133,679,114"/>
+<area shape="rect" id="Node000003" href="$class_currency_model.html#ad0a1d265194642cebfbcb69ad69dbf86" title=" " alt="" coords="243,5,374,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,37,374,30,375,24,430,31"/>
+<area shape="rect" id="Node000004" href="$class_battle_presenter.html#ab8db160f8df19d94b91e0231d98d70d0" title=" " alt="" coords="222,56,395,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="430,65,396,69,395,64,429,59"/>
+<area shape="rect" id="Node000005" href="$class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe" title=" " alt="" coords="5,56,174,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="206,80,174,80,174,75,206,75"/>
+</map>

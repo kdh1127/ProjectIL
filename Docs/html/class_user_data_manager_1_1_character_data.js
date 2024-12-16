@@ -1,0 +1,27 @@
+var class_user_data_manager_1_1_character_data =
+[
+    [ "Init", "class_user_data_manager_1_1_character_data.html#af397766038ea940c44f22239f5eaefab", null ],
+    [ "Load", "class_user_data_manager_1_1_character_data.html#a2014fc110b3763deb3ca51c4b1731eac", null ],
+    [ "Save", "class_user_data_manager_1_1_character_data.html#a72e52158fd30b030e2a8f0c46067fdb8", null ],
+    [ "attackPerSecond", "class_user_data_manager_1_1_character_data.html#a6b2ad1ec9bb21da90eab747b59199901", null ],
+    [ "criticalChance", "class_user_data_manager_1_1_character_data.html#ae55287486704266aaf6620ed301c3280", null ],
+    [ "criticalDamage", "class_user_data_manager_1_1_character_data.html#a26ef9482fa9a880e15784ab26a4bab8d", null ],
+    [ "moveSpeed", "class_user_data_manager_1_1_character_data.html#aa6c9a903118d183a2e9cf72ccf958605", null ],
+    [ "SkinStatDictionary", "class_user_data_manager_1_1_character_data.html#ac4644de687b7949b2eba5fb6921a1f48", null ],
+    [ "treasureCriticalDamagePer", "class_user_data_manager_1_1_character_data.html#ae59734876b098b28945258c3771e4aa1", null ],
+    [ "treasureDamagePer", "class_user_data_manager_1_1_character_data.html#ae121d33d6b2e50dd385bc97d9a562713", null ],
+    [ "treasureEnemyGoldPer", "class_user_data_manager_1_1_character_data.html#a22a1a16365c29611b9c227f57c13a11f", null ],
+    [ "treasureExtraDamage", "class_user_data_manager_1_1_character_data.html#a47ca034623f3b40104fd0e15f0549dee", null ],
+    [ "treasureQuestGoldPer", "class_user_data_manager_1_1_character_data.html#acb5ddcdaebf56c645e269e066adde19a", null ],
+    [ "weaponDamage", "class_user_data_manager_1_1_character_data.html#a0d03b72e67e4fb10d728b007e8e35595", null ],
+    [ "AttackPerSecond", "class_user_data_manager_1_1_character_data.html#af48985d68d1212bfc8e3a10f46cb79d1", null ],
+    [ "CriticalChance", "class_user_data_manager_1_1_character_data.html#a6a36289666471b8367c43a685fa8c38e", null ],
+    [ "CriticalDamage", "class_user_data_manager_1_1_character_data.html#a4f6dcf77a3ec1c5894cad9edf9bd7296", null ],
+    [ "MoveSpeed", "class_user_data_manager_1_1_character_data.html#a78f1d28e72c11052e95c709659ed4768", null ],
+    [ "TreasureCriticalDamagePer", "class_user_data_manager_1_1_character_data.html#a110da2e03bb286defd91da1315e51d4d", null ],
+    [ "TreasureDamagePer", "class_user_data_manager_1_1_character_data.html#a35d081aab9c60bec6423f42cfa12a571", null ],
+    [ "TreasureEnemyGoldPer", "class_user_data_manager_1_1_character_data.html#af5108033f5af22596384a8397b1d9294", null ],
+    [ "TreasureExtraDamage", "class_user_data_manager_1_1_character_data.html#a4069c0fdaba88d020fd1fcf2f2349137", null ],
+    [ "TreasureQuestGoldPer", "class_user_data_manager_1_1_character_data.html#a2f96f182c0d0d0007912517faa39c937", null ],
+    [ "WeaponDamage", "class_user_data_manager_1_1_character_data.html#acc49fd9192020a86f8a9de0f9f3777ec", null ]
+];

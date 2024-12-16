@@ -1,0 +1,347 @@
+\doxysection{Mission\+Item\+View 클래스 참조}
+\hypertarget{class_mission_item_view}{}\label{class_mission_item_view}\index{MissionItemView@{MissionItemView}}
+
+
+Mission\+Item\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{class_mission_item_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mission_item_view_a920cbfc1368cd80482fcecea476e4885}{Init}} (Mission\+Table table, bool interactable, int cur\+Progress)
+\item 
+void \mbox{\hyperlink{class_mission_item_view_aa9b36174ca9849c43bf9742387f9fd46}{Update\+View}} (Mission\+Table table, bool interactable, int cur\+Progress)
+\item 
+void \mbox{\hyperlink{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48}{Set\+State}} (bool is\+Clear)
+\item 
+void \mbox{\hyperlink{class_mission_item_view_a2dcc22a79a088cec0cdefc8d6ffcd190}{Update\+Progress}} (int cur\+Value, int max\+Value)
+\item 
+void \mbox{\hyperlink{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4}{Set\+Title}} (Mission\+Table table)
+\item 
+string \mbox{\hyperlink{class_mission_item_view_a68f9094f9fbc9add945586c669583887}{Get\+Mission\+Target\+String}} (Mission\+Table table)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_mission_item_view_abc6c51f84b3fecd79ab258fa1e4f1b0f}{reward\+\_\+img}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_mission_item_view_a5349be3f647e374f110a68e374389740}{reward\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_mission_item_view_a4b2631d363e703cd6c9abe8995366e04}{progress\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_mission_item_view_a7c14b007f8bb804118d15df253ca4a35}{title\+\_\+txt}}
+\item 
+\mbox{\hyperlink{class_complete_button_view}{Complete\+Button\+View}} \mbox{\hyperlink{class_mission_item_view_aa023f87fab44c319998f5d8fbbdeb132}{complete\+Button\+View}}
+\item 
+Game\+Object \mbox{\hyperlink{class_mission_item_view_a8894eded0d3b2993884fb318a708514f}{disable\+Button}}
+\item 
+Game\+Object \mbox{\hyperlink{class_mission_item_view_af24b815de9acbb54716a6a2c860fa0b5}{clear\+\_\+img}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_mission_item_view_a68f9094f9fbc9add945586c669583887}\index{MissionItemView@{MissionItemView}!GetMissionTargetString@{GetMissionTargetString}}
+\index{GetMissionTargetString@{GetMissionTargetString}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{GetMissionTargetString()}{GetMissionTargetString()}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a68f9094f9fbc9add945586c669583887} 
+string Mission\+Item\+View.\+Get\+Mission\+Target\+String (\begin{DoxyParamCaption}\item[{Mission\+Table}]{table}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00076}{76}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ var\ missionType\ =\ table.MissionType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}>();}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (missionType)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestUpgrade:\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestClear:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ LocalizationManager.GetTranslation(QuestTableList.Get()[table.TargetNo].Name);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.WeaponUpgrade:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ LocalizationManager.GetTranslation(WeaponTableList.Get()[table.TargetNo].Name);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.DungeonClear:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Stage"{}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a68f9094f9fbc9add945586c669583887_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_mission_item_view_a920cbfc1368cd80482fcecea476e4885}\index{MissionItemView@{MissionItemView}!Init@{Init}}
+\index{Init@{Init}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a920cbfc1368cd80482fcecea476e4885} 
+void Mission\+Item\+View.\+Init (\begin{DoxyParamCaption}\item[{Mission\+Table}]{table}{, }\item[{bool}]{interactable}{, }\item[{int}]{cur\+Progress}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00018}{18}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ var\ missionRewardImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}MissionRewardImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ reward\_img.sprite\ =\ missionRewardImageResources[table.RewardType];}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ reward\_txt.text\ =\ \$\textcolor{stringliteral}{"{}\{table.Amount.ToBigInt().ToAlphabetNumber()\}"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4}{SetTitle}}(table);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48}{SetState}}(interactable);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a2dcc22a79a088cec0cdefc8d6ffcd190}{UpdateProgress}}(curProgress,\ table.CompleteCount);}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a920cbfc1368cd80482fcecea476e4885_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a920cbfc1368cd80482fcecea476e4885_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48}\index{MissionItemView@{MissionItemView}!SetState@{SetState}}
+\index{SetState@{SetState}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48} 
+void Mission\+Item\+View.\+Set\+State (\begin{DoxyParamCaption}\item[{bool}]{is\+Clear}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00040}{40}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_af24b815de9acbb54716a6a2c860fa0b5}{clear\_img}}.SetActive(isClear);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_aa023f87fab44c319998f5d8fbbdeb132}{completeButtonView}}.gameObject.SetActive(isClear);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_aa023f87fab44c319998f5d8fbbdeb132}{completeButtonView}}.\mbox{\hyperlink{class_complete_button_view_af784e254ce91089bb4644613682c377e}{SetInteractable}}(isClear);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a8894eded0d3b2993884fb318a708514f}{disableButton}}.SetActive(!isClear);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4}\index{MissionItemView@{MissionItemView}!SetTitle@{SetTitle}}
+\index{SetTitle@{SetTitle}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{SetTitle()}{SetTitle()}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4} 
+void Mission\+Item\+View.\+Set\+Title (\begin{DoxyParamCaption}\item[{Mission\+Table}]{table}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00055}{55}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ var\ nameStringFormat\ =\ LocalizationManager.GetTranslation(table.Name);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ var\ missionTargetString\ =\ \mbox{\hyperlink{class_mission_item_view_a68f9094f9fbc9add945586c669583887}{GetMissionTargetString}}(table);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ titleString\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (table.MissionType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}>())}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestUpgrade:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestClear:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.WeaponUpgrade:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.DungeonClear:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ titleString\ =\ \textcolor{keywordtype}{string}.Format(nameStringFormat,\ missionTargetString,\ table.CompleteCount);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.BuySkin:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ titleString\ =\ \textcolor{keywordtype}{string}.Format(nameStringFormat,\ table.CompleteCount);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ title\_txt.text\ =\ titleString;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_mission_item_view_a2dcc22a79a088cec0cdefc8d6ffcd190}\index{MissionItemView@{MissionItemView}!UpdateProgress@{UpdateProgress}}
+\index{UpdateProgress@{UpdateProgress}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{UpdateProgress()}{UpdateProgress()}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a2dcc22a79a088cec0cdefc8d6ffcd190} 
+void Mission\+Item\+View.\+Update\+Progress (\begin{DoxyParamCaption}\item[{int}]{cur\+Value}{, }\item[{int}]{max\+Value}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00048}{48}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ var\ progressStringFormat\ =\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Progress\_String\_Format"{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ var\ progressString\ =\ \textcolor{keywordtype}{string}.Format(progressStringFormat,\ curValue,\ maxValue);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ progress\_txt.text\ =\ progressString;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_a2dcc22a79a088cec0cdefc8d6ffcd190_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_mission_item_view_aa9b36174ca9849c43bf9742387f9fd46}\index{MissionItemView@{MissionItemView}!UpdateView@{UpdateView}}
+\index{UpdateView@{UpdateView}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{UpdateView()}{UpdateView()}}
+{\footnotesize\ttfamily \label{class_mission_item_view_aa9b36174ca9849c43bf9742387f9fd46} 
+void Mission\+Item\+View.\+Update\+View (\begin{DoxyParamCaption}\item[{Mission\+Table}]{table}{, }\item[{bool}]{interactable}{, }\item[{int}]{cur\+Progress}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00029}{29}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ var\ missionRewardImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}MissionRewardImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ reward\_img.sprite\ =\ missionRewardImageResources[table.RewardType];}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ reward\_txt.text\ =\ \$\textcolor{stringliteral}{"{}\{table.Amount.ToBigInt().ToAlphabetNumber()\}"{}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a77527748811cc5ad13ce7d62691f79b4}{SetTitle}}(table);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a3bdcf68b93a5afe71bed84ace744fb48}{SetState}}(interactable);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_item_view_a2dcc22a79a088cec0cdefc8d6ffcd190}{UpdateProgress}}(curProgress,\ table.CompleteCount);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_aa9b36174ca9849c43bf9742387f9fd46_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mission_item_view_aa9b36174ca9849c43bf9742387f9fd46_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_mission_item_view_af24b815de9acbb54716a6a2c860fa0b5}\index{MissionItemView@{MissionItemView}!clear\_img@{clear\_img}}
+\index{clear\_img@{clear\_img}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{clear\_img}{clear\_img}}
+{\footnotesize\ttfamily \label{class_mission_item_view_af24b815de9acbb54716a6a2c860fa0b5} 
+Game\+Object Mission\+Item\+View.\+clear\+\_\+img}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00016}{16}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_mission_item_view_aa023f87fab44c319998f5d8fbbdeb132}\index{MissionItemView@{MissionItemView}!completeButtonView@{completeButtonView}}
+\index{completeButtonView@{completeButtonView}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{completeButtonView}{completeButtonView}}
+{\footnotesize\ttfamily \label{class_mission_item_view_aa023f87fab44c319998f5d8fbbdeb132} 
+\mbox{\hyperlink{class_complete_button_view}{Complete\+Button\+View}} Mission\+Item\+View.\+complete\+Button\+View}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_mission_item_view_a8894eded0d3b2993884fb318a708514f}\index{MissionItemView@{MissionItemView}!disableButton@{disableButton}}
+\index{disableButton@{disableButton}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{disableButton}{disableButton}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a8894eded0d3b2993884fb318a708514f} 
+Game\+Object Mission\+Item\+View.\+disable\+Button}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_mission_item_view_a4b2631d363e703cd6c9abe8995366e04}\index{MissionItemView@{MissionItemView}!progress\_txt@{progress\_txt}}
+\index{progress\_txt@{progress\_txt}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{progress\_txt}{progress\_txt}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a4b2631d363e703cd6c9abe8995366e04} 
+TMP\+\_\+\+Text Mission\+Item\+View.\+progress\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_mission_item_view_abc6c51f84b3fecd79ab258fa1e4f1b0f}\index{MissionItemView@{MissionItemView}!reward\_img@{reward\_img}}
+\index{reward\_img@{reward\_img}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{reward\_img}{reward\_img}}
+{\footnotesize\ttfamily \label{class_mission_item_view_abc6c51f84b3fecd79ab258fa1e4f1b0f} 
+Image Mission\+Item\+View.\+reward\+\_\+img}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_mission_item_view_a5349be3f647e374f110a68e374389740}\index{MissionItemView@{MissionItemView}!reward\_txt@{reward\_txt}}
+\index{reward\_txt@{reward\_txt}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{reward\_txt}{reward\_txt}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a5349be3f647e374f110a68e374389740} 
+TMP\+\_\+\+Text Mission\+Item\+View.\+reward\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_mission_item_view_a7c14b007f8bb804118d15df253ca4a35}\index{MissionItemView@{MissionItemView}!title\_txt@{title\_txt}}
+\index{title\_txt@{title\_txt}!MissionItemView@{MissionItemView}}
+\doxysubsubsection{\texorpdfstring{title\_txt}{title\_txt}}
+{\footnotesize\ttfamily \label{class_mission_item_view_a7c14b007f8bb804118d15df253ca4a35} 
+TMP\+\_\+\+Text Mission\+Item\+View.\+title\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_mission_item_view_8cs_source}{Mission\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_mission_item_view_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+View/\+Item/\mbox{\hyperlink{_mission_item_view_8cs}{Mission\+Item\+View.\+cs}}\end{DoxyCompactItemize}

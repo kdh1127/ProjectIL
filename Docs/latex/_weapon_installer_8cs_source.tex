@@ -1,0 +1,59 @@
+\doxysection{Weapon\+Installer.\+cs}
+\hypertarget{_weapon_installer_8cs_source}{}\label{_weapon_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/WeaponInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/WeaponInstaller.cs}}
+\mbox{\hyperlink{_weapon_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00005}\mbox{\hyperlink{class_weapon_installer}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon_installer}{WeaponInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00007}\mbox{\hyperlink{class_weapon_installer_abf1dd36527d456a4070ce06886545dcd}{00007}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_weapon_panel_view}{WeaponPanelView}}\ \mbox{\hyperlink{class_weapon_installer_abf1dd36527d456a4070ce06886545dcd}{weaponPanelPrefab}};}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00008}\mbox{\hyperlink{class_weapon_installer_a0f3de7d3d93a417f93c62e557ae50590}{00008}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_weapon_item_view}{WeaponItemView}}\ \mbox{\hyperlink{class_weapon_installer_a0f3de7d3d93a417f93c62e557ae50590}{weaponItemPrefab}};}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00010}\mbox{\hyperlink{class_weapon_installer_a257864f60d50a8892b1643c7ed257dbd}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_installer_a257864f60d50a8892b1643c7ed257dbd}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_installer_a5b215b79bc475e30fcd55de54ca2dcd4}{WeaponBinding}}();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00015}\mbox{\hyperlink{class_weapon_installer_a5b215b79bc475e30fcd55de54ca2dcd4}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weapon_installer_a5b215b79bc475e30fcd55de54ca2dcd4}{WeaponBinding}}()}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_weapon_model}{WeaponModel}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_weapon_panel_view}{WeaponPanelView}}>()}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_weapon_installer_abf1dd36527d456a4070ce06886545dcd}{weaponPanelPrefab}})}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_weapon_presenter}{WeaponPresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ Container.BindFactory<\mbox{\hyperlink{class_weapon_item_view}{WeaponItemView}},\ \mbox{\hyperlink{class_weapon_item_view_factory}{WeaponItemViewFactory}}>()}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInNewPrefab(\mbox{\hyperlink{class_weapon_installer_a0f3de7d3d93a417f93c62e557ae50590}{weaponItemPrefab}})}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .UnderTransform(\mbox{\hyperlink{class_weapon_installer_abf1dd36527d456a4070ce06886545dcd}{weaponPanelPrefab}}.\mbox{\hyperlink{class_weapon_panel_view_a12e999d7851873a9b280f015a802c014}{content\_tr}})}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AsTransient();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<List<WeaponTable>>()}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(WeaponTableList.Get())}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_weapon_resources}{WeaponResources}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00039}\mbox{\hyperlink{class_weapon_item_view_factory}{00039}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon_item_view_factory}{WeaponItemViewFactory}}\ :\ PlaceholderFactory<WeaponItemView>\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00040}\mbox{\hyperlink{class_weapon_resources}{00040}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon_resources}{WeaponResources}}}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00042}\mbox{\hyperlink{class_weapon_resources_aae8e38272c121e469bddd68aefad5128}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Dictionary<string,\ Sprite>\ \mbox{\hyperlink{class_weapon_resources_aae8e38272c121e469bddd68aefad5128}{weapon}};}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00043}\mbox{\hyperlink{class_weapon_resources_aa7d3983cdceebd762cc1aad86b4b69d7}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Dictionary<string,\ Sprite>\ \mbox{\hyperlink{class_weapon_resources_aa7d3983cdceebd762cc1aad86b4b69d7}{cost}};}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00045}00045\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00046}\mbox{\hyperlink{class_weapon_resources_a9779a17f947decc2b73c0a7c091b7518}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_weapon_resources_a9779a17f947decc2b73c0a7c091b7518}{WeaponResources}}(}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ [Inject(Id\ =\ \textcolor{stringliteral}{"{}WeaponImage"{}})]\ Dictionary<string,\ Sprite>\ weaponImage,}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ [Inject(Id\ =\ \textcolor{stringliteral}{"{}CostImage"{}})]\ Dictionary<string,\ Sprite>\ costImage)}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ this.weapon\ =\ weaponImage;}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ this.cost\ =\ costImage;}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_installer_8cs_source_l00053}00053\ \}}
+
+\end{DoxyCode}

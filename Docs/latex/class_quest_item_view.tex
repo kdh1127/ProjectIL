@@ -1,0 +1,218 @@
+\doxysection{Quest\+Item\+View 클래스 참조}
+\hypertarget{class_quest_item_view}{}\label{class_quest_item_view}\index{QuestItemView@{QuestItemView}}
+
+
+Quest\+Item\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_quest_item_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quest_item_view_a29c7f834202aeabbc5128e0971503a4c}{Init}} (Sprite sprite, string \mbox{\hyperlink{class_quest_item_view_a73777e12fd9d48df0344054e90108e1d}{title}}, float end\+Time, int level, Big\+Integer reward)
+\item 
+void \mbox{\hyperlink{class_quest_item_view_a951d661f8cab70b8b200d115f5ab891a}{Progress\+Update}} (int cur\+Second, int end\+Time)
+\item 
+void \mbox{\hyperlink{class_quest_item_view_ac9a78ff9540596b237af29b72e9cbdf3}{Update\+Level}} (int level, string reward)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_quest_item_view_a392ef9d04f75f2af3efd86e49b77aaac}{quest\+\_\+img}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_quest_item_view_ab94a7b637c7e11245f80014a7e60d121}{title\+\_\+txt}}
+\item 
+Slider \mbox{\hyperlink{class_quest_item_view_a7f162b012fba1145c7e1bdb92f7ff0f3}{quest\+\_\+slider}}
+\item 
+\mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}} \mbox{\hyperlink{class_quest_item_view_a5fc81a07e49aeb751eefb95b9768aec9}{upgrade\+Button\+View}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_quest_item_view_a27aaca108e0109d60469bfe04e811cd4}{time\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_quest_item_view_a6cf8f23b2f05dfdd3dc1005c2d911236}{reward\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_quest_item_view_ae0fdd374310a12b52ba54f69c245bda7}{level\+\_\+txt}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_quest_item_view_a73777e12fd9d48df0344054e90108e1d}{title}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_quest_item_view_a29c7f834202aeabbc5128e0971503a4c}\index{QuestItemView@{QuestItemView}!Init@{Init}}
+\index{Init@{Init}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a29c7f834202aeabbc5128e0971503a4c} 
+void Quest\+Item\+View.\+Init (\begin{DoxyParamCaption}\item[{Sprite}]{sprite}{, }\item[{string}]{title}{, }\item[{float}]{end\+Time}{, }\item[{int}]{level}{, }\item[{Big\+Integer}]{reward}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ this.title\ =\ \mbox{\hyperlink{class_quest_item_view_a73777e12fd9d48df0344054e90108e1d}{title}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ var\ titleString\ =\ \$\textcolor{stringliteral}{"{}Lv.\{level\}\ \{LocalizationManager.GetTranslation(title)\}"{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ var\ timeString\ =\ \$\textcolor{stringliteral}{"{}\{TimeSpan.FromSeconds(endTime)\}"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ var\ rewardString\ =\ \$\textcolor{stringliteral}{"{}+\{reward.ToAlphabetNumber()\}"{}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ quest\_img.sprite\ =\ sprite;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ title\_txt.text\ =\ titleString;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ time\_txt.text\ =\ timeString;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ reward\_txt.text\ =\ rewardString;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_quest_item_view_a951d661f8cab70b8b200d115f5ab891a}\index{QuestItemView@{QuestItemView}!ProgressUpdate@{ProgressUpdate}}
+\index{ProgressUpdate@{ProgressUpdate}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{ProgressUpdate()}{ProgressUpdate()}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a951d661f8cab70b8b200d115f5ab891a} 
+void Quest\+Item\+View.\+Progress\+Update (\begin{DoxyParamCaption}\item[{int}]{cur\+Second}{, }\item[{int}]{end\+Time}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00032}{32}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ var\ progress\ =\ (float)curSecond\ /\ (\textcolor{keywordtype}{float})endTime;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ quest\_slider.value\ =\ progress;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ time\_txt.text\ =\ \$\textcolor{stringliteral}{"{}\{TimeSpan.FromSeconds(endTime\ -\/\ curSecond)\}"{}};}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_item_view_a951d661f8cab70b8b200d115f5ab891a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_quest_item_view_ac9a78ff9540596b237af29b72e9cbdf3}\index{QuestItemView@{QuestItemView}!UpdateLevel@{UpdateLevel}}
+\index{UpdateLevel@{UpdateLevel}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{UpdateLevel()}{UpdateLevel()}}
+{\footnotesize\ttfamily \label{class_quest_item_view_ac9a78ff9540596b237af29b72e9cbdf3} 
+void Quest\+Item\+View.\+Update\+Level (\begin{DoxyParamCaption}\item[{int}]{level}{, }\item[{string}]{reward}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00039}{39}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ var\ titleString\ =\ \$\textcolor{stringliteral}{"{}Lv.\{level\}\ \{LocalizationManager.GetTranslation(title)\}"{}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ var\ rewardString\ =\ \$\textcolor{stringliteral}{"{}+\{reward\}"{}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ title\_txt.text\ =\ titleString;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ reward\_txt.text\ =\ rewardString;}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_item_view_ac9a78ff9540596b237af29b72e9cbdf3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_quest_item_view_ae0fdd374310a12b52ba54f69c245bda7}\index{QuestItemView@{QuestItemView}!level\_txt@{level\_txt}}
+\index{level\_txt@{level\_txt}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{level\_txt}{level\_txt}}
+{\footnotesize\ttfamily \label{class_quest_item_view_ae0fdd374310a12b52ba54f69c245bda7} 
+TMP\+\_\+\+Text Quest\+Item\+View.\+level\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00016}{16}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_a392ef9d04f75f2af3efd86e49b77aaac}\index{QuestItemView@{QuestItemView}!quest\_img@{quest\_img}}
+\index{quest\_img@{quest\_img}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{quest\_img}{quest\_img}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a392ef9d04f75f2af3efd86e49b77aaac} 
+Image Quest\+Item\+View.\+quest\+\_\+img}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_a7f162b012fba1145c7e1bdb92f7ff0f3}\index{QuestItemView@{QuestItemView}!quest\_slider@{quest\_slider}}
+\index{quest\_slider@{quest\_slider}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{quest\_slider}{quest\_slider}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a7f162b012fba1145c7e1bdb92f7ff0f3} 
+Slider Quest\+Item\+View.\+quest\+\_\+slider}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_a6cf8f23b2f05dfdd3dc1005c2d911236}\index{QuestItemView@{QuestItemView}!reward\_txt@{reward\_txt}}
+\index{reward\_txt@{reward\_txt}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{reward\_txt}{reward\_txt}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a6cf8f23b2f05dfdd3dc1005c2d911236} 
+TMP\+\_\+\+Text Quest\+Item\+View.\+reward\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_a27aaca108e0109d60469bfe04e811cd4}\index{QuestItemView@{QuestItemView}!time\_txt@{time\_txt}}
+\index{time\_txt@{time\_txt}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{time\_txt}{time\_txt}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a27aaca108e0109d60469bfe04e811cd4} 
+TMP\+\_\+\+Text Quest\+Item\+View.\+time\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_a73777e12fd9d48df0344054e90108e1d}\index{QuestItemView@{QuestItemView}!title@{title}}
+\index{title@{title}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a73777e12fd9d48df0344054e90108e1d} 
+string Quest\+Item\+View.\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00018}{18}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_ab94a7b637c7e11245f80014a7e60d121}\index{QuestItemView@{QuestItemView}!title\_txt@{title\_txt}}
+\index{title\_txt@{title\_txt}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{title\_txt}{title\_txt}}
+{\footnotesize\ttfamily \label{class_quest_item_view_ab94a7b637c7e11245f80014a7e60d121} 
+TMP\+\_\+\+Text Quest\+Item\+View.\+title\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_item_view_a5fc81a07e49aeb751eefb95b9768aec9}\index{QuestItemView@{QuestItemView}!upgradeButtonView@{upgradeButtonView}}
+\index{upgradeButtonView@{upgradeButtonView}!QuestItemView@{QuestItemView}}
+\doxysubsubsection{\texorpdfstring{upgradeButtonView}{upgradeButtonView}}
+{\footnotesize\ttfamily \label{class_quest_item_view_a5fc81a07e49aeb751eefb95b9768aec9} 
+\mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}} Quest\+Item\+View.\+upgrade\+Button\+View}
+
+
+
+\mbox{\hyperlink{_quest_item_view_8cs_source}{Quest\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_quest_item_view_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+View/\+Item/\mbox{\hyperlink{_quest_item_view_8cs}{Quest\+Item\+View.\+cs}}\end{DoxyCompactItemize}

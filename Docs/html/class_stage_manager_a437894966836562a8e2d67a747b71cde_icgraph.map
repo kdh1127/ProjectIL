@@ -1,0 +1,5 @@
+<map id="StageManager.IncreaseStage" name="StageManager.IncreaseStage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="235,13,428,40"/>
+<area shape="rect" id="Node000002" href="$class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9" title=" " alt="" coords="5,5,187,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,29,187,29,187,24,219,24"/>
+</map>

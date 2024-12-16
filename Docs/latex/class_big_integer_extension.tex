@@ -1,0 +1,165 @@
+\doxysection{Big\+Integer\+Extension 클래스 참조}
+\hypertarget{class_big_integer_extension}{}\label{class_big_integer_extension}\index{BigIntegerExtension@{BigIntegerExtension}}
+
+
+Big\+Integer\+Extension에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_big_integer_extension__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_big_integer_extension_aa5f5ce9f299955f907a6cafc243abc9e}{To\+Int}} (this Big\+Integer value)
+\item 
+static string \mbox{\hyperlink{class_big_integer_extension_a3529998a0041d54ab008d509b22fb5d3}{To\+Alphabet\+Number}} (this Big\+Integer value)
+\item 
+static bool \mbox{\hyperlink{class_big_integer_extension_a16c40756d7a8bf1253108fdaa3c1f817}{Is\+Positive}} (this Big\+Integer value, Big\+Integer delta)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{정적 Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_big_integer_extension_a52e3b93194695d939626333d38475cda}{Get\+Alphabet\+Suffix}} (int exponent)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_big_integer_extension_8cs_source}{Big\+Integer\+Extension.\+cs}} 파일의 \mbox{\hyperlink{_big_integer_extension_8cs_source_l00005}{5}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_big_integer_extension_a52e3b93194695d939626333d38475cda}\index{BigIntegerExtension@{BigIntegerExtension}!GetAlphabetSuffix@{GetAlphabetSuffix}}
+\index{GetAlphabetSuffix@{GetAlphabetSuffix}!BigIntegerExtension@{BigIntegerExtension}}
+\doxysubsubsection{\texorpdfstring{GetAlphabetSuffix()}{GetAlphabetSuffix()}}
+{\footnotesize\ttfamily \label{class_big_integer_extension_a52e3b93194695d939626333d38475cda} 
+static string Big\+Integer\+Extension.\+Get\+Alphabet\+Suffix (\begin{DoxyParamCaption}\item[{int}]{exponent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_big_integer_extension_8cs_source}{Big\+Integer\+Extension.\+cs}} 파일의 \mbox{\hyperlink{_big_integer_extension_8cs_source_l00056}{56}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ result\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (exponent\ >\ 0)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ (char)(\textcolor{charliteral}{'A'}\ +\ (exponent\ -\/\ 1)\ \%\ 26)\ +\ result;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ exponent\ =\ (exponent\ -\/\ 1)\ /\ 26;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_big_integer_extension_a52e3b93194695d939626333d38475cda_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_big_integer_extension_a16c40756d7a8bf1253108fdaa3c1f817}\index{BigIntegerExtension@{BigIntegerExtension}!IsPositive@{IsPositive}}
+\index{IsPositive@{IsPositive}!BigIntegerExtension@{BigIntegerExtension}}
+\doxysubsubsection{\texorpdfstring{IsPositive()}{IsPositive()}}
+{\footnotesize\ttfamily \label{class_big_integer_extension_a16c40756d7a8bf1253108fdaa3c1f817} 
+static bool Big\+Integer\+Extension.\+Is\+Positive (\begin{DoxyParamCaption}\item[{this Big\+Integer}]{value}{, }\item[{Big\+Integer}]{delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{_big_integer_extension_8cs_source}{Big\+Integer\+Extension.\+cs}} 파일의 \mbox{\hyperlink{_big_integer_extension_8cs_source_l00051}{51}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (value\ +=\ delta)\ >=\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big_integer_extension_a3529998a0041d54ab008d509b22fb5d3}\index{BigIntegerExtension@{BigIntegerExtension}!ToAlphabetNumber@{ToAlphabetNumber}}
+\index{ToAlphabetNumber@{ToAlphabetNumber}!BigIntegerExtension@{BigIntegerExtension}}
+\doxysubsubsection{\texorpdfstring{ToAlphabetNumber()}{ToAlphabetNumber()}}
+{\footnotesize\ttfamily \label{class_big_integer_extension_a3529998a0041d54ab008d509b22fb5d3} 
+static string Big\+Integer\+Extension.\+To\+Alphabet\+Number (\begin{DoxyParamCaption}\item[{this Big\+Integer}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{_big_integer_extension_8cs_source}{Big\+Integer\+Extension.\+cs}} 파일의 \mbox{\hyperlink{_big_integer_extension_8cs_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ BigInteger\ baseValue\ =\ 1000;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <\ baseValue)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.ToString();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ exponent\ =\ 0;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (value\ >=\ BigInteger.Pow(baseValue,\ exponent\ +\ 1))}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ exponent++;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ BigInteger\ divisor\ =\ BigInteger.Pow(baseValue,\ exponent);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ BigInteger\ wholePart\ =\ value\ /\ divisor;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ BigInteger\ remainder\ =\ value\ \%\ divisor;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ formattedNumber\ =\ wholePart.ToString();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (remainder\ >\ 0)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ decimalPart\ =\ (double)remainder\ /\ (\textcolor{keywordtype}{double})divisor;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ formattedNumber\ +=\ Math.Round(decimalPart,\ 1).ToString().Substring(1);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ alphabetPart\ =\ \mbox{\hyperlink{class_big_integer_extension_a52e3b93194695d939626333d38475cda}{GetAlphabetSuffix}}(exponent);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ formattedNumber\ +\ alphabetPart;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_big_integer_extension_a3529998a0041d54ab008d509b22fb5d3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_big_integer_extension_aa5f5ce9f299955f907a6cafc243abc9e}\index{BigIntegerExtension@{BigIntegerExtension}!ToInt@{ToInt}}
+\index{ToInt@{ToInt}!BigIntegerExtension@{BigIntegerExtension}}
+\doxysubsubsection{\texorpdfstring{ToInt()}{ToInt()}}
+{\footnotesize\ttfamily \label{class_big_integer_extension_aa5f5ce9f299955f907a6cafc243abc9e} 
+static int Big\+Integer\+Extension.\+To\+Int (\begin{DoxyParamCaption}\item[{this Big\+Integer}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{_big_integer_extension_8cs_source}{Big\+Integer\+Extension.\+cs}} 파일의 \mbox{\hyperlink{_big_integer_extension_8cs_source_l00007}{7}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <=\ int.MaxValue\ \&\&\ value\ >=\ \textcolor{keywordtype}{int}.MinValue)}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})value;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}Not\ Convert\ BigInteger\ to\ int\ value"{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Extension/\mbox{\hyperlink{_big_integer_extension_8cs}{Big\+Integer\+Extension.\+cs}}\end{DoxyCompactItemize}

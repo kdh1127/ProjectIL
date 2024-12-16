@@ -1,0 +1,115 @@
+\doxysection{Treasure\+Model.\+cs}
+\hypertarget{_treasure_model_8cs_source}{}\label{_treasure_model_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/TreasureModel.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/TreasureModel.cs}}
+\mbox{\hyperlink{_treasure_model_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00008}\mbox{\hyperlink{class_treasure_item_model}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_treasure_item_model}{TreasureItemModel}}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00010}\mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ ReactiveProperty<int>\ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}\ =\ \textcolor{keyword}{new}(0);}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00011}\mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{00011}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ TreasureTable\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00012}\mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_key}{CurrencyModel.Key}}\ \mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00014}\mbox{\hyperlink{class_treasure_item_model_a1b6a6752c814223f0c815c4fbfcdb42f}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_treasure_item_model_a1b6a6752c814223f0c815c4fbfcdb42f}{TreasureItemModel}}(TreasureTable\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}}\ ,\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_key}{Key}}\ \mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}})}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ this.table\ =\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ this.key\ =\ \mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00020}\mbox{\hyperlink{class_treasure_item_model_a757fd3c0596a0e8dd76f07b65a7e0287}{00020}}\ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_character_data}{UserDataManager.CharacterData}}\ \mbox{\hyperlink{class_treasure_item_model_a757fd3c0596a0e8dd76f07b65a7e0287}{characterData}}\ =>\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aa5e6bcdaedef8c14c6b3b0781d3fb962}{characterData}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00023}\mbox{\hyperlink{class_treasure_item_model_ac382707e071c6f5fe48302565d2ff946}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_treasure_item_model_ac382707e071c6f5fe48302565d2ff946}{Upgrade}}()}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ var\ type\ =\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}}.IncreaseType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_a210a10ec3df5bb8c9d630a134dece9a9}{EIncreaseType}}>();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ var\ cost\ =\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}}.TreasureCost.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(type)}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a210a10ec3df5bb8c9d630a134dece9a9}{EIncreaseType}}.EnemyGold:}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}}.Subtract(\mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{GetCost}}()))}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ characterData.TreasureEnemyGoldPer\ =\ \mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{GetIncreaseValue}}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a210a10ec3df5bb8c9d630a134dece9a9}{EIncreaseType}}.QuestGold:}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}}.Subtract(\mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{GetCost}}()))}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ characterData.TreasureQuestGoldPer\ =\ \mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{GetIncreaseValue}}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a210a10ec3df5bb8c9d630a134dece9a9}{EIncreaseType}}.CriticalDamage:}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}}.Subtract(\mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{GetCost}}()))}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ characterData.TreasureCriticalDamagePer\ =\ \mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{GetIncreaseValue}}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a210a10ec3df5bb8c9d630a134dece9a9}{EIncreaseType}}.Damage:}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}}.Subtract(\mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{GetCost}}()))}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ characterData.TreasureDamagePer\ =\ \mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{GetIncreaseValue}}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a210a10ec3df5bb8c9d630a134dece9a9}{EIncreaseType}}.ExtraDamage:}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_treasure_item_model_aad87e444a8154b24e6112211f8941676}{key}}.Subtract(\mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{GetCost}}()))}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}.Value++;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ characterData.TreasureExtraDamage\ =\ \mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{GetIncreaseValue}}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a9966798d8d32c7da9d71b67a0adaaccc}{treasureData}}.\mbox{\hyperlink{class_user_data_manager_1_1_treasure_data_a76e6818ff0ef6d9d8532f3d17f5146a9}{treasureList}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ data[\mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}}.TreasureNo].level\ =\ \mbox{\hyperlink{class_treasure_item_model_a560f740affbff7756654a1bcc02c3ce2}{level}}.Value;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00071}\mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{00071}}\ \ \ \ \ \textcolor{keyword}{public}\ BigInteger\ \mbox{\hyperlink{class_treasure_item_model_ace619c4890040b1ce73ad43851a6d95e}{GetIncreaseValue}}()}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ level.Value\ *\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}}.Increase.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00076}\mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ BigInteger\ \mbox{\hyperlink{class_treasure_item_model_ae3913dd34eb852407049793f105276df}{GetCost}}()}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ var\ baseCost\ =\ \mbox{\hyperlink{class_treasure_item_model_af82f5928b85a68d30a72830814fbcd38}{table}}.TreasureCost.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ baseCost\ +\ (baseCost\ *\ level.Value\ *\ 12\ /\ 100);}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00083}\mbox{\hyperlink{class_treasure_model}{00083}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_treasure_model}{TreasureModel}}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00084}00084\ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00085}\mbox{\hyperlink{class_treasure_model_a0eb7673e6de710680e0d192962bdb100}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ readonly\ List<TreasureTable>\ \mbox{\hyperlink{class_treasure_model_a0eb7673e6de710680e0d192962bdb100}{treasureTableList}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00086}\mbox{\hyperlink{class_treasure_model_a5fae64b90fa45250d2aa72895e9fd6fc}{00086}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_key}{CurrencyModel.Key}}\ \mbox{\hyperlink{class_treasure_model_a5fae64b90fa45250d2aa72895e9fd6fc}{key}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00088}\mbox{\hyperlink{class_treasure_model_aa558e805213a1bee99ea2a4617b41abc}{00088}}\ \ \ \ \ \textcolor{keyword}{public}\ List<TreasureItemModel>\ \mbox{\hyperlink{class_treasure_model_aa558e805213a1bee99ea2a4617b41abc}{treasureItemList}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00091}00091\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00092}\mbox{\hyperlink{class_treasure_model_a756f1b413a76435718fe5b4912f55ab9}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_treasure_model_a756f1b413a76435718fe5b4912f55ab9}{TreasureModel}}(List<TreasureTable>\ \mbox{\hyperlink{class_treasure_model_a0eb7673e6de710680e0d192962bdb100}{treasureTableList}},\ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_key}{Key}}\ \mbox{\hyperlink{class_treasure_model_a5fae64b90fa45250d2aa72895e9fd6fc}{key}})}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ this.treasureTableList\ =\ \mbox{\hyperlink{class_treasure_model_a0eb7673e6de710680e0d192962bdb100}{treasureTableList}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ this.key\ =\ \mbox{\hyperlink{class_treasure_model_a5fae64b90fa45250d2aa72895e9fd6fc}{key}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00097}00097\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00098}\mbox{\hyperlink{class_treasure_model_a6cdd026b618f27bdb236c15502cac2cf}{00098}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_treasure_model_a6cdd026b618f27bdb236c15502cac2cf}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a9966798d8d32c7da9d71b67a0adaaccc}{treasureData}}.\mbox{\hyperlink{class_user_data_manager_1_1_treasure_data_a76e6818ff0ef6d9d8532f3d17f5146a9}{treasureList}};}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_model_aa558e805213a1bee99ea2a4617b41abc}{treasureItemList}}.Clear();}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_model_a0eb7673e6de710680e0d192962bdb100}{treasureTableList}}.ForEach(table\ =>}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ var\ treasureItem\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_treasure_item_model}{TreasureItemModel}}(table,\ \mbox{\hyperlink{class_treasure_model_a5fae64b90fa45250d2aa72895e9fd6fc}{key}});}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ treasureItem.level.Value\ =\ data[table.TreasureNo].level;}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_treasure_model_aa558e805213a1bee99ea2a4617b41abc}{treasureItemList}}.Add(treasureItem);}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_treasure_model_8cs_source_l00109}00109\ \}}
+
+\end{DoxyCode}

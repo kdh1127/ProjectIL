@@ -1,0 +1,5 @@
+<map id="WeaponItemView.UpdateLevelText" name="WeaponItemView.UpdateLevelText">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,230,32"/>
+<area shape="rect" id="Node000002" href="$class_weapon_item_view.html#a61dd3326aceee445e7f6f7f9a478f537" title=" " alt="" coords="278,5,490,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,16,262,16,262,21,230,21"/>
+</map>

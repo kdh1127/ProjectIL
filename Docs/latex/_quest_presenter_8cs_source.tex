@@ -1,0 +1,126 @@
+\doxysection{Quest\+Presenter.\+cs}
+\hypertarget{_quest_presenter_8cs_source}{}\label{_quest_presenter_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/QuestPresenter.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/QuestPresenter.cs}}
+\mbox{\hyperlink{_quest_presenter_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }I2.Loc;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00008}\mbox{\hyperlink{class_quest_presenter}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quest_presenter}{QuestPresenter}}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00010}\mbox{\hyperlink{class_quest_presenter_a0d4f0236cd8a0410f53266447e2dbb7b}{00010}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_quest_model}{QuestModel}}\ \mbox{\hyperlink{class_quest_presenter_a0d4f0236cd8a0410f53266447e2dbb7b}{model}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00011}\mbox{\hyperlink{class_quest_presenter_ad26e65c9608fcf58ce3a52b2eeb1db16}{00011}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_quest_panel_view}{QuestPanelView}}\ \mbox{\hyperlink{class_quest_presenter_ad26e65c9608fcf58ce3a52b2eeb1db16}{view}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00012}\mbox{\hyperlink{class_quest_presenter_a3586c219fae5f09f3f15cb65f176793f}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_quest_item_view_factory}{QuestItemViewFactory}}\ \mbox{\hyperlink{class_quest_presenter_a3586c219fae5f09f3f15cb65f176793f}{questItemViewFactory}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00013}\mbox{\hyperlink{class_quest_presenter_a4c5ac441854b36e6f177dee39394bf6a}{00013}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_quest_resources}{QuestResources}}\ \mbox{\hyperlink{class_quest_presenter_a4c5ac441854b36e6f177dee39394bf6a}{resources}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00014}\mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_gold}{CurrencyModel.Gold}}\ \mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00015}\mbox{\hyperlink{class_quest_presenter_a8952bf8944b542e40b13d9911fab52fa}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<QuestTable>\ \mbox{\hyperlink{class_quest_presenter_a8952bf8944b542e40b13d9911fab52fa}{questTable}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00017}00017\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00018}\mbox{\hyperlink{class_quest_presenter_af3a3327a247529daebc40539fa69349e}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_quest_presenter_af3a3327a247529daebc40539fa69349e}{QuestPresenter}}(}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model}{QuestModel}}\ \mbox{\hyperlink{class_quest_presenter_a0d4f0236cd8a0410f53266447e2dbb7b}{model}},}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_panel_view}{QuestPanelView}}\ \mbox{\hyperlink{class_quest_presenter_ad26e65c9608fcf58ce3a52b2eeb1db16}{view}},}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_item_view_factory}{QuestItemViewFactory}}\ \mbox{\hyperlink{class_quest_presenter_a3586c219fae5f09f3f15cb65f176793f}{questItemViewFactory}},}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_resources}{QuestResources}}\ \mbox{\hyperlink{class_quest_presenter_a4c5ac441854b36e6f177dee39394bf6a}{resources}},}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ List<QuestTable>\ \mbox{\hyperlink{class_quest_presenter_a8952bf8944b542e40b13d9911fab52fa}{questTable}},}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_gold}{Gold}}\ \mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}})}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{class_quest_presenter_a0d4f0236cd8a0410f53266447e2dbb7b}{model}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ this.view\ =\ \mbox{\hyperlink{class_quest_presenter_ad26e65c9608fcf58ce3a52b2eeb1db16}{view}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ this.questItemViewFactory\ =\ \mbox{\hyperlink{class_quest_presenter_a3586c219fae5f09f3f15cb65f176793f}{questItemViewFactory}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ this.resources\ =\ \mbox{\hyperlink{class_quest_presenter_a4c5ac441854b36e6f177dee39394bf6a}{resources}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ this.questTable\ =\ \mbox{\hyperlink{class_quest_presenter_a8952bf8944b542e40b13d9911fab52fa}{questTable}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00035}\mbox{\hyperlink{class_quest_presenter_a435b09885d569bd1efa2829152e6eddc}{00035}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_presenter_a435b09885d569bd1efa2829152e6eddc}{Subscribe}}()}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_presenter_a8952bf8944b542e40b13d9911fab52fa}{questTable}}.ForEach(table\ =>}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ itemView\ =\ \mbox{\hyperlink{class_quest_presenter_adc59f4fc25ceb3ad6e736ceb7828a1fc}{CreateQuestItemView}}(table);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ itemModel\ =\ \mbox{\hyperlink{class_quest_presenter_a0d4f0236cd8a0410f53266447e2dbb7b}{model}}.\mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}[table.QuestNo];}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_presenter_ad8db3a6a1f53088cf69c7b26ab3fe994}{SubscribeToUpgradeButton}}(itemModel,\ itemView);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_presenter_a53d568fe1d3dbe4753bf8761eb9ade24}{SubscribeToQuestItemModel}}(itemModel,\ itemView,\ table);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_presenter_a608736909963011f98dd87a2e184aa24}{SubscribeToProgressBar}}(itemModel,\ itemView,\ table.Time);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00048}\mbox{\hyperlink{class_quest_presenter_adc59f4fc25ceb3ad6e736ceb7828a1fc}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_quest_item_view}{QuestItemView}}\ \mbox{\hyperlink{class_quest_presenter_adc59f4fc25ceb3ad6e736ceb7828a1fc}{CreateQuestItemView}}(QuestTable\ table)}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Instantiate}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ var\ itemView\ =\ \mbox{\hyperlink{class_quest_presenter_a3586c219fae5f09f3f15cb65f176793f}{questItemViewFactory}}.Create();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ var\ itemModel\ =\ \mbox{\hyperlink{class_quest_presenter_a0d4f0236cd8a0410f53266447e2dbb7b}{model}}.\mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}[table.QuestNo];}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ var\ cachedIncrease\ =\ table.Increase.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ var\ cachedCost\ =\ table.Cost.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ }}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ itemView.Init(}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ sprite:\ \mbox{\hyperlink{class_quest_presenter_a4c5ac441854b36e6f177dee39394bf6a}{resources}}.\mbox{\hyperlink{class_quest_resources_ab63ca6a012fe41ae3f09210d631d6f4b}{quest}}[table.Image],}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ title:\ table.Name,}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ endTime:\ table.Time,}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ level:\ itemModel.m\_level.Value,}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ reward:\ itemModel.GetReward());}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.Init(}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ increase:\ cachedIncrease,}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ cost:\ cachedCost,}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ costImage:\ \mbox{\hyperlink{class_quest_presenter_a4c5ac441854b36e6f177dee39394bf6a}{resources}}.\mbox{\hyperlink{class_quest_resources_a2b7cedaeef92f500f9254ee3ce058c26}{cost}}[\textcolor{stringliteral}{"{}Gold"{}}]);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ var\ cost\ =\ itemModel.GetCost().ToAlphabetNumber();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ var\ increase\ =\ table.LvIncreaseValue.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.UpdateView(}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ increase:\ itemModel.m\_level.Value\ >\ 0\ ?\ \$\textcolor{stringliteral}{"{}+\{increase.ToAlphabetNumber()\}"{}}\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Buy"{}}),}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ cost:\ cost);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ itemView;}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00079}\mbox{\hyperlink{class_quest_presenter_ad8db3a6a1f53088cf69c7b26ab3fe994}{00079}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_presenter_ad8db3a6a1f53088cf69c7b26ab3fe994}{SubscribeToUpgradeButton}}(\mbox{\hyperlink{class_quest_item_model}{QuestItemModel}}\ itemModel,\ \mbox{\hyperlink{class_quest_item_view}{QuestItemView}}\ itemView)}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ var\ upgradeButtonView\ =\ itemView.\mbox{\hyperlink{class_quest_item_view_a5fc81a07e49aeb751eefb95b9768aec9}{upgradeButtonView}};}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ upgradeButtonView.\mbox{\hyperlink{class_upgrade_button_view_aa39e9434c430ab5271681d2d0040cef6}{button}}.OnClickAsObservable()}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ .Where(\_\ =>\ \mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}}.CanSubtract(itemModel.\mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{GetCost}}()))}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>\ itemModel.\mbox{\hyperlink{class_quest_item_model_a988094870f2ed436a302434a4e3ff635}{IncreaseLevel}}())}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ .AddTo(upgradeButtonView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}}.Subscribe(\mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}}\ =>}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeButtonView.SetInteractable(\mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}}\ >=\ itemModel.\mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{GetCost}}());}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \}).AddTo(upgradeButtonView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00094}\mbox{\hyperlink{class_quest_presenter_a53d568fe1d3dbe4753bf8761eb9ade24}{00094}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_presenter_a53d568fe1d3dbe4753bf8761eb9ade24}{SubscribeToQuestItemModel}}(\mbox{\hyperlink{class_quest_item_model}{QuestItemModel}}\ itemModel,\ \mbox{\hyperlink{class_quest_item_view}{QuestItemView}}\ itemView,\ QuestTable\ table)}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00095}00095\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ itemModel.m\_elpasedTime}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ .Subscribe(time\ =>\ \ itemView.\mbox{\hyperlink{class_quest_item_view_a951d661f8cab70b8b200d115f5ab891a}{ProgressUpdate}}(time,\ table.Time))}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ .AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}.Subscribe(level\ =>}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ var\ reward\ =\ itemModel.\mbox{\hyperlink{class_quest_item_model_aa38d5fafda6ffc839a5a2a19afab7d5f}{GetReward}}().ToAlphabetNumber();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ var\ increase\ =\ table.LvIncreaseValue.ToBigInt();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ var\ cost\ =\ itemModel.\mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{GetCost}}().ToAlphabetNumber();}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_quest_item_view_ac9a78ff9540596b237af29b72e9cbdf3}{UpdateLevel}}(level,\ reward);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_quest_item_view_a5fc81a07e49aeb751eefb95b9768aec9}{upgradeButtonView}}.\mbox{\hyperlink{class_upgrade_button_view_a563bc87d565b9d9ca75a89805e74f0df}{UpdateView}}(}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ increase:\ itemModel.\mbox{\hyperlink{class_quest_item_model_ae696e6a20539cc1468e3beec227837bb}{m\_level}}.Value\ >\ 0\ ?\ \$\textcolor{stringliteral}{"{}+\{increase.ToAlphabetNumber()\}"{}}\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Buy"{}}),}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cost:\ cost);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_quest_item_view_a5fc81a07e49aeb751eefb95b9768aec9}{upgradeButtonView}}.\mbox{\hyperlink{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8}{SetInteractable}}(\mbox{\hyperlink{class_quest_presenter_a6d61e6ba98b510514d821e77357ccf64}{gold}}.CanSubtract(itemModel.\mbox{\hyperlink{class_quest_item_model_a50a45531798a133ac18ccd8678f5e01a}{GetCost}}()));}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \}).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00113}\mbox{\hyperlink{class_quest_presenter_a608736909963011f98dd87a2e184aa24}{00113}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_presenter_a608736909963011f98dd87a2e184aa24}{SubscribeToProgressBar}}(\mbox{\hyperlink{class_quest_item_model}{QuestItemModel}}\ itemModel,\ \mbox{\hyperlink{class_quest_item_view}{QuestItemView}}\ itemView,\ \textcolor{keywordtype}{int}\ endTime)}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00114}00114\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ Observable.Interval(TimeSpan.FromSeconds(1))}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ .Where(\_\ =>\ itemModel.\mbox{\hyperlink{class_quest_item_model_a4e0667995f889635b2e210867e855bed}{IsOn}})}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>\ itemModel.\mbox{\hyperlink{class_quest_item_model_a785f8c53cb2d1ebb5b3a4b7f946e9367}{Progress}}(endTime))}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ .AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_quest_presenter_8cs_source_l00120}00120\ \}}
+
+\end{DoxyCode}

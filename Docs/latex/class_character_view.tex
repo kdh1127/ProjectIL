@@ -1,0 +1,365 @@
+\doxysection{Character\+View 클래스 참조}
+\hypertarget{class_character_view}{}\label{class_character_view}\index{CharacterView@{CharacterView}}
+
+
+Character\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_character_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{Hand\+Type}} \{ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758}{LEFT}}
+, \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403}{RIGHT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_view_ac272429756a1db22242152725a3e4480}{Set\+Attack\+Speed}} (float speed)
+\item 
+void \mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{Set\+Run\+Speed}} (float speed)
+\item 
+void \mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{Set\+Weapon}} (Sprite sprite, \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{Hand\+Type}} hand\+Type=\mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403}{Hand\+Type.\+RIGHT}})
+\item 
+void \mbox{\hyperlink{class_character_view_ab0af0b526c070e59185913218f53a71a}{Move}} (float move\+Speed)
+\item 
+void \mbox{\hyperlink{class_character_view_ac769dd6f8157edb2b4fb2c8ba03e94bc}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_character_view_a80b2f61c8c651b02b2f53ac1fbadce04}{On\+Trigger\+Stay2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_character_view_a9f69b951b947223ba0f543925ef7ec57}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_character_view_adbed8dc5d263f3076a9db009e05d7a00}{On\+Hit\+Attack\+Animation}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{is\+Collision}} = false
+\item 
+Game\+Object \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}
+\item 
+Subject$<$ Game\+Object $>$ \mbox{\hyperlink{class_character_view_a591879e636f7fc52f28ca4c315f62ba3}{Attack\+Subject}} = new()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{속성}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}} \mbox{\hyperlink{class_character_view_a2bcbd6129203f563e384dc2c568d8509}{animator}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_character_view_accd594939f9fa1384efdab81fe8147f6}{weapon\+\_\+r}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_character_view_a87489fd153354b49472e8512d9fb3b57}{weapon\+\_\+l}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 열거형 문서화}
+\Hypertarget{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}\index{CharacterView@{CharacterView}!HandType@{HandType}}
+\index{HandType@{HandType}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{HandType}{HandType}}
+{\footnotesize\ttfamily \label{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc} 
+enum \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{Character\+View.\+Hand\+Type}}}
+
+\begin{DoxyEnumFields}[2]{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!CharacterView@{CharacterView}}\index{CharacterView@{CharacterView}!LEFT@{LEFT}}}\Hypertarget{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758}\label{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!CharacterView@{CharacterView}}\index{CharacterView@{CharacterView}!RIGHT@{RIGHT}}}\Hypertarget{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403}\label{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc} 
+RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758}{LEFT}},\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403}{RIGHT}}\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_character_view_ab0af0b526c070e59185913218f53a71a}\index{CharacterView@{CharacterView}!Move@{Move}}
+\index{Move@{Move}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily \label{class_character_view_ab0af0b526c070e59185913218f53a71a} 
+void Character\+View.\+Move (\begin{DoxyParamCaption}\item[{float}]{move\+Speed}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00046}{46}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ transform.Translate(moveSpeed\ *\ Time.smoothDeltaTime\ *\ Vector2.right);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_view_ab0af0b526c070e59185913218f53a71a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_view_adbed8dc5d263f3076a9db009e05d7a00}\index{CharacterView@{CharacterView}!OnHitAttackAnimation@{OnHitAttackAnimation}}
+\index{OnHitAttackAnimation@{OnHitAttackAnimation}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{OnHitAttackAnimation()}{OnHitAttackAnimation()}}
+{\footnotesize\ttfamily \label{class_character_view_adbed8dc5d263f3076a9db009e05d7a00} 
+void Character\+View.\+On\+Hit\+Attack\+Animation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00078}{78}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a591879e636f7fc52f28ca4c315f62ba3}{AttackSubject}}.OnNext(\mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}});}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_character_view_ac769dd6f8157edb2b4fb2c8ba03e94bc}\index{CharacterView@{CharacterView}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily \label{class_character_view_ac769dd6f8157edb2b4fb2c8ba03e94bc} 
+void Character\+View.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00051}{51}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision.CompareTag(\textcolor{stringliteral}{"{}Monster"{}}))}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}\ =\ collision.gameObject;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_character_view_a9f69b951b947223ba0f543925ef7ec57}\index{CharacterView@{CharacterView}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily \label{class_character_view_a9f69b951b947223ba0f543925ef7ec57} 
+void Character\+View.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00069}{69}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision.CompareTag(\textcolor{stringliteral}{"{}Monster"{}}))}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_character_view_a80b2f61c8c651b02b2f53ac1fbadce04}\index{CharacterView@{CharacterView}!OnTriggerStay2D@{OnTriggerStay2D}}
+\index{OnTriggerStay2D@{OnTriggerStay2D}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay2D()}{OnTriggerStay2D()}}
+{\footnotesize\ttfamily \label{class_character_view_a80b2f61c8c651b02b2f53ac1fbadce04} 
+void Character\+View.\+On\+Trigger\+Stay2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00060}{60}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision.CompareTag(\textcolor{stringliteral}{"{}Monster"{}}))}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}\ =\ collision.gameObject;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_character_view_ac272429756a1db22242152725a3e4480}\index{CharacterView@{CharacterView}!SetAttackSpeed@{SetAttackSpeed}}
+\index{SetAttackSpeed@{SetAttackSpeed}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{SetAttackSpeed()}{SetAttackSpeed()}}
+{\footnotesize\ttfamily \label{class_character_view_ac272429756a1db22242152725a3e4480} 
+void Character\+View.\+Set\+Attack\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00021}{21}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetFloat(\textcolor{stringliteral}{"{}AttackSpeed"{}},\ speed);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_view_ac272429756a1db22242152725a3e4480_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_view_ae783345505bb1d7b68592ba4ec97a596}\index{CharacterView@{CharacterView}!SetRunSpeed@{SetRunSpeed}}
+\index{SetRunSpeed@{SetRunSpeed}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{SetRunSpeed()}{SetRunSpeed()}}
+{\footnotesize\ttfamily \label{class_character_view_ae783345505bb1d7b68592ba4ec97a596} 
+void Character\+View.\+Set\+Run\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00026}{26}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetFloat(\textcolor{stringliteral}{"{}RunSpeed"{}},\ speed);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_view_ae783345505bb1d7b68592ba4ec97a596_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_view_a316030b6abd645d519b345b40e50680a}\index{CharacterView@{CharacterView}!SetWeapon@{SetWeapon}}
+\index{SetWeapon@{SetWeapon}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{SetWeapon()}{SetWeapon()}}
+{\footnotesize\ttfamily \label{class_character_view_a316030b6abd645d519b345b40e50680a} 
+void Character\+View.\+Set\+Weapon (\begin{DoxyParamCaption}\item[{Sprite}]{sprite}{, }\item[{\mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{Hand\+Type}}}]{hand\+Type}{ = {\ttfamily \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403}{Hand\+Type\+::\+RIGHT}}}}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00031}{31}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ weapon\_l.transform.localPosition\ =\ \textcolor{keyword}{new}\ Vector3(0,\ sprite.rect.size.y\ /\ 100,\ 0);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ weapon\_r.transform.localPosition\ =\ \textcolor{keyword}{new}\ Vector3(0,\ sprite.rect.size.y\ /\ 100,\ 0);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (handType)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}.LEFT:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ weapon\_l.sprite\ =\ sprite;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}.RIGHT:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ weapon\_r.sprite\ =\ sprite;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_view_a316030b6abd645d519b345b40e50680a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_character_view_a2bcbd6129203f563e384dc2c568d8509}\index{CharacterView@{CharacterView}!animator@{animator}}
+\index{animator@{animator}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily \label{class_character_view_a2bcbd6129203f563e384dc2c568d8509} 
+\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}} Character\+View.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_character_view_a591879e636f7fc52f28ca4c315f62ba3}\index{CharacterView@{CharacterView}!AttackSubject@{AttackSubject}}
+\index{AttackSubject@{AttackSubject}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{AttackSubject}{AttackSubject}}
+{\footnotesize\ttfamily \label{class_character_view_a591879e636f7fc52f28ca4c315f62ba3} 
+Subject$<$Game\+Object$>$ Character\+View.\+Attack\+Subject = new()}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}\index{CharacterView@{CharacterView}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{isCollision}{isCollision}}
+{\footnotesize\ttfamily \label{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d} 
+bool Character\+View.\+is\+Collision = false}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00017}{17}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}\index{CharacterView@{CharacterView}!target@{target}}
+\index{target@{target}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \label{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1} 
+Game\+Object Character\+View.\+target}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00018}{18}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_character_view_a87489fd153354b49472e8512d9fb3b57}\index{CharacterView@{CharacterView}!weapon\_l@{weapon\_l}}
+\index{weapon\_l@{weapon\_l}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{weapon\_l}{weapon\_l}}
+{\footnotesize\ttfamily \label{class_character_view_a87489fd153354b49472e8512d9fb3b57} 
+Sprite\+Renderer Character\+View.\+weapon\+\_\+l\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_character_view_accd594939f9fa1384efdab81fe8147f6}\index{CharacterView@{CharacterView}!weapon\_r@{weapon\_r}}
+\index{weapon\_r@{weapon\_r}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{weapon\_r}{weapon\_r}}
+{\footnotesize\ttfamily \label{class_character_view_accd594939f9fa1384efdab81fe8147f6} 
+Sprite\+Renderer Character\+View.\+weapon\+\_\+r\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{속성 문서화}
+\Hypertarget{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}\index{CharacterView@{CharacterView}!Animator@{Animator}}
+\index{Animator@{Animator}!CharacterView@{CharacterView}}
+\doxysubsubsection{\texorpdfstring{Animator}{Animator}}
+{\footnotesize\ttfamily \label{class_character_view_a21995e9d09c28f041b4c9e1864eaad22} 
+Animator Character\+View.\+Animator\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+\mbox{\hyperlink{_character_view_8cs_source}{Character\+View.\+cs}} 파일의 \mbox{\hyperlink{_character_view_8cs_source_l00016}{16}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+View/\mbox{\hyperlink{_character_view_8cs}{Character\+View.\+cs}}\end{DoxyCompactItemize}

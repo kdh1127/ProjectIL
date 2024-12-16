@@ -1,0 +1,7 @@
+<map id="MonsterModel.TakeDamage" name="MonsterModel.TakeDamage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="430,13,614,40"/>
+<area shape="rect" id="Node000002" href="$class_battle_presenter.html#a5c7ee9f22539eadd87f05d7ba450e06d" title=" " alt="" coords="209,5,382,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,29,382,29,382,24,414,24"/>
+<area shape="rect" id="Node000003" href="$class_battle_presenter.html#a5fa5e54df3a5aba4dd47ef50ae541a9b" title=" " alt="" coords="5,13,161,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,29,161,29,161,24,193,24"/>
+</map>

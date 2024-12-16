@@ -1,0 +1,152 @@
+\doxysection{Mission\+Model.\+cs}
+\hypertarget{_mission_model_8cs_source}{}\label{_mission_model_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/MissionModel.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/MissionModel.cs}}
+\mbox{\hyperlink{_mission_model_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00006}\mbox{\hyperlink{class_mission_model}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mission_model}{MissionModel}}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00008}\mbox{\hyperlink{class_mission_model_a1b162315172325d902a960ed8d7b17e0}{00008}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<MissionTable>\ \mbox{\hyperlink{class_mission_model_a1b162315172325d902a960ed8d7b17e0}{tableList}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00009}\mbox{\hyperlink{class_mission_model_a0adc753aaee1b201c4d92f579caeaa50}{00009}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_dia}{CurrencyModel.Dia}}\ \mbox{\hyperlink{class_mission_model_a0adc753aaee1b201c4d92f579caeaa50}{dia}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00011}00011\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00012}\mbox{\hyperlink{class_mission_model_aaa0fb3ccfb38968b56aac7e71d2cf460}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_mission_model_aaa0fb3ccfb38968b56aac7e71d2cf460}{MissionModel}}(List<MissionTable>\ \mbox{\hyperlink{class_mission_model_a1b162315172325d902a960ed8d7b17e0}{tableList}},\ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_dia}{Dia}}\ \mbox{\hyperlink{class_mission_model_a0adc753aaee1b201c4d92f579caeaa50}{dia}})}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ this.tableList\ =\ \mbox{\hyperlink{class_mission_model_a1b162315172325d902a960ed8d7b17e0}{tableList}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ this.dia\ =\ \mbox{\hyperlink{class_mission_model_a0adc753aaee1b201c4d92f579caeaa50}{dia}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00018}\mbox{\hyperlink{class_mission_model_a448de49710c58d1f47eb14b4cdce3879}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mission_model_a448de49710c58d1f47eb14b4cdce3879}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ var\ missionData\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Load\ MissionData\ in\ UserDataManager}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_model_a1b162315172325d902a960ed8d7b17e0}{tableList}}.ForEach(table\ =>}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ missionType\ =\ table.MissionType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}>();}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (missionType)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestUpgrade:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!missionData.QuestUpgradeData.ContainsKey(table.TargetNo))}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missionData.QuestUpgradeData.Add(table.TargetNo,\ 0);}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestClear:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!missionData.QuestClearData.ContainsKey(table.TargetNo))}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missionData.QuestClearData.Add(table.TargetNo,\ 0);}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.WeaponUpgrade:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!missionData.WeaponUpgradeData.ContainsKey(table.TargetNo))}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missionData.WeaponUpgradeData.Add(table.TargetNo,\ 0);}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.DungeonClear:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!missionData.DungeonClearData.ContainsKey(table.TargetNo))}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missionData.DungeonClearData.Add(table.TargetNo,\ 0);}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.BuySkin:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!missionData.BuySkinData.ContainsKey(0))}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missionData.BuySkinData.Add(0,\ 0);}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00052}\mbox{\hyperlink{class_mission_model_a557172ed46d494d1abb9c5cd2846e408}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ MissionTable\ \mbox{\hyperlink{class_mission_model_a557172ed46d494d1abb9c5cd2846e408}{GetCurMissionTable}}()}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ var\ clearMission\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}}.\mbox{\hyperlink{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b}{ClearMissionNo}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mission_model_a1b162315172325d902a960ed8d7b17e0}{tableList}}[clearMission];}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00058}\mbox{\hyperlink{class_mission_model_ab61921c2de42415f7094ccb51b63017a}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mission_model_ab61921c2de42415f7094ccb51b63017a}{ClearMission}}()\ \ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ var\ table\ =\ \mbox{\hyperlink{class_mission_model_a557172ed46d494d1abb9c5cd2846e408}{GetCurMissionTable}}();}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ var\ rewardType\ =\ table.RewardType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}>();}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}}.\mbox{\hyperlink{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b}{ClearMissionNo}}++;}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (rewardType)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.GOLD:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//gold.Add(table.Amount.ToBigInt());}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.DIA:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mission_model_a0adc753aaee1b201c4d92f579caeaa50}{dia}}.Add(table.Amount.ToBigInt());}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.KEY:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//dia.Add(table.Amount.ToBigInt());}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00078}\mbox{\hyperlink{class_mission_model_aaf8d1cec7e68497d499cd6069314a1c0}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_mission_model_aaf8d1cec7e68497d499cd6069314a1c0}{GetCurMissionProgress}}(MissionTable\ table)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ var\ missionData\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ var\ missionType\ =\ table.MissionType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}>();}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ missionType\ \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ EMissionType.QuestUpgrade\ =>\ missionData.QuestUpgradeData[table.TargetNo],}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ EMissionType.QuestClear\ =>\ missionData.QuestClearData[table.TargetNo],}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ EMissionType.WeaponUpgrade\ =>\ missionData.WeaponUpgradeData[table.TargetNo],}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ EMissionType.DungeonClear\ =>\ missionData.DungeonClearData[table.TargetNo],}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ EMissionType.BuySkin\ =>\ missionData.BuySkinData[0],}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ =>\ 0}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00094}\mbox{\hyperlink{class_mission_model_a0b4664c2e7ba667a8af4be0028f0e879}{00094}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mission_model_a0b4664c2e7ba667a8af4be0028f0e879}{IsClear}}(MissionTable\ table)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00095}00095\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ var\ missionData\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ var\ missionType\ =\ table.MissionType.ToEnum<\mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}>();}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (missionType)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestUpgrade:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userQuestUpgradeAmount\ =\ missionData.QuestUpgradeData[table.TargetNo];}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(userQuestUpgradeAmount\ >=\ table.CompleteCount)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.QuestClear:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userQuestClearAmount\ =\ missionData.QuestClearData[table.TargetNo];}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userQuestClearAmount\ >=\ table.CompleteCount)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.WeaponUpgrade:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userWeaponUpgradeAmount\ =\ missionData.WeaponUpgradeData[table.TargetNo];}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userWeaponUpgradeAmount\ >=\ table.CompleteCount)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.DungeonClear:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userDungeonClearAmount\ =\ missionData.DungeonClearData[table.TargetNo];}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userDungeonClearAmount\ >\ table.CompleteCount)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a88cc6d6bfe8353b07effe29274e0cd1f}{EMissionType}}.BuySkin:}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userBuySkinAmount\ =\ missionData.BuySkinData[0];}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userBuySkinAmount\ >=\ table.CompleteCount)}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_mission_model_8cs_source_l00146}00146\ \}}
+
+\end{DoxyCode}

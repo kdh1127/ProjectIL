@@ -1,0 +1,81 @@
+\doxysection{Resources\+Installer 클래스 참조}
+\hypertarget{class_resources_installer}{}\label{class_resources_installer}\index{ResourcesInstaller@{ResourcesInstaller}}
+
+
+Resources\+Installer에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_resources_installer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_resources_installer_aebe69739d7b391afa206847bf2aa3dfe}{Install\+Bindings}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptable\+Manager}} \mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{tr\+Scriptable\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_resources_installer_8cs_source}{Resources\+Installer.\+cs}} 파일의 \mbox{\hyperlink{_resources_installer_8cs_source_l00005}{5}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_resources_installer_aebe69739d7b391afa206847bf2aa3dfe}\index{ResourcesInstaller@{ResourcesInstaller}!InstallBindings@{InstallBindings}}
+\index{InstallBindings@{InstallBindings}!ResourcesInstaller@{ResourcesInstaller}}
+\doxysubsubsection{\texorpdfstring{InstallBindings()}{InstallBindings()}}
+{\footnotesize\ttfamily \label{class_resources_installer_aebe69739d7b391afa206847bf2aa3dfe} 
+override void Resources\+Installer.\+Install\+Bindings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_resources_installer_8cs_source}{Resources\+Installer.\+cs}} 파일의 \mbox{\hyperlink{_resources_installer_8cs_source_l00009}{9}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ Container.Bind<Dictionary<string,\ Sprite>>()}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ .WithId(\textcolor{stringliteral}{"{}CostImage"{}})}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(\mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{trScriptableManager}}.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}CostImageResources"{}}).spriteDictionary)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ .AsCached();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Container.Bind<Dictionary<string,\ Sprite>>()}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ .WithId(\textcolor{stringliteral}{"{}QuestImage"{}})}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(\mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{trScriptableManager}}.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}QuestImageResources"{}}).spriteDictionary)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ .AsCached();}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_resources_installer_aebe69739d7b391afa206847bf2aa3dfe_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}\index{ResourcesInstaller@{ResourcesInstaller}!trScriptableManager@{trScriptableManager}}
+\index{trScriptableManager@{trScriptableManager}!ResourcesInstaller@{ResourcesInstaller}}
+\doxysubsubsection{\texorpdfstring{trScriptableManager}{trScriptableManager}}
+{\footnotesize\ttfamily \label{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441} 
+\mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptable\+Manager}} Resources\+Installer.\+tr\+Scriptable\+Manager}
+
+
+
+\mbox{\hyperlink{_resources_installer_8cs_source}{Resources\+Installer.\+cs}} 파일의 \mbox{\hyperlink{_resources_installer_8cs_source_l00007}{7}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Installer/\mbox{\hyperlink{_resources_installer_8cs}{Resources\+Installer.\+cs}}\end{DoxyCompactItemize}

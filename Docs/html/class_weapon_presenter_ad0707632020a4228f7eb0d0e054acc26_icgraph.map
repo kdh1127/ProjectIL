@@ -1,0 +1,10 @@
+<map id="WeaponPresenter.UpdateItemView" name="WeaponPresenter.UpdateItemView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="489,35,714,61"/>
+<area shape="rect" id="Node000002" href="$class_weapon_presenter.html#ac301a1657fe5a414c28ea97795784445" title=" " alt="" coords="240,5,441,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,36,441,33,442,27,474,31"/>
+<area shape="rect" id="Node000004" href="$class_weapon_presenter.html#aa410701f4e9675d5dde5ca9232a5b57a" title=" " alt="" coords="247,56,434,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="474,65,434,70,434,64,473,60"/>
+<area shape="rect" id="Node000003" href="$class_weapon_presenter.html#aae5587cca9c682879f261f0f56d2079c" title=" " alt="" coords="5,35,192,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,35,192,39,192,34,224,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="231,67,192,62,192,57,232,62"/>
+</map>

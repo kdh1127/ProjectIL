@@ -1,0 +1,84 @@
+\doxysection{Monster\+Model.\+cs}
+\hypertarget{_monster_model_8cs_source}{}\label{_monster_model_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/MonsterModel.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/MonsterModel.cs}}
+\mbox{\hyperlink{_monster_model_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00006}\mbox{\hyperlink{class_monster_model}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_monster_model}{MonsterModel}}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00008}\mbox{\hyperlink{class_monster_model_ae8224c8a060a09d0ae406bb0b9e15e61}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ ReactiveProperty<BigInteger>\ \mbox{\hyperlink{class_monster_model_ae8224c8a060a09d0ae406bb0b9e15e61}{hp}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00009}\mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{00009}}\ \ \ \ \ \textcolor{keyword}{private}\ Dictionary<ECurrencyType,BigInteger>\ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00010}\mbox{\hyperlink{class_monster_model_a35f2c2f4fdefb3620c9099b0cf2a37f1}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ Subject<AttackInfo>\ \mbox{\hyperlink{class_monster_model_a35f2c2f4fdefb3620c9099b0cf2a37f1}{AttackInfoSubject}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00011}\mbox{\hyperlink{class_monster_model_ac75fa1ae6ec27caf362d187c3cab5633}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ Subject<Unit>\ \mbox{\hyperlink{class_monster_model_ac75fa1ae6ec27caf362d187c3cab5633}{DeathSubject}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00012}\mbox{\hyperlink{class_monster_model_a600064a62e2ab622e4dc150a0b7461cd}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ BigInteger\ \mbox{\hyperlink{class_monster_model_a600064a62e2ab622e4dc150a0b7461cd}{maxHp}};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00015}\mbox{\hyperlink{class_monster_model_a0bb7bb23205ce55826110e14b2641a61}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_monster_model_a0bb7bb23205ce55826110e14b2641a61}{Init}}(StageTable\ table,\ \mbox{\hyperlink{_global_enums_8cs_a2f5ac0bac53fc504ced40c0686aaecae}{EMonsterType}}\ monsterType)}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ var\ baseHp\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stageBaseHp}};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ var\ baseGold\ =\ \mbox{\hyperlink{class_monster_manager}{MonsterManager}}.Instance.\mbox{\hyperlink{class_monster_manager_a108adf7e16c1eae4a1ead4243cae663f}{CalcReward}}(table.Gold.ToBigInt());}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ var\ curStage\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ var\ stageIncreasePer\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_a0b281958be2c12e212b418d695a06b0b}{GetCurStageTable}}().HpIncreasePer\ /\ 100f\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ var\ BossCurPer\ =\ 5\ *\ Mathf.Pow(stageIncreasePer,\ curStage);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ var\ factor\ =\ BossCurPer\ *\ 100;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ BigInteger\ bossHP\ =\ 570\ *\ (int)factor\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (curStage\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ bossHP\ =\ 570\ *\ 5;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (monsterType)}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a2f5ac0bac53fc504ced40c0686aaecae}{EMonsterType}}.NORMAL:}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp.Value\ =\ baseHp;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a600064a62e2ab622e4dc150a0b7461cd}{maxHp}}\ =\ baseHp;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.GOLD,\ baseGold);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a2f5ac0bac53fc504ced40c0686aaecae}{EMonsterType}}.BOSS:}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp.Value\ =\ bossHP;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a600064a62e2ab622e4dc150a0b7461cd}{maxHp}}\ =\ bossHP;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.GOLD,\ baseGold\ *\ 5);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.KEY,\ 2);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a2f5ac0bac53fc504ced40c0686aaecae}{EMonsterType}}.TEN\_BOSS:}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp.Value\ =\ bossHP\ *\ 10;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a600064a62e2ab622e4dc150a0b7461cd}{maxHp}}\ =\ bossHP\ *\ 10;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.GOLD,\ baseGold\ *\ 10);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.KEY,\ 5);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.DIA,\ 3);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_global_enums_8cs_a2f5ac0bac53fc504ced40c0686aaecae}{EMonsterType}}.HUNDRED\_BOSS:}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp.Value\ =\ bossHP\ *\ 50;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a600064a62e2ab622e4dc150a0b7461cd}{maxHp}}\ =\ bossHP\ *\ 50;}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.GOLD,\ baseGold\ *\ 50);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.KEY,\ 10);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}}.Add(\mbox{\hyperlink{_global_enums_8cs_afdedf1e61b9625dd885d9074c78654b3}{ECurrencyType}}.DIA,\ 20);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00064}\mbox{\hyperlink{class_monster_model_a129bc8001f95e096e1aabd434a853ab2}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_monster_model_a129bc8001f95e096e1aabd434a853ab2}{TakeDamage}}(\mbox{\hyperlink{struct_attack_info}{AttackInfo}}\ attackInfo)}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ hp.Value\ -\/=\ attackInfo.\mbox{\hyperlink{struct_attack_info_ab7c86ab9b2942bbde2011b17d0c5e96b}{damage}};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_a35f2c2f4fdefb3620c9099b0cf2a37f1}{AttackInfoSubject}}.OnNext(attackInfo);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_monster_model_ae8224c8a060a09d0ae406bb0b9e15e61}{hp}}.Value\ <=\ 0)}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_model_ac75fa1ae6ec27caf362d187c3cab5633}{DeathSubject}}.OnNext(Unit.Default);}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00074}\mbox{\hyperlink{class_monster_model_a1a59340db3aece4014e3a0291ec6d02f}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<ECurrencyType,\ BigInteger>\ \mbox{\hyperlink{class_monster_model_a1a59340db3aece4014e3a0291ec6d02f}{GetReward}}()}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_monster_model_a2dba02f0f3c2106659e41cdb849d29a3}{reward}};}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_monster_model_8cs_source_l00078}00078\ \}}
+
+\end{DoxyCode}

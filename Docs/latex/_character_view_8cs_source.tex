@@ -1,0 +1,88 @@
+\doxysection{Character\+View.\+cs}
+\hypertarget{_character_view_8cs_source}{}\label{_character_view_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/CharacterView.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/CharacterView.cs}}
+\mbox{\hyperlink{_character_view_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00008}\mbox{\hyperlink{class_character_view}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_character_view}{CharacterView}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00010}\mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}\ \{\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758}{LEFT}},\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403}{RIGHT}}\ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00012}\mbox{\hyperlink{class_character_view_a2bcbd6129203f563e384dc2c568d8509}{00012}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}\ \mbox{\hyperlink{class_character_view_a2bcbd6129203f563e384dc2c568d8509}{animator}};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00013}\mbox{\hyperlink{class_character_view_accd594939f9fa1384efdab81fe8147f6}{00013}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpriteRenderer\ \mbox{\hyperlink{class_character_view_accd594939f9fa1384efdab81fe8147f6}{weapon\_r}};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00014}\mbox{\hyperlink{class_character_view_a87489fd153354b49472e8512d9fb3b57}{00014}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpriteRenderer\ \mbox{\hyperlink{class_character_view_a87489fd153354b49472e8512d9fb3b57}{weapon\_l}};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00016}\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}\ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}\ =>\ \mbox{\hyperlink{class_character_view_a2bcbd6129203f563e384dc2c568d8509}{animator}};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00017}\mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00018}\mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00019}\mbox{\hyperlink{class_character_view_a591879e636f7fc52f28ca4c315f62ba3}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ Subject<GameObject>\ \mbox{\hyperlink{class_character_view_a591879e636f7fc52f28ca4c315f62ba3}{AttackSubject}}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00021}\mbox{\hyperlink{class_character_view_ac272429756a1db22242152725a3e4480}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_ac272429756a1db22242152725a3e4480}{SetAttackSpeed}}(\textcolor{keywordtype}{float}\ speed)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetFloat(\textcolor{stringliteral}{"{}AttackSpeed"{}},\ speed);}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00026}\mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{SetRunSpeed}}(\textcolor{keywordtype}{float}\ speed)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetFloat(\textcolor{stringliteral}{"{}RunSpeed"{}},\ speed);}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00031}\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(Sprite\ sprite,\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}\ handType\ =\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}.RIGHT)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ weapon\_l.transform.localPosition\ =\ \textcolor{keyword}{new}\ Vector3(0,\ sprite.rect.size.y\ /\ 100,\ 0);}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ weapon\_r.transform.localPosition\ =\ \textcolor{keyword}{new}\ Vector3(0,\ sprite.rect.size.y\ /\ 100,\ 0);}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (handType)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}.LEFT:}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ weapon\_l.sprite\ =\ sprite;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_character_view_a3a5d7a59b829f79d32c8eeca8f4d31bc}{HandType}}.RIGHT:}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ weapon\_r.sprite\ =\ sprite;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00046}\mbox{\hyperlink{class_character_view_ab0af0b526c070e59185913218f53a71a}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_ab0af0b526c070e59185913218f53a71a}{Move}}(\textcolor{keywordtype}{float}\ moveSpeed)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ transform.Translate(moveSpeed\ *\ Time.smoothDeltaTime\ *\ Vector2.right);}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00051}\mbox{\hyperlink{class_character_view_ac769dd6f8157edb2b4fb2c8ba03e94bc}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_ac769dd6f8157edb2b4fb2c8ba03e94bc}{OnTriggerEnter2D}}(Collider2D\ collision)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision.CompareTag(\textcolor{stringliteral}{"{}Monster"{}}))}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}\ =\ collision.gameObject;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00060}\mbox{\hyperlink{class_character_view_a80b2f61c8c651b02b2f53ac1fbadce04}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_a80b2f61c8c651b02b2f53ac1fbadce04}{OnTriggerStay2D}}(Collider2D\ collision)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision.CompareTag(\textcolor{stringliteral}{"{}Monster"{}}))}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}\ =\ collision.gameObject;}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00069}\mbox{\hyperlink{class_character_view_a9f69b951b947223ba0f543925ef7ec57}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_a9f69b951b947223ba0f543925ef7ec57}{OnTriggerExit2D}}(Collider2D\ collision)}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00070}00070\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision.CompareTag(\textcolor{stringliteral}{"{}Monster"{}}))}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_ac0a563aa9e2895093b024fdffc60ad5d}{isCollision}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00078}\mbox{\hyperlink{class_character_view_adbed8dc5d263f3076a9db009e05d7a00}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_view_adbed8dc5d263f3076a9db009e05d7a00}{OnHitAttackAnimation}}()}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_view_a591879e636f7fc52f28ca4c315f62ba3}{AttackSubject}}.OnNext(\mbox{\hyperlink{class_character_view_a207857db47b9ddba94b94ec43ae6ffa1}{target}});}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_view_8cs_source_l00082}00082\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/Item/WeaponItemView.cs 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_weapon_item_view_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WeaponItemView.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_weapon_item_view_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>TMPro;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>I2.Loc;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_weapon_item_view.html">WeaponItemView</a> : MonoBehaviour</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">    8</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_upgrade_button_view.html">UpgradeButtonView</a> <a class="code hl_variable" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">upgradeButtonView</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#ad45dfb77e6604892c995ec1b452a2f04">    9</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_weapon_item_view.html#ad45dfb77e6604892c995ec1b452a2f04">dim_img</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a8f651c1033dabb5207dba275b81937d7">   10</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="class_weapon_item_view.html#a8f651c1033dabb5207dba275b81937d7">weapon_img</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#af51ee6920ddf939a3d5884fd304ab788">   11</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_weapon_item_view.html#af51ee6920ddf939a3d5884fd304ab788">title_txt</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a1225203cb02574326a2d01db2abc4f30">   12</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_weapon_item_view.html#a1225203cb02574326a2d01db2abc4f30">level_txt</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#abcebe17c78c00a0cc90e02f130359e57">   13</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_weapon_item_view.html#abcebe17c78c00a0cc90e02f130359e57">totalAtack_txt</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a0dbc161c56ed9e946796ea769967820e">   14</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_weapon_item_view.html#a0dbc161c56ed9e946796ea769967820e">selectFrame</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#ab00d16865ebbfbaa57f0a1d5402a0c92">   16</a></span>    readonly <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_weapon_item_view.html#ab00d16865ebbfbaa57f0a1d5402a0c92">maxLevel</a> = 5;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a97a16a8da2323c5ade6c6e2261ffcbf1">   18</a></span>    <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_weapon_item_view.html#a97a16a8da2323c5ade6c6e2261ffcbf1">title</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a48365bf72548915453be4d4082b350bc">   20</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#a48365bf72548915453be4d4082b350bc">Init</a>(WeaponTable table, <span class="keywordtype">int</span> curLevel, <span class="keywordtype">bool</span> isMaxLevel, <span class="keywordtype">bool</span> isEquiped, <span class="keywordtype">bool</span> isUnLock, <span class="keywordtype">bool</span> isEnughGold)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="class_weapon_item_view.html#aef9f276c2063d8761324c9ba56336d8f">UpdateLevel</a>(table, curLevel, isMaxLevel, isEquiped, isUnLock, isEnughGold);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="class_weapon_item_view.html#a53fcada32e7adabe6f51581f2a72da3e">SetWeaponImage</a>(table.Image);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="class_weapon_item_view.html#aa9926fcefc91e424fcd529782492290e">SetName</a>(table.Name, curLevel.ToString());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        this.title = table.Name;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#aef9f276c2063d8761324c9ba56336d8f">   28</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#aef9f276c2063d8761324c9ba56336d8f">UpdateLevel</a>(WeaponTable table, <span class="keywordtype">int</span> curLevel, <span class="keywordtype">bool</span> isMaxLevel, <span class="keywordtype">bool</span> isEquiped, <span class="keywordtype">bool</span> isUnLock, <span class="keywordtype">bool</span> isEnughGold)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="class_weapon_item_view.html#a6653cd1eefc6d513ba4b96b0ab3bdabd">UpdateTotalAttackText</a>(table, curLevel);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_function" href="class_weapon_item_view.html#ab0251ecbc5d04b2a13e8628af8bea75d">UpdateLevelText</a>(curLevel, isMaxLevel);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="class_weapon_item_view.html#a03915c26b60301a3fd2b55b493264d84">UpdateEquipedState</a>(isEquiped);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="class_weapon_item_view.html#adbfedd4cee3e5ea332d2298ab49e4d8f">UpdateState</a>(isUnLock, isMaxLevel, isEnughGold);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a6653cd1eefc6d513ba4b96b0ab3bdabd">   36</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#a6653cd1eefc6d513ba4b96b0ab3bdabd">UpdateTotalAttackText</a>(WeaponTable table, <span class="keywordtype">int</span> curLevel)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        var calcLevel = curLevel == 0 ? 0 : curLevel - 1;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        var totalAttack = table.BaseAtk.ToBigInt() + (calcLevel * table.Increase.ToBigInt());</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        var weaponAttackStringFormat = LocalizationManager.GetTranslation(<span class="stringliteral">&quot;Weapon_Attack_String_Format&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        var weaponAttackString = <span class="keywordtype">string</span>.Format(weaponAttackStringFormat, totalAttack.ToAlphabetNumber());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        totalAtack_txt.text = weaponAttackString;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#ab0251ecbc5d04b2a13e8628af8bea75d">   45</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#ab0251ecbc5d04b2a13e8628af8bea75d">UpdateLevelText</a>(<span class="keywordtype">int</span> curLevel, <span class="keywordtype">bool</span> isMaxLevel)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        var level = <a class="code hl_function" href="class_weapon_item_view.html#a61dd3326aceee445e7f6f7f9a478f537">GetLevelString</a>(curLevel);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        var titleString = $<span class="stringliteral">&quot;{level} {LocalizationManager.GetTranslation(title)}&quot;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        title_txt.text = titleString;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a61dd3326aceee445e7f6f7f9a478f537">   52</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_function" href="class_weapon_item_view.html#a61dd3326aceee445e7f6f7f9a478f537">GetLevelString</a>(<span class="keywordtype">int</span> curLevel)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        var levelString = curLevel == 5 ?</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            $<span class="stringliteral">&quot;&lt;color=#FF0000&gt;Lv.Max&lt;/color&gt;&quot;</span> :</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            $<span class="stringliteral">&quot;Lv. {curLevel}/{maxLevel}&quot;</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> levelString;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a03915c26b60301a3fd2b55b493264d84">   60</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#a03915c26b60301a3fd2b55b493264d84">UpdateEquipedState</a>(<span class="keywordtype">bool</span> isEquiped)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_variable" href="class_weapon_item_view.html#a0dbc161c56ed9e946796ea769967820e">selectFrame</a>.SetActive(isEquiped);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#adbfedd4cee3e5ea332d2298ab49e4d8f">   66</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#adbfedd4cee3e5ea332d2298ab49e4d8f">UpdateState</a>(<span class="keywordtype">bool</span> isUnLock, <span class="keywordtype">bool</span> isMaxLevel, <span class="keywordtype">bool</span> isEnughGold)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!isUnLock)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ad45dfb77e6604892c995ec1b452a2f04">dim_img</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">upgradeButtonView</a>.<a class="code hl_function" href="class_upgrade_button_view.html#a913876d9c3c44a33e06d9bd7d6b030c8">SetInteractable</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">upgradeButtonView</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isMaxLevel)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ad45dfb77e6604892c995ec1b452a2f04">dim_img</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">upgradeButtonView</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ad45dfb77e6604892c995ec1b452a2f04">dim_img</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">upgradeButtonView</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_variable" href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">upgradeButtonView</a>.<a class="code hl_function" href="class_upgrade_button_view.html#a913876d9c3c44a33e06d9bd7d6b030c8">SetInteractable</a>(isEnughGold);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#a53fcada32e7adabe6f51581f2a72da3e">   87</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#a53fcada32e7adabe6f51581f2a72da3e">SetWeaponImage</a>(<span class="keywordtype">string</span> imageKey)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        var weaponImageResources = <a class="code hl_class" href="class_t_r_scriptable_manager.html">TRScriptableManager</a>.Instance.<a class="code hl_function" href="class_t_r_scriptable_manager.html#acf23f05ff667644f2a13ff5b5d2f18ed">GetSprite</a>(<span class="stringliteral">&quot;WeaponImageResources&quot;</span>).spriteDictionary;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        var weaponImage = weaponImageResources[imageKey];</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        weapon_img.sprite = weaponImage; </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_weapon_item_view.html#aa9926fcefc91e424fcd529782492290e">   94</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_weapon_item_view.html#aa9926fcefc91e424fcd529782492290e">SetName</a>(<span class="keywordtype">string</span> titleKey, <span class="keywordtype">string</span> level)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        var titleString = $<span class="stringliteral">&quot;{level} {LocalizationManager.GetTranslation(titleKey)}&quot;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        title_txt.text = titleString;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+</div>
+<div class="ttc" id="aclass_t_r_scriptable_manager_html"><div class="ttname"><a href="class_t_r_scriptable_manager.html">TRScriptableManager</a></div><div class="ttdef"><b>Definition</b> <a href="_t_r_scriptable_manager_8cs_source.html#l00006">TRScriptableManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_t_r_scriptable_manager_html_acf23f05ff667644f2a13ff5b5d2f18ed"><div class="ttname"><a href="class_t_r_scriptable_manager.html#acf23f05ff667644f2a13ff5b5d2f18ed">TRScriptableManager.GetSprite</a></div><div class="ttdeci">TRSpriteResources GetSprite(string name)</div><div class="ttdef"><b>Definition</b> <a href="_t_r_scriptable_manager_8cs_source.html#l00023">TRScriptableManager.cs:23</a></div></div>
+<div class="ttc" id="aclass_upgrade_button_view_html"><div class="ttname"><a href="class_upgrade_button_view.html">UpgradeButtonView</a></div><div class="ttdef"><b>Definition</b> <a href="_upgrade_button_view_8cs_source.html#l00008">UpgradeButtonView.cs:9</a></div></div>
+<div class="ttc" id="aclass_upgrade_button_view_html_a913876d9c3c44a33e06d9bd7d6b030c8"><div class="ttname"><a href="class_upgrade_button_view.html#a913876d9c3c44a33e06d9bd7d6b030c8">UpgradeButtonView.SetInteractable</a></div><div class="ttdeci">void SetInteractable(bool isInteractable)</div><div class="ttdef"><b>Definition</b> <a href="_upgrade_button_view_8cs_source.html#l00022">UpgradeButtonView.cs:22</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html"><div class="ttname"><a href="class_weapon_item_view.html">WeaponItemView</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">WeaponItemView.cs:7</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a03915c26b60301a3fd2b55b493264d84"><div class="ttname"><a href="class_weapon_item_view.html#a03915c26b60301a3fd2b55b493264d84">WeaponItemView.UpdateEquipedState</a></div><div class="ttdeci">void UpdateEquipedState(bool isEquiped)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">WeaponItemView.cs:60</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a0dbc161c56ed9e946796ea769967820e"><div class="ttname"><a href="class_weapon_item_view.html#a0dbc161c56ed9e946796ea769967820e">WeaponItemView.selectFrame</a></div><div class="ttdeci">GameObject selectFrame</div><div class="ttdef"><b>Definition</b> <a href="#l00014">WeaponItemView.cs:14</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a1225203cb02574326a2d01db2abc4f30"><div class="ttname"><a href="class_weapon_item_view.html#a1225203cb02574326a2d01db2abc4f30">WeaponItemView.level_txt</a></div><div class="ttdeci">TMP_Text level_txt</div><div class="ttdef"><b>Definition</b> <a href="#l00012">WeaponItemView.cs:12</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a48365bf72548915453be4d4082b350bc"><div class="ttname"><a href="class_weapon_item_view.html#a48365bf72548915453be4d4082b350bc">WeaponItemView.Init</a></div><div class="ttdeci">void Init(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">WeaponItemView.cs:20</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a53fcada32e7adabe6f51581f2a72da3e"><div class="ttname"><a href="class_weapon_item_view.html#a53fcada32e7adabe6f51581f2a72da3e">WeaponItemView.SetWeaponImage</a></div><div class="ttdeci">void SetWeaponImage(string imageKey)</div><div class="ttdef"><b>Definition</b> <a href="#l00087">WeaponItemView.cs:87</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a61dd3326aceee445e7f6f7f9a478f537"><div class="ttname"><a href="class_weapon_item_view.html#a61dd3326aceee445e7f6f7f9a478f537">WeaponItemView.GetLevelString</a></div><div class="ttdeci">string GetLevelString(int curLevel)</div><div class="ttdef"><b>Definition</b> <a href="#l00052">WeaponItemView.cs:52</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a6653cd1eefc6d513ba4b96b0ab3bdabd"><div class="ttname"><a href="class_weapon_item_view.html#a6653cd1eefc6d513ba4b96b0ab3bdabd">WeaponItemView.UpdateTotalAttackText</a></div><div class="ttdeci">void UpdateTotalAttackText(WeaponTable table, int curLevel)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">WeaponItemView.cs:36</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a8f651c1033dabb5207dba275b81937d7"><div class="ttname"><a href="class_weapon_item_view.html#a8f651c1033dabb5207dba275b81937d7">WeaponItemView.weapon_img</a></div><div class="ttdeci">Image weapon_img</div><div class="ttdef"><b>Definition</b> <a href="#l00010">WeaponItemView.cs:10</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_a97a16a8da2323c5ade6c6e2261ffcbf1"><div class="ttname"><a href="class_weapon_item_view.html#a97a16a8da2323c5ade6c6e2261ffcbf1">WeaponItemView.title</a></div><div class="ttdeci">string title</div><div class="ttdef"><b>Definition</b> <a href="#l00018">WeaponItemView.cs:18</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_aa9926fcefc91e424fcd529782492290e"><div class="ttname"><a href="class_weapon_item_view.html#aa9926fcefc91e424fcd529782492290e">WeaponItemView.SetName</a></div><div class="ttdeci">void SetName(string titleKey, string level)</div><div class="ttdef"><b>Definition</b> <a href="#l00094">WeaponItemView.cs:94</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_ab00d16865ebbfbaa57f0a1d5402a0c92"><div class="ttname"><a href="class_weapon_item_view.html#ab00d16865ebbfbaa57f0a1d5402a0c92">WeaponItemView.maxLevel</a></div><div class="ttdeci">readonly int maxLevel</div><div class="ttdef"><b>Definition</b> <a href="#l00016">WeaponItemView.cs:16</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_ab0251ecbc5d04b2a13e8628af8bea75d"><div class="ttname"><a href="class_weapon_item_view.html#ab0251ecbc5d04b2a13e8628af8bea75d">WeaponItemView.UpdateLevelText</a></div><div class="ttdeci">void UpdateLevelText(int curLevel, bool isMaxLevel)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">WeaponItemView.cs:45</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_ab56c88d5aa6d79ec2c049105fe98b736"><div class="ttname"><a href="class_weapon_item_view.html#ab56c88d5aa6d79ec2c049105fe98b736">WeaponItemView.upgradeButtonView</a></div><div class="ttdeci">UpgradeButtonView upgradeButtonView</div><div class="ttdef"><b>Definition</b> <a href="#l00008">WeaponItemView.cs:8</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_abcebe17c78c00a0cc90e02f130359e57"><div class="ttname"><a href="class_weapon_item_view.html#abcebe17c78c00a0cc90e02f130359e57">WeaponItemView.totalAtack_txt</a></div><div class="ttdeci">TMP_Text totalAtack_txt</div><div class="ttdef"><b>Definition</b> <a href="#l00013">WeaponItemView.cs:13</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_ad45dfb77e6604892c995ec1b452a2f04"><div class="ttname"><a href="class_weapon_item_view.html#ad45dfb77e6604892c995ec1b452a2f04">WeaponItemView.dim_img</a></div><div class="ttdeci">GameObject dim_img</div><div class="ttdef"><b>Definition</b> <a href="#l00009">WeaponItemView.cs:9</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_adbfedd4cee3e5ea332d2298ab49e4d8f"><div class="ttname"><a href="class_weapon_item_view.html#adbfedd4cee3e5ea332d2298ab49e4d8f">WeaponItemView.UpdateState</a></div><div class="ttdeci">void UpdateState(bool isUnLock, bool isMaxLevel, bool isEnughGold)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">WeaponItemView.cs:66</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_aef9f276c2063d8761324c9ba56336d8f"><div class="ttname"><a href="class_weapon_item_view.html#aef9f276c2063d8761324c9ba56336d8f">WeaponItemView.UpdateLevel</a></div><div class="ttdeci">void UpdateLevel(WeaponTable table, int curLevel, bool isMaxLevel, bool isEquiped, bool isUnLock, bool isEnughGold)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">WeaponItemView.cs:28</a></div></div>
+<div class="ttc" id="aclass_weapon_item_view_html_af51ee6920ddf939a3d5884fd304ab788"><div class="ttname"><a href="class_weapon_item_view.html#af51ee6920ddf939a3d5884fd304ab788">WeaponItemView.title_txt</a></div><div class="ttdeci">TMP_Text title_txt</div><div class="ttdef"><b>Definition</b> <a href="#l00011">WeaponItemView.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_e6eba136486108d313cec426fd3614b3.html">02.Scripts</a></li><li class="navelem"><a class="el" href="dir_02d1e7a68cf753e5e15f64946ac71b6f.html">View</a></li><li class="navelem"><a class="el" href="dir_f47cfe09f91213949f92a2b245eeefd7.html">Item</a></li><li class="navelem"><a class="el" href="_weapon_item_view_8cs.html">WeaponItemView.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

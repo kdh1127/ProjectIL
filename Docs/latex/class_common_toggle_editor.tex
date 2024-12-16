@@ -1,0 +1,95 @@
+\doxysection{Common\+Toggle\+Editor 클래스 참조}
+\hypertarget{class_common_toggle_editor}{}\label{class_common_toggle_editor}\index{CommonToggleEditor@{CommonToggleEditor}}
+
+
+Common\+Toggle\+Editor에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_common_toggle_editor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_toggle_editor_adc1aa4e247897785233c3111b7c0a3ba}{On\+Inspector\+GUI}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+new void \mbox{\hyperlink{class_common_toggle_editor_a4bbb22e702441fe3f0d70519fd9e6108}{On\+Enable}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Property \mbox{\hyperlink{class_common_toggle_editor_afdecaef9998dace05ec9daf1eb50ecb7}{toggle\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_common_toggle_editor_8cs_source}{Common\+Toggle\+Editor.\+cs}} 파일의 \mbox{\hyperlink{_common_toggle_editor_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_common_toggle_editor_a4bbb22e702441fe3f0d70519fd9e6108}\index{CommonToggleEditor@{CommonToggleEditor}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!CommonToggleEditor@{CommonToggleEditor}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily \label{class_common_toggle_editor_a4bbb22e702441fe3f0d70519fd9e6108} 
+new void Common\+Toggle\+Editor.\+On\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_common_toggle_editor_8cs_source}{Common\+Toggle\+Editor.\+cs}} 파일의 \mbox{\hyperlink{_common_toggle_editor_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ base.OnEnable();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_toggle_editor_afdecaef9998dace05ec9daf1eb50ecb7}{toggleType}}\ =\ serializedObject.FindProperty(\textcolor{stringliteral}{"{}type"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_common_toggle_editor_adc1aa4e247897785233c3111b7c0a3ba}\index{CommonToggleEditor@{CommonToggleEditor}!OnInspectorGUI@{OnInspectorGUI}}
+\index{OnInspectorGUI@{OnInspectorGUI}!CommonToggleEditor@{CommonToggleEditor}}
+\doxysubsubsection{\texorpdfstring{OnInspectorGUI()}{OnInspectorGUI()}}
+{\footnotesize\ttfamily \label{class_common_toggle_editor_adc1aa4e247897785233c3111b7c0a3ba} 
+override void Common\+Toggle\+Editor.\+On\+Inspector\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_common_toggle_editor_8cs_source}{Common\+Toggle\+Editor.\+cs}} 파일의 \mbox{\hyperlink{_common_toggle_editor_8cs_source_l00021}{21}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ base.OnInspectorGUI();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ serializedObject.Update();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ EditorGUILayout.PropertyField(\mbox{\hyperlink{class_common_toggle_editor_afdecaef9998dace05ec9daf1eb50ecb7}{toggleType}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ serializedObject.ApplyModifiedProperties();}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_common_toggle_editor_afdecaef9998dace05ec9daf1eb50ecb7}\index{CommonToggleEditor@{CommonToggleEditor}!toggleType@{toggleType}}
+\index{toggleType@{toggleType}!CommonToggleEditor@{CommonToggleEditor}}
+\doxysubsubsection{\texorpdfstring{toggleType}{toggleType}}
+{\footnotesize\ttfamily \label{class_common_toggle_editor_afdecaef9998dace05ec9daf1eb50ecb7} 
+Serialized\+Property Common\+Toggle\+Editor.\+toggle\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_common_toggle_editor_8cs_source}{Common\+Toggle\+Editor.\+cs}} 파일의 \mbox{\hyperlink{_common_toggle_editor_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Editor/\mbox{\hyperlink{_common_toggle_editor_8cs}{Common\+Toggle\+Editor.\+cs}}\end{DoxyCompactItemize}

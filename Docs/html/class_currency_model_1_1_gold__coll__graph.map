@@ -1,0 +1,9 @@
+<map id="CurrencyModel.Gold" name="CurrencyModel.Gold">
+<area shape="rect" id="Node000001" title=" " alt="" coords="106,368,236,437"/>
+<area shape="rect" id="Node000002" href="$class_currency_base.html" title=" " alt="" coords="115,144,228,320"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,335,174,368,169,368,169,335"/>
+<area shape="rect" id="Node000003" href="$interface_i_currency.html" title=" " alt="" coords="5,5,156,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,108,130,143,125,145,107,111"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="180,16,344,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="241,100,218,145,213,143,236,97"/>
+</map>

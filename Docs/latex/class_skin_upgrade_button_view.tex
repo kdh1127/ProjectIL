@@ -1,0 +1,205 @@
+\doxysection{Skin\+Upgrade\+Button\+View 클래스 참조}
+\hypertarget{class_skin_upgrade_button_view}{}\label{class_skin_upgrade_button_view}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+
+
+Skin\+Upgrade\+Button\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_skin_upgrade_button_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_skin_upgrade_button_view_a7dc3bbf94c684eef703c362f386e4a9d}{Init}} (bool is\+Bought, int upgrade\+Value, int Buy\+Cost, int upgrade\+Cost, Sprite skin\+Image)
+\item 
+void \mbox{\hyperlink{class_skin_upgrade_button_view_ab496a62d6866fd9f0b171c724df1ca59}{Update\+View}} (bool is\+Bought, int upgrade\+Value, int Buy\+Cost, int upgrade\+Cost)
+\item 
+void \mbox{\hyperlink{class_upgrade_button_view_a606b9f3e3ed1f6e2e17f5a2247bbfcaa}{Init}} (Big\+Integer increase, Big\+Integer cost, Sprite cost\+Image)
+\item 
+void \mbox{\hyperlink{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8}{Set\+Interactable}} (bool is\+Interactable)
+\item 
+void \mbox{\hyperlink{class_upgrade_button_view_a563bc87d565b9d9ca75a89805e74f0df}{Update\+View}} (string increase, string cost)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_upgrade_button_view_a65d072e4b38543623f2bb041f0440ef2}{increase\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_upgrade_button_view_a4a6f7dc901e7f1ae22229b2c9b5cc1e9}{cost\+\_\+txt}}
+\item 
+Image \mbox{\hyperlink{class_upgrade_button_view_ae4b910c775eaf2d1c29738f6cdba8b53}{cost\+\_\+img}}
+\item 
+Button \mbox{\hyperlink{class_upgrade_button_view_aa39e9434c430ab5271681d2d0040cef6}{button}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_skin_upgrade_button_view_8cs_source}{Skin\+Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_skin_upgrade_button_view_8cs_source_l00006}{6}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_skin_upgrade_button_view_a7dc3bbf94c684eef703c362f386e4a9d}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!Init@{Init}}
+\index{Init@{Init}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_skin_upgrade_button_view_a7dc3bbf94c684eef703c362f386e4a9d} 
+void Skin\+Upgrade\+Button\+View.\+Init (\begin{DoxyParamCaption}\item[{bool}]{is\+Bought}{, }\item[{int}]{upgrade\+Value}{, }\item[{int}]{Buy\+Cost}{, }\item[{int}]{upgrade\+Cost}{, }\item[{Sprite}]{skin\+Image}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_skin_upgrade_button_view_8cs_source}{Skin\+Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_skin_upgrade_button_view_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ increase\_txt.text\ =\ isBought\ ?\ \$\textcolor{stringliteral}{"{}+\{upgradeValue\}\%"{}}\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Buy"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ cost\_txt.text\ =\ isBought\ ?\ \$\textcolor{stringliteral}{"{}\{upgradeCost\}"{}}\ :\ \$\textcolor{stringliteral}{"{}\{BuyCost\}"{}};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ cost\_img.sprite\ =\ skinImage;}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_upgrade_button_view_a606b9f3e3ed1f6e2e17f5a2247bbfcaa}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!Init@{Init}}
+\index{Init@{Init}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_a606b9f3e3ed1f6e2e17f5a2247bbfcaa} 
+void Upgrade\+Button\+View.\+Init (\begin{DoxyParamCaption}\item[{Big\+Integer}]{increase}{, }\item[{Big\+Integer}]{cost}{, }\item[{Sprite}]{cost\+Image}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ increase\_txt.text\ =\ \$\textcolor{stringliteral}{"{}+\{increase.ToAlphabetNumber()\}"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ cost\_txt.text\ =\ cost.ToAlphabetNumber();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ cost\_img.sprite\ =\ costImage;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upgrade_button_view_a606b9f3e3ed1f6e2e17f5a2247bbfcaa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!SetInteractable@{SetInteractable}}
+\index{SetInteractable@{SetInteractable}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{SetInteractable()}{SetInteractable()}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8} 
+void Upgrade\+Button\+View.\+Set\+Interactable (\begin{DoxyParamCaption}\item[{bool}]{is\+Interactable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00022}{22}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ button.interactable\ =\ isInteractable;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_skin_upgrade_button_view_ab496a62d6866fd9f0b171c724df1ca59}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!UpdateView@{UpdateView}}
+\index{UpdateView@{UpdateView}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{UpdateView()}{UpdateView()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_skin_upgrade_button_view_ab496a62d6866fd9f0b171c724df1ca59} 
+void Skin\+Upgrade\+Button\+View.\+Update\+View (\begin{DoxyParamCaption}\item[{bool}]{is\+Bought}{, }\item[{int}]{upgrade\+Value}{, }\item[{int}]{Buy\+Cost}{, }\item[{int}]{upgrade\+Cost}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_skin_upgrade_button_view_8cs_source}{Skin\+Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_skin_upgrade_button_view_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ increase\_txt.text\ =\ isBought\ ?\ \$\textcolor{stringliteral}{"{}+\{upgradeValue\}\%"{}}\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Buy"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ cost\_txt.text\ =\ isBought\ ?\ \$\textcolor{stringliteral}{"{}\{upgradeCost\}"{}}\ :\ \$\textcolor{stringliteral}{"{}\{BuyCost\}"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_upgrade_button_view_a563bc87d565b9d9ca75a89805e74f0df}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!UpdateView@{UpdateView}}
+\index{UpdateView@{UpdateView}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{UpdateView()}{UpdateView()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_a563bc87d565b9d9ca75a89805e74f0df} 
+void Upgrade\+Button\+View.\+Update\+View (\begin{DoxyParamCaption}\item[{string}]{increase}{, }\item[{string}]{cost}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00027}{27}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ increase\_txt.text\ =\ increase;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ cost\_txt.text\ =\ cost;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upgrade_button_view_a563bc87d565b9d9ca75a89805e74f0df_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_upgrade_button_view_aa39e9434c430ab5271681d2d0040cef6}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!button@{button}}
+\index{button@{button}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_aa39e9434c430ab5271681d2d0040cef6} 
+Button Upgrade\+Button\+View.\+button\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_upgrade_button_view_ae4b910c775eaf2d1c29738f6cdba8b53}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!cost\_img@{cost\_img}}
+\index{cost\_img@{cost\_img}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{cost\_img}{cost\_img}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_ae4b910c775eaf2d1c29738f6cdba8b53} 
+Image Upgrade\+Button\+View.\+cost\+\_\+img\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_upgrade_button_view_a4a6f7dc901e7f1ae22229b2c9b5cc1e9}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!cost\_txt@{cost\_txt}}
+\index{cost\_txt@{cost\_txt}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{cost\_txt}{cost\_txt}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_a4a6f7dc901e7f1ae22229b2c9b5cc1e9} 
+TMP\+\_\+\+Text Upgrade\+Button\+View.\+cost\+\_\+txt\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_upgrade_button_view_a65d072e4b38543623f2bb041f0440ef2}\index{SkinUpgradeButtonView@{SkinUpgradeButtonView}!increase\_txt@{increase\_txt}}
+\index{increase\_txt@{increase\_txt}!SkinUpgradeButtonView@{SkinUpgradeButtonView}}
+\doxysubsubsection{\texorpdfstring{increase\_txt}{increase\_txt}}
+{\footnotesize\ttfamily \label{class_upgrade_button_view_a65d072e4b38543623f2bb041f0440ef2} 
+TMP\+\_\+\+Text Upgrade\+Button\+View.\+increase\+\_\+txt\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_upgrade_button_view_8cs_source}{Upgrade\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_upgrade_button_view_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+View/\+Button/\mbox{\hyperlink{_skin_upgrade_button_view_8cs}{Skin\+Upgrade\+Button\+View.\+cs}}\end{DoxyCompactItemize}

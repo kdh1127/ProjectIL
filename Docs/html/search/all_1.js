@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['baseattackdamage_0',['BaseAttackDamage',['../class_character_model.html#a7ad173e93d17e64289b154136d7d0d1d',1,'CharacterModel']]],
+  ['battle_1',['Battle',['../class_battle_presenter.html#a90f2c40ba749017a4da3deaf821caa73',1,'BattlePresenter.Battle()'],['../_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906a747d99f92ee9c080ba26108ac5d26488',1,'Battle:&#160;GlobalEnums.cs']]],
+  ['battlepresenter_2',['BattlePresenter',['../class_battle_presenter.html',1,'']]],
+  ['battlepresenter_2ecs_3',['BattlePresenter.cs',['../_battle_presenter_8cs.html',1,'']]],
+  ['battlestate_4',['BattleState',['../class_battle_presenter_1_1_battle_state.html',1,'BattlePresenter']]],
+  ['battlestate_5',['battleState',['../class_battle_presenter.html#a935aeed64e7ba535fa0664f0dd3b4265',1,'BattlePresenter']]],
+  ['battlestate_2ecs_6',['BattleState.cs',['../_battle_state_8cs.html',1,'']]],
+  ['biginteger_7',['bigInteger',['../class_alphabet_number_1_1_a_number.html#a0b50c28d4e7f51633d1fa443c5701892',1,'AlphabetNumber::ANumber']]],
+  ['bigintegerextension_8',['BigIntegerExtension',['../class_big_integer_extension.html',1,'']]],
+  ['bigintegerextension_2ecs_9',['BigIntegerExtension.cs',['../_big_integer_extension_8cs.html',1,'']]],
+  ['bigintegertoalphabetnumber_10',['BigIntegerToAlphabetNumber',['../class_alphabet_number_1_1_conversion.html#acef54578ed803f902cb75cc49bfb784d',1,'AlphabetNumber::Conversion']]],
+  ['boss_11',['BOSS',['../_global_enums_8cs.html#a2f5ac0bac53fc504ced40c0686aaecaeaf0523bf35faf77235783d0f3e43762d2',1,'GlobalEnums.cs']]],
+  ['bottompanelview_12',['BottomPanelView',['../class_bottom_panel_view.html',1,'']]],
+  ['bottompanelview_2ecs_13',['BottomPanelView.cs',['../_bottom_panel_view_8cs.html',1,'']]],
+  ['button_14',['button',['../class_complete_button_view.html#ac76a3cc306c148f24b647172ac41fd0e',1,'CompleteButtonView.button'],['../class_open_popup_button_view.html#a9be37d9d9c8fac47a74db1b4639a77cc',1,'OpenPopupButtonView.button'],['../class_upgrade_button_view.html#aa39e9434c430ab5271681d2d0040cef6',1,'UpgradeButtonView.button']]],
+  ['buyskin_15',['BuySkin',['../_global_enums_8cs.html#a88cc6d6bfe8353b07effe29274e0cd1faf10666fdc1cec920abb2bb5376bd0935',1,'GlobalEnums.cs']]],
+  ['buyskindata_16',['BuySkinData',['../class_user_data_manager_1_1_mission_data.html#a6a68f0866cca5a292ccf49caf8d73c19',1,'UserDataManager::MissionData']]],
+  ['buyskindata_17',['buySkinData',['../class_user_data_manager_1_1_mission_data.html#ab81deb2a334e0cc5e018025ee1c548be',1,'UserDataManager::MissionData']]]
+];

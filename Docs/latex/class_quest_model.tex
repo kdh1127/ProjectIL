@@ -1,0 +1,162 @@
+\doxysection{Quest\+Model 클래스 참조}
+\hypertarget{class_quest_model}{}\label{class_quest_model}\index{QuestModel@{QuestModel}}
+
+
+Quest\+Model에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_quest_model__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_quest_model_aa6fd255257f7a90e32989ca9bd5ee8f4}{Quest\+Model}} (List$<$ Quest\+Table $>$ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{quest\+Table\+List}}, \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}})
+\item 
+void \mbox{\hyperlink{class_quest_model_aac8dce1d57cf952177695469c0273aef}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1}{Reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_quest_item_model}{Quest\+Item\+Model}} $>$ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{quest\+Item\+List}} = new()
+\item 
+Subject$<$ Unit $>$ \mbox{\hyperlink{class_quest_model_a75e015a66345120d3561bec8dd66d640}{Init\+Subject}} = new()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+readonly List$<$ Quest\+Table $>$ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{quest\+Table\+List}}
+\item 
+readonly \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00081}{81}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{class_quest_model_aa6fd255257f7a90e32989ca9bd5ee8f4}\index{QuestModel@{QuestModel}!QuestModel@{QuestModel}}
+\index{QuestModel@{QuestModel}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{QuestModel()}{QuestModel()}}
+{\footnotesize\ttfamily \label{class_quest_model_aa6fd255257f7a90e32989ca9bd5ee8f4} 
+Quest\+Model.\+Quest\+Model (\begin{DoxyParamCaption}\item[{List$<$ Quest\+Table $>$}]{quest\+Table\+List}{, }\item[{\mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}}}]{gold}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00090}{90}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ this.questTableList\ =\ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{questTableList}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}};}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_quest_model_aac8dce1d57cf952177695469c0273aef}\index{QuestModel@{QuestModel}!Init@{Init}}
+\index{Init@{Init}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_quest_model_aac8dce1d57cf952177695469c0273aef} 
+void Quest\+Model.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00096}{96}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ var\ questData\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a06970da4c85563d9d35078c8d90ef3c0}{questData}}.\mbox{\hyperlink{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846}{questDict}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}.Clear();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}{questTableList}}.ForEach(table\ =>}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ var\ questItem\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_quest_item_model}{QuestItemModel}}(table,\ \mbox{\hyperlink{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}{gold}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ questItem.m\_level.Value\ =\ questData[table.QuestNo].level;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ questItem.m\_elpasedTime.Value\ =\ questData[table.QuestNo].elpasedTime;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}.Add(questItem);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1}\index{QuestModel@{QuestModel}!Reset@{Reset}}
+\index{Reset@{Reset}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1} 
+void Quest\+Model.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00109}{109}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}{questItemList}}.ForEach(questItem\ =>\ questItem.Reset());}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5}\index{QuestModel@{QuestModel}!gold@{gold}}
+\index{gold@{gold}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{gold}{gold}}
+{\footnotesize\ttfamily \label{class_quest_model_a4d9f464ce74624d99164c8d4ce7c81a5} 
+readonly \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} Quest\+Model.\+gold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00087}{87}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_model_a75e015a66345120d3561bec8dd66d640}\index{QuestModel@{QuestModel}!InitSubject@{InitSubject}}
+\index{InitSubject@{InitSubject}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{InitSubject}{InitSubject}}
+{\footnotesize\ttfamily \label{class_quest_model_a75e015a66345120d3561bec8dd66d640} 
+Subject$<$Unit$>$ Quest\+Model.\+Init\+Subject = new()}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00084}{84}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47}\index{QuestModel@{QuestModel}!questItemList@{questItemList}}
+\index{questItemList@{questItemList}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{questItemList}{questItemList}}
+{\footnotesize\ttfamily \label{class_quest_model_a9fdf99ef7ff169e11f3dab9ed9077d47} 
+List$<$\mbox{\hyperlink{class_quest_item_model}{Quest\+Item\+Model}}$>$ Quest\+Model.\+quest\+Item\+List = new()}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00083}{83}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750}\index{QuestModel@{QuestModel}!questTableList@{questTableList}}
+\index{questTableList@{questTableList}!QuestModel@{QuestModel}}
+\doxysubsubsection{\texorpdfstring{questTableList}{questTableList}}
+{\footnotesize\ttfamily \label{class_quest_model_ae63fcfff2247b9ffd17663e4aa506750} 
+readonly List$<$Quest\+Table$>$ Quest\+Model.\+quest\+Table\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_quest_model_8cs_source}{Quest\+Model.\+cs}} 파일의 \mbox{\hyperlink{_quest_model_8cs_source_l00086}{86}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Model/\mbox{\hyperlink{_quest_model_8cs}{Quest\+Model.\+cs}}\end{DoxyCompactItemize}

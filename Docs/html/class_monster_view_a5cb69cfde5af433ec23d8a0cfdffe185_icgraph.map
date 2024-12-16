@@ -1,0 +1,7 @@
+<map id="MonsterView.ShowDamage" name="MonsterView.ShowDamage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="443,13,625,40"/>
+<area shape="rect" id="Node000002" href="$class_battle_presenter.html#ab8db160f8df19d94b91e0231d98d70d0" title=" " alt="" coords="222,5,395,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="428,29,395,29,395,24,428,24"/>
+<area shape="rect" id="Node000003" href="$class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe" title=" " alt="" coords="5,5,174,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,29,174,29,174,24,206,24"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="WeaponItemView.UpdateEquipedState" name="WeaponItemView.UpdateEquipedState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1010,23,1225,65"/>
+<area shape="rect" id="Node000002" href="$class_weapon_item_view.html#aef9f276c2063d8761324c9ba56336d8f" title=" " alt="" coords="762,31,962,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="994,47,962,47,962,41,994,41"/>
+<area shape="rect" id="Node000003" href="$class_weapon_item_view.html#a48365bf72548915453be4d4082b350bc" title=" " alt="" coords="530,5,674,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="746,35,674,28,675,23,747,30"/>
+<area shape="rect" id="Node000006" href="$class_weapon_presenter.html#ad0707632020a4228f7eb0d0e054acc26" title=" " alt="" coords="489,56,714,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="747,58,715,61,715,56,746,53"/>
+<area shape="rect" id="Node000004" href="$class_weapon_presenter.html#ac301a1657fe5a414c28ea97795784445" title=" " alt="" coords="240,5,441,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="514,21,441,21,441,16,514,16"/>
+<area shape="rect" id="Node000005" href="$class_weapon_presenter.html#aae5587cca9c682879f261f0f56d2079c" title=" " alt="" coords="5,35,192,61"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="224,35,192,39,192,34,224,30"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="514,55,412,35,413,30,515,50"/>
+<area shape="rect" id="Node000007" href="$class_weapon_presenter.html#aa410701f4e9675d5dde5ca9232a5b57a" title=" " alt="" coords="247,56,434,99"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="473,76,434,77,434,72,473,71"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="231,67,192,62,192,57,232,62"/>
+</map>

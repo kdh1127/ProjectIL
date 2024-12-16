@@ -1,0 +1,26 @@
+var class_user_data_manager =
+[
+    [ "CharacterData", "class_user_data_manager_1_1_character_data.html", "class_user_data_manager_1_1_character_data" ],
+    [ "CurrencyData", "class_user_data_manager_1_1_currency_data.html", "class_user_data_manager_1_1_currency_data" ],
+    [ "MissionData", "class_user_data_manager_1_1_mission_data.html", "class_user_data_manager_1_1_mission_data" ],
+    [ "QuestData", "class_user_data_manager_1_1_quest_data.html", "class_user_data_manager_1_1_quest_data" ],
+    [ "SkinData", "class_user_data_manager_1_1_skin_data.html", "class_user_data_manager_1_1_skin_data" ],
+    [ "StageData", "class_user_data_manager_1_1_stage_data.html", "class_user_data_manager_1_1_stage_data" ],
+    [ "TreasureData", "class_user_data_manager_1_1_treasure_data.html", "class_user_data_manager_1_1_treasure_data" ],
+    [ "WeaponData", "class_user_data_manager_1_1_weapon_data.html", "class_user_data_manager_1_1_weapon_data" ],
+    [ "Awake", "class_user_data_manager.html#aa5b5572ef790c3a9b117356bed316475", null ],
+    [ "Init", "class_user_data_manager.html#adea5c813fa31d3cd6f0f490006e9b648", null ],
+    [ "IsInit", "class_user_data_manager.html#a806fa9edbb5f5665a2585c7428389322", null ],
+    [ "OnApplicationFocus", "class_user_data_manager.html#aac63c8547a34c5ec696a7ff9574b2110", null ],
+    [ "OnApplicationQuit", "class_user_data_manager.html#ac2abb73f8c60a5cc3b8ac70bdd45cd2f", null ],
+    [ "SaveAll", "class_user_data_manager.html#a3f6d285949025fbb8b0f78081758f4f4", null ],
+    [ "characterData", "class_user_data_manager.html#aa5e6bcdaedef8c14c6b3b0781d3fb962", null ],
+    [ "currencyData", "class_user_data_manager.html#a42af78285d8a48d8ca107ddfe7528980", null ],
+    [ "isInit", "class_user_data_manager.html#a3c013f91fad41788bfbca0f8c339479d", null ],
+    [ "missionData", "class_user_data_manager.html#aeaa20f773d03b787e8c3d4ccac204ea5", null ],
+    [ "questData", "class_user_data_manager.html#a06970da4c85563d9d35078c8d90ef3c0", null ],
+    [ "skinData", "class_user_data_manager.html#a6f1e0ab73a6def09bd14c05101829cd6", null ],
+    [ "stageData", "class_user_data_manager.html#a95035f7b3fe9d00535dbf69251592989", null ],
+    [ "treasureData", "class_user_data_manager.html#a9966798d8d32c7da9d71b67a0adaaccc", null ],
+    [ "weaponData", "class_user_data_manager.html#acda14ede8878a30de0912522ccedf65a", null ]
+];

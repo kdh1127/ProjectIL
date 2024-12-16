@@ -1,0 +1,133 @@
+\doxysection{Battle\+Presenter.\+Lull\+State 클래스 참조}
+\hypertarget{class_battle_presenter_1_1_lull_state}{}\label{class_battle_presenter_1_1_lull_state}\index{BattlePresenter.LullState@{BattlePresenter.LullState}}
+
+
+Battle\+Presenter.\+Lull\+State에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{class_battle_presenter_1_1_lull_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+override TRState$<$ \mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}} $>$ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ad66ac8c4e619c5d5fa187f7233eff90e}{Input\+Handle}} (\mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}} battle\+Presenter)
+\item 
+override void \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_a6d56b1cdbeeb8f873c1690d6461b050b}{Enter}} (\mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}} battle\+Presenter)
+\item 
+override void \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_a5bd50f38cfbdb24e7b5d116f87f1664e}{Update}} (\mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}} battle\+Presenter)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{is\+Clear}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_battle_state_8cs_source}{Battle\+State.\+cs}} 파일의 \mbox{\hyperlink{_battle_state_8cs_source_l00081}{81}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_battle_presenter_1_1_lull_state_a6d56b1cdbeeb8f873c1690d6461b050b}\index{BattlePresenter.LullState@{BattlePresenter.LullState}!Enter@{Enter}}
+\index{Enter@{Enter}!BattlePresenter.LullState@{BattlePresenter.LullState}}
+\doxysubsubsection{\texorpdfstring{Enter()}{Enter()}}
+{\footnotesize\ttfamily \label{class_battle_presenter_1_1_lull_state_a6d56b1cdbeeb8f873c1690d6461b050b} 
+override void Battle\+Presenter.\+Lull\+State.\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}}}]{battle\+Presenter}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_battle_state_8cs_source}{Battle\+State.\+cs}} 파일의 \mbox{\hyperlink{_battle_state_8cs_source_l00090}{90}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ base.Enter(battlePresenter);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{SetRunSpeed}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Run"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.state\ =\ \mbox{\hyperlink{_global_enums_8cs_a464b154742bba8b4dbc02fc44a351906}{EBattleState}}.Lull;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_battle_presenter_1_1_lull_state_a6d56b1cdbeeb8f873c1690d6461b050b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_battle_presenter_1_1_lull_state_ad66ac8c4e619c5d5fa187f7233eff90e}\index{BattlePresenter.LullState@{BattlePresenter.LullState}!InputHandle@{InputHandle}}
+\index{InputHandle@{InputHandle}!BattlePresenter.LullState@{BattlePresenter.LullState}}
+\doxysubsubsection{\texorpdfstring{InputHandle()}{InputHandle()}}
+{\footnotesize\ttfamily \label{class_battle_presenter_1_1_lull_state_ad66ac8c4e619c5d5fa187f7233eff90e} 
+override TRState$<$ \mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}} $>$ Battle\+Presenter.\+Lull\+State.\+Input\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}}}]{battle\+Presenter}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_battle_state_8cs_source}{Battle\+State.\+cs}} 파일의 \mbox{\hyperlink{_battle_state_8cs_source_l00084}{84}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{isClear}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ClearState();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ battlePresenter.characterView.isCollision\ ?\ \textcolor{keyword}{new}\ BattleState()\ :\ this;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_battle_presenter_1_1_lull_state_a5bd50f38cfbdb24e7b5d116f87f1664e}\index{BattlePresenter.LullState@{BattlePresenter.LullState}!Update@{Update}}
+\index{Update@{Update}!BattlePresenter.LullState@{BattlePresenter.LullState}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_battle_presenter_1_1_lull_state_a5bd50f38cfbdb24e7b5d116f87f1664e} 
+override void Battle\+Presenter.\+Lull\+State.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_presenter}{Battle\+Presenter}}}]{battle\+Presenter}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_battle_state_8cs_source}{Battle\+State.\+cs}} 파일의 \mbox{\hyperlink{_battle_state_8cs_source_l00098}{98}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ base.Update(battlePresenter);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{SetRunSpeed}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Run"{}});}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ab0af0b526c070e59185913218f53a71a}{Move}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ >\ 3\ \&\&\ \mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ <\ 22)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a7a17b180cf05a4470a03bc039bdfac73}{pixelCamera}}.transform.Translate(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}}\ *\ Time.smoothDeltaTime\ *\ Vector2.right);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ >=\ 26)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{isClear}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_battle_presenter_1_1_lull_state_a5bd50f38cfbdb24e7b5d116f87f1664e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}\index{BattlePresenter.LullState@{BattlePresenter.LullState}!isClear@{isClear}}
+\index{isClear@{isClear}!BattlePresenter.LullState@{BattlePresenter.LullState}}
+\doxysubsubsection{\texorpdfstring{isClear}{isClear}}
+{\footnotesize\ttfamily \label{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb} 
+bool Battle\+Presenter.\+Lull\+State.\+is\+Clear = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_battle_state_8cs_source}{Battle\+State.\+cs}} 파일의 \mbox{\hyperlink{_battle_state_8cs_source_l00083}{83}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+State/\mbox{\hyperlink{_battle_state_8cs}{Battle\+State.\+cs}}\end{DoxyCompactItemize}

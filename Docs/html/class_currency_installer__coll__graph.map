@@ -1,0 +1,9 @@
+<map id="CurrencyInstaller" name="CurrencyInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="30,300,147,369"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,145,94,215"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,228,83,300,77,301,59,230"/>
+<area shape="rect" id="Node000003" href="$class_currency_view.html" title=" " alt="" coords="118,124,211,236"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,237,115,286,110,283,135,235"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="114,5,215,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="167,90,167,124,162,124,162,90"/>
+</map>

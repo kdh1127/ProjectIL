@@ -1,0 +1,28 @@
+\doxysection{Resources\+Installer.\+cs}
+\hypertarget{_resources_installer_8cs_source}{}\label{_resources_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/ResourcesInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/ResourcesInstaller.cs}}
+\mbox{\hyperlink{_resources_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00005}\mbox{\hyperlink{class_resources_installer}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resources_installer}{ResourcesInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00007}\mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}\ \mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{trScriptableManager}};}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00009}\mbox{\hyperlink{class_resources_installer_aebe69739d7b391afa206847bf2aa3dfe}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resources_installer_aebe69739d7b391afa206847bf2aa3dfe}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ Container.Bind<Dictionary<string,\ Sprite>>()}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ .WithId(\textcolor{stringliteral}{"{}CostImage"{}})}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(\mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{trScriptableManager}}.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}CostImageResources"{}}).spriteDictionary)}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ .AsCached();}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ Container.Bind<Dictionary<string,\ Sprite>>()}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ .WithId(\textcolor{stringliteral}{"{}QuestImage"{}})}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(\mbox{\hyperlink{class_resources_installer_a5ce470c43c1eea38d8c50b6069f6f441}{trScriptableManager}}.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}QuestImageResources"{}}).spriteDictionary)}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ .AsCached();}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_resources_installer_8cs_source_l00022}00022\ \}}
+
+\end{DoxyCode}

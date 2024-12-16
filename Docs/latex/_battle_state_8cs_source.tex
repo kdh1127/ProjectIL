@@ -1,0 +1,168 @@
+\doxysection{Battle\+State.\+cs}
+\hypertarget{_battle_state_8cs_source}{}\label{_battle_state_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/State/BattleState.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/State/BattleState.cs}}
+\mbox{\hyperlink{_battle_state_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }ThreeRabbitPackage.DesignPattern;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00007}00007\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ :\ TRSingleton<BattlePresenter>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00009}\mbox{\hyperlink{class_battle_presenter_1_1_init_state}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_presenter_1_1_init_state}{InitState}}\ :\ TRState<BattlePresenter>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00011}\mbox{\hyperlink{class_battle_presenter_1_1_init_state_abfa4ffacdcd40ac0607dc3bc85b8f2d8}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_battle_presenter_1_1_init_state_abfa4ffacdcd40ac0607dc3bc85b8f2d8}{isComplete}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00013}\mbox{\hyperlink{class_battle_presenter_1_1_init_state_ac6bfc88127f3949e70ed11bd4ac9b4ca}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TRState<BattlePresenter>\ \mbox{\hyperlink{class_battle_presenter_1_1_init_state_ac6bfc88127f3949e70ed11bd4ac9b4ca}{InputHandle}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_presenter_1_1_init_state_abfa4ffacdcd40ac0607dc3bc85b8f2d8}{isComplete}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state}{LullState}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00019}\mbox{\hyperlink{class_battle_presenter_1_1_init_state_abcac5e9a624ab22b060f72a987e8d6fe}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_init_state_abcac5e9a624ab22b060f72a987e8d6fe}{Enter}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ base.Enter(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ var\ table\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_a0b281958be2c12e212b418d695a06b0b}{GetCurStageTable}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ var\ monsterResource\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_a236bf19505de30a82da2d87fb891ab3a}{GetGameObject}}(\textcolor{stringliteral}{"{}MonsterResources"{}}).gameObjectDictionary;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ monsterManager\ =\ \mbox{\hyperlink{class_monster_manager}{MonsterManager}}.Instance;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 캐릭터\ 위치\ 초기화}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a2072f60727e1333c50791c86d1f2a2c7}{Init}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.pixelCamera.transform.position\ =\ \textcolor{keyword}{new}\ Vector3(0,\ 0,\ -\/10);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_af22b9523a6291aadd07546af79a85658}{SetStageBaseHp}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 몬스터\ 생성}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 5;\ i++)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 몬스터\ 타입\ 판별}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ isBoss\ =\ i\ ==\ 4;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ monsterName\ =\ isBoss\ ?\ table.MonsterBossName\ :\ table.MonsterNormalName;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ monsterObj\ =\ Instantiate(monsterResource[monsterName],\ monsterManager.GetSpawnPosition(i));}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ model\ =\ monsterManager.CreateMonster(table,\ isBoss);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ view\ =\ monsterObj.GetComponent<\mbox{\hyperlink{class_monster_view}{MonsterView}}>();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_ab8db160f8df19d94b91e0231d98d70d0}{SubscribeMonster}}(model,\ view);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_adcbb1585f06cecb7d43d50652180729f}{fadeScreenView}}.\mbox{\hyperlink{class_fade_screen_view_abc64f68aaee00adeb36b049116d28aa7}{FadeIn}}(0.5f,\ ()\ =>\ \mbox{\hyperlink{class_battle_presenter_1_1_init_state_abfa4ffacdcd40ac0607dc3bc85b8f2d8}{isComplete}}\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.state\ =\ \mbox{\hyperlink{_global_enums_8cs_a464b154742bba8b4dbc02fc44a351906}{EBattleState}}.Init;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00051}\mbox{\hyperlink{class_battle_presenter_1_1_battle_state}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_presenter_1_1_battle_state}{BattleState}}\ :\ TRState<BattlePresenter>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00054}\mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a5370982f8a1b94783bc8fc995edcfc74}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TRState<BattlePresenter>\ \mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a5370982f8a1b94783bc8fc995edcfc74}{InputHandle}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ battlePresenter.characterView.isCollision\ ?\ this\ :\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state}{LullState}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00060}\mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a4305293315ad3e2e1d809eff415bc8cb}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a4305293315ad3e2e1d809eff415bc8cb}{Enter}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ base.Enter(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Attack"{}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.state\ =\ \mbox{\hyperlink{_global_enums_8cs_a464b154742bba8b4dbc02fc44a351906}{EBattleState}}.Battle;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00067}\mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a2ccf1d8e17e643641ea3e95ead0a90a3}{00067}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a2ccf1d8e17e643641ea3e95ead0a90a3}{Update}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ base.Update(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Attack"{}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ac272429756a1db22242152725a3e4480}{SetAttackSpeed}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a130c2e88d71c118630fd738d22f369fe}{AttackSpeed}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00075}\mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a39c942a2507af6bb0f7132c011afbbe6}{00075}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_battle_state_a39c942a2507af6bb0f7132c011afbbe6}{Exit}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ base.Exit(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00081}\mbox{\hyperlink{class_battle_presenter_1_1_lull_state}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_presenter_1_1_lull_state}{LullState}}\ :\ TRState<BattlePresenter>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00083}\mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{00083}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{isClear}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00084}\mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ad66ac8c4e619c5d5fa187f7233eff90e}{00084}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TRState<BattlePresenter>\ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ad66ac8c4e619c5d5fa187f7233eff90e}{InputHandle}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{isClear}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter_1_1_clear_state}{ClearState}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ battlePresenter.characterView.isCollision\ ?\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter_1_1_battle_state}{BattleState}}()\ :\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00090}\mbox{\hyperlink{class_battle_presenter_1_1_lull_state_a6d56b1cdbeeb8f873c1690d6461b050b}{00090}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_a6d56b1cdbeeb8f873c1690d6461b050b}{Enter}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ base.Enter(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{SetRunSpeed}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Run"{}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.state\ =\ \mbox{\hyperlink{_global_enums_8cs_a464b154742bba8b4dbc02fc44a351906}{EBattleState}}.Lull;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00098}\mbox{\hyperlink{class_battle_presenter_1_1_lull_state_a5bd50f38cfbdb24e7b5d116f87f1664e}{00098}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_a5bd50f38cfbdb24e7b5d116f87f1664e}{Update}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ base.Update(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ae783345505bb1d7b68592ba4ec97a596}{SetRunSpeed}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Run"{}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_ab0af0b526c070e59185913218f53a71a}{Move}}(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ >\ 3\ \&\&\ \mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ <\ 22)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a7a17b180cf05a4470a03bc039bdfac73}{pixelCamera}}.transform.Translate(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a37ac1997425d399fd26d5ab14c3aea96}{characterModel}}.\mbox{\hyperlink{class_character_model_a5f15596fd193fc4d1d412a9cfc7bdc8b}{RunSpeed}}\ *\ Time.smoothDeltaTime\ *\ Vector2.right);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_character_manager}{CharacterManager}}.Instance.\mbox{\hyperlink{class_character_manager_a12016ddba39b199c98096afeab09e0f2}{CharacterPositionX}}\ >=\ 26)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_presenter_1_1_lull_state_ab8edbf5a9674a6e01ec0eddf7c6562bb}{isClear}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00115}\mbox{\hyperlink{class_battle_presenter_1_1_clear_state}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_presenter_1_1_clear_state}{ClearState}}\ :\ TRState<BattlePresenter>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00116}00116\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00117}\mbox{\hyperlink{class_battle_presenter_1_1_clear_state_a5ed437b144eb83d068ad0be580ba20fb}{00117}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_battle_presenter_1_1_clear_state_a5ed437b144eb83d068ad0be580ba20fb}{isComplete}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00118}\mbox{\hyperlink{class_battle_presenter_1_1_clear_state_aea693900ba0b43955a70db68f4b65fcc}{00118}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TRState<BattlePresenter>\ \mbox{\hyperlink{class_battle_presenter_1_1_clear_state_aea693900ba0b43955a70db68f4b65fcc}{InputHandle}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_presenter_1_1_clear_state_a5ed437b144eb83d068ad0be580ba20fb}{isComplete}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter_1_1_init_state}{InitState}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00124}\mbox{\hyperlink{class_battle_presenter_1_1_clear_state_a17dadba8a31889fa8517698efa5342e9}{00124}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_clear_state_a17dadba8a31889fa8517698efa5342e9}{Enter}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ base.Enter(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_adcbb1585f06cecb7d43d50652180729f}{fadeScreenView}}.\mbox{\hyperlink{class_fade_screen_view_a55b0f19222cb18a9c6a35d1bce148b87}{FadeOut}}(0.5f,\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_a437894966836562a8e2d67a747b71cde}{IncreaseStage}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_manager}{MonsterManager}}.Instance.\mbox{\hyperlink{class_monster_manager_ab27dcad1e6ebc843661a44b4689357f5}{ClearAllMonster}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a3f6d285949025fbb8b0f78081758f4f4}{SaveAll}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_presenter_1_1_clear_state_a5ed437b144eb83d068ad0be580ba20fb}{isComplete}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.state\ =\ \mbox{\hyperlink{_global_enums_8cs_a464b154742bba8b4dbc02fc44a351906}{EBattleState}}.Clear;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00138}\mbox{\hyperlink{class_battle_presenter_1_1_reset_state}{00138}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_presenter_1_1_reset_state}{ResetState}}\ :\ TRState<BattlePresenter>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00139}00139\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00140}\mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a4ae48f15b499fa146ae80d748617d672}{00140}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a4ae48f15b499fa146ae80d748617d672}{isComplete}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00141}\mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a21f664d5b9e07e932a3e1264557f4590}{00141}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TRState<BattlePresenter>\ \mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a21f664d5b9e07e932a3e1264557f4590}{InputHandle}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a4ae48f15b499fa146ae80d748617d672}{isComplete}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter_1_1_init_state}{InitState}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00147}\mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a1c1b14fbfa41c361236156a20b828905}{00147}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a1c1b14fbfa41c361236156a20b828905}{Enter}}(\mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}\ battlePresenter)}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ base.Enter(battlePresenter);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.state\ =\ \mbox{\hyperlink{_global_enums_8cs_a464b154742bba8b4dbc02fc44a351906}{EBattleState}}.Reset;}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a0eeb586a481bd3a22fb8bf123418e57e}{characterView}}.\mbox{\hyperlink{class_character_view_a21995e9d09c28f041b4c9e1864eaad22}{Animator}}.SetTrigger(\textcolor{stringliteral}{"{}Run"{}});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_a4fecf168fb57e244e522e45360e4c41c}{gold}}.Subtract(battlePresenter.\mbox{\hyperlink{class_battle_presenter_a4fecf168fb57e244e522e45360e4c41c}{gold}}.Amount);}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_addf970b9bc5a60c75e71dedee716d5df}{ResetStage}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_monster_manager}{MonsterManager}}.Instance.\mbox{\hyperlink{class_monster_manager_ab27dcad1e6ebc843661a44b4689357f5}{ClearAllMonster}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ battlePresenter.\mbox{\hyperlink{class_battle_presenter_adcbb1585f06cecb7d43d50652180729f}{fadeScreenView}}.\mbox{\hyperlink{class_fade_screen_view_a55b0f19222cb18a9c6a35d1bce148b87}{FadeOut}}(0.5f,\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a3f6d285949025fbb8b0f78081758f4f4}{SaveAll}}();}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_presenter_1_1_reset_state_a4ae48f15b499fa146ae80d748617d672}{isComplete}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_battle_state_8cs_source_l00162}00162\ \}}
+
+\end{DoxyCode}

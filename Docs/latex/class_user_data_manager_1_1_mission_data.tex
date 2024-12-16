@@ -1,0 +1,421 @@
+\doxysection{User\+Data\+Manager.\+Mission\+Data 클래스 참조}
+\hypertarget{class_user_data_manager_1_1_mission_data}{}\label{class_user_data_manager_1_1_mission_data}\index{UserDataManager.MissionData@{UserDataManager.MissionData}}
+
+
+User\+Data\+Manager.\+Mission\+Data에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_user_data_manager_1_1_mission_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_adb34a5e6ccf3fc7c1cd751bf9e27bca1}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a4b0aa0ce4a3b706d008e7e233b58c329}{Load}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a9ab582c478c9c4c9fbd61eb38c98ec74}{Save}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_aec41f4a9a677a0b211e453bedd28584a}{Update\+Quest\+Upgrade\+Data}} (int quest\+No, Func$<$ int, int $>$ update\+Func)
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a59747757c9d6b070717cfbce1b92cf70}{Update\+Quest\+Clear\+Data}} (int quest\+No, Func$<$ int, int $>$ update\+Func)
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a54f6646c23df43154266e618607b8ba6}{Update\+Weapon\+Upgrade\+Data}} (int weapon\+No, Func$<$ int, int $>$ update\+Func)
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_abbd29067a59f63d341c687cbb4520bf5}{Update\+Dungeon\+Clear\+Data}} (int dungeon\+No, Func$<$ int, int $>$ update\+Func)
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_af72664639f15b0f77a1fc3d2bdbd1569}{Update\+Buy\+Skin\+Data}} (int skin\+No, Func$<$ int, int $>$ update\+Func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b}{Clear\+Mission\+No}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_ac5d077152efb392e443b1ffa36ba9174}{Quest\+Upgrade\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em quest\+No, quest\+Level \end{DoxyCompactList}\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_af6374e7e6ddc11b975fe1e9a7e55e1f5}{Quest\+Clear\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em quest\+No, quest\+Clear\+Count \end{DoxyCompactList}\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_abec346b4b5be911f9d4bbb3373eeec18}{Weapon\+Upgrade\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em weapon\+No, weapon\+Level \end{DoxyCompactList}\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a5e054869b4c8f109d0ee7cbbf0a3b92c}{Dungeon\+Clear\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em stage\+No, stage\+Clear\+Count \end{DoxyCompactList}\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a6a68f0866cca5a292ccf49caf8d73c19}{Buy\+Skin\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em stage\+No, stage\+Clear\+Count \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_aa6b88bbad5b739ef87e6cae5590a672a}{clear\+Mission\+No}}
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a0af15f1087394d4cc3afb6bcdc49e3e9}{quest\+Upgrade\+Data}} = new()
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a511eb0a33b1925b035c8e0dc10aa2324}{quest\+Clear\+Data}} = new()
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a420dd4d3b4e575177331a53a03ecaf87}{weapon\+Upgrade\+Data}} = new()
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a097621f3f275a0a890ea2732da15b8d2}{dungeon\+Clear\+Data}} = new()
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_ab81deb2a334e0cc5e018025ee1c548be}{buy\+Skin\+Data}} = new()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00166}{166}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_user_data_manager_1_1_mission_data_adb34a5e6ccf3fc7c1cd751bf9e27bca1}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!Init@{Init}}
+\index{Init@{Init}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_adb34a5e6ccf3fc7c1cd751bf9e27bca1} 
+void User\+Data\+Manager.\+Mission\+Data.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00205}{205}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b}{ClearMissionNo}}\ =\ 0;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_mission_data_adb34a5e6ccf3fc7c1cd751bf9e27bca1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_mission_data_a4b0aa0ce4a3b706d008e7e233b58c329}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!Load@{Load}}
+\index{Load@{Load}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a4b0aa0ce4a3b706d008e7e233b58c329} 
+void User\+Data\+Manager.\+Mission\+Data.\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00210}{210}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ MissionData\ data\ =\ \mbox{\hyperlink{class_data_utility}{DataUtility}}.Load<MissionData>(\textcolor{stringliteral}{"{}MissionData"{}});}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b}{ClearMissionNo}}\ =\ data.ClearMissionNo;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_ac5d077152efb392e443b1ffa36ba9174}{QuestUpgradeData}}\ =\ data.QuestUpgradeData;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_af6374e7e6ddc11b975fe1e9a7e55e1f5}{QuestClearData}}\ =\ data.QuestClearData;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_abec346b4b5be911f9d4bbb3373eeec18}{WeaponUpgradeData}}\ =\ data.WeaponUpgradeData;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a5e054869b4c8f109d0ee7cbbf0a3b92c}{DungeonClearData}}\ =\ data.DungeonClearData;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a6a68f0866cca5a292ccf49caf8d73c19}{BuySkinData}}\ =\ data.BuySkinData;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_mission_data_a4b0aa0ce4a3b706d008e7e233b58c329_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_mission_data_a9ab582c478c9c4c9fbd61eb38c98ec74}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!Save@{Save}}
+\index{Save@{Save}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a9ab582c478c9c4c9fbd61eb38c98ec74} 
+void User\+Data\+Manager.\+Mission\+Data.\+Save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00221}{221}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_data_utility}{DataUtility}}.Save(\textcolor{stringliteral}{"{}MissionData"{}},\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_mission_data_a9ab582c478c9c4c9fbd61eb38c98ec74_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_mission_data_af72664639f15b0f77a1fc3d2bdbd1569}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!UpdateBuySkinData@{UpdateBuySkinData}}
+\index{UpdateBuySkinData@{UpdateBuySkinData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{UpdateBuySkinData()}{UpdateBuySkinData()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_af72664639f15b0f77a1fc3d2bdbd1569} 
+void User\+Data\+Manager.\+Mission\+Data.\+Update\+Buy\+Skin\+Data (\begin{DoxyParamCaption}\item[{int}]{skin\+No}{, }\item[{Func$<$ int, int $>$}]{update\+Func}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00246}{246}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a6a68f0866cca5a292ccf49caf8d73c19}{BuySkinData}}.AddOrUpdate(skinNo,\ updateFunc,\ 1);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_mission_data_af72664639f15b0f77a1fc3d2bdbd1569_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_mission_data_abbd29067a59f63d341c687cbb4520bf5}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!UpdateDungeonClearData@{UpdateDungeonClearData}}
+\index{UpdateDungeonClearData@{UpdateDungeonClearData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{UpdateDungeonClearData()}{UpdateDungeonClearData()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_abbd29067a59f63d341c687cbb4520bf5} 
+void User\+Data\+Manager.\+Mission\+Data.\+Update\+Dungeon\+Clear\+Data (\begin{DoxyParamCaption}\item[{int}]{dungeon\+No}{, }\item[{Func$<$ int, int $>$}]{update\+Func}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00241}{241}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a5e054869b4c8f109d0ee7cbbf0a3b92c}{DungeonClearData}}.AddOrUpdate(dungeonNo,\ updateFunc,\ 1);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_a59747757c9d6b070717cfbce1b92cf70}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!UpdateQuestClearData@{UpdateQuestClearData}}
+\index{UpdateQuestClearData@{UpdateQuestClearData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{UpdateQuestClearData()}{UpdateQuestClearData()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a59747757c9d6b070717cfbce1b92cf70} 
+void User\+Data\+Manager.\+Mission\+Data.\+Update\+Quest\+Clear\+Data (\begin{DoxyParamCaption}\item[{int}]{quest\+No}{, }\item[{Func$<$ int, int $>$}]{update\+Func}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00231}{231}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_af6374e7e6ddc11b975fe1e9a7e55e1f5}{QuestClearData}}.AddOrUpdate(questNo,\ updateFunc,\ 1);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_aec41f4a9a677a0b211e453bedd28584a}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!UpdateQuestUpgradeData@{UpdateQuestUpgradeData}}
+\index{UpdateQuestUpgradeData@{UpdateQuestUpgradeData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{UpdateQuestUpgradeData()}{UpdateQuestUpgradeData()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_aec41f4a9a677a0b211e453bedd28584a} 
+void User\+Data\+Manager.\+Mission\+Data.\+Update\+Quest\+Upgrade\+Data (\begin{DoxyParamCaption}\item[{int}]{quest\+No}{, }\item[{Func$<$ int, int $>$}]{update\+Func}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00226}{226}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_ac5d077152efb392e443b1ffa36ba9174}{QuestUpgradeData}}.AddOrUpdate(questNo,\ updateFunc,\ 1);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_a54f6646c23df43154266e618607b8ba6}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!UpdateWeaponUpgradeData@{UpdateWeaponUpgradeData}}
+\index{UpdateWeaponUpgradeData@{UpdateWeaponUpgradeData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{UpdateWeaponUpgradeData()}{UpdateWeaponUpgradeData()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a54f6646c23df43154266e618607b8ba6} 
+void User\+Data\+Manager.\+Mission\+Data.\+Update\+Weapon\+Upgrade\+Data (\begin{DoxyParamCaption}\item[{int}]{weapon\+No}{, }\item[{Func$<$ int, int $>$}]{update\+Func}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00236}{236}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_abec346b4b5be911f9d4bbb3373eeec18}{WeaponUpgradeData}}.AddOrUpdate(weaponNo,\ updateFunc,\ 1);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_user_data_manager_1_1_mission_data_ab81deb2a334e0cc5e018025ee1c548be}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!buySkinData@{buySkinData}}
+\index{buySkinData@{buySkinData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{buySkinData}{buySkinData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_ab81deb2a334e0cc5e018025ee1c548be} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+buy\+Skin\+Data = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00198}{198}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_mission_data_aa6b88bbad5b739ef87e6cae5590a672a}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!clearMissionNo@{clearMissionNo}}
+\index{clearMissionNo@{clearMissionNo}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{clearMissionNo}{clearMissionNo}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_aa6b88bbad5b739ef87e6cae5590a672a} 
+int User\+Data\+Manager.\+Mission\+Data.\+clear\+Mission\+No\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00168}{168}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_mission_data_a097621f3f275a0a890ea2732da15b8d2}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!dungeonClearData@{dungeonClearData}}
+\index{dungeonClearData@{dungeonClearData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{dungeonClearData}{dungeonClearData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a097621f3f275a0a890ea2732da15b8d2} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+dungeon\+Clear\+Data = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00191}{191}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_mission_data_a511eb0a33b1925b035c8e0dc10aa2324}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!questClearData@{questClearData}}
+\index{questClearData@{questClearData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{questClearData}{questClearData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a511eb0a33b1925b035c8e0dc10aa2324} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+quest\+Clear\+Data = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00178}{178}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_mission_data_a0af15f1087394d4cc3afb6bcdc49e3e9}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!questUpgradeData@{questUpgradeData}}
+\index{questUpgradeData@{questUpgradeData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{questUpgradeData}{questUpgradeData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a0af15f1087394d4cc3afb6bcdc49e3e9} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+quest\+Upgrade\+Data = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00171}{171}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_mission_data_a420dd4d3b4e575177331a53a03ecaf87}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!weaponUpgradeData@{weaponUpgradeData}}
+\index{weaponUpgradeData@{weaponUpgradeData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{weaponUpgradeData}{weaponUpgradeData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a420dd4d3b4e575177331a53a03ecaf87} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+weapon\+Upgrade\+Data = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00185}{185}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{속성 문서화}
+\Hypertarget{class_user_data_manager_1_1_mission_data_a6a68f0866cca5a292ccf49caf8d73c19}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!BuySkinData@{BuySkinData}}
+\index{BuySkinData@{BuySkinData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{BuySkinData}{BuySkinData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a6a68f0866cca5a292ccf49caf8d73c19} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+Buy\+Skin\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+stage\+No, stage\+Clear\+Count 
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00203}{203}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00203\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_ab81deb2a334e0cc5e018025ee1c548be}{buySkinData}};\ \textcolor{keyword}{set}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_ab81deb2a334e0cc5e018025ee1c548be}{buySkinData}}\ =\ value;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!ClearMissionNo@{ClearMissionNo}}
+\index{ClearMissionNo@{ClearMissionNo}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{ClearMissionNo}{ClearMissionNo}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_afef89d620bcdc78c4d450a3f65357d2b} 
+int User\+Data\+Manager.\+Mission\+Data.\+Clear\+Mission\+No\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00169}{169}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_aa6b88bbad5b739ef87e6cae5590a672a}{clearMissionNo}};\ \textcolor{keyword}{set}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_aa6b88bbad5b739ef87e6cae5590a672a}{clearMissionNo}}\ =\ value;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_a5e054869b4c8f109d0ee7cbbf0a3b92c}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!DungeonClearData@{DungeonClearData}}
+\index{DungeonClearData@{DungeonClearData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{DungeonClearData}{DungeonClearData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_a5e054869b4c8f109d0ee7cbbf0a3b92c} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+Dungeon\+Clear\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+stage\+No, stage\+Clear\+Count 
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00196}{196}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00196\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a097621f3f275a0a890ea2732da15b8d2}{dungeonClearData}};\ \textcolor{keyword}{set}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a097621f3f275a0a890ea2732da15b8d2}{dungeonClearData}}\ =\ value;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_af6374e7e6ddc11b975fe1e9a7e55e1f5}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!QuestClearData@{QuestClearData}}
+\index{QuestClearData@{QuestClearData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{QuestClearData}{QuestClearData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_af6374e7e6ddc11b975fe1e9a7e55e1f5} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+Quest\+Clear\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+quest\+No, quest\+Clear\+Count 
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00183}{183}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00183\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a511eb0a33b1925b035c8e0dc10aa2324}{questClearData}};\ \textcolor{keyword}{set}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a511eb0a33b1925b035c8e0dc10aa2324}{questClearData}}\ =\ value;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_ac5d077152efb392e443b1ffa36ba9174}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!QuestUpgradeData@{QuestUpgradeData}}
+\index{QuestUpgradeData@{QuestUpgradeData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{QuestUpgradeData}{QuestUpgradeData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_ac5d077152efb392e443b1ffa36ba9174} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+Quest\+Upgrade\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+quest\+No, quest\+Level 
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00176}{176}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a0af15f1087394d4cc3afb6bcdc49e3e9}{questUpgradeData}};\ \textcolor{keyword}{set}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a0af15f1087394d4cc3afb6bcdc49e3e9}{questUpgradeData}}\ =\ value;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_data_manager_1_1_mission_data_abec346b4b5be911f9d4bbb3373eeec18}\index{UserDataManager.MissionData@{UserDataManager.MissionData}!WeaponUpgradeData@{WeaponUpgradeData}}
+\index{WeaponUpgradeData@{WeaponUpgradeData}!UserDataManager.MissionData@{UserDataManager.MissionData}}
+\doxysubsubsection{\texorpdfstring{WeaponUpgradeData}{WeaponUpgradeData}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_mission_data_abec346b4b5be911f9d4bbb3373eeec18} 
+Dictionary$<$int, int$>$ User\+Data\+Manager.\+Mission\+Data.\+Weapon\+Upgrade\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+weapon\+No, weapon\+Level 
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00189}{189}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \{\ \textcolor{keyword}{get}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a420dd4d3b4e575177331a53a03ecaf87}{weaponUpgradeData}};\ \textcolor{keyword}{set}\ =>\ \mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a420dd4d3b4e575177331a53a03ecaf87}{weaponUpgradeData}}\ =\ value;\ \}}
+
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Manager/\mbox{\hyperlink{_user_data_manager_8cs}{User\+Data\+Manager.\+cs}}\end{DoxyCompactItemize}

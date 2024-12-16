@@ -1,0 +1,7 @@
+<map id="SkinUpgradeButtonView" name="SkinUpgradeButtonView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,347,158,437"/>
+<area shape="rect" id="Node000002" href="$class_upgrade_button_view.html" title=" " alt="" coords="18,123,145,299"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,313,84,347,79,347,79,313"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="31,5,132,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,90,84,123,79,123,79,90"/>
+</map>

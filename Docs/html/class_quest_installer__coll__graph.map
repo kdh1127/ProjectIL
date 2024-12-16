@@ -1,0 +1,15 @@
+<map id="QuestInstaller" name="QuestInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="83,743,200,833"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,524,94,593"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,606,126,742,121,744,66,608"/>
+<area shape="rect" id="Node000003" href="$class_quest_panel_view.html" title=" " alt="" coords="100,324,208,415"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,414,146,726,141,726,150,414"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,5,289,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="226,90,223,99,166,325,161,324,218,98,221,88"/>
+<area shape="rect" id="Node000005" href="$class_quest_item_view.html" title=" " alt="" coords="277,439,403,679"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="244,89,252,187,268,300,285,370,304,439,299,440,279,371,263,300,247,187,239,90"/>
+<area shape="rect" id="Node000006" href="$class_upgrade_button_view.html" title=" " alt="" coords="277,124,404,300"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="269,86,291,123,286,126,264,89"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="280,656,260,680,208,734,204,730,256,677,276,652"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="343,300,343,422,338,422,338,300"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="QuestPresenter.SubscribeToUpgradeButton" name="QuestPresenter.SubscribeToUpgradeButton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" id="Node000002" href="$class_quest_item_model.html#a50a45531798a133ac18ccd8678f5e01a" title=" " alt="" coords="478,13,648,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,24,462,24,462,29,180,29"/>
+<area shape="rect" id="Node000003" href="$class_quest_item_model.html#a988094870f2ed436a302434a4e3ff635" title=" " alt="" coords="228,39,430,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,33,212,37,212,42,180,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="430,38,462,35,462,40,431,44"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="WeaponPresenter.InitItemView" name="WeaponPresenter.InitItemView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="240,5,441,32"/>
+<area shape="rect" id="Node000002" href="$class_weapon_presenter.html#aae5587cca9c682879f261f0f56d2079c" title=" " alt="" coords="5,5,192,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,21,192,21,192,16,224,16"/>
+</map>

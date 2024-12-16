@@ -1,0 +1,11 @@
+<map id="MissionItemView.Init" name="MissionItemView.Init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="500,72,642,99"/>
+<area shape="rect" id="Node000002" href="$class_mission_panel_view.html#a4d595f450fbff364363949350d53f676" title=" " alt="" coords="238,5,452,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="502,70,429,51,431,46,503,65"/>
+<area shape="rect" id="Node000003" href="$class_mission_presenter.html#a39960d3ff603d7a2daec3db66fb9635f" title=" " alt="" coords="245,72,444,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="484,88,445,88,445,83,484,83"/>
+<area shape="rect" id="Node000005" href="$class_mission_panel_view.html#ac1716ba92a79215cd94b55296f0fe2b4" title=" " alt="" coords="256,123,434,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="503,106,431,125,429,119,502,100"/>
+<area shape="rect" id="Node000004" href="$class_mission_presenter.html#a228efbb6b995da3fc57284e6f9126f77" title=" " alt="" coords="5,72,190,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,88,190,88,190,83,229,83"/>
+</map>

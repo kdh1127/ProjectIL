@@ -1,0 +1,7 @@
+<map id="MainButtonView.DeactivateAllPanel" name="MainButtonView.DeactivateAllPanel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="488,5,670,48"/>
+<area shape="rect" id="Node000002" href="$class_main_button_view.html#a8cb179a1f33a1daca4d65ed8e1aaad79" title=" " alt="" coords="213,13,440,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="472,29,441,29,441,24,472,24"/>
+<area shape="rect" id="Node000003" href="$class_main_button_view.html#a12966d9d57a6f9aafdf10057ff049b55" title=" " alt="" coords="5,13,165,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="197,29,165,29,165,24,197,24"/>
+</map>

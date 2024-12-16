@@ -1,0 +1,19 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,183,99,209"/>
+<area shape="rect" id="Node000001" href="$class_battle_presenter.html" title=" " alt="" coords="165,5,276,32"/>
+<area shape="poly" id="edge49_Node000000_Node000001" title=" " alt="" coords="61,167,93,104,116,71,145,42,164,30,167,35,148,46,120,74,97,107,66,169"/>
+<area shape="rect" id="Node000002" href="$class_character_manager.html" title=" " alt="" coords="156,56,284,83"/>
+<area shape="poly" id="edge50_Node000000_Node000002" title=" " alt="" coords="69,168,102,130,145,92,168,81,170,86,148,97,106,133,73,172"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html" title=" " alt="" coords="167,107,274,133"/>
+<area shape="poly" id="edge51_Node000000_Node000003" title=" " alt="" coords="89,172,146,143,175,131,177,136,148,148,91,177"/>
+<area shape="rect" id="Node000004" href="$class_monster_manager.html" title=" " alt="" coords="161,157,280,184"/>
+<area shape="poly" id="edge52_Node000000_Node000004" title=" " alt="" coords="114,184,161,177,161,182,114,189"/>
+<area shape="rect" id="Node000005" href="$class_popup_manager.html" title=" " alt="" coords="166,208,274,235"/>
+<area shape="poly" id="edge53_Node000000_Node000005" title=" " alt="" coords="115,203,166,211,165,216,114,208"/>
+<area shape="rect" id="Node000006" href="$class_stage_manager.html" title=" " alt="" coords="168,259,273,285"/>
+<area shape="poly" id="edge54_Node000000_Node000006" title=" " alt="" coords="91,215,148,244,177,256,175,261,146,249,89,220"/>
+<area shape="rect" id="Node000007" href="$class_t_r_scriptable_manager.html" title=" " alt="" coords="147,309,294,336"/>
+<area shape="poly" id="edge55_Node000000_Node000007" title=" " alt="" coords="73,220,106,259,148,295,170,306,168,311,145,300,102,262,69,224"/>
+<area shape="rect" id="Node000008" href="$class_user_data_manager.html" title=" " alt="" coords="157,360,284,387"/>
+<area shape="poly" id="edge56_Node000000_Node000008" title=" " alt="" coords="66,223,97,285,120,318,148,346,167,357,164,362,145,350,116,321,93,288,61,225"/>
+</map>

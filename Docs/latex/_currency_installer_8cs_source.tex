@@ -1,0 +1,26 @@
+\doxysection{Currency\+Installer.\+cs}
+\hypertarget{_currency_installer_8cs_source}{}\label{_currency_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/CurrencyInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/CurrencyInstaller.cs}}
+\mbox{\hyperlink{_currency_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00003}\mbox{\hyperlink{class_currency_installer}{00003}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_currency_installer}{CurrencyInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00005}\mbox{\hyperlink{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_currency_view}{CurrencyView}}\ \mbox{\hyperlink{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b}{currencyViewPrefab}};}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00007}\mbox{\hyperlink{class_currency_installer_a9f5e562b459de112e8ab548c4c60e677}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_currency_installer_a9f5e562b459de112e8ab548c4c60e677}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_gold}{Gold}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_dia}{Dia}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_key}{Key}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_presenter}{CurrencyPresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_currency_model}{CurrencyModel}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ Container}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ .Bind<\mbox{\hyperlink{class_currency_view}{CurrencyView}}>()}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_currency_installer_ab1e8cea9f8f149a04f93c18d11b43f7b}{currencyViewPrefab}})}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ .AsCached();}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_currency_installer_8cs_source_l00020}00020\ \}}
+
+\end{DoxyCode}

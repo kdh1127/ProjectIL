@@ -1,0 +1,392 @@
+\doxysection{Weapon\+Presenter 클래스 참조}
+\hypertarget{class_weapon_presenter}{}\label{class_weapon_presenter}\index{WeaponPresenter@{WeaponPresenter}}
+
+
+Weapon\+Presenter에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_presenter_abc99d3d5094036b52e5a3db2c2e87e36}{Weapon\+Presenter}} (\mbox{\hyperlink{class_weapon_model}{Weapon\+Model}} \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}}, \mbox{\hyperlink{class_weapon_panel_view}{Weapon\+Panel\+View}} \mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{view}}, \mbox{\hyperlink{class_character_view}{Character\+View}} \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{character\+View}}, \mbox{\hyperlink{class_weapon_item_view_factory}{Weapon\+Item\+View\+Factory}} \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weapon\+Item\+View\+Factory}}, \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}, \mbox{\hyperlink{class_skin_model}{Skin\+Model}} \mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skin\+Model}})
+\item 
+void \mbox{\hyperlink{class_weapon_presenter_aae5587cca9c682879f261f0f56d2079c}{Subscribe}} ()
+\item 
+void \mbox{\hyperlink{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445}{Init\+Item\+View}} (\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}} item\+Model, \mbox{\hyperlink{class_weapon_item_view}{Weapon\+Item\+View}} item\+View, Weapon\+Table table)
+\item 
+void \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{Update\+Item\+View}} (\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}} item\+Model, \mbox{\hyperlink{class_weapon_item_view}{Weapon\+Item\+View}} item\+View, Weapon\+Table table)
+\item 
+void \mbox{\hyperlink{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a}{Subscribe\+To\+Weapon\+Item\+Model}} (\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}} item\+Model, \mbox{\hyperlink{class_weapon_item_view}{Weapon\+Item\+View}} item\+View, Weapon\+Table table)
+\item 
+void \mbox{\hyperlink{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269}{Subscribe\+To\+Upgrade\+Button}} (\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}} item\+Model, \mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}} upgrade\+Button\+View)
+\item 
+void \mbox{\hyperlink{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500}{Subscribe\+To\+Gold}} (\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}} item\+Model, \mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}} upgrade\+Button\+View, Weapon\+Table table)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_weapon_model}{Weapon\+Model}} \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}}
+\item 
+readonly \mbox{\hyperlink{class_weapon_panel_view}{Weapon\+Panel\+View}} \mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{view}}
+\item 
+readonly \mbox{\hyperlink{class_weapon_item_view_factory}{Weapon\+Item\+View\+Factory}} \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weapon\+Item\+View\+Factory}}
+\item 
+readonly \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}
+\item 
+readonly \mbox{\hyperlink{class_character_view}{Character\+View}} \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{character\+View}}
+\item 
+readonly \mbox{\hyperlink{class_skin_model}{Skin\+Model}} \mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skin\+Model}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{class_weapon_presenter_abc99d3d5094036b52e5a3db2c2e87e36}\index{WeaponPresenter@{WeaponPresenter}!WeaponPresenter@{WeaponPresenter}}
+\index{WeaponPresenter@{WeaponPresenter}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{WeaponPresenter()}{WeaponPresenter()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_abc99d3d5094036b52e5a3db2c2e87e36} 
+Weapon\+Presenter.\+Weapon\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_model}{Weapon\+Model}}}]{model}{, }\item[{\mbox{\hyperlink{class_weapon_panel_view}{Weapon\+Panel\+View}}}]{view}{, }\item[{\mbox{\hyperlink{class_character_view}{Character\+View}}}]{character\+View}{, }\item[{\mbox{\hyperlink{class_weapon_item_view_factory}{Weapon\+Item\+View\+Factory}}}]{weapon\+Item\+View\+Factory}{, }\item[{\mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}}}]{gold}{, }\item[{\mbox{\hyperlink{class_skin_model}{Skin\+Model}}}]{skin\+Model}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00018}{18}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ this.view\ =\ \mbox{\hyperlink{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}{view}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ this.characterView\ =\ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ this.weaponItemViewFactory\ =\ \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weaponItemViewFactory}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ this.gold\ =\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ this.skinModel\ =\ \mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445}\index{WeaponPresenter@{WeaponPresenter}!InitItemView@{InitItemView}}
+\index{InitItemView@{InitItemView}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{InitItemView()}{InitItemView()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445} 
+void Weapon\+Presenter.\+Init\+Item\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}}}]{item\+Model}{, }\item[{\mbox{\hyperlink{class_weapon_item_view}{Weapon\+Item\+View}}}]{item\+View}{, }\item[{Weapon\+Table}]{table}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00049}{49}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ var\ costImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}CostImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_weapon_item_view_a48365bf72548915453be4d4082b350bc}{Init}}(}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ table:\ table,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ curLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a90091ca9fd4f2252861e5800b062afdc}{m\_level}}.Value,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ isMaxLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a7fa54ff745c012f6a4d68b2dea9a56d8}{isMaxLevel}}.Value,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ isEquiped:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adede9ebf58a7731fdbc2581002b058ab}{isEquiped}}.Value,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ isUnLock:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Value,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ isEnughGold:\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}.CanSubtract(table.Cost.ToBigInt()));}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_weapon_item_view_ab56c88d5aa6d79ec2c049105fe98b736}{upgradeButtonView}}.\mbox{\hyperlink{class_upgrade_button_view_a606b9f3e3ed1f6e2e17f5a2247bbfcaa}{Init}}(}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ increase:\ table.Increase.ToBigInt(),}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ cost:\ table.Cost.ToBigInt(),}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ costImage:\ costImageResources[\textcolor{stringliteral}{"{}Gold"{}}]);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table);}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_weapon_presenter_aae5587cca9c682879f261f0f56d2079c}\index{WeaponPresenter@{WeaponPresenter}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_aae5587cca9c682879f261f0f56d2079c} 
+void Weapon\+Presenter.\+Subscribe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00034}{34}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ WeaponTableList.Get().ForEach(table\ =>}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponItemView\ =\ \mbox{\hyperlink{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}{weaponItemViewFactory}}.Create();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponItemModel\ =\ \mbox{\hyperlink{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}{model}}.\mbox{\hyperlink{class_weapon_model_ab69bd5e52fa781e3ab6b0f37092b9af3}{weaponItemList}}[table.WeaponNo];}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ weaponItemModel.UpdateState();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_ac301a1657fe5a414c28ea97795784445}{InitItemView}}(weaponItemModel,\ weaponItemView,\ table);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a}{SubscribeToWeaponItemModel}}(weaponItemModel,\ weaponItemView,\ table);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269}{SubscribeToUpgradeButton}}(weaponItemModel,\ weaponItemView.upgradeButtonView);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500}{SubscribeToGold}}(weaponItemModel,\ weaponItemView.upgradeButtonView,\ table);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_aae5587cca9c682879f261f0f56d2079c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500}\index{WeaponPresenter@{WeaponPresenter}!SubscribeToGold@{SubscribeToGold}}
+\index{SubscribeToGold@{SubscribeToGold}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{SubscribeToGold()}{SubscribeToGold()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500} 
+void Weapon\+Presenter.\+Subscribe\+To\+Gold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}}}]{item\+Model}{, }\item[{\mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}}}]{upgrade\+Button\+View}{, }\item[{Weapon\+Table}]{table}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00116}{116}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ .Where(\_\ =>\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Value)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ var\ isEnughGold\ =\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}.CanSubtract(table.Cost.ToBigInt());}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeButtonView.\mbox{\hyperlink{class_upgrade_button_view_a913876d9c3c44a33e06d9bd7d6b030c8}{SetInteractable}}(isEnughGold);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}).AddTo(upgradeButtonView.gameObject);}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_a001f1af3761f5257305b721fe52ed500_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269}\index{WeaponPresenter@{WeaponPresenter}!SubscribeToUpgradeButton@{SubscribeToUpgradeButton}}
+\index{SubscribeToUpgradeButton@{SubscribeToUpgradeButton}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{SubscribeToUpgradeButton()}{SubscribeToUpgradeButton()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269} 
+void Weapon\+Presenter.\+Subscribe\+To\+Upgrade\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}}}]{item\+Model}{, }\item[{\mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}}}]{upgrade\+Button\+View}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00102}{102}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ upgradeButtonView.\mbox{\hyperlink{class_upgrade_button_view_aa39e9434c430ab5271681d2d0040cef6}{button}}.OnClickAsObservable().Subscribe(\_\ =>}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a3176af01d39f471f084c102175f6002e}{Upgrade}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}}.\mbox{\hyperlink{class_skin_model_af7e45ecf6f70eb9e9d64363536ce064d}{IsUnEquipAllSkin}}()\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}WeaponImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ originWeaponNo\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a6f1e0ab73a6def09bd14c05101829cd6}{skinData}}.\mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{originWeaponNo}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImage\ =\ weaponImageResources[WeaponTableList.Get()[originWeaponNo].Image];}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}}.\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(weaponImage);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}).AddTo(upgradeButtonView.gameObject);}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_a7310eb27235cc0ec8821307b18c82269_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a}\index{WeaponPresenter@{WeaponPresenter}!SubscribeToWeaponItemModel@{SubscribeToWeaponItemModel}}
+\index{SubscribeToWeaponItemModel@{SubscribeToWeaponItemModel}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{SubscribeToWeaponItemModel()}{SubscribeToWeaponItemModel()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a} 
+void Weapon\+Presenter.\+Subscribe\+To\+Weapon\+Item\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}}}]{item\+Model}{, }\item[{\mbox{\hyperlink{class_weapon_item_view}{Weapon\+Item\+View}}}]{item\+View}{, }\item[{Weapon\+Table}]{table}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00080}{80}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a90091ca9fd4f2252861e5800b062afdc}{m\_level}}.Subscribe(\_\ =>\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table)).AddTo(itemView.gameObject);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Subscribe(\_\ =>\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table)).AddTo(itemView.gameObject);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a7fa54ff745c012f6a4d68b2dea9a56d8}{isMaxLevel}}.Subscribe(\_\ =>\ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table)).AddTo(itemView.gameObject);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_adede9ebf58a7731fdbc2581002b058ab}{isEquiped}}.Subscribe(isEquip\ =>}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}{UpdateItemView}}(itemModel,\ itemView,\ table);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isEquip)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}WeaponImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.\mbox{\hyperlink{class_weapon_item_model_a09687c7d6294f13a0ec1ce08afd6dd32}{SetWeaponDamage}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}{skinModel}}.\mbox{\hyperlink{class_skin_model_af7e45ecf6f70eb9e9d64363536ce064d}{IsUnEquipAllSkin}}()\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ originWeaponNo\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a6f1e0ab73a6def09bd14c05101829cd6}{skinData}}.\mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{originWeaponNo}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImage\ =\ weaponImageResources[WeaponTableList.Get()[originWeaponNo].Image];}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}{characterView}}.\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(weaponImage);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}).AddTo(itemView.gameObject);}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_aa410701f4e9675d5dde5ca9232a5b57a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26}\index{WeaponPresenter@{WeaponPresenter}!UpdateItemView@{UpdateItemView}}
+\index{UpdateItemView@{UpdateItemView}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{UpdateItemView()}{UpdateItemView()}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26} 
+void Weapon\+Presenter.\+Update\+Item\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_item_model}{Weapon\+Item\+Model}}}]{item\+Model}{, }\item[{\mbox{\hyperlink{class_weapon_item_view}{Weapon\+Item\+View}}}]{item\+View}{, }\item[{Weapon\+Table}]{table}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00068}{68}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ var\ isEnughGold\ =\ \mbox{\hyperlink{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}{gold}}.CanSubtract(table.Cost.ToBigInt());}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ itemView.\mbox{\hyperlink{class_weapon_item_view_aef9f276c2063d8761324c9ba56336d8f}{UpdateLevel}}(}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ table:\ table,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ curLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a90091ca9fd4f2252861e5800b062afdc}{m\_level}}.Value,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ isMaxLevel:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_a7fa54ff745c012f6a4d68b2dea9a56d8}{isMaxLevel}}.Value,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ isEquiped:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adede9ebf58a7731fdbc2581002b058ab}{isEquiped}}.Value,}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ isUnLock:\ itemModel.\mbox{\hyperlink{class_weapon_item_model_adf3ade46a39ae8f9221ccd5f29b95b5f}{isUnLock}}.Value,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ isEnughGold:\ isEnughGold);}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_presenter_ad0707632020a4228f7eb0d0e054acc26_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821}\index{WeaponPresenter@{WeaponPresenter}!characterView@{characterView}}
+\index{characterView@{characterView}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{characterView}{characterView}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a2f4d9d3e3cbcd9dab70c3dad47b4c821} 
+readonly \mbox{\hyperlink{class_character_view}{Character\+View}} Weapon\+Presenter.\+character\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3}\index{WeaponPresenter@{WeaponPresenter}!gold@{gold}}
+\index{gold@{gold}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{gold}{gold}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a6157a9ddf286d4928b070f56e21dcbe3} 
+readonly \mbox{\hyperlink{class_currency_model_1_1_gold}{Currency\+Model.\+Gold}} Weapon\+Presenter.\+gold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_presenter_a586db7b0e848f17551ae46481f075248}\index{WeaponPresenter@{WeaponPresenter}!model@{model}}
+\index{model@{model}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a586db7b0e848f17551ae46481f075248} 
+readonly \mbox{\hyperlink{class_weapon_model}{Weapon\+Model}} Weapon\+Presenter.\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c}\index{WeaponPresenter@{WeaponPresenter}!skinModel@{skinModel}}
+\index{skinModel@{skinModel}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{skinModel}{skinModel}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a58745c5527d240005f86f06c3955a71c} 
+readonly \mbox{\hyperlink{class_skin_model}{Skin\+Model}} Weapon\+Presenter.\+skin\+Model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af}\index{WeaponPresenter@{WeaponPresenter}!view@{view}}
+\index{view@{view}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a17b1b683ed26fbaee128128e3e6b84af} 
+readonly \mbox{\hyperlink{class_weapon_panel_view}{Weapon\+Panel\+View}} Weapon\+Presenter.\+view\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072}\index{WeaponPresenter@{WeaponPresenter}!weaponItemViewFactory@{weaponItemViewFactory}}
+\index{weaponItemViewFactory@{weaponItemViewFactory}!WeaponPresenter@{WeaponPresenter}}
+\doxysubsubsection{\texorpdfstring{weaponItemViewFactory}{weaponItemViewFactory}}
+{\footnotesize\ttfamily \label{class_weapon_presenter_a607ba329d574cc80d1349e414e24a072} 
+readonly \mbox{\hyperlink{class_weapon_item_view_factory}{Weapon\+Item\+View\+Factory}} Weapon\+Presenter.\+weapon\+Item\+View\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_weapon_presenter_8cs_source}{Weapon\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_weapon_presenter_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Presenter/\mbox{\hyperlink{_weapon_presenter_8cs}{Weapon\+Presenter.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\doxysection{Treasure\+Item\+View 클래스 참조}
+\hypertarget{class_treasure_item_view}{}\label{class_treasure_item_view}\index{TreasureItemView@{TreasureItemView}}
+
+
+Treasure\+Item\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_treasure_item_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_treasure_item_view_a368c31893cba56e3a24703b9d0d7abee}{Init}} (Sprite sprite, string name, string increase\+Type\+String, int level, Big\+Integer increase)
+\item 
+void \mbox{\hyperlink{class_treasure_item_view_ab135c4ffc93c1b4fa433ba5716c31bf2}{Level\+Update}} (int level, string name, Big\+Integer total\+Increase\+Per)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}} \mbox{\hyperlink{class_treasure_item_view_a9177fa9a2ac8182bc35213164786492d}{upgrade\+Button\+View}}
+\item 
+Image \mbox{\hyperlink{class_treasure_item_view_a61928fcba99201c714108203d698bb9a}{treasure\+\_\+img}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_treasure_item_view_a2cc022c70c84d07a7b57e595293db3e4}{name\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_treasure_item_view_a4558b4d7ff664d1b8679477f07829222}{increase\+Type\+\_\+txt}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_treasure_item_view_ae1ade165f9660121c3c30b609322de03}{increase\+\_\+txt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00009}{9}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_treasure_item_view_a368c31893cba56e3a24703b9d0d7abee}\index{TreasureItemView@{TreasureItemView}!Init@{Init}}
+\index{Init@{Init}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_a368c31893cba56e3a24703b9d0d7abee} 
+void Treasure\+Item\+View.\+Init (\begin{DoxyParamCaption}\item[{Sprite}]{sprite}{, }\item[{string}]{name}{, }\item[{string}]{increase\+Type\+String}{, }\item[{int}]{level}{, }\item[{Big\+Integer}]{increase}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00017}{17}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ var\ titleString\ =\ \$\textcolor{stringliteral}{"{}LV.\{level\}\ \{LocalizationManager.GetTranslation(name)\}"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ treasure\_img.sprite\ =\ sprite;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ name\_txt.text\ =\ titleString;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ increaseType\_txt.text\ =\ LocalizationManager.GetTranslation(increaseTypeString);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ increase\_txt.text\ =\ \$\textcolor{stringliteral}{"{}\{increase\}\%\ ����"{}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_treasure_item_view_ab135c4ffc93c1b4fa433ba5716c31bf2}\index{TreasureItemView@{TreasureItemView}!LevelUpdate@{LevelUpdate}}
+\index{LevelUpdate@{LevelUpdate}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{LevelUpdate()}{LevelUpdate()}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_ab135c4ffc93c1b4fa433ba5716c31bf2} 
+void Treasure\+Item\+View.\+Level\+Update (\begin{DoxyParamCaption}\item[{int}]{level}{, }\item[{string}]{name}{, }\item[{Big\+Integer}]{total\+Increase\+Per}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00027}{27}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ var\ titleString\ =\ \$\textcolor{stringliteral}{"{}LV.\{level\}\ \{LocalizationManager.GetTranslation(name)\}"{}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ name\_txt.text\ =\ titleString;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ increase\_txt.text\ =\ \$\textcolor{stringliteral}{"{}\{totalIncreasePer\}\%\ ����"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_treasure_item_view_ae1ade165f9660121c3c30b609322de03}\index{TreasureItemView@{TreasureItemView}!increase\_txt@{increase\_txt}}
+\index{increase\_txt@{increase\_txt}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{increase\_txt}{increase\_txt}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_ae1ade165f9660121c3c30b609322de03} 
+TMP\+\_\+\+Text Treasure\+Item\+View.\+increase\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_treasure_item_view_a4558b4d7ff664d1b8679477f07829222}\index{TreasureItemView@{TreasureItemView}!increaseType\_txt@{increaseType\_txt}}
+\index{increaseType\_txt@{increaseType\_txt}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{increaseType\_txt}{increaseType\_txt}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_a4558b4d7ff664d1b8679477f07829222} 
+TMP\+\_\+\+Text Treasure\+Item\+View.\+increase\+Type\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_treasure_item_view_a2cc022c70c84d07a7b57e595293db3e4}\index{TreasureItemView@{TreasureItemView}!name\_txt@{name\_txt}}
+\index{name\_txt@{name\_txt}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{name\_txt}{name\_txt}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_a2cc022c70c84d07a7b57e595293db3e4} 
+TMP\+\_\+\+Text Treasure\+Item\+View.\+name\+\_\+txt}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_treasure_item_view_a61928fcba99201c714108203d698bb9a}\index{TreasureItemView@{TreasureItemView}!treasure\_img@{treasure\_img}}
+\index{treasure\_img@{treasure\_img}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{treasure\_img}{treasure\_img}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_a61928fcba99201c714108203d698bb9a} 
+Image Treasure\+Item\+View.\+treasure\+\_\+img}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_treasure_item_view_a9177fa9a2ac8182bc35213164786492d}\index{TreasureItemView@{TreasureItemView}!upgradeButtonView@{upgradeButtonView}}
+\index{upgradeButtonView@{upgradeButtonView}!TreasureItemView@{TreasureItemView}}
+\doxysubsubsection{\texorpdfstring{upgradeButtonView}{upgradeButtonView}}
+{\footnotesize\ttfamily \label{class_treasure_item_view_a9177fa9a2ac8182bc35213164786492d} 
+\mbox{\hyperlink{class_upgrade_button_view}{Upgrade\+Button\+View}} Treasure\+Item\+View.\+upgrade\+Button\+View}
+
+
+
+\mbox{\hyperlink{_treasure_item_view_8cs_source}{Treasure\+Item\+View.\+cs}} 파일의 \mbox{\hyperlink{_treasure_item_view_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+View/\+Item/\mbox{\hyperlink{_treasure_item_view_8cs}{Treasure\+Item\+View.\+cs}}\end{DoxyCompactItemize}

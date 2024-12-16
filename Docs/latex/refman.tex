@@ -1,0 +1,518 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  \RequirePackage{iftex}
+  \ifLuaTeX
+    \directlua{pdf.setminorversion(7)}
+  \fi
+  \ifXeTeX
+    \special{pdf:minorversion 7}
+  \fi
+  \ifPDFTeX
+    \pdfminorversion=7
+  \fi
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \makeatletter
+  \providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+  % suppress package identification of infwarerr as it contains the word "warning"
+  \let\@@protected@wlog\protected@wlog
+  \def\protected@wlog#1{\wlog{package info suppressed}}
+  \RequirePackage{infwarerr}
+  \let\protected@wlog\@@protected@wlog
+  \makeatother
+  \IfFormatAtLeastTF{2016/01/01}{}{\usepackage{fixltx2e}} % for \textsubscript
+  \ifPDFTeX
+    \IfFormatAtLeastTF{2015/01/01}{\pdfsuppresswarningpagegroup=1}{}
+  \fi
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \iftutex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+    \usepackage{unicode-math}
+  \else
+    \usepackage[utf8]{inputenc}
+  \fi
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage{kotex}
+  % Define default fonts
+  % Font selection
+  \iftutex
+  \else
+    \usepackage[T1]{fontenc}
+  \fi
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \doxyallsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  \usepackage{changepage}
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \ifPDFTeX
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+\fi
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifPDFTeX
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifXeTeX
+        \usepackage[xetex,pagebackref=true]{hyperref}
+      \else
+        \ifLuaTeX
+          \usepackage[luatex,pagebackref=true]{hyperref}
+        \else
+          \usepackage[ps2pdf,pagebackref=true]{hyperref}
+        \fi
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={나혼자 탑에서 버그 플레이},%
+      pdfsubject={}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \IfFormatAtLeastTF{2023/05/01}{\usepackage[deeplevels]{etoc}}{\usepackage[deeplevels]{etoc_doxygen}}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  \etocsetlevel{subsubsubsection}{4}
+  \etocsetlevel{subsubsubsubsection}{5}
+  \etocsetlevel{subsubsubsubsubsection}{6}
+  \etocsetlevel{subsubsubsubsubsubsection}{7}
+  \etocsetlevel{paragraph}{8}
+  \etocsetlevel{subparagraph}{9}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large 나혼자 탑에서 버그 플레이}\\
+  [1ex]\large 0.\+0.\+8 \\
+  \vspace*{1cm}
+  {\large 다음에 의해 생성됨 \+:  Doxygen 1.12.0}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{네임스페이스 색인}
+\input{namespaces}
+\chapter{계통도 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{파일 색인}
+\input{files}
+\chapter{네임스페이스 문서화}
+\input{namespace_alphabet_number}
+\chapter{클래스 문서화}
+\input{class_alphabet_number_1_1_alphabet_number_extension}
+\input{class_animator_extension}
+\input{class_alphabet_number_1_1_a_number}
+\input{struct_attack_info}
+\input{class_battle_presenter}
+\input{class_battle_presenter_1_1_battle_state}
+\input{class_big_integer_extension}
+\input{class_bottom_panel_view}
+\input{class_user_data_manager_1_1_character_data}
+\input{class_character_installer}
+\input{class_character_manager}
+\input{class_character_model}
+\input{class_character_view}
+\input{class_battle_presenter_1_1_clear_state}
+\input{class_common_toggle}
+\input{class_common_toggle_editor}
+\input{class_complete_button_view}
+\input{class_alphabet_number_1_1_conversion}
+\input{class_currency_base}
+\input{class_user_data_manager_1_1_currency_data}
+\input{class_currency_installer}
+\input{class_currency_model}
+\input{class_currency_presenter}
+\input{class_currency_view}
+\input{class_data_utility}
+\input{class_currency_model_1_1_dia}
+\input{class_dictionary_extension}
+\input{class_fade_screen_view}
+\input{class_game_manager}
+\input{class_currency_model_1_1_gold}
+\input{interface_i_currency}
+\input{class_battle_presenter_1_1_init_state}
+\input{interface_i_toggle_view}
+\input{class_currency_model_1_1_key}
+\input{class_battle_presenter_1_1_lull_state}
+\input{class_main_button_view}
+\input{class_main_installer}
+\input{class_main_scene_installer}
+\input{class_main_scene_presenter}
+\input{class_user_data_manager_1_1_mission_data}
+\input{class_mission_installer}
+\input{class_mission_item_view}
+\input{class_mission_model}
+\input{class_mission_panel_view}
+\input{class_mission_presenter}
+\input{class_monster_manager}
+\input{class_monster_model}
+\input{class_monster_view}
+\input{class_open_popup_button_view}
+\input{class_popup_manager}
+\input{class_post_build}
+\input{class_user_data_manager_1_1_quest_data_1_1_quest}
+\input{class_user_data_manager_1_1_quest_data}
+\input{class_quest_installer}
+\input{class_quest_item_model}
+\input{class_quest_item_view}
+\input{class_quest_item_view_factory}
+\input{class_quest_model}
+\input{class_quest_panel_view}
+\input{class_quest_presenter}
+\input{class_quest_resources}
+\input{class_register_event}
+\input{class_reincarnation_installer}
+\input{class_reincarnation_model}
+\input{class_reincarnation_popup_view}
+\input{class_reincarnation_presenter}
+\input{class_battle_presenter_1_1_reset_state}
+\input{class_resources_installer}
+\input{class_user_data_manager_1_1_skin_data_1_1_skin}
+\input{class_user_data_manager_1_1_skin_data}
+\input{class_skin_installer}
+\input{class_skin_item_model}
+\input{class_skin_item_view}
+\input{class_skin_item_view_factory}
+\input{class_skin_model}
+\input{class_skin_panel_view}
+\input{class_skin_presenter}
+\input{class_skin_upgrade_button_view}
+\input{class_user_data_manager_1_1_stage_data_1_1_stage}
+\input{class_user_data_manager_1_1_stage_data}
+\input{class_stage_manager}
+\input{class_string_extension}
+\input{class_test_installer}
+\input{class_test_manager}
+\input{class_top_panel_view}
+\input{class_user_data_manager_1_1_treasure_data_1_1_treasure}
+\input{class_user_data_manager_1_1_treasure_data}
+\input{class_treasure_installer}
+\input{class_treasure_item_model}
+\input{class_treasure_item_view}
+\input{class_treasure_item_view_factory}
+\input{class_treasure_model}
+\input{class_treasure_panel_view}
+\input{class_treasure_presenter}
+\input{class_t_r_scriptable_manager}
+\input{class_currency_base_1_1_unsubscriber}
+\input{class_upgrade_button_view}
+\input{class_user_data_manager}
+\input{class_user_data_manager_1_1_weapon_data}
+\input{class_weapon_installer}
+\input{class_user_data_manager_1_1_weapon_data_1_1_weapon_item_data}
+\input{class_weapon_item_model}
+\input{class_weapon_item_view}
+\input{class_weapon_item_view_factory}
+\input{class_weapon_model}
+\input{class_weapon_panel_view}
+\input{class_weapon_presenter}
+\input{class_weapon_resources}
+\chapter{파일 문서화}
+\input{_common_data_8cs}
+\input{_common_data_8cs_source}
+\input{_common_toggle_8cs}
+\input{_common_toggle_8cs_source}
+\input{_currency_base_8cs}
+\input{_currency_base_8cs_source}
+\input{_i_currency_8cs}
+\input{_i_currency_8cs_source}
+\input{_common_toggle_editor_8cs}
+\input{_common_toggle_editor_8cs_source}
+\input{_post_build_8cs}
+\input{_post_build_8cs_source}
+\input{_animator_extension_8cs}
+\input{_animator_extension_8cs_source}
+\input{_big_integer_extension_8cs}
+\input{_big_integer_extension_8cs_source}
+\input{_dictionary_extension_8cs}
+\input{_dictionary_extension_8cs_source}
+\input{_string_extension_8cs}
+\input{_string_extension_8cs_source}
+\input{_character_installer_8cs}
+\input{_character_installer_8cs_source}
+\input{_currency_installer_8cs}
+\input{_currency_installer_8cs_source}
+\input{_main_installer_8cs}
+\input{_main_installer_8cs_source}
+\input{_main_scene_installer_8cs}
+\input{_main_scene_installer_8cs_source}
+\input{_mission_installer_8cs}
+\input{_mission_installer_8cs_source}
+\input{_quest_installer_8cs}
+\input{_quest_installer_8cs_source}
+\input{_reincarnation_installer_8cs}
+\input{_reincarnation_installer_8cs_source}
+\input{_resources_installer_8cs}
+\input{_resources_installer_8cs_source}
+\input{_skin_installer_8cs}
+\input{_skin_installer_8cs_source}
+\input{_test_installer_8cs}
+\input{_test_installer_8cs_source}
+\input{_treasure_installer_8cs}
+\input{_treasure_installer_8cs_source}
+\input{_weapon_installer_8cs}
+\input{_weapon_installer_8cs_source}
+\input{_i_toggle_view_8cs}
+\input{_i_toggle_view_8cs_source}
+\input{_character_manager_8cs}
+\input{_character_manager_8cs_source}
+\input{_game_manager_8cs}
+\input{_game_manager_8cs_source}
+\input{_monster_manager_8cs}
+\input{_monster_manager_8cs_source}
+\input{_popup_manager_8cs}
+\input{_popup_manager_8cs_source}
+\input{_stage_manager_8cs}
+\input{_stage_manager_8cs_source}
+\input{_test_manager_8cs}
+\input{_test_manager_8cs_source}
+\input{_t_r_scriptable_manager_8cs}
+\input{_t_r_scriptable_manager_8cs_source}
+\input{_user_data_manager_8cs}
+\input{_user_data_manager_8cs_source}
+\input{_character_model_8cs}
+\input{_character_model_8cs_source}
+\input{_currency_model_8cs}
+\input{_currency_model_8cs_source}
+\input{_mission_model_8cs}
+\input{_mission_model_8cs_source}
+\input{_monster_model_8cs}
+\input{_monster_model_8cs_source}
+\input{_quest_model_8cs}
+\input{_quest_model_8cs_source}
+\input{_reincarnation_model_8cs}
+\input{_reincarnation_model_8cs_source}
+\input{_skin_model_8cs}
+\input{_skin_model_8cs_source}
+\input{_treasure_model_8cs}
+\input{_treasure_model_8cs_source}
+\input{_weapon_model_8cs}
+\input{_weapon_model_8cs_source}
+\input{_battle_presenter_8cs}
+\input{_battle_presenter_8cs_source}
+\input{_currency_presenter_8cs}
+\input{_currency_presenter_8cs_source}
+\input{_main_scene_presenter_8cs}
+\input{_main_scene_presenter_8cs_source}
+\input{_mission_presenter_8cs}
+\input{_mission_presenter_8cs_source}
+\input{_quest_presenter_8cs}
+\input{_quest_presenter_8cs_source}
+\input{_reincarnation_presenter_8cs}
+\input{_reincarnation_presenter_8cs_source}
+\input{_skin_presenter_8cs}
+\input{_skin_presenter_8cs_source}
+\input{_treasure_presenter_8cs}
+\input{_treasure_presenter_8cs_source}
+\input{_weapon_presenter_8cs}
+\input{_weapon_presenter_8cs_source}
+\input{_battle_state_8cs}
+\input{_battle_state_8cs_source}
+\input{_a_number_8cs}
+\input{_a_number_8cs_source}
+\input{_data_utility_8cs}
+\input{_data_utility_8cs_source}
+\input{_global_enums_8cs}
+\input{_global_enums_8cs_source}
+\input{_register_event_8cs}
+\input{_register_event_8cs_source}
+\input{_complete_button_view_8cs}
+\input{_complete_button_view_8cs_source}
+\input{_main_button_view_8cs}
+\input{_main_button_view_8cs_source}
+\input{_open_popup_button_view_8cs}
+\input{_open_popup_button_view_8cs_source}
+\input{_skin_upgrade_button_view_8cs}
+\input{_skin_upgrade_button_view_8cs_source}
+\input{_upgrade_button_view_8cs}
+\input{_upgrade_button_view_8cs_source}
+\input{_character_view_8cs}
+\input{_character_view_8cs_source}
+\input{_currency_view_8cs}
+\input{_currency_view_8cs_source}
+\input{_fade_screen_view_8cs}
+\input{_fade_screen_view_8cs_source}
+\input{_mission_item_view_8cs}
+\input{_mission_item_view_8cs_source}
+\input{_quest_item_view_8cs}
+\input{_quest_item_view_8cs_source}
+\input{_skin_item_view_8cs}
+\input{_skin_item_view_8cs_source}
+\input{_treasure_item_view_8cs}
+\input{_treasure_item_view_8cs_source}
+\input{_weapon_item_view_8cs}
+\input{_weapon_item_view_8cs_source}
+\input{_monster_view_8cs}
+\input{_monster_view_8cs_source}
+\input{_bottom_panel_view_8cs}
+\input{_bottom_panel_view_8cs_source}
+\input{_mission_panel_view_8cs}
+\input{_mission_panel_view_8cs_source}
+\input{_quest_panel_view_8cs}
+\input{_quest_panel_view_8cs_source}
+\input{_skin_panel_view_8cs}
+\input{_skin_panel_view_8cs_source}
+\input{_top_panel_view_8cs}
+\input{_top_panel_view_8cs_source}
+\input{_treasure_panel_view_8cs}
+\input{_treasure_panel_view_8cs_source}
+\input{_weapon_panel_view_8cs}
+\input{_weapon_panel_view_8cs_source}
+\input{_reincarnation_popup_view_8cs}
+\input{_reincarnation_popup_view_8cs_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

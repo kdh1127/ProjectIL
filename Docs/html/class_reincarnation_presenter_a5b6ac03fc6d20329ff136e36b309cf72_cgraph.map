@@ -1,0 +1,11 @@
+<map id="ReincarnationPresenter.SubscribeToReincarnationButton" name="ReincarnationPresenter.SubscribeToReincarnationButton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,48,225,91"/>
+<area shape="rect" id="Node000002" href="$class_reincarnation_model.html#a906928a2c5592fff4ce89180c4ac4214" title=" " alt="" coords="273,5,493,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,46,293,33,294,38,225,51"/>
+<area shape="rect" id="Node000004" href="$class_quest_model.html#aff53e73a64183fdc868a2e7db8da2cc1" title=" " alt="" coords="318,56,448,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,67,302,67,302,72,225,72"/>
+<area shape="rect" id="Node000005" href="$class_weapon_model.html#acdbbcae67c7e270d624fa772011f19eb" title=" " alt="" coords="312,107,454,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="225,87,297,101,296,106,224,93"/>
+<area shape="rect" id="Node000003" href="$class_reincarnation_model.html#a105c163c271780b5df966a17f7d84372" title=" " alt="" coords="541,5,747,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="493,16,525,16,525,21,493,21"/>
+</map>

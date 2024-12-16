@@ -1,0 +1,15 @@
+<map id="QuestPresenter.SubscribeToQuestItemModel" name="QuestPresenter.SubscribeToQuestItemModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,124,180,167"/>
+<area shape="rect" id="Node000002" href="$class_quest_item_model.html#a50a45531798a133ac18ccd8678f5e01a" title=" " alt="" coords="257,5,427,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,122,163,81,194,59,227,42,243,35,245,40,229,46,197,64,166,85,118,126"/>
+<area shape="rect" id="Node000003" href="$class_quest_item_model.html#aa38d5fafda6ffc839a5a2a19afab7d5f" title=" " alt="" coords="248,56,436,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,121,227,92,256,84,257,89,228,97,148,126"/>
+<area shape="rect" id="Node000004" href="$class_quest_item_view.html#a951d661f8cab70b8b200d115f5ab891a" title=" " alt="" coords="238,107,446,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,134,222,129,223,135,180,139"/>
+<area shape="rect" id="Node000005" href="$class_upgrade_button_view.html#a913876d9c3c44a33e06d9bd7d6b030c8" title=" " alt="" coords="228,157,456,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="180,152,213,155,212,160,180,157"/>
+<area shape="rect" id="Node000006" href="$class_quest_item_view.html#ac9a78ff9540596b237af29b72e9cbdf3" title=" " alt="" coords="248,208,436,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="148,165,228,193,257,201,256,206,227,199,146,170"/>
+<area shape="rect" id="Node000007" href="$class_upgrade_button_view.html#a563bc87d565b9d9ca75a89805e74f0df" title=" " alt="" coords="236,259,448,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="118,165,166,206,197,227,229,244,245,251,243,256,227,249,194,231,163,210,114,169"/>
+</map>

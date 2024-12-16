@@ -1,0 +1,5 @@
+<map id="WeaponItemView.SetWeaponImage" name="WeaponItemView.SetWeaponImage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,199,48"/>
+<area shape="rect" id="Node000002" href="$class_t_r_scriptable_manager.html#acf23f05ff667644f2a13ff5b5d2f18ed" title=" " alt="" coords="247,13,453,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,24,231,24,231,29,199,29"/>
+</map>

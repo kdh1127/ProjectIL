@@ -1,0 +1,34 @@
+\doxysection{Reincarnation\+Model.\+cs}
+\hypertarget{_reincarnation_model_8cs_source}{}\label{_reincarnation_model_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/ReincarnationModel.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Model/ReincarnationModel.cs}}
+\mbox{\hyperlink{_reincarnation_model_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }ThreeRabbitPackage.Util;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00005}\mbox{\hyperlink{class_reincarnation_model}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reincarnation_model}{ReincarnationModel}}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00007}\mbox{\hyperlink{class_reincarnation_model_aec31ea23242810cdc4bcd93269bb9571}{00007}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_key}{CurrencyModel.Key}}\ \mbox{\hyperlink{class_reincarnation_model_aec31ea23242810cdc4bcd93269bb9571}{key}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00008}00008\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00009}\mbox{\hyperlink{class_reincarnation_model_a5f9f623f428ad8cc1d66cbd20600c7e6}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_reincarnation_model_a5f9f623f428ad8cc1d66cbd20600c7e6}{ReincarnationModel}}(\mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_key}{Key}}\ \mbox{\hyperlink{class_reincarnation_model_aec31ea23242810cdc4bcd93269bb9571}{key}})}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ this.key\ =\ \mbox{\hyperlink{class_reincarnation_model_aec31ea23242810cdc4bcd93269bb9571}{key}};}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00014}\mbox{\hyperlink{class_reincarnation_model_a65f2ad31a395f20ee8c65ba03e4bb2b2}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_model_a65f2ad31a395f20ee8c65ba03e4bb2b2}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00018}\mbox{\hyperlink{class_reincarnation_model_a105c163c271780b5df966a17f7d84372}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ BigInteger\ \mbox{\hyperlink{class_reincarnation_model_a105c163c271780b5df966a17f7d84372}{GetReward}}()}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ var\ curStage\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value;}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ curStage\ +\ (curStage\ *\ curStage\ /\ 100);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00024}\mbox{\hyperlink{class_reincarnation_model_a906928a2c5592fff4ce89180c4ac4214}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reincarnation_model_a906928a2c5592fff4ce89180c4ac4214}{Reincarnation}}(\textcolor{keywordtype}{int}\ rate)}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_model_aec31ea23242810cdc4bcd93269bb9571}{key}}.Add(\mbox{\hyperlink{class_reincarnation_model_a105c163c271780b5df966a17f7d84372}{GetReward}}()*rate);}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reincarnation_model_8cs_source_l00028}00028\ \}}
+
+\end{DoxyCode}

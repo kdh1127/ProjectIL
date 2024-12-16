@@ -1,0 +1,134 @@
+\doxysection{User\+Data\+Manager.\+Quest\+Data 클래스 참조}
+\hypertarget{class_user_data_manager_1_1_quest_data}{}\label{class_user_data_manager_1_1_quest_data}\index{UserDataManager.QuestData@{UserDataManager.QuestData}}
+
+
+User\+Data\+Manager.\+Quest\+Data에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_user_data_manager_1_1_quest_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_1_1_quest}{Quest}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_ad971cd476b83d2042b9e4e9a7d59753a}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_aecd59e8431685a9ab249b589d6633ed3}{Load}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_a73c90c19957ebf2b30af9b203d3f9693}{Save}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ int, \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_1_1_quest}{Quest}} $>$ \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846}{quest\+Dict}} = new()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00256}{256}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_user_data_manager_1_1_quest_data_ad971cd476b83d2042b9e4e9a7d59753a}\index{UserDataManager.QuestData@{UserDataManager.QuestData}!Init@{Init}}
+\index{Init@{Init}!UserDataManager.QuestData@{UserDataManager.QuestData}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_quest_data_ad971cd476b83d2042b9e4e9a7d59753a} 
+void User\+Data\+Manager.\+Quest\+Data.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00265}{265}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ QuestTableList.Get().ForEach(questTable\ =>}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846}{questDict}}[questTable.QuestNo]\ =\ \textcolor{keyword}{new}\ Quest();}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_quest_data_ad971cd476b83d2042b9e4e9a7d59753a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_quest_data_aecd59e8431685a9ab249b589d6633ed3}\index{UserDataManager.QuestData@{UserDataManager.QuestData}!Load@{Load}}
+\index{Load@{Load}!UserDataManager.QuestData@{UserDataManager.QuestData}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_quest_data_aecd59e8431685a9ab249b589d6633ed3} 
+void User\+Data\+Manager.\+Quest\+Data.\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00273}{273}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ QuestData\ data\ =\ \mbox{\hyperlink{class_data_utility}{DataUtility}}.Load<QuestData>(\textcolor{stringliteral}{"{}QuestData"{}});}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846}{questDict}}\ =\ data.questDict;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_quest_data_aecd59e8431685a9ab249b589d6633ed3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_quest_data_a73c90c19957ebf2b30af9b203d3f9693}\index{UserDataManager.QuestData@{UserDataManager.QuestData}!Save@{Save}}
+\index{Save@{Save}!UserDataManager.QuestData@{UserDataManager.QuestData}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_quest_data_a73c90c19957ebf2b30af9b203d3f9693} 
+void User\+Data\+Manager.\+Quest\+Data.\+Save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00279}{279}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_data_utility}{DataUtility}}.Save(\textcolor{stringliteral}{"{}QuestData"{}},\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a06970da4c85563d9d35078c8d90ef3c0}{questData}});}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_quest_data_a73c90c19957ebf2b30af9b203d3f9693_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846}\index{UserDataManager.QuestData@{UserDataManager.QuestData}!questDict@{questDict}}
+\index{questDict@{questDict}!UserDataManager.QuestData@{UserDataManager.QuestData}}
+\doxysubsubsection{\texorpdfstring{questDict}{questDict}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_quest_data_adcc7eb37345798ae38b848b13a0d0846} 
+Dictionary$<$int, \mbox{\hyperlink{class_user_data_manager_1_1_quest_data_1_1_quest}{Quest}}$>$ User\+Data\+Manager.\+Quest\+Data.\+quest\+Dict = new()}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00263}{263}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Manager/\mbox{\hyperlink{_user_data_manager_8cs}{User\+Data\+Manager.\+cs}}\end{DoxyCompactItemize}

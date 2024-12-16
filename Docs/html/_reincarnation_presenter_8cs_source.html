@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/ReincarnationPresenter.cs 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_reincarnation_presenter_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ReincarnationPresenter.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_reincarnation_presenter_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Zenject;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UniRx;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_reincarnation_presenter.html">ReincarnationPresenter</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#a37a48d1641553e6103f32a71d9048432">    7</a></span>    <span class="keyword">private</span> readonly <a class="code hl_class" href="class_reincarnation_model.html">ReincarnationModel</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#a37a48d1641553e6103f32a71d9048432">model</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">    8</a></span>    <span class="keyword">private</span> readonly <a class="code hl_class" href="class_open_popup_button_view.html">OpenPopupButtonView</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#a5a37f8a155324c5ff7e3c3a164cd9e8f">    9</a></span>    <span class="keyword">private</span> readonly <a class="code hl_class" href="class_quest_model.html">QuestModel</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#a5a37f8a155324c5ff7e3c3a164cd9e8f">questModel</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#aec840256e2e0df7d1d002bba21332c8c">   10</a></span>    <span class="keyword">private</span> readonly <a class="code hl_class" href="class_weapon_model.html">WeaponModel</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#aec840256e2e0df7d1d002bba21332c8c">weaponModel</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#ae6b406c05dbe71514a2e333ccca00e23">   11</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_reincarnation_popup_view.html">ReincarnationPopupView</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#ae6b406c05dbe71514a2e333ccca00e23">reincarnationPopupView</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    [Inject]</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#adad73950b5ff773743db109c6194c808">   14</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="class_reincarnation_presenter.html#adad73950b5ff773743db109c6194c808">ReincarnationPresenter</a>(<a class="code hl_class" href="class_reincarnation_model.html">ReincarnationModel</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#a37a48d1641553e6103f32a71d9048432">model</a>, <a class="code hl_class" href="class_open_popup_button_view.html">OpenPopupButtonView</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>, <a class="code hl_class" href="class_quest_model.html">QuestModel</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#a5a37f8a155324c5ff7e3c3a164cd9e8f">questModel</a>, <a class="code hl_class" href="class_weapon_model.html">WeaponModel</a> <a class="code hl_variable" href="class_reincarnation_presenter.html#aec840256e2e0df7d1d002bba21332c8c">weaponModel</a>)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        this.model = <a class="code hl_variable" href="class_reincarnation_presenter.html#a37a48d1641553e6103f32a71d9048432">model</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this.reincarnationButton = <a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        this.questModel = <a class="code hl_variable" href="class_reincarnation_presenter.html#a5a37f8a155324c5ff7e3c3a164cd9e8f">questModel</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        this.weaponModel = <a class="code hl_variable" href="class_reincarnation_presenter.html#aec840256e2e0df7d1d002bba21332c8c">weaponModel</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#a82241f6922cafa3b8b26cb84f99faaca">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_reincarnation_presenter.html#a82241f6922cafa3b8b26cb84f99faaca">Subscribe</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="class_reincarnation_presenter.html#a5b6ac03fc6d20329ff136e36b309cf72">SubscribeToReincarnationButton</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_function" href="class_reincarnation_presenter.html#a218761896e8463c532218c61ccbd48e6">SubscribeToReincarnationPopupView</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_function" href="class_reincarnation_presenter.html#aba79f291de23aed96c9dd8d895c1d775">SubscribeToModel</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#a5b6ac03fc6d20329ff136e36b309cf72">   29</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_reincarnation_presenter.html#a5b6ac03fc6d20329ff136e36b309cf72">SubscribeToReincarnationButton</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_variable" href="class_stage_manager.html#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Subscribe(stageNo =&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            var isOpen = stageNo &gt;= 10;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>.gameObject.SetActive(isOpen);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }).AddTo(<a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>.gameObject);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>.<a class="code hl_variable" href="class_open_popup_button_view.html#a9be37d9d9c8fac47a74db1b4639a77cc">button</a>.OnClickAsObservable()</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            .Subscribe(_ =&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                TRCommonPopup.Instantiate(<a class="code hl_class" href="class_popup_manager.html">PopupManager</a>.Instance.transform)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                .SetTitle(<span class="stringliteral">&quot;ȯ���ϱ�&quot;</span>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                .SetMessage($<span class="stringliteral">&quot;������: {StageManager.Instance.CurStage.Value}\n���� ŉ�淮: {model.GetReward()}&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                .SetConfirm(confirmAction: obj =&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <a class="code hl_variable" href="class_reincarnation_presenter.html#a37a48d1641553e6103f32a71d9048432">model</a>.<a class="code hl_function" href="class_reincarnation_model.html#a906928a2c5592fff4ce89180c4ac4214">Reincarnation</a>(1);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <a class="code hl_variable" href="class_reincarnation_presenter.html#a5a37f8a155324c5ff7e3c3a164cd9e8f">questModel</a>.<a class="code hl_function" href="class_quest_model.html#aff53e73a64183fdc868a2e7db8da2cc1">Reset</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <a class="code hl_variable" href="class_reincarnation_presenter.html#aec840256e2e0df7d1d002bba21332c8c">weaponModel</a>.<a class="code hl_function" href="class_weapon_model.html#acdbbcae67c7e270d624fa772011f19eb">Reset</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    BattlePresenter.Instance.battleState = <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a>.<a class="code hl_class" href="class_battle_presenter_1_1_reset_state.html">ResetState</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    GameObject.Destroy(obj);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                }, confirmText: <span class="stringliteral">&quot;ȯ���ϱ�&quot;</span>)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                .SetCancel(cancelAction: obj =&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    GameObject.Destroy(obj);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                }, cancelText: <span class="stringliteral">&quot;����ϱ�&quot;</span>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                .Build();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }).AddTo(<a class="code hl_variable" href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">reincarnationButton</a>.gameObject);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#a218761896e8463c532218c61ccbd48e6">   61</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_reincarnation_presenter.html#a218761896e8463c532218c61ccbd48e6">SubscribeToReincarnationPopupView</a>()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_reincarnation_presenter.html#aba79f291de23aed96c9dd8d895c1d775">   66</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_reincarnation_presenter.html#aba79f291de23aed96c9dd8d895c1d775">SubscribeToModel</a>()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+</div>
+<div class="ttc" id="aclass_battle_presenter_1_1_reset_state_html"><div class="ttname"><a href="class_battle_presenter_1_1_reset_state.html">BattlePresenter.ResetState</a></div><div class="ttdef"><b>Definition</b> <a href="_battle_state_8cs_source.html#l00138">BattleState.cs:139</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html"><div class="ttname"><a href="class_battle_presenter.html">BattlePresenter</a></div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00011">BattlePresenter.cs:12</a></div></div>
+<div class="ttc" id="aclass_open_popup_button_view_html"><div class="ttname"><a href="class_open_popup_button_view.html">OpenPopupButtonView</a></div><div class="ttdef"><b>Definition</b> <a href="_open_popup_button_view_8cs_source.html#l00004">OpenPopupButtonView.cs:5</a></div></div>
+<div class="ttc" id="aclass_open_popup_button_view_html_a9be37d9d9c8fac47a74db1b4639a77cc"><div class="ttname"><a href="class_open_popup_button_view.html#a9be37d9d9c8fac47a74db1b4639a77cc">OpenPopupButtonView.button</a></div><div class="ttdeci">Button button</div><div class="ttdef"><b>Definition</b> <a href="_open_popup_button_view_8cs_source.html#l00006">OpenPopupButtonView.cs:6</a></div></div>
+<div class="ttc" id="aclass_popup_manager_html"><div class="ttname"><a href="class_popup_manager.html">PopupManager</a></div><div class="ttdef"><b>Definition</b> <a href="_popup_manager_8cs_source.html#l00006">PopupManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_quest_model_html"><div class="ttname"><a href="class_quest_model.html">QuestModel</a></div><div class="ttdef"><b>Definition</b> <a href="_quest_model_8cs_source.html#l00081">QuestModel.cs:82</a></div></div>
+<div class="ttc" id="aclass_quest_model_html_aff53e73a64183fdc868a2e7db8da2cc1"><div class="ttname"><a href="class_quest_model.html#aff53e73a64183fdc868a2e7db8da2cc1">QuestModel.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition</b> <a href="_quest_model_8cs_source.html#l00109">QuestModel.cs:109</a></div></div>
+<div class="ttc" id="aclass_reincarnation_model_html"><div class="ttname"><a href="class_reincarnation_model.html">ReincarnationModel</a></div><div class="ttdef"><b>Definition</b> <a href="_reincarnation_model_8cs_source.html#l00005">ReincarnationModel.cs:6</a></div></div>
+<div class="ttc" id="aclass_reincarnation_model_html_a906928a2c5592fff4ce89180c4ac4214"><div class="ttname"><a href="class_reincarnation_model.html#a906928a2c5592fff4ce89180c4ac4214">ReincarnationModel.Reincarnation</a></div><div class="ttdeci">void Reincarnation(int rate)</div><div class="ttdef"><b>Definition</b> <a href="_reincarnation_model_8cs_source.html#l00024">ReincarnationModel.cs:24</a></div></div>
+<div class="ttc" id="aclass_reincarnation_popup_view_html"><div class="ttname"><a href="class_reincarnation_popup_view.html">ReincarnationPopupView</a></div><div class="ttdef"><b>Definition</b> <a href="_reincarnation_popup_view_8cs_source.html#l00005">ReincarnationPopupView.cs:6</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html"><div class="ttname"><a href="class_reincarnation_presenter.html">ReincarnationPresenter</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">ReincarnationPresenter.cs:6</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_a06dd37ce26992fb556df05908fa0a122"><div class="ttname"><a href="class_reincarnation_presenter.html#a06dd37ce26992fb556df05908fa0a122">ReincarnationPresenter.reincarnationButton</a></div><div class="ttdeci">readonly OpenPopupButtonView reincarnationButton</div><div class="ttdef"><b>Definition</b> <a href="#l00008">ReincarnationPresenter.cs:8</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_a218761896e8463c532218c61ccbd48e6"><div class="ttname"><a href="class_reincarnation_presenter.html#a218761896e8463c532218c61ccbd48e6">ReincarnationPresenter.SubscribeToReincarnationPopupView</a></div><div class="ttdeci">void SubscribeToReincarnationPopupView()</div><div class="ttdef"><b>Definition</b> <a href="#l00061">ReincarnationPresenter.cs:61</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_a37a48d1641553e6103f32a71d9048432"><div class="ttname"><a href="class_reincarnation_presenter.html#a37a48d1641553e6103f32a71d9048432">ReincarnationPresenter.model</a></div><div class="ttdeci">readonly ReincarnationModel model</div><div class="ttdef"><b>Definition</b> <a href="#l00007">ReincarnationPresenter.cs:7</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_a5a37f8a155324c5ff7e3c3a164cd9e8f"><div class="ttname"><a href="class_reincarnation_presenter.html#a5a37f8a155324c5ff7e3c3a164cd9e8f">ReincarnationPresenter.questModel</a></div><div class="ttdeci">readonly QuestModel questModel</div><div class="ttdef"><b>Definition</b> <a href="#l00009">ReincarnationPresenter.cs:9</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_a5b6ac03fc6d20329ff136e36b309cf72"><div class="ttname"><a href="class_reincarnation_presenter.html#a5b6ac03fc6d20329ff136e36b309cf72">ReincarnationPresenter.SubscribeToReincarnationButton</a></div><div class="ttdeci">void SubscribeToReincarnationButton()</div><div class="ttdef"><b>Definition</b> <a href="#l00029">ReincarnationPresenter.cs:29</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_a82241f6922cafa3b8b26cb84f99faaca"><div class="ttname"><a href="class_reincarnation_presenter.html#a82241f6922cafa3b8b26cb84f99faaca">ReincarnationPresenter.Subscribe</a></div><div class="ttdeci">void Subscribe()</div><div class="ttdef"><b>Definition</b> <a href="#l00022">ReincarnationPresenter.cs:22</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_aba79f291de23aed96c9dd8d895c1d775"><div class="ttname"><a href="class_reincarnation_presenter.html#aba79f291de23aed96c9dd8d895c1d775">ReincarnationPresenter.SubscribeToModel</a></div><div class="ttdeci">void SubscribeToModel()</div><div class="ttdef"><b>Definition</b> <a href="#l00066">ReincarnationPresenter.cs:66</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_adad73950b5ff773743db109c6194c808"><div class="ttname"><a href="class_reincarnation_presenter.html#adad73950b5ff773743db109c6194c808">ReincarnationPresenter.ReincarnationPresenter</a></div><div class="ttdeci">ReincarnationPresenter(ReincarnationModel model, OpenPopupButtonView reincarnationButton, QuestModel questModel, WeaponModel weaponModel)</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ReincarnationPresenter.cs:14</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_ae6b406c05dbe71514a2e333ccca00e23"><div class="ttname"><a href="class_reincarnation_presenter.html#ae6b406c05dbe71514a2e333ccca00e23">ReincarnationPresenter.reincarnationPopupView</a></div><div class="ttdeci">ReincarnationPopupView reincarnationPopupView</div><div class="ttdef"><b>Definition</b> <a href="#l00011">ReincarnationPresenter.cs:11</a></div></div>
+<div class="ttc" id="aclass_reincarnation_presenter_html_aec840256e2e0df7d1d002bba21332c8c"><div class="ttname"><a href="class_reincarnation_presenter.html#aec840256e2e0df7d1d002bba21332c8c">ReincarnationPresenter.weaponModel</a></div><div class="ttdeci">readonly WeaponModel weaponModel</div><div class="ttdef"><b>Definition</b> <a href="#l00010">ReincarnationPresenter.cs:10</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html"><div class="ttname"><a href="class_stage_manager.html">StageManager</a></div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00008">StageManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html_acae6726c9f8a2eed38947f4b1ab416a8"><div class="ttname"><a href="class_stage_manager.html#acae6726c9f8a2eed38947f4b1ab416a8">StageManager.CurStage</a></div><div class="ttdeci">ReactiveProperty&lt; int &gt; CurStage</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00010">StageManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_weapon_model_html"><div class="ttname"><a href="class_weapon_model.html">WeaponModel</a></div><div class="ttdef"><b>Definition</b> <a href="_weapon_model_8cs_source.html#l00094">WeaponModel.cs:95</a></div></div>
+<div class="ttc" id="aclass_weapon_model_html_acdbbcae67c7e270d624fa772011f19eb"><div class="ttname"><a href="class_weapon_model.html#acdbbcae67c7e270d624fa772011f19eb">WeaponModel.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition</b> <a href="_weapon_model_8cs_source.html#l00131">WeaponModel.cs:131</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_e6eba136486108d313cec426fd3614b3.html">02.Scripts</a></li><li class="navelem"><a class="el" href="dir_e3a9c2b041668faebc4a0ff2b8c743c2.html">Presenter</a></li><li class="navelem"><a class="el" href="_reincarnation_presenter_8cs.html">ReincarnationPresenter.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

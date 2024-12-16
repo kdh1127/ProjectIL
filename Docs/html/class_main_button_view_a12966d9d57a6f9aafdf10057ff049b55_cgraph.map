@@ -1,0 +1,11 @@
+<map id="MainButtonView.Awake" name="MainButtonView.Awake">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,64,165,91"/>
+<area shape="rect" id="Node000002" href="$class_main_button_view.html#a8cb179a1f33a1daca4d65ed8e1aaad79" title=" " alt="" coords="213,64,440,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,75,197,75,197,80,165,80"/>
+<area shape="rect" id="Node000003" href="$class_main_button_view.html#a09c2728044f06ff79538b51feec76220" title=" " alt="" coords="489,5,689,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,61,511,33,512,38,390,66"/>
+<area shape="rect" id="Node000004" href="$class_main_button_view.html#a2bb864171d36bcf24a02be541ceb42e3" title=" " alt="" coords="488,56,690,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="441,75,472,75,472,80,441,80"/>
+<area shape="rect" id="Node000005" href="$class_main_button_view.html#a310adf4156440edaadff0523ed4262ac" title=" " alt="" coords="498,123,680,165"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="383,89,488,116,487,121,382,94"/>
+</map>

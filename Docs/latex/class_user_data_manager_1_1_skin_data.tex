@@ -1,0 +1,162 @@
+\doxysection{User\+Data\+Manager.\+Skin\+Data 클래스 참조}
+\hypertarget{class_user_data_manager_1_1_skin_data}{}\label{class_user_data_manager_1_1_skin_data}\index{UserDataManager.SkinData@{UserDataManager.SkinData}}
+
+
+User\+Data\+Manager.\+Skin\+Data에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_user_data_manager_1_1_skin_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_1_1_skin}{Skin}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_aba71c45b2d46e42aa93f0b10f4c24710}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a20cd8180d6769154f585b63706bc5d2a}{Load}} ()
+\item 
+void \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a6ba4fe0ee1cb13ccc32cd34182840e96}{Save}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_1_1_skin}{Skin}} $>$ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a15b1cddade8b79b4fdee3ffd2fa4b3da}{skin\+List}} = new()
+\item 
+int \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{origin\+Weapon\+No}}
+\item 
+int \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a23ecec52025ceaf2b411bfcec6949f17}{equip\+Skin\+No}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00388}{388}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_user_data_manager_1_1_skin_data_aba71c45b2d46e42aa93f0b10f4c24710}\index{UserDataManager.SkinData@{UserDataManager.SkinData}!Init@{Init}}
+\index{Init@{Init}!UserDataManager.SkinData@{UserDataManager.SkinData}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_skin_data_aba71c45b2d46e42aa93f0b10f4c24710} 
+void User\+Data\+Manager.\+Skin\+Data.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00399}{399}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ SkinTableList.Get().ForEach(table\ =>}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a15b1cddade8b79b4fdee3ffd2fa4b3da}{skinList}}.Add(\textcolor{keyword}{new}\ Skin());}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{originWeaponNo}}\ =\ 0;}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a23ecec52025ceaf2b411bfcec6949f17}{equipSkinNo}}\ =\ 0;}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_skin_data_aba71c45b2d46e42aa93f0b10f4c24710_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_skin_data_a20cd8180d6769154f585b63706bc5d2a}\index{UserDataManager.SkinData@{UserDataManager.SkinData}!Load@{Load}}
+\index{Load@{Load}!UserDataManager.SkinData@{UserDataManager.SkinData}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_skin_data_a20cd8180d6769154f585b63706bc5d2a} 
+void User\+Data\+Manager.\+Skin\+Data.\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00409}{409}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ SkinData\ data\ =\ \mbox{\hyperlink{class_data_utility}{DataUtility}}.Load<SkinData>(\textcolor{stringliteral}{"{}SkinData"{}});}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a15b1cddade8b79b4fdee3ffd2fa4b3da}{skinList}}\ =\ data.skinList;}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}{originWeaponNo}}\ =\ data.originWeaponNo;}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_user_data_manager_1_1_skin_data_a23ecec52025ceaf2b411bfcec6949f17}{equipSkinNo}}\ =\ data.equipSkinNo;}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_skin_data_a20cd8180d6769154f585b63706bc5d2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_data_manager_1_1_skin_data_a6ba4fe0ee1cb13ccc32cd34182840e96}\index{UserDataManager.SkinData@{UserDataManager.SkinData}!Save@{Save}}
+\index{Save@{Save}!UserDataManager.SkinData@{UserDataManager.SkinData}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_skin_data_a6ba4fe0ee1cb13ccc32cd34182840e96} 
+void User\+Data\+Manager.\+Skin\+Data.\+Save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00417}{417}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_data_utility}{DataUtility}}.Save(\textcolor{stringliteral}{"{}SkinData"{}},\ Instance.skinData);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_data_manager_1_1_skin_data_a6ba4fe0ee1cb13ccc32cd34182840e96_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_user_data_manager_1_1_skin_data_a23ecec52025ceaf2b411bfcec6949f17}\index{UserDataManager.SkinData@{UserDataManager.SkinData}!equipSkinNo@{equipSkinNo}}
+\index{equipSkinNo@{equipSkinNo}!UserDataManager.SkinData@{UserDataManager.SkinData}}
+\doxysubsubsection{\texorpdfstring{equipSkinNo}{equipSkinNo}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_skin_data_a23ecec52025ceaf2b411bfcec6949f17} 
+int User\+Data\+Manager.\+Skin\+Data.\+equip\+Skin\+No}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00397}{397}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b}\index{UserDataManager.SkinData@{UserDataManager.SkinData}!originWeaponNo@{originWeaponNo}}
+\index{originWeaponNo@{originWeaponNo}!UserDataManager.SkinData@{UserDataManager.SkinData}}
+\doxysubsubsection{\texorpdfstring{originWeaponNo}{originWeaponNo}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_skin_data_a92d1a8e977a47695a2354ffc58aaee4b} 
+int User\+Data\+Manager.\+Skin\+Data.\+origin\+Weapon\+No}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00396}{396}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_user_data_manager_1_1_skin_data_a15b1cddade8b79b4fdee3ffd2fa4b3da}\index{UserDataManager.SkinData@{UserDataManager.SkinData}!skinList@{skinList}}
+\index{skinList@{skinList}!UserDataManager.SkinData@{UserDataManager.SkinData}}
+\doxysubsubsection{\texorpdfstring{skinList}{skinList}}
+{\footnotesize\ttfamily \label{class_user_data_manager_1_1_skin_data_a15b1cddade8b79b4fdee3ffd2fa4b3da} 
+List$<$\mbox{\hyperlink{class_user_data_manager_1_1_skin_data_1_1_skin}{Skin}}$>$ User\+Data\+Manager.\+Skin\+Data.\+skin\+List = new()}
+
+
+
+\mbox{\hyperlink{_user_data_manager_8cs_source}{User\+Data\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_user_data_manager_8cs_source_l00395}{395}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Manager/\mbox{\hyperlink{_user_data_manager_8cs}{User\+Data\+Manager.\+cs}}\end{DoxyCompactItemize}

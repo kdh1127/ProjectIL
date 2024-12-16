@@ -1,0 +1,12 @@
+<map id="QuestItemModel.GetReward" name="QuestItemModel.GetReward">
+<area shape="rect" id="Node000001" title=" " alt="" coords="671,47,859,73"/>
+<area shape="rect" id="Node000002" href="$class_quest_item_model.html#a785f8c53cb2d1ebb5b3a4b7f946e9367" title=" " alt="" coords="450,17,623,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,49,623,44,624,39,656,43"/>
+<area shape="rect" id="Node000005" href="$class_quest_presenter.html#a53d568fe1d3dbe4753bf8761eb9ade24" title=" " alt="" coords="228,72,402,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="656,71,403,90,402,84,656,65"/>
+<area shape="rect" id="Node000003" href="$class_quest_presenter.html#a608736909963011f98dd87a2e184aa24" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,31,403,31,403,26,434,26"/>
+<area shape="rect" id="Node000004" href="$class_quest_presenter.html#a435b09885d569bd1efa2829152e6eddc" title=" " alt="" coords="5,47,180,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,45,181,50,180,44,212,39"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="212,81,180,76,181,70,213,75"/>
+</map>

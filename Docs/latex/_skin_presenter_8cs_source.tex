@@ -1,0 +1,97 @@
+\doxysection{Skin\+Presenter.\+cs}
+\hypertarget{_skin_presenter_8cs_source}{}\label{_skin_presenter_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/SkinPresenter.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/SkinPresenter.cs}}
+\mbox{\hyperlink{_skin_presenter_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }I2.Loc;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00009}\mbox{\hyperlink{class_skin_presenter}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_skin_presenter}{SkinPresenter}}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00011}\mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{00011}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_skin_model}{SkinModel}}\ \mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{model}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00012}\mbox{\hyperlink{class_skin_presenter_a9c64d46c9171b5a81d14fb0f3bf2926a}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_skin_panel_view}{SkinPanelView}}\ \mbox{\hyperlink{class_skin_presenter_a9c64d46c9171b5a81d14fb0f3bf2926a}{view}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00013}\mbox{\hyperlink{class_skin_presenter_a3227b305fb48991207dc66dde5ca394a}{00013}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_skin_item_view_factory}{SkinItemViewFactory}}\ \mbox{\hyperlink{class_skin_presenter_a3227b305fb48991207dc66dde5ca394a}{factory}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00014}\mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_currency_model_1_1_dia}{CurrencyModel.Dia}}\ \mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{dia}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00015}\mbox{\hyperlink{class_skin_presenter_a6a442cecece9ed1b2e9528e8ba407ed2}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_character_view}{CharacterView}}\ \mbox{\hyperlink{class_skin_presenter_a6a442cecece9ed1b2e9528e8ba407ed2}{characterView}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00017}00017\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00018}\mbox{\hyperlink{class_skin_presenter_a4bf28a11241595dafd5b792877a530d3}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_skin_presenter_a4bf28a11241595dafd5b792877a530d3}{SkinPresenter}}(\mbox{\hyperlink{class_skin_model}{SkinModel}}\ \mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{model}},\ \mbox{\hyperlink{class_skin_panel_view}{SkinPanelView}}\ \mbox{\hyperlink{class_skin_presenter_a9c64d46c9171b5a81d14fb0f3bf2926a}{view}},\ \mbox{\hyperlink{class_skin_item_view_factory}{SkinItemViewFactory}}\ \mbox{\hyperlink{class_skin_presenter_a3227b305fb48991207dc66dde5ca394a}{factory}},\ \mbox{\hyperlink{class_currency_model}{CurrencyModel}}.\mbox{\hyperlink{class_currency_model_1_1_dia}{Dia}}\ \mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{dia}},\ \mbox{\hyperlink{class_character_view}{CharacterView}}\ \mbox{\hyperlink{class_skin_presenter_a6a442cecece9ed1b2e9528e8ba407ed2}{characterView}})}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{model}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ this.view\ =\ \mbox{\hyperlink{class_skin_presenter_a9c64d46c9171b5a81d14fb0f3bf2926a}{view}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ this.factory\ =\ \mbox{\hyperlink{class_skin_presenter_a3227b305fb48991207dc66dde5ca394a}{factory}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ this.dia\ =\ \mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{dia}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ this.characterView\ =\ \mbox{\hyperlink{class_skin_presenter_a6a442cecece9ed1b2e9528e8ba407ed2}{characterView}};}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00027}\mbox{\hyperlink{class_skin_presenter_ac9356ee36a03ff70f0d51cd1fd499164}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skin_presenter_ac9356ee36a03ff70f0d51cd1fd499164}{Subscribe}}()}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ var\ costImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}CostImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ var\ skinImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}SkinImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ var\ weaponImageResources\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_acf23f05ff667644f2a13ff5b5d2f18ed}{GetSprite}}(\textcolor{stringliteral}{"{}WeaponImageResources"{}}).spriteDictionary;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ SkinTableList.Get().ForEach(table\ =>}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ var\ itemView\ =\ \mbox{\hyperlink{class_skin_presenter_a3227b305fb48991207dc66dde5ca394a}{factory}}.Create();}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ var\ itemModel\ =\ \mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{model}}.\mbox{\hyperlink{class_skin_model_adcf1b8e08dd22ca2d2d19e7aae85d66f}{skinItemList}}[table.SkinNo];}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ var\ skinImage\ =\ skinImageResources[table.SkinImageNo];}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_presenter_a9c64d46c9171b5a81d14fb0f3bf2926a}{view}}.\mbox{\hyperlink{class_skin_panel_view_aab6d2c87c29dd3077d76b2b42ada836c}{RegisterToggle}}(itemView.equipStatus\_tgl);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.Init(itemModel.m\_level.Value,\ itemModel.GetTotalIncrease(),\ table.SkinName,\ table.IncreaseTypeString,\ itemModel.isEquip.Value,\ itemModel.IsMaxLevel(),\ skinImage);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.OnChangedToggle(\mbox{\hyperlink{class_skin_presenter_a9c64d46c9171b5a81d14fb0f3bf2926a}{view}}.\mbox{\hyperlink{class_skin_panel_view_a73edaf8e1d3ddf92c085179eba3f2d69}{toggleGroup}});}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.Init(itemModel.IsBought,\ table.UpgradeValue,\ table.buyCost,\ table.UpgradeCost,\ costImageResources[\textcolor{stringliteral}{"{}Dia"{}}]);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.equipStatus\_tgl.gameObject.SetActive(itemModel.IsBought);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.button.OnClickAsObservable()}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.IncreaseLevel();}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}).AddTo(itemView.upgradeButtonView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.m\_level.Subscribe(\_\ =>}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.equipStatus\_tgl.gameObject.SetActive(itemModel.IsBought);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.Init(itemModel.m\_level.Value,\ itemModel.GetTotalIncrease(),\ table.SkinName,\ table.IncreaseTypeString,\ itemModel.isEquip.Value,\ itemModel.IsMaxLevel());}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.UpdateView(itemModel.IsBought,\ table.UpgradeValue,\ table.buyCost,\ table.UpgradeCost);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.gameObject.SetActive(!itemModel.IsMaxLevel());}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{dia}}.Subscribe(\mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{dia}}\ =>}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ cost\ =\ itemModel.IsBought\ ?\ table.UpgradeCost\ :\ table.buyCost;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.upgradeButtonView.SetInteractable(\mbox{\hyperlink{class_skin_presenter_a98c618a009b89cf907146867150e33bd}{dia}}\ >=\ cost);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}).AddTo(itemView.upgradeButtonView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ itemView.equipSkinSubject.Subscribe(isOn\ =>\ itemModel.UpdateEquipSkin(isOn));}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ itemModel.isEquip.Subscribe(isOn\ =>}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isOn)}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_presenter_a6a442cecece9ed1b2e9528e8ba407ed2}{characterView}}.\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(skinImage);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.equipStatus\_tgl.isOn\ =\ isOn;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ itemView.equipStatus\_txt.text\ =\ isOn\ ?\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}UnEquip"{}})\ :\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Equip"{}});}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{model}}.\mbox{\hyperlink{class_skin_model_af7e45ecf6f70eb9e9d64363536ce064d}{IsUnEquipAllSkin}}()\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ imageName\ =\ WeaponTableList.Get()[\mbox{\hyperlink{class_skin_presenter_adab8ba2907591816556ba528073150fc}{model}}.\mbox{\hyperlink{class_skin_model_ac91d25e998bdde04e64da771d7c2fa21}{OriginWeaponNo}}].Image;}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponImage\ =\ weaponImageResources[imageName];}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_presenter_a6a442cecece9ed1b2e9528e8ba407ed2}{characterView}}.\mbox{\hyperlink{class_character_view_a316030b6abd645d519b345b40e50680a}{SetWeapon}}(weaponImage);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}).AddTo(itemView.gameObject);}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_skin_presenter_8cs_source_l00091}00091\ }
+
+\end{DoxyCode}

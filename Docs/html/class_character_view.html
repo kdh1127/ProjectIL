@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: CharacterView 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_character_view.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
+<a href="class_character_view-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">CharacterView 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CharacterView에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_view__coll__graph.png" border="0" usemap="#a_character_view_coll__map" alt="Collaboration graph"/></div>
+<map name="a_character_view_coll__map" id="a_character_view_coll__map">
+<area shape="rect" title=" " alt="" coords="5,123,167,469"/>
+<area shape="rect" title=" " alt="" coords="36,5,137,75"/>
+<area shape="poly" title=" " alt="" coords="89,89,89,123,84,123,84,89"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 타입</h2></td></tr>
+<tr class="memitem:a3a5d7a59b829f79d32c8eeca8f4d31bc" id="r_a3a5d7a59b829f79d32c8eeca8f4d31bc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">HandType</a> { <a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758">LEFT</a>
+, <a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403">RIGHT</a>
+ }</td></tr>
+<tr class="separator:a3a5d7a59b829f79d32c8eeca8f4d31bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:ac272429756a1db22242152725a3e4480" id="r_ac272429756a1db22242152725a3e4480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac272429756a1db22242152725a3e4480">SetAttackSpeed</a> (float speed)</td></tr>
+<tr class="separator:ac272429756a1db22242152725a3e4480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae783345505bb1d7b68592ba4ec97a596" id="r_ae783345505bb1d7b68592ba4ec97a596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae783345505bb1d7b68592ba4ec97a596">SetRunSpeed</a> (float speed)</td></tr>
+<tr class="separator:ae783345505bb1d7b68592ba4ec97a596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316030b6abd645d519b345b40e50680a" id="r_a316030b6abd645d519b345b40e50680a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a316030b6abd645d519b345b40e50680a">SetWeapon</a> (Sprite sprite, <a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">HandType</a> handType=<a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403">HandType.RIGHT</a>)</td></tr>
+<tr class="separator:a316030b6abd645d519b345b40e50680a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0af0b526c070e59185913218f53a71a" id="r_ab0af0b526c070e59185913218f53a71a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0af0b526c070e59185913218f53a71a">Move</a> (float moveSpeed)</td></tr>
+<tr class="separator:ab0af0b526c070e59185913218f53a71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac769dd6f8157edb2b4fb2c8ba03e94bc" id="r_ac769dd6f8157edb2b4fb2c8ba03e94bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac769dd6f8157edb2b4fb2c8ba03e94bc">OnTriggerEnter2D</a> (Collider2D collision)</td></tr>
+<tr class="separator:ac769dd6f8157edb2b4fb2c8ba03e94bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b2f61c8c651b02b2f53ac1fbadce04" id="r_a80b2f61c8c651b02b2f53ac1fbadce04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80b2f61c8c651b02b2f53ac1fbadce04">OnTriggerStay2D</a> (Collider2D collision)</td></tr>
+<tr class="separator:a80b2f61c8c651b02b2f53ac1fbadce04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f69b951b947223ba0f543925ef7ec57" id="r_a9f69b951b947223ba0f543925ef7ec57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f69b951b947223ba0f543925ef7ec57">OnTriggerExit2D</a> (Collider2D collision)</td></tr>
+<tr class="separator:a9f69b951b947223ba0f543925ef7ec57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbed8dc5d263f3076a9db009e05d7a00" id="r_adbed8dc5d263f3076a9db009e05d7a00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbed8dc5d263f3076a9db009e05d7a00">OnHitAttackAnimation</a> ()</td></tr>
+<tr class="separator:adbed8dc5d263f3076a9db009e05d7a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:ac0a563aa9e2895093b024fdffc60ad5d" id="r_ac0a563aa9e2895093b024fdffc60ad5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0a563aa9e2895093b024fdffc60ad5d">isCollision</a> = false</td></tr>
+<tr class="separator:ac0a563aa9e2895093b024fdffc60ad5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207857db47b9ddba94b94ec43ae6ffa1" id="r_a207857db47b9ddba94b94ec43ae6ffa1"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a207857db47b9ddba94b94ec43ae6ffa1">target</a></td></tr>
+<tr class="separator:a207857db47b9ddba94b94ec43ae6ffa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591879e636f7fc52f28ca4c315f62ba3" id="r_a591879e636f7fc52f28ca4c315f62ba3"><td class="memItemLeft" align="right" valign="top">Subject&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591879e636f7fc52f28ca4c315f62ba3">AttackSubject</a> = new()</td></tr>
+<tr class="separator:a591879e636f7fc52f28ca4c315f62ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:a21995e9d09c28f041b4c9e1864eaad22" id="r_a21995e9d09c28f041b4c9e1864eaad22"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21995e9d09c28f041b4c9e1864eaad22">Animator</a><code> [get]</code></td></tr>
+<tr class="separator:a21995e9d09c28f041b4c9e1864eaad22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:a2bcbd6129203f563e384dc2c568d8509" id="r_a2bcbd6129203f563e384dc2c568d8509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bcbd6129203f563e384dc2c568d8509">animator</a></td></tr>
+<tr class="separator:a2bcbd6129203f563e384dc2c568d8509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd594939f9fa1384efdab81fe8147f6" id="r_accd594939f9fa1384efdab81fe8147f6"><td class="memItemLeft" align="right" valign="top">SpriteRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accd594939f9fa1384efdab81fe8147f6">weapon_r</a></td></tr>
+<tr class="separator:accd594939f9fa1384efdab81fe8147f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87489fd153354b49472e8512d9fb3b57" id="r_a87489fd153354b49472e8512d9fb3b57"><td class="memItemLeft" align="right" valign="top">SpriteRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87489fd153354b49472e8512d9fb3b57">weapon_l</a></td></tr>
+<tr class="separator:a87489fd153354b49472e8512d9fb3b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a3a5d7a59b829f79d32c8eeca8f4d31bc" name="a3a5d7a59b829f79d32c8eeca8f4d31bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">&#9670;&#160;</a></span>HandType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">CharacterView.HandType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758" name="a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758"></a>LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403" name="a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403"></a>RIGHT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <a class="code hl_enumvalue" href="#a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758">LEFT</a>, <a class="code hl_enumvalue" href="#a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403">RIGHT</a> }</div>
+<div class="ttc" id="aclass_character_view_html_a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403"><div class="ttname"><a href="#a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403">CharacterView.HandType.RIGHT</a></div><div class="ttdeci">@ RIGHT</div></div>
+<div class="ttc" id="aclass_character_view_html_a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758"><div class="ttname"><a href="#a3a5d7a59b829f79d32c8eeca8f4d31bca684d325a7303f52e64011467ff5c5758">CharacterView.HandType.LEFT</a></div><div class="ttdeci">@ LEFT</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ab0af0b526c070e59185913218f53a71a" name="ab0af0b526c070e59185913218f53a71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0af0b526c070e59185913218f53a71a">&#9670;&#160;</a></span>Move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.Move </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>moveSpeed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        transform.Translate(moveSpeed * Time.smoothDeltaTime * Vector2.right);</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_view_ab0af0b526c070e59185913218f53a71a_icgraph.png" border="0" usemap="#aclass_character_view_ab0af0b526c070e59185913218f53a71a_icgraph" alt=""/></div>
+<map name="aclass_character_view_ab0af0b526c070e59185913218f53a71a_icgraph" id="aclass_character_view_ab0af0b526c070e59185913218f53a71a_icgraph">
+<area shape="rect" title=" " alt="" coords="224,13,366,40"/>
+<area shape="rect" href="class_battle_presenter_1_1_lull_state.html#a5bd50f38cfbdb24e7b5d116f87f1664e" title=" " alt="" coords="5,5,176,48"/>
+<area shape="poly" title=" " alt="" coords="208,29,176,29,176,24,208,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbed8dc5d263f3076a9db009e05d7a00" name="adbed8dc5d263f3076a9db009e05d7a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbed8dc5d263f3076a9db009e05d7a00">&#9670;&#160;</a></span>OnHitAttackAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.OnHitAttackAnimation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00078">78</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="#a591879e636f7fc52f28ca4c315f62ba3">AttackSubject</a>.OnNext(<a class="code hl_variable" href="#a207857db47b9ddba94b94ec43ae6ffa1">target</a>);</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclass_character_view_html_a207857db47b9ddba94b94ec43ae6ffa1"><div class="ttname"><a href="#a207857db47b9ddba94b94ec43ae6ffa1">CharacterView.target</a></div><div class="ttdeci">GameObject target</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00018">CharacterView.cs:18</a></div></div>
+<div class="ttc" id="aclass_character_view_html_a591879e636f7fc52f28ca4c315f62ba3"><div class="ttname"><a href="#a591879e636f7fc52f28ca4c315f62ba3">CharacterView.AttackSubject</a></div><div class="ttdeci">Subject&lt; GameObject &gt; AttackSubject</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00019">CharacterView.cs:19</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac769dd6f8157edb2b4fb2c8ba03e94bc" name="ac769dd6f8157edb2b4fb2c8ba03e94bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac769dd6f8157edb2b4fb2c8ba03e94bc">&#9670;&#160;</a></span>OnTriggerEnter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.OnTriggerEnter2D </td>
+          <td>(</td>
+          <td class="paramtype">Collider2D</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span>(collision.CompareTag(<span class="stringliteral">&quot;Monster&quot;</span>))</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_variable" href="#ac0a563aa9e2895093b024fdffc60ad5d">isCollision</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="#a207857db47b9ddba94b94ec43ae6ffa1">target</a> = collision.gameObject;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclass_character_view_html_ac0a563aa9e2895093b024fdffc60ad5d"><div class="ttname"><a href="#ac0a563aa9e2895093b024fdffc60ad5d">CharacterView.isCollision</a></div><div class="ttdeci">bool isCollision</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00017">CharacterView.cs:17</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f69b951b947223ba0f543925ef7ec57" name="a9f69b951b947223ba0f543925ef7ec57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f69b951b947223ba0f543925ef7ec57">&#9670;&#160;</a></span>OnTriggerExit2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.OnTriggerExit2D </td>
+          <td>(</td>
+          <td class="paramtype">Collider2D</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span>(collision.CompareTag(<span class="stringliteral">&quot;Monster&quot;</span>))</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="#ac0a563aa9e2895093b024fdffc60ad5d">isCollision</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="#a207857db47b9ddba94b94ec43ae6ffa1">target</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a80b2f61c8c651b02b2f53ac1fbadce04" name="a80b2f61c8c651b02b2f53ac1fbadce04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b2f61c8c651b02b2f53ac1fbadce04">&#9670;&#160;</a></span>OnTriggerStay2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.OnTriggerStay2D </td>
+          <td>(</td>
+          <td class="paramtype">Collider2D</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span>(collision.CompareTag(<span class="stringliteral">&quot;Monster&quot;</span>))</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="#ac0a563aa9e2895093b024fdffc60ad5d">isCollision</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="#a207857db47b9ddba94b94ec43ae6ffa1">target</a> = collision.gameObject;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac272429756a1db22242152725a3e4480" name="ac272429756a1db22242152725a3e4480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac272429756a1db22242152725a3e4480">&#9670;&#160;</a></span>SetAttackSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.SetAttackSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_property" href="#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetFloat(<span class="stringliteral">&quot;AttackSpeed&quot;</span>, speed);</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="ttc" id="aclass_character_view_html_a21995e9d09c28f041b4c9e1864eaad22"><div class="ttname"><a href="#a21995e9d09c28f041b4c9e1864eaad22">CharacterView.Animator</a></div><div class="ttdeci">Animator Animator</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00016">CharacterView.cs:16</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_view_ac272429756a1db22242152725a3e4480_icgraph.png" border="0" usemap="#aclass_character_view_ac272429756a1db22242152725a3e4480_icgraph" alt=""/></div>
+<map name="aclass_character_view_ac272429756a1db22242152725a3e4480_icgraph" id="aclass_character_view_ac272429756a1db22242152725a3e4480_icgraph">
+<area shape="rect" title=" " alt="" coords="238,13,443,40"/>
+<area shape="rect" href="class_battle_presenter_1_1_battle_state.html#a2ccf1d8e17e643641ea3e95ead0a90a3" title=" " alt="" coords="5,5,190,48"/>
+<area shape="poly" title=" " alt="" coords="222,29,190,29,190,24,222,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae783345505bb1d7b68592ba4ec97a596" name="ae783345505bb1d7b68592ba4ec97a596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae783345505bb1d7b68592ba4ec97a596">&#9670;&#160;</a></span>SetRunSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.SetRunSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_property" href="#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetFloat(<span class="stringliteral">&quot;RunSpeed&quot;</span>, speed);</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_view_ae783345505bb1d7b68592ba4ec97a596_icgraph.png" border="0" usemap="#aclass_character_view_ae783345505bb1d7b68592ba4ec97a596_icgraph" alt=""/></div>
+<map name="aclass_character_view_ae783345505bb1d7b68592ba4ec97a596_icgraph" id="aclass_character_view_ae783345505bb1d7b68592ba4ec97a596_icgraph">
+<area shape="rect" title=" " alt="" coords="224,47,415,73"/>
+<area shape="rect" href="class_battle_presenter_1_1_lull_state.html#a6d56b1cdbeeb8f873c1690d6461b050b" title=" " alt="" coords="5,5,176,48"/>
+<area shape="poly" title=" " alt="" coords="208,47,176,42,176,36,209,41"/>
+<area shape="rect" href="class_battle_presenter_1_1_lull_state.html#a5bd50f38cfbdb24e7b5d116f87f1664e" title=" " alt="" coords="5,72,176,115"/>
+<area shape="poly" title=" " alt="" coords="209,79,176,84,176,78,208,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a316030b6abd645d519b345b40e50680a" name="a316030b6abd645d519b345b40e50680a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316030b6abd645d519b345b40e50680a">&#9670;&#160;</a></span>SetWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CharacterView.SetWeapon </td>
+          <td>(</td>
+          <td class="paramtype">Sprite</td>          <td class="paramname"><span class="paramname"><em>sprite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">HandType</a></td>          <td class="paramname"><span class="paramname"><em>handType</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a3a5d7a59b829f79d32c8eeca8f4d31bca21507b40c80068eda19865706fdc2403">HandType::RIGHT</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        weapon_l.transform.localPosition = <span class="keyword">new</span> Vector3(0, sprite.rect.size.y / 100, 0);</div>
+<div class="line"><span class="lineno">   34</span>        weapon_r.transform.localPosition = <span class="keyword">new</span> Vector3(0, sprite.rect.size.y / 100, 0);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">switch</span> (handType)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">HandType</a>.LEFT:</div>
+<div class="line"><span class="lineno">   38</span>                weapon_l.sprite = sprite;</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">HandType</a>.RIGHT:</div>
+<div class="line"><span class="lineno">   41</span>                weapon_r.sprite = sprite;</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclass_character_view_html_a3a5d7a59b829f79d32c8eeca8f4d31bc"><div class="ttname"><a href="#a3a5d7a59b829f79d32c8eeca8f4d31bc">CharacterView.HandType</a></div><div class="ttdeci">HandType</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00010">CharacterView.cs:10</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_character_view_a316030b6abd645d519b345b40e50680a_icgraph.png" border="0" usemap="#aclass_character_view_a316030b6abd645d519b345b40e50680a_icgraph" alt=""/></div>
+<map name="aclass_character_view_a316030b6abd645d519b345b40e50680a_icgraph" id="aclass_character_view_a316030b6abd645d519b345b40e50680a_icgraph">
+<area shape="rect" title=" " alt="" coords="474,64,651,91"/>
+<area shape="rect" href="class_skin_presenter.html#ac9356ee36a03ff70f0d51cd1fd499164" title=" " alt="" coords="250,5,416,32"/>
+<area shape="poly" title=" " alt="" coords="492,62,387,35,389,30,494,57"/>
+<area shape="rect" href="class_weapon_presenter.html#a7310eb27235cc0ec8821307b18c82269" title=" " alt="" coords="240,56,426,99"/>
+<area shape="poly" title=" " alt="" coords="458,80,427,80,427,75,458,75"/>
+<area shape="rect" href="class_weapon_presenter.html#aa410701f4e9675d5dde5ca9232a5b57a" title=" " alt="" coords="240,123,426,165"/>
+<area shape="poly" title=" " alt="" coords="500,98,410,125,408,119,498,93"/>
+<area shape="rect" href="class_weapon_presenter.html#aae5587cca9c682879f261f0f56d2079c" title=" " alt="" coords="5,97,192,124"/>
+<area shape="poly" title=" " alt="" coords="225,95,193,100,192,95,224,90"/>
+<area shape="poly" title=" " alt="" coords="224,131,192,127,193,121,225,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a2bcbd6129203f563e384dc2c568d8509" name="a2bcbd6129203f563e384dc2c568d8509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bcbd6129203f563e384dc2c568d8509">&#9670;&#160;</a></span>animator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a21995e9d09c28f041b4c9e1864eaad22">Animator</a> CharacterView.animator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a591879e636f7fc52f28ca4c315f62ba3" name="a591879e636f7fc52f28ca4c315f62ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591879e636f7fc52f28ca4c315f62ba3">&#9670;&#160;</a></span>AttackSubject</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Subject&lt;GameObject&gt; CharacterView.AttackSubject = new()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac0a563aa9e2895093b024fdffc60ad5d" name="ac0a563aa9e2895093b024fdffc60ad5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a563aa9e2895093b024fdffc60ad5d">&#9670;&#160;</a></span>isCollision</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CharacterView.isCollision = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a207857db47b9ddba94b94ec43ae6ffa1" name="a207857db47b9ddba94b94ec43ae6ffa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207857db47b9ddba94b94ec43ae6ffa1">&#9670;&#160;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject CharacterView.target</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a87489fd153354b49472e8512d9fb3b57" name="a87489fd153354b49472e8512d9fb3b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87489fd153354b49472e8512d9fb3b57">&#9670;&#160;</a></span>weapon_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteRenderer CharacterView.weapon_l</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="accd594939f9fa1384efdab81fe8147f6" name="accd594939f9fa1384efdab81fe8147f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd594939f9fa1384efdab81fe8147f6">&#9670;&#160;</a></span>weapon_r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteRenderer CharacterView.weapon_r</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="a21995e9d09c28f041b4c9e1864eaad22" name="a21995e9d09c28f041b4c9e1864eaad22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21995e9d09c28f041b4c9e1864eaad22">&#9670;&#160;</a></span>Animator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator CharacterView.Animator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a> 파일의 <a class="el" href="_character_view_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/<a class="el" href="_character_view_8cs_source.html">CharacterView.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_character_view.html">CharacterView</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

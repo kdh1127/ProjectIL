@@ -1,0 +1,9 @@
+<map id="MainButtonView.RegisterToggleList" name="MainButtonView.RegisterToggleList">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,64,233,91"/>
+<area shape="rect" id="Node000002" href="$class_main_button_view.html#a09c2728044f06ff79538b51feec76220" title=" " alt="" coords="282,5,482,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,61,304,33,305,38,183,66"/>
+<area shape="rect" id="Node000003" href="$class_main_button_view.html#a2bb864171d36bcf24a02be541ceb42e3" title=" " alt="" coords="281,56,483,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,75,265,75,265,80,233,80"/>
+<area shape="rect" id="Node000004" href="$class_main_button_view.html#a310adf4156440edaadff0523ed4262ac" title=" " alt="" coords="291,123,473,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,89,281,116,280,121,174,94"/>
+</map>

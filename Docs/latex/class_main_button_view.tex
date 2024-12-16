@@ -1,0 +1,278 @@
+\doxysection{Main\+Button\+View 클래스 참조}
+\hypertarget{class_main_button_view}{}\label{class_main_button_view}\index{MainButtonView@{MainButtonView}}
+
+
+Main\+Button\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_main_button_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_button_view_a8cb179a1f33a1daca4d65ed8e1aaad79}{Register\+Toggle\+List}} (Toggle\+Group \mbox{\hyperlink{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149}{toggle\+Group}}, List$<$ \mbox{\hyperlink{class_common_toggle}{Common\+Toggle}} $>$ \mbox{\hyperlink{class_main_button_view_a426335d6d341afcc0707cdb0b8cdd890}{toggle\+List}})
+\item 
+void \mbox{\hyperlink{class_main_button_view_a09c2728044f06ff79538b51feec76220}{Activate\+Panel}} (\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{Common\+Toggle.\+Toggle\+Type}} toggle\+Type)
+\item 
+void \mbox{\hyperlink{class_main_button_view_a310adf4156440edaadff0523ed4262ac}{Deactivate\+All\+Panel}} ()
+\item 
+void \mbox{\hyperlink{class_main_button_view_a2bb864171d36bcf24a02be541ceb42e3}{Change\+Toggle\+Color}} (\mbox{\hyperlink{class_common_toggle}{Common\+Toggle}} toggle, Color color)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Toggle\+Group \mbox{\hyperlink{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149}{toggle\+Group}}
+\item 
+List$<$ \mbox{\hyperlink{class_common_toggle}{Common\+Toggle}} $>$ \mbox{\hyperlink{class_main_button_view_a426335d6d341afcc0707cdb0b8cdd890}{toggle\+List}}
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panel\+List}}
+\item 
+Color \mbox{\hyperlink{class_main_button_view_ac36bc86f60e7b4b2e49cd95d0047e075}{active\+Toggle\+Color}}
+\item 
+Color \mbox{\hyperlink{class_main_button_view_a6ca01acce210b9db363a64330c998606}{deactive\+Toggle\+Color}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_button_view_a12966d9d57a6f9aafdf10057ff049b55}{Awake}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00005}{5}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_main_button_view_a09c2728044f06ff79538b51feec76220}\index{MainButtonView@{MainButtonView}!ActivatePanel@{ActivatePanel}}
+\index{ActivatePanel@{ActivatePanel}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{ActivatePanel()}{ActivatePanel()}}
+{\footnotesize\ttfamily \label{class_main_button_view_a09c2728044f06ff79538b51feec76220} 
+void Main\+Button\+View.\+Activate\+Panel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{Common\+Toggle.\+Toggle\+Type}}}]{toggle\+Type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00040}{40}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (toggleType)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_toggle}{CommonToggle}}.\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{ToggleType}}.Quest:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panelList}}[0].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_toggle}{CommonToggle}}.\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{ToggleType}}.Weapon:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panelList}}[1].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_toggle}{CommonToggle}}.\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{ToggleType}}.Treasure:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panelList}}[2].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_toggle}{CommonToggle}}.\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{ToggleType}}.Skin:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panelList}}[3].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_toggle}{CommonToggle}}.\mbox{\hyperlink{class_common_toggle_a767c4585642bdcb5c52b26e6d2afc278}{ToggleType}}.Shop:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panelList}}[4].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_button_view_a09c2728044f06ff79538b51feec76220_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_button_view_a12966d9d57a6f9aafdf10057ff049b55}\index{MainButtonView@{MainButtonView}!Awake@{Awake}}
+\index{Awake@{Awake}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_main_button_view_a12966d9d57a6f9aafdf10057ff049b55} 
+void Main\+Button\+View.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a8cb179a1f33a1daca4d65ed8e1aaad79}{RegisterToggleList}}(\mbox{\hyperlink{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149}{toggleGroup}},\ \mbox{\hyperlink{class_main_button_view_a426335d6d341afcc0707cdb0b8cdd890}{toggleList}});}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_button_view_a12966d9d57a6f9aafdf10057ff049b55_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_button_view_a2bb864171d36bcf24a02be541ceb42e3}\index{MainButtonView@{MainButtonView}!ChangeToggleColor@{ChangeToggleColor}}
+\index{ChangeToggleColor@{ChangeToggleColor}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{ChangeToggleColor()}{ChangeToggleColor()}}
+{\footnotesize\ttfamily \label{class_main_button_view_a2bb864171d36bcf24a02be541ceb42e3} 
+void Main\+Button\+View.\+Change\+Toggle\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_toggle}{Common\+Toggle}}}]{toggle}{, }\item[{Color}]{color}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00070}{70}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ var\ toggleImage\ =\ toggle.GetComponentInChildren<Image>();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toggleImage\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ toggleImage.color\ =\ color;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_button_view_a2bb864171d36bcf24a02be541ceb42e3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_button_view_a310adf4156440edaadff0523ed4262ac}\index{MainButtonView@{MainButtonView}!DeactivateAllPanel@{DeactivateAllPanel}}
+\index{DeactivateAllPanel@{DeactivateAllPanel}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{DeactivateAllPanel()}{DeactivateAllPanel()}}
+{\footnotesize\ttfamily \label{class_main_button_view_a310adf4156440edaadff0523ed4262ac} 
+void Main\+Button\+View.\+Deactivate\+All\+Panel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00062}{62}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}{panelList}}.ForEach(panel\ =>}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ panel.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_button_view_a310adf4156440edaadff0523ed4262ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_button_view_a8cb179a1f33a1daca4d65ed8e1aaad79}\index{MainButtonView@{MainButtonView}!RegisterToggleList@{RegisterToggleList}}
+\index{RegisterToggleList@{RegisterToggleList}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{RegisterToggleList()}{RegisterToggleList()}}
+{\footnotesize\ttfamily \label{class_main_button_view_a8cb179a1f33a1daca4d65ed8e1aaad79} 
+void Main\+Button\+View.\+Register\+Toggle\+List (\begin{DoxyParamCaption}\item[{Toggle\+Group}]{toggle\+Group}{, }\item[{List$<$ \mbox{\hyperlink{class_common_toggle}{Common\+Toggle}} $>$}]{toggle\+List}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00016}{16}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ toggle\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_main_button_view_a426335d6d341afcc0707cdb0b8cdd890}{toggleList}})}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149}{toggleGroup}}.RegisterToggle(toggle);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ toggle.onValueChanged.AddListener(isOn\ =>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toggle.isOn)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149}{toggleGroup}}.NotifyToggleOn(toggle);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a310adf4156440edaadff0523ed4262ac}{DeactivateAllPanel}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a09c2728044f06ff79538b51feec76220}{ActivatePanel}}(toggle.type);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a2bb864171d36bcf24a02be541ceb42e3}{ChangeToggleColor}}(toggle,\ \mbox{\hyperlink{class_main_button_view_ac36bc86f60e7b4b2e49cd95d0047e075}{activeToggleColor}});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ toggle.interactable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_button_view_a2bb864171d36bcf24a02be541ceb42e3}{ChangeToggleColor}}(toggle,\ \mbox{\hyperlink{class_main_button_view_a6ca01acce210b9db363a64330c998606}{deactiveToggleColor}});}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ toggle.interactable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_button_view_a8cb179a1f33a1daca4d65ed8e1aaad79_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_button_view_a8cb179a1f33a1daca4d65ed8e1aaad79_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_main_button_view_ac36bc86f60e7b4b2e49cd95d0047e075}\index{MainButtonView@{MainButtonView}!activeToggleColor@{activeToggleColor}}
+\index{activeToggleColor@{activeToggleColor}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{activeToggleColor}{activeToggleColor}}
+{\footnotesize\ttfamily \label{class_main_button_view_ac36bc86f60e7b4b2e49cd95d0047e075} 
+Color Main\+Button\+View.\+active\+Toggle\+Color}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_main_button_view_a6ca01acce210b9db363a64330c998606}\index{MainButtonView@{MainButtonView}!deactiveToggleColor@{deactiveToggleColor}}
+\index{deactiveToggleColor@{deactiveToggleColor}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{deactiveToggleColor}{deactiveToggleColor}}
+{\footnotesize\ttfamily \label{class_main_button_view_a6ca01acce210b9db363a64330c998606} 
+Color Main\+Button\+View.\+deactive\+Toggle\+Color}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61}\index{MainButtonView@{MainButtonView}!panelList@{panelList}}
+\index{panelList@{panelList}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{panelList}{panelList}}
+{\footnotesize\ttfamily \label{class_main_button_view_a32d2891149e1e69421dd07c5481f7d61} 
+List$<$Game\+Object$>$ Main\+Button\+View.\+panel\+List}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00009}{9}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149}\index{MainButtonView@{MainButtonView}!toggleGroup@{toggleGroup}}
+\index{toggleGroup@{toggleGroup}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{toggleGroup}{toggleGroup}}
+{\footnotesize\ttfamily \label{class_main_button_view_a80c7b611a0d0949db4cf76f21e404149} 
+Toggle\+Group Main\+Button\+View.\+toggle\+Group}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00007}{7}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_main_button_view_a426335d6d341afcc0707cdb0b8cdd890}\index{MainButtonView@{MainButtonView}!toggleList@{toggleList}}
+\index{toggleList@{toggleList}!MainButtonView@{MainButtonView}}
+\doxysubsubsection{\texorpdfstring{toggleList}{toggleList}}
+{\footnotesize\ttfamily \label{class_main_button_view_a426335d6d341afcc0707cdb0b8cdd890} 
+List$<$\mbox{\hyperlink{class_common_toggle}{Common\+Toggle}}$>$ Main\+Button\+View.\+toggle\+List}
+
+
+
+\mbox{\hyperlink{_main_button_view_8cs_source}{Main\+Button\+View.\+cs}} 파일의 \mbox{\hyperlink{_main_button_view_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+View/\+Button/\mbox{\hyperlink{_main_button_view_8cs}{Main\+Button\+View.\+cs}}\end{DoxyCompactItemize}

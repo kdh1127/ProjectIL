@@ -1,0 +1,266 @@
+\doxysection{Reincarnation\+Presenter 클래스 참조}
+\hypertarget{class_reincarnation_presenter}{}\label{class_reincarnation_presenter}\index{ReincarnationPresenter@{ReincarnationPresenter}}
+
+
+Reincarnation\+Presenter에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reincarnation_presenter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reincarnation_presenter_adad73950b5ff773743db109c6194c808}{Reincarnation\+Presenter}} (\mbox{\hyperlink{class_reincarnation_model}{Reincarnation\+Model}} \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}}, \mbox{\hyperlink{class_open_popup_button_view}{Open\+Popup\+Button\+View}} \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnation\+Button}}, \mbox{\hyperlink{class_quest_model}{Quest\+Model}} \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{quest\+Model}}, \mbox{\hyperlink{class_weapon_model}{Weapon\+Model}} \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weapon\+Model}})
+\item 
+void \mbox{\hyperlink{class_reincarnation_presenter_a82241f6922cafa3b8b26cb84f99faaca}{Subscribe}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reincarnation_popup_view}{Reincarnation\+Popup\+View}} \mbox{\hyperlink{class_reincarnation_presenter_ae6b406c05dbe71514a2e333ccca00e23}{reincarnation\+Popup\+View}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72}{Subscribe\+To\+Reincarnation\+Button}} ()
+\item 
+void \mbox{\hyperlink{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6}{Subscribe\+To\+Reincarnation\+Popup\+View}} ()
+\item 
+void \mbox{\hyperlink{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775}{Subscribe\+To\+Model}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_reincarnation_model}{Reincarnation\+Model}} \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}}
+\item 
+readonly \mbox{\hyperlink{class_open_popup_button_view}{Open\+Popup\+Button\+View}} \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnation\+Button}}
+\item 
+readonly \mbox{\hyperlink{class_quest_model}{Quest\+Model}} \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{quest\+Model}}
+\item 
+readonly \mbox{\hyperlink{class_weapon_model}{Weapon\+Model}} \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weapon\+Model}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00005}{5}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{class_reincarnation_presenter_adad73950b5ff773743db109c6194c808}\index{ReincarnationPresenter@{ReincarnationPresenter}!ReincarnationPresenter@{ReincarnationPresenter}}
+\index{ReincarnationPresenter@{ReincarnationPresenter}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{ReincarnationPresenter()}{ReincarnationPresenter()}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_adad73950b5ff773743db109c6194c808} 
+Reincarnation\+Presenter.\+Reincarnation\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reincarnation_model}{Reincarnation\+Model}}}]{model}{, }\item[{\mbox{\hyperlink{class_open_popup_button_view}{Open\+Popup\+Button\+View}}}]{reincarnation\+Button}{, }\item[{\mbox{\hyperlink{class_quest_model}{Quest\+Model}}}]{quest\+Model}{, }\item[{\mbox{\hyperlink{class_weapon_model}{Weapon\+Model}}}]{weapon\+Model}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ this.reincarnationButton\ =\ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ this.questModel\ =\ \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{questModel}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ this.weaponModel\ =\ \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weaponModel}};}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_reincarnation_presenter_a82241f6922cafa3b8b26cb84f99faaca}\index{ReincarnationPresenter@{ReincarnationPresenter}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_a82241f6922cafa3b8b26cb84f99faaca} 
+void Reincarnation\+Presenter.\+Subscribe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00022}{22}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72}{SubscribeToReincarnationButton}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6}{SubscribeToReincarnationPopupView}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775}{SubscribeToModel}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reincarnation_presenter_a82241f6922cafa3b8b26cb84f99faaca_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775}\index{ReincarnationPresenter@{ReincarnationPresenter}!SubscribeToModel@{SubscribeToModel}}
+\index{SubscribeToModel@{SubscribeToModel}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{SubscribeToModel()}{SubscribeToModel()}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775} 
+void Reincarnation\+Presenter.\+Subscribe\+To\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00066}{66}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reincarnation_presenter_aba79f291de23aed96c9dd8d895c1d775_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72}\index{ReincarnationPresenter@{ReincarnationPresenter}!SubscribeToReincarnationButton@{SubscribeToReincarnationButton}}
+\index{SubscribeToReincarnationButton@{SubscribeToReincarnationButton}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{SubscribeToReincarnationButton()}{SubscribeToReincarnationButton()}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72} 
+void Reincarnation\+Presenter.\+Subscribe\+To\+Reincarnation\+Button (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00029}{29}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Subscribe(stageNo\ =>}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ isOpen\ =\ stageNo\ >=\ 10;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.gameObject.SetActive(isOpen);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}).AddTo(\mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.gameObject);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.\mbox{\hyperlink{class_open_popup_button_view_a9be37d9d9c8fac47a74db1b4639a77cc}{button}}.OnClickAsObservable()}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ .Subscribe(\_\ =>}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TRCommonPopup.Instantiate(\mbox{\hyperlink{class_popup_manager}{PopupManager}}.Instance.transform)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetTitle(\textcolor{stringliteral}{"{}ȯ���ϱ�"{}})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetMessage(\$\textcolor{stringliteral}{"{}������:\ \{StageManager.Instance.CurStage.Value\}\(\backslash\)n���� ŉ�淮:\ \{model.GetReward()\}"{}})}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetConfirm(confirmAction:\ obj\ =>}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}{model}}.\mbox{\hyperlink{class_reincarnation_model_a906928a2c5592fff4ce89180c4ac4214}{Reincarnation}}(1);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}{questModel}}.\mbox{\hyperlink{class_quest_model_aff53e73a64183fdc868a2e7db8da2cc1}{Reset}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}{weaponModel}}.\mbox{\hyperlink{class_weapon_model_acdbbcae67c7e270d624fa772011f19eb}{Reset}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BattlePresenter.Instance.battleState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_battle_presenter}{BattlePresenter}}.\mbox{\hyperlink{class_battle_presenter_1_1_reset_state}{ResetState}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject.Destroy(obj);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},\ confirmText:\ \textcolor{stringliteral}{"{}ȯ���ϱ�"{}})}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetCancel(cancelAction:\ obj\ =>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject.Destroy(obj);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},\ cancelText:\ \textcolor{stringliteral}{"{}����ϱ�"{}})}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Build();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}).AddTo(\mbox{\hyperlink{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}{reincarnationButton}}.gameObject);}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reincarnation_presenter_a5b6ac03fc6d20329ff136e36b309cf72_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6}\index{ReincarnationPresenter@{ReincarnationPresenter}!SubscribeToReincarnationPopupView@{SubscribeToReincarnationPopupView}}
+\index{SubscribeToReincarnationPopupView@{SubscribeToReincarnationPopupView}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{SubscribeToReincarnationPopupView()}{SubscribeToReincarnationPopupView()}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6} 
+void Reincarnation\+Presenter.\+Subscribe\+To\+Reincarnation\+Popup\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00061}{61}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reincarnation_presenter_a218761896e8463c532218c61ccbd48e6_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432}\index{ReincarnationPresenter@{ReincarnationPresenter}!model@{model}}
+\index{model@{model}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_a37a48d1641553e6103f32a71d9048432} 
+readonly \mbox{\hyperlink{class_reincarnation_model}{Reincarnation\+Model}} Reincarnation\+Presenter.\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00007}{7}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f}\index{ReincarnationPresenter@{ReincarnationPresenter}!questModel@{questModel}}
+\index{questModel@{questModel}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{questModel}{questModel}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_a5a37f8a155324c5ff7e3c3a164cd9e8f} 
+readonly \mbox{\hyperlink{class_quest_model}{Quest\+Model}} Reincarnation\+Presenter.\+quest\+Model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00009}{9}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122}\index{ReincarnationPresenter@{ReincarnationPresenter}!reincarnationButton@{reincarnationButton}}
+\index{reincarnationButton@{reincarnationButton}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{reincarnationButton}{reincarnationButton}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_a06dd37ce26992fb556df05908fa0a122} 
+readonly \mbox{\hyperlink{class_open_popup_button_view}{Open\+Popup\+Button\+View}} Reincarnation\+Presenter.\+reincarnation\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_reincarnation_presenter_ae6b406c05dbe71514a2e333ccca00e23}\index{ReincarnationPresenter@{ReincarnationPresenter}!reincarnationPopupView@{reincarnationPopupView}}
+\index{reincarnationPopupView@{reincarnationPopupView}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{reincarnationPopupView}{reincarnationPopupView}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_ae6b406c05dbe71514a2e333ccca00e23} 
+\mbox{\hyperlink{class_reincarnation_popup_view}{Reincarnation\+Popup\+View}} Reincarnation\+Presenter.\+reincarnation\+Popup\+View}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c}\index{ReincarnationPresenter@{ReincarnationPresenter}!weaponModel@{weaponModel}}
+\index{weaponModel@{weaponModel}!ReincarnationPresenter@{ReincarnationPresenter}}
+\doxysubsubsection{\texorpdfstring{weaponModel}{weaponModel}}
+{\footnotesize\ttfamily \label{class_reincarnation_presenter_aec840256e2e0df7d1d002bba21332c8c} 
+readonly \mbox{\hyperlink{class_weapon_model}{Weapon\+Model}} Reincarnation\+Presenter.\+weapon\+Model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_reincarnation_presenter_8cs_source}{Reincarnation\+Presenter.\+cs}} 파일의 \mbox{\hyperlink{_reincarnation_presenter_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Presenter/\mbox{\hyperlink{_reincarnation_presenter_8cs}{Reincarnation\+Presenter.\+cs}}\end{DoxyCompactItemize}

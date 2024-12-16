@@ -1,0 +1,44 @@
+\doxysection{Skin\+Installer.\+cs}
+\hypertarget{_skin_installer_8cs_source}{}\label{_skin_installer_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/SkinInstaller.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Installer/SkinInstaller.cs}}
+\mbox{\hyperlink{_skin_installer_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00007}\mbox{\hyperlink{class_skin_installer}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_skin_installer}{SkinInstaller}}\ :\ MonoInstaller}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00009}\mbox{\hyperlink{class_skin_installer_aa138b65d024b6f2a6777169db7e5ba19}{00009}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_skin_panel_view}{SkinPanelView}}\ \mbox{\hyperlink{class_skin_installer_aa138b65d024b6f2a6777169db7e5ba19}{skinPanelPrefab}};}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00010}\mbox{\hyperlink{class_skin_installer_a9a0e95b11b651ffdbf2ed5aca91fe141}{00010}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_skin_item_view}{SkinItemView}}\ \mbox{\hyperlink{class_skin_installer_a9a0e95b11b651ffdbf2ed5aca91fe141}{skinItemPrefab}};}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00012}\mbox{\hyperlink{class_skin_installer_abe49335c8efee4144c59c31e66a7474d}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skin_installer_abe49335c8efee4144c59c31e66a7474d}{InstallBindings}}()}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_skin_installer_a49482410f69eb4c45dc50f2ab6fe66f3}{SkinBinding}}();}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00017}\mbox{\hyperlink{class_skin_installer_a49482410f69eb4c45dc50f2ab6fe66f3}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skin_installer_a49482410f69eb4c45dc50f2ab6fe66f3}{SkinBinding}}()}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_skin_model}{SkinModel}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_skin_panel_view}{SkinPanelView}}>()}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInHierarchy(\mbox{\hyperlink{class_skin_installer_aa138b65d024b6f2a6777169db7e5ba19}{skinPanelPrefab}})}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ Container.Bind<\mbox{\hyperlink{class_skin_presenter}{SkinPresenter}}>().AsSingle();}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ Container.BindFactory<\mbox{\hyperlink{class_skin_item_view}{SkinItemView}},\ \mbox{\hyperlink{class_skin_item_view_factory}{SkinItemViewFactory}}>()}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ .FromComponentInNewPrefab(\mbox{\hyperlink{class_skin_installer_a9a0e95b11b651ffdbf2ed5aca91fe141}{skinItemPrefab}})}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ .UnderTransform(\mbox{\hyperlink{class_skin_installer_aa138b65d024b6f2a6777169db7e5ba19}{skinPanelPrefab}}.\mbox{\hyperlink{class_skin_panel_view_a392393ce15ebbe68b0504cf717ff5cf1}{content\_tr}})}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ .AsTransient();}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ Container.Bind<List<SkinTable>>()}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ .FromInstance(SkinTableList.Get())}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ .AsSingle();}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_skin_installer_8cs_source_l00038}\mbox{\hyperlink{class_skin_item_view_factory}{00038}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_skin_item_view_factory}{SkinItemViewFactory}}\ :\ PlaceholderFactory<SkinItemView>\ \{\ \}}
+
+\end{DoxyCode}

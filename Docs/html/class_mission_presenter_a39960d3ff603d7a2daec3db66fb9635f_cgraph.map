@@ -1,0 +1,23 @@
+<map id="MissionPresenter.InitItemView" name="MissionPresenter.InitItemView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,205,136"/>
+<area shape="rect" id="Node000002" href="$class_mission_model.html#aaf8d1cec7e68497d499cd6069314a1c0" title=" " alt="" coords="253,5,445,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,106,252,58,268,51,270,56,254,62,138,111"/>
+<area shape="rect" id="Node000003" href="$class_mission_model.html#a557172ed46d494d1abb9c5cd2846e408" title=" " alt="" coords="253,72,445,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,108,237,104,238,109,205,113"/>
+<area shape="rect" id="Node000004" href="$class_mission_item_view.html#a920cbfc1368cd80482fcecea476e4885" title=" " alt="" coords="278,139,420,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,132,262,139,262,144,205,137"/>
+<area shape="rect" id="Node000011" href="$class_mission_model.html#a0b4664c2e7ba667a8af4be0028f0e879" title=" " alt="" coords="275,189,422,216"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="142,134,254,175,278,182,276,187,252,180,140,139"/>
+<area shape="rect" id="Node000005" href="$class_t_r_scriptable_manager.html#acf23f05ff667644f2a13ff5b5d2f18ed" title=" " alt="" coords="499,63,705,89"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="410,136,444,124,468,112,492,99,514,91,516,97,494,104,470,116,446,129,411,141"/>
+<area shape="rect" id="Node000006" href="$class_mission_item_view.html#a3bdcf68b93a5afe71bed84ace744fb48" title=" " alt="" coords="514,113,690,140"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="420,142,498,134,499,140,421,148"/>
+<area shape="rect" id="Node000008" href="$class_mission_item_view.html#a77527748811cc5ad13ce7d62691f79b4" title=" " alt="" coords="518,164,687,191"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="421,156,502,165,502,170,420,162"/>
+<area shape="rect" id="Node000010" href="$class_mission_item_view.html#a2dcc22a79a088cec0cdefc8d6ffcd190" title=" " alt="" coords="493,215,711,241"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="411,163,446,175,470,188,494,200,516,207,514,213,492,205,468,192,444,180,410,168"/>
+<area shape="rect" id="Node000007" href="$class_complete_button_view.html#af784e254ce91089bb4644613682c377e" title=" " alt="" coords="759,109,995,136"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="690,123,744,122,744,127,690,128"/>
+<area shape="rect" id="Node000009" href="$class_mission_item_view.html#a68f9094f9fbc9add945586c669583887" title=" " alt="" coords="782,160,972,203"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="687,176,766,177,766,182,687,181"/>
+</map>

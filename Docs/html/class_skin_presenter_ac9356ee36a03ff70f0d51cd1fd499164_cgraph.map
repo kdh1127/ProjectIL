@@ -1,0 +1,11 @@
+<map id="SkinPresenter.Subscribe" name="SkinPresenter.Subscribe">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,171,108"/>
+<area shape="rect" id="Node000002" href="$class_t_r_scriptable_manager.html#acf23f05ff667644f2a13ff5b5d2f18ed" title=" " alt="" coords="219,5,425,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,78,218,41,243,34,245,39,220,47,122,83"/>
+<area shape="rect" id="Node000003" href="$class_skin_model.html#af7e45ecf6f70eb9e9d64363536ce064d" title=" " alt="" coords="228,56,416,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,83,212,79,212,84,171,88"/>
+<area shape="rect" id="Node000004" href="$class_skin_panel_view.html#aab6d2c87c29dd3077d76b2b42ada836c" title=" " alt="" coords="222,107,422,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,101,207,105,206,110,171,106"/>
+<area shape="rect" id="Node000005" href="$class_character_view.html#a316030b6abd645d519b345b40e50680a" title=" " alt="" coords="233,157,410,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="122,106,220,143,245,150,243,155,218,148,120,111"/>
+</map>

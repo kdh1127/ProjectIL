@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/View/Item/SkinItemView.cs 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_skin_item_view_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SkinItemView.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_skin_item_view_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>I2.Loc;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>TMPro;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UniRx;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_skin_item_view.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_skin_item_view.html">SkinItemView</a> : MonoBehaviour</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a65b6b19a157d149554c651e2e0e56bb8">   11</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="class_skin_item_view.html#a65b6b19a157d149554c651e2e0e56bb8">skinImage</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#ac3f8bab4584f6c3526acedd29ea927d9">   12</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_skin_item_view.html#ac3f8bab4584f6c3526acedd29ea927d9">title_txt</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a578af680869d710f13581d1fe5c14f0e">   13</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_skin_item_view.html#a578af680869d710f13581d1fe5c14f0e">totalIncrease_txt</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a7b4d6e923f29154ff5a58d20b9241841">   14</a></span>    <span class="keyword">public</span> Toggle <a class="code hl_variable" href="class_skin_item_view.html#a7b4d6e923f29154ff5a58d20b9241841">equipStatus_tgl</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a786b1b33e28b69cdf3d293299efd7a99">   15</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_skin_upgrade_button_view.html">SkinUpgradeButtonView</a> <a class="code hl_variable" href="class_skin_item_view.html#a786b1b33e28b69cdf3d293299efd7a99">upgradeButtonView</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a380c28e23fe641da95cfba5dd67588a6">   16</a></span>    <span class="keyword">public</span> Sprite <a class="code hl_variable" href="class_skin_item_view.html#a380c28e23fe641da95cfba5dd67588a6">equipSprite</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#acce6c4cfe7038c441973101386c2e92f">   17</a></span>    <span class="keyword">public</span> Sprite <a class="code hl_variable" href="class_skin_item_view.html#acce6c4cfe7038c441973101386c2e92f">unEquipSprite</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a8b5065cd19c8ce9981a1d851ce983e59">   18</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_skin_item_view.html#a8b5065cd19c8ce9981a1d851ce983e59">equipStatus_txt</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#aacda791e23a25ef40a16e45c90292806">   19</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="class_skin_item_view.html#aacda791e23a25ef40a16e45c90292806">line_img</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a559c696f0e79b7326acf444094c8cc0b">   20</a></span>    <span class="keyword">public</span> Subject&lt;bool&gt; <a class="code hl_variable" href="class_skin_item_view.html#a559c696f0e79b7326acf444094c8cc0b">equipSkinSubject</a> = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a90c0ea4dc7f931b5336a0bf826df7a29">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_skin_item_view.html#a90c0ea4dc7f931b5336a0bf826df7a29">Init</a>(<span class="keywordtype">int</span> level, <span class="keywordtype">int</span> totalIncrease, <span class="keywordtype">string</span> name, <span class="keywordtype">string</span> increaseTypeString, <span class="keywordtype">bool</span> isEquip, <span class="keywordtype">bool</span> isMaxLevel, Sprite image = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        var titleString = $<span class="stringliteral">&quot;Lv. {level} {LocalizationManager.GetTranslation(name)}&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        var increseStringFormat = I2.Loc.LocalizationManager.GetTranslation(increaseTypeString);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        totalIncrease_txt.text = <span class="keywordtype">string</span>.Format(increseStringFormat, totalIncrease);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        equipStatus_txt.text = isEquip ? LocalizationManager.GetTranslation(<span class="stringliteral">&quot;UnEquip&quot;</span>) : LocalizationManager.GetTranslation(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        title_txt.text = titleString;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (image != <span class="keyword">null</span>) skinImage.sprite = image;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        line_img.rectTransform.sizeDelta = level &gt; 0 &amp;&amp; !isMaxLevel ? <span class="keyword">new</span> Vector2(290f, 25f) : <span class="keyword">new</span> Vector2(430f, 25f);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_skin_item_view.html#a5ac287d213af603e4de653d3e4bb1854">   33</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_skin_item_view.html#a5ac287d213af603e4de653d3e4bb1854">OnChangedToggle</a>(ToggleGroup toggleGroup)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="class_skin_item_view.html#a7b4d6e923f29154ff5a58d20b9241841">equipStatus_tgl</a>.onValueChanged.AddListener(isOn =&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (isOn) toggleGroup.NotifyToggleOn(<a class="code hl_variable" href="class_skin_item_view.html#a7b4d6e923f29154ff5a58d20b9241841">equipStatus_tgl</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            equipStatus_tgl.image.sprite = isOn ? <a class="code hl_variable" href="class_skin_item_view.html#a380c28e23fe641da95cfba5dd67588a6">equipSprite</a> : <a class="code hl_variable" href="class_skin_item_view.html#acce6c4cfe7038c441973101386c2e92f">unEquipSprite</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            equipStatus_txt.text = isOn ? LocalizationManager.GetTranslation(<span class="stringliteral">&quot;UnEquip&quot;</span>) : LocalizationManager.GetTranslation(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_variable" href="class_skin_item_view.html#a559c696f0e79b7326acf444094c8cc0b">equipSkinSubject</a>.OnNext(isOn);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="ttc" id="aclass_skin_item_view_html"><div class="ttname"><a href="class_skin_item_view.html">SkinItemView</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">SkinItemView.cs:10</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a380c28e23fe641da95cfba5dd67588a6"><div class="ttname"><a href="class_skin_item_view.html#a380c28e23fe641da95cfba5dd67588a6">SkinItemView.equipSprite</a></div><div class="ttdeci">Sprite equipSprite</div><div class="ttdef"><b>Definition</b> <a href="#l00016">SkinItemView.cs:16</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a559c696f0e79b7326acf444094c8cc0b"><div class="ttname"><a href="class_skin_item_view.html#a559c696f0e79b7326acf444094c8cc0b">SkinItemView.equipSkinSubject</a></div><div class="ttdeci">Subject&lt; bool &gt; equipSkinSubject</div><div class="ttdef"><b>Definition</b> <a href="#l00020">SkinItemView.cs:20</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a578af680869d710f13581d1fe5c14f0e"><div class="ttname"><a href="class_skin_item_view.html#a578af680869d710f13581d1fe5c14f0e">SkinItemView.totalIncrease_txt</a></div><div class="ttdeci">TMP_Text totalIncrease_txt</div><div class="ttdef"><b>Definition</b> <a href="#l00013">SkinItemView.cs:13</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a5ac287d213af603e4de653d3e4bb1854"><div class="ttname"><a href="class_skin_item_view.html#a5ac287d213af603e4de653d3e4bb1854">SkinItemView.OnChangedToggle</a></div><div class="ttdeci">void OnChangedToggle(ToggleGroup toggleGroup)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SkinItemView.cs:33</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a65b6b19a157d149554c651e2e0e56bb8"><div class="ttname"><a href="class_skin_item_view.html#a65b6b19a157d149554c651e2e0e56bb8">SkinItemView.skinImage</a></div><div class="ttdeci">Image skinImage</div><div class="ttdef"><b>Definition</b> <a href="#l00011">SkinItemView.cs:11</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a786b1b33e28b69cdf3d293299efd7a99"><div class="ttname"><a href="class_skin_item_view.html#a786b1b33e28b69cdf3d293299efd7a99">SkinItemView.upgradeButtonView</a></div><div class="ttdeci">SkinUpgradeButtonView upgradeButtonView</div><div class="ttdef"><b>Definition</b> <a href="#l00015">SkinItemView.cs:15</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a7b4d6e923f29154ff5a58d20b9241841"><div class="ttname"><a href="class_skin_item_view.html#a7b4d6e923f29154ff5a58d20b9241841">SkinItemView.equipStatus_tgl</a></div><div class="ttdeci">Toggle equipStatus_tgl</div><div class="ttdef"><b>Definition</b> <a href="#l00014">SkinItemView.cs:14</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a8b5065cd19c8ce9981a1d851ce983e59"><div class="ttname"><a href="class_skin_item_view.html#a8b5065cd19c8ce9981a1d851ce983e59">SkinItemView.equipStatus_txt</a></div><div class="ttdeci">TMP_Text equipStatus_txt</div><div class="ttdef"><b>Definition</b> <a href="#l00018">SkinItemView.cs:18</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_a90c0ea4dc7f931b5336a0bf826df7a29"><div class="ttname"><a href="class_skin_item_view.html#a90c0ea4dc7f931b5336a0bf826df7a29">SkinItemView.Init</a></div><div class="ttdeci">void Init(int level, int totalIncrease, string name, string increaseTypeString, bool isEquip, bool isMaxLevel, Sprite image=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SkinItemView.cs:22</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_aacda791e23a25ef40a16e45c90292806"><div class="ttname"><a href="class_skin_item_view.html#aacda791e23a25ef40a16e45c90292806">SkinItemView.line_img</a></div><div class="ttdeci">Image line_img</div><div class="ttdef"><b>Definition</b> <a href="#l00019">SkinItemView.cs:19</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_ac3f8bab4584f6c3526acedd29ea927d9"><div class="ttname"><a href="class_skin_item_view.html#ac3f8bab4584f6c3526acedd29ea927d9">SkinItemView.title_txt</a></div><div class="ttdeci">TMP_Text title_txt</div><div class="ttdef"><b>Definition</b> <a href="#l00012">SkinItemView.cs:12</a></div></div>
+<div class="ttc" id="aclass_skin_item_view_html_acce6c4cfe7038c441973101386c2e92f"><div class="ttname"><a href="class_skin_item_view.html#acce6c4cfe7038c441973101386c2e92f">SkinItemView.unEquipSprite</a></div><div class="ttdeci">Sprite unEquipSprite</div><div class="ttdef"><b>Definition</b> <a href="#l00017">SkinItemView.cs:17</a></div></div>
+<div class="ttc" id="aclass_skin_upgrade_button_view_html"><div class="ttname"><a href="class_skin_upgrade_button_view.html">SkinUpgradeButtonView</a></div><div class="ttdef"><b>Definition</b> <a href="_skin_upgrade_button_view_8cs_source.html#l00006">SkinUpgradeButtonView.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_e6eba136486108d313cec426fd3614b3.html">02.Scripts</a></li><li class="navelem"><a class="el" href="dir_02d1e7a68cf753e5e15f64946ac71b6f.html">View</a></li><li class="navelem"><a class="el" href="dir_f47cfe09f91213949f92a2b245eeefd7.html">Item</a></li><li class="navelem"><a class="el" href="_skin_item_view_8cs.html">SkinItemView.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

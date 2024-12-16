@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/State/BattleState.cs 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_battle_state_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BattleState.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_battle_state_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>ThreeRabbitPackage.DesignPattern;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UniRx;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> : TRSingleton&lt;BattlePresenter&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_init_state.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_battle_presenter_1_1_init_state.html">InitState</a> : TRState&lt;BattlePresenter&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_init_state.html#abfa4ffacdcd40ac0607dc3bc85b8f2d8">   11</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_battle_presenter_1_1_init_state.html#abfa4ffacdcd40ac0607dc3bc85b8f2d8">isComplete</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_init_state.html#ac6bfc88127f3949e70ed11bd4ac9b4ca">   13</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> TRState&lt;BattlePresenter&gt; <a class="code hl_function" href="class_battle_presenter_1_1_init_state.html#ac6bfc88127f3949e70ed11bd4ac9b4ca">InputHandle</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_battle_presenter_1_1_init_state.html#abfa4ffacdcd40ac0607dc3bc85b8f2d8">isComplete</a>) <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter_1_1_lull_state.html">LullState</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe">   19</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe">Enter</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            base.Enter(battlePresenter);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            var table = <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_function" href="class_stage_manager.html#a0b281958be2c12e212b418d695a06b0b">GetCurStageTable</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            var monsterResource = <a class="code hl_class" href="class_t_r_scriptable_manager.html">TRScriptableManager</a>.Instance.<a class="code hl_function" href="class_t_r_scriptable_manager.html#a236bf19505de30a82da2d87fb891ab3a">GetGameObject</a>(<span class="stringliteral">&quot;MonsterResources&quot;</span>).gameObjectDictionary;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            var monsterManager = <a class="code hl_class" href="class_monster_manager.html">MonsterManager</a>.Instance;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="comment">// 캐릭터 위치 초기화</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_class" href="class_character_manager.html">CharacterManager</a>.Instance.<a class="code hl_function" href="class_character_manager.html#a2072f60727e1333c50791c86d1f2a2c7">Init</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            battlePresenter.pixelCamera.transform.position = <span class="keyword">new</span> Vector3(0, 0, -10);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_function" href="class_stage_manager.html#af22b9523a6291aadd07546af79a85658">SetStageBaseHp</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="comment">// 몬스터 생성</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="comment">// 몬스터 타입 판별</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                var isBoss = i == 4;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                var monsterName = isBoss ? table.MonsterBossName : table.MonsterNormalName;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                var monsterObj = Instantiate(monsterResource[monsterName], monsterManager.GetSpawnPosition(i));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                var model = monsterManager.CreateMonster(table, isBoss);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                var view = monsterObj.GetComponent&lt;<a class="code hl_class" href="class_monster_view.html">MonsterView</a>&gt;();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                battlePresenter.<a class="code hl_function" href="class_battle_presenter.html#ab8db160f8df19d94b91e0231d98d70d0">SubscribeMonster</a>(model, view);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#adcbb1585f06cecb7d43d50652180729f">fadeScreenView</a>.<a class="code hl_function" href="class_fade_screen_view.html#abc64f68aaee00adeb36b049116d28aa7">FadeIn</a>(0.5f, () =&gt; <a class="code hl_variable" href="class_battle_presenter_1_1_init_state.html#abfa4ffacdcd40ac0607dc3bc85b8f2d8">isComplete</a> = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            battlePresenter.state = <a class="code hl_enumeration" href="_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906">EBattleState</a>.Init;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_battle_state.html">   51</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_battle_presenter_1_1_battle_state.html">BattleState</a> : TRState&lt;BattlePresenter&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_battle_state.html#a5370982f8a1b94783bc8fc995edcfc74">   54</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> TRState&lt;BattlePresenter&gt; <a class="code hl_function" href="class_battle_presenter_1_1_battle_state.html#a5370982f8a1b94783bc8fc995edcfc74">InputHandle</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> battlePresenter.characterView.isCollision ? this : <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter_1_1_lull_state.html">LullState</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_battle_state.html#a4305293315ad3e2e1d809eff415bc8cb">   60</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_battle_state.html#a4305293315ad3e2e1d809eff415bc8cb">Enter</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            base.Enter(battlePresenter);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_property" href="class_character_view.html#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetTrigger(<span class="stringliteral">&quot;Attack&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            battlePresenter.state = <a class="code hl_enumeration" href="_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906">EBattleState</a>.Battle;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_battle_state.html#a2ccf1d8e17e643641ea3e95ead0a90a3">   67</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_battle_state.html#a2ccf1d8e17e643641ea3e95ead0a90a3">Update</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            base.Update(battlePresenter);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_property" href="class_character_view.html#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetTrigger(<span class="stringliteral">&quot;Attack&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_function" href="class_character_view.html#ac272429756a1db22242152725a3e4480">SetAttackSpeed</a>(battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a37ac1997425d399fd26d5ab14c3aea96">characterModel</a>.<a class="code hl_property" href="class_character_model.html#a130c2e88d71c118630fd738d22f369fe">AttackSpeed</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_battle_state.html#a39c942a2507af6bb0f7132c011afbbe6">   75</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_battle_state.html#a39c942a2507af6bb0f7132c011afbbe6">Exit</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            base.Exit(battlePresenter);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="};">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_lull_state.html">   81</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_battle_presenter_1_1_lull_state.html">LullState</a> : TRState&lt;BattlePresenter&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_lull_state.html#ab8edbf5a9674a6e01ec0eddf7c6562bb">   83</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_battle_presenter_1_1_lull_state.html#ab8edbf5a9674a6e01ec0eddf7c6562bb">isClear</a> = <span class="keyword">false</span>;</div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_lull_state.html#ad66ac8c4e619c5d5fa187f7233eff90e">   84</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> TRState&lt;BattlePresenter&gt; <a class="code hl_function" href="class_battle_presenter_1_1_lull_state.html#ad66ac8c4e619c5d5fa187f7233eff90e">InputHandle</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_battle_presenter_1_1_lull_state.html#ab8edbf5a9674a6e01ec0eddf7c6562bb">isClear</a>) <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter_1_1_clear_state.html">ClearState</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">return</span> battlePresenter.characterView.isCollision ? <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter_1_1_battle_state.html">BattleState</a>() : <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_lull_state.html#a6d56b1cdbeeb8f873c1690d6461b050b">   90</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_lull_state.html#a6d56b1cdbeeb8f873c1690d6461b050b">Enter</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            base.Enter(battlePresenter);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_function" href="class_character_view.html#ae783345505bb1d7b68592ba4ec97a596">SetRunSpeed</a>(battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a37ac1997425d399fd26d5ab14c3aea96">characterModel</a>.<a class="code hl_property" href="class_character_model.html#a5f15596fd193fc4d1d412a9cfc7bdc8b">RunSpeed</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_property" href="class_character_view.html#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetTrigger(<span class="stringliteral">&quot;Run&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            battlePresenter.state = <a class="code hl_enumeration" href="_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906">EBattleState</a>.Lull;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_lull_state.html#a5bd50f38cfbdb24e7b5d116f87f1664e">   98</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_lull_state.html#a5bd50f38cfbdb24e7b5d116f87f1664e">Update</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            base.Update(battlePresenter);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_function" href="class_character_view.html#ae783345505bb1d7b68592ba4ec97a596">SetRunSpeed</a>(battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a37ac1997425d399fd26d5ab14c3aea96">characterModel</a>.<a class="code hl_property" href="class_character_model.html#a5f15596fd193fc4d1d412a9cfc7bdc8b">RunSpeed</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_property" href="class_character_view.html#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetTrigger(<span class="stringliteral">&quot;Run&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_function" href="class_character_view.html#ab0af0b526c070e59185913218f53a71a">Move</a>(battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a37ac1997425d399fd26d5ab14c3aea96">characterModel</a>.<a class="code hl_property" href="class_character_model.html#a5f15596fd193fc4d1d412a9cfc7bdc8b">RunSpeed</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_character_manager.html">CharacterManager</a>.Instance.<a class="code hl_property" href="class_character_manager.html#a12016ddba39b199c98096afeab09e0f2">CharacterPositionX</a> &gt; 3 &amp;&amp; <a class="code hl_class" href="class_character_manager.html">CharacterManager</a>.Instance.<a class="code hl_property" href="class_character_manager.html#a12016ddba39b199c98096afeab09e0f2">CharacterPositionX</a> &lt; 22)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a7a17b180cf05a4470a03bc039bdfac73">pixelCamera</a>.transform.Translate(battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a37ac1997425d399fd26d5ab14c3aea96">characterModel</a>.<a class="code hl_property" href="class_character_model.html#a5f15596fd193fc4d1d412a9cfc7bdc8b">RunSpeed</a> * Time.smoothDeltaTime * Vector2.right);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_character_manager.html">CharacterManager</a>.Instance.<a class="code hl_property" href="class_character_manager.html#a12016ddba39b199c98096afeab09e0f2">CharacterPositionX</a> &gt;= 26)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <a class="code hl_variable" href="class_battle_presenter_1_1_lull_state.html#ab8edbf5a9674a6e01ec0eddf7c6562bb">isClear</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="};">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_clear_state.html">  115</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_battle_presenter_1_1_clear_state.html">ClearState</a> : TRState&lt;BattlePresenter&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_clear_state.html#a5ed437b144eb83d068ad0be580ba20fb">  117</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_battle_presenter_1_1_clear_state.html#a5ed437b144eb83d068ad0be580ba20fb">isComplete</a> = <span class="keyword">false</span>;</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_clear_state.html#aea693900ba0b43955a70db68f4b65fcc">  118</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> TRState&lt;BattlePresenter&gt; <a class="code hl_function" href="class_battle_presenter_1_1_clear_state.html#aea693900ba0b43955a70db68f4b65fcc">InputHandle</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_battle_presenter_1_1_clear_state.html#a5ed437b144eb83d068ad0be580ba20fb">isComplete</a>) <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter_1_1_init_state.html">InitState</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9">  124</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9">Enter</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            base.Enter(battlePresenter);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#adcbb1585f06cecb7d43d50652180729f">fadeScreenView</a>.<a class="code hl_function" href="class_fade_screen_view.html#a55b0f19222cb18a9c6a35d1bce148b87">FadeOut</a>(0.5f, () =&gt;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_function" href="class_stage_manager.html#a437894966836562a8e2d67a747b71cde">IncreaseStage</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <a class="code hl_class" href="class_monster_manager.html">MonsterManager</a>.Instance.<a class="code hl_function" href="class_monster_manager.html#ab27dcad1e6ebc843661a44b4689357f5">ClearAllMonster</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                <a class="code hl_class" href="class_user_data_manager.html">UserDataManager</a>.Instance.<a class="code hl_function" href="class_user_data_manager.html#a3f6d285949025fbb8b0f78081758f4f4">SaveAll</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <a class="code hl_variable" href="class_battle_presenter_1_1_clear_state.html#a5ed437b144eb83d068ad0be580ba20fb">isComplete</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            });</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            battlePresenter.state = <a class="code hl_enumeration" href="_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906">EBattleState</a>.Clear;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="};">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_reset_state.html">  138</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_battle_presenter_1_1_reset_state.html">ResetState</a> : TRState&lt;BattlePresenter&gt;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_reset_state.html#a4ae48f15b499fa146ae80d748617d672">  140</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_battle_presenter_1_1_reset_state.html#a4ae48f15b499fa146ae80d748617d672">isComplete</a> = <span class="keyword">false</span>;</div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_reset_state.html#a21f664d5b9e07e932a3e1264557f4590">  141</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> TRState&lt;BattlePresenter&gt; <a class="code hl_function" href="class_battle_presenter_1_1_reset_state.html#a21f664d5b9e07e932a3e1264557f4590">InputHandle</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_battle_presenter_1_1_reset_state.html#a4ae48f15b499fa146ae80d748617d672">isComplete</a>) <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_battle_presenter_1_1_init_state.html">InitState</a>();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="class_battle_presenter_1_1_reset_state.html#a1c1b14fbfa41c361236156a20b828905">  147</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_battle_presenter_1_1_reset_state.html#a1c1b14fbfa41c361236156a20b828905">Enter</a>(<a class="code hl_class" href="class_battle_presenter.html">BattlePresenter</a> battlePresenter)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            base.Enter(battlePresenter);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            battlePresenter.state = <a class="code hl_enumeration" href="_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906">EBattleState</a>.Reset;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">characterView</a>.<a class="code hl_property" href="class_character_view.html#a21995e9d09c28f041b4c9e1864eaad22">Animator</a>.SetTrigger(<span class="stringliteral">&quot;Run&quot;</span>);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a4fecf168fb57e244e522e45360e4c41c">gold</a>.Subtract(battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#a4fecf168fb57e244e522e45360e4c41c">gold</a>.Amount);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_function" href="class_stage_manager.html#addf970b9bc5a60c75e71dedee716d5df">ResetStage</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <a class="code hl_class" href="class_monster_manager.html">MonsterManager</a>.Instance.<a class="code hl_function" href="class_monster_manager.html#ab27dcad1e6ebc843661a44b4689357f5">ClearAllMonster</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            battlePresenter.<a class="code hl_variable" href="class_battle_presenter.html#adcbb1585f06cecb7d43d50652180729f">fadeScreenView</a>.<a class="code hl_function" href="class_fade_screen_view.html#a55b0f19222cb18a9c6a35d1bce148b87">FadeOut</a>(0.5f, () =&gt;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <a class="code hl_class" href="class_user_data_manager.html">UserDataManager</a>.Instance.<a class="code hl_function" href="class_user_data_manager.html#a3f6d285949025fbb8b0f78081758f4f4">SaveAll</a>();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <a class="code hl_variable" href="class_battle_presenter_1_1_reset_state.html#a4ae48f15b499fa146ae80d748617d672">isComplete</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            });</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
+<div class="ttc" id="a_global_enums_8cs_html_a464b154742bba8b4dbc02fc44a351906"><div class="ttname"><a href="_global_enums_8cs.html#a464b154742bba8b4dbc02fc44a351906">EBattleState</a></div><div class="ttdeci">EBattleState</div><div class="ttdef"><b>Definition</b> <a href="_global_enums_8cs_source.html#l00043">GlobalEnums.cs:44</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_battle_state_html"><div class="ttname"><a href="class_battle_presenter_1_1_battle_state.html">BattlePresenter.BattleState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00051">BattleState.cs:52</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_battle_state_html_a2ccf1d8e17e643641ea3e95ead0a90a3"><div class="ttname"><a href="class_battle_presenter_1_1_battle_state.html#a2ccf1d8e17e643641ea3e95ead0a90a3">BattlePresenter.BattleState.Update</a></div><div class="ttdeci">override void Update(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">BattleState.cs:67</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_battle_state_html_a39c942a2507af6bb0f7132c011afbbe6"><div class="ttname"><a href="class_battle_presenter_1_1_battle_state.html#a39c942a2507af6bb0f7132c011afbbe6">BattlePresenter.BattleState.Exit</a></div><div class="ttdeci">override void Exit(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">BattleState.cs:75</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_battle_state_html_a4305293315ad3e2e1d809eff415bc8cb"><div class="ttname"><a href="class_battle_presenter_1_1_battle_state.html#a4305293315ad3e2e1d809eff415bc8cb">BattlePresenter.BattleState.Enter</a></div><div class="ttdeci">override void Enter(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">BattleState.cs:60</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_battle_state_html_a5370982f8a1b94783bc8fc995edcfc74"><div class="ttname"><a href="class_battle_presenter_1_1_battle_state.html#a5370982f8a1b94783bc8fc995edcfc74">BattlePresenter.BattleState.InputHandle</a></div><div class="ttdeci">override TRState&lt; BattlePresenter &gt; InputHandle(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">BattleState.cs:54</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_clear_state_html"><div class="ttname"><a href="class_battle_presenter_1_1_clear_state.html">BattlePresenter.ClearState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00115">BattleState.cs:116</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_clear_state_html_a17dadba8a31889fa8517698efa5342e9"><div class="ttname"><a href="class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9">BattlePresenter.ClearState.Enter</a></div><div class="ttdeci">override void Enter(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00124">BattleState.cs:124</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_clear_state_html_a5ed437b144eb83d068ad0be580ba20fb"><div class="ttname"><a href="class_battle_presenter_1_1_clear_state.html#a5ed437b144eb83d068ad0be580ba20fb">BattlePresenter.ClearState.isComplete</a></div><div class="ttdeci">bool isComplete</div><div class="ttdef"><b>Definition</b> <a href="#l00117">BattleState.cs:117</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_clear_state_html_aea693900ba0b43955a70db68f4b65fcc"><div class="ttname"><a href="class_battle_presenter_1_1_clear_state.html#aea693900ba0b43955a70db68f4b65fcc">BattlePresenter.ClearState.InputHandle</a></div><div class="ttdeci">override TRState&lt; BattlePresenter &gt; InputHandle(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00118">BattleState.cs:118</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_init_state_html"><div class="ttname"><a href="class_battle_presenter_1_1_init_state.html">BattlePresenter.InitState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">BattleState.cs:10</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_init_state_html_abcac5e9a624ab22b060f72a987e8d6fe"><div class="ttname"><a href="class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe">BattlePresenter.InitState.Enter</a></div><div class="ttdeci">override void Enter(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00019">BattleState.cs:19</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_init_state_html_abfa4ffacdcd40ac0607dc3bc85b8f2d8"><div class="ttname"><a href="class_battle_presenter_1_1_init_state.html#abfa4ffacdcd40ac0607dc3bc85b8f2d8">BattlePresenter.InitState.isComplete</a></div><div class="ttdeci">bool isComplete</div><div class="ttdef"><b>Definition</b> <a href="#l00011">BattleState.cs:11</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_init_state_html_ac6bfc88127f3949e70ed11bd4ac9b4ca"><div class="ttname"><a href="class_battle_presenter_1_1_init_state.html#ac6bfc88127f3949e70ed11bd4ac9b4ca">BattlePresenter.InitState.InputHandle</a></div><div class="ttdeci">override TRState&lt; BattlePresenter &gt; InputHandle(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00013">BattleState.cs:13</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_lull_state_html"><div class="ttname"><a href="class_battle_presenter_1_1_lull_state.html">BattlePresenter.LullState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00081">BattleState.cs:82</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_lull_state_html_a5bd50f38cfbdb24e7b5d116f87f1664e"><div class="ttname"><a href="class_battle_presenter_1_1_lull_state.html#a5bd50f38cfbdb24e7b5d116f87f1664e">BattlePresenter.LullState.Update</a></div><div class="ttdeci">override void Update(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00098">BattleState.cs:98</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_lull_state_html_a6d56b1cdbeeb8f873c1690d6461b050b"><div class="ttname"><a href="class_battle_presenter_1_1_lull_state.html#a6d56b1cdbeeb8f873c1690d6461b050b">BattlePresenter.LullState.Enter</a></div><div class="ttdeci">override void Enter(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00090">BattleState.cs:90</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_lull_state_html_ab8edbf5a9674a6e01ec0eddf7c6562bb"><div class="ttname"><a href="class_battle_presenter_1_1_lull_state.html#ab8edbf5a9674a6e01ec0eddf7c6562bb">BattlePresenter.LullState.isClear</a></div><div class="ttdeci">bool isClear</div><div class="ttdef"><b>Definition</b> <a href="#l00083">BattleState.cs:83</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_lull_state_html_ad66ac8c4e619c5d5fa187f7233eff90e"><div class="ttname"><a href="class_battle_presenter_1_1_lull_state.html#ad66ac8c4e619c5d5fa187f7233eff90e">BattlePresenter.LullState.InputHandle</a></div><div class="ttdeci">override TRState&lt; BattlePresenter &gt; InputHandle(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">BattleState.cs:84</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_reset_state_html"><div class="ttname"><a href="class_battle_presenter_1_1_reset_state.html">BattlePresenter.ResetState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00138">BattleState.cs:139</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_reset_state_html_a1c1b14fbfa41c361236156a20b828905"><div class="ttname"><a href="class_battle_presenter_1_1_reset_state.html#a1c1b14fbfa41c361236156a20b828905">BattlePresenter.ResetState.Enter</a></div><div class="ttdeci">override void Enter(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00147">BattleState.cs:147</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_reset_state_html_a21f664d5b9e07e932a3e1264557f4590"><div class="ttname"><a href="class_battle_presenter_1_1_reset_state.html#a21f664d5b9e07e932a3e1264557f4590">BattlePresenter.ResetState.InputHandle</a></div><div class="ttdeci">override TRState&lt; BattlePresenter &gt; InputHandle(BattlePresenter battlePresenter)</div><div class="ttdef"><b>Definition</b> <a href="#l00141">BattleState.cs:141</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_1_1_reset_state_html_a4ae48f15b499fa146ae80d748617d672"><div class="ttname"><a href="class_battle_presenter_1_1_reset_state.html#a4ae48f15b499fa146ae80d748617d672">BattlePresenter.ResetState.isComplete</a></div><div class="ttdeci">bool isComplete</div><div class="ttdef"><b>Definition</b> <a href="#l00140">BattleState.cs:140</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html"><div class="ttname"><a href="class_battle_presenter.html">BattlePresenter</a></div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00011">BattlePresenter.cs:12</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html_a0eeb586a481bd3a22fb8bf123418e57e"><div class="ttname"><a href="class_battle_presenter.html#a0eeb586a481bd3a22fb8bf123418e57e">BattlePresenter.characterView</a></div><div class="ttdeci">readonly CharacterView characterView</div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00015">BattlePresenter.cs:15</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html_a37ac1997425d399fd26d5ab14c3aea96"><div class="ttname"><a href="class_battle_presenter.html#a37ac1997425d399fd26d5ab14c3aea96">BattlePresenter.characterModel</a></div><div class="ttdeci">CharacterModel characterModel</div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00017">BattlePresenter.cs:17</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html_a4fecf168fb57e244e522e45360e4c41c"><div class="ttname"><a href="class_battle_presenter.html#a4fecf168fb57e244e522e45360e4c41c">BattlePresenter.gold</a></div><div class="ttdeci">readonly CurrencyModel.Gold gold</div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00016">BattlePresenter.cs:16</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html_a7a17b180cf05a4470a03bc039bdfac73"><div class="ttname"><a href="class_battle_presenter.html#a7a17b180cf05a4470a03bc039bdfac73">BattlePresenter.pixelCamera</a></div><div class="ttdeci">Camera pixelCamera</div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00018">BattlePresenter.cs:18</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html_ab8db160f8df19d94b91e0231d98d70d0"><div class="ttname"><a href="class_battle_presenter.html#ab8db160f8df19d94b91e0231d98d70d0">BattlePresenter.SubscribeMonster</a></div><div class="ttdeci">void SubscribeMonster(MonsterModel model, MonsterView view)</div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00059">BattlePresenter.cs:59</a></div></div>
+<div class="ttc" id="aclass_battle_presenter_html_adcbb1585f06cecb7d43d50652180729f"><div class="ttname"><a href="class_battle_presenter.html#adcbb1585f06cecb7d43d50652180729f">BattlePresenter.fadeScreenView</a></div><div class="ttdeci">FadeScreenView fadeScreenView</div><div class="ttdef"><b>Definition</b> <a href="_battle_presenter_8cs_source.html#l00019">BattlePresenter.cs:19</a></div></div>
+<div class="ttc" id="aclass_character_manager_html"><div class="ttname"><a href="class_character_manager.html">CharacterManager</a></div><div class="ttdef"><b>Definition</b> <a href="_character_manager_8cs_source.html#l00006">CharacterManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_character_manager_html_a12016ddba39b199c98096afeab09e0f2"><div class="ttname"><a href="class_character_manager.html#a12016ddba39b199c98096afeab09e0f2">CharacterManager.CharacterPositionX</a></div><div class="ttdeci">float CharacterPositionX</div><div class="ttdef"><b>Definition</b> <a href="_character_manager_8cs_source.html#l00010">CharacterManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_character_manager_html_a2072f60727e1333c50791c86d1f2a2c7"><div class="ttname"><a href="class_character_manager.html#a2072f60727e1333c50791c86d1f2a2c7">CharacterManager.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition</b> <a href="_character_manager_8cs_source.html#l00017">CharacterManager.cs:17</a></div></div>
+<div class="ttc" id="aclass_character_model_html_a130c2e88d71c118630fd738d22f369fe"><div class="ttname"><a href="class_character_model.html#a130c2e88d71c118630fd738d22f369fe">CharacterModel.AttackSpeed</a></div><div class="ttdeci">float AttackSpeed</div><div class="ttdef"><b>Definition</b> <a href="_character_model_8cs_source.html#l00046">CharacterModel.cs:46</a></div></div>
+<div class="ttc" id="aclass_character_model_html_a5f15596fd193fc4d1d412a9cfc7bdc8b"><div class="ttname"><a href="class_character_model.html#a5f15596fd193fc4d1d412a9cfc7bdc8b">CharacterModel.RunSpeed</a></div><div class="ttdeci">float RunSpeed</div><div class="ttdef"><b>Definition</b> <a href="_character_model_8cs_source.html#l00040">CharacterModel.cs:40</a></div></div>
+<div class="ttc" id="aclass_character_view_html_a21995e9d09c28f041b4c9e1864eaad22"><div class="ttname"><a href="class_character_view.html#a21995e9d09c28f041b4c9e1864eaad22">CharacterView.Animator</a></div><div class="ttdeci">Animator Animator</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00016">CharacterView.cs:16</a></div></div>
+<div class="ttc" id="aclass_character_view_html_ab0af0b526c070e59185913218f53a71a"><div class="ttname"><a href="class_character_view.html#ab0af0b526c070e59185913218f53a71a">CharacterView.Move</a></div><div class="ttdeci">void Move(float moveSpeed)</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00046">CharacterView.cs:46</a></div></div>
+<div class="ttc" id="aclass_character_view_html_ac272429756a1db22242152725a3e4480"><div class="ttname"><a href="class_character_view.html#ac272429756a1db22242152725a3e4480">CharacterView.SetAttackSpeed</a></div><div class="ttdeci">void SetAttackSpeed(float speed)</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00021">CharacterView.cs:21</a></div></div>
+<div class="ttc" id="aclass_character_view_html_ae783345505bb1d7b68592ba4ec97a596"><div class="ttname"><a href="class_character_view.html#ae783345505bb1d7b68592ba4ec97a596">CharacterView.SetRunSpeed</a></div><div class="ttdeci">void SetRunSpeed(float speed)</div><div class="ttdef"><b>Definition</b> <a href="_character_view_8cs_source.html#l00026">CharacterView.cs:26</a></div></div>
+<div class="ttc" id="aclass_fade_screen_view_html_a55b0f19222cb18a9c6a35d1bce148b87"><div class="ttname"><a href="class_fade_screen_view.html#a55b0f19222cb18a9c6a35d1bce148b87">FadeScreenView.FadeOut</a></div><div class="ttdeci">void FadeOut(float transitionTime, Action onComplete=null)</div><div class="ttdef"><b>Definition</b> <a href="_fade_screen_view_8cs_source.html#l00019">FadeScreenView.cs:19</a></div></div>
+<div class="ttc" id="aclass_fade_screen_view_html_abc64f68aaee00adeb36b049116d28aa7"><div class="ttname"><a href="class_fade_screen_view.html#abc64f68aaee00adeb36b049116d28aa7">FadeScreenView.FadeIn</a></div><div class="ttdeci">void FadeIn(float transitionTime, Action onComplete=null)</div><div class="ttdef"><b>Definition</b> <a href="_fade_screen_view_8cs_source.html#l00010">FadeScreenView.cs:10</a></div></div>
+<div class="ttc" id="aclass_monster_manager_html"><div class="ttname"><a href="class_monster_manager.html">MonsterManager</a></div><div class="ttdef"><b>Definition</b> <a href="_monster_manager_8cs_source.html#l00008">MonsterManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_monster_manager_html_ab27dcad1e6ebc843661a44b4689357f5"><div class="ttname"><a href="class_monster_manager.html#ab27dcad1e6ebc843661a44b4689357f5">MonsterManager.ClearAllMonster</a></div><div class="ttdeci">void ClearAllMonster()</div><div class="ttdef"><b>Definition</b> <a href="_monster_manager_8cs_source.html#l00030">MonsterManager.cs:30</a></div></div>
+<div class="ttc" id="aclass_monster_view_html"><div class="ttname"><a href="class_monster_view.html">MonsterView</a></div><div class="ttdef"><b>Definition</b> <a href="_monster_view_8cs_source.html#l00009">MonsterView.cs:10</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html"><div class="ttname"><a href="class_stage_manager.html">StageManager</a></div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00008">StageManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html_a0b281958be2c12e212b418d695a06b0b"><div class="ttname"><a href="class_stage_manager.html#a0b281958be2c12e212b418d695a06b0b">StageManager.GetCurStageTable</a></div><div class="ttdeci">StageTable GetCurStageTable()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00027">StageManager.cs:27</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html_a437894966836562a8e2d67a747b71cde"><div class="ttname"><a href="class_stage_manager.html#a437894966836562a8e2d67a747b71cde">StageManager.IncreaseStage</a></div><div class="ttdeci">void IncreaseStage()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00057">StageManager.cs:57</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html_addf970b9bc5a60c75e71dedee716d5df"><div class="ttname"><a href="class_stage_manager.html#addf970b9bc5a60c75e71dedee716d5df">StageManager.ResetStage</a></div><div class="ttdeci">void ResetStage()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00085">StageManager.cs:85</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html_af22b9523a6291aadd07546af79a85658"><div class="ttname"><a href="class_stage_manager.html#af22b9523a6291aadd07546af79a85658">StageManager.SetStageBaseHp</a></div><div class="ttdeci">void SetStageBaseHp()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00070">StageManager.cs:70</a></div></div>
+<div class="ttc" id="aclass_t_r_scriptable_manager_html"><div class="ttname"><a href="class_t_r_scriptable_manager.html">TRScriptableManager</a></div><div class="ttdef"><b>Definition</b> <a href="_t_r_scriptable_manager_8cs_source.html#l00006">TRScriptableManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_t_r_scriptable_manager_html_a236bf19505de30a82da2d87fb891ab3a"><div class="ttname"><a href="class_t_r_scriptable_manager.html#a236bf19505de30a82da2d87fb891ab3a">TRScriptableManager.GetGameObject</a></div><div class="ttdeci">TRGameObjectResources GetGameObject(string name)</div><div class="ttdef"><b>Definition</b> <a href="_t_r_scriptable_manager_8cs_source.html#l00018">TRScriptableManager.cs:18</a></div></div>
+<div class="ttc" id="aclass_user_data_manager_html"><div class="ttname"><a href="class_user_data_manager.html">UserDataManager</a></div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00008">UserDataManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_user_data_manager_html_a3f6d285949025fbb8b0f78081758f4f4"><div class="ttname"><a href="class_user_data_manager.html#a3f6d285949025fbb8b0f78081758f4f4">UserDataManager.SaveAll</a></div><div class="ttdeci">void SaveAll()</div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00072">UserDataManager.cs:72</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_e6eba136486108d313cec426fd3614b3.html">02.Scripts</a></li><li class="navelem"><a class="el" href="dir_947adc06d4acdf27c574b0c8a6c8a6e2.html">State</a></li><li class="navelem"><a class="el" href="_battle_state_8cs.html">BattleState.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

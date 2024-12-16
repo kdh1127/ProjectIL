@@ -1,0 +1,307 @@
+\doxysection{Stage\+Manager 클래스 참조}
+\hypertarget{class_stage_manager}{}\label{class_stage_manager}\index{StageManager@{StageManager}}
+
+
+Stage\+Manager에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{class_stage_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+Stage\+Table \mbox{\hyperlink{class_stage_manager_a0b281958be2c12e212b418d695a06b0b}{Get\+Cur\+Stage\+Table}} ()
+\item 
+string \mbox{\hyperlink{class_stage_manager_aa8a71c22961aca1db55d101ec951dcd9}{Get\+Localization\+Stage}} (int cur\+Stage)
+\item 
+int \mbox{\hyperlink{class_stage_manager_a50949fc939438f8c817470639ddcd9ab}{Get\+Cur\+Step}} ()
+\item 
+void \mbox{\hyperlink{class_stage_manager_a437894966836562a8e2d67a747b71cde}{Increase\+Stage}} ()
+\item 
+void \mbox{\hyperlink{class_stage_manager_af22b9523a6291aadd07546af79a85658}{Set\+Stage\+Base\+Hp}} ()
+\item 
+void \mbox{\hyperlink{class_stage_manager_addf970b9bc5a60c75e71dedee716d5df}{Reset\+Stage}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Reactive\+Property$<$ int $>$ \mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{Cur\+Stage}} = new(0)
+\item 
+Big\+Integer \mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stage\+Base\+Hp}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+new void \mbox{\hyperlink{class_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36}{Start}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{class_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521}\index{StageManager@{StageManager}!Awake@{Awake}}
+\index{Awake@{Awake}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521} 
+new void Stage\+Manager.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ base.Awake();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ var\ table\ =\ \mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance.\mbox{\hyperlink{class_t_r_scriptable_manager_a96aba89b645492373b1c10516059650d}{GetGoogleSheet}}(\textcolor{stringliteral}{"{}StageTable"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_t_r_scriptable_manager}{TRScriptableManager}}.Instance\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ StageTableList.Init(table);}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_stage_manager_a0b281958be2c12e212b418d695a06b0b}\index{StageManager@{StageManager}!GetCurStageTable@{GetCurStageTable}}
+\index{GetCurStageTable@{GetCurStageTable}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{GetCurStageTable()}{GetCurStageTable()}}
+{\footnotesize\ttfamily \label{class_stage_manager_a0b281958be2c12e212b418d695a06b0b} 
+Stage\+Table Stage\+Manager.\+Get\+Cur\+Stage\+Table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00027}{27}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ var\ stageTableList\ =\ StageTableList.Get();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value\ ==\ 0)\ \textcolor{keywordflow}{return}\ stageTableList[0];}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ stageTableList.Count;\ i++)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value\ <\ stageTableList[i].StageNo)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stageTableList[i\ -\/\ 1];}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stageTableList[stageTableList.Count\ -\/\ 1];}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_a0b281958be2c12e212b418d695a06b0b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_stage_manager_a50949fc939438f8c817470639ddcd9ab}\index{StageManager@{StageManager}!GetCurStep@{GetCurStep}}
+\index{GetCurStep@{GetCurStep}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{GetCurStep()}{GetCurStep()}}
+{\footnotesize\ttfamily \label{class_stage_manager_a50949fc939438f8c817470639ddcd9ab} 
+int Stage\+Manager.\+Get\+Cur\+Step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00050}{50}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ var\ curStep\ =\ MonsterManager.Instance.monsterIndex\ +\ 1;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ curStep;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_stage_manager_aa8a71c22961aca1db55d101ec951dcd9}\index{StageManager@{StageManager}!GetLocalizationStage@{GetLocalizationStage}}
+\index{GetLocalizationStage@{GetLocalizationStage}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{GetLocalizationStage()}{GetLocalizationStage()}}
+{\footnotesize\ttfamily \label{class_stage_manager_aa8a71c22961aca1db55d101ec951dcd9} 
+string Stage\+Manager.\+Get\+Localization\+Stage (\begin{DoxyParamCaption}\item[{int}]{cur\+Stage}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00043}{43}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ var\ stageFormat\ =\ LocalizationManager.GetTranslation(\textcolor{stringliteral}{"{}Stage\_String\_Format"{}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ var\ stageString\ =\ \textcolor{keywordtype}{string}.Format(stageFormat,\ curStage);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stageString;}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_aa8a71c22961aca1db55d101ec951dcd9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_stage_manager_a437894966836562a8e2d67a747b71cde}\index{StageManager@{StageManager}!IncreaseStage@{IncreaseStage}}
+\index{IncreaseStage@{IncreaseStage}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{IncreaseStage()}{IncreaseStage()}}
+{\footnotesize\ttfamily \label{class_stage_manager_a437894966836562a8e2d67a747b71cde} 
+void Stage\+Manager.\+Increase\+Stage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00057}{57}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ var\ userDungeonClearData\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_aeaa20f773d03b787e8c3d4ccac204ea5}{missionData}}.\mbox{\hyperlink{class_user_data_manager_1_1_mission_data_a5e054869b4c8f109d0ee7cbbf0a3b92c}{DungeonClearData}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value++;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userDungeonClearData.Keys.Contains(0))}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ userDungeonClearData[0]\ =\ \mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ var\ stage\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a95035f7b3fe9d00535dbf69251592989}{stageData}}.\mbox{\hyperlink{class_user_data_manager_1_1_stage_data_aa3e10194df809ef74f53623e6f64b220}{stage}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ stage.curStage\ =\ \mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_a437894966836562a8e2d67a747b71cde_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_stage_manager_addf970b9bc5a60c75e71dedee716d5df}\index{StageManager@{StageManager}!ResetStage@{ResetStage}}
+\index{ResetStage@{ResetStage}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{ResetStage()}{ResetStage()}}
+{\footnotesize\ttfamily \label{class_stage_manager_addf970b9bc5a60c75e71dedee716d5df} 
+void Stage\+Manager.\+Reset\+Stage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00085}{85}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ CurStage.Value\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stageBaseHp}}\ =\ 0;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ var\ stage\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a95035f7b3fe9d00535dbf69251592989}{stageData}}.\mbox{\hyperlink{class_user_data_manager_1_1_stage_data_aa3e10194df809ef74f53623e6f64b220}{stage}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ stage.stageBaseHp\ =\ \mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stageBaseHp}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ stage.curStage\ =\ \mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_addf970b9bc5a60c75e71dedee716d5df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_stage_manager_af22b9523a6291aadd07546af79a85658}\index{StageManager@{StageManager}!SetStageBaseHp@{SetStageBaseHp}}
+\index{SetStageBaseHp@{SetStageBaseHp}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{SetStageBaseHp()}{SetStageBaseHp()}}
+{\footnotesize\ttfamily \label{class_stage_manager_af22b9523a6291aadd07546af79a85658} 
+void Stage\+Manager.\+Set\+Stage\+Base\+Hp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00070}{70}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value\ ==\ 0)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stageBaseHp}}\ =\ 570;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ var\ curStage\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Value;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ var\ stageIncreasePer\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_a0b281958be2c12e212b418d695a06b0b}{GetCurStageTable}}().HpIncreasePer\ /\ 100f\ +\ 1;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ var\ curPer\ =\ Mathf.Pow(stageIncreasePer,\ curStage);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ var\ factor\ =\ curPer\ *\ 100;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ var\ increaseHp\ =\ (570\ *\ (int)factor)\ /\ 100;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stageBaseHp}}\ =\ increaseHp;}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_af22b9523a6291aadd07546af79a85658_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager_af22b9523a6291aadd07546af79a85658_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36}\index{StageManager@{StageManager}!Start@{Start}}
+\index{Start@{Start}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36} 
+void Stage\+Manager.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00020}{20}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ var\ stage\ =\ \mbox{\hyperlink{class_user_data_manager}{UserDataManager}}.Instance.\mbox{\hyperlink{class_user_data_manager_a95035f7b3fe9d00535dbf69251592989}{stageData}}.\mbox{\hyperlink{class_user_data_manager_1_1_stage_data_aa3e10194df809ef74f53623e6f64b220}{stage}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ CurStage.Value\ =\ stage.\mbox{\hyperlink{class_user_data_manager_1_1_stage_data_1_1_stage_aab5cd1a4dadd591f75dc8702c86e8f11}{curStage}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager_a5ac1a24576f1158315f032636011183e}{stageBaseHp}}\ =\ stage.stageBaseHp;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\Hypertarget{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}\index{StageManager@{StageManager}!CurStage@{CurStage}}
+\index{CurStage@{CurStage}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{CurStage}{CurStage}}
+{\footnotesize\ttfamily \label{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8} 
+Reactive\+Property$<$int$>$ Stage\+Manager.\+Cur\+Stage = new(0)}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{class_stage_manager_a5ac1a24576f1158315f032636011183e}\index{StageManager@{StageManager}!stageBaseHp@{stageBaseHp}}
+\index{stageBaseHp@{stageBaseHp}!StageManager@{StageManager}}
+\doxysubsubsection{\texorpdfstring{stageBaseHp}{stageBaseHp}}
+{\footnotesize\ttfamily \label{class_stage_manager_a5ac1a24576f1158315f032636011183e} 
+Big\+Integer Stage\+Manager.\+stage\+Base\+Hp = 0}
+
+
+
+\mbox{\hyperlink{_stage_manager_8cs_source}{Stage\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_stage_manager_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joch0/\+Documents/\+Git\+Hub/\+Project\+IL/\+Assets/02.\+Scripts/\+Manager/\mbox{\hyperlink{_stage_manager_8cs}{Stage\+Manager.\+cs}}\end{DoxyCompactItemize}

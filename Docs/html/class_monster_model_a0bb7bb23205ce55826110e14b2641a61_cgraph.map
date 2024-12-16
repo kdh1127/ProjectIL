@@ -1,0 +1,7 @@
+<map id="MonsterModel.Init" name="MonsterModel.Init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,131,61"/>
+<area shape="rect" id="Node000002" href="$class_monster_manager.html#a108adf7e16c1eae4a1ead4243cae663f" title=" " alt="" coords="179,5,373,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,37,163,32,163,37,131,42"/>
+<area shape="rect" id="Node000003" href="$class_stage_manager.html#a0b281958be2c12e212b418d695a06b0b" title=" " alt="" coords="183,56,368,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,54,168,59,167,65,131,59"/>
+</map>

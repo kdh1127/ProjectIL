@@ -1,0 +1,32 @@
+<map id="QuestPresenter" name="QuestPresenter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="309,963,509,1139"/>
+<area shape="rect" id="Node000002" href="$class_quest_model.html" title=" " alt="" coords="223,744,331,899"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,897,352,947,348,950,318,899"/>
+<area shape="rect" id="Node000003" href="$class_currency_model.html" title=" " alt="" coords="161,504,281,680"/>
+<area shape="poly" id="edge16_Node000001_Node000003" title=" " alt="" coords="184,681,169,732,161,788,163,845,169,872,181,897,203,930,231,958,262,981,296,1001,293,1006,259,986,227,962,199,933,176,900,164,873,158,845,155,788,164,731,179,679"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,679,257,727,251,728,240,680"/>
+<area shape="rect" id="Node000004" href="$class_currency_model_1_1_gold.html" title=" " alt="" coords="5,371,135,440"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="100,438,152,503,148,506,95,442"/>
+<area shape="rect" id="Node000005" href="$class_currency_base.html" title=" " alt="" coords="164,145,277,321"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="157,311,102,373,98,369,153,307"/>
+<area shape="rect" id="Node000008" href="$class_currency_model_1_1_dia.html" title=" " alt="" coords="160,371,282,440"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="224,336,224,371,218,371,218,336"/>
+<area shape="rect" id="Node000009" href="$class_currency_model_1_1_key.html" title=" " alt="" coords="306,371,432,440"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="289,308,342,369,338,373,285,312"/>
+<area shape="rect" id="Node000006" href="$interface_i_currency.html" title=" " alt="" coords="55,5,206,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="161,108,180,144,175,147,157,110"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="230,16,393,85"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="290,100,267,147,262,144,286,97"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="224,440,224,487,218,487,218,440"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="344,442,293,505,289,502,340,438"/>
+<area shape="rect" id="Node000010" href="$class_quest_panel_view.html" title=" " alt="" coords="355,776,463,867"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="412,866,412,946,406,946,406,866"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="358,557,459,627"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="412,641,412,776,406,776,406,641"/>
+<area shape="rect" id="Node000012" href="$class_quest_item_view_factory.html" title=" " alt="" coords="487,787,632,856"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="540,857,478,950,473,947,535,854"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="497,549,622,635"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="562,650,562,787,557,787,557,650"/>
+<area shape="rect" id="Node000014" href="$class_quest_resources.html" title=" " alt="" coords="656,776,786,867"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="697,868,669,905,635,941,582,978,525,1007,523,1003,579,973,631,937,665,902,693,865"/>
+</map>

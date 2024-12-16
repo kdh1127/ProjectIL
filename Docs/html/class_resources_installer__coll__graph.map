@@ -1,0 +1,9 @@
+<map id="ResourcesInstaller" name="ResourcesInstaller">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,401,131,471"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,204,94,273"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,288,70,401,65,402,52,288"/>
+<area shape="rect" id="Node000003" href="$class_t_r_scriptable_manager.html" title=" " alt="" coords="119,140,255,337"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,339,102,388,97,385,127,336"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="102,5,272,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,106,190,140,184,140,184,106"/>
+</map>

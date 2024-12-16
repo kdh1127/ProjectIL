@@ -1,0 +1,26 @@
+<map id="UpgradeButtonView.SetInteractable" name="UpgradeButtonView.SetInteractable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1257,72,1485,99"/>
+<area shape="rect" id="Node000002" href="$class_weapon_presenter.html#a001f1af3761f5257305b721fe52ed500" title=" " alt="" coords="769,5,955,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1296,71,1209,55,1076,41,956,33,956,27,1077,35,1209,49,1297,65"/>
+<area shape="rect" id="Node000004" href="$class_quest_presenter.html#a53d568fe1d3dbe4753bf8761eb9ade24" title=" " alt="" coords="1022,64,1196,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1241,88,1197,88,1197,83,1241,83"/>
+<area shape="rect" id="Node000006" href="$class_weapon_item_view.html#adbfedd4cee3e5ea332d2298ab49e4d8f" title=" " alt="" coords="1010,131,1209,157"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1294,105,1173,133,1172,127,1293,100"/>
+<area shape="rect" id="Node000003" href="$class_weapon_presenter.html#aae5587cca9c682879f261f0f56d2079c" title=" " alt="" coords="5,72,192,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="753,31,517,40,378,49,240,63,168,74,167,69,239,57,378,44,517,35,753,26"/>
+<area shape="rect" id="Node000005" href="$class_quest_presenter.html#a435b09885d569bd1efa2829152e6eddc" title=" " alt="" coords="775,72,949,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1007,88,950,88,950,83,1007,83"/>
+<area shape="rect" id="Node000007" href="$class_weapon_item_view.html#aef9f276c2063d8761324c9ba56336d8f" title=" " alt="" coords="762,128,962,155"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="994,145,962,145,962,140,994,140"/>
+<area shape="rect" id="Node000008" href="$class_weapon_item_view.html#a48365bf72548915453be4d4082b350bc" title=" " alt="" coords="530,76,674,103"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="776,127,672,106,673,101,777,122"/>
+<area shape="rect" id="Node000010" href="$class_weapon_presenter.html#ad0707632020a4228f7eb0d0e054acc26" title=" " alt="" coords="489,128,714,155"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="747,144,715,144,715,139,747,139"/>
+<area shape="rect" id="Node000009" href="$class_weapon_presenter.html#ac301a1657fe5a414c28ea97795784445" title=" " alt="" coords="240,72,441,99"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="514,91,441,90,441,84,514,85"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="224,88,192,88,192,83,224,83"/>
+<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="520,127,405,102,406,97,521,122"/>
+<area shape="rect" id="Node000011" href="$class_weapon_presenter.html#aa410701f4e9675d5dde5ca9232a5b57a" title=" " alt="" coords="247,123,434,165"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="473,145,434,146,434,140,473,140"/>
+<area shape="poly" id="edge13_Node000011_Node000003" title=" " alt="" coords="234,121,156,102,158,97,236,116"/>
+</map>

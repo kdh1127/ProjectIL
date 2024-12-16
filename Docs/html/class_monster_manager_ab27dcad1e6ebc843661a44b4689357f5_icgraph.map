@@ -1,0 +1,7 @@
+<map id="MonsterManager.ClearAllMonster" name="MonsterManager.ClearAllMonster">
+<area shape="rect" id="Node000001" title=" " alt="" coords="239,47,454,73"/>
+<area shape="rect" id="Node000002" href="$class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9" title=" " alt="" coords="7,5,189,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,47,189,42,190,36,227,41"/>
+<area shape="rect" id="Node000003" href="$class_battle_presenter_1_1_reset_state.html#a1c1b14fbfa41c361236156a20b828905" title=" " alt="" coords="5,72,191,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,79,192,84,191,78,226,73"/>
+</map>

@@ -1,0 +1,35 @@
+\doxysection{Main\+Scene\+Presenter.\+cs}
+\hypertarget{_main_scene_presenter_8cs_source}{}\label{_main_scene_presenter_8cs_source}\index{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/MainScenePresenter.cs@{C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Presenter/MainScenePresenter.cs}}
+\mbox{\hyperlink{_main_scene_presenter_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UniRx;}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Zenject;}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00004}\mbox{\hyperlink{class_main_scene_presenter}{00004}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_scene_presenter}{MainScenePresenter}}}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00006}\mbox{\hyperlink{class_main_scene_presenter_ae90810cf2502f95315a4c3b47482de0b}{00006}}\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_top_panel_view}{TopPanelView}}\ \mbox{\hyperlink{class_main_scene_presenter_ae90810cf2502f95315a4c3b47482de0b}{topPanelView}};}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00009}00009\ \ \ \ \ [Inject]}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00010}\mbox{\hyperlink{class_main_scene_presenter_a9c3b0b8d104500df16517357730340ee}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_main_scene_presenter_a9c3b0b8d104500df16517357730340ee}{MainScenePresenter}}(\mbox{\hyperlink{class_top_panel_view}{TopPanelView}}\ \mbox{\hyperlink{class_main_scene_presenter_ae90810cf2502f95315a4c3b47482de0b}{topPanelView}})}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ this.topPanelView\ =\ \mbox{\hyperlink{class_main_scene_presenter_ae90810cf2502f95315a4c3b47482de0b}{topPanelView}};}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00015}\mbox{\hyperlink{class_main_scene_presenter_a53d5f4f0c2296013341bf620ff88e6d1}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_scene_presenter_a53d5f4f0c2296013341bf620ff88e6d1}{Subscribe}}()}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_scene_presenter_aab58a02516852308f318125bfb313f6a}{TopPanelSubscribe}}();}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00020}\mbox{\hyperlink{class_main_scene_presenter_aab58a02516852308f318125bfb313f6a}{00020}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_scene_presenter_aab58a02516852308f318125bfb313f6a}{TopPanelSubscribe}}()}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_acae6726c9f8a2eed38947f4b1ab416a8}{CurStage}}.Subscribe(curStage\ =>}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ topPanelView.stage\_txt.text\ =\ \mbox{\hyperlink{class_stage_manager}{StageManager}}.Instance.\mbox{\hyperlink{class_stage_manager_aa8a71c22961aca1db55d101ec951dcd9}{GetLocalizationStage}}(curStage);}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}).AddTo(\mbox{\hyperlink{class_main_scene_presenter_ae90810cf2502f95315a4c3b47482de0b}{topPanelView}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{_main_scene_presenter_8cs_source_l00029}00029\ }
+
+\end{DoxyCode}

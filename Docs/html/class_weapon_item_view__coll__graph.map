@@ -1,0 +1,8 @@
+<map id="WeaponItemView" name="WeaponItemView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,364,170,753"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="32,5,133,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,90,89,364,83,364,80,90"/>
+<area shape="rect" id="Node000003" href="$class_upgrade_button_view.html" title=" " alt="" coords="104,124,231,300"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="108,87,127,123,122,125,104,89"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,300,139,348,134,347,145,299"/>
+</map>

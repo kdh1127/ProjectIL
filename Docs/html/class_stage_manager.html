@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>나혼자 탑에서 버그 플레이: StageManager 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">나혼자 탑에서 버그 플레이<span id="projectnumber">&#160;0.0.8</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_stage_manager.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#pri-methods">Private 멤버 함수</a> &#124;
+<a href="class_stage_manager-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">StageManager 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+StageManager에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager__coll__graph.png" border="0" usemap="#a_stage_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="a_stage_manager_coll__map" id="a_stage_manager_coll__map">
+<area shape="rect" title=" " alt="" coords="23,123,179,363"/>
+<area shape="rect" title=" " alt="" coords="5,5,196,75"/>
+<area shape="poly" title=" " alt="" coords="103,90,103,123,98,123,98,90"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a0b281958be2c12e212b418d695a06b0b" id="r_a0b281958be2c12e212b418d695a06b0b"><td class="memItemLeft" align="right" valign="top">StageTable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b281958be2c12e212b418d695a06b0b">GetCurStageTable</a> ()</td></tr>
+<tr class="separator:a0b281958be2c12e212b418d695a06b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a71c22961aca1db55d101ec951dcd9" id="r_aa8a71c22961aca1db55d101ec951dcd9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8a71c22961aca1db55d101ec951dcd9">GetLocalizationStage</a> (int curStage)</td></tr>
+<tr class="separator:aa8a71c22961aca1db55d101ec951dcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50949fc939438f8c817470639ddcd9ab" id="r_a50949fc939438f8c817470639ddcd9ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50949fc939438f8c817470639ddcd9ab">GetCurStep</a> ()</td></tr>
+<tr class="separator:a50949fc939438f8c817470639ddcd9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437894966836562a8e2d67a747b71cde" id="r_a437894966836562a8e2d67a747b71cde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a437894966836562a8e2d67a747b71cde">IncreaseStage</a> ()</td></tr>
+<tr class="separator:a437894966836562a8e2d67a747b71cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22b9523a6291aadd07546af79a85658" id="r_af22b9523a6291aadd07546af79a85658"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af22b9523a6291aadd07546af79a85658">SetStageBaseHp</a> ()</td></tr>
+<tr class="separator:af22b9523a6291aadd07546af79a85658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf970b9bc5a60c75e71dedee716d5df" id="r_addf970b9bc5a60c75e71dedee716d5df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addf970b9bc5a60c75e71dedee716d5df">ResetStage</a> ()</td></tr>
+<tr class="separator:addf970b9bc5a60c75e71dedee716d5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:acae6726c9f8a2eed38947f4b1ab416a8" id="r_acae6726c9f8a2eed38947f4b1ab416a8"><td class="memItemLeft" align="right" valign="top">ReactiveProperty&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a> = new(0)</td></tr>
+<tr class="separator:acae6726c9f8a2eed38947f4b1ab416a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac1a24576f1158315f032636011183e" id="r_a5ac1a24576f1158315f032636011183e"><td class="memItemLeft" align="right" valign="top">BigInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ac1a24576f1158315f032636011183e">stageBaseHp</a> = 0</td></tr>
+<tr class="separator:a5ac1a24576f1158315f032636011183e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 멤버 함수</h2></td></tr>
+<tr class="memitem:abdd2e80b88ce42a9414cb1ab059b1521" id="r_abdd2e80b88ce42a9414cb1ab059b1521"><td class="memItemLeft" align="right" valign="top">new void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdd2e80b88ce42a9414cb1ab059b1521">Awake</a> ()</td></tr>
+<tr class="separator:abdd2e80b88ce42a9414cb1ab059b1521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b1a1bb9910775d93dd65bb4119cb36" id="r_ac5b1a1bb9910775d93dd65bb4119cb36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5b1a1bb9910775d93dd65bb4119cb36">Start</a> ()</td></tr>
+<tr class="separator:ac5b1a1bb9910775d93dd65bb4119cb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="abdd2e80b88ce42a9414cb1ab059b1521" name="abdd2e80b88ce42a9414cb1ab059b1521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd2e80b88ce42a9414cb1ab059b1521">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new void StageManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        base.Awake();</div>
+<div class="line"><span class="lineno">   16</span>        var table = <a class="code hl_class" href="class_t_r_scriptable_manager.html">TRScriptableManager</a>.Instance.<a class="code hl_function" href="class_t_r_scriptable_manager.html#a96aba89b645492373b1c10516059650d">GetGoogleSheet</a>(<span class="stringliteral">&quot;StageTable&quot;</span>);</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_t_r_scriptable_manager.html">TRScriptableManager</a>.Instance != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   18</span>            StageTableList.Init(table);</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclass_t_r_scriptable_manager_html"><div class="ttname"><a href="class_t_r_scriptable_manager.html">TRScriptableManager</a></div><div class="ttdef"><b>Definition</b> <a href="_t_r_scriptable_manager_8cs_source.html#l00006">TRScriptableManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_t_r_scriptable_manager_html_a96aba89b645492373b1c10516059650d"><div class="ttname"><a href="class_t_r_scriptable_manager.html#a96aba89b645492373b1c10516059650d">TRScriptableManager.GetGoogleSheet</a></div><div class="ttdeci">TRGoogleSheet GetGoogleSheet(string name)</div><div class="ttdef"><b>Definition</b> <a href="_t_r_scriptable_manager_8cs_source.html#l00013">TRScriptableManager.cs:13</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521_cgraph.png" border="0" usemap="#aclass_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521_cgraph" alt=""/></div>
+<map name="aclass_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521_cgraph" id="aclass_stage_manager_abdd2e80b88ce42a9414cb1ab059b1521_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,155,40"/>
+<area shape="rect" href="class_t_r_scriptable_manager.html#a96aba89b645492373b1c10516059650d" title=" " alt="" coords="203,5,416,48"/>
+<area shape="poly" title=" " alt="" coords="155,24,187,24,187,29,155,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b281958be2c12e212b418d695a06b0b" name="a0b281958be2c12e212b418d695a06b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b281958be2c12e212b418d695a06b0b">&#9670;&#160;</a></span>GetCurStageTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StageTable StageManager.GetCurStageTable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        var stageTableList = StageTableList.Get();</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value == 0) <span class="keywordflow">return</span> stageTableList[0];</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stageTableList.Count; i++)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value &lt; stageTableList[i].StageNo)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span> stageTableList[i - 1];</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> stageTableList[stageTableList.Count - 1];</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclass_stage_manager_html_acae6726c9f8a2eed38947f4b1ab416a8"><div class="ttname"><a href="#acae6726c9f8a2eed38947f4b1ab416a8">StageManager.CurStage</a></div><div class="ttdeci">ReactiveProperty&lt; int &gt; CurStage</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00010">StageManager.cs:10</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_a0b281958be2c12e212b418d695a06b0b_icgraph.png" border="0" usemap="#aclass_stage_manager_a0b281958be2c12e212b418d695a06b0b_icgraph" alt=""/></div>
+<map name="aclass_stage_manager_a0b281958be2c12e212b418d695a06b0b_icgraph" id="aclass_stage_manager_a0b281958be2c12e212b418d695a06b0b_icgraph">
+<area shape="rect" title=" " alt="" coords="520,35,705,77"/>
+<area shape="rect" href="class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe" title=" " alt="" coords="25,5,194,48"/>
+<area shape="poly" title=" " alt="" coords="504,37,472,33,325,26,194,26,194,21,325,20,472,28,505,32"/>
+<area shape="rect" href="class_monster_model.html#a0bb7bb23205ce55826110e14b2641a61" title=" " alt="" coords="304,93,430,120"/>
+<area shape="poly" title=" " alt="" coords="505,81,431,96,429,91,504,76"/>
+<area shape="rect" href="class_stage_manager.html#af22b9523a6291aadd07546af79a85658" title=" " alt="" coords="262,43,472,69"/>
+<area shape="poly" title=" " alt="" coords="504,59,472,59,472,53,504,53"/>
+<area shape="rect" href="class_monster_manager.html#a206e55f53dfe8731a8aee6e83bf7a455" title=" " alt="" coords="5,93,214,120"/>
+<area shape="poly" title=" " alt="" coords="289,109,214,109,214,104,289,104"/>
+<area shape="poly" title=" " alt="" coords="246,45,194,39,194,34,247,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a50949fc939438f8c817470639ddcd9ab" name="a50949fc939438f8c817470639ddcd9ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50949fc939438f8c817470639ddcd9ab">&#9670;&#160;</a></span>GetCurStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StageManager.GetCurStep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        var curStep = MonsterManager.Instance.monsterIndex + 1;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> curStep;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa8a71c22961aca1db55d101ec951dcd9" name="aa8a71c22961aca1db55d101ec951dcd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a71c22961aca1db55d101ec951dcd9">&#9670;&#160;</a></span>GetLocalizationStage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StageManager.GetLocalizationStage </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>curStage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        var stageFormat = LocalizationManager.GetTranslation(<span class="stringliteral">&quot;Stage_String_Format&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>        var stageString = <span class="keywordtype">string</span>.Format(stageFormat, curStage);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> stageString;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_aa8a71c22961aca1db55d101ec951dcd9_icgraph.png" border="0" usemap="#aclass_stage_manager_aa8a71c22961aca1db55d101ec951dcd9_icgraph" alt=""/></div>
+<map name="aclass_stage_manager_aa8a71c22961aca1db55d101ec951dcd9_icgraph" id="aclass_stage_manager_aa8a71c22961aca1db55d101ec951dcd9_icgraph">
+<area shape="rect" title=" " alt="" coords="506,5,705,48"/>
+<area shape="rect" href="class_main_scene_presenter.html#aab58a02516852308f318125bfb313f6a" title=" " alt="" coords="258,5,458,48"/>
+<area shape="poly" title=" " alt="" coords="491,29,458,29,458,24,491,24"/>
+<area shape="rect" href="class_main_scene_presenter.html#a53d5f4f0c2296013341bf620ff88e6d1" title=" " alt="" coords="5,13,210,40"/>
+<area shape="poly" title=" " alt="" coords="242,29,210,29,210,24,242,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a437894966836562a8e2d67a747b71cde" name="a437894966836562a8e2d67a747b71cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437894966836562a8e2d67a747b71cde">&#9670;&#160;</a></span>IncreaseStage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager.IncreaseStage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        var userDungeonClearData = <a class="code hl_class" href="class_user_data_manager.html">UserDataManager</a>.Instance.<a class="code hl_variable" href="class_user_data_manager.html#aeaa20f773d03b787e8c3d4ccac204ea5">missionData</a>.<a class="code hl_property" href="class_user_data_manager_1_1_mission_data.html#a5e054869b4c8f109d0ee7cbbf0a3b92c">DungeonClearData</a>;</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value++;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (userDungeonClearData.Keys.Contains(0))</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            userDungeonClearData[0] = <a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        var stage = <a class="code hl_class" href="class_user_data_manager.html">UserDataManager</a>.Instance.<a class="code hl_variable" href="class_user_data_manager.html#a95035f7b3fe9d00535dbf69251592989">stageData</a>.<a class="code hl_variable" href="class_user_data_manager_1_1_stage_data.html#aa3e10194df809ef74f53623e6f64b220">stage</a>;</div>
+<div class="line"><span class="lineno">   67</span>        stage.curStage = <a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclass_user_data_manager_1_1_mission_data_html_a5e054869b4c8f109d0ee7cbbf0a3b92c"><div class="ttname"><a href="class_user_data_manager_1_1_mission_data.html#a5e054869b4c8f109d0ee7cbbf0a3b92c">UserDataManager.MissionData.DungeonClearData</a></div><div class="ttdeci">Dictionary&lt; int, int &gt; DungeonClearData</div><div class="ttdoc">stageNo, stageClearCount</div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00196">UserDataManager.cs:196</a></div></div>
+<div class="ttc" id="aclass_user_data_manager_1_1_stage_data_html_aa3e10194df809ef74f53623e6f64b220"><div class="ttname"><a href="class_user_data_manager_1_1_stage_data.html#aa3e10194df809ef74f53623e6f64b220">UserDataManager.StageData.stage</a></div><div class="ttdeci">Stage stage</div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00435">UserDataManager.cs:435</a></div></div>
+<div class="ttc" id="aclass_user_data_manager_html"><div class="ttname"><a href="class_user_data_manager.html">UserDataManager</a></div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00008">UserDataManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_user_data_manager_html_a95035f7b3fe9d00535dbf69251592989"><div class="ttname"><a href="class_user_data_manager.html#a95035f7b3fe9d00535dbf69251592989">UserDataManager.stageData</a></div><div class="ttdeci">StageData stageData</div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00425">UserDataManager.cs:425</a></div></div>
+<div class="ttc" id="aclass_user_data_manager_html_aeaa20f773d03b787e8c3d4ccac204ea5"><div class="ttname"><a href="class_user_data_manager.html#aeaa20f773d03b787e8c3d4ccac204ea5">UserDataManager.missionData</a></div><div class="ttdeci">MissionData missionData</div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00164">UserDataManager.cs:164</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_a437894966836562a8e2d67a747b71cde_icgraph.png" border="0" usemap="#aclass_stage_manager_a437894966836562a8e2d67a747b71cde_icgraph" alt=""/></div>
+<map name="aclass_stage_manager_a437894966836562a8e2d67a747b71cde_icgraph" id="aclass_stage_manager_a437894966836562a8e2d67a747b71cde_icgraph">
+<area shape="rect" title=" " alt="" coords="235,13,428,40"/>
+<area shape="rect" href="class_battle_presenter_1_1_clear_state.html#a17dadba8a31889fa8517698efa5342e9" title=" " alt="" coords="5,5,187,48"/>
+<area shape="poly" title=" " alt="" coords="219,29,187,29,187,24,219,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="addf970b9bc5a60c75e71dedee716d5df" name="addf970b9bc5a60c75e71dedee716d5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf970b9bc5a60c75e71dedee716d5df">&#9670;&#160;</a></span>ResetStage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager.ResetStage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        CurStage.Value = 0;</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="#a5ac1a24576f1158315f032636011183e">stageBaseHp</a> = 0;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        var stage = <a class="code hl_class" href="class_user_data_manager.html">UserDataManager</a>.Instance.<a class="code hl_variable" href="class_user_data_manager.html#a95035f7b3fe9d00535dbf69251592989">stageData</a>.<a class="code hl_variable" href="class_user_data_manager_1_1_stage_data.html#aa3e10194df809ef74f53623e6f64b220">stage</a>;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        stage.stageBaseHp = <a class="code hl_variable" href="#a5ac1a24576f1158315f032636011183e">stageBaseHp</a>;</div>
+<div class="line"><span class="lineno">   93</span>        stage.curStage = <a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclass_stage_manager_html_a5ac1a24576f1158315f032636011183e"><div class="ttname"><a href="#a5ac1a24576f1158315f032636011183e">StageManager.stageBaseHp</a></div><div class="ttdeci">BigInteger stageBaseHp</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00011">StageManager.cs:11</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_addf970b9bc5a60c75e71dedee716d5df_icgraph.png" border="0" usemap="#aclass_stage_manager_addf970b9bc5a60c75e71dedee716d5df_icgraph" alt=""/></div>
+<map name="aclass_stage_manager_addf970b9bc5a60c75e71dedee716d5df_icgraph" id="aclass_stage_manager_addf970b9bc5a60c75e71dedee716d5df_icgraph">
+<area shape="rect" title=" " alt="" coords="239,13,417,40"/>
+<area shape="rect" href="class_battle_presenter_1_1_reset_state.html#a1c1b14fbfa41c361236156a20b828905" title=" " alt="" coords="5,5,191,48"/>
+<area shape="poly" title=" " alt="" coords="223,29,191,29,191,24,223,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af22b9523a6291aadd07546af79a85658" name="af22b9523a6291aadd07546af79a85658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22b9523a6291aadd07546af79a85658">&#9670;&#160;</a></span>SetStageBaseHp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager.SetStageBaseHp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value == 0)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="#a5ac1a24576f1158315f032636011183e">stageBaseHp</a> = 570;</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        var curStage = <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_variable" href="#acae6726c9f8a2eed38947f4b1ab416a8">CurStage</a>.Value;</div>
+<div class="line"><span class="lineno">   78</span>        var stageIncreasePer = <a class="code hl_class" href="class_stage_manager.html">StageManager</a>.Instance.<a class="code hl_function" href="#a0b281958be2c12e212b418d695a06b0b">GetCurStageTable</a>().HpIncreasePer / 100f + 1;</div>
+<div class="line"><span class="lineno">   79</span>        var curPer = Mathf.Pow(stageIncreasePer, curStage);</div>
+<div class="line"><span class="lineno">   80</span>        var factor = curPer * 100;</div>
+<div class="line"><span class="lineno">   81</span>        var increaseHp = (570 * (int)factor) / 100;</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="#a5ac1a24576f1158315f032636011183e">stageBaseHp</a> = increaseHp;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aclass_stage_manager_html"><div class="ttname"><a href="class_stage_manager.html">StageManager</a></div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00008">StageManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_stage_manager_html_a0b281958be2c12e212b418d695a06b0b"><div class="ttname"><a href="#a0b281958be2c12e212b418d695a06b0b">StageManager.GetCurStageTable</a></div><div class="ttdeci">StageTable GetCurStageTable()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_8cs_source.html#l00027">StageManager.cs:27</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_af22b9523a6291aadd07546af79a85658_cgraph.png" border="0" usemap="#aclass_stage_manager_af22b9523a6291aadd07546af79a85658_cgraph" alt=""/></div>
+<map name="aclass_stage_manager_af22b9523a6291aadd07546af79a85658_cgraph" id="aclass_stage_manager_af22b9523a6291aadd07546af79a85658_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,216,40"/>
+<area shape="rect" href="class_stage_manager.html#a0b281958be2c12e212b418d695a06b0b" title=" " alt="" coords="264,5,449,48"/>
+<area shape="poly" title=" " alt="" coords="216,24,248,24,248,29,216,29"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager_af22b9523a6291aadd07546af79a85658_icgraph.png" border="0" usemap="#aclass_stage_manager_af22b9523a6291aadd07546af79a85658_icgraph" alt=""/></div>
+<map name="aclass_stage_manager_af22b9523a6291aadd07546af79a85658_icgraph" id="aclass_stage_manager_af22b9523a6291aadd07546af79a85658_icgraph">
+<area shape="rect" title=" " alt="" coords="222,13,432,40"/>
+<area shape="rect" href="class_battle_presenter_1_1_init_state.html#abcac5e9a624ab22b060f72a987e8d6fe" title=" " alt="" coords="5,5,174,48"/>
+<area shape="poly" title=" " alt="" coords="206,29,174,29,174,24,206,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac5b1a1bb9910775d93dd65bb4119cb36" name="ac5b1a1bb9910775d93dd65bb4119cb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b1a1bb9910775d93dd65bb4119cb36">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        var stage = <a class="code hl_class" href="class_user_data_manager.html">UserDataManager</a>.Instance.<a class="code hl_variable" href="class_user_data_manager.html#a95035f7b3fe9d00535dbf69251592989">stageData</a>.<a class="code hl_variable" href="class_user_data_manager_1_1_stage_data.html#aa3e10194df809ef74f53623e6f64b220">stage</a>;</div>
+<div class="line"><span class="lineno">   23</span>        CurStage.Value = stage.<a class="code hl_variable" href="class_user_data_manager_1_1_stage_data_1_1_stage.html#aab5cd1a4dadd591f75dc8702c86e8f11">curStage</a>;</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="#a5ac1a24576f1158315f032636011183e">stageBaseHp</a> = stage.stageBaseHp;</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclass_user_data_manager_1_1_stage_data_1_1_stage_html_aab5cd1a4dadd591f75dc8702c86e8f11"><div class="ttname"><a href="class_user_data_manager_1_1_stage_data_1_1_stage.html#aab5cd1a4dadd591f75dc8702c86e8f11">UserDataManager.StageData.Stage.curStage</a></div><div class="ttdeci">int curStage</div><div class="ttdef"><b>Definition</b> <a href="_user_data_manager_8cs_source.html#l00431">UserDataManager.cs:431</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="acae6726c9f8a2eed38947f4b1ab416a8" name="acae6726c9f8a2eed38947f4b1ab416a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae6726c9f8a2eed38947f4b1ab416a8">&#9670;&#160;</a></span>CurStage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReactiveProperty&lt;int&gt; StageManager.CurStage = new(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5ac1a24576f1158315f032636011183e" name="a5ac1a24576f1158315f032636011183e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac1a24576f1158315f032636011183e">&#9670;&#160;</a></span>stageBaseHp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInteger StageManager.stageBaseHp = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a> 파일의 <a class="el" href="_stage_manager_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>C:/Users/joch0/Documents/GitHub/ProjectIL/Assets/02.Scripts/Manager/<a class="el" href="_stage_manager_8cs_source.html">StageManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_stage_manager.html">StageManager</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>
